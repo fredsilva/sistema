@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="pt-br">
+<head>
+	<meta charset="iso-8859-1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>Alterar senha</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body role="document">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-datetimepicker.min.js"></script>
+	
+	
+	<style>
+	.wrapper.top {
+    border-top: 6px solid #FFCD00;
+    background: #F0F0F0 none repeat scroll 0% 0%;
+    border-bottom: 0px none;
+	}
+
+	</style>
+<br/>
+<br/>
+<br/>
+<div class="container"> 
+	<div class="row">
+		<div class="col-md-8">
+			<div class="form-group text-right">
+				<br/>
+				<button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#myModal1" name="btnSeleccionarPerfil">Alterar senha</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+		<!-- Modal -->
+		<div id="myModal1" class="modal fade text-justify" role="dialog">
+		  <div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Alterar senha</h4>
+			  </div>
+			  <div class="modal-body">
+					<form role="form">
+					
+						<div class="container">
+						
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="txtSenhaAtual">Senha Atual (*):</label>
+										<input type="text" class="form-control" name="txtSenhaAtual" id="txtSenhaAtual" placeholder="Digite sua Senha Atual"/>
+									</div>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="txtNovaSenha">Nova Senha: (*)</label>
+										<input type="text" class="form-control" name="txtNovaSenha" id="txtNovaSenha" placeholder="Digite sua Nova Senha"/>
+									</div>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label for="txtConfirmarNovaSenha">Confirmar Nova Senha: (*)</label>
+										<input type="text" class="form-control" name="txtConfirmarNovaSenha" id="txtConfirmarNovaSenha" placeholder="Digite sua Nova Senha para Confirmar"/>
+									</div>
+								</div>
+							</div>
+							
+							<br/>
+							
+						</div>
+						<div id="internal-buttons" class="text-right">
+							<button type="button" class="btn btn-default" name="btnFechar">Fechar</button>
+							<button type="button" class="btn btn-primary" >Salvar</button>
+						</div>
+					
+					</form>
+				
+			  </div>
+			</div>
+
+		  </div>
+		</div>
+
+<br/>
+
+
+</body>
+</html>

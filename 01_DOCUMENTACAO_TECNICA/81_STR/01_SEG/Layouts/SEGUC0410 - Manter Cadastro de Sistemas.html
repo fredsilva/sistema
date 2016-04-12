@@ -1,0 +1,292 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="pt-br">
+<head>
+	<meta charset="iso-8859-1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>Manutenção do cadastro de sistemas</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body role="document">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+	<br/>
+	<!-- Fixed navbar -->
+<div class="container">
+<ol class="breadcrumb">
+  <li><a href="#">SEG</a></li>
+  <li><a href="#">Gestão</a></li>
+  <li class="active">Manutenção do cadastro de sistemas</li>
+</ol>
+</div>
+
+<div class="container"> 
+    <fieldset>
+    <legend>Manutenção do cadastro de sistemas</legend>
+    <form role="form">
+	
+	<div id="internal-buttons" class="text-right">
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Inserir módulo</button>
+	
+		
+		<!-- Modal -->
+		<div id="myModal" class="modal fade text-justify" role="dialog">
+		  <div class="modal-dialog modal-lg">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Inclusão de módulo</h4>
+			  </div>
+			  <div class="modal-body">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-9">
+							<div class="form-group">
+								<label for="idAbreviaçao">Abreviação:</label>
+								<input type="text" class="form-control" name="idAbreviaçao" id="idAbreviaçao">
+							</div>
+						</div>
+						<div class="col-md-9">
+							<div class="form-group">
+								<label for="idDescrição">Descrição:</label>
+								<input type="text" class="form-control" name="idDescrição" id="idDescrição" />
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Salvar</button>
+			  </div>
+			</div>
+			
+			</div>
+		</div>
+		
+			
+			<!-- Modal content-->
+			<div id="myModal1" class="modal fade text-justify" role="dialog">
+			  <div class="modal-dialog modal-lg">
+				<div class="modal-content">
+				  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Alteração de módulo</h4>
+				  </div>
+				  <div class="modal-body">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-9">
+								<div class="form-group">
+									<label for="idAbreviaçao">Abreviação:</label>
+									<input type="text" class="form-control" name="idAbreviaçao" id="idAbreviaçao" value="ARR">
+								</div>
+							</div>
+							<div class="col-md-9">
+								<div class="form-group">
+									<label for="idDescrição">Descrição:</label>
+									<input type="text" class="form-control" name="idDescrição" id="idDescrição" value="Arrecadação" />
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				  </div>
+				  <div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+					<button type="button" class="btn btn-primary" data-dismiss="modal">Salvar</button>
+				  </div>
+				</div>
+			
+			</div>
+		</div>
+		
+		
+		
+		
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2">Ajuda</button>
+		
+		<!-- Modal -->
+		<div id="myModal2" class="modal fade text-justify" role="dialog">
+		  <div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Ajuda da Tela (Detalhe)</h4>
+			  </div>
+			  <div class="well well-lg">
+				<span>Ajuda do caso de uso SEGUC0410</span>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			  </div>
+			</div>
+
+		  </div>
+		</div>
+		
+		
+		
+		
+	</div>
+     
+	</form>
+    </fieldset>
+</div>
+  
+
+	<div class="container">
+    <table data-toggle="table" class="table table-hover" id="table-data" data-pagination="true">
+	<thead>
+      <tr> 
+        <th>#</th>
+		<th>Abreviação</th>
+        <th>Descrição</th>
+		<th>Data Inclusão</th>
+		<th>Ações</th>
+      </tr>
+	 </thead>
+	 <tbody>
+      <tr> 
+        <td>1</td>
+        <td>ARR</td>
+        <td>Arrecadação</td>
+		<td style="text-align:left;">10-OUT-2015</td>
+		<td style="text-align:right;"><span class="glyphicon glyphicon-pencil" aria-hidden="true" data-toggle="modal" data-target="#myModal1"></span>
+		<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+      </tr>
+      
+	  
+	  <tr> 
+        <td>2</td>
+        <td>CCI</td>
+        <td>Cadastro de Contribuinte</td>
+		<td style="text-align:left;">10-OUT-2015</td>
+		<td style="text-align:right;"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+		<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+      </tr>
+      
+	  
+	  <tr > 
+        <td>3</td>
+        <td>CCC</td>
+        <td>Conta Corrente</td>
+		<td style="text-align:left;">10-OUT-2015</td>
+		<td style="text-align:right;"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+		<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+      </tr>
+      
+	  
+	  <tr> 
+        <td>4</td>
+        <td>COB</td>
+        <td>Cobrança</td>
+		<td style="text-align:left;">10-OUT-2015</td>
+		<td style="text-align:right;"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+		<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+      </tr>
+      
+	  
+	  <tr> 
+        <td>5</td>
+        <td>COM</td>
+        <td>Consulta</td>
+		<td style="text-align:left;">10-OUT-2015</td>
+		<td style="text-align:right;"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+		<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+      </tr>
+	  
+	  <tr> 
+        <td>6</td>
+        <td>ECF</td>
+        <td>Equipamento Emissor de Cupom Fiscal</td>
+		<td style="text-align:left;">10-OUT-2015</td>
+		<td style="text-align:right;"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+		<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+      </tr>
+	  
+	  <tr> 
+        <td>7</td>
+        <td>FIE</td>
+        <td>Fiscalização Estabelecimento</td>
+		<td style="text-align:left;">10-OUT-2015</td>
+		<td style="text-align:right;"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+		<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+      </tr>
+	  
+	  <tr> 
+        <td>8</td>
+        <td>FTR</td>
+        <td>Fiscalização de Trânsito de Mercadorias</td>
+		<td style="text-align:left;">10-OUT-2015</td>
+		<td style="text-align:right;"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+		<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+      </tr>
+	  
+	  <tr> 
+        <td>9</td>
+        <td>GED</td>
+        <td>Gerenciamento Eletrônico de Documentos</td>
+		<td style="text-align:left;">10-OUT-2015</td>
+		<td style="text-align:right;"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+		<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+      </tr>
+	  
+	  <tr> 
+        <td>10</td>
+        <td>ISE</td>
+        <td>Isenções</td>
+		<td style="text-align:left;">10-OUT-2015</td>
+		<td style="text-align:right;"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span>
+		<span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+      </tr>
+	  
+	  </tbody>
+    </table>
+	<nav class="text-right">
+	  <ul class="pagination">
+		<li>
+		  <a href="#" aria-label="Previous">
+			<span aria-hidden="true">&laquo;</span>
+		  </a>
+		</li>
+		<li class="active"><a href="#">1</a></li>
+		<li><a href="#">2</a></li>
+		<li>
+		  <a href="#" aria-label="Next">
+			<span aria-hidden="true">&raquo;</span>
+		  </a>
+		</li>
+	  </ul>
+	</nav>
+ </div>
+
+
+
+</div>
+<br/>
+<br/>
+</body>
+</html>

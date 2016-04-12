@@ -1,0 +1,302 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="pt-br">
+<head>
+	<meta charset="iso-8859-1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>Ativar/Inativar perfis dos Funcionários SEFAZ</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body role="document">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+	
+	<br/>
+	<!-- Fixed navbar -->
+<div class="container">
+<ol class="breadcrumb">
+  <li><a href="#">SEG</a></li>
+  <li><a href="#">Gestão</a></li>
+  <li class="active">Ativar/Inativar perfis dos Funcionários SEFAZ</li>
+</ol>
+</div>
+
+<div class="container"> 
+    <fieldset>
+    <legend>Ativar/Inativar perfis dos Funcionários SEFAZ</legend>
+    <form role="form">
+	
+
+	<div class="container">
+		
+		<div class="row">
+		
+			<div class="col-md-3">
+				<div class="form-group">
+					<label for="sltUnidadeOrganizacional">Unidade Organizacional:</label>
+					<select type="text" class="form-control" name="sltUnidadeOrganizacional" id="sltUnidadeOrganizacional">
+						<option>[Todas as unidades]</option>
+						<option>Coordenadoria de Fiscalização</option>
+						<option>Chefia do Núcleo Setorial de Controle Interno</option>
+						<option>Diretoria de Regimes Especias</option>
+						<option>Diretoria de Tributação</option>
+					</select>
+				</div>
+			</div>
+			
+			<div class="col-md-3">
+				<div class="form-group">
+					<label for="sltPostosTrabalho">Postos do Trabalho:</label>
+					<select type="text" class="form-control" name="sltPostosTrabalho" id="sltPostosTrabalho">
+						<option>[Todas os postos]</option>
+					</select>
+				</div>
+			</div>
+		
+		
+			<div class="col-md-3">
+				<div class="form-group">
+					<label for="txtNomeUsuario">Nome de Usuário:</label>
+					<input type="text" class="form-control" name="txtNomeUsuario" id="txtNomeUsuario"/>
+				</div>
+			</div>
+			
+			<div class="col-md-3">
+				<div class="form-group">
+					<label for="txtCPF">CPF:</label>
+					<input type="text" class="form-control" name="txtCPF" id="txtCPF"/>
+				</div>
+			</div>
+			
+		</div>
+		
+	</div>
+	
+	<div id="internal-buttons" class="text-right">
+	
+		<button type="button" class="btn btn-primary" name="btnConsultar">Consultar</button>
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2">Ajuda</button>
+
+
+		<!-- Modal -->
+		<div id="myModal1" class="modal fade text-justify" role="dialog">
+		  <div class="modal-dialog modal-lg">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Ativar/Inativar Perfil</h4>
+			  </div>
+			  <div class="modal-body">
+				<div class="container">
+					<div class="row">
+					
+					
+						<div class="col-md-9">
+							<div class="form-group">
+								<label>Usuário:</label>
+								<p><h3><span class="label label-default">José Silva</span></h3></p>
+							</div>
+						</div>
+						
+						<br/>
+						
+						<div class="col-md-9">
+							<div class="form-group">
+								<table  data-toggle="table" class="table table-hover" id="table-data">			
+									<thead>
+										<tr> 
+											<th>#</th>
+											<th>Perfil</th>
+											<th>Ativo?</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr> 
+											<td>1</td>
+											<td>ResponsávelGED</td>
+											<td style="text-align:center;"><input type="checkbox" value="true"></td>
+										</tr>
+										<tr> 
+											<td>2</td>
+											<td>ResponsávelBPM</td>
+											<td style="text-align:center;"><input type="checkbox" value="true"></td>
+										</tr>
+										
+										<tr> 
+											<td>3</td>
+											<td>AuditorFiscal</td>
+											<td style="text-align:center;"><input type="checkbox" value="true"></td>
+										</tr>
+										
+										
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+					</div>
+				</div>
+				
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Salvar</button>
+			  </div>
+			</div>
+
+		  </div>
+		</div>
+		
+		<!-- Modal -->
+		<div id="myModal2" class="modal fade text-justify" role="dialog">
+		  <div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Ajuda da Tela (Detalhe)</h4>
+			  </div>
+			  <div class="well well-lg">
+				<span>Ajuda do caso de uso SEGUC0070</span>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+			  </div>
+			</div>
+
+		  </div>
+		</div>
+		
+	</div>
+     
+	</form>
+    </fieldset>
+</div>
+  
+
+	<div class="container">
+    <table data-toggle="table" class="table table-hover" id="table-data" data-pagination="true">
+	<thead>
+      <tr> 
+        <th>#</th>
+		<th>Unidade Organizacional</th>
+		<th>Posto Trabalho</th>
+        <th>Nome de Usuário</th>
+		<th>CPF</th>
+		<th>Perfis</th>
+		<th style="text-align:center;">Ações</th>
+      </tr>
+	 </thead>
+	 <tbody>
+	 
+	 
+	 <tr> 
+        <td>1</td>
+		<td>Coordenadoria de Fiscalização</td>
+        <td>Fiscalizador</td>
+		<td>José Silva</td>
+        <td>111.222.331-41</td>
+		<td>ResponsávelGED, ResponsávelBPM, AuditorFiscal</td>
+		<td style="text-align:right;">
+		<a data-toggle="modal" data-target="#myModal1"><span class="glyphicon glyphicon-pencil" aria-hidden="true" data-toggle="tooltip" title="Ativar/Inativar perfis"></span></a>
+		</td>
+      </tr>
+	 
+	 
+	 
+      <tr> 
+        <td>2</td>
+		<td>Coordenadoria de Fiscalização</td>
+        <td>Fiscalizador</td>
+		<td>Márcio Texeira</td>
+        <td>111.222.330-40</td>
+		<td>AuditorFiscal, FiscalizadorTransito</td>
+		<td style="text-align:right;">
+		<a data-toggle="modal" data-target="#myModal1"><span class="glyphicon glyphicon-pencil" aria-hidden="true" data-toggle="tooltip" title="Ativar/Inativar perfis"></span></a>
+		</td>
+      </tr>
+	  
+	  
+	  <tr> 
+        <td>3</td>
+		<td>Coordenadoria de Fiscalização</td>
+        <td>Fiscalizador</td>
+		<td>Marina Souza</td>
+        <td>111.222.332-42</td>
+		<td>ResponsávelGED, ResponsávelBPM, AuditorFiscal</td>
+		<td style="text-align:right;">
+		<a data-toggle="modal" data-target="#myModal1"><span class="glyphicon glyphicon-pencil" aria-hidden="true" data-toggle="tooltip" title="Ativar/Inativar perfis"></span></a>
+		</td>
+      </tr>
+	  
+	   <tr> 
+        <td>4</td>
+		<td>Coordenadoria de Fiscalização</td>
+        <td>Fiscalizador</td>
+		<td>Pedro Vasconcelos</td>
+        <td>111.222.333-43</td>
+		<td>ResponsávelGED, ResponsávelBPM, FiscalizadorTransito</td>
+		<td style="text-align:right;">
+		<a data-toggle="modal" data-target="#myModal1"><span class="glyphicon glyphicon-pencil" aria-hidden="true" data-toggle="tooltip" title="Ativar/Inativar perfis"></span></a>
+		</td>
+      </tr>
+	  
+	   <tr> 
+        <td>5</td>
+		<td>Coordenadoria de Fiscalização</td>
+        <td>Fiscalizador</td>
+		<td>Rejane Glauco</td>
+        <td>111.222.334-44</td>
+		<td>ResponsávelGED, ResponsávelBPM, Notificador, AuditorFiscal</td>
+		<td style="text-align:right;">
+		<a data-toggle="modal" data-target="#myModal1"><span class="glyphicon glyphicon-pencil" aria-hidden="true" data-toggle="tooltip" title="Ativar/Inativar perfis"></span></a>
+		</td>
+      </tr>
+      
+   
+	  </tbody>
+    </table>
+	<nav class="text-right">
+	  <ul class="pagination">
+		<li>
+		  <a href="#" aria-label="Previous">
+			<span aria-hidden="true">&laquo;</span>
+		  </a>
+		</li>
+		<li class="active"><a href="#">1</a></li>
+		<li>
+		  <a href="#" aria-label="Next">
+			<span aria-hidden="true">&raquo;</span>
+		  </a>
+		</li>
+	  </ul>
+	</nav>
+ </div>
+
+
+
+</div>
+<br/>
+<br/>
+</body>
+</html>

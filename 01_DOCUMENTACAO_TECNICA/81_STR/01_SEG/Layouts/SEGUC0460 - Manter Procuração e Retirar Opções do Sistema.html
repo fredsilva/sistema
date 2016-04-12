@@ -1,0 +1,231 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="pt-br">
+<head>
+	<meta charset="iso-8859-1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>Procuração/retirada das opções do sistema</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body role="document">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-datetimepicker.min.js"></script>
+	
+<br/>
+	<!-- Fixed navbar -->
+<div class="container">
+<ol class="breadcrumb">
+  <li><a href="#">SEG</a></li>
+  <li><a href="#">Gestão</a></li>
+  <li class="active">Procuração/retirada das opções do sistema</li>
+</ol>
+</div>
+
+<div class="container"> 
+    <fieldset>
+    <legend>Procuração/retirada das opções do sistema</legend>
+    <form role="form">
+	
+
+	<div class="container">
+
+		<div class="row">
+		
+			<div class="col-md-12">
+				<div class="form-group">
+					<div class="alert alert-warning" role="alert">
+					  <span class="sr-only">Warning:</span>
+					  Lembre-se que ao conceder privilégios (Procuração) sobre suas opções do sistema para um determinado CPF (Usuário do sistema), 
+					  essa pessoa vai AGIR EM SEU NOME às Autoridades Fiscais de Tocantins (SEFAZ-TO). Somente pode autorizar sob o mesmo CPF ou CNPJ (deve ser usuário principal) 
+					</div>
+				</div>
+			</div>
+			
+		</div>
+
+		
+		<div class="row">
+			<div class="col-md-4">
+				<div class="form-group">
+					<label for="sltCPF">Selecione seu CPF ou CNPJ:</label>
+					<select class="form-control" name="sltCPF" id="sltCPF">
+						<option value="1">Você mesmo (666.777.888-99)</option>
+						<option value="2">Vidrieria Palmas S.A. (111.222.777-15)</option>
+					</select>
+				</div>
+			</div>
+			
+			<div class="col-md-4">
+				<div class="form-group">
+					<label for="txtCPFProcurado">CPF Procurado:</label>
+					<input type="text" class="form-control" name="txtCPFProcurado" id="txtCPFProcurado" value="444.555.778-91"/>
+				</div>
+			</div>
+			
+			<div class="col-md-4">
+				<div>
+					<span><h3>Thiago Pereira Da Silva</h3></span>
+				</div>
+			</div>
+			
+		</div>
+		
+
+	</div>
+	
+	<div id="internal-buttons" class="text-right">
+	
+		<button type="button" class="btn btn-primary">Carregar CPF</button>
+		<button type="button" class="btn btn-primary">Salvar Procuração/Retirada</button>
+		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal2">Ajuda</button>
+		
+		<!-- Modal -->
+		<div id="myModal2" class="modal fade text-justify" role="dialog">
+		  <div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Ajuda da Tela (Detalhe)</h4>
+			  </div>
+			  <div class="well well-lg">
+				<span>Essa é a ajuda do caso de uso SEGUC0460</span>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			  </div>
+			</div>
+
+		  </div>
+		</div>
+
+		
+	</div>
+     
+	</form>
+    </fieldset>
+</div>
+  
+
+	<div class="container">
+    <table data-toggle="table" class="table table-hover" id="table-data" data-pagination="true">
+	<thead>
+      <tr> 
+        <th>#</th>
+        <th>Módulo</th>
+		<th>Aplicação</th>
+		<th>Opção do Sistema</th>
+		<th>Procurar?</th>
+      </tr>
+	 </thead>
+	 <tbody>
+      <tr> 
+        <td>1</td>
+		<td>Módulo1</td>
+        <td>Aplicação1</td>
+		<td>Opção1</td>
+		<td style="text-align:left;"><input type="checkbox" value="true"></td>
+      </tr>
+	  
+	  <tr> 
+        <td>2</td>
+		<td>Módulo1</td>
+        <td>Aplicação1</td>
+		<td>Opção2</td>
+		<td style="text-align:left;"><input type="checkbox" value="true"></td>
+      </tr>
+	  
+	  <tr> 
+        <td>3</td>
+		<td>Módulo1</td>
+        <td>Aplicação1</td>
+		<td>Opção3</td>
+		<td style="text-align:left;"><input type="checkbox" value="true"></td>
+      </tr>
+	  
+	  <tr> 
+        <td>4</td>
+		<td>Módulo1</td>
+        <td>Aplicação1</td>
+		<td>Opção4</td>
+		<td style="text-align:left;"><input type="checkbox" value="true"></td>
+      </tr>
+	  
+	  <tr> 
+        <td>5</td>
+		<td>Módulo1</td>
+        <td>Aplicação1</td>
+		<td>Opção5</td>
+		<td style="text-align:left;"><input type="checkbox" value="true"></td>
+      </tr>
+	  
+	  <tr> 
+        <td>6</td>
+		<td>Módulo1</td>
+        <td>Aplicação1</td>
+		<td>Opção6</td>
+		<td style="text-align:left;"><input type="checkbox" value="true"></td>
+      </tr>
+	  
+	  <tr> 
+        <td>7</td>
+		<td>Módulo1</td>
+        <td>Aplicação1</td>
+		<td>Opção7</td>
+		<td style="text-align:left;"><input type="checkbox" value="true"></td>
+      </tr>
+	  
+	  <tr> 
+        <td>8</td>
+		<td>Módulo1</td>
+        <td>Aplicação1</td>
+		<td>Opção8</td>
+		<td style="text-align:left;"><input type="checkbox" value="true"></td>
+      </tr>
+	  
+	  <tr> 
+        <td>9</td>
+		<td>Módulo1</td>
+        <td>Aplicação1</td>
+		<td>Opção9</td>
+		<td style="text-align:left;"><input type="checkbox" value="true"></td>
+      </tr>
+	  
+	  <tr> 
+        <td>10</td>
+		<td>Módulo1</td>
+        <td>Aplicação1</td>
+		<td>Opção10</td>
+		<td style="text-align:left;"><input type="checkbox" value="true"></td>
+      </tr>
+	  
+	  </tbody>
+    </table>
+
+ </div>
+
+
+
+</div>
+<br/>
+<br/>
+</body>
+</html>
