@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:b="http://bootsfaces.net/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+
+<h:body>
+    <ui:composition template="/protected/views/templates/views/default-template.xhtml">
+        <ui:param name="pageTitle" value="Sefaz-to - Home" />
+        <ui:define name="content">
+            <h:outputScript library="js" name="validator.js" />
+
+            <h:form data-toggle="validator" role="form" id="myform">
+                <div class="form-group">
+                    <label for="inputName" class="control-label">Nome</label>
+                    <h:inputText
+                                        id="inputName"
+                                        styleClass="form-control"
+                                        p:required="required"
+                                        p:placeholder="fulano de tal"
+                                        p:data-error="${msg['exemplo.erro.nome']}"/>
+                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                    <div id="nomeErro" class="help-block with-errors"></div>
+                </div>
+                <div class="form-group has-feedback">
+                    <label for="inputTwitter" class="control-label">Twitter</label>
+                    <div class="input-group">
+                        <span class="input-group-addon">@</span>
+                        <h:inputText
+                                        id="codigo"
+                                        styleClass="form-control"
+                                        p:pattern="^[_A-z0-9]{1,}$"
+                                        p:required="required"
+                                        p:placeholder="1000hz"
+                                        p:data-error="${msg['exemplo.erro.twitter']}"/>
+                    </div>
+                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                    <div id="twitterErro" class="help-block with-errors"></div>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail" class="control-label">Email</label>
+                    <h:inputText
+                                        id="inputEmail"
+                                        p:type="email"
+                                        styleClass="form-control"
+                                        p:required="required"
+                                        p:placeholder="Email"
+                                        p:data-error="${msg['exemplo.erro.email']}" />
+                    <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                    <div id="emailErro" class="help-block with-errors"></div>
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword" class="control-label">Senha</label>
+                    <div class="form-group col-sm-6">
+                        <h:inputText
+                                        p:id="inputPassword"
+                                        p:type="password"
+                                        styleClass="form-control"
+                                        p:required="required"
+                                        p:placeholder="Senha"
+                                        p:data-minlength="6"
+                                        p:data-error="${msg['exemplo.erro.senha']}" />
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <div id="senhaErro" class="help-block with-errors"></div>
+                    </div>
+
+                    <div class="form-group col-sm-6">
+                        <h:inputText p:id="inputPasswordConfirm"
+                                     p:type="password"
+                                     styleClass="form-control"
+                                     p:required="required"
+                                     p:placeholder="Confirmar Senha"
+                                     p:data-match="#inputPassword"
+                                     p:data-match-error="${msg['exemplo.erro.confsenha']}" />
+                        <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+                        <div id="senhaConfErro" class="help-block with-errors"></div>
+                    </div>
+
+                    <div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </h:form>
+            <b:modal id="amodal" title="Modal Example" styleClass="modalPseudoClass">
+                <p>Modal body</p>
+                <div id="modalNome" class="alert alert-danger">${msg['exemplo.erro.nome']}</div>
+                <div id="modalTwitter" class="alert alert-danger">${msg['exemplo.erro.twitter']}</div>
+                <div id="modalEmail" class="alert alert-danger">${msg['exemplo.erro.email']}</div>
+                <div id="modalSenha" class="alert alert-danger">${msg['exemplo.erro.senha']}</div>
+                <div id="modalSenhaConf" class="alert alert-danger">${msg['exemplo.erro.confsenha']}</div>
+                <f:facet name="footer">
+                    <!-- <b:button value="close" dismiss="modal" onclick="return false;" />-->
+                    <b:button value="Ok" look="primary" dismiss="modal" onclick="return false;" />
+                </f:facet>
+            </b:modal>
+            <script>
+                $('#myform').validator().on('submit', function (e) {
+            	  if (e.isDefaultPrevented()) {
+            		  // handle the invalid form...
+                      var errosIds = [{idmodal:"modalNome", idform:"nomeErro"},
+                                      {idmodal:"modalTwitter", idform:"twitterErro"},
+                                      {idmodal:"modalEmail", idform:"emailErro"},
+                                      {idmodal:"modalSenha", idform:"senhaErro"},
+                                      {idmodal:"modalSenhaConf", idform:"senhaConfErro"}];
+
+                      for ( var i=0; i &lt; errosIds.length; i++ ) {
+                          if ($("#"+errosIds[i].idform).text().length == 0){
+                        	  $("#"+errosIds[i].idmodal).hide();
+                          }
+                          else {
+                        	  $("#"+errosIds[i].idmodal).show();
+                          }
+                      }
+            		  $('#amodal').modal();
+            	  } else {
+            	    // everything looks good!
+            	  }
+            	})
+            </script>
+        </ui:define>
+    </ui:composition>
+</h:body>
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+        xmlns:h="http://java.sun.com/jsf/html">
+
+    <div id="alert-modal" class="modal fade" tabindex="-1" role="dialog">
+        <h:panelGroup id="alert-modal-dialog" styleClass="modal-dialog" layout="block">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h:messages style="list-style-type: none; padding: 0;"
+                            errorClass="alert alert-danger"
+                            warnClass="alert alert-warning"
+                            infoClass="alert alert-info"
+                            fatalClass="alert alert-danger"/>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </h:panelGroup>
+    </div>
+</ui:composition>

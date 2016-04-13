@@ -1,0 +1,13 @@
+br.gov.to.sefaz.arr.controller
+br.gov.to.sefaz.arr.model.entity
+br.gov.to.sefaz.arr.repository
+br.gov.to.sefaz.arr.service
+br.gov.to.sefaz.arr.service.iface
+br.gov.to.sefaz.common.controller
+br.gov.to.sefaz.common.controller.iface
+br.gov.to.sefaz.common.model
+br.gov.to.sefaz.common.service
+br.gov.to.sefaz.common.service.iface
+br.gov.to.sefaz.seg.controller
+br.gov.to.sefaz.seg.domain
+br.gov.to.sefaz.util

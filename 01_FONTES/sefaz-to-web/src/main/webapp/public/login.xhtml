@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:b="http://bootsfaces.net/ui">
+<h:head>
+    <title>Sefaz TO</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro"/>
+    <link href="#{facesContext.externalContext.requestContextPath}/resources/css/project-style.css"
+          rel="stylesheet" type="text/css"/>
+</h:head>
+<h:body>
+    <b:container id="login-container">
+        <b:row>
+            <b:column span="5">
+                <h3>
+                    <h:outputText value="#{msg['login.titulo']}"/>
+                </h3>
+                <h6>
+                    <h:outputText value="#{msg['login.subtitulo']}"/>
+                </h6>
+                <b:panel title="Login do Sistema" collapsible="false" look="info">
+                    <form id="login-form" method="post"
+                          action="#{facesContext.externalContext.requestContextPath}/login">
+                        <div class="form-group">
+                            <label for="password">#{msg['login.cpf']}</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="glyphicon glyphicon-user"/></div>
+                                <input class="form-control" id="username" name="username" type="text"
+                                       placeholder="#{msg['login.cpf.placeholder']}"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">#{msg['login.senha']}</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="glyphicon glyphicon-lock"/></div>
+                                <input class="form-control" id="password" name="password" type="password"
+                                       placeholder="#{msg['login.senha.placeholder']}"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                            <button type="submit" class="btn btn-primary">#{msg['login.entrar']}</button>
+                            <a class="btn btn-success" href="login.xhtml">#{msg['login.certificado.digital']}</a>
+                        </div>
+                    </form>
+                    <div id="login-footer">
+                        <a href="#"><h:outputText value="#{msg['login.lembrar.senha']}"/></a>
+                        <a href="#"><h:outputText value="#{msg['login.cadastre.aqui']}"/></a>
+                    </div>
+                </b:panel>
+
+                <h:panelGroup rendered="#{param.erro != null}">
+                    <b:alert severity="danger"><h:outputText value="#{msg['login.erro']}"/></b:alert>
+                </h:panelGroup>
+                <h:panelGroup rendered="#{param.logout != null}">
+                    <b:alert severity="success"><h:outputText value="#{msg['login.logout.sucesso']}"/></b:alert>
+                </h:panelGroup>
+            </b:column>
+        </b:row>
+    </b:container>
+</h:body>
+</html>

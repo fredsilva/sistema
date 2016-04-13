@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:c="http://java.sun.com/jsp/jstl/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:composite="http://java.sun.com/jsf/composite"      
+      xmlns:custom="http://sefaz.to.gov.br/composites"
+      >
+    
+    <composite:interface>    
+        <composite:attribute name="id" />
+    	<composite:attribute name="title" />		
+        <composite:attribute name="headers" />
+        <composite:attribute name="bean" required="true" />     
+        <composite:attribute name="fields" required="true" />
+        <composite:attribute name="select"  />
+        <composite:attribute name="selecttarget" />
+        <composite:attribute name="delete" />
+        <composite:attribute name="paginable" default="true" />
+    </composite:interface>
+	
+    <composite:implementation>        
+        
+        <f:metadata>
+            <c:choose>
+                <c:when test="#{cc.attrs.paginable eq 'true'}">
+                    <f:event type="preRenderView" listener="#{cc.attrs.bean.loadPage(cc.attrs.bean.pageNumber)}"/>
+                </c:when>              
+                <c:otherwise>
+                    <f:event type="preRenderView" listener="#{cc.attrs.bean.loadList()}"/>
+                </c:otherwise>
+            </c:choose>            
+        </f:metadata>
+        <c:if test="#{not empty cc.attrs.title}">        
+            <div class="panel-heading">#{cc.attrs.title}</div>
+        </c:if>
+        <h:form id="#{cc.attrs.id}" styleClass="form-inline">
+            <div class="medium-scrollable">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <c:forEach var="header" items="#{cc.attrs.headers.split(',')}">
+                                <th>#{header}</th>
+                            </c:forEach>
+                            <c:if test="#{not empty cc.attrs.select or not empty cc.attrs.delete}">
+                                <th class="text-center"></th>
+                            </c:if>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <ui:repeat value="#{cc.attrs.bean.list}" var="registro">
+                            <tr>
+                                <c:forEach var="coluna" items="#{cc.attrs.fields.split(',')}">
+                                    <td>#{registro[coluna]}</td>
+                                </c:forEach>
+                                  
+                                <c:if test="#{not empty cc.attrs.select or not empty cc.attrs.delete}">
+                                    <td class="text-center">
+                                    <c:if test="#{not empty cc.attrs.select}">
+                                        <h:panelGroup>
+                                            <f:ajax
+                                                    listener="#{cc.attrs.bean.select(registro[cc.attrs.select])}"
+                                                    event="click" render="#{cc.attrs.selecttarget}"/>
+                                            <input type="radio" name="radio" value="#{registro[cc.attrs.select]}"/>
+                                        </h:panelGroup>
+                                    </c:if>
+                                        <c:if test="#{not empty cc.attrs.delete}">
+                                            <h:commandLink
+                                                action="#{cc.attrs.bean.delete(registro[cc.attrs.delete])}">
+                                                <i class="glyphicon glyphicon-trash" />
+                                                <f:ajax render=":#{cc.attrs.id}:#{cc.attrs.id}" onevent="resposta" />
+                                            </h:commandLink>
+                                        </c:if>
+                                    </td>
+                                </c:if>
+                            </tr>
+                        </ui:repeat>
+                    </tbody>
+                </table>       
+            </div>
+            <c:if test="#{cc.attrs.paginable eq 'true'}">
+                <custom:pagination bean="#{cc.attrs.bean}" 
+                                   rendertarget=":#{cc.attrs.id}:#{cc.attrs.id}" />
+            </c:if>
+
+    </h:form>
+        <script type="application/javascript">
+            function resposta(data) {
+                if (data.status == 'success') {
+                    alert('Requisição completada com sucesso!');
+                }
+            }                
+        </script>
+    </composite:implementation>
+	
+</html>
