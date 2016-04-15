@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>br.gov.to.sefaz</groupId>
+        <artifactId>sat</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <groupId>br.gov.to.sefaz</groupId>
+    <artifactId>sat-core</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>sat-core</name>
+
+    <modules>
+        <module>sat-core-arr</module> <!-- Arrecadação -->
+        <!-- <module>sat-core-ccc</module> --> <!-- Conta Corrente -->
+        <!-- <module>sat-core-cci</module> --> <!-- Cadastro de Contribuinte -->
+        <!-- <module>sat-core-cob</module> --> <!-- Cobrança -->
+        <!-- <module>sat-core-com</module> --> <!-- Consulta -->
+        <!-- <module>sat-core-ecf</module> --> <!-- Equipamento Emissor de Cupom Fiscal -->
+        <!-- <module>sat-core-fie</module> --> <!-- Fiscalização Estabelecimento -->
+        <!-- <module>sat-core-ftr</module> --> <!-- Fiscalização de Trânsito de Mercadorias -->
+        <!-- <module>sat-core-ged</module> --> <!-- Gerenciamento Eletrônico de Documentos -->
+        <!-- <module>sat-core-ise</module> --> <!-- Isenções -->
+        <!-- <module>sat-core-nfe</module> --> <!-- Nota Fiscal Eletrônica -->
+        <!-- <module>sat-core-otr</module> --> <!-- Outras Receitas -->
+        <!-- <module>sat-core-ree</module> --> <!-- Regimes Especiais -->
+        <!-- <module>sat-core-res</module> --> <!-- Restituições -->
+        <!-- <module>sat-core-wrk</module> --> <!-- Gestão de Fluxo de Trabalho -->
+        <module>sat-core-seg</module> <!-- Segurança -->
+    </modules>
+</project>

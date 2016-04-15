@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1_0" href="../../../common/service/iface/PagingAndSortingService.html" title="br.gov.to.sefaz.common.service.iface.PagingAndSortingService" alt="" coords="16,11,512,156"/>
-<area shape="rect" id="node1" href="../../../common/service/iface/PagingAndSortingService.html" title="&lt;TABLE&gt;" alt="" coords="5,5,523,161"/>
-<area shape="rect" id="node3_1" href="./BancosService.html" title="br.gov.to.sefaz.arr.service.iface.BancosService" alt="" coords="211,215,317,257"/>
-<area shape="rect" id="node3" href="./BancosService.html" title="&lt;TABLE&gt;" alt="" coords="201,209,327,263"/>
-<area shape="rect" id="node2_2" href="../BancosServiceImpl.html" title="br.gov.to.sefaz.arr.service.BancosServiceImpl" alt="" coords="43,316,485,392"/>
-<area shape="rect" id="node2" href="../BancosServiceImpl.html" title="&lt;TABLE&gt;" alt="" coords="32,311,496,397"/>
-</map>

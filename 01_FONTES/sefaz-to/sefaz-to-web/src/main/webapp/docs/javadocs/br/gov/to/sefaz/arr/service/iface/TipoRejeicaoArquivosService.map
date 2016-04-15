@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1_0" href="../../../common/service/iface/PagingAndSortingService.html" title="br.gov.to.sefaz.common.service.iface.PagingAndSortingService" alt="" coords="68,11,564,156"/>
-<area shape="rect" id="node1" href="../../../common/service/iface/PagingAndSortingService.html" title="&lt;TABLE&gt;" alt="" coords="57,5,575,161"/>
-<area shape="rect" id="node3_1" href="./TipoRejeicaoArquivosService.html" title="br.gov.to.sefaz.arr.service.iface.TipoRejeicaoArquivosService" alt="" coords="224,215,408,257"/>
-<area shape="rect" id="node3" href="./TipoRejeicaoArquivosService.html" title="&lt;TABLE&gt;" alt="" coords="213,209,419,263"/>
-<area shape="rect" id="node2_2" href="../TipoRejeicaoArquivosServiceImpl.html" title="br.gov.to.sefaz.arr.service.TipoRejeicaoArquivosServiceImpl" alt="" coords="16,316,616,392"/>
-<area shape="rect" id="node2" href="../TipoRejeicaoArquivosServiceImpl.html" title="&lt;TABLE&gt;" alt="" coords="5,311,627,397"/>
-</map>
