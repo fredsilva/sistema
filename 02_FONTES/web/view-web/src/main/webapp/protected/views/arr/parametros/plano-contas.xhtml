@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:sat="http://sefaz.to.gov.br/composites"
+        xmlns:a4j="http://richfaces.org/a4j">
+
+<ui:composition template="/protected/views/templates/views/default-template.xhtml">
+    <ui:param name="pageTitle" value="Plano de Contas"/>
+    <ui:define name="content">
+        <h:outputScript library="js" name="arr/parametros/plano-contas.js"/>
+    </ui:define>
+    <ui:define name="content">
+        <h:panelGroup layout="block" styleClass="col-md-12" id="bodydiv">
+            <sat:panel title="#{arr_msg['parametros.planoContas.tabela.titulo']}">
+                <h:form id="pesquisaform">
+                    <div class="row">
+                        <div class="form-group col-md-2">
+                            <h:outputLabel for="codigo">Código do Plano*</h:outputLabel>
+                            <h:inputText value="#{planoContasMB.dto.codigoPlanoContas}"
+                                    id="codigopesquisa"
+                                    styleClass="form-control" required="true"
+                                    requiredMessage="Código do plano é obrigatório!"
+                                    maxlength="20"/>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h:outputLabel for="nome">Descrição do Plano*</h:outputLabel>
+                            <h:inputText value="#{planoContasMB.dto.nomeConta}" id="nomepesquisa"
+                                    styleClass="form-control" required="true"
+                                    requiredMessage="A descrição do plano é obrigatória!"
+                                    maxlength="150"/>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <h:outputLabel for="codigoContabil">Conta Contábil</h:outputLabel>
+                            <h:inputText value="#{planoContasMB.dto.codigoContabil}"
+                                    id="codigoContabilpesquisa"
+                                    styleClass="form-control"
+                                    maxlength="20"/>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <h:outputLabel for="tipoConta">Tipo de Conta*</h:outputLabel>
+                            <h:selectOneMenu value="#{planoContasMB.dto.tipoConta}" id="tipoContapesquisa"
+                                    styleClass="form-control">
+                                <f:selectItems value="#{enumsMB.tiposConta}"
+                                        var="tipoConta"
+                                        itemValue="#{tipoConta}"
+                                        itemLabel="#{tipoConta.label}"/>
+                            </h:selectOneMenu>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <h:commandButton value="Pesquisar" styleClass="btn btn-primary button-align-bottom"
+                                    action="#{planoContasMB.search()}">
+                                <f:ajax render="bodydiv"
+                                        execute="codigopesquisa nomepesquisa codigoContabilpesquisa tipoContapesquisa"/>
+                            </h:commandButton>
+                        </div>
+                    </div>
+                </h:form>
+                <sat:table id="plano-conta-table"
+                        bundle="arr_msg"
+                        headers="parametros.planoContas.tabela.codigo,
+                                parametros.planoContas.tabela.descricao,
+                                parametros.planoContas.tabela.codigo_contabil,
+                                parametros.planoContas.tabela.tipo_conta,
+                                parametros.planoContas.tabela.conta_hierarquica,
+                                parametros.planoContas.tabela.situacao"
+                        fields="codigoPlanoContas,nomeConta,codigoContabil,tipoConta:string,contaHierarquica,situacao:string,
+                                idPlanocontas:hide,idGruposCnaes:hide,situacao:hide"
+                        hasActions="true"
+                        content="#{planoContasMB.resultList}"
+                        actionEvents="select-row:click:selectRow, delete-row:click:deletePlanoContas(0)">
+                    <f:facet name="actions">
+                        <input name="tipo-arquivos-selected" class="select-row" type="radio"/>
+                        <i class="glyphicon glyphicon-trash delete-row" role="button"/>
+                    </f:facet>
+                </sat:table>
+                <h:form>
+                    <a4j:jsFunction name="deletePlanoContas"
+                            action="#{planoContasMB.delete()}"
+                            render="plano-contas-table"
+                            oncomplete="resetFields()">
+                        <a4j:param name="id" assignTo="#{planoContasMB.dto.idPlanocontas}"/>
+                    </a4j:jsFunction>
+                </h:form>
+            </sat:panel>
+
+            <div class="panel panel-default">
+                <div class="panel-heading"><h3 class="panel-title">#{arr_msg['parametros.planoContas.form.titulo']}</h3></div>
+                <h:form id="plano-conta-form" class="panel-body">
+                    <h:inputHidden value="#{planoContasMB.dto.idPlanocontas}" id="idPlano" />
+                    <div class="row">
+                        <div class="form-group col-md-2">
+                            <h:outputLabel for="codigo">Código do Plano*</h:outputLabel>
+                            <h:inputText value="#{planoContasMB.dto.codigoPlanoContas}" id="codigo"
+                                    styleClass="form-control" maxlength="20"/>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h:outputLabel for="nome">Descrição do Plano*</h:outputLabel>
+                            <h:inputText value="#{planoContasMB.dto.nomeConta}" id="nome"
+                                    styleClass="form-control" maxlength="150"/>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <h:outputLabel for="contaHierarquica">Conta Hierárquica</h:outputLabel>
+                            <h:inputText value="#{planoContasMB.dto.contaHierarquica}" id="contaHierarquica"
+                                    styleClass="form-control" maxlength="20"/>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <h:outputLabel for="codigoContabil">Conta Contábil</h:outputLabel>
+                            <h:inputText value="#{planoContasMB.dto.codigoContabil}" id="codigoContabil"
+                                    styleClass="form-control" maxlength="20"/>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <h:outputLabel for="tipoConta">Tipo de Conta*</h:outputLabel>
+                            <h:selectOneMenu value="#{planoContasMB.dto.tipoConta}" id="tipoConta"
+                                    styleClass="form-control">
+                                <f:selectItems value="#{enumsMB.tiposConta}"
+                                        var="tipoConta"
+                                        itemValue="#{tipoConta}"
+                                        itemLabel="#{tipoConta.label}"/>
+                            </h:selectOneMenu>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-2">
+                            <h:selectBooleanCheckbox value="#{planoContasMB.dto.rateio}" id="rateio"/>
+                            <h:outputLabel for="rateio">Permite Rateio?</h:outputLabel>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <h:outputLabel for="situacao">Situação*</h:outputLabel>
+                            <h:selectOneMenu value="#{planoContasMB.dto.situacao}" id="situacao"
+                                    styleClass="form-control">
+                                <f:selectItems value="#{enumsMB.situacoes}"
+                                        var="situacao"
+                                        itemValue="#{situacao}"
+                                        itemLabel="#{situacao.label}"/>
+                            </h:selectOneMenu>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <h:outputLabel for="grupoCnae">Grupo de CNAE*</h:outputLabel>
+                            <h:selectOneMenu value="#{tipoGruposCnaeMB.dto.idGrupoCnae}" id="grupoCnae"
+                                    styleClass="form-control">
+                                <f:selectItems value="#{tipoGruposCnaeMB.resultList}" var="tipoGrupoCnae"
+                                        itemLabel="#{tipoGrupoCnae.descricaoGrupo}"
+                                        itemValue="#{tipoGrupoCnae.idGrupoCnae}"/>
+                            </h:selectOneMenu>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <button type="button" onclick="clearFields('bodydiv');"
+                                    class="btn btn-primary button-align-bottom">#{arr_msg['parametros.planoContas.botao.novaplano']}</button>
+                            <sat:saveUpdateButton label="#{arr_msg['parametros.planoContas.botao.salvar']}"
+                                    render="plano-conta-table" execute="idPlano codigo nome contaHierarquica codigoContabil tipoConta rateio situacao grupoCnae"
+                                    onEvent="resetOnSuccess" styleClass="button-align-bottom"
+                                    crudMb="#{planoContasMB}"/>
+                        </div>
+                    </div>
+                </h:form>
+            </div>
+
+        </h:panelGroup>
+    </ui:define>
+</ui:composition>
+
+</html>

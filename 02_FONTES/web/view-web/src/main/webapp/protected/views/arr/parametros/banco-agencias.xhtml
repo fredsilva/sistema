@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+    xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+    xmlns:f="http://java.sun.com/jsf/core" xmlns:sat="http://sefaz.to.gov.br/composites"
+    xmlns:a4j="http://richfaces.org/a4j">
+
+<div class="col-md-12">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">#{arr_msg['parametros.bancoAgencias.titulo']}</h3>
+        </div>
+        <div class="panel-body">
+            <sat:panel title="#{arr_msg['parametros.bancoAgencias.titulo']}">
+                <sat:table tableId="banco-agencias-table" bundle="arr_msg" content="#{bancoAgenciasMB.resultList}"
+                    headers="parametros.bancoAgencias.tabela.numero,
+                                         parametros.bancoAgencias.tabela.nome,
+                                         parametros.bancoAgencias.tabela.cnpj,
+                                         parametros.bancoAgencias.tabela.municipio,
+                                         parametros.bancoAgencias.tabela.numero.cc,
+                                         parametros.bancoAgencias.tabela.email"
+                    fields="numeroAgencia,nomeAgencia,cnpjAgencia,nomeMunicipio,numeroCC,email" hasActions="true"
+                    actionEvents="select-row:click:selectRow,
+                                        delete:click:deleteBancoAgencias(0)">
+                    <f:facet name="actions">
+                        <input name="tipo-arquivos-selected" class="select-row" type="radio" />
+                        <i class="delete glyphicon glyphicon-trash" role="button" />
+                    </f:facet>
+                </sat:table>
+            </sat:panel>
+        </div>
+        <h:outputScript>
+            function selectRow(data) {
+            <!--                         $("#tipo-rejeicao-form\\:codigo").val(data[0]); -->
+            <!--                         $("#tipo-rejeicao-form\\:motivo").val(data[1]); -->
+            <!--                         $("#tipo-rejeicao-form\\:situacao option:contains("+data[2]+")").attr('selected', true); -->
+            <!--                         $("#tipo-rejeicao-form\\:codigo").attr('readonly', true); -->
+            <!--                         $('#tipo-rejeicao-form .btn-save').hide(); -->
+            <!--                         $('#tipo-rejeicao-form .btn-update').show(); -->
+            }
+
+            function resetFields() {
+            <!--                         clearFields('tipo-rejeicao-table'); -->
+            <!--                         clearFields('tipo-rejeicao-form'); -->
+            <!--                         $('#tipo-rejeicao-form .btn-save').show(); -->
+            <!--                         $('#tipo-rejeicao-form .btn-update').hide(); -->
+            <!--                         $("#tipo-rejeicao-form\\:codigo").attr('readonly', false); -->
+            }
+
+            function resetOnSuccess(data) {
+                resetFields()
+            }
+        </h:outputScript>
+        <h:form>
+            <a4j:jsFunction name="deleteBancoAgencias" action="#{bancoAgenciasMB.delete()}"
+                render="tipo-rejeicao-table-container" oncomplete="resetFields()">
+                <a4j:param name="id" assignTo="#{bancoAgenciasMB.dto.idAgencia}" />
+            </a4j:jsFunction>
+        </h:form>
+    </div>
+
+</div>
+</html>

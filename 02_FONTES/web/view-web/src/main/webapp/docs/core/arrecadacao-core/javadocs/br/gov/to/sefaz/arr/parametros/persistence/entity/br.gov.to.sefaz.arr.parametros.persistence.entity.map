@@ -1,0 +1,32 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./TipoRejeicaoArquivos.html" title="br.gov.to.sefaz.arr.parametros.persistence.entity.TipoRejeicaoArquivos" alt="" coords="16,262,624,546"/>
+<area shape="rect" id="node1" href="./TipoRejeicaoArquivos.html" title="&lt;TABLE&gt;" alt="" coords="5,257,635,551"/>
+<area shape="rect" id="node2_1" href="./TipoGruposCnaes.html" title="br.gov.to.sefaz.arr.parametros.persistence.entity.TipoGruposCnaes" alt="" coords="669,262,1237,546"/>
+<area shape="rect" id="node2" href="./TipoGruposCnaes.html" title="&lt;TABLE&gt;" alt="" coords="659,257,1248,551"/>
+<area shape="rect" id="node3_2" href="./PlanoContas.html" title="br.gov.to.sefaz.arr.parametros.persistence.entity.PlanoContas" alt="" coords="1283,149,2615,659"/>
+<area shape="rect" id="node3" href="./PlanoContas.html" title="&lt;TABLE&gt;" alt="" coords="1273,144,2626,664"/>
+<area shape="rect" id="node4_3" href="./LotesPagosArrecadacao.html" title="br.gov.to.sefaz.arr.parametros.persistence.entity.LotesPagosArrecadacao" alt="" coords="2661,80,4873,728"/>
+<area shape="rect" id="node4" href="./LotesPagosArrecadacao.html" title="&lt;TABLE&gt;" alt="" coords="2650,75,4883,733"/>
+<area shape="rect" id="node5_4" href="./ConveniosArrecadacao.html" title="br.gov.to.sefaz.arr.parametros.persistence.entity.ConveniosArrecadacao" alt="" coords="4918,201,6042,607"/>
+<area shape="rect" id="node5" href="./ConveniosArrecadacao.html" title="&lt;TABLE&gt;" alt="" coords="4907,196,6053,612"/>
+<area shape="rect" id="node6_5" href="./Bancos.html" title="br.gov.to.sefaz.arr.parametros.persistence.entity.Bancos" alt="" coords="6088,253,6651,555"/>
+<area shape="rect" id="node6" href="./Bancos.html" title="&lt;TABLE&gt;" alt="" coords="6077,248,6661,560"/>
+<area shape="rect" id="node7_6" href="./BancoAgenciasPK.html" title="br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgenciasPK" alt="" coords="6696,297,7059,511"/>
+<area shape="rect" id="node7" href="./BancoAgenciasPK.html" title="&lt;TABLE&gt;" alt="" coords="6685,291,7069,517"/>
+<area shape="rect" id="node8_7" href="./BancoAgencias.html" title="br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgencias" alt="" coords="7104,115,8789,693"/>
+<area shape="rect" id="node8" href="./BancoAgencias.html" title="&lt;TABLE&gt;" alt="" coords="7093,109,8800,699"/>
+<area shape="rect" id="node9_8" href="./ArrEntityPackageMarker.html" title="br.gov.to.sefaz.arr.parametros.persistence.entity.ArrEntityPackageMarker" alt="" coords="8835,366,9016,442"/>
+<area shape="rect" id="node9" href="./ArrEntityPackageMarker.html" title="&lt;TABLE&gt;" alt="" coords="8824,361,9027,447"/>
+<area shape="rect" id="node10_9" href="./ArquivosStr.html" title="br.gov.to.sefaz.arr.parametros.persistence.entity.ArquivosStr" alt="" coords="9061,11,11875,797"/>
+<area shape="rect" id="node10" href="./ArquivosStr.html" title="&lt;TABLE&gt;" alt="" coords="9051,5,11885,803"/>
+<area shape="rect" id="node11_10" href="./ArquivoRecepcao.html" title="br.gov.to.sefaz.arr.parametros.persistence.entity.ArquivoRecepcao" alt="" coords="11920,28,14611,780"/>
+<area shape="rect" id="node11" href="./ArquivoRecepcao.html" title="&lt;TABLE&gt;" alt="" coords="11909,23,14621,785"/>
+<area shape="rect" id="node12_11" href="./ArquivoErrosStrPK.html" title="br.gov.to.sefaz.arr.parametros.persistence.entity.ArquivoErrosStrPK" alt="" coords="14656,305,15072,503"/>
+<area shape="rect" id="node12" href="./ArquivoErrosStrPK.html" title="&lt;TABLE&gt;" alt="" coords="14645,300,15083,508"/>
+<area shape="rect" id="node13_12" href="./ArquivoErrosStr.html" title="br.gov.to.sefaz.arr.parametros.persistence.entity.ArquivoErrosStr" alt="" coords="15118,297,15426,511"/>
+<area shape="rect" id="node13" href="./ArquivoErrosStr.html" title="&lt;TABLE&gt;" alt="" coords="15107,291,15437,517"/>
+<area shape="rect" id="node14_13" href="./ArquivoErro.html" title="br.gov.to.sefaz.arr.parametros.persistence.entity.ArquivoErro" alt="" coords="15471,245,15907,563"/>
+<area shape="rect" id="node14" href="./ArquivoErro.html" title="&lt;TABLE&gt;" alt="" coords="15461,239,15918,569"/>
+<area shape="rect" id="node15_14" href="./ArquivoDetalhePagos.html" title="br.gov.to.sefaz.arr.parametros.persistence.entity.ArquivoDetalhePagos" alt="" coords="15953,106,17653,702"/>
+<area shape="rect" id="node15" href="./ArquivoDetalhePagos.html" title="&lt;TABLE&gt;" alt="" coords="15942,101,17663,707"/>
+</map>

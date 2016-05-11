@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:composite="http://java.sun.com/jsf/composite">
+
+<composite:interface>
+    <composite:attribute name="modalId"/>
+    <composite:attribute name="metodo" required="true" method-signature="void action()"/>
+    <composite:attribute name="mensagem" required="true"/>
+    <composite:attribute name="renderTarget"/>
+    <composite:attribute name="botaoPositivoLabel" default="Sim"/>
+    <composite:attribute name="botaoNegativoLabel" default="Não"/>
+</composite:interface>
+
+<composite:implementation>
+    <div id="#{cc.attrs.modalId}" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    #{cc.attrs.mensagem}
+                </div>
+                <div class="modal-footer">
+                    <h:commandButton value="#{cc.attrs.botaoPositivoLabel}"
+                            styleClass="btn btn-primary"
+                            action="#{cc.attrs.metodo}"
+                            onclick="$('\##{cc.attrs.modalId}').modal('hide');">
+                        <f:ajax render="#{cc.attrs.renderTarget}"/>
+                    </h:commandButton>
+                    <h:button styleClass="btn btn-default"
+                            value="#{cc.attrs.botaoNegativoLabel}"
+                            onclick="$('\##{cc.attrs.modalId}').modal('hide');return false;"/>
+                </div>
+            </div>
+        </div>
+    </div>
+</composite:implementation>
+</html>

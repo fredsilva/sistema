@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:composite="http://java.sun.com/jsf/composite"
+      >
+
+    <composite:interface>
+        <composite:attribute name="bean" required="true" />
+        <composite:attribute name="renderTarget" />
+    </composite:interface>
+
+    <composite:implementation>
+            <nav class="panel-body row">
+                <div class="pagination-panel">
+                    <ul class="pagination" style="margin: 0">
+                        <li class="#{cc.attrs.bean.page.first ?'disabled':''}">
+                            <ui:fragment rendered="#{!cc.attrs.bean.page.first}">
+                            <h:commandLink action="#{cc.attrs.bean.loadPage(cc.attrs.bean.pageNumber-1)}"
+                                    p:aria-label="Previous">
+                                <span aria-hidden="true">&#xab;</span>
+                                <f:ajax render="#{cc.attrs.renderTarget}" execute="page pageSize"/>
+                            </h:commandLink>
+                            </ui:fragment>
+                                <ui:fragment rendered="#{cc.attrs.bean.page.first}">
+                                    <a aria-label="Previous" href="javascript:void(0)"><span aria-hidden="true">&#xab;</span></a>
+                                </ui:fragment>
+                        </li>
+                        <ui:repeat value="#{cc.attrs.bean.createPageList()}" var="index">
+                            <ui:fragment rendered="#{index == cc.attrs.bean.pageNumber}">
+                                <li class="active">
+                                    <h:commandLink disabled="true">
+                                        ${index}
+                                        <span class="sr-only">(atual)</span>
+                                    </h:commandLink>
+                                </li>
+                            </ui:fragment>
+                            <ui:fragment rendered="#{index != cc.attrs.bean.pageNumber}">
+                                <li>
+                                    <h:commandLink action="#{cc.attrs.bean.loadPage(index)}">
+                                        ${index}
+                                        <f:ajax render="#{cc.attrs.renderTarget}" execute="page pageSize"/>
+                                    </h:commandLink>
+                                </li>
+                            </ui:fragment>
+
+                        </ui:repeat>
+                        <li class="#{cc.attrs.bean.page.last ?'disabled':''}">
+                            <ui:fragment rendered="#{!cc.attrs.bean.page.last}">
+                            <h:commandLink action="#{cc.attrs.bean.loadPage(cc.attrs.bean.pageNumber+1)}"
+                                    p:aria-label="Next">
+                                <span aria-hidden="true">&#xbb;</span>
+                                <f:ajax render="#{cc.attrs.renderTarget}" execute="page pageSize"/>
+                            </h:commandLink>
+                            </ui:fragment>
+                            <ui:fragment rendered="#{cc.attrs.bean.page.last}">
+                                <a aria-label="Next" href="javascript:void(0)"><span aria-hidden="true">&#xbb;</span></a>
+                            </ui:fragment>
+                        </li>
+                    </ul>
+                    <div class="page-size">
+
+                        <h:inputText p:type="number" id="pageSize" styleClass="form-control"
+                                onkeypress="if (event.keyCode == 13) {this.blur();}"
+                                value="#{cc.attrs.bean.pageSize}">
+                                <f:ajax event="change" render="#{cc.attrs.renderTarget}" execute="pageSize"/>
+                        </h:inputText>
+                    </div>
+                </div>
+            </nav>
+    </composite:implementation>
+
+</html>
