@@ -1,0 +1,24 @@
+Content-Type: text/x-zim-wiki
+Wiki-Format: zim 0.4
+Creation-Date: 2016-05-10T11:26:39-03:00
+
+====== 02. Módulo de Arrecadação ======
+Created terça-feira 10 maio 2016
+
+Os pedidos de restituição envolvem a descrição do pedido, se permite parecer automático, se permite recurso, qual o valor mínimo para realizar o pedido, a 	quantidade de dias necessários para analisar o pedido e a situação (ativo ou cancelado).
+
+As áreas são aquelas responsáveis pela análise dos pedidos que foram realizados pelos contribuintes. Na definição das áreas deve ser informada a delegacia, se exige parecer, a ordem do parecer (informa qual a ordem do percurso que o pedido vai ter dentro da SEFAZ. Exemplo: Controladoria, Auditoria, Financeiro, Arrecadação), a área final do parecer (última área que vai dar o parecer), quantidade de dias necessários para dar o parecer, se o pedido pode ser encaminhado, situação da área, dados do servidor responsável pelo parecer (Matrícula, Nome, E-mail e Situação), Valor Inicial e final.
+	
+Na definição da documentação o usuário deve informar se é obrigatório, qual o tipo de documento que deve ser anexado no pedido e a situação (ativo ou cancelado). Outra importante informação durante a parametrização do pedido são as ações. Estas ações podem ser para correção de pagamentos, créditos em conta tributária, créditos em conta corrente ou estorno de pagamentos. O usuário deve informar o tipo de ação, tipo	de campo (inteiro, numérico, alfanumérico ou data/hora), a descrição do campo que será disponibilizado durante o pedido, se o campo informado é obrigatório e a situação do campo (ativo ou cancelado).
+
+Os pedidos de restituição envolvem a descrição do pedido, se permite parecer automático, se permite recurso, qual o valor mínimo para realizar o pedido, a 	quantidade de dias necessários para analisar o pedido e a situação (ativo ou cancelado).
+
+As áreas são aquelas responsáveis pela análise dos pedidos que foram realizados pelos contribuintes. Na definição das áreas deve ser informada a delegacia, se exige parecer, a ordem do parecer (informa qual a ordem do percurso que o pedido vai ter dentro da SEFAZ. Exemplo: Controladoria, Auditoria, Financeiro, Arrecadação), a área final do parecer (última área que vai dar o parecer), quantidade de dias necessários para dar o parecer, se o pedido pode ser encaminhado, situação da área, dados do servidor responsável pelo parecer (Matrícula, Nome, E-mail e Situação), Valor Inicial e final.
+	
+Na definição da documentação o usuário deve informar se é obrigatório, qual o tipo de documento que deve ser anexado no pedido e a situação (ativo ou cancelado). Outra importante informação durante a parametrização do pedido são as ações. Estas ações podem ser para correção de pagamentos, créditos em conta tributária, créditos em conta corrente ou estorno de pagamentos. O usuário deve informar o tipo de ação, tipo	de campo (inteiro, numérico, alfanumérico ou data/hora), a descrição do campo que será disponibilizado durante o pedido, se o campo informado é obrigatório e a situação do campo (ativo ou cancelado).
+
+Os pedidos de restituição envolvem a descrição do pedido, se permite parecer automático, se permite recurso, qual o valor mínimo para realizar o pedido, a 	quantidade de dias necessários para analisar o pedido e a situação (ativo ou cancelado).
+
+As áreas são aquelas responsáveis pela análise dos pedidos que foram realizados pelos contribuintes. Na definição das áreas deve ser informada a delegacia, se exige parecer, a ordem do parecer (informa qual a ordem do percurso que o pedido vai ter dentro da SEFAZ. Exemplo: Controladoria, Auditoria, Financeiro, Arrecadação), a área final do parecer (última área que vai dar o parecer), quantidade de dias necessários para dar o parecer, se o pedido pode ser encaminhado, situação da área, dados do servidor responsável pelo parecer (Matrícula, Nome, E-mail e Situação), Valor Inicial e final.
+	
+Na definição da documentação o usuário deve informar se é obrigatório, qual o tipo de documento que deve ser anexado no pedido e a situação (ativo ou cancelado). Outra importante informação durante a parametrização do pedido são as ações. Estas ações podem ser para correção de pagamentos, créditos em conta tributária, créditos em conta corrente ou estorno de pagamentos. O usuário deve informar o tipo de ação, tipo	de campo (inteiro, numérico, alfanumérico ou data/hora), a descrição do campo que será disponibilizado durante o pedido, se o campo informado é obrigatório e a situação do campo (ativo ou cancelado).
