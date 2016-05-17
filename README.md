@@ -5,9 +5,14 @@
 Composto pelos Componentes abaixo relacionados:
 
 - ARR - **Arrecadação**
+- CCI - **Cadastro de Contribuinte**
+- ECF - **Gestão de Equipamento Emissor de Cupom Fiscal**
+- DEF - **Domicilio Eletrônico Fazendario**
+
 - STR - **Serviços Transversais**
 - STR - SEG - **Gestão de Segurança**
-- STR - SCE - **Comunicação Eletrônica**
+- STR - SCE - **Serviços Comunicação Eletrônica**
 - STR - MON - **Monitoramento dos Serviços**
 - STR - GED - **Gerenciamento Eletrônico de Documentos**
 - STR - WFW - **Gestão de Fluxo de Trabalho**
+- STR - PAR - **Parâmetros Gerais**
