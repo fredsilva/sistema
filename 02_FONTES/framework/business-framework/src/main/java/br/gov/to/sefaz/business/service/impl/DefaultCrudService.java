@@ -1,8 +1,14 @@
 package br.gov.to.sefaz.business.service.impl;
 
 import br.gov.to.sefaz.business.service.CrudService;
+import br.gov.to.sefaz.business.service.validation.ValidationContext;
+import br.gov.to.sefaz.business.service.validation.ValidationSuite;
+import br.gov.to.sefaz.persistence.entity.AbstractEntity;
+import br.gov.to.sefaz.persistence.repository.BaseRepository;
+
+import org.apache.commons.collections4.IterableUtils;
 import org.apache.commons.collections4.IteratorUtils;
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.domain.Sort;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.io.Serializable;
@@ -14,16 +20,19 @@ import java.util.Optional;
  *
  * @param <E> Entidade que reflete o presente service.
  * @param <I> Id ou pk da entidade.
- *
  * @author <a href="mailto:cristiano.luis@ntconsult.com.br">cristiano.luis</a>
  * @since 22/04/2016 16:20:00
  */
-public class DefaultCrudService<E, I extends Serializable> implements CrudService<E, I> {
+public class DefaultCrudService<E extends AbstractEntity<I>, I extends Serializable>
+        implements CrudService<E, I> {
 
-    private final CrudRepository<E, I> repository;
+    private final BaseRepository<E, I> repository;
+    private final Sort defaultSort;
 
-    public DefaultCrudService(CrudRepository<E, I> repository) {
+    public DefaultCrudService(
+            BaseRepository<E, I> repository, Sort sort) {
         this.repository = repository;
+        this.defaultSort = sort;
     }
 
     /**
@@ -41,7 +50,7 @@ public class DefaultCrudService<E, I extends Serializable> implements CrudServic
     @Transactional(readOnly = true)
     @Override
     public Collection<E> findAll() {
-        return IteratorUtils.toList(repository.findAll().iterator());
+        return IterableUtils.toList(repository.findAll(defaultSort));
     }
 
     /**
@@ -50,31 +59,49 @@ public class DefaultCrudService<E, I extends Serializable> implements CrudServic
     @Transactional(readOnly = true)
     @Override
     public Collection<E> findAll(Iterable<I> list) {
-        return IteratorUtils.toList(repository.findAll(list).iterator());
+        return IterableUtils.toList(repository.findAll(list));
     }
 
     /**
      * {@inheritDoc}.
      */
     @Override
-    public E save(E entity) {
-        return repository.save(entity);
+    public E save(@ValidationSuite(context = ValidationContext.SAVE) E entity) {
+        E save = repository.save(entity);
+        showSaveMessage();
+        return save;
     }
 
     /**
      * {@inheritDoc}.
      */
     @Override
-    public Collection<E> save(Iterable<E> list) {
+    public Collection<E> save(Collection<E> list) {
         return IteratorUtils.toList(repository.save(list).iterator());
     }
 
     /**
+     * Métodos para responsavel pela exibição de mensagens ao fim do {@link #save(Object)}.
+     */
+    protected void showSaveMessage() {
+        // Caso precise de mensagens no save este metodo deve ser sobreescrito.
+    }
+
+    /**
      * {@inheritDoc}.
      */
     @Override
-    public E update(E entity) {
-        return repository.save(entity);
+    public E update(@ValidationSuite(context = ValidationContext.UPDATE) E entity) {
+        E update = repository.save(entity);
+        showUpdateMessage();
+        return update;
+    }
+
+    /**
+     * Métodos para responsavel pela exibição de mensagens ao fim do {@link #update(Object)}.
+     */
+    protected void showUpdateMessage() {
+        // Caso precise de mensagens no update este metodo deve ser sobreescrito.
     }
 
     /**
@@ -83,7 +110,7 @@ public class DefaultCrudService<E, I extends Serializable> implements CrudServic
     @Override
     public Optional<E> delete(I id) {
         repository.delete(id);
-
+        showDeleteMessage();
         return Optional.empty();
     }
 
@@ -95,7 +122,18 @@ public class DefaultCrudService<E, I extends Serializable> implements CrudServic
         }
     }
 
-    protected CrudRepository<E, I> getRepository() {
+    /**
+     * Métodos para responsavel pela exibição de mensagens ao fim do {@link #delete(java.io.Serializable)}.
+     */
+    protected void showDeleteMessage() {
+        // Caso precise de mensagens no delete este metodo deve ser sobreescrito.
+    }
+
+    protected BaseRepository<E, I> getRepository() {
         return repository;
+    }
+
+    public Sort getDefaultSort() {
+        return defaultSort;
     }
 }

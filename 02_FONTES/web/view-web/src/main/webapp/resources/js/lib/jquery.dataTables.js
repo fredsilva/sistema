@@ -3483,7 +3483,9 @@
 		input.setAttribute("type", "number");
 		input.setAttribute("name", tableId+'_length');
 		input.setAttribute("aria-controls", tableId);
-		input.setAttribute("class", classes.sLengthSelect);
+		input.setAttribute("class", classes.sLengthSelect + " justInteger");
+		input.setAttribute("min", 1);
+		input.setAttribute("max", 50);
 
 		var language = settings.oLanguage.sLengthMenu.split( '_MENU_');
 
@@ -3503,6 +3505,18 @@
 		// reference is broken by the use of outerHTML
 		$(input).keypress(function () {
 			if (event.keyCode == 13) {this.blur();}
+		});
+
+		$(input).keyup(function(){
+			var numero = parseInt($(this).val());
+			var vazio = $(this).val();
+			if(vazio == ""){
+				$(this).val(1);
+			}else if( numero < 1 ){
+				 $(this).val(1);
+			}else if( numero > 50){
+				$(this).val(50);
+			}
 		});
 
 		$(input)
@@ -4512,6 +4526,7 @@
 	 */
 	function _fnStringToCss( s )
 	{
+		return "";
 		if ( s === null ) {
 			return '0px';
 		}

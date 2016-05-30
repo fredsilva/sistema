@@ -7,7 +7,7 @@
     <parent>
         <groupId>br.gov.to.sefaz</groupId>
         <artifactId>sat</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>0.1.0-rc1</version>
     </parent>
 
     <artifactId>ear</artifactId>
@@ -19,8 +19,8 @@
         <dependency>
             <groupId>br.gov.to.sefaz.web</groupId>
             <artifactId>view-web</artifactId>
+            <version>${sat.version}</version>
             <type>war</type>
-            <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
 

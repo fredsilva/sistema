@@ -19,7 +19,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 /**
- * Entidade referente a tabela TA_TIPO_REJEICAO_ARQUIVOS do Banco de Dados.
+ * Entidade referente a tabela SEFAZ_ARR.TA_TIPO_REJEICAO_ARQUIVOS do Banco de Dados.
  *
  * @author <a href="mailto:gabriel.santos@ntconsult.com.br">gabriel.santos</a>
  * @since 28/04/2016 17:48:00
@@ -27,6 +27,8 @@ import javax.validation.constraints.Size;
 @Entity
 @Table(name = "TA_TIPO_REJEICAO_ARQUIVOS", schema = "SEFAZ_ARR")
 public class TipoRejeicaoArquivos extends AbstractEntity<Integer> {
+
+    private static final long serialVersionUID = 5843237643184477571L;
 
     @Id
     @NotNull(message = "#{arr_msg['parametros.tipoRejeicao.idCodigoRejeicao.obrigatorio']}")

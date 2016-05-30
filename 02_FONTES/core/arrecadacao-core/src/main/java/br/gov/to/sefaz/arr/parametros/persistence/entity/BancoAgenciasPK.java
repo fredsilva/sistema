@@ -4,17 +4,16 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * Classe para mapeamento de pk composta de {@link BancoAgencias}.
+ * Entidade referente a primary key da tabela TA_BANCO_AGENCIAS do Banco de Dados.
  *
  * @author <a href="mailto:cristiano.luis@ntconsult.com.br">cristiano.luis</a>
- * @since 22/04/2016 16:20:00
+ * @since 12/05/2016 08:40:39
  */
 public class BancoAgenciasPK implements Serializable {
 
-    private static final long serialVersionUID = -1483815542829305337L;
+    private static final long serialVersionUID = -6015967555080876974L;
 
     private Integer idBanco;
-
     private Integer idAgencia;
 
     public BancoAgenciasPK() {
@@ -22,7 +21,6 @@ public class BancoAgenciasPK implements Serializable {
     }
 
     public BancoAgenciasPK(Integer idBanco, Integer idAgencia) {
-        super();
         this.idBanco = idBanco;
         this.idAgencia = idAgencia;
     }
@@ -44,24 +42,25 @@ public class BancoAgenciasPK implements Serializable {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
+    public boolean equals(Object object) {
+        if (this == object) {
             return true;
         }
-        if (obj == null || getClass() != obj.getClass()) {
+        if (object == null || getClass() != object.getClass()) {
             return false;
         }
-        BancoAgenciasPK that = (BancoAgenciasPK) obj;
-        return Objects.equals(idBanco, that.idBanco) && Objects.equals(idAgencia, that.idAgencia);
+        BancoAgenciasPK that = (BancoAgenciasPK) object;
+        return Objects.equals(this.idAgencia, that.idAgencia) && Objects.equals(this.idBanco, idBanco);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(idBanco, idAgencia);
+        return Objects.hash(idAgencia, idBanco);
     }
 
     @Override
     public String toString() {
-        return "BancoAgenciasPK{" + "idBanco=" + idBanco + ", idAgencia=" + idAgencia + '}';
+        return "BancoAgenciasPK [idBanco=" + idBanco + ", idAgencia=" + idAgencia + "]";
     }
+
 }

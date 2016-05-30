@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>br.gov.to.sefaz</groupId>
     <artifactId>sat</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.1.0-rc1</version>
     <packaging>pom</packaging>
 
 	<name>sat</name>
@@ -38,7 +38,7 @@
         <hibernate-jpa-2.1-api.version>1.0.0.Final</hibernate-jpa-2.1-api.version>
         <hibernate-validator.version>5.2.4.Final</hibernate-validator.version>
         <validation-api.version>1.1.0.Final</validation-api.version>
-		<el-api.version>2.2</el-api.version>
+        <el-api.version>2.2</el-api.version>
 
         <!-- Versoes das dependencias do Spring -->
         <spring-core.version>4.2.5.RELEASE</spring-core.version>
@@ -47,7 +47,7 @@
         <spring-tx.version>4.2.5.RELEASE</spring-tx.version>
         <spring-orm.version>4.2.5.RELEASE</spring-orm.version>
         <spring-security.version>4.0.4.RELEASE</spring-security.version>
-        <spring-data-jpa.version>1.10.1.RELEASE</spring-data-jpa.version>
+        <spring-data-jpa.version>1.9.4.RELEASE</spring-data-jpa.version>
 
         <!-- Versoes das dependencias do AspectJ -->
         <aspectjrt.version>1.8.9</aspectjrt.version>
@@ -83,7 +83,7 @@
         <maven-checkstyle-plugin.version>2.17</maven-checkstyle-plugin.version>
 
         <!-- Versão Sistema -->
-        <sat.version>1.0-SNAPSHOT</sat.version>
+        <sat.version>0.1.0-rc1</sat.version>
     </properties>
 
     <dependencyManagement>
@@ -129,7 +129,7 @@
                 <artifactId>hibernate-validator</artifactId>
                 <version>${hibernate-validator.version}</version>
             </dependency>
-			<dependency>
+            <dependency>
                 <groupId>javax.el</groupId>
                 <artifactId>el-api</artifactId>
                 <version>${el-api.version}</version>
@@ -260,13 +260,11 @@
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
                 <version>${commons-lang3.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>commons-io</groupId>
                 <artifactId>commons-io</artifactId>
                 <version>${commons-io.version}</version>
-                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
@@ -317,9 +315,9 @@
                 <artifactId>util-framework</artifactId>
                 <version>${sat.version}</version>
             </dependency>
-			<dependency>
+            <dependency>
                 <groupId>br.gov.to.sefaz.core</groupId>
-                <artifactId>catalogo-core</artifactId>
+                <artifactId>parametrizacao-core</artifactId>
                 <version>${sat.version}</version>
             </dependency>
             <dependency>
@@ -327,7 +325,7 @@
                 <artifactId>seguranca-core</artifactId>
                 <version>${sat.version}</version>
             </dependency>
-			<dependency>
+            <dependency>
                 <groupId>br.gov.to.sefaz.web</groupId>
                 <artifactId>arrecadacao-web</artifactId>
                 <version>${sat.version}</version>

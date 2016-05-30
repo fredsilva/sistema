@@ -2,15 +2,10 @@ package br.gov.to.sefaz.arr.parametros.persistence.entity;
 
 import br.gov.to.sefaz.persistence.entity.AbstractEntity;
 
-import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters.LocalDateTimeConverter;
-
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.Objects;
-
 import javax.persistence.Column;
-import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -21,7 +16,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 /**
- * Entidade referente a tabela TA_ARQUIVO_RECEPCAO do Banco de Dados.
+ * Entidade referente a tabela SEFAZ_ARR.TA_ARQUIVO_RECEPCAO do Banco de Dados.
  *
  * @author <a href="mailto:gabriel.santos@ntconsult.com.br">gabriel.santos</a>
  * @since 28/04/2016 17:48:00
@@ -51,7 +46,6 @@ public class ArquivoRecepcao extends AbstractEntity<Long> {
 
     @NotNull
     @Column(name = "DATA_ARQUIVO", nullable = false)
-    @Convert(converter = LocalDateTimeConverter.class)
     private LocalDateTime dataArquivo;
 
     @Size(max = 255)
@@ -63,7 +57,6 @@ public class ArquivoRecepcao extends AbstractEntity<Long> {
     private String trailerArquivo;
 
     @Column(name = "DATA_PROCESSAMENTO")
-    @Convert(converter = LocalDateTimeConverter.class)
     private LocalDateTime dataProcessamento;
 
     @NotNull
@@ -81,7 +74,7 @@ public class ArquivoRecepcao extends AbstractEntity<Long> {
     @NotNull
     @Lob
     @Column(name = "ARQUIVO", nullable = false)
-    private Serializable arquivo;
+    private byte[] arquivo;
 
     @Column(name = "QUANTIDADE_REJEITADA")
     private Long quantidadeRejeitada;
@@ -98,7 +91,7 @@ public class ArquivoRecepcao extends AbstractEntity<Long> {
 
     @JoinColumn(name = "ID_CONVENIO", referencedColumnName = "ID_CONVENIO", nullable = false)
     @ManyToOne(optional = false)
-    private ConveniosArrecadacao conveniosArrecadacao;
+    private ConveniosArrec conveniosArrecadacao;
 
     public ArquivoRecepcao() {
         // Construtor para inicialização por reflexão.
@@ -106,9 +99,9 @@ public class ArquivoRecepcao extends AbstractEntity<Long> {
 
     public ArquivoRecepcao(Long idArquivos, String nomeArquivo, Integer tipoArquivo, Integer caracteristicaArquivo,
             LocalDateTime dataArquivo, String headerArquivo, String trailerArquivo, LocalDateTime dataProcessamento,
-            Integer situacao, Long quantidadeDocs, BigDecimal valorTotal, Serializable arquivo,
+            Integer situacao, Long quantidadeDocs, BigDecimal valorTotal, byte[] arquivo,
             Long quantidadeRejeitada, BigDecimal valorRejeitado, Integer tipoRejeicao, Bancos bancos,
-            ConveniosArrecadacao conveniosArrecadacao) {
+            ConveniosArrec conveniosArrecadacao) {
         super();
         this.idArquivos = idArquivos;
         this.nomeArquivo = nomeArquivo;
@@ -222,11 +215,11 @@ public class ArquivoRecepcao extends AbstractEntity<Long> {
         this.valorTotal = valorTotal;
     }
 
-    public Serializable getArquivo() {
+    public byte[] getArquivo() {
         return arquivo;
     }
 
-    public void setArquivo(Serializable arquivo) {
+    public void setArquivo(byte[] arquivo) {
         this.arquivo = arquivo;
     }
 
@@ -262,11 +255,11 @@ public class ArquivoRecepcao extends AbstractEntity<Long> {
         this.bancos = bancos;
     }
 
-    public ConveniosArrecadacao getConveniosArrecadacao() {
+    public ConveniosArrec getConveniosArrecadacao() {
         return conveniosArrecadacao;
     }
 
-    public void setConveniosArrecadacao(ConveniosArrecadacao conveniosArrecadacao) {
+    public void setConveniosArrecadacao(ConveniosArrec conveniosArrecadacao) {
         this.conveniosArrecadacao = conveniosArrecadacao;
     }
 

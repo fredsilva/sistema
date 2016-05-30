@@ -16,5 +16,5 @@ function resetFields() {
 }
 
 function resetOnSuccess(data) {
-    resetFields();
+    onSuccess(data, resetFields);
 }

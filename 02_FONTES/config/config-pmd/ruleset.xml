@@ -11,6 +11,11 @@
     <rule ref="rulesets/java/codesize.xml">
         <exclude name="ExcessiveParameterList"/>
     </rule>
+    <rule ref="rulesets/java/codesize.xml/TooManyMethods">
+        <properties>
+            <property name="maxmethods" value="25"/>
+        </properties>
+    </rule>
     <rule ref="rulesets/java/controversial.xml">
         <exclude name="AtLeastOneConstructor"/>
         <exclude name="OnlyOneReturn"/>

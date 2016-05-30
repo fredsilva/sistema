@@ -64,7 +64,7 @@ public class DefaultCrudFacade<E, I extends Serializable> implements CrudFacade<
      * {@inheritDoc}.
      */
     @Override
-    public Collection<E> save(Iterable<E> list) {
+    public Collection<E> save(Collection<E> list) {
         return service.save(list);
     }
 

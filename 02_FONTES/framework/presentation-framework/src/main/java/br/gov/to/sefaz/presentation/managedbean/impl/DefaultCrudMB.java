@@ -9,6 +9,7 @@ import java.io.Serializable;
 import java.util.Collection;
 import java.util.Optional;
 import java.util.function.Supplier;
+
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
@@ -18,7 +19,6 @@ import javax.faces.bean.ManagedProperty;
  *
  * @param <E> Tipo da entidade gerenciada pelo serviço.
  * @param <I> Tipo do ID da entidade.
- *
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 29/04/2016 18:52:00
  */
@@ -27,12 +27,13 @@ public class DefaultCrudMB<E extends AbstractEntity<I>, I extends Serializable> 
 
     @ManagedProperty("#{springBeanFactoryMB}")
     private BeanFactoryMB beanFactoryMB;
-    private Collection<E> resultList;
+    protected Collection<E> resultList;
     private E dto;
     private CrudFacade<E, I> facade;
     private final Supplier<E> dtoProvider;
 
-    public DefaultCrudMB(Supplier<E> dtoProvider) {
+    public DefaultCrudMB(
+            Supplier<E> dtoProvider) {
         this.dtoProvider = dtoProvider;
         clearDto();
     }
@@ -58,10 +59,12 @@ public class DefaultCrudMB<E extends AbstractEntity<I>, I extends Serializable> 
         this.beanFactoryMB = beanFactoryMB;
     }
 
+    @Override
     public void setDto(E dto) {
         this.dto = dto;
     }
 
+    @Override
     public E getDto() {
         return dto;
     }
@@ -73,6 +76,7 @@ public class DefaultCrudMB<E extends AbstractEntity<I>, I extends Serializable> 
     /**
      * {@inheritDoc}.
      */
+    @Override
     public Collection<E> getResultList() {
         if (resultList == null) {
             resultList = getFacade().findAll();
@@ -86,8 +90,8 @@ public class DefaultCrudMB<E extends AbstractEntity<I>, I extends Serializable> 
      */
     @Override
     public void save() {
-        getFacade().save(getDto());
-        getResultList().add(getDto());
+        E save = getFacade().save(getDto());
+        getResultList().add(save);
         clearDto();
     }
 
@@ -96,9 +100,9 @@ public class DefaultCrudMB<E extends AbstractEntity<I>, I extends Serializable> 
      */
     @Override
     public void update() {
-        getFacade().update(getDto());
+        E update = getFacade().update(getDto());
         getResultList().removeIf(e -> e.getId().equals(getDto().getId()));
-        getResultList().add(getDto());
+        getResultList().add(update);
         clearDto();
     }
 

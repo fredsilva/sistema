@@ -16,7 +16,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 /**
- * Entidade referente a tabela TA_LOTES_PAGOS_ARREC do Banco de Dados.
+ * Entidade referente a tabela SEFAZ_ARR.TA_LOTES_PAGOS_ARREC do Banco de Dados.
  *
  * @author <a href="mailto:gabriel.santos@ntconsult.com.br">gabriel.santos</a>
  * @since 02/05/2016 17:15:52

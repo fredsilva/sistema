@@ -1,8 +1,8 @@
 package br.gov.to.sefaz.business.configuration;
 
 import br.gov.to.sefaz.business.service.handler.HandlerPackageMarker;
-import br.gov.to.sefaz.business.service.validation.ServiceValidationAspect;
 import br.gov.to.sefaz.business.service.validation.ValidationPackageMarker;
+import br.gov.to.sefaz.business.service.validation.ValidationSuiteAspect;
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -23,8 +23,8 @@ import javax.validation.Validator;
 public class BusinessConfiguration {
 
     @Bean
-    public ServiceValidationAspect serviceValidationAspect(Validator validator,
+    public ValidationSuiteAspect serviceValidationAspect(Validator validator,
             ListableBeanFactory listableBeanFactory) {
-        return new ServiceValidationAspect(validator, listableBeanFactory);
+        return new ValidationSuiteAspect(validator, listableBeanFactory);
     }
 }

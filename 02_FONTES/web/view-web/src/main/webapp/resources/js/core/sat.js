@@ -1,5 +1,5 @@
 function showLoader() {
-    $('#loader-modal').modal();
+    $('#loader-modal').modal({backdrop: 'static', keyboard: false});
 }
 
 function hideLoader() {
@@ -14,6 +14,7 @@ function ajaxOnEventCallback(data) {
         hideLoader();
     }
     if (data.status == 'success') {
+        $('#alert-modal').find(".modal-body").append($('#alert-modal-dialog').html());
         if ($("#alert-modal").find(".modal-body").html().trim()) {
             $('#alert-modal').modal();
         }
@@ -29,6 +30,12 @@ function ajaxOnErrorCallback(data) {
         });
     } catch (e) {
        showAlertOnErrorCallback(data.errorMessage);
+    }
+}
+
+function onSuccess(data, callback) {
+    if (data.responseXML && data.responseXML.querySelector("#success-marker") !== null) {
+        callback();
     }
 }
 
@@ -65,5 +72,6 @@ $(document).on("keypress", ":input:not(textarea)", function (event) {
 $(document).ready(function () {
     $('#alert-modal').on('hidden.bs.modal', function () {
         $('#alert-modal').find(".modal-body").empty();
+    	$('#alert-modal-dialog').empty();
     });
 });

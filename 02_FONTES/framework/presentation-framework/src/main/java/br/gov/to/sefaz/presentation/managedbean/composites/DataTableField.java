@@ -10,12 +10,12 @@ public class DataTableField {
 
     private final String name;
     private final Boolean hide;
-    private final Boolean string;
+    private final DataTableFieldPrint printType;
 
-    public DataTableField(String name, Boolean hide, Boolean string) {
+    public DataTableField(String name, Boolean hide, DataTableFieldPrint printType) {
         this.name = name;
         this.hide = hide;
-        this.string = string;
+        this.printType = printType;
     }
 
     public String getName() {
@@ -26,7 +26,7 @@ public class DataTableField {
         return hide;
     }
 
-    public Boolean getString() {
-        return string;
+    public DataTableFieldPrint getPrintType() {
+        return printType;
     }
 }

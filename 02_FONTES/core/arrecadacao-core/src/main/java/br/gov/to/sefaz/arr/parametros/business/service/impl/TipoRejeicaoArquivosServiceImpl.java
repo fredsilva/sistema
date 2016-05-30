@@ -4,13 +4,15 @@ import br.gov.to.sefaz.arr.parametros.business.service.TipoRejeicaoArquivosServi
 import br.gov.to.sefaz.arr.parametros.persistence.entity.TipoRejeicaoArquivos;
 import br.gov.to.sefaz.arr.parametros.persistence.repository.TipoRejeicaoArquivosRepository;
 import br.gov.to.sefaz.business.service.impl.DefaultCrudService;
-import br.gov.to.sefaz.business.service.validation.ServiceValidation;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
+import br.gov.to.sefaz.business.service.validation.ValidationSuite;
 import br.gov.to.sefaz.persistence.enums.SituacaoEnum;
-import br.gov.to.sefaz.util.MessageUtil;
+import br.gov.to.sefaz.util.message.MessageUtil;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Optional;
 
@@ -24,16 +26,18 @@ import java.util.Optional;
 public class TipoRejeicaoArquivosServiceImpl extends DefaultCrudService<TipoRejeicaoArquivos, Integer>
         implements TipoRejeicaoArquivosService {
 
-    private final TipoRejeicaoArquivosRepository tipoRejeicaoArquivosRepository;
-
     @Autowired
     public TipoRejeicaoArquivosServiceImpl(TipoRejeicaoArquivosRepository repository) {
-        super(repository);
-        tipoRejeicaoArquivosRepository = repository;
+        super(repository, new Sort(new Sort.Order(Sort.Direction.ASC, "idCodigoRejeicao")));
     }
 
     @Override
-    public TipoRejeicaoArquivos save(@ServiceValidation(context = ValidationContext.SAVE) TipoRejeicaoArquivos entity) {
+    protected TipoRejeicaoArquivosRepository getRepository() {
+        return (TipoRejeicaoArquivosRepository) super.getRepository();
+    }
+
+    @Override
+    public TipoRejeicaoArquivos save(@ValidationSuite(context = ValidationContext.SAVE) TipoRejeicaoArquivos entity) {
         TipoRejeicaoArquivos tipoRejeicaoArquivos = super.save(entity);
         MessageUtil.addMesage(MessageUtil.ARR, "mensagem.sucesso.operacao");
 
@@ -41,7 +45,8 @@ public class TipoRejeicaoArquivosServiceImpl extends DefaultCrudService<TipoReje
     }
 
     @Override
-    public TipoRejeicaoArquivos update(TipoRejeicaoArquivos entity) {
+    public TipoRejeicaoArquivos update(
+            @ValidationSuite(context = ValidationContext.UPDATE) TipoRejeicaoArquivos entity) {
         TipoRejeicaoArquivos tipoRejeicaoArquivos = super.update(entity);
         MessageUtil.addMesage(MessageUtil.ARR, "mensagem.sucesso.operacao");
 
@@ -49,29 +54,22 @@ public class TipoRejeicaoArquivosServiceImpl extends DefaultCrudService<TipoReje
     }
 
     @Override
-    public Optional<TipoRejeicaoArquivos> delete(@ServiceValidation Integer id) {
-        Optional<TipoRejeicaoArquivos> tipoRejeicao = Optional.empty();
-        if (tipoRejeicaoArquivosRepository.existsInAnotherTable(id)) {
-            tipoRejeicao = Optional.of(updateSituacao(id, SituacaoEnum.CANCELADO));
-            MessageUtil.addMesage(MessageUtil.ARR, "parametros.tipo.rejeicao.delecao.logica");
+    @Transactional
+    public Optional<TipoRejeicaoArquivos> delete(Integer id) {
+        Optional<TipoRejeicaoArquivos> tipoRejeicao;
+
+        if (getRepository().existsLockReference(id)) {
+            getRepository().updateSituacao(id, SituacaoEnum.CANCELADO);
+            tipoRejeicao = Optional.of(getRepository().findOne(id));
+
+            MessageUtil.addMesage(MessageUtil.ARR, "parametros.delecao.logica");
         } else {
             super.delete(id);
-            MessageUtil.addMesage(MessageUtil.ARR, "parametros.tipo.rejeicao.delecao.fisica");
+            tipoRejeicao = Optional.empty();
+
+            MessageUtil.addMesage(MessageUtil.ARR, "parametros.delecao.fisica");
         }
 
         return tipoRejeicao;
-    }
-
-    /**
-     * Ataualiza a situação de um {@link TipoRejeicaoArquivos}.
-     *
-     * @param id identificador de um {@link TipoRejeicaoArquivos}.
-     * @param situacao situação a ser atualizada.
-     */
-    private TipoRejeicaoArquivos updateSituacao(Integer id, SituacaoEnum situacao) {
-        TipoRejeicaoArquivos tipoRejeicaoArquivos = tipoRejeicaoArquivosRepository.findOne(id);
-        tipoRejeicaoArquivos.setSituacao(situacao);
-
-        return tipoRejeicaoArquivosRepository.save(tipoRejeicaoArquivos);
     }
 }

@@ -52,7 +52,7 @@ public interface CrudFacade<E, I extends Serializable> {
      * @param list lista de entidades
      * @return lista de entidades
      */
-    Collection<E> save(Iterable<E> list);
+    Collection<E> save(Collection<E> list);
 
     /**
      * Atualiza a entidade na base de dados.
@@ -79,5 +79,6 @@ public interface CrudFacade<E, I extends Serializable> {
      * @param list lista de entidades
      */
     void delete(Iterable<I> list);
+
 
 }

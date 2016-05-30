@@ -1,6 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1_0" href="./BancosRepository.html" title="br.gov.to.sefaz.arr.parametros.persistence.repository.BancosRepository" alt="" coords="16,336,460,464"/>
-<area shape="rect" id="node1" href="./BancosRepository.html" title="&lt;TABLE&gt;" alt="" coords="5,331,471,469"/>
-<area shape="rect" id="node2_1" href="http://java.sun.com/j2se/1.4.2/docs/api/org/springframework/data/repository/CrudRepository.html" title="org.springframework.data.repository.CrudRepository" alt="" coords="102,11,374,277"/>
-<area shape="rect" id="node2" href="http://java.sun.com/j2se/1.4.2/docs/api/org/springframework/data/repository/CrudRepository.html" title="&lt;TABLE&gt;" alt="" coords="91,5,385,283"/>
-</map>

@@ -1,7 +1,7 @@
 package br.gov.to.sefaz.arr.parametros.business.facade;
 
+import br.gov.to.sefaz.arr.parametros.business.service.filter.PlanoContasFilter;
 import br.gov.to.sefaz.arr.parametros.persistence.entity.PlanoContas;
-import br.gov.to.sefaz.arr.parametros.persistence.enums.TipoContaEnum;
 import br.gov.to.sefaz.business.facade.CrudFacade;
 
 import java.util.List;
@@ -14,5 +14,5 @@ import java.util.List;
  */
 public interface PlanoContasFacade extends CrudFacade<PlanoContas, Long> {
 
-    List<PlanoContas> find(String codigoPlano, String nomePlano, String codigoContabil, TipoContaEnum tipoConta);
+    List<PlanoContas> find(PlanoContasFilter filter);
 }

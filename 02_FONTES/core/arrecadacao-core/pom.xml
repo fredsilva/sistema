@@ -8,7 +8,7 @@
     <parent>
         <groupId>br.gov.to.sefaz</groupId>
         <artifactId>core</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>0.1.0-rc1</version>
     </parent>
 
     <groupId>br.gov.to.sefaz.core</groupId>
@@ -91,7 +91,11 @@
         </dependency>
         <dependency>
             <groupId>br.gov.to.sefaz.core</groupId>
-            <artifactId>catalogo-core</artifactId>
+            <artifactId>parametrizacao-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>br.gov.to.sefaz.core</groupId>
+            <artifactId>seguranca-core</artifactId>
         </dependency>
     </dependencies>
 </project>

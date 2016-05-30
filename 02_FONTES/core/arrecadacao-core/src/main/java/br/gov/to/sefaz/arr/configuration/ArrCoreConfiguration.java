@@ -3,7 +3,6 @@ package br.gov.to.sefaz.arr.configuration;
 import br.gov.to.sefaz.arr.parametros.business.BusinessPackageMarker;
 import br.gov.to.sefaz.arr.parametros.persistence.entity.ArrEntityPackageMarker;
 import br.gov.to.sefaz.arr.parametros.persistence.repository.RepositoryPackageMarker;
-
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
@@ -20,4 +19,5 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
         ArrEntityPackageMarker.class})
 @EnableJpaRepositories(basePackageClasses = {RepositoryPackageMarker.class})
 public class ArrCoreConfiguration {
+
 }

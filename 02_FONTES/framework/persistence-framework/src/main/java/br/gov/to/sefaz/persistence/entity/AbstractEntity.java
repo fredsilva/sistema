@@ -1,12 +1,9 @@
 package br.gov.to.sefaz.persistence.entity;
 
-import br.gov.to.sefaz.persistence.converter.BooleanConverter;
-
-import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters.LocalDateTimeConverter;
+import br.gov.to.sefaz.persistence.converter.YesOrNoBooleanConverter;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
-
 import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.EntityListeners;
@@ -18,37 +15,35 @@ import javax.persistence.MappedSuperclass;
  *
  * @param <I> tipo do ID da entidade, pode ser simples ({@link String}, {@link Integer}, {@link Long}...) ou composto,
  *            sendo uma classe que possui mais de um atributo e juntos identificam a entidade.
- *
  * @author <a href="mailto:cristiano.luis@ntconsult.com.br">cristiano.luis</a>
  * @since 05/05/2016 15:12:59
  */
 @MappedSuperclass
 @EntityListeners(AuditListner.class)
-public abstract class AbstractEntity<I extends Serializable> {
+public abstract class AbstractEntity<I extends Serializable> implements Serializable {
+
+    private static final long serialVersionUID = 4678335275783952713L;
 
     @Column(name = "USUARIO_INSERCAO", updatable = false)
     protected String usuarioInsercao;
 
     @Column(name = "DATA_INSERCAO", updatable = false)
-    @Convert(converter = LocalDateTimeConverter.class)
     protected LocalDateTime dataInsercao;
 
     @Column(name = "USUARIO_ALTERACAO")
     protected String usuarioAlteracao;
 
     @Column(name = "DATA_ALTERACAO")
-    @Convert(converter = LocalDateTimeConverter.class)
     protected LocalDateTime dataAlteracao;
 
     @Column(name = "REGISTRO_EXCLUIDO", nullable = false)
-    @Convert(converter = BooleanConverter.class)
+    @Convert(converter = YesOrNoBooleanConverter.class)
     protected Boolean registroExcluido = Boolean.FALSE;
 
     @Column(name = "USUARIO_EXCLUSAO")
     protected String usuarioExclusao;
 
     @Column(name = "DATA_EXCLUSAO")
-    @Convert(converter = LocalDateTimeConverter.class)
     protected LocalDateTime dataExclusao;
 
     /**

@@ -1,13 +1,27 @@
 package br.gov.to.sefaz.presentation.managedbean.composites;
 
-import br.gov.to.sefaz.util.SourceBundle;
+import br.gov.to.sefaz.exception.SystemException;
+import br.gov.to.sefaz.util.message.SourceBundle;
 
+import org.apache.commons.lang3.StringUtils;
+
+import java.text.DateFormat;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.TemporalAccessor;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.stream.Collectors;
 
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
+import javax.swing.text.MaskFormatter;
 
 /**
  * Managed Bean de uma datatable, possui metodos para auxiliar na construção e operação de uma datatable.
@@ -19,11 +33,19 @@ import javax.faces.bean.ManagedBean;
 @ApplicationScoped
 public class DataTableMB {
 
+    //@formatter:off
+
     private static final String FIRST_LVL_SEPARATOR = ",";
     private static final String SECOND_LVL_SEPARATOR = ":";
     private static final String THIRD_LVL_SEPARATOR = ";";
     private static final String END_PARAMS_MARK = ")";
     private static final String BEGIN_PARAMS_MARK = "(";
+    private static final String DATE_TIME_PATTERN = "dd/MM/yyyy HH:mm";
+    private static final String DATE_PATTERN = "dd/MM/yyyy";
+    private static final String CPF_MASK = "###.###.###-##";
+    private static final String CNPJ_MASK = "##.###.###/####-##";
+    private static final String CNPJ_RAIZ_MASK = "##.###.###";
+    public static final Locale LOCALE = new Locale("pt", "BR");
 
     /**
      * <p>
@@ -34,23 +56,19 @@ public class DataTableMB {
      * <p>
      * Exemplo:
      * </p>
-     *
      * <pre>
-     * {
-     *     &#64;code
-     *
+     * {@code
      *     List headers = dataTableMB.parseHeaders("header.usuario.codigo, header.usuario.nome", "bundle_name");
      *     System.out.print(headers);
      *     // [Código do usuário, Nome do usuário]
      * }
      * </pre>
      *
-     * @see SourceBundle#getMessage(String, String)
-     *
      * @param headers chaves das mensagens do internacionalizadas contendo os cabeçalhos da tabela
-     * @param fields definições dos campos que preenchem as colunas
-     * @param bundle identificação do arquivo que contém a mensagem de internacionalização
+     * @param fields  definições dos campos que preenchem as colunas
+     * @param bundle  identificação do arquivo que contém a mensagem de internacionalização
      * @return lista com os textos do cabeçalho internacionalizados
+     * @see SourceBundle#getMessage(String, String)
      */
     public List<String> parseHeaders(String headers, List<DataTableField> fields, String bundle) {
         List<String> headersList = splitAndTrim(headers, FIRST_LVL_SEPARATOR);
@@ -68,10 +86,8 @@ public class DataTableMB {
      * <p>
      * Exemplo:
      * </p>
-     *
      * <pre>
-     * {
-     *     &#64;code
+     * {@code
      *
      *     List fields = dataTableMB.parseFields("codigo, nome, descricao");
      *     System.out.print(fields);
@@ -91,12 +107,70 @@ public class DataTableMB {
 
             String name = defs.remove(0);
             Boolean hide = defs.contains("hide");
-            Boolean string = defs.contains("string");
+            DataTableFieldPrint printType = DataTableFieldPrint.NONE;
 
-            dataTableFields.add(new DataTableField(name, hide, string));
+            if (defs.contains("string")) {
+                printType = DataTableFieldPrint.STRING;
+            } else if (defs.contains("date")) {
+                printType = DataTableFieldPrint.DATE;
+            } else if (defs.contains("dateTime")) {
+                printType = DataTableFieldPrint.DATE_TIME;
+            } else if (defs.contains("number")) {
+                printType = DataTableFieldPrint.NUMBER;
+            } else if (defs.contains("cpf")) {
+                printType = DataTableFieldPrint.CPF;
+            } else if (defs.contains("cnpj")) {
+                printType = DataTableFieldPrint.CNPJ;
+            } else if (defs.contains("cnpjRaiz")) {
+                printType = DataTableFieldPrint.CNPJ_RAIZ;
+            }
+
+            dataTableFields.add(new DataTableField(name, hide, printType));
         }
 
         return dataTableFields;
+    }
+
+    /**
+     * <p>Retorna o valor do campo no formato de exibição desejado, de acordo com o
+     * {@link DataTableFieldPrint}.</p>
+     * <ul>
+     * <li>{@link DataTableFieldPrint#NONE}: O fieldValue será retornado sem nenhum tratamento</li>
+     * <li>{@link DataTableFieldPrint#STRING}: O será retornado o toString() do fieldValue</li>
+     * <li>{@link DataTableFieldPrint#NUMBER}: O será retornado o {@link java.text.NumberFormat} do fieldValue</li>
+     * <li>{@link DataTableFieldPrint#DATE}: Se fieldValue for do tipo {@link Calendar}, {@link Date},
+     * {@link TemporalAccessor} será retornada uma data no formato {@value #DATE_PATTERN}. Se não for de nenhum
+     * dos tipos citados será apenas retornado o toString do fieldValue.
+     * </li>
+     * <li>{@link DataTableFieldPrint#DATE_TIME}: Se fieldValue for do tipo {@link Calendar}, {@link Date},
+     * {@link TemporalAccessor} será retornada uma data no formato {@value #DATE_TIME_PATTERN}. Se não for de nenhum
+     * dos tipos citados será apenas retornado o toString do fieldValue.</li>
+     * </ul>
+     *
+     * @param fieldValue valor do campo que será transformado para exibição
+     * @param printType  tipo do formato de exibição que será aplicado ao fieldValue
+     * @return fieldValue formatado de acordo com o {@link DataTableFieldPrint} informado
+     */
+    public Object formatToPrint(Object fieldValue, DataTableFieldPrint printType) {
+        switch (printType) {
+          case DATE:
+              return toDateFormat(fieldValue, DATE_PATTERN);
+          case DATE_TIME:
+              return toDateFormat(fieldValue, DATE_TIME_PATTERN);
+          case STRING:
+              return fieldValue.toString();
+          case NUMBER:
+              return NumberFormat.getInstance(LOCALE).format(fieldValue);
+          case CPF:
+              return cpfCnpjFormat(fieldValue, CPF_MASK, 11);
+          case CNPJ:
+              return cpfCnpjFormat(fieldValue, CNPJ_MASK, 14);
+          case CNPJ_RAIZ:
+              return cpfCnpjFormat(fieldValue, CNPJ_RAIZ_MASK, 8);
+          case NONE:
+          default:
+              return fieldValue;
+        }
     }
 
     /**
@@ -108,7 +182,6 @@ public class DataTableMB {
      * <p>
      * Exemplo:
      * </p>
-     *
      * <pre>
      * {@code
      *
@@ -124,9 +197,9 @@ public class DataTableMB {
      * </pre>
      *
      * @param messageKey Chave da mensagem do arquivo de internacionalização
-     * @param bundle identificação do arqui que contém a mensagem de internacionalização
+     * @param bundle     identificação do arqui que contém a mensagem de internacionalização
      * @return mensagem internacionalizada de arquivo/bundle específico, ou String vazia ("") em caso da messageKey
-     *         taqmbém ser vazia
+     *     também ser vazia
      */
     public String getFromBundle(String messageKey, String bundle) {
         messageKey = messageKey.trim();
@@ -138,7 +211,6 @@ public class DataTableMB {
         return SourceBundle.getMessage(bundle, messageKey);
     }
 
-    //@formatter:off
     /**
      * <p>
      * Gera uma lista de {@link DataTableActionEvents}, que definem as ações (funções javaScript) que serão
@@ -153,38 +225,36 @@ public class DataTableMB {
      * class-do-elemento:tipo-de-bind:função-js(parametro-1;parametro-...):tipo-de-evento:complemento
      * </pre>
      * <ul>
-     *     <li>class-do-elemento*: classe do elemento HTML ao qual o evento será vinculado</li>
-     *     <li>tipo-de-bind*: tipo do bind vinculado ao elemento HTML que irá disparar o evento. Os tipos de binds
-     *     básicos suportados são: click, keydown, keypress, keyup, mouseover, mouseout, mouseenter,
-     *     mouseleave, scroll, focus, blur e resize. Para saber mais detalhes veja
-     *     <a href="http://api.jquery.com/on/#on-events-selector-data">jQuery API</a></li>
-     *     <li>função-js*: nome da função javaScript que será chamada quando o evento for disparado</li>
-     *     <li>(parametro-1;parametro-...): uma lista separada por ";" (ponto e virgula) contendo os indices das
-     *     colunas de uma linha da tabela, cujo os valores serão passados para a função-js. Caso não sejam
-     *     informados ou sejam informados de maneira vazia ("()", sem parametros) será passado um array contendo as
-     *     colunas de uma linha da tabela (Exemplo: data[coluna] = valor)</li>
-     *     <li>tipo-de-evento: Tipo do evento que será disparado, se não informado assim que o tipo-de-bind for
-     *     disparado a função-js deve ser chamada. Os tipos de eventos existentes são:
-     *         <ul>
-     *             <li>confirmation: quando o bind for chamado em vez de chamar a função-js deve ser exibida uma
-     *             confirmação, exibindo uma mensagem do source bundle cuja a chave é o complemento, em caso da
-     *             confirmação ser aceita pelo usuário a função-js deve ser chamada com seus devidos parametros</li>
-     *         </ul>
-     *     </li>
-     *     <li>complemento: Um ou mais parametros utilizados pelo tipo-de-evento</li>
+     * <li>class-do-elemento*: classe do elemento HTML ao qual o evento será vinculado</li>
+     * <li>tipo-de-bind*: tipo do bind vinculado ao elemento HTML que irá disparar o evento. Os tipos de binds
+     * básicos suportados são: click, keydown, keypress, keyup, mouseover, mouseout, mouseenter,
+     * mouseleave, scroll, focus, blur e resize. Para saber mais detalhes veja
+     * <a href="http://api.jquery.com/on/#on-events-selector-data">jQuery API</a></li>
+     * <li>função-js*: nome da função javaScript que será chamada quando o evento for disparado</li>
+     * <li>(parametro-1;parametro-...): uma lista separada por ";" (ponto e virgula) contendo os indices das
+     * colunas de uma linha da tabela, cujo os valores serão passados para a função-js. Caso não sejam
+     * informados ou sejam informados de maneira vazia ("()", sem parametros) será passado um array contendo as
+     * colunas de uma linha da tabela (Exemplo: data[coluna] = valor)</li>
+     * <li>tipo-de-evento: Tipo do evento que será disparado, se não informado assim que o tipo-de-bind for
+     * disparado a função-js deve ser chamada. Os tipos de eventos existentes são:
+     * <ul>
+     * <li>confirmation: quando o bind for chamado em vez de chamar a função-js deve ser exibida uma
+     * confirmação, exibindo uma mensagem do source bundle cuja a chave é o complemento, em caso da
+     * confirmação ser aceita pelo usuário a função-js deve ser chamada com seus devidos parametros</li>
+     * </ul>
+     * </li>
+     * <li>complemento: Um ou mais parametros utilizados pelo tipo-de-evento</li>
      * </ul>
      * <p><small>* parametros obrigatórios</small></p>
-     *
      * <p>O mapeamento dos atributos para o {@link DataTableActionEvents} é feito da seguinte maneira</p>
      * <ul>
-     *     <li>classe-do-elemento - {@link DataTableActionEvents#getElementClass()}</li>
-     *     <li>tipo-de-bind - {@link DataTableActionEvents#getBindType()}</li>
-     *     <li>função-js - {@link DataTableActionEvents#getFunction()}</li>
-     *     <li>(parametro-1;parametro-...) - {@link DataTableActionEvents#getParams()}</li>
-     *     <li>tipo-de-evento - {@link DataTableActionEvents#getEventType()}</li>
-     *     <li>complemento - {@link DataTableActionEvents#getComplement()}</li>
+     * <li>classe-do-elemento - {@link DataTableActionEvents#getElementClass()}</li>
+     * <li>tipo-de-bind - {@link DataTableActionEvents#getBindType()}</li>
+     * <li>função-js - {@link DataTableActionEvents#getFunction()}</li>
+     * <li>(parametro-1;parametro-...) - {@link DataTableActionEvents#getParams()}</li>
+     * <li>tipo-de-evento - {@link DataTableActionEvents#getEventType()}</li>
+     * <li>complemento - {@link DataTableActionEvents#getComplement()}</li>
      * </ul>
-     *
      * <p>Exemplos</p>
      * <pre>
      * {@code
@@ -193,7 +263,7 @@ public class DataTableMB {
      *
      *      parsed = dataTable.parseActionEvents("select-row:click:selectRow");
      *      manual = new {@link DataTableActionEvents}("select-row", "click", "selectRow", new ArrayList(), "", "")
-     *      System.out.print(parsed.equals(manual));
+     *      System.out.print(parsed.equalsTo(manual));
      *      // true
      *
      *      parsed = dataTable
@@ -203,7 +273,7 @@ public class DataTableMB {
      *      params.add(1);
      *      manual = new {@link DataTableActionEvents}("delete-row", "click", "deleteRowOfTable", params,
      *              "confirmation", "table.tem.certeza");
-     *      System.out.print(parsed.equals(manual));
+     *      System.out.print(parsed.equalsTo(manual));
      *      // true
      * }
      * </pre>
@@ -331,6 +401,60 @@ public class DataTableMB {
         def.append(hiddenIndexes.stream().collect(Collectors.joining(FIRST_LVL_SEPARATOR))).append("]}");
 
         return def.toString();
+    }
+
+    /**
+     * <p>
+     * Formata um valor do tipo {@link Calendar}, {@link Date} ou {@link TemporalAccessor} para uma data formatada de
+     * acordo com o pattern passado por parametro. Se o value informado não for de nenhum dos tipos citados será
+     * retornado apenas o toString() do value.
+     * </p>
+     *
+     * @param value valor de tipo data que deseja-se formatar
+     * @param datePattern formato da data que será gerada
+     * @return o value formatado de acordo com o datePattern passado
+     */
+    private String toDateFormat(Object value, String datePattern) {
+        if (value instanceof Date) {
+            DateFormat formatter = new SimpleDateFormat(datePattern, LOCALE);
+            return formatter.format((Date) value);
+        } else if (value instanceof Calendar) {
+            DateFormat formatter = new SimpleDateFormat(datePattern, LOCALE);
+            return formatter.format(((Calendar) value).getTime());
+        } else if (value instanceof TemporalAccessor) {
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern(datePattern);
+            return formatter.format((TemporalAccessor) value);
+        } else {
+            return value == null ? "" : value.toString();
+        }
+    }
+
+    /**
+     * <p>
+     * Formata um valor do tipo CPF, CNPJ ou CNPJ Raiz para o seu formato brasileiro de apresentação, exmplo cpf:
+     * 999.999.999-99, exmplo cnpj: 99.999.999/9999-99.
+     * </p>
+     *
+     * @param value valor que deseja-se formatar
+     * @param mask máscara da formatação
+     * @param digits quantidade de dígitos inteiros do tipo que deseja-se formatar
+     * @return CPF, CNPJ ou CNPJ Raiz formatado
+     */
+    private String cpfCnpjFormat(Object value, String mask, int digits) {
+
+        DecimalFormat df = new DecimalFormat(StringUtils.repeat('0', digits));
+        String retorno = df.format(value);
+
+        try {
+            MaskFormatter formatter = new MaskFormatter(mask);
+            formatter.setValueContainsLiteralCharacters(false);
+            retorno = formatter.valueToString(retorno);
+        } catch (ParseException e) {
+            throw new SystemException(
+                    "Erro ao formatar o valor " + value.toString() + " com a máscara " + mask, e);
+        }
+
+        return retorno;
     }
 
     /**

@@ -13,7 +13,7 @@ body {
     text-align: left;
 }
 
-#login-container form{
+#login-container form {
     margin: 20px 50px 30px 50px;
 }
 
@@ -67,27 +67,60 @@ form .text-right button, form .text-right input[type="button"], form .text-right
     width: 70px;
 }
 
-.button-align-bottom {
+.align-bottom {
     margin-top: 25px;
+}
+
+.dataTable thead th, .dataTable thead td {
+    white-space: nowrap;
 }
 
 table tbody th.tbody-left,
 table tbody td.tbody-left {
     text-align: left;
 }
+
 table tbody th.tbody-center,
 table tbody td.tbody-center {
     text-align: center;
 }
+
 table tbody th.tbody-right,
 table tbody td.tbody-right {
     text-align: right;
 }
+
 table tbody th.tbody-justify,
 table tbody td.tbody-justify {
     text-align: justify;
 }
+
 table tbody th.tbody-nowrap,
 table tbody td.tbody-nowrap {
     white-space: nowrap;
+}
+
+.row.align-bottom > * {
+    float: none;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+fieldset.scheduler-border {
+    padding: 0 10px 10px 10px;
+    border: 1px solid #DDD !important;
+}
+
+legend.scheduler-border {
+    width: auto !important;
+    border: none;
+    font-size: 14px;
+}
+
+.align-bottom {
+    margin-top: 25px;
+}
+
+.scrollx {
+    overflow-x: auto;
 }

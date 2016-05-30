@@ -9,10 +9,11 @@ import br.gov.to.sefaz.persistence.enums.SituacaoEnum;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import java.util.Objects;
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -21,10 +22,11 @@ import javax.persistence.Table;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 /**
- * Entidade referente a tabela TA_PLANO_CONTAS do Banco de Dados.
+ * Entidade referente a tabela SEFAZ_ARR.TA_PLANO_CONTAS do Banco de Dados.
  *
  * @author <a href="mailto:gabriel.santos@ntconsult.com.br">gabriel.santos</a>
  * @since 28/04/2016 17:48:00
@@ -33,36 +35,41 @@ import javax.validation.constraints.Size;
 @Table(name = "TA_PLANO_CONTAS", schema = "SEFAZ_ARR")
 public class PlanoContas extends AbstractEntity<Long> {
 
+    private static final long serialVersionUID = -2793378430460417239L;
+
     @Id
-    @SequenceGenerator(name = "sq_plano_contas", sequenceName = "sq_plano_contas", allocationSize = 1)
-    @Max(value = 9999999999L, message = "O id do Plano de Contas deve conter no máximo 10 digitos!")
-    @Min(value = 1, message = "O id do Plano de Contas deve ser maior do que 0!")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_plano_contas")
+    @SequenceGenerator(name = "sq_plano_contas", schema = "SEFAZ_ARR", sequenceName = "sq_plano_contas",
+            allocationSize = 1)
+    @Max(value = 9999999999L, message = "#{arr_msg['parametros.planoContas.idPlanocontas.maximo']}")
+    @Min(value = 1, message = "#{arr_msg['parametros.planoContas.idPlanocontas.minimo']}")
     @Column(name = "ID_PLANOCONTAS", nullable = false)
     private Long idPlanocontas;
 
-    @Basic(optional = false)
-    @NotEmpty(message = "O campo Código Plano Contas é obrigatório e não foi informado!")
-    @Size(max = 20, message = "O campo Código Plano Contas deve possuir no máximo 20 caracteres!")
+    @NotEmpty(message = "#{arr_msg['parametros.planoContas.codigoPlanoContas.obrigatorio']}")
+    @Size(max = 20, message = "#{arr_msg['parametros.planoContas.codigoPlanoContas.maximo']}")
+    @Pattern(regexp = "^[a-zA-Z0-9](\\.[a-zA-Z0-9])*$",
+            message = "#{arr_msg['parametros.planoContas.codigoPlanoContas.formato']}")
     @Column(name = "CODIGO_PLANO_CONTAS", nullable = false, length = 20)
     private String codigoPlanoContas;
 
-    @Basic(optional = false)
-    @NotEmpty(message = "O campo Descrição do Plano é obrigatório e não foi informado!")
-    @Size(max = 150, message = "O campo Descrição do Plano deve possuir no máximo 150 caracteres!")
+    @NotEmpty(message = "#{arr_msg['parametros.planoContas.nomeConta.obrigatorio']}")
+    @Size(max = 150, message = "#{arr_msg['parametros.planoContas.nomeConta.maximo']}")
     @Column(name = "NOME_CONTA", nullable = false, length = 150)
     private String nomeConta;
 
-    @Size(max = 20, message = "O campo Conta Hierárquica deve possuir no máximo 20 caracteres!")
+    @Size(max = 20, message = "#{arr_msg['parametros.planoContas.contaHierarquica.maximo']}")
+    @Pattern(regexp = "^([a-zA-Z0-9](\\.[a-zA-Z0-9])*|)$",
+            message = "#{arr_msg['parametros.planoContas.contaHierarquica.formato']}")
     @Column(name = "CONTA_HIERARQUICA", length = 20)
     private String contaHierarquica;
 
-    @Basic(optional = false)
-    @NotNull
-    @Size(max = 20, message = "O campo Código Contábil deve possuir no máximo 20 caracteres!")
+    @NotEmpty(message = "#{arr_msg['parametros.planoContas.codigoContabil.obrigatorio']}")
+    @Size(max = 20, message = "#{arr_msg['parametros.planoContas.codigoContabil.maximo']}")
     @Column(name = "CODIGO_CONTABIL", nullable = false, length = 20)
     private String codigoContabil;
 
-    @NotNull(message = "O campo Tipo de Conta é obrigatório e não foi informado!")
+    @NotNull(message = "#{arr_msg['parametros.planoContas.tipoConta.obrigatorio']}")
     @Convert(converter = TipoContaEnumConverter.class)
     @Column(name = "TIPO_CONTA", nullable = false)
     private TipoContaEnum tipoConta;
@@ -71,19 +78,18 @@ public class PlanoContas extends AbstractEntity<Long> {
     @Column(name = "RATEIO", nullable = false)
     private Boolean rateio = Boolean.FALSE;
 
-    @NotNull(message = "O campo Situação é obrigatório e deve ser informado!")
+    @NotNull(message = "#{arr_msg['parametros.planoContas.situacao.obrigatorio']}")
     @Convert(converter = SituacaoEnumConverter.class)
     @Column(name = "SITUACAO", nullable = false)
     private SituacaoEnum situacao;
 
+    @NotNull(message = "#{arr_msg['parametros.planoContas.gruposCnae.obrigatorio']}")
     @JoinColumn(name = "ID_GRUPO_CNAE", referencedColumnName = "ID_GRUPO_CNAE")
     @ManyToOne
-    @NotNull(message = "O campo Grupo Cnae é obrigatório e não foi informado!")
     private TipoGruposCnaes gruposCnaes;
 
     public PlanoContas() {
         gruposCnaes = new TipoGruposCnaes();
-        // Construtor para inicialização por reflexão.
     }
 
     public PlanoContas(Long idPlanocontas, String codigoPlanoContas, String nomeConta, String contaHierarquica,
@@ -171,16 +177,16 @@ public class PlanoContas extends AbstractEntity<Long> {
         return gruposCnaes;
     }
 
+    public void setGruposCnaes(TipoGruposCnaes gruposCnaes) {
+        this.gruposCnaes = gruposCnaes;
+    }
+
     public Integer getIdGruposCnaes() {
         return gruposCnaes.getId();
     }
 
     public void setIdGruposCnaes(Integer idGrupoCnae) {
         gruposCnaes.setIdGrupoCnae(idGrupoCnae);
-    }
-
-    public void setGruposCnaes(TipoGruposCnaes gruposCnaes) {
-        this.gruposCnaes = gruposCnaes;
     }
 
     @Override

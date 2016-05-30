@@ -13,7 +13,5 @@
     <!-- SpringMVC -->
     <import resource="spring-mvc.xml"/>
 
-    <!-- SpringSecurity -->
-    <import resource="spring-security.xml"/>
 
 </beans>

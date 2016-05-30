@@ -1,22 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-        xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:h="http://java.sun.com/jsf/html"
-        xmlns:f="http://xmlns.jcp.org/jsf/core">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://xmlns.jcp.org/jsf/core">
 
 <ui:composition>
-    <h:commandButton type="button" value="#{label}"
-            styleClass="btn btn-primary btn-save #{styleClass}"
-            action="#{crudMb.save}">
-        <f:ajax render="#{render}" execute="#{execute}"
-                onevent="#{onEvent}"/>
+    <ui:param name="save" value="#{empty saveAction ? 'save' : saveAction}" />
+    <ui:param name="update" value="#{empty updateAction ? 'update' : updateAction}" />
+    <h:commandButton type="button" value="#{label}" styleClass="btn btn-primary btn-save #{styleClass}"
+        action="#{crudMb[save]}">
+        <f:ajax render="#{render}" execute="#{execute}" onevent="#{onEvent}" />
     </h:commandButton>
-    <h:commandButton type="button" value="#{label}"
-            styleClass="btn btn-primary btn-update #{styleClass}"
-            style="display: none"
-            action="#{crudMb.update}">
-        <f:ajax render="#{render}" execute="#{execute}"
-                onevent="#{onEvent}"/>
+    <h:commandButton type="button" value="#{label}" styleClass="btn btn-primary btn-update #{styleClass}"
+        style="display: none" action="#{crudMb[update]}">
+        <f:ajax render="#{render}" execute="#{execute}" onevent="#{onEvent}" />
     </h:commandButton>
 </ui:composition>
 </html>

@@ -1,21 +1,34 @@
 function selectRow(data) {
-    $("#banco-form\\:codigo").attr('readonly', true).val(data[0]);
-    $("#banco-form\\:nome").val(data[1]);
-    $("#banco-form\\:cnpj").val(data[2]);
-    $("#banco-form\\:situacao").val(data[4]);
+	$("#banco-form\\:codigo").attr('readonly', true).val(data[0]);
+	$("#banco-form\\:nome").val(data[1]);
+	$("#banco-form\\:cnpj").val(data[2]);
+	$("#banco-form\\:situacao").val(data[4]);
+	
+	// Aba de agências
+	$("#agencias").removeClass("hidden");
+	$("#banco-selecionado-form\\:idBanco").val(data[0]);
+	$("#banco-selecionado-form\\:nomeBanco").val(data[1]);
+	
+	loadBancoAgenciasFromSelected(data[0]);
 
-    showBtnUpdate('banco-form');
+	showBtnUpdate('banco-form');
 }
 
 function resetFields() {
-    clearFields('banco-table');
-    clearFields('banco-form');
+	clearFields('banco-table');
+	clearFields('banco-form');
 
-    $("#banco-form\\:codigo").attr('readonly', false);
+	$("#banco-form\\:codigo").attr('readonly', false);
 
-    showBtnSave('banco-form');
+	// Aba de agências
+	resetFieldsAgencias();
+	$("#bancoAgencia-idBanco").val('');
+	$("#bancoAgencia-nomeBanco").val('');
+	$("#agencias").addClass("hidden");
+
+	showBtnSave('banco-form');
 }
 
 function resetOnSuccess(data) {
-    resetFields();
+	onSuccess(data, resetFields);
 }

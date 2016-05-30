@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
- * Implementação do serviço da entidade Bancos.
+ * Implementação da fachada da entidade {@link Bancos}.
  *
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 14/04/2016 18:30:00

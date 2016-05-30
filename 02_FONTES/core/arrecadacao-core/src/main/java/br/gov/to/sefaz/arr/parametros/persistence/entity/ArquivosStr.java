@@ -1,15 +1,12 @@
 package br.gov.to.sefaz.arr.parametros.persistence.entity;
 
 import br.gov.to.sefaz.persistence.entity.AbstractEntity;
-
 import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters.LocalDateTimeConverter;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.Objects;
-
 import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
@@ -22,7 +19,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 /**
- * Entidade referente a tabela TA_ARQUIVOS_STR do Banco de Dados.
+ * Entidade referente a tabela SEFAZ_ARR.TA_ARQUIVOS_STR do Banco de Dados.
  *
  * @author <a href="mailto:gabriel.santos@ntconsult.com.br">gabriel.santos</a>
  * @since 28/04/2016 17:48:00
@@ -97,7 +94,7 @@ public class ArquivosStr extends AbstractEntity<Long> {
 
     @Lob
     @Column(name = "ARQUIVO_STR")
-    private Serializable arquivoStr;
+    private byte[] arquivoStr;
 
     @Column(name = "DATA_PROCESSAMENTO")
     @Convert(converter = LocalDateTimeConverter.class)
@@ -113,7 +110,7 @@ public class ArquivosStr extends AbstractEntity<Long> {
     public ArquivosStr(Long idArquivoStr, Date dataRecepcao, String numeroControleStr, Date dataArrecadacao,
             Integer idBancoDebitado, Integer idBancoCreditado, Integer idAgenciaCreditada, String contaCreditada,
             Integer tipoReceita, String tipoRecolhimento, BigDecimal valorTotalLancamento, Date dataBacen,
-            Date dataMovimento, String historicoMovimento, Integer situacao, Serializable arquivoStr,
+            Date dataMovimento, String historicoMovimento, Integer situacao, byte[] arquivoStr,
             LocalDateTime dataProcessamento, Long usuarioLancamento) {
         super();
         this.idArquivoStr = idArquivoStr;
@@ -261,11 +258,11 @@ public class ArquivosStr extends AbstractEntity<Long> {
         this.situacao = situacao;
     }
 
-    public Serializable getArquivoStr() {
+    public byte[] getArquivoStr() {
         return arquivoStr;
     }
 
-    public void setArquivoStr(Serializable arquivoStr) {
+    public void setArquivoStr(byte[] arquivoStr) {
         this.arquivoStr = arquivoStr;
     }
 

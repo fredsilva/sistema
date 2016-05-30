@@ -1,11 +1,15 @@
 package br.gov.to.sefaz.arr.parametros.managedbean;
 
 import br.gov.to.sefaz.arr.parametros.business.facade.PlanoContasFacade;
+import br.gov.to.sefaz.arr.parametros.business.service.filter.PlanoContasFilter;
 import br.gov.to.sefaz.arr.parametros.persistence.entity.PlanoContas;
 import br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB;
+import br.gov.to.sefaz.util.message.MessageUtil;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.ArrayList;
+import java.util.List;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
@@ -19,9 +23,12 @@ import javax.faces.bean.ViewScoped;
 @ViewScoped
 public class PlanoContasMB extends DefaultCrudMB<PlanoContas, Long> {
 
+    private final PlanoContasFilter filter;
+
     @Autowired
     public PlanoContasMB() {
         super(PlanoContas::new);
+        filter = new PlanoContasFilter();
     }
 
     @Autowired
@@ -34,7 +41,17 @@ public class PlanoContasMB extends DefaultCrudMB<PlanoContas, Long> {
         return (PlanoContasFacade) super.getFacade();
     }
 
+    public PlanoContasFilter getFilter() {
+        return filter;
+    }
+
     public void search() {
-        setResultList(new ArrayList<>());
+        List<PlanoContas> resultList = getFacade().find(filter);
+
+        if (resultList.isEmpty()) {
+            MessageUtil.addMesage(MessageUtil.ARR, "parametros.pesquisa.vazia");
+        }
+
+        setResultList(resultList);
     }
 }

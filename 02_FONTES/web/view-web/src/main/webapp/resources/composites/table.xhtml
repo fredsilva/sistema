@@ -51,7 +51,7 @@
                 <ui:repeat value="#{cc.attrs.content}" var="row">
                     <tr>
                     <ui:repeat value="#{fields}" var="field">
-                        <td>#{field.string ? row[field.name].toString() : row[field.name]}</td>
+                        <td>#{dataTableMB.formatToPrint(row[field.name], field.printType)}</td>
                     </ui:repeat>
                     <c:if test="#{cc.attrs.hasActions}">
                         <td></td>
@@ -65,7 +65,7 @@
                 <cc:renderFacet name="actions"/>
             </c:if>
         </div>
-        <div id="confirm-modal-#{cc.clientId}" class="modal fade" tabindex="-1" role="dialog">
+        <div id="confirm-modal-#{cc.clientId}" class="modal" tabindex="-1" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body">
@@ -84,7 +84,8 @@
                         #{dataTableMB.parseColumnDefs(columnDefs, fields)}, #{cc.attrs.hasActions});
                 <ui:repeat value="#{dataTableMB.parseActionEvents(cc.attrs.actionEvents)}" var="action">
                     bindDataTableEvents('#{cc.clientId}', '#{action.bindType}', '#{action.elementClass}',
-                            '#{action.eventType}', '#{dataTableMB.buildJsCall(action, 'data')}');
+                            '#{action.eventType}', '#{dataTableMB.buildJsCall(action, 'data')}',
+                            '#{arr_msg[action.complement]}');
                 </ui:repeat>
             });
         </h:outputScript>

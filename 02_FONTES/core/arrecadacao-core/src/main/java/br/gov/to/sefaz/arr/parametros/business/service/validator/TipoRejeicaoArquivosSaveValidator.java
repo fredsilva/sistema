@@ -5,8 +5,9 @@ import br.gov.to.sefaz.arr.parametros.persistence.repository.TipoRejeicaoArquivo
 import br.gov.to.sefaz.business.service.validation.ServiceValidator;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.violation.CustomViolation;
-import br.gov.to.sefaz.util.MessageUtil;
-import br.gov.to.sefaz.util.SourceBundle;
+import br.gov.to.sefaz.util.message.MessageUtil;
+import br.gov.to.sefaz.util.message.SourceBundle;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

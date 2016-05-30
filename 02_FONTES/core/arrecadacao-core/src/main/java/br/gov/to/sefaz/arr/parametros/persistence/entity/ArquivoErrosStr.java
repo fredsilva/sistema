@@ -14,7 +14,7 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 /**
- * Entidade referente a tabela TA_ARQUIVO_ERROS_STR do Banco de Dados.
+ * Entidade referente a tabela SEFAZ_ARR.TA_ARQUIVO_ERROS_STR do Banco de Dados.
  *
  * @author <a href="mailto:gabriel.santos@ntconsult.com.br">gabriel.santos</a>
  * @since 28/04/2016 17:48:00

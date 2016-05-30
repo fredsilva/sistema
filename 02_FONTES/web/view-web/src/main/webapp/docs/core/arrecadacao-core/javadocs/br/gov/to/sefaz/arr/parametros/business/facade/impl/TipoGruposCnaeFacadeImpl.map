@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1_0" href="../TipoGruposCnaeFacade.html" title="br.gov.to.sefaz.arr.parametros.business.facade.TipoGruposCnaeFacade" alt="" coords="16,97,175,139"/>
-<area shape="rect" id="node1" href="../TipoGruposCnaeFacade.html" title="&lt;TABLE&gt;" alt="" coords="5,91,185,145"/>
-<area shape="rect" id="node2_1" href="./TipoGruposCnaeFacadeImpl.html" title="br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoGruposCnaeFacadeImpl" alt="" coords="34,284,426,360"/>
-<area shape="rect" id="node2" href="./TipoGruposCnaeFacadeImpl.html" title="&lt;TABLE&gt;" alt="" coords="23,279,437,365"/>
-<area shape="rect" id="node3_2" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/facade/impl/DefaultCrudFacade.html" title="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" alt="" coords="220,11,512,225"/>
-<area shape="rect" id="node3" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/facade/impl/DefaultCrudFacade.html" title="&lt;TABLE&gt;" alt="" coords="209,5,523,231"/>
-</map>

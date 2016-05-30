@@ -48,15 +48,14 @@
                                 #{arr_msg['parametros.tipoRejeicao.form.codigo']}*
                             </h:outputLabel>
                             <h:inputText value="#{tipoRejeicaoArquivosMB.dto.idCodigoRejeicao}" id="codigo"
-                                    styleClass="form-control"/>
+                                    styleClass="form-control justInteger" maxlength="2"/>
                         </div>
                         <div class="form-group col-md-6">
                             <h:outputLabel for="motivo">
                                 #{arr_msg['parametros.tipoRejeicao.form.motivo']}*
                             </h:outputLabel>
                             <h:inputText value="#{tipoRejeicaoArquivosMB.dto.motivoRejeicao}" id="motivo"
-                                    styleClass="form-control"
-                                    maxlength="200"/>
+                                    styleClass="form-control" maxlength="200"/>
                         </div>
                         <div class="form-group col-md-4">
                             <h:outputLabel for="situacao">
@@ -67,17 +66,17 @@
                                 <f:selectItems value="#{enumsMB.situacoes}"
                                         var="situacao"
                                         itemValue="#{situacao}"
-                                        itemLabel="#{situacao.label}"/>
+                                        itemLabel="#{enumsMB.getSituacaoLabel(situacao)}"/>
                             </h:selectOneMenu>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-offset-8 col-lg-4 text-right">
-                            <button type="button" class="btn btn-primary" onclick="resetFields()">
+                            <button type="button" class="btn btn-primary align-bottom" onclick="resetFields()">
                                 #{arr_msg['parametros.tipoRejeicao.botao.novarejeicao']}
                             </button>
                             <sat:saveUpdateButton label="#{arr_msg['parametros.tipoRejeicao.botao.salvar']}"
-                                    render="tipo-rejeicao-table" execute="codigo motivo situacao"
+                                    render="tipo-rejeicao-table" execute="codigo motivo situacao" styleClass="align-bottom"
                                     onEvent="resetOnSuccess" crudMb="#{tipoRejeicaoArquivosMB}" />
                         </div>
                     </div>

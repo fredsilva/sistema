@@ -2,10 +2,9 @@ package br.gov.to.sefaz.arr.parametros.business.facade.impl;
 
 import br.gov.to.sefaz.arr.parametros.business.facade.PlanoContasFacade;
 import br.gov.to.sefaz.arr.parametros.business.service.PlanoContasService;
+import br.gov.to.sefaz.arr.parametros.business.service.filter.PlanoContasFilter;
 import br.gov.to.sefaz.arr.parametros.persistence.entity.PlanoContas;
-import br.gov.to.sefaz.arr.parametros.persistence.enums.TipoContaEnum;
 import br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -20,17 +19,18 @@ import java.util.List;
 @Component
 public class PlanoContasFacadeImpl extends DefaultCrudFacade<PlanoContas, Long> implements PlanoContasFacade {
 
-    private final PlanoContasService service;
-
     @Autowired
     public PlanoContasFacadeImpl(PlanoContasService service) {
         super(service);
-        this.service = service;
     }
 
-    public List<PlanoContas> find(String codigoPlano, String nomePlano, String codigoContabil,
-            TipoContaEnum tipoConta) {
-        return service.find(codigoPlano, nomePlano, codigoContabil, tipoConta);
+    @Override
+    protected PlanoContasService getService() {
+        return (PlanoContasService) super.getService();
+    }
+
+    public List<PlanoContas> find(PlanoContasFilter filter) {
+        return getService().find(filter);
     }
 
 }

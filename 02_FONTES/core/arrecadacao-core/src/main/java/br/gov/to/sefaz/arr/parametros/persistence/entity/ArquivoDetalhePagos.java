@@ -19,7 +19,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 /**
- * Entidade referente a tabela TA_ARQUIVO_DETALHE_PAGOS do Banco de Dados.
+ * Entidade referente a tabela SEFAZ_ARR.TA_ARQUIVO_DETALHE_PAGOS do Banco de Dados.
  *
  * @author <a href="mailto:gabriel.santos@ntconsult.com.br">gabriel.santos</a>
  * @since 28/04/2016 17:48:00
@@ -27,6 +27,8 @@ import javax.validation.constraints.Size;
 @Entity
 @Table(name = "TA_ARQUIVO_DETALHE_PAGOS", schema = "SEFAZ_ARR")
 public class ArquivoDetalhePagos extends AbstractEntity<Long> {
+
+    private static final long serialVersionUID = -1732904941435309267L;
 
     @Id
     @NotNull

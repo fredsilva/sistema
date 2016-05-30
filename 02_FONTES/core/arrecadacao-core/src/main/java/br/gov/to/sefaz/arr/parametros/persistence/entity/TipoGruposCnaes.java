@@ -6,13 +6,16 @@ import br.gov.to.sefaz.persistence.enums.SituacaoEnum;
 
 import org.hibernate.validator.constraints.NotEmpty;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Objects;
 
-import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
@@ -20,7 +23,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 /**
- * Entidade referente a tabela TA_TIPO_GRUPOS_CNAES do Banco de Dados.
+ * Entidade referente a tabela SEFAZ_ARR.TA_TIPO_GRUPOS_CNAES dos Tipos de grupos de CNAE's.
  *
  * @author <a href="mailto:gabriel.santos@ntconsult.com.br">gabriel.santos</a>
  * @since 28/04/2016 17:48:00
@@ -29,47 +32,50 @@ import javax.validation.constraints.Size;
 @Table(name = "TA_TIPO_GRUPOS_CNAES", schema = "SEFAZ_ARR")
 public class TipoGruposCnaes extends AbstractEntity<Integer> {
 
+    private static final long serialVersionUID = -1357304753703199748L;
+
     @Id
-    @Basic(optional = false)
-    @NotNull(message = "O campo Grupo Cnae é obrigatório e deve ser informado!")
-    @Max(value = 99, message = "O campo Código deve conter no máximo 2 digitos!")
-    @Min(value = 1, message = "O campo Código deve ser maior do que 0!")
+    @NotNull(message = "#{arr_msg['parametros.tipoGruposCnaes.codigo.obrigatorio']}")
+    @Max(value = 99, message = "#{arr_msg['parametros.tipoGruposCnaes.codigo.maximo']}")
+    @Min(value = 1, message = "#{arr_msg['parametros.tipoGruposCnaes.codigo.minimo']}")
     @Column(name = "ID_GRUPO_CNAE", nullable = false)
     private Integer idGrupoCnae;
 
-    @Basic(optional = false)
-    @NotEmpty(message = "O campo Descrição do Grupo é obrigatório e não foi informado!")
-    @Size(max = 100, message = "O campo Descrição do Grupo deve possuir no máximo 100 caracteres!")
+    @NotEmpty(message = "#{arr_msg['parametros.tipoGruposCnaes.descricaoGrupo.obrigatorio']}")
+    @Size(max = 100, message = "#{arr_msg['parametros.tipoGruposCnaes.descricaoGrupo.maximo']}")
     @Column(name = "DESCRICAO_GRUPO", nullable = false, length = 100)
     private String descricaoGrupo;
 
-    @Basic(optional = false)
     @Column(name = "SITUACAO", nullable = false)
-    @NotNull(message = "O campo Situação é obrigatório e deve ser informado!")
+    @NotNull(message = "#{arr_msg['parametros.tipoGruposCnaes.situacao.obrigatorio']}")
     @Convert(converter = SituacaoEnumConverter.class)
     private SituacaoEnum situacao;
 
+    @OneToMany
+    @JoinColumn(name = "ID_GRUPO_CNAE", referencedColumnName = "ID_GRUPO_CNAE", insertable = false, updatable = false)
+    private Collection<GruposCnae> gruposCnae;
+
     public TipoGruposCnaes() {
         // Construtor para inicialização por reflexão.
+        gruposCnae = new ArrayList<>();
     }
 
-    public TipoGruposCnaes(Integer idGrupoCnae) {
-        this.idGrupoCnae = idGrupoCnae;
-    }
-
-    public TipoGruposCnaes(Integer idGrupoCnae, String descricaoGrupo, SituacaoEnum situacao) {
+    public TipoGruposCnaes(
+            Integer idGrupoCnae, String descricaoGrupo, SituacaoEnum situacao,
+            Collection<GruposCnae> gruposCnae) {
         this.idGrupoCnae = idGrupoCnae;
         this.descricaoGrupo = descricaoGrupo;
         this.situacao = situacao;
-    }
-
-    public Integer getIdGrupoCnae() {
-        return idGrupoCnae;
+        this.gruposCnae = gruposCnae;
     }
 
     @Override
     public Integer getId() {
         return getIdGrupoCnae();
+    }
+
+    public Integer getIdGrupoCnae() {
+        return idGrupoCnae;
     }
 
     public void setIdGrupoCnae(Integer idGrupoCnae) {
@@ -90,6 +96,14 @@ public class TipoGruposCnaes extends AbstractEntity<Integer> {
 
     public void setSituacao(SituacaoEnum situacao) {
         this.situacao = situacao;
+    }
+
+    public Collection<GruposCnae> getGruposCnae() {
+        return gruposCnae;
+    }
+
+    public void setGruposCnae(Collection<GruposCnae> gruposCnae) {
+        this.gruposCnae = gruposCnae;
     }
 
     @Override

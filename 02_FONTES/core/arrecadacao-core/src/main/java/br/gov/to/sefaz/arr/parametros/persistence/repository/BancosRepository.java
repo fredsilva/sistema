@@ -1,13 +1,13 @@
 package br.gov.to.sefaz.arr.parametros.persistence.repository;
 
-import br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgencias;
 import br.gov.to.sefaz.arr.parametros.persistence.entity.Bancos;
+import br.gov.to.sefaz.persistence.enums.SituacaoEnum;
+import br.gov.to.sefaz.persistence.repository.BaseRepository;
+
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
-
-import java.util.List;
 
 /**
  * Repositório da entidade Bancos.
@@ -16,20 +16,23 @@ import java.util.List;
  * @since 14/04/2016 18:30:00
  */
 @Repository
-public interface BancosRepository extends CrudRepository<Bancos, Integer> {
+public interface BancosRepository extends BaseRepository<Bancos, Integer> {
 
-    String ALL_BANCO_AGENCIAS = "SELECT agencia FROM BancoAgencias agencia WHERE agencia.idBanco = :id";
+    String EXISTS_LOCK_REFERENCE = "SELECT CASE WHEN (COUNT(bc.id_banco) > 0) THEN 'true' ELSE 'false' END"
+            + " FROM sefaz_arr.ta_bancos bc WHERE bc.id_banco = :id"
+            + " AND (EXISTS(SELECT ag.id_banco FROM sefaz_arr.ta_banco_agencias ag WHERE ag.id_banco = bc.id_banco)"
+            + " OR EXISTS(SELECT lt.id_banco FROM sefaz_arr.ta_lotes_pagos_arrec lt WHERE lt.id_banco = bc.id_banco)"
+            + " OR EXISTS(SELECT rc.id_banco FROM sefaz_arr.ta_arquivo_recepcao rc WHERE rc.id_banco = bc.id_banco)"
+            + " OR EXISTS(SELECT ca.id_banco FROM sefaz_arr.ta_convenios_arrec ca WHERE ca.id_banco = bc.id_banco)"
+            + " OR EXISTS(SELECT mn.id_banco FROM sefaz_arr.ta_municipios_contas mn WHERE mn.id_banco = bc.id_banco))";
 
-    String CODIGO_BANCO_EXISTS_IN_OTHERS_TABLES = "SELECT case when (count(*) > 0) then 'true' else 'false' end "
-            + "FROM SEFAZ_ARR.TA_BANCO_AGENCIAS agencias LEFT JOIN SEFAZ_ARR.TA_LOTES_PAGOS_ARREC lp "
-            + "on lp.ID_BANCO = agencias.ID_BANCO LEFT JOIN SEFAZ_ARR.TA_ARQUIVO_RECEPCAO recepcao "
-            + "on recepcao.ID_BANCO = agencias.ID_BANCO LEFT JOIN SEFAZ_ARR.TA_CONVENIOS_ARREC conveniosArrec "
-            + "on conveniosArrec.ID_BANCO = agencias.ID_BANCO LEFT JOIN SEFAZ_ARR.TA_MUNICIPIOS_CONTAS municipios "
-            + "on municipios.ID_BANCO = agencias.ID_BANCO WHERE agencias.ID_BANCO = :id";
+    @Query(value = EXISTS_LOCK_REFERENCE, nativeQuery = true)
+    Boolean existsLockReference(@Param(value = "id") Integer id);
 
-    @Query(value = CODIGO_BANCO_EXISTS_IN_OTHERS_TABLES, nativeQuery = true)
-    Boolean existsInAnotherTable(@Param(value = "id") Integer id);
+    @Modifying
+    @Query("UPDATE Bancos SET situacao = :situacao WHERE id_banco = :id")
+    int updateSituacao(@Param("id") Integer id, @Param("situacao") SituacaoEnum situacao);
 
-    @Query(value = ALL_BANCO_AGENCIAS)
-    List<BancoAgencias> getAllBancoAgenciasFromIdBanco(@Param(value = "id") Integer id);
+    @Query(value = "SELECT b.cnpjRaiz FROM Bancos b where b.idBanco = :idBanco")
+    Integer findCnpjRaizByIdBanco(@Param(value = "idBanco") Integer idBanco);
 }

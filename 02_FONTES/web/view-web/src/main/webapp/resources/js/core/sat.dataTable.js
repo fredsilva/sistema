@@ -12,11 +12,12 @@ $.extend( true, $.fn.dataTable.defaults, {
         "lengthMenu": "_MENU_"
     },
     "dom": "<'row'<'col-md-6'><'col-md-6'f>>" +
-    "<'row'<'col-md-12'tr>>" +
+    "<'row'<'col-md-12'<'scrollx'tr>>>" +
     "<'row'i<'col-md-12 pagination-panel'p<'page-size'l>>>"
 } );
 
 function createDataTable(componentId, hasPaging, columnDefs, hasActions) {
+    componentId = componentId.replace(":", "\\:");
     var dataTableOpts = {
         "paging": hasPaging,
         "columnDefs": columnDefs
@@ -39,7 +40,8 @@ function getDataTable(componentId) {
     return $('#' + componentId + '-dt').DataTable();
 }
 
-function bindDataTableEvents(componentId, bindType, bindClass, eventType, event) {
+function bindDataTableEvents(componentId, bindType, bindClass, eventType, event, complement) {
+    componentId = componentId.replace(":", "\\:");
     var dataTable = getDataTable(componentId);
 
     $('#' + componentId +'-dt tbody').on(bindType, '.' + bindClass,
@@ -50,7 +52,7 @@ function bindDataTableEvents(componentId, bindType, bindClass, eventType, event)
                 eval(event);
             } else if (eventType == 'confirm') {
                 $("#confirm-modal-" + componentId + " .modal-body p")
-                    .html('#{dataTableMB.getFromBundle(action.complement, cc.attrs.bundle)}');
+                    .html(complement);
                 $("#confirm-modal-" + componentId + " .modal-footer .btn-primary")
                     .unbind("click").bind("click", function () {
                         eval(event);

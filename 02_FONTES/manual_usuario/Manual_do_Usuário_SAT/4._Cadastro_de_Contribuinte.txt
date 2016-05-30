@@ -1,7 +1,0 @@
-Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
-Creation-Date: 2016-05-10T11:33:32-03:00
-
-====== 04. Cadastro de Contribuinte ======
-Created terça-feira 10 maio 2016
-

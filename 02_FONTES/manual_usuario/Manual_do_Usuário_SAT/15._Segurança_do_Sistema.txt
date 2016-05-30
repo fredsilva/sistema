@@ -1,7 +1,0 @@
-Content-Type: text/x-zim-wiki
-Wiki-Format: zim 0.4
-Creation-Date: 2016-05-10T11:38:28-03:00
-
-====== 15. Segurança do Sistema ======
-Created terça-feira 10 maio 2016
-

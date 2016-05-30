@@ -16,8 +16,12 @@
             <var>arr_msg</var>
         </resource-bundle>
         <resource-bundle>
-            <base-name>br.gov.to.sefaz.cat_message</base-name>
-            <var>cat_msg</var>
+            <base-name>br.gov.to.sefaz.par_message</base-name>
+            <var>par_msg</var>
+        </resource-bundle>
+        <resource-bundle>
+            <base-name>br.gov.to.sefaz.seg_message</base-name>
+            <var>seg_msg</var>
         </resource-bundle>
         <el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
     </application>
