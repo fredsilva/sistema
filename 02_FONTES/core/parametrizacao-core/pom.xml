@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<project
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+        xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>br.gov.to.sefaz</groupId>
+        <artifactId>core</artifactId>
+        <version>0.1.0-rc1</version>
+    </parent>
+
+    <groupId>br.gov.to.sefaz.core</groupId>
+    <artifactId>parametrizacao-core</artifactId>
+    <name>parametrizacao-core</name>
+    <description>Módulo core de parametrização do Sistema, onde é desenvolvido toda a lógica de negócio e de persistência do referido módulo. O módulo de parametrização, corresponde às entidades de uso comum entre os módulo do sistema, como por exemplo: paises, estados, orgãos, penalidades, cnae, cfop, natureza jurídica, entre outros. O resultado ddo presente módulo é um jar.</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate.javax.persistence</groupId>
+            <artifactId>hibernate-jpa-2.1-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>br.gov.to.sefaz.framework</groupId>
+            <artifactId>business-framework</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>br.gov.to.sefaz.framework</groupId>
+            <artifactId>persistence-framework</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

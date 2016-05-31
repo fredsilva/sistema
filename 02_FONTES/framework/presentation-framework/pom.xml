@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<project
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+        xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>br.gov.to.sefaz</groupId>
+        <artifactId>framework</artifactId>
+        <version>0.1.0-rc1</version>
+    </parent>
+
+    <groupId>br.gov.to.sefaz.framework</groupId>
+    <artifactId>presentation-framework</artifactId>
+    <name>presentation-framework</name>
+    <description>Framework da camada de apresentação (web) do sistema. Neste módulo é desenvolvido as abstrações e classes genéricas dos manageBeans, os interceptor de view e negócio, como também os tratamentos das exceções de negócio. O resultado do presente módulo é um jar.</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-collections4</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>br.gov.to.sefaz.framework</groupId>
+            <artifactId>business-framework</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>br.gov.to.sefaz.framework</groupId>
+            <artifactId>persistence-framework</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>br.gov.to.sefaz.framework</groupId>
+            <artifactId>util-framework</artifactId>
+        </dependency>
+
+    </dependencies>
+
+</project>

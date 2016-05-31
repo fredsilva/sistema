@@ -1,0 +1,96 @@
+﻿<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                      https://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+	<servers>
+		<!-- This is the username password used to access my nexus service -->
+		<server>
+			<id>releases</id>
+			<username>deployment</username>
+			<password>deploy#</password> <!-- impossible password here :-) -->
+		</server>
+		<server>
+			<id>snapshots</id>
+			<username>deployment</username>
+			<password>deploy#</password> <!-- impossible password here :-) -->
+		</server>
+		<server>
+			<id>nexus</id>
+			<username>deployment</username>
+			<password>deploy#</password> <!-- impossible password here :-) -->
+		</server>
+	</servers>
+
+	<mirrors>
+		<mirror>
+			<!--This sends everything else to /public -->
+			<id>nexus</id>
+			<mirrorOf>*</mirrorOf>
+			<url>http://192.168.0.42:8081/nexus/content/groups/public</url>
+		</mirror>
+	</mirrors>
+
+	<profiles>
+		<profile>
+			<id>nexus</id>
+			<!--Enable snapshots for the built in central repo to direct -->
+			<!--all requests to nexus via the mirror -->
+			<repositories>
+				<service>
+					<id>central</id>
+					<url>http://central</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</service>
+			</repositories>
+			<pluginRepositories>
+				<pluginRepository>
+					<id>central</id>
+					<url>http://central</url>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</pluginRepository>
+				<properties>
+					<downloadSources>true</downloadSources>
+					<downloadJavadocs>true</downloadJavadocs>
+				</properties>
+			</pluginRepositories>
+		</profile>
+		<!-- if you want to be able to switch to the defaultprofile profile put
+			this in the active profile -->
+		<profile>
+			<id>defaultprofile</id>
+			<repositories>
+				<service>
+					<id>codehausSnapshots</id>
+					<name>Codehaus Snapshots</name>
+					<releases>
+						<enabled>false</enabled>
+						<updatePolicy>always</updatePolicy>
+						<checksumPolicy>warn</checksumPolicy>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+						<updatePolicy>never</updatePolicy>
+						<checksumPolicy>fail</checksumPolicy>
+					</snapshots>
+					<url>http://snapshots.maven.codehaus.org/maven2</url>
+					<layout>default</layout>
+				</service>
+			</repositories>
+		</profile>
+	</profiles>
+	<activeProfiles>
+		<!--make the profile active all the time -->
+		<activeProfile>nexus</activeProfile>
+	</activeProfiles>
+</settings>

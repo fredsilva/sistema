@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>br.gov.to.sefaz</groupId>
+        <artifactId>sat</artifactId>
+        <version>0.1.0-rc1</version>
+    </parent>
+
+    <artifactId>ear</artifactId>
+    <packaging>ear</packaging>
+    <name>ear</name>
+	<description>Módulo onde o ear (Enterprise Archive) é compilado. Este módulo é usado para empacotamento e deploy da aplicação, ou seja, é aqui que será empacotado o war e todos os módulos do sistema, com suas respectivas dependências.</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>br.gov.to.sefaz.web</groupId>
+            <artifactId>view-web</artifactId>
+            <version>${sat.version}</version>
+            <type>war</type>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-ear-plugin</artifactId>
+                <version>${maven-ear-plugin.version}</version>
+                <configuration>
+                    <version>6</version>
+                    <defaultLibBundleDir>lib</defaultLibBundleDir>
+                    <finalName>${application.context}</finalName>
+                    <modules>
+                        <webModule>
+                            <groupId>br.gov.to.sefaz.web</groupId>
+                            <artifactId>view-web</artifactId>
+                            <contextRoot>/${application.context}</contextRoot>
+                            <unpack>${unpack.modules}</unpack>
+                        </webModule>
+                    </modules>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

@@ -1,0 +1,13 @@
+*.iml
+.idea
+bin
+target
+*.settings
+*.project
+*.classpath
+*.svn
+*.pmd
+*.checkstyle
+*.jsfdia
+*.orig
+nb-configuration.xml

@@ -1,0 +1,126 @@
+html,
+body {
+    font-family: Source Sans Pro;
+}
+
+#login-container .row {
+    text-align: center;
+}
+
+#login-container .row > div {
+    display: inline-block;
+    float: none;
+    text-align: left;
+}
+
+#login-container form {
+    margin: 20px 50px 30px 50px;
+}
+
+form button, form input[type="button"], form input[type="submit"] {
+    margin-right: 10px;
+    margin-left: 0;
+}
+
+form .text-right button, form .text-right input[type="button"], form .text-right input[type="submit"] {
+    margin-left: 10px;
+    margin-right: 0;
+}
+
+#login-footer {
+    margin: 0 50px 20px 50px;
+}
+
+#login-footer a {
+    margin: 0 10px 0 0;
+}
+
+#logo img {
+    height: 70px;
+    margin: 5px 0;
+    float: left;
+}
+
+#auth-user {
+    margin-top: 25px;
+    float: right;
+}
+
+#auth-user > div {
+    float: left;
+    margin: 5px 20px;
+    font-size: 1.4em;
+}
+
+.pagination-panel {
+    text-align: right;
+    width: 100%;
+}
+
+.pagination-panel > * {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.pagination-panel .page-size input {
+    width: 70px;
+}
+
+.align-bottom {
+    margin-top: 25px;
+}
+
+.dataTable thead th, .dataTable thead td {
+    white-space: nowrap;
+}
+
+table tbody th.tbody-left,
+table tbody td.tbody-left {
+    text-align: left;
+}
+
+table tbody th.tbody-center,
+table tbody td.tbody-center {
+    text-align: center;
+}
+
+table tbody th.tbody-right,
+table tbody td.tbody-right {
+    text-align: right;
+}
+
+table tbody th.tbody-justify,
+table tbody td.tbody-justify {
+    text-align: justify;
+}
+
+table tbody th.tbody-nowrap,
+table tbody td.tbody-nowrap {
+    white-space: nowrap;
+}
+
+.row.align-bottom > * {
+    float: none;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+fieldset.scheduler-border {
+    padding: 0 10px 10px 10px;
+    border: 1px solid #DDD !important;
+}
+
+legend.scheduler-border {
+    width: auto !important;
+    border: none;
+    font-size: 14px;
+}
+
+.align-bottom {
+    margin-top: 25px;
+}
+
+.scrollx {
+    overflow-x: auto;
+}
