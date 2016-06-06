@@ -14,6 +14,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import java.util.List;
 import java.util.Properties;
 import java.util.stream.Collectors;
+
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
@@ -48,8 +49,6 @@ public class PersistenceConfiguration {
         Properties properties = new Properties();
         properties.put("hibernate.dialect", "org.hibernate.dialect.Oracle10gDialect");
         properties.put("hibernate.hbm2ddl.auto", "none");
-        properties.put("hibernate.show_sql", "true");
-        properties.put("hibernate.format_sql", "true");
 
         return properties;
     }
@@ -58,11 +57,10 @@ public class PersistenceConfiguration {
      * Cria a factory do {@link javax.persistence.EntityManager} que será utilizado pela camada de persistência do
      * sistema.
      *
-     * @param dataSource           configurações para conexão.
-     * @param hibernateProperties  parâmetros de configuração do hibernate.
+     * @param dataSource configurações para conexão.
+     * @param hibernateProperties parâmetros de configuração do hibernate.
      * @param entityPackageMarkers lista contendo todas as implementações de entityPackageMarkers do projeto, definindo
-     *                             assim os pacotes de entidades que serão escaneados pelo
-     *                             {@link javax.persistence.EntityManager}.
+     *            assim os pacotes de entidades que serão escaneados pelo {@link javax.persistence.EntityManager}.
      * @return Fábrica do {@link javax.persistence.EntityManager} ou {@link javax.persistence.EntityManagerFactory}
      */
     @Bean
@@ -87,7 +85,7 @@ public class PersistenceConfiguration {
      * Retorna o gerenciador de transação que será utilizado pelo {@link javax.persistence.EntityManager}.
      *
      * @param entityManagerFactory factory do {@link javax.persistence.EntityManager} que utilizará o gerenciador de
-     *                             transação criado.
+     *            transação criado.
      * @return Gerenciador de transações {@link javax.persistence.EntityManager}
      */
     @Bean

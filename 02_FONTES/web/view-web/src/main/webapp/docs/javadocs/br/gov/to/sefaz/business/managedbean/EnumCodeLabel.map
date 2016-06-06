@@ -1,0 +1,22 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./EnumCodeLabel.html" title="br.gov.to.sefaz.business.managedbean.EnumCodeLabel" alt="" coords="964,11,1101,121"/>
+<area shape="rect" id="node1" href="./EnumCodeLabel.html" title="&lt;TABLE&gt;" alt="" coords="953,5,1112,127"/>
+<area shape="rect" id="node2_1" href="../../arr/parametros/persistence/enums/TipoRepasseEnum.html" title="br.gov.to.sefaz.arr.parametros.persistence.enums.TipoRepasseEnum" alt="" coords="16,241,161,386"/>
+<area shape="rect" id="node2" href="../../arr/parametros/persistence/enums/TipoRepasseEnum.html" title="&lt;TABLE&gt;" alt="" coords="5,235,172,391"/>
+<area shape="rect" id="node3_2" href="../../arr/parametros/persistence/enums/TipoReceitaEnum.html" title="br.gov.to.sefaz.arr.parametros.persistence.enums.TipoReceitaEnum" alt="" coords="207,232,328,395"/>
+<area shape="rect" id="node3" href="../../arr/parametros/persistence/enums/TipoReceitaEnum.html" title="&lt;TABLE&gt;" alt="" coords="196,227,339,400"/>
+<area shape="rect" id="node4_3" href="../../arr/parametros/persistence/enums/TipoPedidoCampoEnum.html" title="br.gov.to.sefaz.arr.parametros.persistence.enums.TipoPedidoCampoEnum" alt="" coords="373,180,591,447"/>
+<area shape="rect" id="node4" href="../../arr/parametros/persistence/enums/TipoPedidoCampoEnum.html" title="&lt;TABLE&gt;" alt="" coords="363,175,601,452"/>
+<area shape="rect" id="node5_4" href="../../arr/parametros/persistence/enums/TipoPedidoAcoesEnum.html" title="br.gov.to.sefaz.arr.parametros.persistence.enums.TipoPedidoAcoesEnum" alt="" coords="637,232,853,395"/>
+<area shape="rect" id="node5" href="../../arr/parametros/persistence/enums/TipoPedidoAcoesEnum.html" title="&lt;TABLE&gt;" alt="" coords="626,227,863,400"/>
+<area shape="rect" id="node6_5" href="../../arr/parametros/persistence/enums/TipoConvenioEnum.html" title="br.gov.to.sefaz.arr.parametros.persistence.enums.TipoConvenioEnum" alt="" coords="899,223,1167,403"/>
+<area shape="rect" id="node6" href="../../arr/parametros/persistence/enums/TipoConvenioEnum.html" title="&lt;TABLE&gt;" alt="" coords="888,218,1177,409"/>
+<area shape="rect" id="node7_6" href="../../arr/parametros/persistence/enums/TipoContaEnum.html" title="br.gov.to.sefaz.arr.parametros.persistence.enums.TipoContaEnum" alt="" coords="1213,258,1325,369"/>
+<area shape="rect" id="node7" href="../../arr/parametros/persistence/enums/TipoContaEnum.html" title="&lt;TABLE&gt;" alt="" coords="1202,253,1335,374"/>
+<area shape="rect" id="node8_7" href="../../arr/parametros/persistence/enums/TipoCodigoBarraEnum.html" title="br.gov.to.sefaz.arr.parametros.persistence.enums.TipoCodigoBarraEnum" alt="" coords="1371,232,1519,395"/>
+<area shape="rect" id="node8" href="../../arr/parametros/persistence/enums/TipoCodigoBarraEnum.html" title="&lt;TABLE&gt;" alt="" coords="1360,227,1529,400"/>
+<area shape="rect" id="node9_8" href="../../arr/parametros/persistence/enums/FormaPagamentoEnum.html" title="br.gov.to.sefaz.arr.parametros.persistence.enums.FormaPagamentoEnum" alt="" coords="1564,232,1720,395"/>
+<area shape="rect" id="node9" href="../../arr/parametros/persistence/enums/FormaPagamentoEnum.html" title="&lt;TABLE&gt;" alt="" coords="1553,227,1731,400"/>
+<area shape="rect" id="node10_9" href="../../arr/parametros/persistence/enums/ClassificacaoReceitaEnum.html" title="br.gov.to.sefaz.arr.parametros.persistence.enums.ClassificacaoReceitaEnum" alt="" coords="1766,197,1963,429"/>
+<area shape="rect" id="node10" href="../../arr/parametros/persistence/enums/ClassificacaoReceitaEnum.html" title="&lt;TABLE&gt;" alt="" coords="1755,192,1974,435"/>
+</map>
