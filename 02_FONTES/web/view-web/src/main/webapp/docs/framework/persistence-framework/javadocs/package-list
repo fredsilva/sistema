@@ -1,0 +1,6 @@
+br.gov.to.sefaz.persistence.configuration
+br.gov.to.sefaz.persistence.converter
+br.gov.to.sefaz.persistence.entity
+br.gov.to.sefaz.persistence.enums
+br.gov.to.sefaz.persistence.predicate
+br.gov.to.sefaz.persistence.repository

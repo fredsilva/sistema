@@ -12,6 +12,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -38,7 +39,7 @@ public class PedidoTipoDocsServiceImpl extends DefaultCrudService<PedidoTipoDocs
         List<TipoPedidoCampoEnum> list = new ArrayList<>();
 
         if (idTipoPedido == null || tipoPedido == null) {
-            return list;
+            return Arrays.asList(TipoPedidoCampoEnum.values());
         }
 
         if (idTipoPedido == 1 && TipoPedidoAcoesEnum.CORRIGIR_PAGAMENTO.equals(tipoPedido)) {
@@ -61,6 +62,8 @@ public class PedidoTipoDocsServiceImpl extends DefaultCrudService<PedidoTipoDocs
         } else if (idTipoPedido == 6 && TipoPedidoAcoesEnum.PEDIDO_INDEFERIDO.equals(tipoPedido)) {
             list.add(TipoPedidoCampoEnum.getValue(7));
             list.add(TipoPedidoCampoEnum.getValue(11));
+        } else {
+            list.addAll(Arrays.asList(TipoPedidoCampoEnum.values()));
         }
 
         return list;

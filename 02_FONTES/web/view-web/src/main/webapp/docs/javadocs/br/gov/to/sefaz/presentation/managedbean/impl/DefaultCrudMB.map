@@ -1,0 +1,24 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../CrudMB.html" title="br.gov.to.sefaz.presentation.managedbean.CrudMB" alt="" coords="1527,11,1907,208"/>
+<area shape="rect" id="node1" href="../CrudMB.html" title="&lt;TABLE&gt;" alt="" coords="1516,5,1917,213"/>
+<area shape="rect" id="node2_1" href="./DefaultCrudMB.html" title="br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB" alt="" coords="1507,267,1927,499"/>
+<area shape="rect" id="node2" href="./DefaultCrudMB.html" title="&lt;TABLE&gt;" alt="" coords="1496,261,1937,504"/>
+<area shape="rect" id="node3_2" href="../../../arr/parametros/managedbean/TipoRejeicaoArquivosMB.html" title="br.gov.to.sefaz.arr.parametros.managedbean.TipoRejeicaoArquivosMB" alt="" coords="16,783,332,876"/>
+<area shape="rect" id="node3" href="../../../arr/parametros/managedbean/TipoRejeicaoArquivosMB.html" title="&lt;TABLE&gt;" alt="" coords="5,777,343,881"/>
+<area shape="rect" id="node4_3" href="../../../arr/parametros/managedbean/TipoGruposCnaesMB.html" title="br.gov.to.sefaz.arr.parametros.managedbean.TipoGruposCnaesMB" alt="" coords="377,653,725,1006"/>
+<area shape="rect" id="node4" href="../../../arr/parametros/managedbean/TipoGruposCnaesMB.html" title="&lt;TABLE&gt;" alt="" coords="367,647,736,1011"/>
+<area shape="rect" id="node5_4" href="../../../arr/parametros/managedbean/ReceitasMB.html" title="br.gov.to.sefaz.arr.parametros.managedbean.ReceitasMB" alt="" coords="771,635,1182,1023"/>
+<area shape="rect" id="node5" href="../../../arr/parametros/managedbean/ReceitasMB.html" title="&lt;TABLE&gt;" alt="" coords="761,630,1193,1029"/>
+<area shape="rect" id="node6_5" href="../../../arr/parametros/managedbean/PlanoContasMB.html" title="br.gov.to.sefaz.arr.parametros.managedbean.PlanoContasMB" alt="" coords="1228,774,1429,885"/>
+<area shape="rect" id="node6" href="../../../arr/parametros/managedbean/PlanoContasMB.html" title="&lt;TABLE&gt;" alt="" coords="1217,769,1440,890"/>
+<area shape="rect" id="node7_6" href="../../../arr/parametros/managedbean/PedidoTiposMB.html" title="br.gov.to.sefaz.arr.parametros.managedbean.PedidoTiposMB" alt="" coords="1475,566,1958,1093"/>
+<area shape="rect" id="node7" href="../../../arr/parametros/managedbean/PedidoTiposMB.html" title="&lt;TABLE&gt;" alt="" coords="1465,561,1969,1098"/>
+<area shape="rect" id="node8_7" href="../../../arr/parametros/managedbean/PedidoAreasMB.html" title="br.gov.to.sefaz.arr.parametros.managedbean.PedidoAreasMB" alt="" coords="2003,557,2435,1101"/>
+<area shape="rect" id="node8" href="../../../arr/parametros/managedbean/PedidoAreasMB.html" title="&lt;TABLE&gt;" alt="" coords="1993,552,2446,1107"/>
+<area shape="rect" id="node9_8" href="../../../arr/parametros/managedbean/ConveniosArrecMB.html" title="br.gov.to.sefaz.arr.parametros.managedbean.ConveniosArrecMB" alt="" coords="2481,635,2880,1023"/>
+<area shape="rect" id="node9" href="../../../arr/parametros/managedbean/ConveniosArrecMB.html" title="&lt;TABLE&gt;" alt="" coords="2471,630,2891,1029"/>
+<area shape="rect" id="node10_9" href="../../../arr/parametros/managedbean/BancosMB.html" title="br.gov.to.sefaz.arr.parametros.managedbean.BancosMB" alt="" coords="2926,774,3163,885"/>
+<area shape="rect" id="node10" href="../../../arr/parametros/managedbean/BancosMB.html" title="&lt;TABLE&gt;" alt="" coords="2915,769,3174,890"/>
+<area shape="rect" id="node11_10" href="../../../arr/parametros/managedbean/BancoAgenciasMB.html" title="br.gov.to.sefaz.arr.parametros.managedbean.BancoAgenciasMB" alt="" coords="3209,687,3568,971"/>
+<area shape="rect" id="node11" href="../../../arr/parametros/managedbean/BancoAgenciasMB.html" title="&lt;TABLE&gt;" alt="" coords="3199,682,3579,977"/>
+</map>

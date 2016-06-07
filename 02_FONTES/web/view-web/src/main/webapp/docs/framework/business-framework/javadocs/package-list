@@ -1,0 +1,9 @@
+br.gov.to.sefaz.business.configuration
+br.gov.to.sefaz.business.facade
+br.gov.to.sefaz.business.facade.impl
+br.gov.to.sefaz.business.service
+br.gov.to.sefaz.business.service.handler
+br.gov.to.sefaz.business.service.impl
+br.gov.to.sefaz.business.service.validation
+br.gov.to.sefaz.business.service.validation.custom
+br.gov.to.sefaz.business.service.validation.violation

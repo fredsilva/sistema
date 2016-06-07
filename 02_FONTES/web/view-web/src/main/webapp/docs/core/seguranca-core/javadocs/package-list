@@ -1,0 +1,6 @@
+br.gov.to.sefaz.seg.business
+br.gov.to.sefaz.seg.business.service
+br.gov.to.sefaz.seg.business.service.impl
+br.gov.to.sefaz.seg.configuration
+br.gov.to.sefaz.seg.persistence.entity
+br.gov.to.sefaz.seg.persistence.repository
