@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="BancoAgenciasDuplicatedCentralizadoraValidator" package="br.gov.to.sefaz.arr.parametros.business.service.validator" visibility="public" xPosition="2053.0" yPosition="2313.0">
+      <Fields>
+        <Field name="repository" type="BancoAgenciasRepository" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="BancoAgenciasRepository" name="repository"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="support" returnType="boolean" visibility="public">
+          <Argument type="Class&lt;?&gt;" name="clazz"/>
+          <Argument type="String" name="context"/>
+        </Method>
+        <Method name="validate" returnType="Set&lt;CustomViolation&gt;" visibility="public">
+          <Argument type="BancoAgencias" name="target"/>
+        </Method>
+        <Method name="validateAll" returnType="Set&lt;CustomViolation&gt;" visibility="public">
+          <Argument type="Collection&lt;BancoAgencias&gt;" name="target"/>
+        </Method>
+        <Method name="validateDuplicatedCentralizadoraAndIdBanco" returnType="Boolean" visibility="public">
+          <Argument type="Collection&lt;BancoAgencias&gt;" name="target"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="BancoAgenciasDuplicatedCnpjValidator" package="br.gov.to.sefaz.arr.parametros.business.service.validator" visibility="public" xPosition="457.0" yPosition="2037.0">
+      <Fields>
+        <Field name="repository" type="BancoAgenciasRepository" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="BancoAgenciasRepository" name="repository"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="support" returnType="boolean" visibility="public">
+          <Argument type="Class&lt;?&gt;" name="clazz"/>
+          <Argument type="String" name="context"/>
+        </Method>
+        <Method name="validate" returnType="Set&lt;CustomViolation&gt;" visibility="public">
+          <Argument type="BancoAgencias" name="target"/>
+        </Method>
+        <Method name="validateAll" returnType="Set&lt;CustomViolation&gt;" visibility="public">
+          <Argument type="Collection&lt;BancoAgencias&gt;" name="target"/>
+        </Method>
+        <Method name="validateDuplicatedCnpj" returnType="Boolean" visibility="private">
+          <Argument type="Collection&lt;BancoAgencias&gt;" name="target"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="BancoAgenciasServiceImpl" package="br.gov.to.sefaz.arr.parametros.business.service.impl" visibility="public" xPosition="1118.0" yPosition="1586.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="BancoAgenciasRepository" name="repository"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRepository" returnType="BancoAgenciasRepository" visibility="protected"/>
+        <Method name="findByIdBanco" returnType="Collection&lt;BancoAgencias&gt;" visibility="public">
+          <Argument type="Integer" name="idBanco"/>
+        </Method>
+        <Method name="validateSave" returnType="void" visibility="public">
+          <Argument type="BancoAgencias" name="agencia"/>
+        </Method>
+        <Method name="validateSave" returnType="void" visibility="public">
+          <Argument type="Collection&lt;BancoAgencias&gt;" name="list"/>
+        </Method>
+        <Method name="validateUpdate" returnType="void" visibility="public">
+          <Argument type="BancoAgencias" name="agencia"/>
+        </Method>
+        <Method name="validateUpdate" returnType="void" visibility="public">
+          <Argument type="Collection&lt;BancoAgencias&gt;" name="list"/>
+        </Method>
+        <Method name="delete" returnType="Optional&lt;BancoAgencias&gt;" visibility="public">
+          <Argument type="BancoAgenciasPK" name="id"/>
+        </Method>
+        <Method name="getAllActiveBancoAgenciasFromIdBanco" returnType="Collection&lt;BancoAgencias&gt;" visibility="public">
+          <Argument type="Integer" name="idBanco"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="BancoAgenciasCnpjRaizValidator" package="br.gov.to.sefaz.arr.parametros.business.service.validator" visibility="public" xPosition="1041.0" yPosition="2959.0">
+      <Fields>
+        <Field name="repository" type="BancosRepository" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="BancosRepository" name="repository"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="support" returnType="boolean" visibility="public">
+          <Argument type="Class&lt;?&gt;" name="clazz"/>
+          <Argument type="String" name="context"/>
+        </Method>
+        <Method name="validate" returnType="Set&lt;CustomViolation&gt;" visibility="public">
+          <Argument type="BancoAgencias" name="agencia"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Bancos" package="br.gov.to.sefaz.arr.parametros.persistence.entity" visibility="public" xPosition="676.0" yPosition="3031.0">
+      <Fields>
+        <Field name="idBanco" type="Integer" visibility="private"/>
+        <Field name="nomeBanco" type="String" visibility="private"/>
+        <Field name="situacao" type="SituacaoEnum" visibility="private"/>
+        <Field name="cnpjRaiz" type="Integer" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="Integer" visibility="public"/>
+        <Method name="getIdBanco" returnType="Integer" visibility="public"/>
+        <Method name="setIdBanco" returnType="void" visibility="public">
+          <Argument type="Integer" name="idBanco"/>
+        </Method>
+        <Method name="getNomeBanco" returnType="String" visibility="public"/>
+        <Method name="setNomeBanco" returnType="void" visibility="public">
+          <Argument type="String" name="nomeBanco"/>
+        </Method>
+        <Method name="getSituacao" returnType="SituacaoEnum" visibility="public"/>
+        <Method name="setSituacao" returnType="void" visibility="public">
+          <Argument type="SituacaoEnum" name="situacao"/>
+        </Method>
+        <Method name="getCnpjRaiz" returnType="Integer" visibility="public"/>
+        <Method name="setCnpjRaiz" returnType="void" visibility="public">
+          <Argument type="Integer" name="cnpjRaiz"/>
+        </Method>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="object"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="BancoAgencias" package="br.gov.to.sefaz.arr.parametros.persistence.entity" visibility="public" xPosition="1625.0" yPosition="2313.0">
+      <Fields>
+        <Field name="idBanco" type="Integer" visibility="private"/>
+        <Field name="idAgencia" type="Integer" visibility="private"/>
+        <Field name="digitoAgencia" type="String" visibility="private"/>
+        <Field name="nomeAgencia" type="String" visibility="private"/>
+        <Field name="cnpjAgencia" type="Long" visibility="private"/>
+        <Field name="situacao" type="SituacaoEnum" visibility="private"/>
+        <Field name="centralizadora" type="Boolean" visibility="private"/>
+        <Field name="numeroContaCorrente" type="Long" visibility="private"/>
+        <Field name="digitoContaCorrente" type="String" visibility="private"/>
+        <Field name="idMunicipio" type="Integer" visibility="private"/>
+        <Field name="email" type="String" visibility="private"/>
+        <Field name="bancos" type="Bancos" visibility="private"/>
+        <Field name="municipio" type="Municipio" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="BancoAgenciasPK" name="agenciasPK"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getIdBanco" returnType="Integer" visibility="public"/>
+        <Method name="setIdBanco" returnType="void" visibility="public">
+          <Argument type="Integer" name="idBanco"/>
+        </Method>
+        <Method name="getIdAgencia" returnType="Integer" visibility="public"/>
+        <Method name="setIdAgencia" returnType="void" visibility="public">
+          <Argument type="Integer" name="idAgencia"/>
+        </Method>
+        <Method name="getId" returnType="BancoAgenciasPK" visibility="public"/>
+        <Method name="getDigitoAgencia" returnType="String" visibility="public"/>
+        <Method name="setDigitoAgencia" returnType="void" visibility="public">
+          <Argument type="String" name="digitoAgencia"/>
+        </Method>
+        <Method name="getNumeroAgencia" returnType="String" visibility="public"/>
+        <Method name="getNomeAgencia" returnType="String" visibility="public"/>
+        <Method name="setNomeAgencia" returnType="void" visibility="public">
+          <Argument type="String" name="nomeAgencia"/>
+        </Method>
+        <Method name="getCnpjAgencia" returnType="Long" visibility="public"/>
+        <Method name="setCnpjAgencia" returnType="void" visibility="public">
+          <Argument type="Long" name="cnpjAgencia"/>
+        </Method>
+        <Method name="getSituacao" returnType="SituacaoEnum" visibility="public"/>
+        <Method name="setSituacao" returnType="void" visibility="public">
+          <Argument type="SituacaoEnum" name="situacao"/>
+        </Method>
+        <Method name="getCentralizadora" returnType="Boolean" visibility="public"/>
+        <Method name="setCentralizadora" returnType="void" visibility="public">
+          <Argument type="Boolean" name="centralizadora"/>
+        </Method>
+        <Method name="getNumeroContaCorrente" returnType="Long" visibility="public"/>
+        <Method name="setNumeroContaCorrente" returnType="void" visibility="public">
+          <Argument type="Long" name="numeroContaCorrente"/>
+        </Method>
+        <Method name="getDigitoContaCorrente" returnType="String" visibility="public"/>
+        <Method name="setDigitoContaCorrente" returnType="void" visibility="public">
+          <Argument type="String" name="digitoContaCorrente"/>
+        </Method>
+        <Method name="getNumeroCC" returnType="String" visibility="public"/>
+        <Method name="getIdMunicipio" returnType="Integer" visibility="public"/>
+        <Method name="setIdMunicipio" returnType="void" visibility="public">
+          <Argument type="Integer" name="idMunicipio"/>
+        </Method>
+        <Method name="getUnidadeFederacao" returnType="String" visibility="public"/>
+        <Method name="setUnidadeFederacao" returnType="void" visibility="public">
+          <Argument type="String" name="unidadeFederacao"/>
+        </Method>
+        <Method name="getEmail" returnType="String" visibility="public"/>
+        <Method name="setEmail" returnType="void" visibility="public">
+          <Argument type="String" name="email"/>
+        </Method>
+        <Method name="getBancos" returnType="Bancos" visibility="public"/>
+        <Method name="setBancos" returnType="void" visibility="public">
+          <Argument type="Bancos" name="bancos"/>
+        </Method>
+        <Method name="getMunicipio" returnType="Municipio" visibility="public"/>
+        <Method name="setMunicipio" returnType="void" visibility="public">
+          <Argument type="Municipio" name="municipio"/>
+        </Method>
+        <Method name="getNomeMunicipio" returnType="String" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="BancoAgenciasDuplicatedAgenciaAndBancoValidator" package="br.gov.to.sefaz.arr.parametros.business.service.validator" visibility="public" xPosition="383.0" yPosition="2401.0">
+      <Fields>
+        <Field name="repository" type="BancoAgenciasRepository" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="BancoAgenciasRepository" name="repository"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="support" returnType="boolean" visibility="public">
+          <Argument type="Class&lt;?&gt;" name="clazz"/>
+          <Argument type="String" name="context"/>
+        </Method>
+        <Method name="validate" returnType="Set&lt;CustomViolation&gt;" visibility="public">
+          <Argument type="BancoAgencias" name="target"/>
+        </Method>
+        <Method name="validateAll" returnType="Set&lt;CustomViolation&gt;" visibility="public">
+          <Argument type="Collection&lt;BancoAgencias&gt;" name="target"/>
+        </Method>
+        <Method name="validateDuplicatedIdAgencia" returnType="Boolean" visibility="public">
+          <Argument type="Collection&lt;BancoAgencias&gt;" name="target"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="BancoAgenciasFacadeImpl" package="br.gov.to.sefaz.arr.parametros.business.facade.impl" visibility="public" xPosition="2650.0" yPosition="704.0">
+      <Fields>
+        <Field name="estadoService" type="EstadoService" visibility="private" isFinal="true"/>
+        <Field name="municipioService" type="MunicipioService" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="BancoAgenciasService" name="service"/>
+          <Argument type="EstadoService" name="estadoService"/>
+          <Argument type="MunicipioService" name="municipioService"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getService" returnType="BancoAgenciasService" visibility="protected"/>
+        <Method name="findByIdBanco" returnType="Collection&lt;BancoAgencias&gt;" visibility="public">
+          <Argument type="Integer" name="idBanco"/>
+        </Method>
+        <Method name="findAllEstados" returnType="Collection&lt;Estado&gt;" visibility="public"/>
+        <Method name="findMunicipiosByUF" returnType="Collection&lt;Municipio&gt;" visibility="public">
+          <Argument type="String" name="uf"/>
+        </Method>
+        <Method name="validateSave" returnType="void" visibility="public">
+          <Argument type="BancoAgencias" name="agencia"/>
+          <Argument type="Collection&lt;BancoAgencias&gt;" name="list"/>
+        </Method>
+        <Method name="validateUpdate" returnType="void" visibility="public">
+          <Argument type="BancoAgencias" name="agencia"/>
+          <Argument type="Collection&lt;BancoAgencias&gt;" name="list"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="BancoAgenciasMB" package="br.gov.to.sefaz.arr.parametros.managedbean" visibility="public" xPosition="2244.0" yPosition="40.0">
+      <Fields>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="estados" type="Collection&lt;Estado&gt;" visibility="private"/>
+        <Field name="municipios" type="Collection&lt;Municipio&gt;" visibility="private"/>
+        <Field name="agenciasAdicionadas" type="Collection&lt;BancoAgencias&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="setFacade" returnType="void" visibility="public">
+          <Argument type="BancoAgenciasFacade" name="facade"/>
+        </Method>
+        <Method name="getFacade" returnType="BancoAgenciasFacade" visibility="protected"/>
+        <Method name="getAgenciasAdicionadas" returnType="Collection&lt;BancoAgencias&gt;" visibility="public"/>
+        <Method name="getResultList" returnType="Collection&lt;BancoAgencias&gt;" visibility="public"/>
+        <Method name="loadBancoAgencias" returnType="void" visibility="public"/>
+        <Method name="saveAgenciasAdicionadas" returnType="void" visibility="public"/>
+        <Method name="save" returnType="void" visibility="public"/>
+        <Method name="update" returnType="void" visibility="public"/>
+        <Method name="removerBancoAgencias" returnType="void" visibility="public"/>
+        <Method name="getEstados" returnType="Collection&lt;Estado&gt;" visibility="public"/>
+        <Method name="getMunicipios" returnType="Collection&lt;Municipio&gt;" visibility="public"/>
+        <Method name="loadMunicipios" returnType="void" visibility="public"/>
+        <Method name="buildBancoAgencias" returnType="List&lt;BancoAgencias&gt;" visibility="private"/>
+        <Method name="clearDto" returnType="void" visibility="public"/>
+        <Method name="atualizaMunicipio" returnType="void" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="DefaultCrudFacade" package="br.gov.to.sefaz.business.facade.impl" visibility="public" xPosition="2244.0" yPosition="854.0">
+      <Fields>
+        <Field name="service" type="CrudService&lt;E, I&gt;" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="CrudService&lt;E, I&gt;" name="service"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="findOne" returnType="E" visibility="public">
+          <Argument type="I" name="id"/>
+        </Method>
+        <Method name="findAll" returnType="Collection&lt;E&gt;" visibility="public"/>
+        <Method name="findAll" returnType="Collection&lt;E&gt;" visibility="public">
+          <Argument type="Iterable&lt;I&gt;" name="list"/>
+        </Method>
+        <Method name="save" returnType="E" visibility="public">
+          <Argument type="E" name="entity"/>
+        </Method>
+        <Method name="save" returnType="Collection&lt;E&gt;" visibility="public">
+          <Argument type="Collection&lt;E&gt;" name="list"/>
+        </Method>
+        <Method name="update" returnType="E" visibility="public">
+          <Argument type="E" name="entity"/>
+        </Method>
+        <Method name="delete" returnType="Optional&lt;E&gt;" visibility="public">
+          <Argument type="I" name="id"/>
+        </Method>
+        <Method name="delete" returnType="void" visibility="public">
+          <Argument type="Iterable&lt;I&gt;" name="ids"/>
+        </Method>
+        <Method name="getService" returnType="CrudService&lt;E, I&gt;" visibility="protected"/>
+      </Methods>
+    </Class>
+    <Class name="DefaultCrudService" package="br.gov.to.sefaz.business.service.impl" visibility="public" xPosition="1183.0" yPosition="1076.0">
+      <Fields>
+        <Field name="repository" type="BaseRepository&lt;E, I&gt;" visibility="private" isFinal="true"/>
+        <Field name="defaultSort" type="Sort" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="BaseRepository&lt;E, I&gt;" name="repository"/>
+          <Argument type="Sort" name="sort"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="findOne" returnType="E" visibility="public">
+          <Argument type="I" name="id"/>
+        </Method>
+        <Method name="findAll" returnType="Collection&lt;E&gt;" visibility="public"/>
+        <Method name="findAll" returnType="Collection&lt;E&gt;" visibility="public">
+          <Argument type="Iterable&lt;I&gt;" name="list"/>
+        </Method>
+        <Method name="save" returnType="E" visibility="public">
+          <Argument type="E" name="entity"/>
+        </Method>
+        <Method name="save" returnType="Collection&lt;E&gt;" visibility="public">
+          <Argument type="Collection&lt;E&gt;" name="list"/>
+        </Method>
+        <Method name="showSaveMessage" returnType="void" visibility="protected"/>
+        <Method name="update" returnType="E" visibility="public">
+          <Argument type="E" name="entity"/>
+        </Method>
+        <Method name="showUpdateMessage" returnType="void" visibility="protected"/>
+        <Method name="delete" returnType="Optional&lt;E&gt;" visibility="public">
+          <Argument type="I" name="id"/>
+        </Method>
+        <Method name="delete" returnType="void" visibility="public">
+          <Argument type="Iterable&lt;I&gt;" name="ids"/>
+        </Method>
+        <Method name="showDeleteMessage" returnType="void" visibility="protected"/>
+        <Method name="getRepository" returnType="BaseRepository&lt;E, I&gt;" visibility="protected"/>
+        <Method name="getDefaultSort" returnType="Sort" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="EstadoServiceImpl" package="br.gov.to.sefaz.cat.business.service.impl" visibility="public" xPosition="3170.0" yPosition="1427.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="EstadoRepository" name="repository"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="MunicipioServiceImpl" package="br.gov.to.sefaz.cat.business.service.impl" visibility="public" xPosition="2749.0" yPosition="1784.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="MunicipioRepository" name="repository"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRepository" returnType="MunicipioRepository" visibility="protected"/>
+        <Method name="findByUF" returnType="Collection&lt;Municipio&gt;" visibility="public">
+          <Argument type="String" name="uf"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Estado" package="br.gov.to.sefaz.cat.persistence.entity" visibility="public" xPosition="3243.0" yPosition="2664.0">
+      <Fields>
+        <Field name="unidadeFederacao" type="String" visibility="private"/>
+        <Field name="nomeEstado" type="String" visibility="private"/>
+        <Field name="aliquotaOrigemEntrada" type="Integer" visibility="private"/>
+        <Field name="valorAgregadoFarmaceutico" type="BigDecimal" visibility="private"/>
+        <Field name="cepGeralUf" type="String" visibility="private"/>
+        <Field name="codigoRegiao" type="Integer" visibility="private"/>
+        <Field name="cargaTributariaOrigem" type="Integer" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="String" visibility="public"/>
+        <Method name="getUnidadeFederacao" returnType="String" visibility="public"/>
+        <Method name="setUnidadeFederacao" returnType="void" visibility="public">
+          <Argument type="String" name="unidadeFederacao"/>
+        </Method>
+        <Method name="getNomeEstado" returnType="String" visibility="public"/>
+        <Method name="setNomeEstado" returnType="void" visibility="public">
+          <Argument type="String" name="nomeEstado"/>
+        </Method>
+        <Method name="getAliquotaOrigemEntrada" returnType="Integer" visibility="public"/>
+        <Method name="setAliquotaOrigemEntrada" returnType="void" visibility="public">
+          <Argument type="Integer" name="aliquotaOrigemEntrada"/>
+        </Method>
+        <Method name="getValorAgregadoFarmaceutico" returnType="BigDecimal" visibility="public"/>
+        <Method name="setValorAgregadoFarmaceutico" returnType="void" visibility="public">
+          <Argument type="BigDecimal" name="valorAgregadoFarmaceutico"/>
+        </Method>
+        <Method name="getCepGeralUf" returnType="String" visibility="public"/>
+        <Method name="setCepGeralUf" returnType="void" visibility="public">
+          <Argument type="String" name="cepGeralUf"/>
+        </Method>
+        <Method name="getCodigoRegiao" returnType="Integer" visibility="public"/>
+        <Method name="setCodigoRegiao" returnType="void" visibility="public">
+          <Argument type="Integer" name="codigoRegiao"/>
+        </Method>
+        <Method name="getCargaTributariaOrigem" returnType="Integer" visibility="public"/>
+        <Method name="setCargaTributariaOrigem" returnType="void" visibility="public">
+          <Argument type="Integer" name="cargaTributariaOrigem"/>
+        </Method>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Municipio" package="br.gov.to.sefaz.cat.persistence.entity" visibility="public" xPosition="2722.0" yPosition="2432.0">
+      <Fields>
+        <Field name="codigoIbge" type="Integer" visibility="private"/>
+        <Field name="codigoMunicipio" type="Integer" visibility="private"/>
+        <Field name="nomeMunicipio" type="String" visibility="private"/>
+        <Field name="codigoMunicipioTom" type="Integer" visibility="private"/>
+        <Field name="codigoMunicipioSerpro" type="Integer" visibility="private"/>
+        <Field name="capital" type="Boolean" visibility="private"/>
+        <Field name="unidadeFederacao" type="String" visibility="private"/>
+        <Field name="estado" type="Estado" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="Integer" visibility="public"/>
+        <Method name="getCodigoIbge" returnType="Integer" visibility="public"/>
+        <Method name="setCodigoIbge" returnType="void" visibility="public">
+          <Argument type="Integer" name="codigoIbge"/>
+        </Method>
+        <Method name="getCodigoMunicipio" returnType="Integer" visibility="public"/>
+        <Method name="setCodigoMunicipio" returnType="void" visibility="public">
+          <Argument type="Integer" name="codigoMunicipio"/>
+        </Method>
+        <Method name="getNomeMunicipio" returnType="String" visibility="public"/>
+        <Method name="setNomeMunicipio" returnType="void" visibility="public">
+          <Argument type="String" name="nomeMunicipio"/>
+        </Method>
+        <Method name="getCodigoMunicipioTom" returnType="Integer" visibility="public"/>
+        <Method name="setCodigoMunicipioTom" returnType="void" visibility="public">
+          <Argument type="Integer" name="codigoMunicipioTom"/>
+        </Method>
+        <Method name="getCodigoMunicipioSerpro" returnType="Integer" visibility="public"/>
+        <Method name="setCodigoMunicipioSerpro" returnType="void" visibility="public">
+          <Argument type="Integer" name="codigoMunicipioSerpro"/>
+        </Method>
+        <Method name="getCapital" returnType="Boolean" visibility="public"/>
+        <Method name="setCapital" returnType="void" visibility="public">
+          <Argument type="Boolean" name="capital"/>
+        </Method>
+        <Method name="getUnidadeFederacao" returnType="String" visibility="public"/>
+        <Method name="setUnidadeFederacao" returnType="void" visibility="public">
+          <Argument type="String" name="unidadeFederacao"/>
+        </Method>
+        <Method name="getEstado" returnType="Estado" visibility="public"/>
+        <Method name="setEstado" returnType="void" visibility="public">
+          <Argument type="Estado" name="estado"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="AbstractEntity" package="br.gov.to.sefaz.persistence.entity" visibility="public" isAbstract="true" xPosition="2155.0" yPosition="3108.0">
+      <Fields>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="usuarioInsercao" type="String" visibility="protected"/>
+        <Field name="dataInsercao" type="LocalDateTime" visibility="protected"/>
+        <Field name="usuarioAlteracao" type="String" visibility="protected"/>
+        <Field name="dataAlteracao" type="LocalDateTime" visibility="protected"/>
+        <Field name="registroExcluido" type="Boolean" visibility="protected"/>
+        <Field name="usuarioExclusao" type="String" visibility="protected"/>
+        <Field name="dataExclusao" type="LocalDateTime" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getId" returnType="I" visibility="public" isAbstract="true"/>
+        <Method name="getUsuarioInsercao" returnType="String" visibility="public"/>
+        <Method name="setUsuarioInsercao" returnType="void" visibility="public">
+          <Argument type="String" name="usuarioInsercao"/>
+        </Method>
+        <Method name="getDataInsercao" returnType="LocalDateTime" visibility="public"/>
+        <Method name="setDataInsercao" returnType="void" visibility="public">
+          <Argument type="LocalDateTime" name="dataInsercao"/>
+        </Method>
+        <Method name="getUsuarioAlteracao" returnType="String" visibility="public"/>
+        <Method name="setUsuarioAlteracao" returnType="void" visibility="public">
+          <Argument type="String" name="usuarioAlteracao"/>
+        </Method>
+        <Method name="getDataAlteracao" returnType="LocalDateTime" visibility="public"/>
+        <Method name="setDataAlteracao" returnType="void" visibility="public">
+          <Argument type="LocalDateTime" name="dataAlteracao"/>
+        </Method>
+        <Method name="getRegistroExcluido" returnType="Boolean" visibility="public"/>
+        <Method name="setRegistroExcluido" returnType="void" visibility="public">
+          <Argument type="Boolean" name="registroExcluido"/>
+        </Method>
+        <Method name="getUsuarioExclusao" returnType="String" visibility="public"/>
+        <Method name="setUsuarioExclusao" returnType="void" visibility="public">
+          <Argument type="String" name="usuarioExclusao"/>
+        </Method>
+        <Method name="getDataExclusao" returnType="LocalDateTime" visibility="public"/>
+        <Method name="setDataExclusao" returnType="void" visibility="public">
+          <Argument type="LocalDateTime" name="dataExclusao"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AuditListner" package="br.gov.to.sefaz.persistence.entity" visibility="public" xPosition="2188.0" yPosition="2891.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="prePersist" returnType="void" visibility="public">
+          <Argument type="AbstractEntity&lt;?&gt;" name="entity"/>
+        </Method>
+        <Method name="preUpdate" returnType="void" visibility="public">
+          <Argument type="AbstractEntity&lt;?&gt;" name="entity"/>
+        </Method>
+        <Method name="preRemove" returnType="void" visibility="public">
+          <Argument type="AbstractEntity&lt;?&gt;" name="entity"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DefaultCrudMB" package="br.gov.to.sefaz.presentation.managedbean.impl" visibility="public" xPosition="1712.0" yPosition="40.0">
+      <Fields>
+        <Field name="beanFactoryMB" type="BeanFactoryMB" visibility="private"/>
+        <Field name="resultList" type="Collection&lt;E&gt;" visibility="protected"/>
+        <Field name="dto" type="E" visibility="private"/>
+        <Field name="facade" type="CrudFacade&lt;E, I&gt;" visibility="private"/>
+        <Field name="dtoProvider" type="Supplier&lt;E&gt;" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Supplier&lt;E&gt;" name="dtoProvider"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="injectDependencies" returnType="void" visibility="protected"/>
+        <Method name="setFacade" returnType="void" visibility="protected">
+          <Argument type="CrudFacade&lt;E, I&gt;" name="facade"/>
+        </Method>
+        <Method name="getFacade" returnType="CrudFacade&lt;E, I&gt;" visibility="protected"/>
+        <Method name="getBeanFactoryMB" returnType="BeanFactoryMB" visibility="protected"/>
+        <Method name="setBeanFactoryMB" returnType="void" visibility="public">
+          <Argument type="BeanFactoryMB" name="beanFactoryMB"/>
+        </Method>
+        <Method name="setDto" returnType="void" visibility="public">
+          <Argument type="E" name="dto"/>
+        </Method>
+        <Method name="getDto" returnType="E" visibility="public"/>
+        <Method name="setResultList" returnType="void" visibility="public">
+          <Argument type="Collection&lt;E&gt;" name="resultList"/>
+        </Method>
+        <Method name="getResultList" returnType="Collection&lt;E&gt;" visibility="public"/>
+        <Method name="save" returnType="void" visibility="public"/>
+        <Method name="update" returnType="void" visibility="public"/>
+        <Method name="delete" returnType="void" visibility="public"/>
+        <Method name="clearDto" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="BancoAgenciasService" package="br.gov.to.sefaz.arr.parametros.business.service" visibility="public" xPosition="1837.0" yPosition="1755.0">
+      <Methods>
+        <Method name="getAllActiveBancoAgenciasFromIdBanco" returnType="Collection&lt;BancoAgencias&gt;" visibility="package">
+          <Argument type="Integer" name="idBanco"/>
+        </Method>
+        <Method name="validateSave" returnType="void" visibility="package">
+          <Argument type="BancoAgencias" name="agencia"/>
+        </Method>
+        <Method name="validateSave" returnType="void" visibility="package">
+          <Argument type="Collection&lt;BancoAgencias&gt;" name="list"/>
+        </Method>
+        <Method name="validateUpdate" returnType="void" visibility="package">
+          <Argument type="BancoAgencias" name="agencia"/>
+        </Method>
+        <Method name="validateUpdate" returnType="void" visibility="package">
+          <Argument type="Collection&lt;BancoAgencias&gt;" name="list"/>
+        </Method>
+        <Method name="findByIdBanco" returnType="Collection&lt;BancoAgencias&gt;" visibility="package">
+          <Argument type="Integer" name="idBanco"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="BancoAgenciasRepository" package="br.gov.to.sefaz.arr.parametros.persistence.repository" visibility="public" xPosition="1246.0" yPosition="1941.0">
+      <Methods>
+        <Method name="existsLockReference" returnType="Boolean" visibility="package">
+          <Argument type="Integer" name="idBanco"/>
+          <Argument type="Integer" name="idAgencia"/>
+        </Method>
+        <Method name="updateSituacao" returnType="int" visibility="package">
+          <Argument type="Integer" name="idBanco"/>
+          <Argument type="Integer" name="idAgencia"/>
+          <Argument type="SituacaoEnum" name="situacao"/>
+        </Method>
+        <Method name="findAll" returnType="Iterable&lt;BancoAgencias&gt;" visibility="package"/>
+        <Method name="findByIdBanco" returnType="Collection&lt;BancoAgencias&gt;" visibility="package">
+          <Argument type="Integer" name="idBanco"/>
+        </Method>
+        <Method name="findExitsCnpj" returnType="Boolean" visibility="package">
+          <Argument type="Integer" name="idAgencia"/>
+          <Argument type="Long" name="cnpj"/>
+        </Method>
+        <Method name="findExitsIdAgenciaAndIdBanco" returnType="Boolean" visibility="package">
+          <Argument type="Integer" name="idAgencia"/>
+          <Argument type="Integer" name="idBanco"/>
+        </Method>
+        <Method name="findExitsCentralizadoraAndIdBanco" returnType="Boolean" visibility="package">
+          <Argument type="Integer" name="idBanco"/>
+          <Argument type="Boolean" name="centralizadora"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="CrudFacade" package="br.gov.to.sefaz.business.facade" visibility="public" xPosition="1223.0" yPosition="681.0">
+      <Methods>
+        <Method name="findOne" returnType="E" visibility="package">
+          <Argument type="I" name="id"/>
+        </Method>
+        <Method name="findAll" returnType="Collection&lt;E&gt;" visibility="package"/>
+        <Method name="findAll" returnType="Collection&lt;E&gt;" visibility="package">
+          <Argument type="Iterable&lt;I&gt;" name="list"/>
+        </Method>
+        <Method name="save" returnType="E" visibility="package">
+          <Argument type="E" name="entity"/>
+        </Method>
+        <Method name="save" returnType="Collection&lt;E&gt;" visibility="package">
+          <Argument type="Collection&lt;E&gt;" name="list"/>
+        </Method>
+        <Method name="update" returnType="E" visibility="package">
+          <Argument type="E" name="entity"/>
+        </Method>
+        <Method name="delete" returnType="Optional&lt;E&gt;" visibility="package">
+          <Argument type="I" name="id"/>
+        </Method>
+        <Method name="delete" returnType="void" visibility="package">
+          <Argument type="Iterable&lt;I&gt;" name="list"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="BancoAgenciasFacade" package="br.gov.to.sefaz.arr.parametros.business.facade" visibility="public" xPosition="1900.0" yPosition="626.0">
+      <Methods>
+        <Method name="findByIdBanco" returnType="Collection&lt;BancoAgencias&gt;" visibility="package">
+          <Argument type="Integer" name="idBanco"/>
+        </Method>
+        <Method name="findAllEstados" returnType="Collection&lt;Estado&gt;" visibility="package"/>
+        <Method name="findMunicipiosByUF" returnType="Collection&lt;Municipio&gt;" visibility="package">
+          <Argument type="String" name="uf"/>
+        </Method>
+        <Method name="validateSave" returnType="void" visibility="package">
+          <Argument type="BancoAgencias" name="agencia"/>
+          <Argument type="Collection&lt;BancoAgencias&gt;" name="list"/>
+        </Method>
+        <Method name="validateUpdate" returnType="void" visibility="package">
+          <Argument type="BancoAgencias" name="agencia"/>
+          <Argument type="Collection&lt;BancoAgencias&gt;" name="list"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="CrudService" package="br.gov.to.sefaz.business.service" visibility="public" xPosition="1842.0" yPosition="1032.0">
+      <Methods>
+        <Method name="findOne" returnType="E" visibility="package">
+          <Argument type="I" name="id"/>
+        </Method>
+        <Method name="findAll" returnType="Collection&lt;E&gt;" visibility="package"/>
+        <Method name="findAll" returnType="Collection&lt;E&gt;" visibility="package">
+          <Argument type="Iterable&lt;I&gt;" name="list"/>
+        </Method>
+        <Method name="save" returnType="E" visibility="package">
+          <Argument type="E" name="entity"/>
+        </Method>
+        <Method name="save" returnType="Collection&lt;E&gt;" visibility="package">
+          <Argument type="Collection&lt;E&gt;" name="list"/>
+        </Method>
+        <Method name="update" returnType="E" visibility="package">
+          <Argument type="E" name="entity"/>
+        </Method>
+        <Method name="delete" returnType="Optional&lt;E&gt;" visibility="package">
+          <Argument type="I" name="id"/>
+        </Method>
+        <Method name="delete" returnType="void" visibility="package">
+          <Argument type="Iterable&lt;I&gt;" name="ids"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="EstadoService" package="br.gov.to.sefaz.cat.business.service" visibility="public" xPosition="3200.0" yPosition="1256.0">
+      <Methods/>
+    </Interface>
+    <Interface name="MunicipioService" package="br.gov.to.sefaz.cat.business.service" visibility="public" xPosition="2782.0" yPosition="1529.0">
+      <Methods>
+        <Method name="findByUF" returnType="Collection&lt;Municipio&gt;" visibility="package">
+          <Argument type="String" name="uf"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="MunicipioRepository" package="br.gov.to.sefaz.cat.persistence.repository" visibility="public" xPosition="2782.0" yPosition="2101.0">
+      <Methods>
+        <Method name="findByUF" returnType="Collection&lt;Municipio&gt;" visibility="package">
+          <Argument type="String" name="uf"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="EstadoRepository" package="br.gov.to.sefaz.cat.persistence.repository" visibility="public" xPosition="3293.0" yPosition="2303.0">
+      <Methods/>
+    </Interface>
+    <Interface name="BaseRepository" package="br.gov.to.sefaz.persistence.repository" visibility="public" xPosition="2400.0" yPosition="2172.0">
+      <Methods/>
+    </Interface>
+    <Interface name="BeanFactoryMB" package="br.gov.to.sefaz.presentation.managedbean" visibility="public" xPosition="1170.0" yPosition="84.0">
+      <Methods>
+        <Method name="getBean" returnType="T" visibility="package">
+          <Argument type="Class&lt;T&gt;" name="requiredType"/>
+        </Method>
+        <Method name="getBean" returnType="T" visibility="package">
+          <Argument type="String" name="name"/>
+          <Argument type="Class&lt;T&gt;" name="requiredType"/>
+        </Method>
+        <Method name="injectBeans" returnType="void" visibility="package">
+          <Argument type="Object" name="object"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="CrudMB" package="br.gov.to.sefaz.presentation.managedbean" visibility="public" xPosition="1223.0" yPosition="268.0">
+      <Methods>
+        <Method name="getDto" returnType="E" visibility="package"/>
+        <Method name="setDto" returnType="void" visibility="package">
+          <Argument type="E" name="dto"/>
+        </Method>
+        <Method name="getResultList" returnType="Collection&lt;E&gt;" visibility="package"/>
+        <Method name="save" returnType="void" visibility="package"/>
+        <Method name="update" returnType="void" visibility="package"/>
+        <Method name="delete" returnType="void" visibility="package"/>
+        <Method name="clearDto" returnType="void" visibility="package"/>
+      </Methods>
+    </Interface>
+    <Enum name="SituacaoEnum" package="br.gov.to.sefaz.persistence.enums" visibility="public" xPosition="728.0" yPosition="2794.0">
+      <Literals>
+        <Literal name="ATIVO"/>
+        <Literal name="CANCELADO"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="beanFactoryMB" source="br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB" target="br.gov.to.sefaz.presentation.managedbean.BeanFactoryMB" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB" target="br.gov.to.sefaz.presentation.managedbean.CrudMB"/>
+    <UseRelation source="br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB" target="br.gov.to.sefaz.business.facade.CrudFacade" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.business.service.impl.DefaultCrudService" target="br.gov.to.sefaz.business.service.CrudService"/>
+    <UseRelation source="br.gov.to.sefaz.cat.business.service.impl.MunicipioServiceImpl" target="br.gov.to.sefaz.cat.persistence.repository.MunicipioRepository" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.cat.persistence.entity.Estado" target="br.gov.to.sefaz.persistence.entity.AbstractEntity"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.arr.parametros.business.service.impl.BancoAgenciasServiceImpl" target="br.gov.to.sefaz.arr.parametros.business.service.BancoAgenciasService"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" target="br.gov.to.sefaz.business.facade.CrudFacade"/>
+    <HasRelation name="estadoService" source="br.gov.to.sefaz.arr.parametros.business.facade.impl.BancoAgenciasFacadeImpl" target="br.gov.to.sefaz.cat.business.service.EstadoService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.cat.business.service.impl.EstadoServiceImpl" target="br.gov.to.sefaz.cat.business.service.EstadoService"/>
+    <UseRelation source="br.gov.to.sefaz.arr.parametros.business.service.validator.BancoAgenciasCnpjRaizValidator" target="br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgencias" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.cat.business.service.impl.MunicipioServiceImpl" target="br.gov.to.sefaz.business.service.impl.DefaultCrudService"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.business.service.impl.BancoAgenciasServiceImpl" target="br.gov.to.sefaz.business.service.impl.DefaultCrudService"/>
+    <HasRelation name="repository" source="br.gov.to.sefaz.arr.parametros.business.service.validator.BancoAgenciasDuplicatedCentralizadoraValidator" target="br.gov.to.sefaz.arr.parametros.persistence.repository.BancoAgenciasRepository" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.arr.parametros.persistence.repository.BancoAgenciasRepository" target="br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgencias" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.arr.parametros.managedbean.BancoAgenciasMB" target="br.gov.to.sefaz.arr.parametros.business.facade.BancoAgenciasFacade" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="br.gov.to.sefaz.arr.parametros.business.service.impl.BancoAgenciasServiceImpl" target="br.gov.to.sefaz.arr.parametros.persistence.repository.BancoAgenciasRepository" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.cat.business.service.MunicipioService" target="br.gov.to.sefaz.business.service.CrudService"/>
+    <UseRelation name="" source="br.gov.to.sefaz.cat.business.service.impl.EstadoServiceImpl" target="br.gov.to.sefaz.cat.persistence.repository.EstadoRepository" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.cat.persistence.repository.MunicipioRepository" target="br.gov.to.sefaz.persistence.repository.BaseRepository"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.cat.business.service.impl.EstadoServiceImpl" target="br.gov.to.sefaz.business.service.impl.DefaultCrudService"/>
+    <HasRelation name="situacao" source="br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgencias" target="br.gov.to.sefaz.persistence.enums.SituacaoEnum" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.managedbean.BancoAgenciasMB" target="br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.persistence.entity.Bancos" target="br.gov.to.sefaz.persistence.entity.AbstractEntity"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.business.service.BancoAgenciasService" target="br.gov.to.sefaz.business.service.CrudService"/>
+    <HasRelation name="estado" source="br.gov.to.sefaz.cat.persistence.entity.Municipio" target="br.gov.to.sefaz.cat.persistence.entity.Estado" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.arr.parametros.business.service.validator.BancoAgenciasDuplicatedCnpjValidator" target="br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgencias" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" target="br.gov.to.sefaz.business.service.CrudService" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.cat.business.service.EstadoService" target="br.gov.to.sefaz.business.service.CrudService"/>
+    <UseRelation source="br.gov.to.sefaz.cat.persistence.repository.MunicipioRepository" target="br.gov.to.sefaz.cat.persistence.entity.Municipio" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.cat.persistence.repository.EstadoRepository" target="br.gov.to.sefaz.persistence.repository.BaseRepository"/>
+    <HasRelation name="bancos" source="br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgencias" target="br.gov.to.sefaz.arr.parametros.persistence.entity.Bancos" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.arr.parametros.persistence.repository.BancoAgenciasRepository" target="br.gov.to.sefaz.persistence.enums.SituacaoEnum" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.persistence.entity.AuditListner" target="br.gov.to.sefaz.persistence.entity.AbstractEntity" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.cat.persistence.entity.Municipio" target="br.gov.to.sefaz.persistence.entity.AbstractEntity"/>
+    <UseRelation source="br.gov.to.sefaz.arr.parametros.business.service.validator.BancoAgenciasDuplicatedCentralizadoraValidator" target="br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgencias" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="municipioService" source="br.gov.to.sefaz.arr.parametros.business.facade.impl.BancoAgenciasFacadeImpl" target="br.gov.to.sefaz.cat.business.service.MunicipioService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="repository" source="br.gov.to.sefaz.arr.parametros.business.service.validator.BancoAgenciasDuplicatedAgenciaAndBancoValidator" target="br.gov.to.sefaz.arr.parametros.persistence.repository.BancoAgenciasRepository" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.cat.business.service.impl.MunicipioServiceImpl" target="br.gov.to.sefaz.cat.business.service.MunicipioService"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.business.facade.impl.BancoAgenciasFacadeImpl" target="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade"/>
+    <UseRelation source="br.gov.to.sefaz.arr.parametros.business.service.validator.BancoAgenciasDuplicatedAgenciaAndBancoValidator" target="br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgencias" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="br.gov.to.sefaz.cat.persistence.repository.EstadoRepository" target="br.gov.to.sefaz.cat.persistence.entity.Estado" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgencias" target="br.gov.to.sefaz.persistence.entity.AbstractEntity"/>
+    <UseRelation name="" source="br.gov.to.sefaz.arr.parametros.business.facade.impl.BancoAgenciasFacadeImpl" target="br.gov.to.sefaz.arr.parametros.business.service.BancoAgenciasService" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.business.facade.BancoAgenciasFacade" target="br.gov.to.sefaz.business.facade.CrudFacade"/>
+    <HasRelation name="municipio" source="br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgencias" target="br.gov.to.sefaz.cat.persistence.entity.Municipio" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="repository" source="br.gov.to.sefaz.arr.parametros.business.service.validator.BancoAgenciasDuplicatedCnpjValidator" target="br.gov.to.sefaz.arr.parametros.persistence.repository.BancoAgenciasRepository" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.arr.parametros.business.service.BancoAgenciasService" target="br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgencias" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="situacao" source="br.gov.to.sefaz.arr.parametros.persistence.entity.Bancos" target="br.gov.to.sefaz.persistence.enums.SituacaoEnum" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.arr.parametros.business.facade.impl.BancoAgenciasFacadeImpl" target="br.gov.to.sefaz.arr.parametros.business.facade.BancoAgenciasFacade"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.persistence.repository.BancoAgenciasRepository" target="br.gov.to.sefaz.persistence.repository.BaseRepository"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

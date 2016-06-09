@@ -1,0 +1,887 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="PlanoContasServiceImpl" package="br.gov.to.sefaz.arr.parametros.business.service.impl" visibility="public" xPosition="3334.0" yPosition="2613.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="PlanoContasRepository" name="repository"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRepository" returnType="PlanoContasRepository" visibility="protected"/>
+        <Method name="save" returnType="PlanoContas" visibility="public">
+          <Argument type="PlanoContas" name="entity"/>
+        </Method>
+        <Method name="update" returnType="PlanoContas" visibility="public">
+          <Argument type="PlanoContas" name="entity"/>
+        </Method>
+        <Method name="delete" returnType="Optional&lt;PlanoContas&gt;" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="find" returnType="List&lt;PlanoContas&gt;" visibility="public">
+          <Argument type="PlanoContasFilter" name="filter"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ReceitasFacadeImpl" package="br.gov.to.sefaz.arr.parametros.business.facade.impl" visibility="public" xPosition="2297.0" yPosition="1944.0">
+      <Fields>
+        <Field name="service" type="ReceitasService" visibility="private" isFinal="true"/>
+        <Field name="planoContasService" type="PlanoContasService" visibility="private" isFinal="true"/>
+        <Field name="receitasTaxasService" type="ReceitasTaxasService" visibility="private" isFinal="true"/>
+        <Field name="receitasRepasseService" type="ReceitasRepasseService" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="find" returnType="List&lt;Receitas&gt;" visibility="public">
+          <Argument type="ReceitasFilter" name="filter"/>
+        </Method>
+        <Method name="getAllPlanoContas" returnType="List&lt;PlanoContas&gt;" visibility="public"/>
+        <Method name="getReceitasTaxasByIdReceita" returnType="Collection&lt;ReceitasTaxas&gt;" visibility="public">
+          <Argument type="Integer" name="idReceita"/>
+        </Method>
+        <Method name="getReceitasRepasseByIdReceita" returnType="Collection&lt;ReceitasRepasse&gt;" visibility="public">
+          <Argument type="Integer" name="idReceita"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ReceitasTaxasServiceImpl" package="br.gov.to.sefaz.arr.parametros.business.service.impl" visibility="public" xPosition="2703.0" yPosition="2613.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="ReceitasTaxasRepository" name="repository"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRepository" returnType="ReceitasTaxasRepository" visibility="protected"/>
+        <Method name="deleteAllTaxasByIdReceita" returnType="void" visibility="public">
+          <Argument type="Integer" name="idReceita"/>
+        </Method>
+        <Method name="getReceitasTaxasByIdReceita" returnType="Collection&lt;ReceitasTaxas&gt;" visibility="public">
+          <Argument type="Integer" name="idReceita"/>
+        </Method>
+        <Method name="delete" returnType="Optional&lt;ReceitasTaxas&gt;" visibility="public">
+          <Argument type="ReceitasTaxasPK" name="id"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ReceitasFilter" package="br.gov.to.sefaz.arr.parametros.business.service.filter" visibility="public" xPosition="315.0" yPosition="1535.0">
+      <Fields>
+        <Field name="idReceita" type="Integer" visibility="private"/>
+        <Field name="descricaoReceita" type="String" visibility="private"/>
+        <Field name="tipoReceita" type="TipoReceitaEnum" visibility="private"/>
+        <Field name="classificacaoReceita" type="ClassificacaoReceitaEnum" visibility="private"/>
+        <Field name="situacao" type="SituacaoEnum" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getIdReceita" returnType="Integer" visibility="public"/>
+        <Method name="setIdReceita" returnType="void" visibility="public">
+          <Argument type="Integer" name="idReceita"/>
+        </Method>
+        <Method name="getDescricaoReceita" returnType="String" visibility="public"/>
+        <Method name="setDescricaoReceita" returnType="void" visibility="public">
+          <Argument type="String" name="descricaoReceita"/>
+        </Method>
+        <Method name="getTipoReceita" returnType="TipoReceitaEnum" visibility="public"/>
+        <Method name="setTipoReceita" returnType="void" visibility="public">
+          <Argument type="TipoReceitaEnum" name="tipoReceita"/>
+        </Method>
+        <Method name="getClassificacaoReceita" returnType="ClassificacaoReceitaEnum" visibility="public"/>
+        <Method name="setClassificacaoReceita" returnType="void" visibility="public">
+          <Argument type="ClassificacaoReceitaEnum" name="classificacaoReceita"/>
+        </Method>
+        <Method name="getSituacao" returnType="SituacaoEnum" visibility="public"/>
+        <Method name="setSituacao" returnType="void" visibility="public">
+          <Argument type="SituacaoEnum" name="situacao"/>
+        </Method>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ReceitasCodigoBarraDuplicatedValidator" package="br.gov.to.sefaz.arr.parametros.business.service.validator" visibility="public" xPosition="1278.0" yPosition="3174.0">
+      <Fields>
+        <Field name="receitasRepository" type="ReceitasRepository" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="ReceitasRepository" name="receitasRepository"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="support" returnType="boolean" visibility="public">
+          <Argument type="Class&lt;?&gt;" name="clazz"/>
+          <Argument type="String" name="context"/>
+        </Method>
+        <Method name="validate" returnType="Set&lt;CustomViolation&gt;" visibility="public">
+          <Argument type="Receitas" name="receitas"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ReceitasTaxas" package="br.gov.to.sefaz.arr.parametros.persistence.entity" visibility="public" xPosition="2835.0" yPosition="3252.0">
+      <Fields>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="idSubcodigo" type="Integer" visibility="private"/>
+        <Field name="idReceita" type="Integer" visibility="private"/>
+        <Field name="subcodigo" type="String" visibility="private"/>
+        <Field name="descricao" type="String" visibility="private"/>
+        <Field name="unidade" type="String" visibility="private"/>
+        <Field name="valorUnitario" type="BigDecimal" visibility="private"/>
+        <Field name="valorLimite" type="BigDecimal" visibility="private"/>
+        <Field name="valorAcrescimo" type="BigDecimal" visibility="private"/>
+        <Field name="situacao" type="SituacaoEnum" visibility="private"/>
+        <Field name="receitas" type="Receitas" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getId" returnType="ReceitasTaxasPK" visibility="public"/>
+        <Method name="getIdSubcodigo" returnType="Integer" visibility="public"/>
+        <Method name="setIdSubcodigo" returnType="void" visibility="public">
+          <Argument type="Integer" name="idSubcodigo"/>
+        </Method>
+        <Method name="getIdReceita" returnType="Integer" visibility="public"/>
+        <Method name="setIdReceita" returnType="void" visibility="public">
+          <Argument type="Integer" name="idReceita"/>
+        </Method>
+        <Method name="getSubcodigo" returnType="String" visibility="public"/>
+        <Method name="setSubcodigo" returnType="void" visibility="public">
+          <Argument type="String" name="subcodigo"/>
+        </Method>
+        <Method name="getDescricao" returnType="String" visibility="public"/>
+        <Method name="setDescricao" returnType="void" visibility="public">
+          <Argument type="String" name="descricao"/>
+        </Method>
+        <Method name="getUnidade" returnType="String" visibility="public"/>
+        <Method name="setUnidade" returnType="void" visibility="public">
+          <Argument type="String" name="unidade"/>
+        </Method>
+        <Method name="getValorUnitario" returnType="BigDecimal" visibility="public"/>
+        <Method name="setValorUnitario" returnType="void" visibility="public">
+          <Argument type="BigDecimal" name="valorUnitario"/>
+        </Method>
+        <Method name="getValorLimite" returnType="BigDecimal" visibility="public"/>
+        <Method name="setValorLimite" returnType="void" visibility="public">
+          <Argument type="BigDecimal" name="valorLimite"/>
+        </Method>
+        <Method name="getValorAcrescimo" returnType="BigDecimal" visibility="public"/>
+        <Method name="setValorAcrescimo" returnType="void" visibility="public">
+          <Argument type="BigDecimal" name="valorAcrescimo"/>
+        </Method>
+        <Method name="getSituacao" returnType="SituacaoEnum" visibility="public"/>
+        <Method name="setSituacao" returnType="void" visibility="public">
+          <Argument type="SituacaoEnum" name="situacao"/>
+        </Method>
+        <Method name="getReceitas" returnType="Receitas" visibility="public"/>
+        <Method name="setReceitas" returnType="void" visibility="public">
+          <Argument type="Receitas" name="receitas"/>
+        </Method>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ReceitasDuplicatedCodigoValidator" package="br.gov.to.sefaz.arr.parametros.business.service.validator" visibility="public" xPosition="2260.0" yPosition="3174.0">
+      <Fields>
+        <Field name="receitasRepository" type="ReceitasRepository" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="ReceitasRepository" name="receitasRepository"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="support" returnType="boolean" visibility="public">
+          <Argument type="Class&lt;?&gt;" name="clazz"/>
+          <Argument type="String" name="context"/>
+        </Method>
+        <Method name="validate" returnType="Set&lt;CustomViolation&gt;" visibility="public">
+          <Argument type="Receitas" name="target"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ReceitasExistsRepassesValidator" package="br.gov.to.sefaz.arr.parametros.business.service.validator" visibility="public" xPosition="1252.0" yPosition="4028.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="support" returnType="boolean" visibility="public">
+          <Argument type="Class&lt;?&gt;" name="clazz"/>
+          <Argument type="String" name="context"/>
+        </Method>
+        <Method name="validate" returnType="Set&lt;CustomViolation&gt;" visibility="public">
+          <Argument type="Receitas" name="receitas"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Receitas" package="br.gov.to.sefaz.arr.parametros.persistence.entity" visibility="public" xPosition="1714.0" yPosition="3522.0">
+      <Fields>
+        <Field name="idReceita" type="Integer" visibility="private"/>
+        <Field name="descricaoReceita" type="String" visibility="private"/>
+        <Field name="tipoReceita" type="TipoReceitaEnum" visibility="private"/>
+        <Field name="classificacaoReceita" type="ClassificacaoReceitaEnum" visibility="private"/>
+        <Field name="imprimeDare" type="Boolean" visibility="private"/>
+        <Field name="permiteTaxas" type="Boolean" visibility="private"/>
+        <Field name="situacao" type="SituacaoEnum" visibility="private"/>
+        <Field name="idBarra" type="Integer" visibility="private"/>
+        <Field name="idReceitaMulta" type="Integer" visibility="private"/>
+        <Field name="idReceitaJuros" type="Integer" visibility="private"/>
+        <Field name="idReceitaCorrecaoMonetaria" type="Integer" visibility="private"/>
+        <Field name="idReceitaTaxas" type="Integer" visibility="private"/>
+        <Field name="planoContas" type="PlanoContas" visibility="private"/>
+        <Field name="receitasRepasseCollection" type="List&lt;ReceitasRepasse&gt;" visibility="private"/>
+        <Field name="receitasTaxasCollection" type="List&lt;ReceitasTaxas&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="Integer" visibility="public"/>
+        <Method name="getIdReceita" returnType="Integer" visibility="public"/>
+        <Method name="setIdReceita" returnType="void" visibility="public">
+          <Argument type="Integer" name="idReceita"/>
+        </Method>
+        <Method name="getDescricaoReceita" returnType="String" visibility="public"/>
+        <Method name="setDescricaoReceita" returnType="void" visibility="public">
+          <Argument type="String" name="descricaoReceita"/>
+        </Method>
+        <Method name="getTipoReceita" returnType="TipoReceitaEnum" visibility="public"/>
+        <Method name="setTipoReceita" returnType="void" visibility="public">
+          <Argument type="TipoReceitaEnum" name="tipoReceita"/>
+        </Method>
+        <Method name="getClassificacaoReceita" returnType="ClassificacaoReceitaEnum" visibility="public"/>
+        <Method name="setClassificacaoReceita" returnType="void" visibility="public">
+          <Argument type="ClassificacaoReceitaEnum" name="classificacaoReceita"/>
+        </Method>
+        <Method name="getImprimeDare" returnType="Boolean" visibility="public"/>
+        <Method name="setImprimeDare" returnType="void" visibility="public">
+          <Argument type="Boolean" name="imprimeDare"/>
+        </Method>
+        <Method name="getPermiteTaxas" returnType="Boolean" visibility="public"/>
+        <Method name="setPermiteTaxas" returnType="void" visibility="public">
+          <Argument type="Boolean" name="permiteTaxas"/>
+        </Method>
+        <Method name="getSituacao" returnType="SituacaoEnum" visibility="public"/>
+        <Method name="setSituacao" returnType="void" visibility="public">
+          <Argument type="SituacaoEnum" name="situacao"/>
+        </Method>
+        <Method name="getIdBarra" returnType="Integer" visibility="public"/>
+        <Method name="setIdBarra" returnType="void" visibility="public">
+          <Argument type="Integer" name="idBarra"/>
+        </Method>
+        <Method name="getIdReceitaMulta" returnType="Integer" visibility="public"/>
+        <Method name="setIdReceitaMulta" returnType="void" visibility="public">
+          <Argument type="Integer" name="idReceitaMulta"/>
+        </Method>
+        <Method name="getIdReceitaJuros" returnType="Integer" visibility="public"/>
+        <Method name="setIdReceitaJuros" returnType="void" visibility="public">
+          <Argument type="Integer" name="idReceitaJuros"/>
+        </Method>
+        <Method name="getIdReceitaCorrecaoMonetaria" returnType="Integer" visibility="public"/>
+        <Method name="setIdReceitaCorrecaoMonetaria" returnType="void" visibility="public">
+          <Argument type="Integer" name="idReceitaCorrecaoMonetaria"/>
+        </Method>
+        <Method name="getIdReceitaTaxas" returnType="Integer" visibility="public"/>
+        <Method name="setIdReceitaTaxas" returnType="void" visibility="public">
+          <Argument type="Integer" name="idReceitaTaxas"/>
+        </Method>
+        <Method name="getPlanoContas" returnType="PlanoContas" visibility="public"/>
+        <Method name="setPlanoContas" returnType="void" visibility="public">
+          <Argument type="PlanoContas" name="planoContas"/>
+        </Method>
+        <Method name="getReceitasRepasse" returnType="List&lt;ReceitasRepasse&gt;" visibility="public"/>
+        <Method name="setReceitasRepasse" returnType="void" visibility="public">
+          <Argument type="List&lt;ReceitasRepasse&gt;" name="receitasRepasseCollection"/>
+        </Method>
+        <Method name="getReceitasTaxas" returnType="List&lt;ReceitasTaxas&gt;" visibility="public"/>
+        <Method name="setReceitasTaxas" returnType="void" visibility="public">
+          <Argument type="List&lt;ReceitasTaxas&gt;" name="receitasTaxas"/>
+        </Method>
+        <Method name="addTaxa" returnType="void" visibility="public">
+          <Argument type="ReceitasTaxas" name="receitasTaxas"/>
+        </Method>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ReceitasServiceImpl" package="br.gov.to.sefaz.arr.parametros.business.service.impl" visibility="public" xPosition="1744.0" yPosition="2533.0">
+      <Fields>
+        <Field name="receitasTaxasService" type="ReceitasTaxasService" visibility="private" isFinal="true"/>
+        <Field name="receitasRepasseService" type="ReceitasRepasseService" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getRepository" returnType="ReceitasRepository" visibility="protected"/>
+        <Method name="findAllActiveReceitas" returnType="Collection&lt;Receitas&gt;" visibility="public"/>
+        <Method name="getAllReceitasByIdConvenio" returnType="Collection&lt;Receitas&gt;" visibility="public">
+          <Argument type="Long" name="idConvenio"/>
+        </Method>
+        <Method name="find" returnType="List&lt;Receitas&gt;" visibility="public">
+          <Argument type="ReceitasFilter" name="filter"/>
+        </Method>
+        <Method name="save" returnType="Receitas" visibility="public">
+          <Argument type="Receitas" name="receitas"/>
+        </Method>
+        <Method name="update" returnType="Receitas" visibility="public">
+          <Argument type="Receitas" name="receitas"/>
+        </Method>
+        <Method name="delete" returnType="Optional&lt;Receitas&gt;" visibility="public">
+          <Argument type="Integer" name="id"/>
+        </Method>
+        <Method name="saveReceitasRepasse" returnType="void" visibility="private">
+          <Argument type="Receitas" name="receitas"/>
+        </Method>
+        <Method name="saveReceitasTaxas" returnType="void" visibility="private">
+          <Argument type="Receitas" name="receitas"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ReceitasRepasseServiceImpl" package="br.gov.to.sefaz.arr.parametros.business.service.impl" visibility="public" xPosition="884.0" yPosition="2600.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="ReceitasRepasseRepository" name="repository"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRepository" returnType="ReceitasRepasseRepository" visibility="protected"/>
+        <Method name="deleteAllRepassesByIdReceita" returnType="void" visibility="public">
+          <Argument type="Integer" name="idReceita"/>
+        </Method>
+        <Method name="getReceitasRepasseByIdReceita" returnType="Collection&lt;ReceitasRepasse&gt;" visibility="public">
+          <Argument type="Integer" name="idReceita"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PlanoContas" package="br.gov.to.sefaz.arr.parametros.persistence.entity" visibility="public" xPosition="3346.0" yPosition="3639.0">
+      <Fields>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="idPlanocontas" type="Long" visibility="private"/>
+        <Field name="codigoPlanoContas" type="String" visibility="private"/>
+        <Field name="nomeConta" type="String" visibility="private"/>
+        <Field name="contaHierarquica" type="String" visibility="private"/>
+        <Field name="codigoContabil" type="String" visibility="private"/>
+        <Field name="tipoConta" type="TipoContaEnum" visibility="private"/>
+        <Field name="rateio" type="Boolean" visibility="private"/>
+        <Field name="situacao" type="SituacaoEnum" visibility="private"/>
+        <Field name="gruposCnaes" type="TipoGruposCnaes" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getIdPlanocontas" returnType="Long" visibility="public"/>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="setIdPlanocontas" returnType="void" visibility="public">
+          <Argument type="Long" name="idPlanocontas"/>
+        </Method>
+        <Method name="getCodigoPlanoContas" returnType="String" visibility="public"/>
+        <Method name="setCodigoPlanoContas" returnType="void" visibility="public">
+          <Argument type="String" name="codigoPlanoContas"/>
+        </Method>
+        <Method name="getNomeConta" returnType="String" visibility="public"/>
+        <Method name="setNomeConta" returnType="void" visibility="public">
+          <Argument type="String" name="nomeConta"/>
+        </Method>
+        <Method name="getContaHierarquica" returnType="String" visibility="public"/>
+        <Method name="setContaHierarquica" returnType="void" visibility="public">
+          <Argument type="String" name="contaHierarquica"/>
+        </Method>
+        <Method name="getCodigoContabil" returnType="String" visibility="public"/>
+        <Method name="setCodigoContabil" returnType="void" visibility="public">
+          <Argument type="String" name="codigoContabil"/>
+        </Method>
+        <Method name="getTipoConta" returnType="TipoContaEnum" visibility="public"/>
+        <Method name="setTipoConta" returnType="void" visibility="public">
+          <Argument type="TipoContaEnum" name="tipoConta"/>
+        </Method>
+        <Method name="getRateio" returnType="Boolean" visibility="public"/>
+        <Method name="setRateio" returnType="void" visibility="public">
+          <Argument type="Boolean" name="rateio"/>
+        </Method>
+        <Method name="getSituacao" returnType="SituacaoEnum" visibility="public"/>
+        <Method name="setSituacao" returnType="void" visibility="public">
+          <Argument type="SituacaoEnum" name="situacao"/>
+        </Method>
+        <Method name="getGruposCnaes" returnType="TipoGruposCnaes" visibility="public"/>
+        <Method name="setGruposCnaes" returnType="void" visibility="public">
+          <Argument type="TipoGruposCnaes" name="gruposCnaes"/>
+        </Method>
+        <Method name="getIdGruposCnaes" returnType="Integer" visibility="public"/>
+        <Method name="setIdGruposCnaes" returnType="void" visibility="public">
+          <Argument type="Integer" name="idGrupoCnae"/>
+        </Method>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ReceitasRepasse" package="br.gov.to.sefaz.arr.parametros.persistence.entity" visibility="public" xPosition="798.0" yPosition="3907.0">
+      <Fields>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="idReceita" type="Integer" visibility="private"/>
+        <Field name="tipoRepasse" type="TipoRepasseEnum" visibility="private"/>
+        <Field name="dataInicio" type="LocalDate" visibility="private"/>
+        <Field name="dataFinal" type="LocalDate" visibility="private"/>
+        <Field name="percentualRepasse" type="BigDecimal" visibility="private"/>
+        <Field name="repartePrincipal" type="Boolean" visibility="private"/>
+        <Field name="reparteMulta" type="Boolean" visibility="private"/>
+        <Field name="reparteJuros" type="Boolean" visibility="private"/>
+        <Field name="reparteCorrecao" type="Boolean" visibility="private"/>
+        <Field name="reparteTaxa" type="Boolean" visibility="private"/>
+        <Field name="receitas" type="Receitas" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getId" returnType="ReceitasRepassePK" visibility="public"/>
+        <Method name="getIdReceita" returnType="Integer" visibility="public"/>
+        <Method name="setIdReceita" returnType="void" visibility="public">
+          <Argument type="Integer" name="idReceita"/>
+        </Method>
+        <Method name="getTipoRepasse" returnType="TipoRepasseEnum" visibility="public"/>
+        <Method name="setTipoRepasse" returnType="void" visibility="public">
+          <Argument type="TipoRepasseEnum" name="tipoRepasse"/>
+        </Method>
+        <Method name="getDataInicio" returnType="LocalDate" visibility="public"/>
+        <Method name="setDataInicio" returnType="void" visibility="public">
+          <Argument type="LocalDate" name="dataInicio"/>
+        </Method>
+        <Method name="getDataFinal" returnType="LocalDate" visibility="public"/>
+        <Method name="setDataFinal" returnType="void" visibility="public">
+          <Argument type="LocalDate" name="dataFinal"/>
+        </Method>
+        <Method name="getPercentualRepasse" returnType="BigDecimal" visibility="public"/>
+        <Method name="setPercentualRepasse" returnType="void" visibility="public">
+          <Argument type="BigDecimal" name="percentualRepasse"/>
+        </Method>
+        <Method name="getRepartePrincipal" returnType="Boolean" visibility="public"/>
+        <Method name="setRepartePrincipal" returnType="void" visibility="public">
+          <Argument type="Boolean" name="repartePrincipal"/>
+        </Method>
+        <Method name="getReparteMulta" returnType="Boolean" visibility="public"/>
+        <Method name="setReparteMulta" returnType="void" visibility="public">
+          <Argument type="Boolean" name="reparteMulta"/>
+        </Method>
+        <Method name="getReparteJuros" returnType="Boolean" visibility="public"/>
+        <Method name="setReparteJuros" returnType="void" visibility="public">
+          <Argument type="Boolean" name="reparteJuros"/>
+        </Method>
+        <Method name="getReparteCorrecao" returnType="Boolean" visibility="public"/>
+        <Method name="setReparteCorrecao" returnType="void" visibility="public">
+          <Argument type="Boolean" name="reparteCorrecao"/>
+        </Method>
+        <Method name="getReparteTaxa" returnType="Boolean" visibility="public"/>
+        <Method name="setReparteTaxa" returnType="void" visibility="public">
+          <Argument type="Boolean" name="reparteTaxa"/>
+        </Method>
+        <Method name="getReceitas" returnType="Receitas" visibility="public"/>
+        <Method name="setReceitas" returnType="void" visibility="public">
+          <Argument type="Receitas" name="receitas"/>
+        </Method>
+        <Method name="getIncidenciaLabel" returnType="String" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="appendTaxaLabel" returnType="void" visibility="private">
+          <Argument type="StringBuilder" name="stringBuilder"/>
+        </Method>
+        <Method name="appendCorrecaoLabel" returnType="void" visibility="private">
+          <Argument type="StringBuilder" name="stringBuilder"/>
+        </Method>
+        <Method name="appendJurosLabel" returnType="void" visibility="private">
+          <Argument type="StringBuilder" name="stringBuilder"/>
+        </Method>
+        <Method name="appendMultaLabel" returnType="void" visibility="private">
+          <Argument type="StringBuilder" name="stringBuilder"/>
+        </Method>
+        <Method name="appendPrincipalLabel" returnType="void" visibility="private">
+          <Argument type="StringBuilder" name="stringBuilder"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ReceitasPercentualRepassesValidator" package="br.gov.to.sefaz.arr.parametros.business.service.validator" visibility="public" xPosition="1189.0" yPosition="3402.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="support" returnType="boolean" visibility="public">
+          <Argument type="Class&lt;?&gt;" name="clazz"/>
+          <Argument type="String" name="context"/>
+        </Method>
+        <Method name="validate" returnType="Set&lt;CustomViolation&gt;" visibility="public">
+          <Argument type="Receitas" name="receitas"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ReceitasMB" package="br.gov.to.sefaz.arr.parametros.managedbean" visibility="public" xPosition="920.0" yPosition="1478.0">
+      <Fields>
+        <Field name="filter" type="ReceitasFilter" visibility="private"/>
+        <Field name="receitasTaxasDto" type="ReceitasTaxas" visibility="private"/>
+        <Field name="receitasRepasseDto" type="ReceitasRepasse" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="setFacade" returnType="void" visibility="protected">
+          <Argument type="ReceitasFacade" name="facade"/>
+        </Method>
+        <Method name="getFacade" returnType="ReceitasFacade" visibility="protected"/>
+        <Method name="getFilter" returnType="ReceitasFilter" visibility="public"/>
+        <Method name="setFilter" returnType="void" visibility="public">
+          <Argument type="ReceitasFilter" name="filter"/>
+        </Method>
+        <Method name="getReceitasTaxasDto" returnType="ReceitasTaxas" visibility="public"/>
+        <Method name="setReceitasTaxasDto" returnType="void" visibility="public">
+          <Argument type="ReceitasTaxas" name="receitasTaxasDto"/>
+        </Method>
+        <Method name="getReceitasRepasseDto" returnType="ReceitasRepasse" visibility="public"/>
+        <Method name="setReceitasRepasseDto" returnType="void" visibility="public">
+          <Argument type="ReceitasRepasse" name="receitasRepasseDto"/>
+        </Method>
+        <Method name="search" returnType="void" visibility="public"/>
+        <Method name="clearDtos" returnType="void" visibility="public"/>
+        <Method name="getAllPlanoContas" returnType="List&lt;PlanoContas&gt;" visibility="public"/>
+        <Method name="getPlanoContasLabel" returnType="String" visibility="public">
+          <Argument type="PlanoContas" name="planoContas"/>
+        </Method>
+        <Method name="getReceitasTaxas" returnType="void" visibility="public"/>
+        <Method name="addTaxa" returnType="void" visibility="public"/>
+        <Method name="updateTaxa" returnType="void" visibility="public"/>
+        <Method name="deleteTaxa" returnType="void" visibility="public"/>
+        <Method name="getReceitasRepasses" returnType="void" visibility="public"/>
+        <Method name="addRepasse" returnType="void" visibility="public"/>
+        <Method name="updateRepasse" returnType="void" visibility="public"/>
+        <Method name="deleteRepasse" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="AbstractEntity" package="br.gov.to.sefaz.persistence.entity" visibility="public" isAbstract="true" xPosition="2835.0" yPosition="4307.0">
+      <Fields>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="usuarioInsercao" type="String" visibility="protected"/>
+        <Field name="dataInsercao" type="LocalDateTime" visibility="protected"/>
+        <Field name="usuarioAlteracao" type="String" visibility="protected"/>
+        <Field name="dataAlteracao" type="LocalDateTime" visibility="protected"/>
+        <Field name="registroExcluido" type="Boolean" visibility="protected"/>
+        <Field name="usuarioExclusao" type="String" visibility="protected"/>
+        <Field name="dataExclusao" type="LocalDateTime" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getId" returnType="I" visibility="public" isAbstract="true"/>
+        <Method name="getUsuarioInsercao" returnType="String" visibility="public"/>
+        <Method name="setUsuarioInsercao" returnType="void" visibility="public">
+          <Argument type="String" name="usuarioInsercao"/>
+        </Method>
+        <Method name="getDataInsercao" returnType="LocalDateTime" visibility="public"/>
+        <Method name="setDataInsercao" returnType="void" visibility="public">
+          <Argument type="LocalDateTime" name="dataInsercao"/>
+        </Method>
+        <Method name="getUsuarioAlteracao" returnType="String" visibility="public"/>
+        <Method name="setUsuarioAlteracao" returnType="void" visibility="public">
+          <Argument type="String" name="usuarioAlteracao"/>
+        </Method>
+        <Method name="getDataAlteracao" returnType="LocalDateTime" visibility="public"/>
+        <Method name="setDataAlteracao" returnType="void" visibility="public">
+          <Argument type="LocalDateTime" name="dataAlteracao"/>
+        </Method>
+        <Method name="getRegistroExcluido" returnType="Boolean" visibility="public"/>
+        <Method name="setRegistroExcluido" returnType="void" visibility="public">
+          <Argument type="Boolean" name="registroExcluido"/>
+        </Method>
+        <Method name="getUsuarioExclusao" returnType="String" visibility="public"/>
+        <Method name="setUsuarioExclusao" returnType="void" visibility="public">
+          <Argument type="String" name="usuarioExclusao"/>
+        </Method>
+        <Method name="getDataExclusao" returnType="LocalDateTime" visibility="public"/>
+        <Method name="setDataExclusao" returnType="void" visibility="public">
+          <Argument type="LocalDateTime" name="dataExclusao"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AuditListner" package="br.gov.to.sefaz.persistence.entity" visibility="public" xPosition="3422.0" yPosition="4593.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="prePersist" returnType="void" visibility="public">
+          <Argument type="AbstractEntity&lt;?&gt;" name="entity"/>
+        </Method>
+        <Method name="preUpdate" returnType="void" visibility="public">
+          <Argument type="AbstractEntity&lt;?&gt;" name="entity"/>
+        </Method>
+        <Method name="preRemove" returnType="void" visibility="public">
+          <Argument type="AbstractEntity&lt;?&gt;" name="entity"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DefaultCrudMB" package="br.gov.to.sefaz.presentation.managedbean.impl" visibility="public" xPosition="2371.0" yPosition="1445.0">
+      <Fields>
+        <Field name="beanFactoryMB" type="BeanFactoryMB" visibility="private"/>
+        <Field name="resultList" type="Collection&lt;E&gt;" visibility="protected"/>
+        <Field name="dto" type="E" visibility="private"/>
+        <Field name="facade" type="CrudFacade&lt;E, I&gt;" visibility="private"/>
+        <Field name="dtoProvider" type="Supplier&lt;E&gt;" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Supplier&lt;E&gt;" name="dtoProvider"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="injectDependencies" returnType="void" visibility="protected"/>
+        <Method name="setFacade" returnType="void" visibility="protected">
+          <Argument type="CrudFacade&lt;E, I&gt;" name="facade"/>
+        </Method>
+        <Method name="getFacade" returnType="CrudFacade&lt;E, I&gt;" visibility="protected"/>
+        <Method name="getBeanFactoryMB" returnType="BeanFactoryMB" visibility="protected"/>
+        <Method name="setBeanFactoryMB" returnType="void" visibility="public">
+          <Argument type="BeanFactoryMB" name="beanFactoryMB"/>
+        </Method>
+        <Method name="setDto" returnType="void" visibility="public">
+          <Argument type="E" name="dto"/>
+        </Method>
+        <Method name="getDto" returnType="E" visibility="public"/>
+        <Method name="setResultList" returnType="void" visibility="public">
+          <Argument type="Collection&lt;E&gt;" name="resultList"/>
+        </Method>
+        <Method name="getResultList" returnType="Collection&lt;E&gt;" visibility="public"/>
+        <Method name="save" returnType="void" visibility="public"/>
+        <Method name="update" returnType="void" visibility="public"/>
+        <Method name="delete" returnType="void" visibility="public"/>
+        <Method name="clearDto" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="ReceitasService" package="br.gov.to.sefaz.arr.parametros.business.service" visibility="public" xPosition="1744.0" yPosition="2313.0">
+      <Methods>
+        <Method name="findAllActiveReceitas" returnType="Collection&lt;Receitas&gt;" visibility="package"/>
+        <Method name="getAllReceitasByIdConvenio" returnType="Collection&lt;Receitas&gt;" visibility="package">
+          <Argument type="Long" name="idConvenio"/>
+        </Method>
+        <Method name="find" returnType="List&lt;Receitas&gt;" visibility="package">
+          <Argument type="ReceitasFilter" name="filter"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="PlanoContasService" package="br.gov.to.sefaz.arr.parametros.business.service" visibility="public" xPosition="3369.0" yPosition="2332.0">
+      <Methods>
+        <Method name="find" returnType="List&lt;PlanoContas&gt;" visibility="package">
+          <Argument type="PlanoContasFilter" name="filter"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="ReceitasRepasseService" package="br.gov.to.sefaz.arr.parametros.business.service" visibility="public" xPosition="884.0" yPosition="2322.0">
+      <Methods>
+        <Method name="deleteAllRepassesByIdReceita" returnType="void" visibility="package">
+          <Argument type="Integer" name="idReceita"/>
+        </Method>
+        <Method name="getReceitasRepasseByIdReceita" returnType="Collection&lt;ReceitasRepasse&gt;" visibility="package">
+          <Argument type="Integer" name="idReceita"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="ReceitasTaxasService" package="br.gov.to.sefaz.arr.parametros.business.service" visibility="public" xPosition="2647.0" yPosition="2322.0">
+      <Methods>
+        <Method name="deleteAllTaxasByIdReceita" returnType="void" visibility="package">
+          <Argument type="Integer" name="idReceita"/>
+        </Method>
+        <Method name="getReceitasTaxasByIdReceita" returnType="Collection&lt;ReceitasTaxas&gt;" visibility="package">
+          <Argument type="Integer" name="idReceita"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="ReceitasTaxasRepository" package="br.gov.to.sefaz.arr.parametros.persistence.repository" visibility="public" xPosition="2664.0" yPosition="2972.0">
+      <Methods>
+        <Method name="deleteAllTaxasByIdReceita" returnType="void" visibility="package">
+          <Argument type="Integer" name="idReceita"/>
+        </Method>
+        <Method name="existsLockReference" returnType="boolean" visibility="package">
+          <Argument type="Integer" name="idSubcodigo"/>
+          <Argument type="Integer" name="idReceita"/>
+        </Method>
+        <Method name="updateSituacao" returnType="void" visibility="package">
+          <Argument type="Integer" name="idSubcodigo"/>
+          <Argument type="Integer" name="idReceita"/>
+          <Argument type="SituacaoEnum" name="situacaoEnum"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="ReceitasFacade" package="br.gov.to.sefaz.arr.parametros.business.facade" visibility="public" xPosition="1520.0" yPosition="1916.0">
+      <Methods>
+        <Method name="find" returnType="List&lt;Receitas&gt;" visibility="package">
+          <Argument type="ReceitasFilter" name="filter"/>
+        </Method>
+        <Method name="getAllPlanoContas" returnType="List&lt;PlanoContas&gt;" visibility="package"/>
+        <Method name="getReceitasTaxasByIdReceita" returnType="Collection&lt;ReceitasTaxas&gt;" visibility="package">
+          <Argument type="Integer" name="idReceita"/>
+        </Method>
+        <Method name="getReceitasRepasseByIdReceita" returnType="Collection&lt;ReceitasRepasse&gt;" visibility="package">
+          <Argument type="Integer" name="idReceita"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="ReceitasRepository" package="br.gov.to.sefaz.arr.parametros.persistence.repository" visibility="public" xPosition="1760.0" yPosition="2953.0">
+      <Methods>
+        <Method name="findAllReceitasByIdConvenio" returnType="List&lt;Receitas&gt;" visibility="package">
+          <Argument type="Long" name="idConvenio"/>
+        </Method>
+        <Method name="existsLockReference" returnType="boolean" visibility="package">
+          <Argument type="Integer" name="idReceita"/>
+        </Method>
+        <Method name="updateSituacao" returnType="void" visibility="package">
+          <Argument type="Integer" name="id"/>
+          <Argument type="SituacaoEnum" name="situacao"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="ReceitasRepasseRepository" package="br.gov.to.sefaz.arr.parametros.persistence.repository" visibility="public" xPosition="899.0" yPosition="2972.0">
+      <Methods>
+        <Method name="deleteAllRepassesByIdReceita" returnType="void" visibility="package">
+          <Argument type="Integer" name="idReceita"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="PlanoContasRepository" package="br.gov.to.sefaz.arr.parametros.persistence.repository" visibility="public" xPosition="3356.0" yPosition="3037.0">
+      <Methods>
+        <Method name="findAll" returnType="Iterable&lt;PlanoContas&gt;" visibility="package"/>
+        <Method name="existsByCodigo" returnType="Boolean" visibility="package">
+          <Argument type="String" name="codigo"/>
+        </Method>
+        <Method name="findIdByCodigo" returnType="Long" visibility="package">
+          <Argument type="String" name="codigo"/>
+        </Method>
+        <Method name="existsLockReference" returnType="Boolean" visibility="package">
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="updateSituacao" returnType="int" visibility="package">
+          <Argument type="Long" name="id"/>
+          <Argument type="SituacaoEnum" name="situacao"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="BeanFactoryMB" package="br.gov.to.sefaz.presentation.managedbean" visibility="public" xPosition="3034.0" yPosition="1478.0">
+      <Methods>
+        <Method name="getBean" returnType="T" visibility="package">
+          <Argument type="Class&lt;T&gt;" name="requiredType"/>
+        </Method>
+        <Method name="getBean" returnType="T" visibility="package">
+          <Argument type="String" name="name"/>
+          <Argument type="Class&lt;T&gt;" name="requiredType"/>
+        </Method>
+        <Method name="injectBeans" returnType="void" visibility="package">
+          <Argument type="Object" name="object"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="CrudMB" package="br.gov.to.sefaz.presentation.managedbean" visibility="public" xPosition="3100.0" yPosition="1711.0">
+      <Methods>
+        <Method name="getDto" returnType="E" visibility="package"/>
+        <Method name="setDto" returnType="void" visibility="package">
+          <Argument type="E" name="dto"/>
+        </Method>
+        <Method name="getResultList" returnType="Collection&lt;E&gt;" visibility="package"/>
+        <Method name="save" returnType="void" visibility="package"/>
+        <Method name="update" returnType="void" visibility="package"/>
+        <Method name="delete" returnType="void" visibility="package"/>
+        <Method name="clearDto" returnType="void" visibility="package"/>
+      </Methods>
+    </Interface>
+    <Enum name="ClassificacaoReceitaEnum" package="br.gov.to.sefaz.arr.parametros.persistence.enums" visibility="public" xPosition="502.0" yPosition="3624.0">
+      <Literals>
+        <Literal name="ICMS"/>
+        <Literal name="IPVA"/>
+        <Literal name="ITCD"/>
+        <Literal name="OUTRAS"/>
+        <Literal name="DEDUCOES"/>
+        <Literal name="ICMS_ATIVA"/>
+        <Literal name="IPVA_ATIVA"/>
+        <Literal name="ITCD_ATIVA"/>
+        <Literal name="OUTRAS_NAO_TRIBUTARIAS"/>
+      </Literals>
+    </Enum>
+    <Enum name="TipoReceitaEnum" package="br.gov.to.sefaz.arr.parametros.persistence.enums" visibility="public" xPosition="783.0" yPosition="3543.0">
+      <Literals>
+        <Literal name="IMPOSTO"/>
+        <Literal name="MULTA"/>
+        <Literal name="JUROS"/>
+        <Literal name="CORRECAO"/>
+        <Literal name="TAXAS"/>
+      </Literals>
+    </Enum>
+    <Enum name="SituacaoEnum" package="br.gov.to.sefaz.persistence.enums" visibility="public" xPosition="2421.0" yPosition="4056.0">
+      <Literals>
+        <Literal name="ATIVO"/>
+        <Literal name="CANCELADO"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="br.gov.to.sefaz.arr.parametros.business.service.validator.ReceitasDuplicatedCodigoValidator" target="br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="beanFactoryMB" source="br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB" target="br.gov.to.sefaz.presentation.managedbean.BeanFactoryMB" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.arr.parametros.managedbean.ReceitasMB" target="br.gov.to.sefaz.arr.parametros.business.facade.ReceitasFacade" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.arr.parametros.business.service.validator.ReceitasExistsRepassesValidator" target="br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.arr.parametros.persistence.repository.ReceitasRepository" target="br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="tipoReceita" source="br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas" target="br.gov.to.sefaz.arr.parametros.persistence.enums.TipoReceitaEnum" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.arr.parametros.business.service.impl.ReceitasServiceImpl" target="br.gov.to.sefaz.arr.parametros.persistence.repository.ReceitasRepository" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.arr.parametros.business.service.impl.ReceitasServiceImpl" target="br.gov.to.sefaz.arr.parametros.business.service.ReceitasService"/>
+    <HasRelation name="tipoReceita" source="br.gov.to.sefaz.arr.parametros.business.service.filter.ReceitasFilter" target="br.gov.to.sefaz.arr.parametros.persistence.enums.TipoReceitaEnum" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.persistence.entity.PlanoContas" target="br.gov.to.sefaz.persistence.entity.AbstractEntity"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.arr.parametros.business.service.impl.ReceitasRepasseServiceImpl" target="br.gov.to.sefaz.arr.parametros.business.service.ReceitasRepasseService"/>
+    <UseRelation source="br.gov.to.sefaz.arr.parametros.business.service.validator.ReceitasPercentualRepassesValidator" target="br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.persistence.entity.ReceitasRepasse" target="br.gov.to.sefaz.persistence.entity.AbstractEntity"/>
+    <HasRelation name="receitas" source="br.gov.to.sefaz.arr.parametros.persistence.entity.ReceitasTaxas" target="br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="receitasTaxasCollection" source="br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas" target="br.gov.to.sefaz.arr.parametros.persistence.entity.ReceitasTaxas" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ReceitasTaxas&gt;"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.managedbean.ReceitasMB" target="br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB"/>
+    <HasRelation name="receitas" source="br.gov.to.sefaz.arr.parametros.persistence.entity.ReceitasRepasse" target="br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.business.service.PlanoContasService" target="br.gov.to.sefaz.business.service.CrudService"/>
+    <UseRelation source="br.gov.to.sefaz.arr.parametros.business.service.validator.ReceitasCodigoBarraDuplicatedValidator" target="br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.business.service.impl.ReceitasRepasseServiceImpl" target="br.gov.to.sefaz.business.service.impl.DefaultCrudService"/>
+    <HasRelation name="situacao" source="br.gov.to.sefaz.arr.parametros.persistence.entity.PlanoContas" target="br.gov.to.sefaz.persistence.enums.SituacaoEnum" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.persistence.repository.ReceitasRepository" target="br.gov.to.sefaz.persistence.repository.BaseRepository"/>
+    <HasRelation name="receitasRepository" source="br.gov.to.sefaz.arr.parametros.business.service.validator.ReceitasDuplicatedCodigoValidator" target="br.gov.to.sefaz.arr.parametros.persistence.repository.ReceitasRepository" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.persistence.repository.PlanoContasRepository" target="br.gov.to.sefaz.persistence.repository.BaseRepository"/>
+    <HasRelation name="planoContas" source="br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas" target="br.gov.to.sefaz.arr.parametros.persistence.entity.PlanoContas" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.persistence.entity.AuditListner" target="br.gov.to.sefaz.persistence.entity.AbstractEntity" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="receitasRepasseCollection" source="br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas" target="br.gov.to.sefaz.arr.parametros.persistence.entity.ReceitasRepasse" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ReceitasRepasse&gt;"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.business.service.ReceitasTaxasService" target="br.gov.to.sefaz.business.service.CrudService"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB" target="br.gov.to.sefaz.presentation.managedbean.CrudMB"/>
+    <HasRelation name="situacao" source="br.gov.to.sefaz.arr.parametros.business.service.filter.ReceitasFilter" target="br.gov.to.sefaz.persistence.enums.SituacaoEnum" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas" target="br.gov.to.sefaz.persistence.entity.AbstractEntity"/>
+    <UseRelation source="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" target="br.gov.to.sefaz.business.service.CrudService" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="receitasTaxasService" source="br.gov.to.sefaz.arr.parametros.business.facade.impl.ReceitasFacadeImpl" target="br.gov.to.sefaz.arr.parametros.business.service.ReceitasTaxasService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.business.service.ReceitasService" target="br.gov.to.sefaz.business.service.CrudService"/>
+    <HasRelation name="classificacaoReceita" source="br.gov.to.sefaz.arr.parametros.business.service.filter.ReceitasFilter" target="br.gov.to.sefaz.arr.parametros.persistence.enums.ClassificacaoReceitaEnum" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.arr.parametros.business.service.impl.ReceitasTaxasServiceImpl" target="br.gov.to.sefaz.arr.parametros.persistence.repository.ReceitasTaxasRepository" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="receitasTaxasService" source="br.gov.to.sefaz.arr.parametros.business.service.impl.ReceitasServiceImpl" target="br.gov.to.sefaz.arr.parametros.business.service.ReceitasTaxasService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="br.gov.to.sefaz.arr.parametros.persistence.repository.ReceitasRepasseRepository" target="br.gov.to.sefaz.arr.parametros.persistence.entity.ReceitasRepasse" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="filter" source="br.gov.to.sefaz.arr.parametros.managedbean.ReceitasMB" target="br.gov.to.sefaz.arr.parametros.business.service.filter.ReceitasFilter" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="receitasRepasseService" source="br.gov.to.sefaz.arr.parametros.business.facade.impl.ReceitasFacadeImpl" target="br.gov.to.sefaz.arr.parametros.business.service.ReceitasRepasseService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.business.service.impl.DefaultCrudService" target="br.gov.to.sefaz.business.service.CrudService"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.arr.parametros.business.service.impl.ReceitasTaxasServiceImpl" target="br.gov.to.sefaz.arr.parametros.business.service.ReceitasTaxasService"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.persistence.entity.ReceitasTaxas" target="br.gov.to.sefaz.persistence.entity.AbstractEntity"/>
+    <HasRelation name="planoContasService" source="br.gov.to.sefaz.arr.parametros.business.facade.impl.ReceitasFacadeImpl" target="br.gov.to.sefaz.arr.parametros.business.service.PlanoContasService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.business.service.impl.DefaultCrudService" target="br.gov.to.sefaz.persistence.repository.BaseRepository" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.persistence.repository.ReceitasRepasseRepository" target="br.gov.to.sefaz.persistence.repository.BaseRepository"/>
+    <UseRelation source="br.gov.to.sefaz.arr.parametros.business.service.impl.PlanoContasServiceImpl" target="br.gov.to.sefaz.arr.parametros.persistence.repository.PlanoContasRepository" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="receitasRepasseService" source="br.gov.to.sefaz.arr.parametros.business.service.impl.ReceitasServiceImpl" target="br.gov.to.sefaz.arr.parametros.business.service.ReceitasRepasseService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.arr.parametros.business.service.impl.PlanoContasServiceImpl" target="br.gov.to.sefaz.arr.parametros.business.service.PlanoContasService"/>
+    <UseRelation name="" source="br.gov.to.sefaz.arr.parametros.persistence.repository.ReceitasTaxasRepository" target="br.gov.to.sefaz.arr.parametros.persistence.entity.ReceitasTaxas" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="receitasRepository" source="br.gov.to.sefaz.arr.parametros.business.service.validator.ReceitasCodigoBarraDuplicatedValidator" target="br.gov.to.sefaz.arr.parametros.persistence.repository.ReceitasRepository" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" target="br.gov.to.sefaz.business.facade.CrudFacade"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.arr.parametros.business.facade.impl.ReceitasFacadeImpl" target="br.gov.to.sefaz.arr.parametros.business.facade.ReceitasFacade"/>
+    <HasRelation name="situacao" source="br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas" target="br.gov.to.sefaz.persistence.enums.SituacaoEnum" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.arr.parametros.persistence.repository.PlanoContasRepository" target="br.gov.to.sefaz.arr.parametros.persistence.entity.PlanoContas" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.business.facade.ReceitasFacade" target="br.gov.to.sefaz.business.facade.CrudFacade"/>
+    <HasRelation name="service" source="br.gov.to.sefaz.arr.parametros.business.facade.impl.ReceitasFacadeImpl" target="br.gov.to.sefaz.arr.parametros.business.service.ReceitasService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.arr.parametros.business.service.impl.ReceitasRepasseServiceImpl" target="br.gov.to.sefaz.arr.parametros.persistence.repository.ReceitasRepasseRepository" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="situacao" source="br.gov.to.sefaz.arr.parametros.persistence.entity.ReceitasTaxas" target="br.gov.to.sefaz.persistence.enums.SituacaoEnum" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="classificacaoReceita" source="br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas" target="br.gov.to.sefaz.arr.parametros.persistence.enums.ClassificacaoReceitaEnum" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
