@@ -106,6 +106,10 @@ public class TipoGruposCnaes extends AbstractEntity<Integer> {
         this.gruposCnae = gruposCnae;
     }
 
+    public String getCompositeName() {
+        return getId() + " - " + getDescricaoGrupo();
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {

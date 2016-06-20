@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./UnexpectedErrorException.html" title="br.gov.to.sefaz.exception.UnexpectedErrorException" alt="" coords="16,112,423,223"/>
+<area shape="rect" id="node1" href="./UnexpectedErrorException.html" title="&lt;TABLE&gt;" alt="" coords="5,107,433,228"/>
+<area shape="rect" id="node2_1" href="./HandledSystemException.html" title="br.gov.to.sefaz.exception.HandledSystemException" alt="" coords="752,11,921,53"/>
+<area shape="rect" id="node2" href="./HandledSystemException.html" title="&lt;TABLE&gt;" alt="" coords="741,5,932,59"/>
+<area shape="rect" id="node3_2" href="./BusinessException.html" title="br.gov.to.sefaz.exception.BusinessException" alt="" coords="468,121,832,214"/>
+<area shape="rect" id="node3" href="./BusinessException.html" title="&lt;TABLE&gt;" alt="" coords="457,115,843,219"/>
+<area shape="rect" id="node4_3" href="../util/certificado/CertificadoDigitalException.html" title="br.gov.to.sefaz.util.certificado.CertificadoDigitalException" alt="" coords="878,129,1171,205"/>
+<area shape="rect" id="node4" href="../util/certificado/CertificadoDigitalException.html" title="&lt;TABLE&gt;" alt="" coords="867,124,1182,211"/>
+<area shape="rect" id="node5_4" href="../business/service/validation/CustomValidationException.html" title="br.gov.to.sefaz.business.service.validation.CustomValidationException" alt="" coords="1217,121,1659,214"/>
+<area shape="rect" id="node5" href="../business/service/validation/CustomValidationException.html" title="&lt;TABLE&gt;" alt="" coords="1206,115,1670,219"/>
+</map>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>br.gov.to.sefaz</groupId>
     <artifactId>sat</artifactId>
-    <version>0.1.0-rc2</version>
+    <version>0.2.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-	<name>sat</name>
-	<description>Novo Sistema de Arrecadação Tributária do Estado de Tocantins.</description>
+    <name>sat</name>
+    <description>Novo Sistema de Arrecadação Tributária do Estado de Tocantins.</description>
 
     <modules>
         <module>framework</module> <!-- Comum do projeto -->
@@ -28,6 +28,8 @@
         <!-- Versoes das dependencias do projeto -->
         <!-- Versoes das dependencias de Qualidade -->
         <junit.version>4.10</junit.version>
+        <mockito.version>1.9.5</mockito.version>
+        <powermock.version>1.6.5</powermock.version>
 
         <!-- Versoes das dependencias de Logs -->
         <log4j.version>1.2.17</log4j.version>
@@ -41,12 +43,13 @@
         <el-api.version>2.2</el-api.version>
 
         <!-- Versoes das dependencias do Spring -->
-        <spring-core.version>4.2.5.RELEASE</spring-core.version>
-        <spring-webmvc.version>4.2.5.RELEASE</spring-webmvc.version>
-        <spring-context.version>4.2.5.RELEASE</spring-context.version>
-        <spring-tx.version>4.2.5.RELEASE</spring-tx.version>
-        <spring-orm.version>4.2.5.RELEASE</spring-orm.version>
-        <spring-security.version>4.0.4.RELEASE</spring-security.version>
+        <spring-core.version>4.2.6.RELEASE</spring-core.version>
+        <spring-webmvc.version>4.2.6.RELEASE</spring-webmvc.version>
+        <spring-context.version>4.2.6.RELEASE</spring-context.version>
+        <spring-tx.version>4.2.6.RELEASE</spring-tx.version>
+        <spring-orm.version>4.2.6.RELEASE</spring-orm.version>
+        <spring-mail.version>4.2.6.RELEASE</spring-mail.version>
+        <spring-security.version>4.1.0.RELEASE</spring-security.version>
         <spring-data-jpa.version>1.9.4.RELEASE</spring-data-jpa.version>
 
         <!-- Versoes das dependencias do AspectJ -->
@@ -65,9 +68,12 @@
         <commons-lang3.version>3.1</commons-lang3.version>
         <commons-io.version>2.4</commons-io.version>
         <commons-collections4.version>4.1</commons-collections4.version>
+        <javax.mail.version>1.5.5</javax.mail.version>
+        <bcprov.version>1.54</bcprov.version>
+        <geoip.version>1.3.1</geoip.version>
 
         <!-- Versao da dependencia de JSON -->
-        <json.version>20160212</json.version>
+        <jackson.version>2.7.4</jackson.version>
 
         <!-- Versoes dos plugins do projeto -->
         <maven-eclipse-plugin.version>2.10</maven-eclipse-plugin.version>
@@ -83,7 +89,7 @@
         <maven-checkstyle-plugin.version>2.17</maven-checkstyle-plugin.version>
 
         <!-- Versão Sistema -->
-        <sat.version>0.1.0-rc2</sat.version>
+        <sat.version>0.2.0-SNAPSHOT</sat.version>
     </properties>
 
     <dependencyManagement>
@@ -100,6 +106,25 @@
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
                 <version>${junit.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.powermock</groupId>
+                <artifactId>powermock-module-junit4</artifactId>
+                <version>${powermock.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.powermock</groupId>
+                <artifactId>powermock-api-mockito</artifactId>
+                <version>${powermock.version}</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.mockito</groupId>
+                <artifactId>mockito-all</artifactId>
+                <version>${mockito.version}</version>
             </dependency>
 
             <!-- Hibernate -->
@@ -167,6 +192,11 @@
                 <artifactId>spring-data-jpa</artifactId>
                 <version>${spring-data-jpa.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.springframework.integration</groupId>
+                <artifactId>spring-integration-mail</artifactId>
+                <version>${spring-mail.version}</version>
+            </dependency>
 
             <!-- Spring Security -->
             <dependency>
@@ -212,8 +242,6 @@
                 <groupId>javax.servlet</groupId>
                 <artifactId>javax.servlet-api</artifactId>
                 <version>${servlet-api.version}</version>
-                <scope>provided</scope>
-                <optional>true</optional>
             </dependency>
             <dependency>
                 <groupId>javax.servlet</groupId>
@@ -271,12 +299,32 @@
                 <artifactId>commons-collections4</artifactId>
                 <version>${commons-collections4.version}</version>
             </dependency>
+            <dependency>
+                <groupId>javax.mail</groupId>
+                <artifactId>javax.mail-api</artifactId>
+                <version>${javax.mail.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sun.mail</groupId>
+                <artifactId>javax.mail</artifactId>
+                <version>${javax.mail.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.bouncycastle</groupId>
+                <artifactId>bcprov-jdk15on</artifactId>
+                <version>${bcprov.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.maxmind.geoip</groupId>
+                <artifactId>geoip-api</artifactId>
+                <version>${geoip.version}</version>
+            </dependency>
 
             <!-- JSON -->
             <dependency>
-                <groupId>org.json</groupId>
-                <artifactId>json</artifactId>
-                <version>${json.version}</version>
+                <groupId>com.fasterxml.jackson.datatype</groupId>
+                <artifactId>jackson-datatype-jsr310</artifactId>
+                <version>${jackson.version}</version>
             </dependency>
 
             <!-- Módulos do Sistema -->
@@ -333,6 +381,16 @@
             <dependency>
                 <groupId>br.gov.to.sefaz.core</groupId>
                 <artifactId>arrecadacao-core</artifactId>
+                <version>${sat.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.gov.to.sefaz.web</groupId>
+                <artifactId>seguranca-web</artifactId>
+                <version>${sat.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>br.gov.to.sefaz</groupId>
+                <artifactId>interceptor-framework</artifactId>
                 <version>${sat.version}</version>
             </dependency>
         </dependencies>

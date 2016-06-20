@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>br.gov.to.sefaz</groupId>
         <artifactId>framework</artifactId>
-        <version>0.1.0-rc2</version>
+        <version>0.2.0-SNAPSHOT</version>
     </parent>
 
     <groupId>br.gov.to.sefaz.framework</groupId>
     <artifactId>util-framework</artifactId>
 
     <name>util-framework</name>
-    <description>Módulo que tem como objetivo desenvolver classes e métodos úteis ao Sistema, como por exemplo, tratamento e internacionalização de menssagens.</description>
+    <description>Módulo que tem como objetivo desenvolver classes e métodos úteis ao Sistema, como por exemplo,
+        tratamento e internacionalização de menssagens.
+    </description>
 
     <dependencies>
         <dependency>
@@ -26,8 +28,20 @@
             <artifactId>jsf-api</artifactId>
         </dependency>
         <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.integration</groupId>
+            <artifactId>spring-integration-mail</artifactId>
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
@@ -40,6 +54,26 @@
         <dependency>
             <groupId>br.gov.to.sefaz.framework</groupId>
             <artifactId>exception-framework</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>javax.mail-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.mail</groupId>
+            <artifactId>javax.mail</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.bouncycastle</groupId>
+            <artifactId>bcprov-jdk15on</artifactId>
         </dependency>
     </dependencies>
 

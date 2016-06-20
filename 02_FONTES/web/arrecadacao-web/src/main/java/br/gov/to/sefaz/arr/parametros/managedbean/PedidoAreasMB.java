@@ -9,7 +9,6 @@ import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreasServidores;
 import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoTipos;
 import br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB;
 import br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema;
-
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -19,7 +18,6 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
@@ -108,6 +106,10 @@ public class PedidoAreasMB extends DefaultCrudMB<PedidoAreas, Integer> {
         this.selectedIdServidorDto = selectedIdServidorDto;
     }
 
+    /**
+     * Busca todos os Pedidos Tipos.
+     * @return Lista de PedidoTipos.
+     */
     public Collection<PedidoTipos> getAllPedidoTipos() {
         if (allPedidoTipos == null) {
             allPedidoTipos = getFacade().findAllPedidoTipos();
@@ -116,6 +118,9 @@ public class PedidoAreasMB extends DefaultCrudMB<PedidoAreas, Integer> {
         return allPedidoTipos;
     }
 
+    /**
+     * Carrega as áreas cadastradas.
+     */
     public void loadAreasCadastradas() {
         if (Objects.isNull(getDto().getIdTipoPedido())) {
             setResultList(new ArrayList<>());
@@ -133,6 +138,10 @@ public class PedidoAreasMB extends DefaultCrudMB<PedidoAreas, Integer> {
         return resultList;
     }
 
+    /**
+     * Busca todas as delegacias.
+     * @return lista de delegacias.
+     */
     public Collection<Delegacias> getAllDelegacias() {
         if (allDelegacias == null) {
             allDelegacias = getFacade().findAllDelegacias();
@@ -141,6 +150,9 @@ public class PedidoAreasMB extends DefaultCrudMB<PedidoAreas, Integer> {
         return allDelegacias;
     }
 
+    /**
+     * Busca as delegaciasAgencias.
+     */
     public void loadDelegaciaAgencias() {
         Optional<Integer> idDelegacia = Optional.ofNullable(getDto().getIdDelegacia());
 
@@ -164,6 +176,10 @@ public class PedidoAreasMB extends DefaultCrudMB<PedidoAreas, Integer> {
         updateDelegaciasFromServidores();
     }
 
+    /**
+     * Busca Delegacias Agencias.
+     * @return lista de delegacias agencias.
+     */
     public Collection<DelegaciaAgencias> getDelegaciaAgencias() {
         if (delegaciaAgencias == null) {
             loadDelegaciaAgencias();
@@ -176,6 +192,9 @@ public class PedidoAreasMB extends DefaultCrudMB<PedidoAreas, Integer> {
         return pedidoAreaServidores;
     }
 
+    /**
+     * Carrega a tabela de servidores na tela.
+     */
     public void loadServidoresTable() {
         if (!Objects.isNull(getDto().getIdPedidoArea())) {
             getServidoresViewBean().clear();
@@ -184,6 +203,9 @@ public class PedidoAreasMB extends DefaultCrudMB<PedidoAreas, Integer> {
         }
     }
 
+    /**
+     * Adiciona servidor na lista de servidores.
+     */
     public void addServidor() {
         PedidoAreasServidores clone = cloneServidor();
         List<PedidoAreasServidores> listToValidate = buildServidoresList();
@@ -195,6 +217,10 @@ public class PedidoAreasMB extends DefaultCrudMB<PedidoAreas, Integer> {
         addServidor(clone);
     }
 
+    /**
+     * Adiciona servidor na lista de servidores.
+     * @param servidor servidor criado na tela.
+     */
     public void addServidor(PedidoAreasServidores servidor) {
         PedidoAreaServidorViewBean viewBean = new PedidoAreaServidorViewBean(servidor);
         getServidoresViewBean().add(viewBean);
@@ -202,6 +228,9 @@ public class PedidoAreasMB extends DefaultCrudMB<PedidoAreas, Integer> {
         updateDelegaciasFromServidores();
     }
 
+    /**
+     * Atualiza servidor na base de dados.
+     */
     public void updateServidor() {
         PedidoAreasServidores clone = cloneServidor();
         List<PedidoAreasServidores> listToValidate = buildServidoresList();
@@ -214,6 +243,10 @@ public class PedidoAreasMB extends DefaultCrudMB<PedidoAreas, Integer> {
         updateServidor(clone);
     }
 
+    /**
+     * Atualiza servidor na base de dados.
+     * @param servidor a ser atualizado.
+     */
     public void updateServidor(PedidoAreasServidores servidor) {
         getServidoresViewBean()
                 .removeIf(pa -> pa.getIdServidor().equals(servidor.getIdServidor()));
@@ -221,6 +254,9 @@ public class PedidoAreasMB extends DefaultCrudMB<PedidoAreas, Integer> {
         addServidor(servidor);
     }
 
+    /**
+     * Atualiza as delegacias a partir dos servidores.
+     */
     public void updateDelegaciasFromServidores() {
         String delegaciaDescricao = getAllDelegacias().stream()
                 .filter(d -> d.getIdDelegacia().equals(getDto().getIdDelegacia()))
@@ -235,18 +271,26 @@ public class PedidoAreasMB extends DefaultCrudMB<PedidoAreas, Integer> {
         });
     }
 
+    /**
+     * Remove o pedido servidor.
+     */
     public void removePedidoServidor() {
-        Optional<PedidoAreasServidores> seervidor = getFacade()
+        Optional<PedidoAreasServidores> servidor = getFacade()
                 .removeServidor(getDto().getIdPedidoArea(), getSelectedIdServidorDto());
 
-        if (seervidor.isPresent()) {
-            updateServidor(seervidor.get());
+        if (servidor.isPresent()) {
+            showLogicalDeleteMessage();
+            updateServidor(servidor.get());
         } else {
+            showPhysicalDeleteMessage();
             getServidoresViewBean()
                     .removeIf(pa -> pa.getIdServidor().equals(getSelectedIdServidorDto()));
         }
     }
 
+    /**
+     * Limpa a tabela na tela.
+     */
     public void clearPedidoTables() {
         getServidoresViewBean().clear();
         getDto().getPedidoAreasServidores().clear();
@@ -272,6 +316,9 @@ public class PedidoAreasMB extends DefaultCrudMB<PedidoAreas, Integer> {
         this.nomeServidorSearchDto = nomeServidorSearchDto;
     }
 
+    /**
+     * Busca todos os servidores na base de dados.
+     */
     public void searchServidor() {
         usuariosSistema.clear();
         usuariosSistema.addAll(getFacade()

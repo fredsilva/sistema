@@ -13,5 +13,11 @@ import java.util.Collection;
  */
 public interface AtividadeEconomicaService extends CrudService<AtividadeEconomica, String> {
 
+    /**
+     * Retorna todos os CNAE's {@link AtividadeEconomica} vinculados ao grupo informado.
+     *
+     * @param idGrupoCnae id do grupo ao qual os CNAE's estão vonculados
+     * @return os CNAE's vinculados ao grupo
+     */
     Collection<AtividadeEconomica> findAllCnaesByGrupo(Integer idGrupoCnae);
 }

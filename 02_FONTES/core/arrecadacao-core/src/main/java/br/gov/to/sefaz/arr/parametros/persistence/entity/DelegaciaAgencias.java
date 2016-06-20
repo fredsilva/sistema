@@ -80,6 +80,10 @@ public class DelegaciaAgencias extends AbstractEntity<DelegaciaAgenciasPK> {
         return idDelegacia;
     }
 
+    /**
+     * Seta delegacia.
+     * @param idDelegacia id da delegacia.
+     */
     public void setIdDelegacia(Integer idDelegacia) {
         this.idDelegacia = idDelegacia;
         this.delegacias.setIdDelegacia(idDelegacia);

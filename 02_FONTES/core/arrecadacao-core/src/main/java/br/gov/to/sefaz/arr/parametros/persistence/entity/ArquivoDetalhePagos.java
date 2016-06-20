@@ -37,7 +37,7 @@ public class ArquivoDetalhePagos extends AbstractEntity<Long> {
 
     @NotNull
     @Column(name = "NUMERO_LINHA", nullable = false)
-    private int numeroLinha;
+    private Integer numeroLinha;
 
     @NotNull
     @Size(min = 1, max = 25)
@@ -89,9 +89,9 @@ public class ArquivoDetalhePagos extends AbstractEntity<Long> {
         this.idDetalheArquivo = idDetalheArquivo;
     }
 
-    public ArquivoDetalhePagos(Long idDetalheArquivo, int numeroLinha, String numeroNsu, LocalDateTime dataPagamento,
-            BigDecimal valorBarra, String codigoBarra, BigDecimal valorPagamento, BigDecimal valorTarifaConvenio,
-            Integer formaPagamento, BigDecimal valorAutenticado) {
+    public ArquivoDetalhePagos(Long idDetalheArquivo, Integer numeroLinha, String numeroNsu,
+            LocalDateTime dataPagamento, BigDecimal valorBarra, String codigoBarra, BigDecimal valorPagamento,
+            BigDecimal valorTarifaConvenio, Integer formaPagamento, BigDecimal valorAutenticado) {
         this.idDetalheArquivo = idDetalheArquivo;
         this.numeroLinha = numeroLinha;
         this.numeroNsu = numeroNsu;
@@ -117,11 +117,11 @@ public class ArquivoDetalhePagos extends AbstractEntity<Long> {
         this.idDetalheArquivo = idDetalheArquivo;
     }
 
-    public int getNumeroLinha() {
+    public Integer getNumeroLinha() {
         return numeroLinha;
     }
 
-    public void setNumeroLinha(int numeroLinha) {
+    public void setNumeroLinha(Integer numeroLinha) {
         this.numeroLinha = numeroLinha;
     }
 

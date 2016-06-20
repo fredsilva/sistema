@@ -7,6 +7,7 @@ import br.gov.to.sefaz.persistence.entity.AbstractEntity;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Objects;
+
 import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
@@ -21,7 +22,6 @@ import javax.persistence.Table;
 import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotNull;
-
 
 /**
  * Entidade referente a tabela SEFAZ_ARR.TA_CONVENIOS_TARIFAS do Banco de Dados.
@@ -55,14 +55,13 @@ public class ConveniosTarifas extends AbstractEntity<Integer> {
     private LocalDate dataFim;
 
     @NotNull(message = "#{arr_msg['parametros.conveniosTarifa.valor.obrigatorio']}")
-    @Digits(integer = 5, fraction = 2, message = "#{arr_msg['parametros.conveniosTarifa.valor.digitos']}")
+    @Digits(integer = 3, fraction = 2, message = "#{arr_msg['parametros.conveniosTarifa.valor.digitos']}")
     @DecimalMin(value = "0.01", message = "#{arr_msg['parametros.conveniosTarifa.valor.minimo']}")
     @Column(name = "VALOR")
     private BigDecimal valor;
 
-    @JoinColumns(
-            @JoinColumn(name = "ID_CONVENIO", referencedColumnName = "ID_CONVENIO", nullable = false,
-                    insertable = false, updatable = false))
+    @JoinColumns(@JoinColumn(name = "ID_CONVENIO", referencedColumnName = "ID_CONVENIO", nullable = false,
+            insertable = false, updatable = false))
     @ManyToOne(optional = false)
     private ConveniosArrec conveniosArrec;
 
@@ -74,11 +73,13 @@ public class ConveniosTarifas extends AbstractEntity<Integer> {
         conveniosArrec = new ConveniosArrec();
     }
 
-    public ConveniosTarifas(Integer idTarifa) {
+    public ConveniosTarifas(
+            Integer idTarifa) {
         this.idTarifa = idTarifa;
     }
 
-    public ConveniosTarifas(Integer idTarifa, FormaPagamentoEnum formaPagamento, LocalDate dataInicio,
+    public ConveniosTarifas(
+            Integer idTarifa, FormaPagamentoEnum formaPagamento, LocalDate dataInicio,
             BigDecimal valor) {
         this.idTarifa = idTarifa;
         this.formaPagamento = formaPagamento;

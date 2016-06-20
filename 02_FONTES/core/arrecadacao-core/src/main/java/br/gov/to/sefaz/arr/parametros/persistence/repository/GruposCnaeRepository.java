@@ -18,10 +18,19 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface GruposCnaeRepository extends BaseRepository<GruposCnae, GruposCnaePK> {
 
+    /**
+     * Verifica se existe Cnae referenciado neste grupo.
+     * @param cnaeFiscal identificação da Cnae Fiscal.
+     * @return verdadeiro ou falso.
+     */
     @Query("SELECT CASE WHEN COUNT(gc.cnaeFiscal) > 0 THEN true ELSE false END"
             + " FROM GruposCnae gc WHERE gc.cnaeFiscal = :cnaeFiscal")
     boolean existsCnaeFiscal(@Param("cnaeFiscal") String cnaeFiscal);
 
+    /**
+     * Remove o grupo pelo ID.
+     * @param idGrupoCnae identificação do grupo cnae.
+     */
     @Modifying
     @Query("DELETE GruposCnae WHERE idGrupoCnae = :idGrupoCnae")
     void deleteByGrupo(@Param("idGrupoCnae") Integer idGrupoCnae);

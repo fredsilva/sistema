@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./PathResolverMB.html" title="br.gov.to.sefaz.presentation.managedbean.PathResolverMB" alt="" coords="16,19,285,199"/>
+<area shape="rect" id="node1" href="./PathResolverMB.html" title="&lt;TABLE&gt;" alt="" coords="5,14,296,205"/>
+<area shape="rect" id="node2_1" href="./MessagesMB.html" title="br.gov.to.sefaz.presentation.managedbean.MessagesMB" alt="" coords="331,45,663,173"/>
+<area shape="rect" id="node2" href="./MessagesMB.html" title="&lt;TABLE&gt;" alt="" coords="321,40,674,179"/>
+<area shape="rect" id="node3_2" href="./ManagedBeanPackageMarker.html" title="br.gov.to.sefaz.presentation.managedbean.ManagedBeanPackageMarker" alt="" coords="709,88,902,131"/>
+<area shape="rect" id="node3" href="./ManagedBeanPackageMarker.html" title="&lt;TABLE&gt;" alt="" coords="698,83,913,136"/>
+<area shape="rect" id="node4_3" href="./CrudMB.html" title="br.gov.to.sefaz.presentation.managedbean.CrudMB" alt="" coords="947,11,1327,208"/>
+<area shape="rect" id="node4" href="./CrudMB.html" title="&lt;TABLE&gt;" alt="" coords="937,5,1338,213"/>
+<area shape="rect" id="node5_4" href="./BeanFactoryMB.html" title="br.gov.to.sefaz.presentation.managedbean.BeanFactoryMB" alt="" coords="1373,45,1709,173"/>
+<area shape="rect" id="node5" href="./BeanFactoryMB.html" title="&lt;TABLE&gt;" alt="" coords="1363,40,1720,179"/>
+<area shape="rect" id="node6_5" href="./AutowiredMB.html" title="br.gov.to.sefaz.presentation.managedbean.AutowiredMB" alt="" coords="1755,63,2104,156"/>
+<area shape="rect" id="node6" href="./AutowiredMB.html" title="&lt;TABLE&gt;" alt="" coords="1744,57,2115,161"/>
+</map>

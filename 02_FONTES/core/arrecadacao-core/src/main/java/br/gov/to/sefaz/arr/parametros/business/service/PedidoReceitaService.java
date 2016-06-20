@@ -15,9 +15,24 @@ import java.util.Collection;
  */
 public interface PedidoReceitaService extends CrudService<PedidoReceita, PedidoReceitaPK> {
 
+    /**
+     * Remove todos os PedidoReceita.
+     * @param idTipoPedido identificação do TipoPedido.
+     */
     void deleteAllPedidoReceitaByIdTipoPedido(Integer idTipoPedido);
 
+    /**
+     * Busca os PedidoReceita.
+     * @param idTipoPedido identificação do TipoPedido.
+     * @return lista de PedidoReceita.
+     */
     Collection<PedidoReceita> getPedidoReceitaByIdTipoPedido(Integer idTipoPedido);
 
+    /**
+     * Atualiza situação do TipoPedido.
+     * @param idTipoPedido identificação do TipoPedido.
+     * @param situacao nova situação.
+     * @return código do banco.
+     */
     int updateSituacaoByIdTipoPedido(Integer idTipoPedido, SituacaoEnum situacao);
 }

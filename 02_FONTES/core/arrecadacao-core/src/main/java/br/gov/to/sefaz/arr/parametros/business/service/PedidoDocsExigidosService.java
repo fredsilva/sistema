@@ -15,9 +15,24 @@ import java.util.Collection;
  */
 public interface PedidoDocsExigidosService extends CrudService<PedidoDocsExigidos, PedidoDocsExigidosPK> {
 
+    /**
+     * Busca todos os PedidoDocsExigidos.
+     * @param idTipoPedido identificação do TipoPedido.
+     * @return lista de PedidoDocsExigidos.
+     */
     Collection<PedidoDocsExigidos> getPedidoDocsExigidosByIdTipoPedido(Integer idTipoPedido);
 
+    /**
+     * Remove todos os DocsExigidos.
+     * @param idTipoPedido identificação TipoPedido.
+     */
     void deleteAllDocsExigidosByIdTipoPedido(Integer idTipoPedido);
 
+    /**
+     * Atualiza a situação.
+     * @param idTipoPedido identificação do TipoPedido.
+     * @param situacao nova situação.
+     * @return código do banco.
+     */
     int updateSituacaoByIdTipoPedido(Integer idTipoPedido, SituacaoEnum situacao);
 }

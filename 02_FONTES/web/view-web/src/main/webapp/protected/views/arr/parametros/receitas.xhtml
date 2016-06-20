@@ -146,7 +146,7 @@
                             <h:inputText value="#{receitasMB.dto.idReceita}"
                                     id="idReceita"
                                     styleClass="form-control justInteger"
-                                    maxlength="10"/>
+                                    maxlength="4"/>
                         </div>
                         <div class="form-group col-md-4">
                             <h:outputLabel for="descricaoReceita">
@@ -155,7 +155,7 @@
                             <h:inputText value="#{receitasMB.dto.descricaoReceita}"
                                     id="descricaoReceita"
                                     styleClass="form-control"
-                                    maxlength="100"/>
+                                    maxlength="250"/>
                         </div>
                         <div class="form-group col-md-3">
                             <h:outputLabel for="classificaoReceita">
@@ -210,7 +210,7 @@
                             <h:inputText value="#{receitasMB.dto.idBarra}"
                                     id="codigoBarra"
                                     styleClass="form-control justInteger"
-                                    maxlength="10"/>
+                                    maxlength="2"/>
                         </div>
                         <div class="form-group col-md-5">
                             <h:outputLabel for="planoContas">
@@ -223,7 +223,7 @@
                                 <f:selectItems value="#{receitasMB.allPlanoContas}"
                                         var="planoConta"
                                         itemValue="#{planoConta}"
-                                        itemLabel="#{receitasMB.getPlanoContasLabel(planoConta)}"/>
+                                        itemLabel="#{planoConta.compositeName}"/>
                             </h:selectOneMenu>
                         </div>
                     </div>
@@ -310,7 +310,7 @@
                                     <sat:saveUpdateButton id="add-taxa"
                                             label="#{arr_msg['parametros.receitas.form.taxas.adicionar']}"
                                             render="taxas-table"
-                                            execute="subCodigo descricaoSubCodigo unidade valorUnitario valorLimite valorAcrescimo"
+                                            execute="subCodigo descricaoSubCodigo unidade valorUnitario valorLimite valorAcrescimo idReceita"
                                             onEvent="resetTaxasOnSuccess" crudMb="#{receitasMB}"
                                             saveAction="addTaxa" updateAction="updateTaxa"/>
                                 </div>
@@ -377,6 +377,9 @@
                                             id="percentual" styleClass="form-control decimal" maxlength="6">
                                         <f:convertNumber locale="pt-BR" maxFractionDigits="2" maxIntegerDigits="3"/>
                                     </h:inputText>
+                                    <h:outputScript>
+                                        $("#receitas-form\\:percentual").maskMoney({thousands:'.', decimal:',', allowZero:true});
+                                    </h:outputScript>
                                 </div>
                                 <div class='form-group col-md-2'>
                                     <h:outputLabel for="dataInicio">

@@ -69,6 +69,10 @@ public class PedidoTipoDocs extends AbstractEntity<Integer> {
         this.situacao = situacao;
     }
 
+    public String getCompositeName() {
+        return getIdTipoDocs() + " - " + getDescricao();
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {

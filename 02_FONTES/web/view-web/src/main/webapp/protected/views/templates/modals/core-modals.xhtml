@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:a4j="http://richfaces.org/a4j">
+
+    <div id="alert-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="loader-modal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>Aguarde...</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0"
+                                aria-valuemax="100" style="width: 100%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a4j:outputPanel id="jsf-alert-messages" ajaxRendered="true" styleClass="hide">
+
+        <ui:repeat value="#{facesContext.messageList}" var="message">
+            <h:outputScript rendered="#{messagesMB.isInfo(message)}">
+                alertModal.putInfo("#{message.detail}");
+            </h:outputScript>
+            <h:outputScript rendered="#{messagesMB.isWarn(message)}">
+                alertModal.putWarning("#{message.detail}");
+            </h:outputScript>
+            <h:outputScript rendered="#{messagesMB.isErrorOrFatal(message)}">
+                alertModal.putDanger("#{message.detail}");
+            </h:outputScript>
+        </ui:repeat>
+        <h:outputScript rendered="#{!empty facesContext.externalContext.requestMap['javax.servlet.error.message']}">
+            alertModal.putDanger("#{facesContext.externalContext.requestMap['javax.servlet.error.message']}");
+        </h:outputScript>
+    </a4j:outputPanel>
+</ui:composition>

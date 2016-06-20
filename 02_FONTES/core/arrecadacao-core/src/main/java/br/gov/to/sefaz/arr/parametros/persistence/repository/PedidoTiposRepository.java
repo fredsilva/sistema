@@ -25,13 +25,29 @@ public interface PedidoTiposRepository extends BaseRepository<PedidoTipos, Integ
             + " OR EXISTS(SELECT ps.id_tipo_pedido FROM sefaz_arr.ta_pedido_solicitacao ps"
             + " WHERE ps.id_tipo_pedido = pt.id_tipo_pedido))";
 
+    /**
+     * Busca um TipoPedido já existente.
+     * @param idTipoPedido identificação do TipoPedido.
+     * @return verdadeiro ou falso.
+     */
     @Query("SELECT CASE WHEN COUNT(pt.idTipoPedido) > 0 THEN true ELSE false END "
             + "FROM PedidoTipos pt WHERE pt.idTipoPedido = :idTipoPedido")
     Boolean findExitsIdTipoPedido(@Param("idTipoPedido") Integer idTipoPedido);
 
+    /**
+     * Busca no banco de dados se existe uma referência para esse registro.
+     * @param idTipoPedido identificação do TipoPedido.
+     * @return verdadeiro ou falso.
+     */
     @Query(value = EXISTS_LOCK_REFERENCE, nativeQuery = true)
     Boolean existsLockReference(@Param(value = "id_tipo_pedido") Integer idTipoPedido);
 
+    /**
+     * Atualiza a situação.
+     * @param idTipoPedido identificação do TipoPedido.
+     * @param situacao nova situação.
+     * @return código do banco de dados.
+     */
     @Modifying
     @Query("UPDATE PedidoTipos pt SET pt.situacao = :situacao WHERE pt.idTipoPedido = :idTipoPedido")
     int updateSituacao(@Param(value = "idTipoPedido") Integer idTipoPedido, @Param("situacao") SituacaoEnum situacao);

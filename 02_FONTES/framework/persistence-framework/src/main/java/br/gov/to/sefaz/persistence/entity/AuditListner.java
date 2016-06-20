@@ -1,7 +1,5 @@
 package br.gov.to.sefaz.persistence.entity;
 
-import org.springframework.security.core.context.SecurityContextHolder;
-
 import java.time.LocalDateTime;
 
 import javax.persistence.PrePersist;
@@ -17,25 +15,40 @@ import javax.persistence.PreUpdate;
  */
 public class AuditListner {
 
+    /**
+     * Antes de preencher a entidade preenche os dados referentes a {@link AbstractEntity#getUsuarioInsercao()} e
+     * {@link AbstractEntity#getDataInsercao()}.
+     *
+     * @param entity entidade ao qual os dados serão aplicados antes da inserção.
+     */
     @PrePersist
     public void prePersist(AbstractEntity<?> entity) {
-        String userName = SecurityContextHolder.getContext().getAuthentication().getName();
-        entity.setUsuarioInsercao(userName);
+        entity.setUsuarioInsercao("admin");
         entity.setDataInsercao(LocalDateTime.now());
     }
 
+    /**
+     * Antes de preencher a entidade preenche os dados referentes a {@link AbstractEntity#getUsuarioAlteracao()} e
+     * {@link AbstractEntity#getDataAlteracao()}.
+     *
+     * @param entity entidade ao qual os dados serão aplicados antes da alteração.
+     */
     @PreUpdate
     public void preUpdate(AbstractEntity<?> entity) {
-        String userName = SecurityContextHolder.getContext().getAuthentication().getName();
-        entity.setUsuarioAlteracao(userName);
+        entity.setUsuarioAlteracao("admin");
         entity.setDataAlteracao(LocalDateTime.now());
     }
 
+    /**
+     * Antes de preencher a entidade preenche os dados referentes a {@link AbstractEntity#getUsuarioExclusao()} e
+     * {@link AbstractEntity#getDataExclusao()}.
+     *
+     * @param entity entidade ao qual os dados serão aplicados antes da exclusão.
+     */
     @PreRemove
     public void preRemove(AbstractEntity<?> entity) {
-        String userName = SecurityContextHolder.getContext().getAuthentication().getName();
         entity.setRegistroExcluido(Boolean.TRUE);
-        entity.setUsuarioExclusao(userName);
+        entity.setUsuarioExclusao("admin");
         entity.setDataExclusao(LocalDateTime.now());
     }
 

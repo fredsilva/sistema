@@ -140,7 +140,7 @@
                             <h:selectOneMenu value="#{planoContasMB.dto.idGruposCnaes}" id="grupoCnae"
                                     styleClass="form-control">
                                 <f:selectItems value="#{tipoGruposCnaeMB.resultList}" var="tipoGrupoCnae"
-                                        itemLabel="#{tipoGruposCnaeMB.getTipoCnaeLabel(tipoGrupoCnae)}"
+                                        itemLabel="#{tipoGrupoCnae.compositeName}"
                                         itemValue="#{tipoGrupoCnae.idGrupoCnae}"/>
                             </h:selectOneMenu>
                         </div>

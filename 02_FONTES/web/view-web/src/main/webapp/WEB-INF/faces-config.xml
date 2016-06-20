@@ -25,4 +25,9 @@
         </resource-bundle>
         <el-resolver>org.springframework.web.jsf.el.SpringBeanFacesELResolver</el-resolver>
     </application>
+    <factory>
+        <exception-handler-factory>
+            br.gov.to.sefaz.exception.SatExceptionHandlerFactory
+        </exception-handler-factory>
+    </factory>
 </faces-config>

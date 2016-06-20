@@ -1,10 +1,10 @@
 package br.gov.to.sefaz.seg.persistence.repository;
 
 /**
- * Interface para marcação do pacote para escaneamento de componentes.
+ * Interface para marcação do pacote para escaneamento dos repositorys do módulo de Segurança.
  *
- * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
- * @since 04/05/2016 12:05:00
+ * @author <a href="mailto:cristiano.luis@ntconsult.com.br">cristiano.luis</a>
+ * @since 13/05/2016 15:13:00
  */
 public interface RepositoryPackageMarker {
 }

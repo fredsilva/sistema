@@ -1,6 +1,6 @@
 package br.gov.to.sefaz.arr.parametros.persistence.enums;
 
-import br.gov.to.sefaz.business.managedbean.EnumCodeLabel;
+import br.gov.to.sefaz.persistence.enums.EnumCodeLabel;
 
 import java.util.stream.Stream;
 
@@ -12,8 +12,7 @@ import java.util.stream.Stream;
  */
 public enum TipoReceitaEnum implements EnumCodeLabel<Integer> {
 
-    IMPOSTO(1, "Imposto"), MULTA(2, "Multa"), JUROS(3, "Juros"),
-    CORRECAO(4, "Correção Monetária"), TAXAS(5, "Taxas");
+    IMPOSTO(1, "Imposto"), MULTA(2, "Multa"), JUROS(3, "Juros"), CORRECAO(4, "Correção Monetária"), TAXAS(5, "Taxas");
 
     private final Integer code;
     private final String label;
@@ -34,8 +33,8 @@ public enum TipoReceitaEnum implements EnumCodeLabel<Integer> {
     }
 
     /**
-     * Converte inteiro em {@link TipoReceitaEnum} baseado no seu code. Se for passado inteiro que não existe no enum,
-     * é disparada {@link IllegalArgumentException}
+     * Converte inteiro em {@link TipoReceitaEnum} baseado no seu code. Se for passado inteiro que não existe no enum, é
+     * disparada {@link IllegalArgumentException}
      *
      * @param code valor do enum
      * @return {@link TipoReceitaEnum}

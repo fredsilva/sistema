@@ -14,5 +14,10 @@ import java.util.Collection;
  */
 public interface DelegaciaAgenciasService extends CrudService<DelegaciaAgencias, DelegaciaAgenciasPK> {
 
+    /**
+     * Busca todas as delegacias agências para utilização em tela.
+     * @param idDelegacia identificação da delegacia.
+     * @return lista de delegacia agencias.
+     */
     Collection<DelegaciaAgencias> findAllByDelegacia(Integer idDelegacia);
 }

@@ -29,19 +29,42 @@ public interface PedidoAreasServidoresRepository
     String ID_PEDIDO_AREA = "idPedidoArea";
     String ID_SERVIDOR = "idServidor";
 
+    /**
+     * Verifica se existe referências ao PedidoAreasServidores.
+     * @param idPedidoArea identificação do PedidoArea.
+     * @param idServidor Identificação do servidor.
+     * @return verdadeiro ou falso.
+     */
     @Query(value = HAS_LOCK_REFERENCE, nativeQuery = true)
     boolean existsLockReference(@Param(ID_PEDIDO_AREA) Integer idPedidoArea, @Param(ID_SERVIDOR) Long idServidor);
 
+    /**
+     * Atualiza a situação do PedidoAreasServidores.
+     * @param idPedidoArea identificação do PedidoArea.
+     * @param idServidor identificação do Servidor.
+     * @param situacao situação para ser atualizada.
+     */
     @Modifying
     @Query("UPDATE PedidoAreasServidores SET situacao = :situacao"
             + " WHERE idPedidoArea = :idPedidoArea AND idServidor = :idServidor")
     void updateSituacao(@Param(ID_PEDIDO_AREA) Integer idPedidoArea, @Param(ID_SERVIDOR) Long idServidor,
             @Param("situacao") SituacaoEnum situacao);
 
+    /**
+     * Remove o PedidoAreasServidores.
+     * @param idPedidoArea identificação do PedidoArea.
+     * @param idServidor identificação do Servidor.
+     */
     @Modifying
     @Query("DELETE PedidoAreasServidores WHERE idPedidoArea = :idPedidoArea AND idServidor = :idServidor")
     void delete(@Param(ID_PEDIDO_AREA) Integer idPedidoArea, @Param(ID_SERVIDOR) Long idServidor);
 
+    /**
+     * Verifica se existe chefe de setor.
+     * @param idPedidoArea identificação do PedidoArea.
+     * @param supervisor identificação do supervisor.
+     * @return verdadeiro ou falso.
+     */
     @Query(value = "SELECT CASE WHEN (COUNT(pas.id_servidor) > 0) THEN 'true' ELSE 'false' END"
             + " FROM sefaz_arr.ta_pedido_areas_servidores pas"
             + " WHERE pas.id_pedido_area = :idPedidoArea AND pas.supervisor = :supervisor",

@@ -1,6 +1,6 @@
 package br.gov.to.sefaz.arr.parametros.persistence.enums;
 
-import br.gov.to.sefaz.business.managedbean.EnumCodeLabel;
+import br.gov.to.sefaz.persistence.enums.EnumCodeLabel;
 
 import java.util.stream.Stream;
 

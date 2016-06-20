@@ -22,10 +22,20 @@ public interface PedidoDocsExigidosRepository extends BaseRepository<PedidoDocsE
     String DELETE_ALL_DOCS_EXIGIDOS_BY_ID_TIPO_PEDIDO = "DELETE PedidoDocsExigidos pd WHERE "
             + "pd.idTipoPedido = :idTipoPedido";
 
+    /**
+     * Remove todos os documentos exigidos pela identificação do TipoPedido.
+     * @param idTipoPedido identificação do TipoPedido.
+     */
     @Query(value = DELETE_ALL_DOCS_EXIGIDOS_BY_ID_TIPO_PEDIDO)
     @Modifying
     void deleteAllDocsExigidosByIdTipoPedido(@Param("idTipoPedido") Integer idTipoPedido);
 
+    /**
+     * Atualiza a situação pela identificação do TipoPedido.
+     * @param idTipoPedido identificação do TipoPedido.
+     * @param situacao nova situação.
+     * @return codigo do banco de dados.
+     */
     @Modifying
     @Query("UPDATE PedidoDocsExigidos pd SET pd.situacao = :situacao WHERE pd.idTipoPedido = :idTipoPedido")
     int updateSituacaoByIdTipoPedido(@Param(value = "idTipoPedido") Integer idTipoPedido,

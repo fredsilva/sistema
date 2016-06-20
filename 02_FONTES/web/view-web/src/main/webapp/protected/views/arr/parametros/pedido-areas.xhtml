@@ -127,13 +127,23 @@
                     <div class="form-group col-md-2">
                         <h:outputLabel for="valorInicial">#{arr_msg['parametros.pedidoAreas.form.valor.inicial']}</h:outputLabel>
                         <h:inputText value="#{pedidoAreasMB.dto.faixaValor.valorInicial}" id="valorInicial"
-                                styleClass="form-control" maxlength="17"/>
+                                styleClass="form-control decimal" maxlength="17">
+                            <f:convertNumber locale="pt-BR" maxFractionDigits="2" maxIntegerDigits="14"/>
+                        </h:inputText>
                     </div>
+                    <h:outputScript>
+                        $("#pedido-area-form\\:valorInicial").maskMoney({thousands:'.', decimal:',', allowZero:true});
+                    </h:outputScript>
                     <div class="form-group col-md-2">
                         <h:outputLabel for="valorFinal">#{arr_msg['parametros.pedidoAreas.form.valor.final']}</h:outputLabel>
                         <h:inputText value="#{pedidoAreasMB.dto.faixaValor.valorFinal}" id="valorFinal"
-                                styleClass="form-control" maxlength="17"/>
+                                styleClass="form-control decimal" maxlength="17">
+                            <f:convertNumber locale="pt-BR" maxFractionDigits="2" maxIntegerDigits="14"/>
+                        </h:inputText>
                     </div>
+                    <h:outputScript>
+                        $("#pedido-area-form\\:valorFinal").maskMoney({thousands:'.', decimal:',', allowZero:true});
+                    </h:outputScript>
                     <div class="form-group col-md-3">
                         <h:outputLabel>
                             <h:selectBooleanCheckbox value="#{pedidoAreasMB.dto.exigeParecer}" id="parecer"/>

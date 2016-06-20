@@ -5,6 +5,7 @@ import br.gov.to.sefaz.arr.parametros.persistence.repository.ConveniosTarifasRep
 import br.gov.to.sefaz.business.service.validation.ServiceValidator;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.violation.CustomViolation;
+import br.gov.to.sefaz.persistence.predicate.AndPredicateBuilder;
 import br.gov.to.sefaz.util.message.MessageUtil;
 import br.gov.to.sefaz.util.message.SourceBundle;
 
@@ -13,11 +14,12 @@ import org.springframework.stereotype.Component;
 
 import java.util.HashSet;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 
 /**
- * Validação para duplicação de {@link br.gov.to.sefaz.arr.parametros.persistence.entity.ConveniosTarifas} na lista
- * de {@link br.gov.to.sefaz.arr.parametros.persistence.entity.ConveniosArrec#getConveniosTarifas()}.
+ * Validação para duplicação de {@link br.gov.to.sefaz.arr.parametros.persistence.entity.ConveniosTarifas} na lista de
+ * {@link br.gov.to.sefaz.arr.parametros.persistence.entity.ConveniosArrec#getConveniosTarifas()}.
  *
  * @author <a href="mailto:gabriel.santos@ntconsult.com.br">gabriel.santos</a>
  * @since 14/05/2016 11:10:00
@@ -28,7 +30,8 @@ public class ConveniosArrecDuplicatedTarifaValidator implements ServiceValidator
     private final ConveniosTarifasRepository conveniosTarifasRepository;
 
     @Autowired
-    public ConveniosArrecDuplicatedTarifaValidator(ConveniosTarifasRepository conveniosTarifasRepository) {
+    public ConveniosArrecDuplicatedTarifaValidator(
+            ConveniosTarifasRepository conveniosTarifasRepository) {
         this.conveniosTarifasRepository = conveniosTarifasRepository;
     }
 
@@ -40,25 +43,27 @@ public class ConveniosArrecDuplicatedTarifaValidator implements ServiceValidator
     @Override
     public Set<CustomViolation> validate(ConveniosTarifas target) {
         List<ConveniosTarifas> tarifas = conveniosTarifasRepository
-                .getAllConveniosTarifasByIdConvenioArrec(target.getIdConveniosArrec());
+                .findAll((root, query, cb) -> new AndPredicateBuilder(root, cb)
+                        .equalsTo("idConveniosArrec", target.getIdConveniosArrec())
+                        .build());
 
         return validateDuplicatedTarifa(target, tarifas);
     }
 
     /**
-     * Valida se o {@link br.gov.to.sefaz.arr.parametros.persistence.entity.ConveniosTarifas} já possui um registro
-     * com a mesma {@link br.gov.to.sefaz.arr.parametros.persistence.entity.ConveniosTarifas#formaPagamento} e a
-     * mesma {@link br.gov.to.sefaz.arr.parametros.persistence.entity.ConveniosTarifas#dataInicio}.
+     * Valida se o {@link br.gov.to.sefaz.arr.parametros.persistence.entity.ConveniosTarifas} já possui um registro com
+     * a mesma {@link br.gov.to.sefaz.arr.parametros.persistence.entity.ConveniosTarifas#formaPagamento} e a mesma
+     * {@link br.gov.to.sefaz.arr.parametros.persistence.entity.ConveniosTarifas#dataInicio}.
      *
      * @param target a tarifa a qual será validada
+     * @param tarifas lista de tarifas a serem validadas
      * @return lista de violações encontradas
      */
     public Set<CustomViolation> validateDuplicatedTarifa(ConveniosTarifas target, List<ConveniosTarifas> tarifas) {
         HashSet<CustomViolation> customViolations = new HashSet<>();
 
         tarifas.stream()
-                .filter(conveniosTarifas ->
-                        formaPagamentoAndDataInicioAreEquals(target, conveniosTarifas))
+                .filter(conveniosTarifas -> formaPagamentoAndDataInicioAreEquals(target, conveniosTarifas))
                 .findAny()
                 .ifPresent(conveniosTarifas -> {
                     String tarifaCadastrado = SourceBundle.getMessage(MessageUtil.ARR,
@@ -70,7 +75,7 @@ public class ConveniosArrecDuplicatedTarifaValidator implements ServiceValidator
     }
 
     private boolean formaPagamentoAndDataInicioAreEquals(ConveniosTarifas target, ConveniosTarifas conveniosTarifas) {
-        return conveniosTarifas.getFormaPagamento().equals(target.getFormaPagamento())
-                && conveniosTarifas.getDataInicio().equals(target.getDataInicio());
+        return Objects.equals(conveniosTarifas.getFormaPagamento(), target.getFormaPagamento())
+                && Objects.equals(conveniosTarifas.getDataInicio(), target.getDataInicio());
     }
 }

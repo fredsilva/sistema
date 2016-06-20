@@ -25,6 +25,8 @@ import javax.validation.constraints.NotNull;
 @Table(name = "TA_LOTES_PAGOS_ARREC", schema = "SEFAZ_ARR")
 public class LotesPagosArrecadacao extends AbstractEntity<Long> {
 
+    private static final long serialVersionUID = -328753640955565432L;
+
     @Id
     @NotNull
     @Column(name = "ID_BDAR_TPAR")

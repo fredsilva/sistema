@@ -21,10 +21,20 @@ public interface PedidoTipoAcoesRepository extends BaseRepository<PedidoTipoAcoe
     String DELETE_ALL_CAMPOS_ACOES_BY_ID_TIPO_PEDIDO = "DELETE PedidoTipoAcoes ta WHERE "
             + "ta.idTipoPedido = :idTipoPedido";
 
+    /**
+     * Remove todos os CampoAcoes.
+     * @param idTipoPedido identificação do TipoPedido.
+     */
     @Query(value = DELETE_ALL_CAMPOS_ACOES_BY_ID_TIPO_PEDIDO)
     @Modifying
     void deleteAllTipoAcoesByIdTipoPedido(@Param("idTipoPedido") Integer idTipoPedido);
 
+    /**
+     * Atualiza a situação do CampoAcoes.
+     * @param idTipoPedido identificação do TipoPedido.
+     * @param situacao nova situação.
+     * @return código do banco de dados.
+     */
     @Modifying
     @Query("UPDATE PedidoTipoAcoes ta SET ta.situacao = :situacao WHERE ta.idTipoPedido = :idTipoPedido")
     int updateSituacaoByIdTipoPedido(@Param(value = "idTipoPedido") Integer idTipoPedido,

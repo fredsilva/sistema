@@ -9,7 +9,6 @@ import br.gov.to.sefaz.business.service.validation.violation.CustomViolation;
 import br.gov.to.sefaz.util.message.MessageUtil;
 import br.gov.to.sefaz.util.message.SourceBundle;
 
-import org.apache.commons.collections4.CollectionUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -23,7 +22,6 @@ import java.util.Set;
  * @since 29/04/2016 10:52:19
  */
 @Component
-@SuppressWarnings("PMD")
 public class PedidoTiposDuplicatedIdTipoPedidoValidator implements ServiceValidator<PedidoTipos> {
 
     private final PedidoTiposRepository repository;
@@ -36,43 +34,20 @@ public class PedidoTiposDuplicatedIdTipoPedidoValidator implements ServiceValida
 
     @Override
     public boolean support(Class<?> clazz, String context) {
-        return clazz.equals(PedidoTipos.class)
-                && (context.equals(ValidationContext.SAVE) || context.equals(ValidationContext.UPDATE));
+        return clazz.equals(PedidoTipos.class) && context.equals(ValidationContext.SAVE);
     }
 
     @Override
     public Set<CustomViolation> validate(PedidoTipos pedidoTipos) {
         HashSet<CustomViolation> customViolations = new HashSet<>();
 
-        if (!validatePedidoCamposAcoes(pedidoTipos)) {
+        if (repository.findExitsIdTipoPedido(pedidoTipos.getIdTipoPedido())) {
             String codigoCadastrado = SourceBundle.getMessage(MessageUtil.ARR,
-                    "parametros.pedidoTipos.pedidoCamposAcoes.vazia");
-            customViolations.add(new CustomViolation(codigoCadastrado));
-        }
-
-        if (!validatePedidoCamposAcoes(pedidoTipos)) {
-            String codigoCadastrado = SourceBundle.getMessage(MessageUtil.ARR,
-                    "parametros.pedidoTipos.pedidoCamposAcoes.vazia");
+                    "parametros.pedidoTipos.idTipoPedido.duplicated");
             customViolations.add(new CustomViolation(codigoCadastrado));
         }
 
         return customViolations;
-    }
-
-    private boolean validatePedidoCamposAcoes(PedidoTipos pedidoTipos) {
-        if (CollectionUtils.isEmpty(pedidoTipos.getPedidoCamposAcoes())) {
-            return Boolean.FALSE;
-        } else {
-            return Boolean.TRUE;
-        }
-    }
-
-    private boolean validatePedidoReceitas(PedidoTipos pedidoTipos) {
-        if (CollectionUtils.isEmpty(pedidoTipos.getPedidoReceitas())) {
-            return Boolean.FALSE;
-        } else {
-            return Boolean.TRUE;
-        }
     }
 
 }

@@ -14,6 +14,8 @@ import javax.persistence.criteria.JoinType;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
+import static br.gov.to.sefaz.util.application.ApplicationUtil.LOCALE;
+
 /**
  * <p>Builder para construir {@link javax.persistence.criteria.Predicate} para construir filtros de AND.</p>
  * <p>Exemplo: ... WHERE x == y AND w LIKE %z% AND ...</p>
@@ -34,6 +36,13 @@ public class AndPredicateBuilder {
         this.predicates = new ArrayList<>();
     }
 
+    /**
+     * Se o value não for vazio ou nulo, adiciona uma clausula "fieldName = value" ao where da consulta.
+     *
+     * @param fieldName nome do campo da entidade que será comparado ao valor
+     * @param value valor que será comparado ao campo da entidade
+     * @return o {@link AndPredicateBuilder} que esta sendo montado
+     */
     public AndPredicateBuilder equalsTo(String fieldName, String value) {
         if (StringUtils.isNotEmpty(value)) {
             addEquals(fieldName, value);
@@ -42,6 +51,13 @@ public class AndPredicateBuilder {
         return this;
     }
 
+    /**
+     * Se o value não for nulo, adiciona uma clausula "fieldName = value" ao where da consulta.
+     *
+     * @param fieldName nome do campo da entidade que será comparado ao valor
+     * @param value valor que será comparado ao campo da entidade
+     * @return o {@link AndPredicateBuilder} que esta sendo montado
+     */
     public AndPredicateBuilder equalsTo(String fieldName, Object value) {
         if (!Objects.isNull(value)) {
             addEquals(fieldName, value);
@@ -50,14 +66,28 @@ public class AndPredicateBuilder {
         return this;
     }
 
+    /**
+     * Se o value não for vazio ou nulo, adiciona uma clausula "fieldName LIKE '%value%'" ao where da consulta.
+     *
+     * @param fieldName nome do campo da entidade que será comparado ao valor
+     * @param value valor que será comparado ao campo da entidade
+     * @return o {@link AndPredicateBuilder} que esta sendo montado
+     */
     public AndPredicateBuilder like(String fieldName, String value) {
         if (StringUtils.isNotEmpty(value)) {
-            addLike(fieldName, value);
+            addLike(fieldName, value.toUpperCase(LOCALE));
         }
 
         return this;
     }
 
+    /**
+     * Se o value não for nulo, adiciona uma clausula "fieldName LIKE '%value%'" ao where da consulta.
+     *
+     * @param fieldName nome do campo da entidade que será comparado ao valor
+     * @param value valor que será comparado ao campo da entidade
+     * @return o {@link AndPredicateBuilder} que esta sendo montado
+     */
     public AndPredicateBuilder like(String fieldName, Object value) {
         if (!Objects.isNull(value)) {
             addLike(fieldName, value);
@@ -66,17 +96,28 @@ public class AndPredicateBuilder {
         return this;
     }
 
+    /**
+     * Realiza um inner join ao campo da entidade informado.
+     *
+     * @param fieldName nome do campo pré mapeado a entidade
+     * @return o {@link AndPredicateBuilder} que esta sendo montado
+     */
     public AndPredicateBuilder fetch(String fieldName) {
         root.fetch(fieldName, JoinType.INNER);
         return this;
     }
 
+    /**
+     * Gerá um predicado baseado nas regras passadas ao builder durante sua instanciação até a chamada deste método.
+     * @return predicado pronto para ser aplicado a uma consulta
+     */
     public Predicate build() {
         return cb.and(predicates.stream().toArray(Predicate[]::new));
     }
 
     private boolean addLike(String fieldName, Object value) {
-        return predicates.add(cb.like(getField(fieldName).as(String.class), ANY_SENTENCE + value + ANY_SENTENCE));
+        return predicates.add(cb.like(cb.upper(getField(fieldName).as(String.class)),
+                ANY_SENTENCE + value + ANY_SENTENCE));
     }
 
     private boolean addEquals(String fieldName, Object value) {

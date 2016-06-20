@@ -30,4 +30,11 @@ public interface ReceitasRepasseService extends CrudService<ReceitasRepasse, Rec
      * @return um lista com todos os repasses que pertencem a uma receita
      */
     Collection<ReceitasRepasse> getReceitasRepasseByIdReceita(Integer idReceita);
+
+    /**
+     * Valida os repsses das receitas.
+     *
+     * @param receitasRepasse Repasse da receita
+     */
+    void validateReceitasRepasse(ReceitasRepasse receitasRepasse);
 }

@@ -1,6 +1,6 @@
 package br.gov.to.sefaz.arr.parametros.persistence.enums;
 
-import br.gov.to.sefaz.business.managedbean.EnumCodeLabel;
+import br.gov.to.sefaz.persistence.enums.EnumCodeLabel;
 
 import java.util.stream.Stream;
 
@@ -12,8 +12,8 @@ import java.util.stream.Stream;
  */
 public enum TipoCodigoBarraEnum implements EnumCodeLabel<Integer> {
 
-    GNRE(1, "GNRE"), DARE(2, "DARE"), IPVA(3, "IPVA"), SIMPLES_NACIONAL(4, "SIMPLES NACIONAL"),
-    SEM_BARRA(5, "SEM BARRA");
+    GNRE(1, "GNRE"), DARE(2, "DARE"), IPVA(3, "IPVA"), SIMPLES_NACIONAL(4, "SIMPLES NACIONAL"), SEM_BARRA(5,
+            "SEM BARRA");
 
     private final Integer code;
     private final String label;

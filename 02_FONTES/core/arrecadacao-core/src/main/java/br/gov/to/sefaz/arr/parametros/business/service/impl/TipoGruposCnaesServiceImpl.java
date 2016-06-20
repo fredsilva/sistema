@@ -11,7 +11,6 @@ import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.ValidationSuite;
 import br.gov.to.sefaz.persistence.enums.SituacaoEnum;
 import br.gov.to.sefaz.persistence.predicate.AndPredicateBuilder;
-import br.gov.to.sefaz.util.message.MessageUtil;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
@@ -80,13 +79,11 @@ public class TipoGruposCnaesServiceImpl extends DefaultCrudService<TipoGruposCna
             getRepository().updateSituacao(id, SituacaoEnum.CANCELADO);
             tipoRejeicao = Optional.of(getRepository().findOne(id));
 
-            MessageUtil.addMesage(MessageUtil.ARR, "parametros.delecao.logica");
         } else {
             gruposCnaeService.deleteByGrupo(id);
             getRepository().delete(id);
             tipoRejeicao = Optional.empty();
 
-            MessageUtil.addMesage(MessageUtil.ARR, "parametros.delecao.fisica");
         }
 
         return tipoRejeicao;
@@ -103,8 +100,6 @@ public class TipoGruposCnaesServiceImpl extends DefaultCrudService<TipoGruposCna
         // Força o Id do pai nos filhos antes de salva-los
         gruposCnae.stream().forEach(gc -> gc.setIdGrupoCnae(save.getIdGrupoCnae()));
         gruposCnaeService.save(gruposCnae);
-
-        MessageUtil.addMesage(MessageUtil.ARR, "mensagem.sucesso.operacao");
 
         return save;
     }

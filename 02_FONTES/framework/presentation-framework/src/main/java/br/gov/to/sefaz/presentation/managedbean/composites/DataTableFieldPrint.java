@@ -7,5 +7,5 @@ package br.gov.to.sefaz.presentation.managedbean.composites;
  * @since 12/05/2016 19:46:00
  */
 public enum DataTableFieldPrint {
-    NONE, STRING, NUMBER, DATE, DATE_TIME, CPF, CNPJ, CNPJ_RAIZ;
+    NONE, STRING, NUMBER, DATE, DATE_TIME, CPF, CNPJ, CNPJ_RAIZ, BOOLEAN;
 }

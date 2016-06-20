@@ -15,11 +15,28 @@ import java.util.List;
  */
 public interface PedidoAreasServidoresService extends CrudService<PedidoAreasServidores, PedidoAreasServidoresPK> {
 
+    /**
+     * Busca todos os PedidoAreaServidores pelo Id do PedidoArea.
+     * @param idPedidoArea identificação do PedidoArea
+     * @return Lista de PedidoAreasServidores.
+     */
     Collection<PedidoAreasServidores> findAllByPedido(Integer idPedidoArea);
 
+    /**
+     * Valida Servidores duplicados na lista.
+     * @param servidores lista de PedidoAreasServidores.
+     */
     void validateDuplicatedServidor(List<PedidoAreasServidores> servidores);
 
+    /**
+     * Valida o servidor chefe.
+     * @param servidores lista de servidores.
+     */
     void validateServidorChefe(List<PedidoAreasServidores> servidores);
 
+    /**
+     * Remove pela identificação do PedidoArea.
+     * @param idPedidoArea identificação do PedidoArea.
+     */
     void deleteByIdPedidoArea(Integer idPedidoArea);
 }

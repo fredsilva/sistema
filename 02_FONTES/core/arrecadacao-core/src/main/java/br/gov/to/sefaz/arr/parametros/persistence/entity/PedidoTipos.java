@@ -44,7 +44,7 @@ public class PedidoTipos extends AbstractEntity<Integer> {
     private Integer idTipoPedido;
 
     @NotNull(message = "#{arr_msg['parametros.pedidoTipos.descricao.obrigatorio']}")
-    @Size(max = 150, message = "#{arr_msg['parametros.pedidoTipos.descricao.tamanho']}")
+    @Size(min = 1, message = "#{arr_msg['parametros.pedidoTipos.descricao.obrigatorio']}")
     @Column(name = "DESCRICAO", length = 150)
     private String descricao;
 

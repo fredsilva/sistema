@@ -1,7 +1,7 @@
 package br.gov.to.sefaz.business.service.validation;
 
 import br.gov.to.sefaz.business.service.validation.violation.CustomViolation;
-import br.gov.to.sefaz.util.message.SourceBundleMessageInterpolator;
+import br.gov.to.sefaz.util.message.SourceBundle;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
@@ -18,6 +18,7 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -39,8 +40,6 @@ public class ValidationSuiteAspect {
     @SuppressWarnings("rawtypes")
     private final Collection<ServiceValidator> serviceValidators;
 
-    private final SourceBundleMessageInterpolator messageInterpolator;
-
     @Autowired
     @SuppressWarnings("rawtypes")
     public ValidationSuiteAspect(
@@ -48,7 +47,6 @@ public class ValidationSuiteAspect {
         this.validator = validator;
         Map<String, ServiceValidator> beansOfType = listableBeanFactory.getBeansOfType(ServiceValidator.class);
         serviceValidators = beansOfType.values();
-        messageInterpolator = new SourceBundleMessageInterpolator();
     }
 
     /**
@@ -77,11 +75,10 @@ public class ValidationSuiteAspect {
                     ValidationSuite validationSuite = (ValidationSuite) annotation;
                     String context = validationSuite.context();
                     Object arg = joinPoint.getArgs()[0];
-                    Class clazz = arg.getClass();
+                    Class clazz = validationSuite.clazz();
 
-                    // se for uma coleção, a classe utilizada deve ser passada no ValidationSuite.
-                    if (validationSuite.isCollection()) {
-                        clazz = validationSuite.clazz();
+                    if (clazz.equals(ValidationSuite.class) && !Objects.isNull(arg)) {
+                        clazz = getArgClass(arg);
                     }
 
                     customViolations.addAll(validate(arg, context, clazz));
@@ -138,7 +135,24 @@ public class ValidationSuiteAspect {
     private List<CustomViolation> createCustomViolationsByContraints(Object arg) {
         return validator.validate(arg).stream()
                 .map(constraintViolation -> new CustomViolation(
-                        messageInterpolator.interpolateMessage(constraintViolation.getMessage())))
+                        SourceBundle.getMessageByExpression(constraintViolation.getMessage())))
                 .collect(Collectors.toList());
+    }
+
+    /**
+     * Verifica se o {@link java.lang.Object} passado é uma {@link java.util.Collection}. Se for retorna a classe do
+     * Objeto da coleção, se não retorna a classe do objeto passado.
+     *
+     * @param arg Objeto a ser extraida a classe
+     * @return classe do Objeto passado
+     */
+    private Class getArgClass(Object arg) {
+        if (arg instanceof Collection) {
+            Collection argCollection = (Collection) arg;
+            if (!argCollection.isEmpty()) {
+                return argCollection.iterator().next().getClass();
+            }
+        }
+        return arg.getClass();
     }
 }

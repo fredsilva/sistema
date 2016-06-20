@@ -20,21 +20,64 @@ import java.util.Optional;
  */
 public interface PedidoAreasFacade extends CrudFacade<PedidoAreas, Integer> {
 
+    /**
+     * Busca todos os pedido tipos.
+     * @return lista de Pedido tipos
+     */
     Collection<PedidoTipos> findAllPedidoTipos();
 
+    /**
+     * Busca todos os Pedido Areas pelo ID do Tipo Pedido.
+     * @param idTipoPedido do Tipo Pedido
+     * @return lista de PedidoAreas.
+     */
     Collection<PedidoAreas> findAllByTipo(Integer idTipoPedido);
 
+    /**
+     * Busca todas as delegacias.
+     * @return lista de Delegacias.
+     */
     Collection<Delegacias> findAllDelegacias();
 
+    /**
+     * Busca as agências pelo ID da delegacia.
+     * @param idDelegacia identificação da delegacia.
+     * @return lista de Delegacia Agencias.
+     */
     Collection<DelegaciaAgencias> findAgenciasByDelegacia(Integer idDelegacia);
 
+    /**
+     * Busca todos os servidores pelo Id do PedidoArea.
+     * @param idPedidoArea identificação do PedidoArea.
+     * @return Lista de Servidores.
+     */
     Collection<PedidoAreasServidores> findAllServidoresByPedido(Integer idPedidoArea);
 
+    /**
+     * Remove o servidor.
+     * @param idPedidoArea identificação do PedidoArea.
+     * @param idServidor identificação do Servidor.
+     * @return Objeto PedidoAreasServidores.
+     */
     Optional<PedidoAreasServidores> removeServidor(Integer idPedidoArea, Long idServidor);
 
+    /**
+     * Busca servidor pelo Id e nome.
+     * @param idServidorSearchDto identificação do servidor.
+     * @param nomeServidorSearchDto nome do servidor.
+     * @return lista de usuario sistema.
+     */
     Collection<UsuarioSistema> searchServidor(Long idServidorSearchDto, String nomeServidorSearchDto);
 
+    /**
+     * Valida servidores duplicados.
+     * @param servidores lista de servidores para ser verificada.
+     */
     void validateDuplicatedServidor(List<PedidoAreasServidores> servidores);
 
+    /**
+     * Valida o servidor chefe.
+     * @param servidores lista de servidores para ser verificada.
+     */
     void validateServidorChefe(List<PedidoAreasServidores> servidores);
 }

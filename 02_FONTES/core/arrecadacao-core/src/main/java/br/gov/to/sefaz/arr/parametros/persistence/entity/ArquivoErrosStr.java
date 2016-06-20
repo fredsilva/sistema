@@ -24,6 +24,8 @@ import javax.validation.constraints.NotNull;
 @IdClass(ArquivoErrosStrPK.class)
 public class ArquivoErrosStr extends AbstractEntity<ArquivoErrosStrPK> {
 
+    private static final long serialVersionUID = 2910996074057949855L;
+
     @Id
     @NotNull(message = "O campo Código do Arquivo STR é obrigatório e deve ser informado!")
     @Max(value = 9999999999L, message = "O campo Código do Arquivo STR deve conter no máximo 10 digitos!")

@@ -101,6 +101,10 @@ public class Bancos extends AbstractEntity<Integer> {
         this.cnpjRaiz = cnpjRaiz;
     }
 
+    public String getCompositeName() {
+        return getIdBanco() + " - " + getNomeBanco();
+    }
+
     @Override
     public boolean equals(Object object) {
         if (this == object) {

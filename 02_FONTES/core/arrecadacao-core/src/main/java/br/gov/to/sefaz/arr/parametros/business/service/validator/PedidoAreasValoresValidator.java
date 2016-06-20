@@ -6,9 +6,11 @@ import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.violation.CustomViolation;
 import br.gov.to.sefaz.util.message.MessageUtil;
 import br.gov.to.sefaz.util.message.SourceBundle;
+
 import org.springframework.stereotype.Component;
 
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 /**
@@ -30,7 +32,8 @@ public class PedidoAreasValoresValidator implements ServiceValidator<PedidoAreas
     public Set<CustomViolation> validate(PedidoAreas target) {
         Set<CustomViolation> customViolations = new HashSet<>();
 
-        if (target.getValorInicial().compareTo(target.getValorFinal()) >= 0) {
+        if (!Objects.isNull(target.getValorInicial())
+                && target.getValorInicial().compareTo(target.getValorFinal()) >= 0) {
             String codigoCadastrado = SourceBundle.getMessage(
                     MessageUtil.ARR, "parametros.pedidoAreasValoresValidator.message");
             customViolations.add(new CustomViolation(codigoCadastrado));

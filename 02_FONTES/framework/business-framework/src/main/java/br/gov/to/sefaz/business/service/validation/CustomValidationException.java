@@ -1,7 +1,8 @@
 package br.gov.to.sefaz.business.service.validation;
 
 import br.gov.to.sefaz.business.service.validation.violation.CustomViolation;
-import org.json.JSONArray;
+import br.gov.to.sefaz.exception.HandledSystemException;
+import br.gov.to.sefaz.util.json.JsonMapperUtils;
 
 import java.util.Set;
 import javax.validation.ValidationException;
@@ -13,7 +14,7 @@ import javax.validation.ValidationException;
  * @author <a href="mailto:gabriel.santos@ntconsult.com.br">gabriel.santos</a>
  * @since 28/04/2016 17:48:00
  */
-public class CustomValidationException extends ValidationException {
+public class CustomValidationException extends ValidationException implements HandledSystemException {
 
     private static final long serialVersionUID = 3452808864129438820L;
 
@@ -26,8 +27,6 @@ public class CustomValidationException extends ValidationException {
 
     @Override
     public String getMessage() {
-        JSONArray jsonArray = new JSONArray(customViolations);
-
-        return jsonArray.toString();
+        return JsonMapperUtils.objectToJson(customViolations);
     }
 }

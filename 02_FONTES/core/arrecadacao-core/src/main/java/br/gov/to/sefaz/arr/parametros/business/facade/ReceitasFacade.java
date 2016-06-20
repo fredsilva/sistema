@@ -19,19 +19,18 @@ import java.util.List;
 public interface ReceitasFacade extends CrudFacade<Receitas, Integer> {
 
     /**
-     * Acessa o {@link br.gov.to.sefaz.arr.parametros.business.service.ReceitasService} para pesquisar na base
-     * de dados as {@link br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas} que satisfazem o filtro
-     * passado.
+     * Acessa o {@link br.gov.to.sefaz.arr.parametros.business.service.ReceitasService} para pesquisar na base de dados
+     * as {@link br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas} que satisfazem o filtro passado.
      *
      * @param filter que contém os campos a serem pesquisados
-     * @return todas as {@link br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas} que se enquandram na
-     *     consulta do filtro.
+     * @return todas as {@link br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas} que se enquandram na consulta
+     *         do filtro.
      */
     List<Receitas> find(ReceitasFilter filter);
 
     /**
-     * Acessa o {@link br.gov.to.sefaz.arr.parametros.business.service.PlanoContasService} para pesquisar na base
-     * de dados todos os {@link br.gov.to.sefaz.arr.parametros.persistence.entity.PlanoContas}.
+     * Acessa o {@link br.gov.to.sefaz.arr.parametros.business.service.PlanoContasService} para pesquisar na base de
+     * dados todos os {@link br.gov.to.sefaz.arr.parametros.persistence.entity.PlanoContas}.
      *
      * @return todos os {@link br.gov.to.sefaz.arr.parametros.persistence.entity.PlanoContas}
      */
@@ -39,8 +38,8 @@ public interface ReceitasFacade extends CrudFacade<Receitas, Integer> {
 
     /**
      * Acessa o {@link br.gov.to.sefaz.arr.parametros.business.service.ReceitasTaxasService} para obter as
-     * {@link br.gov.to.sefaz.arr.parametros.persistence.entity.ReceitasTaxas} por um
-     * determinado {@link br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas#idReceita}.
+     * {@link br.gov.to.sefaz.arr.parametros.persistence.entity.ReceitasTaxas} por um determinado
+     * {@link br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas#idReceita}.
      *
      * @param idReceita código da receita para realizar a consulta
      * @return um lista com todas as taxas que pertencem a uma receita
@@ -49,11 +48,18 @@ public interface ReceitasFacade extends CrudFacade<Receitas, Integer> {
 
     /**
      * Acessa o {@link br.gov.to.sefaz.arr.parametros.business.service.ReceitasRepasseService} para obter as
-     * {@link br.gov.to.sefaz.arr.parametros.persistence.entity.ReceitasRepasse} por um
-     * determinado {@link br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas#idReceita}.
+     * {@link br.gov.to.sefaz.arr.parametros.persistence.entity.ReceitasRepasse} por um determinado
+     * {@link br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas#idReceita}.
      *
      * @param idReceita código da receita para realizar a consulta
      * @return um lista com todos os repasses que pertencem a uma receita
      */
     Collection<ReceitasRepasse> getReceitasRepasseByIdReceita(Integer idReceita);
+
+    /**
+     * Valida os repsses das receitas conforme são adicionadas.
+     *
+     * @param receitasRepasse Repasse da receita
+     */
+    void validateReceitasRepasse(ReceitasRepasse receitasRepasse);
 }

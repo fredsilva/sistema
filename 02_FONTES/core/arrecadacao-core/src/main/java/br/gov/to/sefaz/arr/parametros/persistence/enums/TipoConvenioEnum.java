@@ -1,6 +1,6 @@
 package br.gov.to.sefaz.arr.parametros.persistence.enums;
 
-import br.gov.to.sefaz.business.managedbean.EnumCodeLabel;
+import br.gov.to.sefaz.persistence.enums.EnumCodeLabel;
 
 import java.util.stream.Stream;
 
@@ -12,9 +12,9 @@ import java.util.stream.Stream;
  */
 public enum TipoConvenioEnum implements EnumCodeLabel<Integer> {
 
-    ICMS(27, "ICMS"), IPVA(173, "IPVA"), OUTRAS_RECEITAS_TRIBUTARIAS(174, "OUTRAS RECEITAS TRIBUTÁRIAS"),
-    OUTRAS_RECEITAS_NAO_TRIBUTARIAS(175, "OUTRAS RECEITAS NÃO TRIBUTÁRIAS"),
-    GNRE(316, "GNRE"), SIMPLES_NACIONAL(607, "SIMPLES NACIONAL");
+    ICMS(27, "ICMS"), IPVA(173, "IPVA"), OUTRAS_RECEITAS_TRIBUTARIAS(174,
+            "OUTRAS RECEITAS TRIBUTÁRIAS"), OUTRAS_RECEITAS_NAO_TRIBUTARIAS(175,
+                    "OUTRAS RECEITAS NÃO TRIBUTÁRIAS"), GNRE(316, "GNRE"), SIMPLES_NACIONAL(607, "SIMPLES NACIONAL");
 
     private final Integer code;
     private final String label;

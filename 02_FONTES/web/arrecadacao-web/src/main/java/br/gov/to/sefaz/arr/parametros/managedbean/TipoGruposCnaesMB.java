@@ -71,6 +71,10 @@ public class TipoGruposCnaesMB extends DefaultCrudMB<TipoGruposCnaes, Integer> {
         return selectedCnaes;
     }
 
+    /**
+     * Método para buscar todos os CNAEs cadastrados na base.
+     * @return lista de {@link AtividadeEconomica}.
+     */
     public Collection<AtividadeEconomica> getAllCnaes() {
         if (allCnaes == null) {
             allCnaes = getFacade().findAllCnaes();
@@ -79,11 +83,17 @@ public class TipoGruposCnaesMB extends DefaultCrudMB<TipoGruposCnaes, Integer> {
         return allCnaes;
     }
 
+    /**
+     * Método para carregar os CNAES selecionados.
+     */
     public void loadSelectedCnaes() {
         clearCnaesTables();
         selectedCnaes.addAll(getFacade().findAllCnaesByGrupo(getDto().getIdGrupoCnae()));
     }
 
+    /**
+     * Adiciona um CNAE à tela.
+     */
     public void addCnaeToDto() {
         getFacade().validateGruposCnaes(buildGruposCnae(selectedIdCnaeDto));
 
@@ -92,21 +102,33 @@ public class TipoGruposCnaesMB extends DefaultCrudMB<TipoGruposCnaes, Integer> {
                 .findFirst().get());
     }
 
+    /**
+     * Remove um CNAE específico da tela.
+     */
     public void removeCnaeFromDto() {
         getCnaesDto().removeIf(c -> c.getCodigoCnae().equals(selectedIdCnaeDto));
     }
 
+    /**
+     * Método para remover CNAE do grupo selecionado.
+     */
     public void removeCnaeFromGrupo() {
         getFacade().removeCnaeFromGrupo(getDto().getIdGrupoCnae(), selectedIdCnaeDto);
         getSelectedCnaes().removeIf(cf -> cf.getCodigoCnae().equals(selectedIdCnaeDto));
     }
 
+    /**
+     * Método para limpar as tabelas da tela.
+     */
     public void clearCnaesTables() {
         getDto().getGruposCnae().clear();
         selectedCnaes.clear();
         cnaesDto.clear();
     }
 
+    /**
+     * Método para buscar {@link TipoGruposCnaes} de acordo com parâmetros descritos em tela.
+     */
     public void search() {
         List<TipoGruposCnaes> resultList = getFacade().find(filter);
 
@@ -143,13 +165,5 @@ public class TipoGruposCnaesMB extends DefaultCrudMB<TipoGruposCnaes, Integer> {
         List<GruposCnae> gruposCnaes = buildGruposCnae();
         gruposCnaes.add(new GruposCnae(getDto().getIdGrupoCnae(), codigoCnae));
         return gruposCnaes;
-    }
-
-    public String getCnaeLabel(AtividadeEconomica cnaes) {
-        return cnaes.getCodigoCnae() + " " + cnaes.getDescricaoCnae();
-    }
-
-    public String getTipoCnaeLabel(TipoGruposCnaes cnae) {
-        return cnae.getId() + " - " + cnae.getDescricaoGrupo();
     }
 }

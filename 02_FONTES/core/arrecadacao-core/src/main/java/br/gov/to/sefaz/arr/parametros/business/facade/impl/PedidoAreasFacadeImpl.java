@@ -13,7 +13,7 @@ import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreasServidores;
 import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreasServidoresPK;
 import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoTipos;
 import br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade;
-import br.gov.to.sefaz.seg.business.service.UsuarioSistemaService;
+import br.gov.to.sefaz.seg.business.gestao.service.UsuarioSistemaService;
 import br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

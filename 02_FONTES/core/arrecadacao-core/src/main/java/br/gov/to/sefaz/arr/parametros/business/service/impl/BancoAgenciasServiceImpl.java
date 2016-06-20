@@ -9,8 +9,6 @@ import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.ValidationSuite;
 import br.gov.to.sefaz.persistence.enums.SituacaoEnum;
 import br.gov.to.sefaz.persistence.predicate.AndPredicateBuilder;
-import br.gov.to.sefaz.util.message.MessageUtil;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
@@ -43,7 +41,10 @@ public class BancoAgenciasServiceImpl extends DefaultCrudService<BancoAgencias, 
 
     @Override
     public Collection<BancoAgencias> findByIdBanco(Integer idBanco) {
-        return getRepository().findByIdBanco(idBanco);
+        return getRepository().findAll((root, query, cb) -> new AndPredicateBuilder(root, cb)
+                .equalsTo("idBanco", idBanco)
+                .fetch("bancos")
+                .build());
     }
 
     @Override
@@ -52,8 +53,7 @@ public class BancoAgenciasServiceImpl extends DefaultCrudService<BancoAgencias, 
     }
 
     @Override
-    public void validateSave(@ValidationSuite(context = ValidationContext.SAVE, isCollection = true,
-            clazz = BancoAgencias.class) Collection<BancoAgencias> list) {
+    public void validateSave(@ValidationSuite(context = ValidationContext.SAVE) Collection<BancoAgencias> list) {
         // Método que valida as ações de SAVE de uma coleção de agências através da anotação de atributo.
     }
 
@@ -63,8 +63,7 @@ public class BancoAgenciasServiceImpl extends DefaultCrudService<BancoAgencias, 
     }
 
     @Override
-    public void validateUpdate(@ValidationSuite(context = ValidationContext.UPDATE, isCollection = true,
-            clazz = BancoAgencias.class) Collection<BancoAgencias> list) {
+    public void validateUpdate(@ValidationSuite(context = ValidationContext.UPDATE) Collection<BancoAgencias> list) {
         // Método que valida as ações de UPDATE de uma coleção de agências através da anotação de atributo.
     }
 
@@ -76,11 +75,9 @@ public class BancoAgenciasServiceImpl extends DefaultCrudService<BancoAgencias, 
         if (getRepository().existsLockReference(id.getIdBanco(), id.getIdAgencia())) {
             getRepository().updateSituacao(id.getIdBanco(), id.getIdAgencia(), SituacaoEnum.CANCELADO);
             bancoAgencias = Optional.of(getRepository().findOne(id));
-            MessageUtil.addMesage(MessageUtil.ARR, "parametros.delecao.logica");
         } else {
             super.delete(id);
             bancoAgencias = Optional.empty();
-            MessageUtil.addMesage(MessageUtil.ARR, "parametros.delecao.fisica");
         }
 
         return bancoAgencias;

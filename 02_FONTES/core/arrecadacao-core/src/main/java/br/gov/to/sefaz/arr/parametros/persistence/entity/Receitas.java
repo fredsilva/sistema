@@ -231,8 +231,16 @@ public class Receitas extends AbstractEntity<Integer> {
         this.receitasTaxasCollection = receitasTaxas;
     }
 
+    /**
+     * Adiciona uma taxa à Receita.
+     * @param receitasTaxas objeto de ReceitasTaxas.
+     */
     public void addTaxa(ReceitasTaxas receitasTaxas) {
         getReceitasTaxas().add(receitasTaxas);
+    }
+
+    public String getCompositeName() {
+        return getIdReceita() + " - " + getDescricaoReceita();
     }
 
     @Override

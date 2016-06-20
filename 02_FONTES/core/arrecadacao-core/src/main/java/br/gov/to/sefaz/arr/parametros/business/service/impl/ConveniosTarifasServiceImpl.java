@@ -10,6 +10,7 @@ import br.gov.to.sefaz.business.service.validation.CustomValidationException;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.ValidationSuite;
 import br.gov.to.sefaz.business.service.validation.violation.CustomViolation;
+import br.gov.to.sefaz.persistence.predicate.AndPredicateBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
@@ -47,7 +48,9 @@ public class ConveniosTarifasServiceImpl extends DefaultCrudService<ConveniosTar
 
     @Override
     public Collection<ConveniosTarifas> getAllConveniosTarifasByIdConvenioArrec(Long idConvenio) {
-        return getRepository().getAllConveniosTarifasByIdConvenioArrec(idConvenio);
+        return getRepository().findAll((root, query, cb) -> new AndPredicateBuilder(root, cb)
+                .equalsTo("idConveniosArrec", idConvenio)
+                .build());
     }
 
     @Override
@@ -72,8 +75,7 @@ public class ConveniosTarifasServiceImpl extends DefaultCrudService<ConveniosTar
     }
 
     @Override
-    public Collection<ConveniosTarifas> save(@ValidationSuite(isCollection = true,
-            clazz = ConveniosTarifas.class, context = ValidationContext.SAVE)
+    public Collection<ConveniosTarifas> save(@ValidationSuite(context = ValidationContext.SAVE)
             Collection<ConveniosTarifas> list) {
         return super.save(list);
     }

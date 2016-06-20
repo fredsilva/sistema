@@ -26,6 +26,8 @@ import javax.validation.constraints.Size;
 @SuppressWarnings("PMD.TooManyFields")
 public class ArquivoRecepcao extends AbstractEntity<Long> {
 
+    private static final long serialVersionUID = -6917165011320850797L;
+
     @Id
     @NotNull
     @Column(name = "ID_ARQUIVOS", nullable = false)

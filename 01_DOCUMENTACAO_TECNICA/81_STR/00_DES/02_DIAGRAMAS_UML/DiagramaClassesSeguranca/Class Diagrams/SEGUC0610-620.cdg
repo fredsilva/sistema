@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="SecurityApplicationInitializer" package="br.gov.to.sefaz.seg.configuration" visibility="public" xPosition="1615.0" yPosition="64.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="onStartup" returnType="void" visibility="public">
+          <Argument type="ServletContext" name="servletContext"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DetalheNavegacaoRequestBuilder" package="br.gov.to.sefaz.seg.filter" visibility="public" xPosition="51.0" yPosition="35.0">
+      <Fields>
+        <Field name="detalheNavegacao" type="DetalheNavegacao" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="withHttpRequest" returnType="DetalheNavegacaoRequestBuilder" visibility="public">
+          <Argument type="HttpServletRequest" name="request"/>
+        </Method>
+        <Method name="withCpfUsuario" returnType="DetalheNavegacaoRequestBuilder" visibility="public">
+          <Argument type="String" name="cpfUsuario"/>
+        </Method>
+        <Method name="withDataOperacao" returnType="DetalheNavegacaoRequestBuilder" visibility="public">
+          <Argument type="LocalDateTime" name="localDateTime"/>
+        </Method>
+        <Method name="withElapsedTime" returnType="DetalheNavegacaoRequestBuilder" visibility="public">
+          <Argument type="long" name="elapsedTime"/>
+        </Method>
+        <Method name="build" returnType="DetalheNavegacao" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="LogNavegacaoFilterUtil" package="br.gov.to.sefaz.seg.filter" visibility="public" xPosition="575.0" yPosition="324.0">
+      <Fields>
+        <Field name="logNavegacaoService" type="LogNavegacaoService" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="saveLogNavegacao" returnType="void" visibility="public">
+          <Argument type="HttpServletRequest" name="request"/>
+          <Argument type="String" name="cpfUsuario"/>
+          <Argument type="LocalDateTime" name="localDateTime"/>
+          <Argument type="TipoOperacaoEnum" name="tipoOperacao"/>
+          <Argument type="long" name="elapsedTime"/>
+        </Method>
+        <Method name="createLogNavegacao" returnType="LogNavegacao" visibility="private">
+          <Argument type="String" name="cpfUsuario"/>
+          <Argument type="LocalDateTime" name="localDateTime"/>
+          <Argument type="DetalheNavegacao" name="detalheNavegacao"/>
+          <Argument type="TipoOperacaoEnum" name="tipoOperacao"/>
+        </Method>
+        <Method name="createDetalheNavegacao" returnType="DetalheNavegacao" visibility="private">
+          <Argument type="HttpServletRequest" name="request"/>
+          <Argument type="String" name="cpfUsuario"/>
+          <Argument type="LocalDateTime" name="localDateTime"/>
+          <Argument type="long" name="elapsedTime"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="NavegacaoFilter" package="br.gov.to.sefaz.seg.filter" visibility="public" xPosition="820.0" yPosition="64.0">
+      <Fields>
+        <Field name="navegacaoFilterUtil" type="LogNavegacaoFilterUtil" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="init" returnType="void" visibility="public">
+          <Argument type="FilterConfig" name="filterConfig"/>
+        </Method>
+        <Method name="doFilter" returnType="void" visibility="public">
+          <Argument type="ServletRequest" name="req"/>
+          <Argument type="ServletResponse" name="res"/>
+          <Argument type="FilterChain" name="chain"/>
+        </Method>
+        <Method name="destroy" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="LogNavegacaoServiceImpl" package="br.gov.to.sefaz.seg.business.gestao.service.impl" visibility="public" xPosition="1560.0" yPosition="515.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="LogNavegacaoRepository" name="repository"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="LogNavegacaoBuilder" package="br.gov.to.sefaz.seg.business.gestao.builder" visibility="public" xPosition="1443.0" yPosition="846.0">
+      <Fields>
+        <Field name="logNavegacao" type="LogNavegacao" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="withCpfUsuario" returnType="LogNavegacaoBuilder" visibility="public">
+          <Argument type="String" name="cpfUsuario"/>
+        </Method>
+        <Method name="withDataOperacao" returnType="LogNavegacaoBuilder" visibility="public">
+          <Argument type="LocalDateTime" name="dateTime"/>
+        </Method>
+        <Method name="withDetalheNavegacao" returnType="LogNavegacaoBuilder" visibility="public">
+          <Argument type="DetalheNavegacao" name="detalheNavegacao"/>
+        </Method>
+        <Method name="withTipoOperacao" returnType="LogNavegacaoBuilder" visibility="public">
+          <Argument type="TipoOperacaoEnum" name="tipoOperacao"/>
+        </Method>
+        <Method name="build" returnType="LogNavegacao" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="DetalheNavegacao" package="br.gov.to.sefaz.seg.business.gestao.builder" visibility="public" xPosition="123.0" yPosition="324.0">
+      <Fields>
+        <Field name="cpfUsuario" type="String" visibility="private"/>
+        <Field name="serverName" type="String" visibility="private"/>
+        <Field name="userAgent" type="String" visibility="private"/>
+        <Field name="language" type="String" visibility="private"/>
+        <Field name="httpMethod" type="String" visibility="private"/>
+        <Field name="country" type="String" visibility="private"/>
+        <Field name="pathInfo" type="String" visibility="private"/>
+        <Field name="parameterMap" type="Map&lt;String, String[]&gt;" visibility="private"/>
+        <Field name="localAddr" type="String" visibility="private"/>
+        <Field name="remoteAddr" type="String" visibility="private"/>
+        <Field name="resource" type="String" visibility="private"/>
+        <Field name="timeStamp" type="String" visibility="private"/>
+        <Field name="elapsedTime" type="long" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getCpfUsuario" returnType="String" visibility="public"/>
+        <Method name="setCpfUsuario" returnType="void" visibility="public">
+          <Argument type="String" name="cpfUsuario"/>
+        </Method>
+        <Method name="getServerName" returnType="String" visibility="public"/>
+        <Method name="setServerName" returnType="void" visibility="public">
+          <Argument type="String" name="serverName"/>
+        </Method>
+        <Method name="getUserAgent" returnType="String" visibility="public"/>
+        <Method name="setUserAgent" returnType="void" visibility="public">
+          <Argument type="String" name="userAgent"/>
+        </Method>
+        <Method name="getLanguage" returnType="String" visibility="public"/>
+        <Method name="setLanguage" returnType="void" visibility="public">
+          <Argument type="String" name="language"/>
+        </Method>
+        <Method name="getHttpMethod" returnType="String" visibility="public"/>
+        <Method name="setHttpMethod" returnType="void" visibility="public">
+          <Argument type="String" name="httpMethod"/>
+        </Method>
+        <Method name="getCountry" returnType="String" visibility="public"/>
+        <Method name="setCountry" returnType="void" visibility="public">
+          <Argument type="String" name="country"/>
+        </Method>
+        <Method name="getPathInfo" returnType="String" visibility="public"/>
+        <Method name="setPathInfo" returnType="void" visibility="public">
+          <Argument type="String" name="pathInfo"/>
+        </Method>
+        <Method name="getParameterMap" returnType="Map&lt;String, String[]&gt;" visibility="public"/>
+        <Method name="setParameterMap" returnType="void" visibility="public">
+          <Argument type="Map&lt;String, String[]&gt;" name="parameterMap"/>
+        </Method>
+        <Method name="getLocalAddr" returnType="String" visibility="public"/>
+        <Method name="setLocalAddr" returnType="void" visibility="public">
+          <Argument type="String" name="localAddr"/>
+        </Method>
+        <Method name="getRemoteAddr" returnType="String" visibility="public"/>
+        <Method name="setRemoteAddr" returnType="void" visibility="public">
+          <Argument type="String" name="remoteAddr"/>
+        </Method>
+        <Method name="getResource" returnType="String" visibility="public"/>
+        <Method name="setResource" returnType="void" visibility="public">
+          <Argument type="String" name="resource"/>
+        </Method>
+        <Method name="getTimeStamp" returnType="String" visibility="public"/>
+        <Method name="setTimeStamp" returnType="void" visibility="public">
+          <Argument type="String" name="timeStamp"/>
+        </Method>
+        <Method name="getElapsedTime" returnType="long" visibility="public"/>
+        <Method name="setElapsedTime" returnType="void" visibility="public">
+          <Argument type="long" name="elapsedTime"/>
+        </Method>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="LogNavegacao" package="br.gov.to.sefaz.seg.persistence.entity" visibility="public" xPosition="859.0" yPosition="579.0">
+      <Fields>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="identificacaoNavegacao" type="Long" visibility="private"/>
+        <Field name="dataOperacao" type="LocalDateTime" visibility="private"/>
+        <Field name="tipoOperacao" type="TipoOperacaoEnum" visibility="private"/>
+        <Field name="detalheNavegacao" type="Clob" visibility="private"/>
+        <Field name="usuarioSistema" type="UsuarioSistema" visibility="private"/>
+        <Field name="cpfUsuario" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="getIdentificacaoNavegacao" returnType="Long" visibility="public"/>
+        <Method name="setIdentificacaoNavegacao" returnType="void" visibility="public">
+          <Argument type="Long" name="identificacaoNavegacao"/>
+        </Method>
+        <Method name="getDataOperacao" returnType="LocalDateTime" visibility="public"/>
+        <Method name="setDataOperacao" returnType="void" visibility="public">
+          <Argument type="LocalDateTime" name="dataOperacao"/>
+        </Method>
+        <Method name="getTipoOperacao" returnType="TipoOperacaoEnum" visibility="public"/>
+        <Method name="setTipoOperacao" returnType="void" visibility="public">
+          <Argument type="TipoOperacaoEnum" name="tipoOperacao"/>
+        </Method>
+        <Method name="getDetalheNavegacao" returnType="Clob" visibility="public"/>
+        <Method name="setDetalheNavegacao" returnType="void" visibility="public">
+          <Argument type="Clob" name="detalheNavegacao"/>
+        </Method>
+        <Method name="getUsuarioSistema" returnType="UsuarioSistema" visibility="public"/>
+        <Method name="setUsuarioSistema" returnType="void" visibility="public">
+          <Argument type="UsuarioSistema" name="usuarioSistema"/>
+        </Method>
+        <Method name="getCpfUsuario" returnType="String" visibility="public"/>
+        <Method name="setCpfUsuario" returnType="void" visibility="public">
+          <Argument type="String" name="cpfUsuario"/>
+        </Method>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="LogNavegacaoService" package="br.gov.to.sefaz.seg.business.gestao.service" visibility="public" xPosition="1671.0" yPosition="367.0">
+      <Methods/>
+    </Interface>
+    <Interface name="LogNavegacaoRepository" package="br.gov.to.sefaz.seg.persistence.repository" visibility="public" xPosition="1662.0" yPosition="721.0">
+      <Methods/>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="logNavegacao" source="br.gov.to.sefaz.seg.business.gestao.builder.LogNavegacaoBuilder" target="br.gov.to.sefaz.seg.persistence.entity.LogNavegacao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="detalheNavegacao" source="br.gov.to.sefaz.seg.filter.DetalheNavegacaoRequestBuilder" target="br.gov.to.sefaz.seg.business.gestao.builder.DetalheNavegacao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.seg.business.gestao.service.impl.LogNavegacaoServiceImpl" target="br.gov.to.sefaz.seg.business.gestao.service.LogNavegacaoService"/>
+    <UseRelation name="" source="br.gov.to.sefaz.seg.persistence.repository.LogNavegacaoRepository" target="br.gov.to.sefaz.seg.persistence.entity.LogNavegacao" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="navegacaoFilterUtil" source="br.gov.to.sefaz.seg.filter.NavegacaoFilter" target="br.gov.to.sefaz.seg.filter.LogNavegacaoFilterUtil" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.seg.filter.LogNavegacaoFilterUtil" target="br.gov.to.sefaz.seg.business.gestao.builder.DetalheNavegacao" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="logNavegacaoService" source="br.gov.to.sefaz.seg.filter.LogNavegacaoFilterUtil" target="br.gov.to.sefaz.seg.business.gestao.service.LogNavegacaoService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="br.gov.to.sefaz.seg.business.gestao.service.impl.LogNavegacaoServiceImpl" target="br.gov.to.sefaz.seg.persistence.repository.LogNavegacaoRepository" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.seg.filter.LogNavegacaoFilterUtil" target="br.gov.to.sefaz.seg.persistence.entity.LogNavegacao" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

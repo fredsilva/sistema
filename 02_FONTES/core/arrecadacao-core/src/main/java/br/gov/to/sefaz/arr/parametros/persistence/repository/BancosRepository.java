@@ -26,13 +26,41 @@ public interface BancosRepository extends BaseRepository<Bancos, Integer> {
             + " OR EXISTS(SELECT ca.id_banco FROM sefaz_arr.ta_convenios_arrec ca WHERE ca.id_banco = bc.id_banco)"
             + " OR EXISTS(SELECT mn.id_banco FROM sefaz_arr.ta_municipios_contas mn WHERE mn.id_banco = bc.id_banco))";
 
+    /**
+     * Se existe alguma referencia que impede este registro de ser removido.
+     *
+     * @param id id do registro
+     * @return se existe alguma referencia impeditiva
+     */
     @Query(value = EXISTS_LOCK_REFERENCE, nativeQuery = true)
     Boolean existsLockReference(@Param(value = "id") Integer id);
 
+    /**
+     * Altera a situação de um registro.
+     *
+     * @param id id do registro
+     * @param situacao nova situação do registro
+     */
     @Modifying
     @Query("UPDATE Bancos SET situacao = :situacao WHERE id_banco = :id")
-    int updateSituacao(@Param("id") Integer id, @Param("situacao") SituacaoEnum situacao);
+    void updateSituacao(@Param("id") Integer id, @Param("situacao") SituacaoEnum situacao);
 
+    /**
+     * Altera a situação das agências do banco.
+     *
+     * @param id id do banco
+     * @param situacao nova situação do registro
+     */
+    @Modifying
+    @Query("UPDATE BancoAgencias SET situacao = :situacao WHERE id_banco = :id")
+    void updateSituacaoAgencias(@Param("id") Integer id, @Param("situacao") SituacaoEnum situacao);
+
+    /**
+     * Busca o CNPJ raiz e um Banco.
+     *
+     * @param idBanco id do banco
+     * @return CNPJ raiz do banco
+     */
     @Query(value = "SELECT b.cnpjRaiz FROM Bancos b where b.idBanco = :idBanco")
     Integer findCnpjRaizByIdBanco(@Param(value = "idBanco") Integer idBanco);
 }

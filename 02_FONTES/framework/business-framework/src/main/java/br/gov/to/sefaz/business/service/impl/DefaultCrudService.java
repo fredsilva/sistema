@@ -7,7 +7,6 @@ import br.gov.to.sefaz.persistence.entity.AbstractEntity;
 import br.gov.to.sefaz.persistence.repository.BaseRepository;
 
 import org.apache.commons.collections4.IterableUtils;
-import org.apache.commons.collections4.IteratorUtils;
 import org.springframework.data.domain.Sort;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -20,6 +19,7 @@ import java.util.Optional;
  *
  * @param <E> Entidade que reflete o presente service.
  * @param <I> Id ou pk da entidade.
+ *
  * @author <a href="mailto:cristiano.luis@ntconsult.com.br">cristiano.luis</a>
  * @since 22/04/2016 16:20:00
  */
@@ -67,9 +67,7 @@ public class DefaultCrudService<E extends AbstractEntity<I>, I extends Serializa
      */
     @Override
     public E save(@ValidationSuite(context = ValidationContext.SAVE) E entity) {
-        E save = repository.save(entity);
-        showSaveMessage();
-        return save;
+        return repository.save(entity);
     }
 
     /**
@@ -77,14 +75,7 @@ public class DefaultCrudService<E extends AbstractEntity<I>, I extends Serializa
      */
     @Override
     public Collection<E> save(Collection<E> list) {
-        return IteratorUtils.toList(repository.save(list).iterator());
-    }
-
-    /**
-     * Métodos para responsavel pela exibição de mensagens ao fim do {@link #save(Object)}.
-     */
-    protected void showSaveMessage() {
-        // Caso precise de mensagens no save este metodo deve ser sobreescrito.
+        return IterableUtils.toList(repository.save(list));
     }
 
     /**
@@ -92,16 +83,7 @@ public class DefaultCrudService<E extends AbstractEntity<I>, I extends Serializa
      */
     @Override
     public E update(@ValidationSuite(context = ValidationContext.UPDATE) E entity) {
-        E update = repository.save(entity);
-        showUpdateMessage();
-        return update;
-    }
-
-    /**
-     * Métodos para responsavel pela exibição de mensagens ao fim do {@link #update(Object)}.
-     */
-    protected void showUpdateMessage() {
-        // Caso precise de mensagens no update este metodo deve ser sobreescrito.
+        return repository.save(entity);
     }
 
     /**
@@ -110,7 +92,6 @@ public class DefaultCrudService<E extends AbstractEntity<I>, I extends Serializa
     @Override
     public Optional<E> delete(I id) {
         repository.delete(id);
-        showDeleteMessage();
         return Optional.empty();
     }
 
@@ -120,13 +101,6 @@ public class DefaultCrudService<E extends AbstractEntity<I>, I extends Serializa
         for (I id : ids) {
             repository.delete(id);
         }
-    }
-
-    /**
-     * Métodos para responsavel pela exibição de mensagens ao fim do {@link #delete(java.io.Serializable)}.
-     */
-    protected void showDeleteMessage() {
-        // Caso precise de mensagens no delete este metodo deve ser sobreescrito.
     }
 
     protected BaseRepository<E, I> getRepository() {

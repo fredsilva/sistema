@@ -1,20 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>br.gov.to.sefaz</groupId>
         <artifactId>sat</artifactId>
-        <version>0.1.0-rc2</version>
+        <version>0.2.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>framework</artifactId>
     <packaging>pom</packaging>
 
     <name>framework</name>
-    <description>Módulo do framework do Sistema. O presente está subdividido em submódulos que correspondem às camadas da aplicação do sistema, um submódulo de utilidades ou úteis e um submódulo de exceções.</description>
+    <description>Módulo do framework do Sistema. O presente está subdividido em submódulos que correspondem às camadas
+        da aplicação do sistema, um submódulo de utilidades ou úteis e um submódulo de exceções.
+    </description>
 
     <modules>
         <module>util-framework</module>
@@ -22,5 +24,6 @@
         <module>persistence-framework</module>
         <module>business-framework</module>
         <module>presentation-framework</module>
+        <module>interceptor-framework</module>
     </modules>
 </project>

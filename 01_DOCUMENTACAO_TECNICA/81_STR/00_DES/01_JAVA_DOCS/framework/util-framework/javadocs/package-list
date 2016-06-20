@@ -1,0 +1,10 @@
+br.gov.to.sefaz.util.application
+br.gov.to.sefaz.util.certificado
+br.gov.to.sefaz.util.configuration
+br.gov.to.sefaz.util.exception
+br.gov.to.sefaz.util.json
+br.gov.to.sefaz.util.mail
+br.gov.to.sefaz.util.mail.impl
+br.gov.to.sefaz.util.message
+br.gov.to.sefaz.util.properties
+br.gov.to.sefaz.util.session

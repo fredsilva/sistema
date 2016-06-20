@@ -21,35 +21,70 @@ public final class MessageUtil {
         // Todos os métodos são statics.
     }
 
+    /**
+     * Adiciona mensagem ao SourceBundle para ser mostrado em tela.
+     * @param bundle bundle no qual está presente a mensagem.
+     * @param severity severidade do erro.
+     * @param key chave para ser buscada a mensagem no bundle.
+     */
     public static void addMesage(String bundle, Severity severity, String key) {
         FacesMessage msg = getFacesMessage(bundle, severity, key);
         FacesContext.getCurrentInstance().addMessage(null, msg);
     }
 
+    /**
+     * Adiciona mensagem ao SourceBundle para ser mostrado em tela.
+     * @param severity severidade do erro.
+     * @param key chave para ser buscada a mensagem no bundle.
+     */
     public static void addMesage(Severity severity, String key) {
         addMesage(null, severity, key);
     }
 
+    /**
+     * Adiciona mensagem ao SourceBundle para ser mostrado em tela.
+     * @param bundle bundle no qual está presente a mensagem.
+     * @param key chave para ser buscada a mensagem no bundle.
+     */
     public static void addMesage(String bundle, String key) {
         addMesage(bundle, null, key);
     }
 
+    /**
+     * Adiciona mensagem ao SourceBundle para ser mostrado em tela.
+     * @param key chave para ser buscada a mensagem no bundle.
+     */
     public static void addMesage(String key) {
         addMesage(null, null, key);
     }
 
+    /**
+     * Adiciona mensagem ao SourceBundle para ser mostrado em tela.
+     * @param bundle bundle no qual está presente a mensagem.
+     * @param severity severidade do erro.
+     * @param keys chave para ser buscada a mensagem no bundle.
+     */
     public static void addMessages(String bundle, Severity severity, String... keys) {
         for (String key : keys) {
             addMesage(bundle, severity, key);
         }
     }
 
+    /**
+     * Adiciona mensagem ao SourceBundle para ser mostrado em tela.
+     * @param severity severidade da mensagem.
+     * @param keys chave para ser buscada no bundle.
+     */
     public static void addMessages(Severity severity, String... keys) {
         for (String key : keys) {
             addMesage(null, severity, key);
         }
     }
 
+    /**
+     * Adiciona mensagem ao SourceBundle para ser mostrado em tela.
+     * @param keys chave para ser buscada no bundle.
+     */
     public static void addMessages(String... keys) {
         for (String key : keys) {
             addMesage(null, null, key);

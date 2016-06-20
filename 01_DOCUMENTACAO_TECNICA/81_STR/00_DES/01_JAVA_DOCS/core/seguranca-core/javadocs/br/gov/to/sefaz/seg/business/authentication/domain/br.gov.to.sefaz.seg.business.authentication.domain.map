@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./UsuarioSistemaAuthentication.html" title="br.gov.to.sefaz.seg.business.authentication.domain.UsuarioSistemaAuthentication" alt="" coords="16,37,835,251"/>
+<area shape="rect" id="node1" href="./UsuarioSistemaAuthentication.html" title="&lt;TABLE&gt;" alt="" coords="5,31,845,257"/>
+<area shape="rect" id="node2_1" href="./RoleGroupType.html" title="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupType" alt="" coords="880,89,992,199"/>
+<area shape="rect" id="node2" href="./RoleGroupType.html" title="&lt;TABLE&gt;" alt="" coords="869,83,1003,205"/>
+<area shape="rect" id="node3_2" href="./RoleGroupManager.html" title="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupManager" alt="" coords="1037,11,1469,277"/>
+<area shape="rect" id="node3" href="./RoleGroupManager.html" title="&lt;TABLE&gt;" alt="" coords="1027,5,1480,283"/>
+<area shape="rect" id="node4_3" href="./RoleGroupKey.html" title="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupKey" alt="" coords="1515,37,1939,251"/>
+<area shape="rect" id="node4" href="./RoleGroupKey.html" title="&lt;TABLE&gt;" alt="" coords="1504,31,1949,257"/>
+<area shape="rect" id="node5_4" href="./ResetPasswordDto.html" title="br.gov.to.sefaz.seg.business.authentication.domain.ResetPasswordDto" alt="" coords="1984,37,2283,251"/>
+<area shape="rect" id="node5" href="./ResetPasswordDto.html" title="&lt;TABLE&gt;" alt="" coords="1973,31,2293,257"/>
+<area shape="rect" id="node6_5" href="./LoginDto.html" title="br.gov.to.sefaz.seg.business.authentication.domain.LoginDto" alt="" coords="2329,37,2581,251"/>
+<area shape="rect" id="node6" href="./LoginDto.html" title="&lt;TABLE&gt;" alt="" coords="2318,31,2591,257"/>
+<area shape="rect" id="node7_6" href="./ErrorCodeType.html" title="br.gov.to.sefaz.seg.business.authentication.domain.ErrorCodeType" alt="" coords="2627,89,2747,199"/>
+<area shape="rect" id="node7" href="./ErrorCodeType.html" title="&lt;TABLE&gt;" alt="" coords="2616,83,2757,205"/>
+</map>

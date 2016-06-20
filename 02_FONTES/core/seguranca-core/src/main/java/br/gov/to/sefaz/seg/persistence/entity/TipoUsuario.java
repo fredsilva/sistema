@@ -1,12 +1,17 @@
 package br.gov.to.sefaz.seg.persistence.entity;
 
-import java.io.Serializable;
-import java.util.Objects;
+import br.gov.to.sefaz.persistence.entity.AbstractEntity;
+import org.hibernate.validator.constraints.NotEmpty;
 
+import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -18,35 +23,47 @@ import javax.validation.constraints.Size;
  */
 @Entity
 @Table(name = "TA_TIPO_USUARIO", schema = "SEFAZ_SEG")
-public class TipoUsuario implements Serializable {
+public class TipoUsuario extends AbstractEntity<Integer> {
 
-    private static final long serialVersionUID = 256894585328674312L;
+    private static final long serialVersionUID = 6896180943920582395L;
 
     @Id
-    @NotNull
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_TIPO_USUARIO")
+    @SequenceGenerator(name = "SQ_TIPO_USUARIO", schema = "SEFAZ_SEG",
+            sequenceName = "SQ_TIPO_USUARIO",
+            allocationSize = 1)
     @Column(name = "CODIGO_TIPO_USUARIO")
-    private Short codigoTipoUsuario;
+    private Integer codigoTipoUsuario;
 
-    @NotNull
-    @Size(min = 1, max = 30)
+    @NotEmpty(message = "#{seg_msg['seg.gestao.tipoUsuario.descricaoTipoUsuario.obrigatorio']}")
+    @NotNull(message = "#{seg_msg['seg.gestao.tipoUsuario.descricaoTipoUsuario.obrigatorio']}")
+    @Size(max = 20, message = "#{seg_msg['seg.gestao.tipoUsuario.descricaoTipoUsuario.tamanho']}")
     @Column(name = "DESCRICAO_TIPO_USUARIO")
     private String descricaoTipoUsuario;
 
+    @Transient
+    private Long quantidadeUsuarios;
+
     public TipoUsuario() {
-        //Construtor default utilizado para instanciação via reflexão
+        // Construtor para inicialização por reflexão.
     }
 
-    public TipoUsuario(Short codigoTipoUsuario, String descricaoTipoUsuario) {
-        super();
+    public TipoUsuario(Integer codigoTipoUsuario, String descricaoTipoUsuario, Long quantidadeUsuarios) {
         this.codigoTipoUsuario = codigoTipoUsuario;
         this.descricaoTipoUsuario = descricaoTipoUsuario;
+        this.quantidadeUsuarios = quantidadeUsuarios;
     }
 
-    public Short getCodigoTipoUsuario() {
+    @Override
+    public Integer getId() {
         return codigoTipoUsuario;
     }
 
-    public void setCodigoTipoUsuario(Short codigoTipoUsuario) {
+    public Integer getCodigoTipoUsuario() {
+        return codigoTipoUsuario;
+    }
+
+    public void setCodigoTipoUsuario(Integer codigoTipoUsuario) {
         this.codigoTipoUsuario = codigoTipoUsuario;
     }
 
@@ -58,9 +75,17 @@ public class TipoUsuario implements Serializable {
         this.descricaoTipoUsuario = descricaoTipoUsuario;
     }
 
+    public Long getQuantidadeUsuarios() {
+        return quantidadeUsuarios;
+    }
+
+    public void setQuantidadeUsuarios(Long quantidadeUsuarios) {
+        this.quantidadeUsuarios = quantidadeUsuarios;
+    }
+
     @Override
     public int hashCode() {
-        return Objects.hash(codigoTipoUsuario, descricaoTipoUsuario);
+        return Objects.hash(codigoTipoUsuario, descricaoTipoUsuario, quantidadeUsuarios);
     }
 
     @Override
@@ -72,14 +97,14 @@ public class TipoUsuario implements Serializable {
             return false;
         }
         TipoUsuario that = (TipoUsuario) obj;
-        return codigoTipoUsuario == that.codigoTipoUsuario
-                && descricaoTipoUsuario == that.descricaoTipoUsuario;
+        return Objects.equals(this.codigoTipoUsuario, that.codigoTipoUsuario)
+                && Objects.equals(this.descricaoTipoUsuario, that.descricaoTipoUsuario);
     }
 
     @Override
     public String toString() {
         return "TipoUsuario [codigoTipoUsuario=" + codigoTipoUsuario + ", descricaoTipoUsuario=" + descricaoTipoUsuario
-                + "]";
+                + ", quantidadeUsuarios=" + quantidadeUsuarios + "]";
     }
 
 }

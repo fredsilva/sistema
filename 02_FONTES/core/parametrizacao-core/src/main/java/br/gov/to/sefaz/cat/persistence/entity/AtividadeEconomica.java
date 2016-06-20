@@ -115,6 +115,10 @@ public class AtividadeEconomica extends AbstractEntity<String> {
         this.situacaoCnae = situacaoCnae;
     }
 
+    public String getCompositeName() {
+        return getCodigoCnae() + " " + getDescricaoCnae();
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {

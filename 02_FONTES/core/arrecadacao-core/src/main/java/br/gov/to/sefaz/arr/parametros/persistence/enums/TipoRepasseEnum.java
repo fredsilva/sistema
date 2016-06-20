@@ -1,6 +1,6 @@
 package br.gov.to.sefaz.arr.parametros.persistence.enums;
 
-import br.gov.to.sefaz.business.managedbean.EnumCodeLabel;
+import br.gov.to.sefaz.persistence.enums.EnumCodeLabel;
 
 import java.util.stream.Stream;
 
@@ -12,20 +12,21 @@ import java.util.stream.Stream;
  */
 public enum TipoRepasseEnum implements EnumCodeLabel<Integer> {
 
-    UF(1, "Repasse UF"), FUNDEB_UF(2, "Repasse Fundeb UF"),
-    MUNICIPIO(3, "Repasse Município"), FUNDEB_MUNICIPIO(4, "Repasse Fundeb Município");
+    UF(1, "Repasse UF"), FUNDEB_UF(2, "Repasse Fundeb UF"), MUNICIPIO(3, "Repasse Município"), FUNDEB_MUNICIPIO(4,
+            "Repasse Fundeb Município");
 
     private final Integer code;
     private final String label;
 
-    TipoRepasseEnum(Integer code, String label) {
+    TipoRepasseEnum(
+            Integer code, String label) {
         this.code = code;
         this.label = label;
     }
 
     /**
-     * Converte inteiro em {@link TipoRepasseEnum} baseado no seu code. Se for passado inteiro que não existe no enum,
-     * é disparada {@link IllegalArgumentException}
+     * Converte inteiro em {@link TipoRepasseEnum} baseado no seu code. Se for passado inteiro que não existe no enum, é
+     * disparada {@link IllegalArgumentException}
      *
      * @param code valor do enum
      * @return {@link TipoRepasseEnum}

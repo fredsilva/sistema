@@ -9,13 +9,13 @@ import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.ValidationSuite;
 import br.gov.to.sefaz.persistence.enums.SituacaoEnum;
 import br.gov.to.sefaz.persistence.predicate.AndPredicateBuilder;
-import br.gov.to.sefaz.util.message.MessageUtil;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
@@ -42,15 +42,13 @@ public class PlanoContasServiceImpl extends DefaultCrudService<PlanoContas, Long
     @Override
     public PlanoContas save(@ValidationSuite(context = ValidationContext.SAVE) PlanoContas entity) {
         PlanoContas planoContas = super.save(entity);
-        MessageUtil.addMesage(MessageUtil.ARR, "mensagem.sucesso.operacao");
 
         return planoContas;
     }
 
     @Override
-    public PlanoContas update(PlanoContas entity) {
+    public PlanoContas update(@ValidationSuite(context = ValidationContext.UPDATE) PlanoContas entity) {
         PlanoContas planoContas = super.update(entity);
-        MessageUtil.addMesage(MessageUtil.ARR, "mensagem.sucesso.operacao");
 
         return planoContas;
     }
@@ -64,12 +62,10 @@ public class PlanoContasServiceImpl extends DefaultCrudService<PlanoContas, Long
             getRepository().updateSituacao(id, SituacaoEnum.CANCELADO);
             planoContas = Optional.of(getRepository().findOne(id));
 
-            MessageUtil.addMesage(MessageUtil.ARR, "parametros.delecao.logica");
         } else {
             super.delete(id);
             planoContas = Optional.empty();
 
-            MessageUtil.addMesage(MessageUtil.ARR, "parametros.delecao.fisica");
         }
 
         return planoContas;
@@ -82,6 +78,14 @@ public class PlanoContasServiceImpl extends DefaultCrudService<PlanoContas, Long
                 .like("nomeConta", filter.getNomeConta())
                 .like("codigoContabil", filter.getCodigoContabil())
                 .equalsTo("tipoConta", filter.getTipoConta())
+                .fetch("gruposCnaes")
+                .build(), getDefaultSort());
+    }
+
+    @Override
+    public Collection<PlanoContas> findAll() {
+
+        return getRepository().findAll((root, query, cb) -> new AndPredicateBuilder(root, cb)
                 .fetch("gruposCnaes")
                 .build(), getDefaultSort());
     }

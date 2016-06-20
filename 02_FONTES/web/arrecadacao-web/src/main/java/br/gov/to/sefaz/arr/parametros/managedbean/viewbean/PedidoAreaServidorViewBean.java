@@ -32,6 +32,10 @@ public class PedidoAreaServidorViewBean {
         return areasServidores.getIdServidor();
     }
 
+    /**
+     * Seta o servidor.
+     * @param idServidor identificação do servidor.
+     */
     public void setIdServidor(Long idServidor) {
         this.areasServidores.setIdServidor(idServidor);
     }
@@ -56,6 +60,10 @@ public class PedidoAreaServidorViewBean {
         return areasServidores.getEmailServidor();
     }
 
+    /**
+     * Seta o e-mail do servidor.
+     * @param email do servidor.
+     */
     public void setEmail(String email) {
         this.areasServidores.setEmailServidor(email);
     }
@@ -64,10 +72,18 @@ public class PedidoAreaServidorViewBean {
         return this.areasServidores.getUsuario().getNomeCompletoUsuario();
     }
 
+    /**
+     * Busca a situação da areaservidores.
+     * @return Situação.
+     */
     public SituacaoEnum getSituacao() {
         return areasServidores.getSituacao();
     }
 
+    /**
+     * Seta a situação da areas servidores.
+     * @param situacao nova do servidor.
+     */
     public void setSituacao(SituacaoEnum situacao) {
         this.areasServidores.setSituacao(situacao);
     }

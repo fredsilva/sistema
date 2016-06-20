@@ -22,10 +22,20 @@ public interface PedidoReceitaRepository extends BaseRepository<PedidoReceita, P
     String DELETE_ALL_PEDIDOS_RECEITA_BY_ID_TIPO_PEDIDO = "DELETE PedidoReceita pr WHERE "
             + "pr.idTipoPedido = :idTipoPedido";
 
+    /**
+     * Remove todos os PedidoReceita.
+     * @param idTipoPedido identificação TipoPedido.
+     */
     @Query(value = DELETE_ALL_PEDIDOS_RECEITA_BY_ID_TIPO_PEDIDO)
     @Modifying
     void deleteAllPedidoReceitaByIdTipoPedido(@Param("idTipoPedido") Integer idTipoPedido);
 
+    /**
+     * Atualiza a situação do PedidoReceita.
+     * @param idTipoPedido identificação do TipoPedido
+     * @param situacao nova situação.
+     * @return código do banco de dados.
+     */
     @Modifying
     @Query("UPDATE PedidoReceita pr SET pr.situacao = :situacao WHERE pr.idTipoPedido = :idTipoPedido")
     int updateSituacaoByIdTipoPedido(@Param(value = "idTipoPedido") Integer idTipoPedido,

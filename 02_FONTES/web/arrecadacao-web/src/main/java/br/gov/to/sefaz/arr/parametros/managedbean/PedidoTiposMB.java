@@ -52,6 +52,10 @@ public class PedidoTiposMB extends DefaultCrudMB<PedidoTipos, Integer> {
         pedidoDocsExigidosDto = new PedidoDocsExigidos();
     }
 
+    /**
+     * busca todos os TipoPedidoCampos.
+     * @return lista de TipoPedidoCampos.
+     */
     public List<TipoPedidoCampoEnum> getTiposPedidoCampos() {
         if (tiposPedidoCampos == null) {
             loadTiposPedidoCampos();
@@ -59,6 +63,9 @@ public class PedidoTiposMB extends DefaultCrudMB<PedidoTipos, Integer> {
         return tiposPedidoCampos;
     }
 
+    /**
+     * Carrega as tabelas da tela de TiposPedidoCampos.
+     */
     public void loadTiposPedidoCampos() {
         tiposPedidoCampos = getFacade().getTipoPedidoCampoEnumValues(getDto().getIdTipoPedido(),
                 pedidoTipoAcoesDto.getTipoAcao());
@@ -106,24 +113,37 @@ public class PedidoTiposMB extends DefaultCrudMB<PedidoTipos, Integer> {
         this.pedidoDocsExigidosDto = pedidoDocsExigidosDto;
     }
 
+    /**
+     * Busca os PedidosDocsExigidos pelo IdTipoPedido.
+     */
     public void getPedidoDocsExigidosByIdTipoPedido() {
         Collection<PedidoDocsExigidos> pedidoDocsExigidos = getFacade()
                 .getPedidoDocsExigidosByIdTipoPedido(getDto().getIdTipoPedido());
         getDto().setPedidoDocsExigidos(pedidoDocsExigidos.stream().collect(Collectors.toList()));
     }
 
+    /**
+     * Busca os PedidoCamposAcoes pelo IdTipoPedido.
+     */
     public void getPedidoCamposAcoesByIdTipoPedido() {
         Collection<PedidoCamposAcoes> pedidoDocsExigidos = getFacade()
                 .getPedidoCamposAcoesByIdTipoPedido(getDto().getIdTipoPedido());
         getDto().setPedidoCamposAcoes(pedidoDocsExigidos.stream().collect(Collectors.toList()));
     }
 
+    /**
+     * Busca os PedidoReceitas pelo IdTipoPedido.
+     */
     public void getPedidoReceitasByIdTipoPedido() {
         Collection<PedidoReceita> pedidoReceitas = getFacade()
                 .getPedidoReceitaByIdTipoPedido(getDto().getIdTipoPedido());
         getDto().setPedidoReceitas(pedidoReceitas.stream().collect(Collectors.toList()));
     }
 
+    /**
+     * Busca todos PedidoTipoDoc.
+     * @return lista de PedidoTipoDocs.
+     */
     public List<PedidoTipoDocs> getAllPedidoTipoDoc() {
         if (allPedidoTipoDoc == null) {
             allPedidoTipoDoc = getFacade().getAllPedidoTipoDoc();
@@ -132,6 +152,10 @@ public class PedidoTiposMB extends DefaultCrudMB<PedidoTipos, Integer> {
         return allPedidoTipoDoc;
     }
 
+    /**
+     * Busca todas as Receitas.
+     * @return lista de Receitas.
+     */
     public List<Receitas> getAllReceitas() {
         if (allReceitas == null) {
             allReceitas = getFacade().getAllReceitas();
@@ -140,6 +164,10 @@ public class PedidoTiposMB extends DefaultCrudMB<PedidoTipos, Integer> {
         return allReceitas;
     }
 
+    /**
+     * Busca todas as ReceitasTaxas.
+     * @return lista de ReceitasTaxas.
+     */
     public List<ReceitasTaxas> getAllReceitasTaxas() {
         Optional<Integer> idReceita = Optional.ofNullable(pedidoReceitaDto.getIdReceita());
 
@@ -157,18 +185,9 @@ public class PedidoTiposMB extends DefaultCrudMB<PedidoTipos, Integer> {
         return allReceitasTaxas;
     }
 
-    public String getReceitaLabel(Receitas receitas) {
-        return receitas.getIdReceita() + " - " + receitas.getDescricaoReceita();
-    }
-
-    public String getReceitaTaxaLabel(ReceitasTaxas taxas) {
-        return taxas.getSubcodigo() + " - " + taxas.getDescricao();
-    }
-
-    public String getPedidoDocLabel(PedidoTipoDocs pedidoTipoDocs) {
-        return pedidoTipoDocs.getIdTipoDocs() + " - " + pedidoTipoDocs.getDescricao();
-    }
-
+    /**
+     * Adiciona um PedidoDoc.
+     */
     public void addPedidoDoc() {
         PedidoDocsExigidos pedidoDocsExigidos = new PedidoDocsExigidos();
 
@@ -185,6 +204,9 @@ public class PedidoTiposMB extends DefaultCrudMB<PedidoTipos, Integer> {
         getDto().getPedidoDocsExigidos().add(pedidoDocsExigidos);
     }
 
+    /**
+     * Atualiza um PedidoDoc.
+     */
     public void updatePedidoDoc() {
         List<PedidoDocsExigidos> pedidoDocsExigidos = getDto().getPedidoDocsExigidos();
 
@@ -197,6 +219,9 @@ public class PedidoTiposMB extends DefaultCrudMB<PedidoTipos, Integer> {
         addPedidoDoc();
     }
 
+    /**
+     * Adiciona um PedidoReceitas.
+     */
     public void addPedidoReceitas() {
         PedidoReceita pedidoReceita = new PedidoReceita();
 
@@ -221,6 +246,9 @@ public class PedidoTiposMB extends DefaultCrudMB<PedidoTipos, Integer> {
         getDto().getPedidoReceitas().add(pedidoReceita);
     }
 
+    /**
+     * Atualiza um PedidoReceitas.
+     */
     public void updatePedidoReceitas() {
         List<PedidoReceita> pedidoReceitas = getDto().getPedidoReceitas();
 
@@ -233,6 +261,9 @@ public class PedidoTiposMB extends DefaultCrudMB<PedidoTipos, Integer> {
         addPedidoReceitas();
     }
 
+    /**
+     * Adiciona um PedidoAcao.
+     */
     public void addPedidoAcao() {
         PedidoTipoAcoes pedidoTipoAcoes = new PedidoTipoAcoes();
         BeanUtils.copyProperties(pedidoTipoAcoesDto, pedidoTipoAcoes);
@@ -244,6 +275,9 @@ public class PedidoTiposMB extends DefaultCrudMB<PedidoTipos, Integer> {
         getDto().getPedidoCamposAcoes().add(pedidoCamposAcoes);
     }
 
+    /**
+     * Atualiza um PedidoAcao.
+     */
     public void updatePedidoAcao() {
         List<PedidoCamposAcoes> pedidoCamposAcoes = getDto().getPedidoCamposAcoes();
 
@@ -259,6 +293,9 @@ public class PedidoTiposMB extends DefaultCrudMB<PedidoTipos, Integer> {
         addPedidoAcao();
     }
 
+    /**
+     * Limpa os DTOs.
+     */
     public void clearDtos() {
         clearDto();
         pedidoTipoAcoesDto = new PedidoTipoAcoes();

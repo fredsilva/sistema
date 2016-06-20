@@ -7,7 +7,6 @@ import br.gov.to.sefaz.business.service.impl.DefaultCrudService;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.ValidationSuite;
 import br.gov.to.sefaz.persistence.enums.SituacaoEnum;
-import br.gov.to.sefaz.util.message.MessageUtil;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
@@ -38,19 +37,13 @@ public class TipoRejeicaoArquivosServiceImpl extends DefaultCrudService<TipoReje
 
     @Override
     public TipoRejeicaoArquivos save(@ValidationSuite(context = ValidationContext.SAVE) TipoRejeicaoArquivos entity) {
-        TipoRejeicaoArquivos tipoRejeicaoArquivos = super.save(entity);
-        MessageUtil.addMesage(MessageUtil.ARR, "mensagem.sucesso.operacao");
-
-        return tipoRejeicaoArquivos;
+        return super.save(entity);
     }
 
     @Override
     public TipoRejeicaoArquivos update(
             @ValidationSuite(context = ValidationContext.UPDATE) TipoRejeicaoArquivos entity) {
-        TipoRejeicaoArquivos tipoRejeicaoArquivos = super.update(entity);
-        MessageUtil.addMesage(MessageUtil.ARR, "mensagem.sucesso.operacao");
-
-        return tipoRejeicaoArquivos;
+        return super.update(entity);
     }
 
     @Override
@@ -62,12 +55,10 @@ public class TipoRejeicaoArquivosServiceImpl extends DefaultCrudService<TipoReje
             getRepository().updateSituacao(id, SituacaoEnum.CANCELADO);
             tipoRejeicao = Optional.of(getRepository().findOne(id));
 
-            MessageUtil.addMesage(MessageUtil.ARR, "parametros.delecao.logica");
         } else {
             super.delete(id);
             tipoRejeicao = Optional.empty();
 
-            MessageUtil.addMesage(MessageUtil.ARR, "parametros.delecao.fisica");
         }
 
         return tipoRejeicao;

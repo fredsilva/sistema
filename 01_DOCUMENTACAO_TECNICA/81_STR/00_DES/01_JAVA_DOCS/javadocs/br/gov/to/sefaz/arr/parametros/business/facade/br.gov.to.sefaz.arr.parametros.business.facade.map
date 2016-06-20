@@ -1,0 +1,22 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./TipoRejeicaoArquivosFacade.html" title="br.gov.to.sefaz.arr.parametros.business.facade.TipoRejeicaoArquivosFacade" alt="" coords="16,105,201,148"/>
+<area shape="rect" id="node1" href="./TipoRejeicaoArquivosFacade.html" title="&lt;TABLE&gt;" alt="" coords="5,100,212,153"/>
+<area shape="rect" id="node2_1" href="./TipoGruposCnaesFacade.html" title="br.gov.to.sefaz.arr.parametros.business.facade.TipoGruposCnaesFacade" alt="" coords="247,45,739,208"/>
+<area shape="rect" id="node2" href="./TipoGruposCnaesFacade.html" title="&lt;TABLE&gt;" alt="" coords="236,40,749,213"/>
+<area shape="rect" id="node3_2" href="./ReceitasFacade.html" title="br.gov.to.sefaz.arr.parametros.business.facade.ReceitasFacade" alt="" coords="785,45,1307,208"/>
+<area shape="rect" id="node3" href="./ReceitasFacade.html" title="&lt;TABLE&gt;" alt="" coords="774,40,1318,213"/>
+<area shape="rect" id="node4_3" href="./PlanoContasFacade.html" title="br.gov.to.sefaz.arr.parametros.business.facade.PlanoContasFacade" alt="" coords="1353,80,1677,173"/>
+<area shape="rect" id="node4" href="./PlanoContasFacade.html" title="&lt;TABLE&gt;" alt="" coords="1343,75,1688,179"/>
+<area shape="rect" id="node5_4" href="./PedidoTiposFacade.html" title="br.gov.to.sefaz.arr.parametros.business.facade.PedidoTiposFacade" alt="" coords="1723,28,2494,225"/>
+<area shape="rect" id="node5" href="./PedidoTiposFacade.html" title="&lt;TABLE&gt;" alt="" coords="1713,23,2505,231"/>
+<area shape="rect" id="node6_5" href="./PedidoAreasFacade.html" title="br.gov.to.sefaz.arr.parametros.business.facade.PedidoAreasFacade" alt="" coords="2540,11,3195,243"/>
+<area shape="rect" id="node6" href="./PedidoAreasFacade.html" title="&lt;TABLE&gt;" alt="" coords="2529,5,3205,248"/>
+<area shape="rect" id="node7_6" href="./ConveniosTarifasFacade.html" title="br.gov.to.sefaz.arr.parametros.business.facade.ConveniosTarifasFacade" alt="" coords="3241,105,3401,148"/>
+<area shape="rect" id="node7" href="./ConveniosTarifasFacade.html" title="&lt;TABLE&gt;" alt="" coords="3230,100,3411,153"/>
+<area shape="rect" id="node8_7" href="./ConveniosArrecFacade.html" title="br.gov.to.sefaz.arr.parametros.business.facade.ConveniosArrecFacade" alt="" coords="3446,19,4017,234"/>
+<area shape="rect" id="node8" href="./ConveniosArrecFacade.html" title="&lt;TABLE&gt;" alt="" coords="3435,14,4027,239"/>
+<area shape="rect" id="node9_8" href="./BancosFacade.html" title="br.gov.to.sefaz.arr.parametros.business.facade.BancosFacade" alt="" coords="4062,105,4169,148"/>
+<area shape="rect" id="node9" href="./BancosFacade.html" title="&lt;TABLE&gt;" alt="" coords="4051,100,4179,153"/>
+<area shape="rect" id="node10_9" href="./BancoAgenciasFacade.html" title="br.gov.to.sefaz.arr.parametros.business.facade.BancoAgenciasFacade" alt="" coords="4215,45,4688,208"/>
+<area shape="rect" id="node10" href="./BancoAgenciasFacade.html" title="&lt;TABLE&gt;" alt="" coords="4204,40,4699,213"/>
+</map>

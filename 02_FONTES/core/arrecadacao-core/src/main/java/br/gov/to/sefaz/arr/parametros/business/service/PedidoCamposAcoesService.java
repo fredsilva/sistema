@@ -13,7 +13,11 @@ import java.util.Collection;
  * @since 25/05/2016 18:32:00
  */
 public interface PedidoCamposAcoesService extends CrudService<PedidoCamposAcoes, Integer> {
-
+    /**
+     * Busca o PedidoCampoAcoes pela identificação do Tipo Pedido.
+     * @param idTipoPedido identificação do TipoPedido.
+     * @return Lista de PedidoCamposAcoes.
+     */
     Collection<PedidoCamposAcoes> getPedidoCamposAcoesByIdTipoPedido(Integer idTipoPedido);
 
     /**

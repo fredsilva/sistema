@@ -4,6 +4,7 @@ import br.gov.to.sefaz.persistence.entity.AbstractEntity;
 
 import java.math.BigDecimal;
 import java.util.Objects;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -25,16 +26,17 @@ public class PedidoAreasFaixaValor extends AbstractEntity<Integer> {
     private static final long serialVersionUID = 2968092728659633890L;
 
     @Id
-    @NotNull
+    @NotNull(message = "#{arr_msg['parametros.PedidoAreasFaixaValor.idPedidoArea.obrigatorio']}")
     @Column(name = "ID_PEDIDO_AREA")
     private Integer idPedidoArea;
-    @Digits(integer = 14, fraction = 2)
-    @DecimalMin(value = "0.01")
-    @NotNull
+
+    @Digits(integer = 14, fraction = 2, message = "#{arr_msg['parametros.PedidoAreasFaixaValor.valorInicial.digitos']}")
+    @DecimalMin(value = "0.01", message = "#{arr_msg['parametros.PedidoAreasFaixaValor.valorInicial.minimo']}")
     @Column(name = "VALOR_INICIAL")
     private BigDecimal valorInicial;
-    @Digits(integer = 14, fraction = 2)
-    @DecimalMin(value = "0.01")
+
+    @Digits(integer = 14, fraction = 2, message = "#{arr_msg['parametros.PedidoAreasFaixaValor.valorFinal.digitos']}")
+    @DecimalMin(value = "0.01", message = "#{arr_msg['parametros.PedidoAreasFaixaValor.valorFinal.minimo']}")
     @Column(name = "VALOR_FINAL")
     private BigDecimal valorFinal;
 
@@ -42,7 +44,8 @@ public class PedidoAreasFaixaValor extends AbstractEntity<Integer> {
         // Construtor para inicialização por reflexão.
     }
 
-    public PedidoAreasFaixaValor(Integer idPedidoArea, BigDecimal valorInicial, BigDecimal valorFinal) {
+    public PedidoAreasFaixaValor(
+            Integer idPedidoArea, BigDecimal valorInicial, BigDecimal valorFinal) {
         this.idPedidoArea = idPedidoArea;
         this.valorInicial = valorInicial;
         this.valorFinal = valorFinal;

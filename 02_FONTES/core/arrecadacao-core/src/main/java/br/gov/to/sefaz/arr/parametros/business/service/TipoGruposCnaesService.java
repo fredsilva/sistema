@@ -14,5 +14,11 @@ import java.util.List;
  */
 public interface TipoGruposCnaesService extends CrudService<TipoGruposCnaes, Integer> {
 
+    /**
+     * Retorna todos os registros de {@link TipoGruposCnaes} que fazem match com os criterios passados pelo filtro.
+     *
+     * @param filter filtro de registros
+     * @return lista de grupos cnaes que batem com o filtro passado
+     */
     List<TipoGruposCnaes> findAll(TipoGruposCnaesFilter filter);
 }

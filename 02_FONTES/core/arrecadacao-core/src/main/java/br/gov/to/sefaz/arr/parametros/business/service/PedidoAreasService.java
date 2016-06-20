@@ -12,6 +12,10 @@ import java.util.Collection;
  * @since 21/05/2016 10:43:00
  */
 public interface PedidoAreasService extends CrudService<PedidoAreas, Integer> {
-
+    /**
+     * Busca todos os PedidoAreas pelo tipoPedido.
+     * @param idTipoPedido identificação do Tipo Pedido.
+     * @return Lista de Pedido Areas.
+     */
     Collection<PedidoAreas> findAllByTipo(Integer idTipoPedido);
 }

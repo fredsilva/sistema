@@ -179,6 +179,10 @@ public class ReceitasRepasse extends AbstractEntity<ReceitasRepassePK> {
         this.receitas = receitas;
     }
 
+    /**
+     * Busca a label de Incidência.
+     * @return label completa de incidência.
+     */
     public String getIncidenciaLabel() {
         StringBuilder stringBuilder = new StringBuilder();
 

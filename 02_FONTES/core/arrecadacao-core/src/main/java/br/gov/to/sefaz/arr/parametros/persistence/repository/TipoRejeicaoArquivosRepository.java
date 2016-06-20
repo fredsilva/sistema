@@ -27,9 +27,20 @@ public interface TipoRejeicaoArquivosRepository extends BaseRepository<TipoRejei
             + " OR EXISTS(SELECT rc.id_codigo_rejeicao FROM sefaz_arr.ta_arquivo_recepcao rc"
             + "     WHERE rc.id_codigo_rejeicao = tra.id_codigo_rejeicao))";
 
+    /**
+     * Método para buscar registros que têm como referência o Tipo de Rejeição de Arquivo selecionado para deleção.
+     * @param id do Tipo de Rejeição de Arquivo
+     * @return verdadeiro, se existirem referências, falso se não existirem.
+     */
     @Query(value = EXISTS_LOCK_REFERENCE, nativeQuery = true)
     Boolean existsLockReference(@Param(value = "id") Integer id);
 
+    /**
+     * Método para atualizar a situação do Tipo de Rejeição de Arquivo.
+     * @param id do Tipo de Rejeição de Arquivo.
+     * @param situacao do Tipo de Rejeição de Arquivo.
+     * @return identificação do registro atualizado.
+     */
     @Modifying
     @Query("UPDATE TipoRejeicaoArquivos SET situacao = :situacao WHERE idCodigoRejeicao = :id")
     int updateSituacao(@Param("id") Integer id, @Param("situacao") SituacaoEnum situacao);

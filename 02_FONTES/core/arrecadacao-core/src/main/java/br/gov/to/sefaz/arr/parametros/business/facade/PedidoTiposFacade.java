@@ -22,17 +22,51 @@ import java.util.List;
  */
 public interface PedidoTiposFacade extends CrudFacade<PedidoTipos, Integer> {
 
+    /**
+     * Busca todas as Receitas.
+     * @return lista de Receitas.
+     */
     List<Receitas> getAllReceitas();
 
+    /**
+     * Busca todas as ReceitasTaxas.
+     * @param integer código do PedidoTipo.
+     * @return lista de ReceitasTaxas.
+     */
     List<ReceitasTaxas> getAllReceitasTaxasFromIdReceita(Integer integer);
 
+    /**
+     * Busca todos os PedidoTipoDoc.
+     * @return lista de PedidoTipoDoc
+     */
     List<PedidoTipoDocs> getAllPedidoTipoDoc();
 
+    /**
+     * Busca todos os PedidoDocsExigidos.
+     * @param idTipoPedido identificação do Tipo Pedido.
+     * @return lista de PedidoDocsExigidos.
+     */
     Collection<PedidoDocsExigidos> getPedidoDocsExigidosByIdTipoPedido(Integer idTipoPedido);
 
+    /**
+     * Busca todos os PedidoReceita.
+     * @param idTipoPedido identificação do TipoPedido.
+     * @return lista de PedidoReceita.
+     */
     Collection<PedidoReceita> getPedidoReceitaByIdTipoPedido(Integer idTipoPedido);
 
+    /**
+     * Busca todos os PedidoCamposAcoes.
+     * @param idTipoPedido identificação do TipoPedido.
+     * @return lista de PedidoCamposAcoes.
+     */
     Collection<PedidoCamposAcoes> getPedidoCamposAcoesByIdTipoPedido(Integer idTipoPedido);
 
+    /**
+     * Busca todos os valores Enum do TipoPedidoCampo.
+     * @param idTipoPedido identificação do TipoPedido.
+     * @param tipoPedido tipo de Pedido.
+     * @return lista de Enum de TipoPedidoCampo.
+     */
     List<TipoPedidoCampoEnum> getTipoPedidoCampoEnumValues(Integer idTipoPedido, TipoPedidoAcoesEnum tipoPedido);
 }

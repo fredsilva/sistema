@@ -14,6 +14,11 @@ import java.util.List;
  */
 public interface PlanoContasService extends CrudService<PlanoContas, Long> {
 
+    /**
+     * Busca PlanoContas filtrado.
+     * @param filter filtro preenchido em tela.
+     * @return lista de PlanoContas.
+     */
     List<PlanoContas> find(PlanoContasFilter filter);
 
 }

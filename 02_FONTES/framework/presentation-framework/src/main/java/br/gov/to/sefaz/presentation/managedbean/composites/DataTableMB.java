@@ -1,8 +1,6 @@
 package br.gov.to.sefaz.presentation.managedbean.composites;
 
-import br.gov.to.sefaz.exception.SystemException;
 import br.gov.to.sefaz.util.message.SourceBundle;
-
 import org.apache.commons.lang3.StringUtils;
 
 import java.text.DateFormat;
@@ -16,12 +14,12 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 import java.util.stream.Collectors;
-
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 import javax.swing.text.MaskFormatter;
+
+import static br.gov.to.sefaz.util.application.ApplicationUtil.LOCALE;
 
 /**
  * Managed Bean de uma datatable, possui metodos para auxiliar na construção e operação de uma datatable.
@@ -31,6 +29,7 @@ import javax.swing.text.MaskFormatter;
  */
 @ManagedBean(name = "dataTableMB")
 @ApplicationScoped
+@SuppressWarnings("PMD")
 public class DataTableMB {
 
     //@formatter:off
@@ -45,7 +44,6 @@ public class DataTableMB {
     private static final String CPF_MASK = "###.###.###-##";
     private static final String CNPJ_MASK = "##.###.###/####-##";
     private static final String CNPJ_RAIZ_MASK = "##.###.###";
-    public static final Locale LOCALE = new Locale("pt", "BR");
 
     /**
      * <p>
@@ -109,7 +107,9 @@ public class DataTableMB {
             Boolean hide = defs.contains("hide");
             DataTableFieldPrint printType = DataTableFieldPrint.NONE;
 
-            if (defs.contains("string")) {
+            if (defs.contains("boolean")) {
+                printType = DataTableFieldPrint.BOOLEAN;
+            } else if (defs.contains("string")) {
                 printType = DataTableFieldPrint.STRING;
             } else if (defs.contains("date")) {
                 printType = DataTableFieldPrint.DATE;
@@ -153,6 +153,8 @@ public class DataTableMB {
      */
     public Object formatToPrint(Object fieldValue, DataTableFieldPrint printType) {
         switch (printType) {
+          case BOOLEAN:
+              return booleanFormat(fieldValue);
           case DATE:
               return toDateFormat(fieldValue, DATE_PATTERN);
           case DATE_TIME:
@@ -323,6 +325,13 @@ public class DataTableMB {
         return parsedActions;
     }
 
+    /**
+     * Retorna uma JSON list com os parametros das colunas da datatable.
+     *
+     * @param columnsDefs pré-definições das colunas
+     * @param fields campos da tabela
+     * @return todas as definições de todas as colunas
+     */
     public String parseColumnDefs(String columnsDefs, List<DataTableField> fields) {
         List<String> defs = parseFieldsDefs(fields);
         defs.add(columnsDefs);
@@ -450,11 +459,25 @@ public class DataTableMB {
             formatter.setValueContainsLiteralCharacters(false);
             retorno = formatter.valueToString(retorno);
         } catch (ParseException e) {
-            throw new SystemException(
-                    "Erro ao formatar o valor " + value.toString() + " com a máscara " + mask, e);
+            String message = "Erro ao formatar o valor " + value.toString() + " com a máscara " + mask;
+            throw new IllegalArgumentException(message, e);
         }
 
         return retorno;
+    }
+
+    /**
+     * Formata um valor do tipo Boolean em uma resposta Sim para true e Não para false.
+     *
+     * @param value valor que deseja-se formatar
+     * @return Sim ou Não
+     */
+    private String booleanFormat(Object value) {
+        if ((Boolean) value) {
+            return SourceBundle.getMessage("label.sim");
+        } else {
+            return SourceBundle.getMessage("label.nao");
+        }
     }
 
     /**

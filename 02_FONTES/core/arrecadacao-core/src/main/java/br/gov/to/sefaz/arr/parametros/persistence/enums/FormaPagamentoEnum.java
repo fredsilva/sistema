@@ -1,6 +1,6 @@
 package br.gov.to.sefaz.arr.parametros.persistence.enums;
 
-import br.gov.to.sefaz.business.managedbean.EnumCodeLabel;
+import br.gov.to.sefaz.persistence.enums.EnumCodeLabel;
 
 import java.util.stream.Stream;
 
@@ -12,8 +12,8 @@ import java.util.stream.Stream;
  */
 public enum FormaPagamentoEnum implements EnumCodeLabel<Integer> {
 
-    CAIXA(1, "Guiche de Caixa"), ARRECADACAO(2, "Arrecadação Eletrônica"), INTERNET(3, "Internet"),
-    OUTROS(4, "Outros Meios"), CORRESPONDENTE(5, "Correspondente Bancário");
+    CAIXA(1, "Guiche de Caixa"), ARRECADACAO(2, "Arrecadação Eletrônica"), INTERNET(3, "Internet"), OUTROS(4,
+            "Outros Meios"), CORRESPONDENTE(5, "Correspondente Bancário");
 
     private final Integer code;
     private final String label;

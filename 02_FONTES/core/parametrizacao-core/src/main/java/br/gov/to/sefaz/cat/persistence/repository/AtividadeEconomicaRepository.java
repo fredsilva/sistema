@@ -18,6 +18,12 @@ import java.util.Collection;
 @Repository
 public interface AtividadeEconomicaRepository extends BaseRepository<AtividadeEconomica, String> {
 
+    /**
+     * Retorna todos os CNAE's {@link AtividadeEconomica} vinculados ao grupo informado.
+     *
+     * @param idGrupoCnae id do grupo ao qual os CNAE's estão vonculados
+     * @return os CNAE's vinculados ao grupo
+     */
     @Query(value = "SELECT cf.* FROM SEFAZ_PAR.TA_ATIVIDADE_ECONOMICA cf"
             + " INNER JOIN SEFAZ_ARR.TA_GRUPOS_CNAE gc ON gc.cnae_fiscal = cf.codigo_cnae"
             + " WHERE gc.id_grupo_cnae = :idGrupo", nativeQuery = true)

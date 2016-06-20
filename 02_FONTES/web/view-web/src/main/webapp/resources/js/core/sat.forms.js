@@ -1,21 +1,13 @@
 function clearFields(id) {
-    id = '#'+id;
+    id = '#' + id;
 
     // Campos HIDDEN não devem ser limpos pos o JSF usa diverssos inputs hidden para se achar.
     $(id).find('input:text, input:password, input:file, select, textarea').val('');
     $(id).find('input:radio, input:checkbox').removeAttr('checked').removeAttr('selected');
-    $(id).find('select').each(function() {
+    $(id).find('select').each(function () {
         $(this).val($(this).find('option:first').val());
     });
 }
-
-$(document).on("keypress", ".justInteger", function(e) {
-    return (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) ? false : true;
-});
-
-$(document).ready(function (){
-    $(".decimal").maskMoney({thousands:'.', decimal:',', allowZero:true});
-});
 
 function showBtnSave(formId) {
     var form = $('#' + formId);
@@ -47,3 +39,21 @@ function disableTab(navId, tabId) {
 function enableTab(navId, tabId) {
     findTab(navId, tabId).attr("data-toggle", "tab").parents("li").removeClass("disabled");
 }
+
+$(document).on("keypress", ":input:not(textarea)", function (event) {
+    if (event.keyCode == 13) {
+        event.preventDefault();
+    }
+});
+
+$(document).on("keypress", ".justInteger", function (e) {
+    return (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) ? false : true;
+});
+
+$(document).ready(function () {
+    $('.cpf').mask('000.000.000-00', {placeholder: "___.___.___-__", reverse: true});
+});
+
+$(document).ready(function () {
+    $(".decimal").maskMoney({thousands: '.', decimal: ',', allowZero: true});
+});

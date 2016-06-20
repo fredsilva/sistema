@@ -27,20 +27,11 @@ public @interface ValidationSuite {
     String context() default "";
 
     /**
-     * Se o objeto a ser validado está dentro de uma {@link java.util.Collection} então este atributo deve ser
-     * {@link java.lang.Boolean#TRUE}. Se não o default é {@link java.lang.Boolean#FALSE}.
+     * Contexto em que a validação deverá ser executada. Através de uma {@link String} que deverá ser adicionada no
+     * {@link ServiceValidator#support(Class, String)}. Os contextos default usados pode ser vistos em
+     * {@link ValidationContext}.
      *
-     * @return se o objeto está contido em uma coleção.
+     * @return Contexto em que a validação será executada
      */
-    boolean isCollection() default false;
-
-    /**
-     * {@link java.lang.Class} a qual será utilizada para validação do objeto único e coleção deste mesmo objeto.
-     * Se o objeto a ser validado não é uma {@link java.util.Collection} este atributo não precisa ser adicionado,
-     * pois o {@link br.gov.to.sefaz.business.service.validation.ValidationSuiteAspect} utiliza a
-     * {@link java.lang.Class} do objeto.
-     *
-     * @return classe do objeto a ser validado
-     */
-    Class clazz() default Class.class;
+    Class clazz() default ValidationSuite.class;
 }

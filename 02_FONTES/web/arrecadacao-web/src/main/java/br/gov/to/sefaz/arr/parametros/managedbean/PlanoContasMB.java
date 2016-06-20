@@ -45,11 +45,14 @@ public class PlanoContasMB extends DefaultCrudMB<PlanoContas, Long> {
         return filter;
     }
 
+    /**
+     * Busca os plano contas de acordo com o filtro preenchido em tela.
+     */
     public void search() {
         List<PlanoContas> resultList = getFacade().find(filter);
 
         if (resultList.isEmpty()) {
-            MessageUtil.addMesage(MessageUtil.ARR, "parametros.pesquisa.vazia");
+            MessageUtil.addMesage(MessageUtil.SEG, "parametros.pesquisa.vazia");
         }
 
         setResultList(resultList);

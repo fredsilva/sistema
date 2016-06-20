@@ -23,6 +23,8 @@ import javax.validation.constraints.Size;
 @Table(name = "TA_ARQUIVO_ERRO", schema = "SEFAZ_ARR")
 public class ArquivoErro extends AbstractEntity<Long> {
 
+    private static final long serialVersionUID = -7803383271860941274L;
+
     @Id
     @NotNull
     @Column(name = "ID_ERRO_DETALHE_ARQUIVO", nullable = false)

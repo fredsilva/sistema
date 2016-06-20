@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="CompressAnexo" package="br.gov.to.sefaz.seg.business.mail.builder" visibility="public" xPosition="379.0" yPosition="847.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="zipBytes" returnType="byte[]" visibility="public">
+          <Argument type="List&lt;Anexo&gt;" name="anexoList"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CorreioEletronicoBuilder" package="br.gov.to.sefaz.seg.business.mail.builder" visibility="public" xPosition="319.0" yPosition="506.0">
+      <Fields>
+        <Field name="correiosContribuinte" type="List&lt;CorreioContribuinte&gt;" visibility="private" isFinal="true"/>
+        <Field name="compressAnexo" type="CompressAnexo" visibility="private" isFinal="true"/>
+        <Field name="isHtml" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="mailTo" returnType="CorreioEletronicoBuilder" visibility="public">
+          <Argument type="UsuarioSistema" name="usuarios"/>
+        </Method>
+        <Method name="subject" returnType="CorreioEletronicoBuilder" visibility="public">
+          <Argument type="String" name="subject"/>
+        </Method>
+        <Method name="body" returnType="CorreioEletronicoBuilder" visibility="public">
+          <Argument type="String" name="body"/>
+          <Argument type="boolean" name="isHtml"/>
+        </Method>
+        <Method name="attachments" returnType="CorreioEletronicoBuilder" visibility="public">
+          <Argument type="Anexo" name="anexos"/>
+        </Method>
+        <Method name="build" returnType="CorreioEletronico" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Anexo" package="br.gov.to.sefaz.seg.business.mail.domain" visibility="public" xPosition="909.0" yPosition="781.0">
+      <Fields>
+        <Field name="fileName" type="String" visibility="private" isFinal="true"/>
+        <Field name="fileContent" type="byte[]" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="fileName"/>
+          <Argument type="byte[]" name="fileContent"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getFileName" returnType="String" visibility="public"/>
+        <Method name="getFileContent" returnType="byte[]" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CorreioEletronico" package="br.gov.to.sefaz.seg.business.mail.domain" visibility="public" xPosition="791.0" yPosition="516.0">
+      <Fields>
+        <Field name="correioContribuinte" type="List&lt;CorreioContribuinte&gt;" visibility="private" isFinal="true"/>
+        <Field name="htmlBody" type="boolean" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="List&lt;CorreioContribuinte&gt;" name="correioContribuinte"/>
+          <Argument type="boolean" name="htmlBody"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCorreioContribuinte" returnType="List&lt;CorreioContribuinte&gt;" visibility="public"/>
+        <Method name="isHtmlBody" returnType="boolean" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="MailFacadeImpl" package="br.gov.to.sefaz.seg.business.mail.facade.impl" visibility="public" xPosition="1448.0" yPosition="462.0">
+      <Fields>
+        <Field name="mailService" type="MailService" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="MailService" name="mailService"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="sendMail" returnType="void" visibility="public">
+          <Argument type="CorreioEletronico" name="correioEletronico"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MailServiceImpl" package="br.gov.to.sefaz.seg.business.mail.service.impl" visibility="public" xPosition="1283.0" yPosition="29.0">
+      <Fields>
+        <Field name="mailSenderService" type="MailSenderService" visibility="private" isFinal="true"/>
+        <Field name="correioContribuinteService" type="CorreioContribuinteService" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="MailSenderService" name="mailSenderService"/>
+          <Argument type="CorreioContribuinteService" name="correioContribuinteService"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="sendMail" returnType="void" visibility="public">
+          <Argument type="Collection&lt;CorreioContribuinte&gt;" name="correioContribuintes"/>
+          <Argument type="boolean" name="isHtmlBody"/>
+        </Method>
+        <Method name="sendMail" returnType="void" visibility="private">
+          <Argument type="boolean" name="isHtmlBody"/>
+          <Argument type="Collection&lt;CorreioContribuinte&gt;" name="correioContribuintes"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="MailSenderServiceImpl" package="br.gov.to.sefaz.util.mail.impl" visibility="public" xPosition="92.0" yPosition="253.0">
+      <Fields>
+        <Field name="ATTACHMENT_FILENAME" type="String" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="javaMailSender" type="JavaMailSender" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="JavaMailSender" name="javaMailSender"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="sendMail" returnType="void" visibility="public">
+          <Argument type="String" name="subject"/>
+          <Argument type="String" name="mailBody"/>
+          <Argument type="boolean" name="isHtmlBody"/>
+          <Argument type="String" name="mailTo"/>
+        </Method>
+        <Method name="sendMail" returnType="void" visibility="public">
+          <Argument type="String" name="subject"/>
+          <Argument type="String" name="mailBody"/>
+          <Argument type="boolean" name="isHtmlBody"/>
+          <Argument type="byte[]" name="attachedFile"/>
+          <Argument type="String" name="mailTo"/>
+        </Method>
+        <Method name="buildMessageHelper" returnType="MimeMessageHelper" visibility="private">
+          <Argument type="MimeMessage" name="mimeMessage"/>
+          <Argument type="String" name="subject"/>
+          <Argument type="String" name="mailBody"/>
+          <Argument type="boolean" name="isHtmlBody"/>
+          <Argument type="String" name="mailTo"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="MailFacade" package="br.gov.to.sefaz.seg.business.mail.facade" visibility="public" xPosition="1448.0" yPosition="701.0">
+      <Methods>
+        <Method name="sendMail" returnType="void" visibility="package">
+          <Argument type="CorreioEletronico" name="correioEletronico"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="MailService" package="br.gov.to.sefaz.seg.business.mail.service" visibility="public" xPosition="1339.0" yPosition="271.0">
+      <Methods>
+        <Method name="sendMail" returnType="void" visibility="package">
+          <Argument type="Collection&lt;CorreioContribuinte&gt;" name="correioContribuintes"/>
+          <Argument type="boolean" name="isHtmlBody"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="MailSenderService" package="br.gov.to.sefaz.util.mail" visibility="public" xPosition="207.0" yPosition="63.0">
+      <Methods>
+        <Method name="sendMail" returnType="void" visibility="package">
+          <Argument type="String" name="subject"/>
+          <Argument type="String" name="mailBody"/>
+          <Argument type="boolean" name="isHtmlBody"/>
+          <Argument type="String" name="mailTo"/>
+        </Method>
+        <Method name="sendMail" returnType="void" visibility="package">
+          <Argument type="String" name="subject"/>
+          <Argument type="String" name="mailBody"/>
+          <Argument type="boolean" name="isHtmlBody"/>
+          <Argument type="byte[]" name="attachedFile"/>
+          <Argument type="String" name="mailTo"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.seg.business.mail.service.impl.MailServiceImpl" target="br.gov.to.sefaz.seg.business.mail.service.MailService"/>
+    <UseRelation source="br.gov.to.sefaz.seg.business.mail.builder.CompressAnexo" target="br.gov.to.sefaz.seg.business.mail.domain.Anexo" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.seg.business.mail.builder.CorreioEletronicoBuilder" target="br.gov.to.sefaz.seg.business.mail.domain.CorreioEletronico" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.util.mail.impl.MailSenderServiceImpl" target="br.gov.to.sefaz.util.mail.MailSenderService"/>
+    <UseRelation source="br.gov.to.sefaz.seg.business.mail.facade.impl.MailFacadeImpl" target="br.gov.to.sefaz.seg.business.mail.domain.CorreioEletronico" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.seg.business.mail.facade.impl.MailFacadeImpl" target="br.gov.to.sefaz.seg.business.mail.facade.MailFacade"/>
+    <HasRelation name="mailService" source="br.gov.to.sefaz.seg.business.mail.facade.impl.MailFacadeImpl" target="br.gov.to.sefaz.seg.business.mail.service.MailService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.seg.business.mail.facade.MailFacade" target="br.gov.to.sefaz.seg.business.mail.domain.CorreioEletronico" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="compressAnexo" source="br.gov.to.sefaz.seg.business.mail.builder.CorreioEletronicoBuilder" target="br.gov.to.sefaz.seg.business.mail.builder.CompressAnexo" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mailSenderService" source="br.gov.to.sefaz.seg.business.mail.service.impl.MailServiceImpl" target="br.gov.to.sefaz.util.mail.MailSenderService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

@@ -65,6 +65,7 @@ public class PedidoTiposServiceImpl extends DefaultCrudService<PedidoTipos, Inte
         saveAllPedidoCamposAcoes(pedidoTipos);
         saveAllPedidoReceitas(pedidoTipos);
 
+        MessageUtil.addMesage(MessageUtil.ARR, "mensagem.sucesso.operacao");
         return save;
     }
 
@@ -76,6 +77,7 @@ public class PedidoTiposServiceImpl extends DefaultCrudService<PedidoTipos, Inte
         saveAllPedidoCamposAcoes(pedidoTipos);
         saveAllPedidoReceitas(pedidoTipos);
 
+        MessageUtil.addMesage(MessageUtil.ARR, "mensagem.sucesso.operacao");
         return updatedPedidoTipos;
     }
 
@@ -110,10 +112,8 @@ public class PedidoTiposServiceImpl extends DefaultCrudService<PedidoTipos, Inte
         if (getRepository().existsLockReference(id)) {
             cancelarPedidoTipo(id);
             pedidoTipos = Optional.of(getRepository().findOne(id));
-            MessageUtil.addMesage(MessageUtil.ARR, "parametros.delecao.logica");
         } else {
             removerPedidoTipo(id);
-            MessageUtil.addMesage(MessageUtil.ARR, "parametros.delecao.fisica");
             pedidoTipos = Optional.empty();
         }
 

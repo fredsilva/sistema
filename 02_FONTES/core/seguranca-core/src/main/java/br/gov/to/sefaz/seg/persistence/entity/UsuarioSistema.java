@@ -1,11 +1,15 @@
 package br.gov.to.sefaz.seg.persistence.entity;
 
+import br.gov.to.sefaz.persistence.converter.YesOrNoBooleanConverter;
 import br.gov.to.sefaz.persistence.entity.AbstractEntity;
+import br.gov.to.sefaz.seg.persistence.converter.SituacaoUsuarioEnumConverter;
+import br.gov.to.sefaz.seg.persistence.enums.SituacaoUsuarioEnum;
 
 import java.time.LocalDateTime;
 import java.util.Objects;
 
 import javax.persistence.Column;
+import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -49,7 +53,7 @@ public class UsuarioSistema extends AbstractEntity<String> {
 
     @NotNull(message = "#{seg_msg['usuarioSistema.numeroEndereco.obrigatorio']}")
     @Column(name = "NUMERO_ENDERECO")
-    private int numeroEndereco;
+    private Integer numeroEndereco;
 
     @Column(name = "APARTAMENTO")
     private Integer apartamento;
@@ -67,7 +71,7 @@ public class UsuarioSistema extends AbstractEntity<String> {
 
     @NotNull(message = "#{seg_msg['usuarioSistema.codigoMunicipio.obrigatorio']}")
     @Column(name = "CODIGO_MUNICIPIO")
-    private int codigoMunicipio;
+    private Integer codigoMunicipio;
 
     @Column(name = "TELEFONE_RESIDENCIAL")
     private String telefoneResidencial;
@@ -87,11 +91,13 @@ public class UsuarioSistema extends AbstractEntity<String> {
 
     @NotNull
     @Column(name = "SITUACAO_USUARIO")
-    private Character situacaoUsuario = 'A';
+    @Convert(converter = SituacaoUsuarioEnumConverter.class)
+    private SituacaoUsuarioEnum situacaoUsuario = SituacaoUsuarioEnum.ATIVO;
 
     @NotNull
     @Column(name = "ALTERAR_SENHA_PROXIMO_ACESSO")
-    private Character alterarSenhaProximoAcesso = 'N';
+    @Convert(converter = YesOrNoBooleanConverter.class)
+    private Boolean alterarSenhaProximoAcesso = Boolean.FALSE;
 
     @Column(name = "DATA_ULTIMA_ALTERACAO_SENHA")
     private LocalDateTime dataUltimaAlteracaoSenha;
@@ -101,7 +107,8 @@ public class UsuarioSistema extends AbstractEntity<String> {
 
     @NotNull
     @Column(name = "ESTA_BLOQUEADO")
-    private Character estaBloqueado = 'N';
+    @Convert(converter = YesOrNoBooleanConverter.class)
+    private Boolean estaBloqueado = Boolean.FALSE;
 
     @Column(name = "DATA_DESBLOQUEIO")
     private LocalDateTime dataDesbloqueio;
@@ -120,11 +127,11 @@ public class UsuarioSistema extends AbstractEntity<String> {
 
     public UsuarioSistema(
             String cpfUsuario, String nomeCompletoUsuario, String cep, String codigoLogradouro,
-            String endereco, int numeroEndereco, Integer apartamento, String complemento, String bairro,
-            String codigoEstado, int codigoMunicipio, String telefoneResidencial, String outroEnderecoContato,
-            String correioEletronico, String telefoneCelular, String crc, Character situacaoUsuario,
-            Character alterarSenhaProximoAcesso, LocalDateTime dataUltimaAlteracaoSenha, String justificacaoCriacao,
-            Character estaBloqueado, LocalDateTime dataDesbloqueio, TipoUsuario tipoUsuario,
+            String endereco, Integer numeroEndereco, Integer apartamento, String complemento, String bairro,
+            String codigoEstado, Integer codigoMunicipio, String telefoneResidencial, String outroEnderecoContato,
+            String correioEletronico, String telefoneCelular, String crc, SituacaoUsuarioEnum situacaoUsuario,
+            Boolean alterarSenhaProximoAcesso, LocalDateTime dataUltimaAlteracaoSenha, String justificacaoCriacao,
+            Boolean estaBloqueado, LocalDateTime dataDesbloqueio, TipoUsuario tipoUsuario,
             Integer codigoTipoUsuario) {
         this.cpfUsuario = cpfUsuario;
         this.nomeCompletoUsuario = nomeCompletoUsuario;
@@ -197,11 +204,11 @@ public class UsuarioSistema extends AbstractEntity<String> {
         this.endereco = endereco;
     }
 
-    public int getNumeroEndereco() {
+    public Integer getNumeroEndereco() {
         return numeroEndereco;
     }
 
-    public void setNumeroEndereco(int numeroEndereco) {
+    public void setNumeroEndereco(Integer numeroEndereco) {
         this.numeroEndereco = numeroEndereco;
     }
 
@@ -237,11 +244,11 @@ public class UsuarioSistema extends AbstractEntity<String> {
         this.codigoEstado = codigoEstado;
     }
 
-    public int getCodigoMunicipio() {
+    public Integer getCodigoMunicipio() {
         return codigoMunicipio;
     }
 
-    public void setCodigoMunicipio(int codigoMunicipio) {
+    public void setCodigoMunicipio(Integer codigoMunicipio) {
         this.codigoMunicipio = codigoMunicipio;
     }
 
@@ -285,19 +292,19 @@ public class UsuarioSistema extends AbstractEntity<String> {
         this.crc = crc;
     }
 
-    public Character getSituacaoUsuario() {
+    public SituacaoUsuarioEnum getSituacaoUsuario() {
         return situacaoUsuario;
     }
 
-    public void setSituacaoUsuario(Character situacaoUsuario) {
+    public void setSituacaoUsuario(SituacaoUsuarioEnum situacaoUsuario) {
         this.situacaoUsuario = situacaoUsuario;
     }
 
-    public Character getAlterarSenhaProximoAcesso() {
+    public Boolean getAlterarSenhaProximoAcesso() {
         return alterarSenhaProximoAcesso;
     }
 
-    public void setAlterarSenhaProximoAcesso(Character alterarSenhaProximoAcesso) {
+    public void setAlterarSenhaProximoAcesso(Boolean alterarSenhaProximoAcesso) {
         this.alterarSenhaProximoAcesso = alterarSenhaProximoAcesso;
     }
 
@@ -317,11 +324,11 @@ public class UsuarioSistema extends AbstractEntity<String> {
         this.justificacaoCriacao = justificacaoCriacao;
     }
 
-    public Character getEstaBloqueado() {
+    public Boolean getEstaBloqueado() {
         return estaBloqueado;
     }
 
-    public void setEstaBloqueado(Character estaBloqueado) {
+    public void setEstaBloqueado(Boolean estaBloqueado) {
         this.estaBloqueado = estaBloqueado;
     }
 
@@ -339,6 +346,14 @@ public class UsuarioSistema extends AbstractEntity<String> {
 
     public void setCodigoTipoUsuario(Integer codigoTipoUsuario) {
         this.codigoTipoUsuario = codigoTipoUsuario;
+    }
+
+    public TipoUsuario getTipoUsuario() {
+        return tipoUsuario;
+    }
+
+    public void setTipoUsuario(TipoUsuario tipoUsuario) {
+        this.tipoUsuario = tipoUsuario;
     }
 
     @Override

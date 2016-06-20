@@ -14,7 +14,15 @@ import java.util.Collection;
  */
 public interface GruposCnaeService extends CrudService<GruposCnae, GruposCnaePK> {
 
+    /**
+     * Método para validação de grupos CNAEs duplicados.
+     * @param gruposCnaes lista de gruposCnaes.
+     */
     void validateDuplicated(Collection<GruposCnae> gruposCnaes);
 
+    /**
+     * Remove grupo inteiro pela Id.
+     * @param idGrupoCnae id do grupo cnae.
+     */
     void deleteByGrupo(Integer idGrupoCnae);
 }

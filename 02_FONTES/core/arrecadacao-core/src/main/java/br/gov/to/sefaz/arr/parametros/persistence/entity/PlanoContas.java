@@ -185,8 +185,16 @@ public class PlanoContas extends AbstractEntity<Long> {
         return gruposCnaes.getId();
     }
 
+    /**
+     * Seta o ID do GrupoCNAE.
+     * @param idGrupoCnae identificação nova do GrupoCnae.
+     */
     public void setIdGruposCnaes(Integer idGrupoCnae) {
         gruposCnaes.setIdGrupoCnae(idGrupoCnae);
+    }
+
+    public String getCompositeName() {
+        return getCodigoPlanoContas() + " - " + getNomeConta();
     }
 
     @Override

@@ -13,7 +13,6 @@ import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.ValidationSuite;
 import br.gov.to.sefaz.persistence.enums.SituacaoEnum;
 import br.gov.to.sefaz.persistence.predicate.AndPredicateBuilder;
-import br.gov.to.sefaz.util.message.MessageUtil;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
@@ -81,7 +80,6 @@ public class ReceitasServiceImpl extends DefaultCrudService<Receitas, Integer>
         saveReceitasTaxas(receitas);
         saveReceitasRepasse(receitas);
 
-        MessageUtil.addMesage(MessageUtil.ARR, "mensagem.sucesso.operacao");
         return savedReceitas;
     }
 
@@ -91,7 +89,6 @@ public class ReceitasServiceImpl extends DefaultCrudService<Receitas, Integer>
         saveReceitasTaxas(receitas);
         saveReceitasRepasse(receitas);
 
-        MessageUtil.addMesage(MessageUtil.ARR, "mensagem.sucesso.operacao");
         return updatesReceitas;
     }
 
@@ -104,14 +101,12 @@ public class ReceitasServiceImpl extends DefaultCrudService<Receitas, Integer>
             getRepository().updateSituacao(id, SituacaoEnum.CANCELADO);
             receitas = Optional.of(getRepository().findOne(id));
 
-            MessageUtil.addMesage(MessageUtil.ARR, "parametros.delecao.logica");
         } else {
             receitasTaxasService.deleteAllTaxasByIdReceita(id);
             receitasRepasseService.deleteAllRepassesByIdReceita(id);
             super.delete(id);
             receitas = Optional.empty();
 
-            MessageUtil.addMesage(MessageUtil.ARR, "parametros.delecao.fisica");
         }
 
         return receitas;

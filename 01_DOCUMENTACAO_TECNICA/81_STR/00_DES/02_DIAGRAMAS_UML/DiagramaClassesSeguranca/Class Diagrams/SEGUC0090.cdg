@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="PerfilPapelPK" package="br.gov.to.sefaz.seg.persistence.entity" visibility="public" xPosition="1440.0" yPosition="1469.0">
+      <Fields>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="identificacaoPerfil" type="Long" visibility="private"/>
+        <Field name="identificacaoPapel" type="Long" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Long" name="identificacaoPerfil"/>
+          <Argument type="Long" name="identificacaoPapel"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getIdentificacaoPerfil" returnType="Long" visibility="public"/>
+        <Method name="setIdentificacaoPerfil" returnType="void" visibility="public">
+          <Argument type="Long" name="identificacaoPerfil"/>
+        </Method>
+        <Method name="getIdentificacaoPapel" returnType="Long" visibility="public"/>
+        <Method name="setIdentificacaoPapel" returnType="void" visibility="public">
+          <Argument type="Long" name="identificacaoPapel"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="DefaultTemplateMB" package="br.gov.to.sefaz.seg.template.managedbean" visibility="public" xPosition="92.0" yPosition="100.0">
+      <Fields>
+        <Field name="moduloSistemaFacade" type="ModuloSistemaFacade" visibility="private" isFinal="true"/>
+        <Field name="allModulos" type="Collection&lt;ModuloSistema&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="ModuloSistemaFacade" name="moduloSistemaFacade"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getModulosMenu" returnType="Collection&lt;MenuViewBean&gt;" visibility="public"/>
+        <Method name="hasOnlyOneProfile" returnType="boolean" visibility="public"/>
+        <Method name="hasActiveProfile" returnType="boolean" visibility="public"/>
+        <Method name="getUserName" returnType="String" visibility="public"/>
+        <Method name="getPerfisSistema" returnType="List&lt;RoleGroupKey&gt;" visibility="public"/>
+        <Method name="setActiveProfile" returnType="void" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PerfilPapel" package="br.gov.to.sefaz.seg.persistence.entity" visibility="public" xPosition="1448.0" yPosition="1016.0">
+      <Fields>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="identificacaoPerfil" type="Long" visibility="private"/>
+        <Field name="identificacaoPapel" type="Long" visibility="private"/>
+        <Field name="papelSistema" type="PapelSistema" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Long" name="identificacaoPerfil"/>
+          <Argument type="Long" name="identificacaoPapel"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="PerfilPapelPK" visibility="public"/>
+        <Method name="getIdentificacaoPerfil" returnType="Long" visibility="public"/>
+        <Method name="setIdentificacaoPerfil" returnType="void" visibility="public">
+          <Argument type="Long" name="identificacaoPerfil"/>
+        </Method>
+        <Method name="getIdentificacaoPapel" returnType="Long" visibility="public"/>
+        <Method name="setIdentificacaoPapel" returnType="void" visibility="public">
+          <Argument type="Long" name="identificacaoPapel"/>
+        </Method>
+        <Method name="getPapelSistema" returnType="PapelSistema" visibility="public"/>
+        <Method name="setPapelSistema" returnType="void" visibility="public">
+          <Argument type="PapelSistema" name="papelSistema"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="RoleGroupKey" package="br.gov.to.sefaz.seg.business.authentication.domain" visibility="public" xPosition="651.0" yPosition="72.0">
+      <Fields>
+        <Field name="type" type="RoleGroupType" visibility="private" isFinal="true"/>
+        <Field name="id" type="Long" visibility="private" isFinal="true"/>
+        <Field name="description" type="String" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="RoleGroupType" name="type"/>
+          <Argument type="Long" name="id"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="RoleGroupType" name="type"/>
+          <Argument type="Long" name="id"/>
+          <Argument type="String" name="description"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getType" returnType="RoleGroupType" visibility="public"/>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="getDescription" returnType="String" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="compareTo" returnType="int" visibility="public">
+          <Argument type="RoleGroupKey" name="o"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="RoleGroupManager" package="br.gov.to.sefaz.seg.business.authentication.domain" visibility="public" xPosition="1372.0" yPosition="43.0">
+      <Fields>
+        <Field name="groups" type="Map&lt;RoleGroupKey, Set&lt;GrantedAuthority&gt;&gt;" visibility="private" isFinal="true"/>
+        <Field name="activeGroup" type="Optional&lt;RoleGroupKey&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="setActiveGroup" returnType="void" visibility="public">
+          <Argument type="RoleGroupType" name="type"/>
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="setActiveGroup" returnType="void" visibility="public">
+          <Argument type="RoleGroupKey" name="activeGroup"/>
+        </Method>
+        <Method name="getRoles" returnType="Set&lt;GrantedAuthority&gt;" visibility="public"/>
+        <Method name="getKeys" returnType="Set&lt;RoleGroupKey&gt;" visibility="public"/>
+        <Method name="addRoles" returnType="void" visibility="public">
+          <Argument type="RoleGroupType" name="type"/>
+          <Argument type="Long" name="id"/>
+          <Argument type="String" name="roles"/>
+        </Method>
+        <Method name="addRoles" returnType="void" visibility="public">
+          <Argument type="RoleGroupType" name="type"/>
+          <Argument type="Long" name="id"/>
+          <Argument type="Collection&lt;String&gt;" name="roles"/>
+        </Method>
+        <Method name="addRoles" returnType="void" visibility="public">
+          <Argument type="RoleGroupKey" name="key"/>
+          <Argument type="String" name="roles"/>
+        </Method>
+        <Method name="addRoles" returnType="void" visibility="public">
+          <Argument type="RoleGroupKey" name="key"/>
+          <Argument type="Collection&lt;String&gt;" name="roles"/>
+        </Method>
+        <Method name="getActiveGroup" returnType="Optional&lt;RoleGroupKey&gt;" visibility="public"/>
+        <Method name="createIfAbsent" returnType="void" visibility="private">
+          <Argument type="RoleGroupKey" name="key"/>
+        </Method>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="AuthenticatedUserHandler" package="br.gov.to.sefaz.seg.business.authentication.handler" visibility="public" xPosition="651.0" yPosition="479.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getAuthentication" returnType="UsuarioSistemaAuthentication" visibility="private" isStatic="true"/>
+        <Method name="isAuthenticated" returnType="boolean" visibility="public" isStatic="true"/>
+        <Method name="getUsuarioSistema" returnType="UsuarioSistema" visibility="public" isStatic="true"/>
+        <Method name="getCpf" returnType="String" visibility="public" isStatic="true"/>
+        <Method name="getNome" returnType="String" visibility="public" isStatic="true"/>
+        <Method name="getAuthorities" returnType="Collection&lt;? extends GrantedAuthority&gt;" visibility="public" isStatic="true"/>
+        <Method name="setActiveRoleGroup" returnType="void" visibility="public" isStatic="true">
+          <Argument type="RoleGroupType" name="type"/>
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="getGroupsByType" returnType="List&lt;RoleGroupKey&gt;" visibility="public" isStatic="true">
+          <Argument type="RoleGroupType" name="type"/>
+        </Method>
+        <Method name="getActiveGroup" returnType="Optional&lt;RoleGroupKey&gt;" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="PapelOpcao" package="br.gov.to.sefaz.seg.persistence.entity" visibility="public" xPosition="574.0" yPosition="1016.0">
+      <Fields>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="identificacaoOpcaoAplicacao" type="Long" visibility="private"/>
+        <Field name="identificacaoPapel" type="Long" visibility="private"/>
+        <Field name="opcaoAplicacao" type="OpcaoAplicacao" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Long" name="identificacaoOpcaoAplicacao"/>
+          <Argument type="Long" name="identificacaoPapel"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="PapelOpcaoPK" visibility="public"/>
+        <Method name="getOpcaoAplicacao" returnType="OpcaoAplicacao" visibility="public"/>
+        <Method name="setOpcaoAplicacao" returnType="void" visibility="public">
+          <Argument type="OpcaoAplicacao" name="taOpcaoAplicacao"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PapelOpcaoPK" package="br.gov.to.sefaz.seg.persistence.entity" visibility="public" xPosition="580.0" yPosition="1382.0">
+      <Fields>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="identificacaoOpcaoAplicacao" type="Long" visibility="private"/>
+        <Field name="identificacaoPapel" type="Long" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getIdentificacaoOpcaoAplicacao" returnType="Long" visibility="public"/>
+        <Method name="setIdentificacaoOpcaoAplicacao" returnType="void" visibility="public">
+          <Argument type="Long" name="identificacaoOpcaoAplicacao"/>
+        </Method>
+        <Method name="getIdentificacaoPapel" returnType="Long" visibility="public"/>
+        <Method name="setIdentificacaoPapel" returnType="void" visibility="public">
+          <Argument type="Long" name="identificacaoPapel"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="SecurityConfiguration" package="br.gov.to.sefaz.seg.configuration" visibility="public" xPosition="131.0" yPosition="520.0">
+      <Fields>
+        <Field name="authenticationProvider" type="LdapAuthenticationProvider" visibility="private"/>
+        <Field name="opcaoAplicacaoRepository" type="OpcaoAplicacaoRepository" visibility="private"/>
+        <Field name="navegacaoFilterUtil" type="LogNavegacaoFilterUtil" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="configure" returnType="void" visibility="protected">
+          <Argument type="HttpSecurity" name="http"/>
+        </Method>
+        <Method name="configure" returnType="void" visibility="protected">
+          <Argument type="AuthenticationManagerBuilder" name="auth"/>
+        </Method>
+        <Method name="setOpcoesRules" returnType="void" visibility="private">
+          <Argument type="HttpSecurity" name="http"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PapelSistema" package="br.gov.to.sefaz.seg.persistence.entity" visibility="public" xPosition="1068.0" yPosition="1016.0">
+      <Fields>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="identificacaoPapel" type="Long" visibility="private"/>
+        <Field name="nomePapel" type="String" visibility="private"/>
+        <Field name="descricaoPapel" type="String" visibility="private"/>
+        <Field name="papelOpcao" type="Set&lt;PapelOpcao&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="getIdentificacaoPapel" returnType="Long" visibility="public"/>
+        <Method name="setIdentificacaoPapel" returnType="void" visibility="public">
+          <Argument type="Long" name="identificacaoPapel"/>
+        </Method>
+        <Method name="getNomePapel" returnType="String" visibility="public"/>
+        <Method name="setNomePapel" returnType="void" visibility="public">
+          <Argument type="String" name="nomePapel"/>
+        </Method>
+        <Method name="getDescricaoPapel" returnType="String" visibility="public"/>
+        <Method name="setDescricaoPapel" returnType="void" visibility="public">
+          <Argument type="String" name="descricaoPapel"/>
+        </Method>
+        <Method name="getPapelOpcao" returnType="Set&lt;PapelOpcao&gt;" visibility="public"/>
+        <Method name="setPapelOpcao" returnType="void" visibility="public">
+          <Argument type="Set&lt;PapelOpcao&gt;" name="papelOpcao"/>
+        </Method>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PerfilSistema" package="br.gov.to.sefaz.seg.persistence.entity" visibility="public" xPosition="1879.0" yPosition="997.0">
+      <Fields>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="identificacaoPerfil" type="Long" visibility="private"/>
+        <Field name="nomePerfil" type="String" visibility="private"/>
+        <Field name="descricaoPerfil" type="String" visibility="private"/>
+        <Field name="perfilPapel" type="Set&lt;PerfilPapel&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="getIdentificacaoPerfil" returnType="Long" visibility="public"/>
+        <Method name="setIdentificacaoPerfil" returnType="void" visibility="public">
+          <Argument type="Long" name="identificacaoPerfil"/>
+        </Method>
+        <Method name="getNomePerfil" returnType="String" visibility="public"/>
+        <Method name="setNomePerfil" returnType="void" visibility="public">
+          <Argument type="String" name="nomePerfil"/>
+        </Method>
+        <Method name="getDescricaoPerfil" returnType="String" visibility="public"/>
+        <Method name="setDescricaoPerfil" returnType="void" visibility="public">
+          <Argument type="String" name="descricaoPerfil"/>
+        </Method>
+        <Method name="getPerfilPapel" returnType="Set&lt;PerfilPapel&gt;" visibility="public"/>
+        <Method name="setPerfilPapel" returnType="void" visibility="public">
+          <Argument type="Set&lt;PerfilPapel&gt;" name="perfilPapel"/>
+        </Method>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="OpcaoAplicacao" package="br.gov.to.sefaz.seg.persistence.entity" visibility="public" xPosition="77.0" yPosition="1016.0">
+      <Fields>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="identificacaoOpcaoAplicacao" type="Long" visibility="private"/>
+        <Field name="casoUso" type="String" visibility="private"/>
+        <Field name="descripcaoOpcao" type="String" visibility="private"/>
+        <Field name="opcaoUrl" type="String" visibility="private"/>
+        <Field name="ajudaOpcao" type="String" visibility="private"/>
+        <Field name="identificacaoAplicacaoModulo" type="Long" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="getIdentificacaoOpcaoAplicacao" returnType="Long" visibility="public"/>
+        <Method name="setIdentificacaoOpcaoAplicacao" returnType="void" visibility="public">
+          <Argument type="Long" name="identificacaoOpcaoAplicacao"/>
+        </Method>
+        <Method name="getCasoUso" returnType="String" visibility="public"/>
+        <Method name="setCasoUso" returnType="void" visibility="public">
+          <Argument type="String" name="casoUso"/>
+        </Method>
+        <Method name="getDescripcaoOpcao" returnType="String" visibility="public"/>
+        <Method name="setDescripcaoOpcao" returnType="void" visibility="public">
+          <Argument type="String" name="descripcaoOpcao"/>
+        </Method>
+        <Method name="getOpcaoUrl" returnType="String" visibility="public"/>
+        <Method name="setOpcaoUrl" returnType="void" visibility="public">
+          <Argument type="String" name="opcaoUrl"/>
+        </Method>
+        <Method name="getAjudaOpcao" returnType="String" visibility="public"/>
+        <Method name="setAjudaOpcao" returnType="void" visibility="public">
+          <Argument type="String" name="ajudaOpcao"/>
+        </Method>
+        <Method name="getIdentificacaoAplicacaoModulo" returnType="Long" visibility="public"/>
+        <Method name="setIdentificacaoAplicacaoModulo" returnType="void" visibility="public">
+          <Argument type="Long" name="identificacaoAplicacaoModulo"/>
+        </Method>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="UsuarioPerfil" package="br.gov.to.sefaz.seg.persistence.entity" visibility="public" xPosition="2243.0" yPosition="959.0">
+      <Fields>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="identificacaoUsuarioPerfil" type="Long" visibility="private"/>
+        <Field name="situacaoPerfil" type="Character" visibility="private"/>
+        <Field name="cpfUsuario" type="String" visibility="private"/>
+        <Field name="identificacaoPerfil" type="Long" visibility="private"/>
+        <Field name="perfisSistema" type="Set&lt;PerfilSistema&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="getIdentificacaoUsuarioPerfil" returnType="Long" visibility="public"/>
+        <Method name="setIdentificacaoUsuarioPerfil" returnType="void" visibility="public">
+          <Argument type="Long" name="identificacaoUsuarioPerfil"/>
+        </Method>
+        <Method name="getSituacaoPerfil" returnType="Character" visibility="public"/>
+        <Method name="setSituacaoPerfil" returnType="void" visibility="public">
+          <Argument type="Character" name="situacaoPerfil"/>
+        </Method>
+        <Method name="getCpfUsuario" returnType="String" visibility="public"/>
+        <Method name="getIdentificacaoPerfil" returnType="Long" visibility="public"/>
+        <Method name="getPerfisSistema" returnType="Set&lt;PerfilSistema&gt;" visibility="public"/>
+        <Method name="setPerfisSistema" returnType="void" visibility="public">
+          <Argument type="Set&lt;PerfilSistema&gt;" name="perfisSistema"/>
+        </Method>
+        <Method name="setIdentificacaoPerfil" returnType="void" visibility="public">
+          <Argument type="Long" name="identificacaoPerfil"/>
+        </Method>
+        <Method name="setCpfUsuario" returnType="void" visibility="public">
+          <Argument type="String" name="cpfUsuario"/>
+        </Method>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="AuthenticationFactory" package="br.gov.to.sefaz.seg.business.authentication.factory" visibility="public" xPosition="1988.0" yPosition="548.0">
+      <Fields>
+        <Field name="usuarioPerfilRepository" type="UsuarioPerfilRepository" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="UsuarioPerfilRepository" name="usuarioPerfilRepository"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="create" returnType="UsuarioSistemaAuthentication" visibility="public">
+          <Argument type="String" name="password"/>
+          <Argument type="UsuarioSistema" name="usuarioSistema"/>
+        </Method>
+        <Method name="fillRoleGroupManager" returnType="void" visibility="private">
+          <Argument type="RoleGroupManager" name="roleGroupManager"/>
+          <Argument type="List&lt;PerfilSistema&gt;" name="perfis"/>
+        </Method>
+        <Method name="createRoleGroupKey" returnType="RoleGroupKey" visibility="private">
+          <Argument type="PerfilSistema" name="perfilSistema"/>
+        </Method>
+        <Method name="extractRoles" returnType="List&lt;String&gt;" visibility="private">
+          <Argument type="PerfilSistema" name="perfilSistema"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="UsuarioSistemaAuthentication" package="br.gov.to.sefaz.seg.business.authentication.domain" visibility="public" xPosition="1413.0" yPosition="479.0">
+      <Fields>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="password" type="String" visibility="private" isFinal="true"/>
+        <Field name="ip" type="String" visibility="private" isFinal="true"/>
+        <Field name="roleGroupManager" type="RoleGroupManager" visibility="private" isFinal="true"/>
+        <Field name="usuarioSistema" type="UsuarioSistema" visibility="private" isFinal="true"/>
+        <Field name="authenticated" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getAuthorities" returnType="Collection&lt;? extends GrantedAuthority&gt;" visibility="public"/>
+        <Method name="getRoleGroupManager" returnType="RoleGroupManager" visibility="public"/>
+        <Method name="getCredentials" returnType="String" visibility="public"/>
+        <Method name="getDetails" returnType="String" visibility="public"/>
+        <Method name="getPrincipal" returnType="UsuarioSistema" visibility="public"/>
+        <Method name="isAuthenticated" returnType="boolean" visibility="public"/>
+        <Method name="setAuthenticated" returnType="void" visibility="public">
+          <Argument type="boolean" name="isAuthenticated"/>
+        </Method>
+        <Method name="getName" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="PerfilSistemaRepository" package="br.gov.to.sefaz.seg.persistence.repository" visibility="public" xPosition="1838.0" yPosition="857.0">
+      <Methods/>
+    </Interface>
+    <Interface name="PapelOpcaoRepository" package="br.gov.to.sefaz.seg.persistence.repository" visibility="public" xPosition="707.0" yPosition="872.0">
+      <Methods/>
+    </Interface>
+    <Interface name="UsuarioPerfilRepository" package="br.gov.to.sefaz.seg.persistence.repository" visibility="public" xPosition="2243.0" yPosition="817.0">
+      <Methods>
+        <Method name="findAllByUsuarioSistema" returnType="Set&lt;UsuarioPerfil&gt;" visibility="package">
+          <Argument type="String" name="usuarioId"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="PapelSistemaRepository" package="br.gov.to.sefaz.seg.persistence.repository" visibility="public" xPosition="1139.0" yPosition="889.0">
+      <Methods/>
+    </Interface>
+    <Interface name="OpcaoAplicacaoRepository" package="br.gov.to.sefaz.seg.persistence.repository" visibility="public" xPosition="199.0" yPosition="817.0">
+      <Methods/>
+    </Interface>
+    <Interface name="PerfilPapelRepository" package="br.gov.to.sefaz.seg.persistence.repository" visibility="public" xPosition="1551.0" yPosition="889.0">
+      <Methods/>
+    </Interface>
+    <Enum name="RoleGroupType" package="br.gov.to.sefaz.seg.business.authentication.domain" visibility="public" xPosition="1172.0" yPosition="401.0">
+      <Literals>
+        <Literal name="PERFIL"/>
+        <Literal name="PROCURACAO"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="br.gov.to.sefaz.seg.business.authentication.handler.AuthenticatedUserHandler" target="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupType" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="opcaoAplicacao" source="br.gov.to.sefaz.seg.persistence.entity.PapelOpcao" target="br.gov.to.sefaz.seg.persistence.entity.OpcaoAplicacao" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="roleGroupManager" source="br.gov.to.sefaz.seg.business.authentication.domain.UsuarioSistemaAuthentication" target="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupManager" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.seg.persistence.entity.PapelOpcao" target="br.gov.to.sefaz.seg.persistence.entity.PapelOpcaoPK" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="br.gov.to.sefaz.seg.persistence.repository.PerfilPapelRepository" target="br.gov.to.sefaz.seg.persistence.entity.PerfilPapel" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="br.gov.to.sefaz.seg.persistence.repository.PerfilSistemaRepository" target="br.gov.to.sefaz.seg.persistence.entity.PerfilSistema" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="groups" source="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupManager" target="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupKey" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Map&lt;RoleGroupKey, Set&lt;GrantedAuthority&gt;&gt;"/>
+    <UseRelation source="br.gov.to.sefaz.seg.persistence.repository.UsuarioPerfilRepository" target="br.gov.to.sefaz.seg.persistence.entity.UsuarioPerfil" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="papelSistema" source="br.gov.to.sefaz.seg.persistence.entity.PerfilPapel" target="br.gov.to.sefaz.seg.persistence.entity.PapelSistema" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="br.gov.to.sefaz.seg.persistence.entity.PerfilPapel" target="br.gov.to.sefaz.seg.persistence.entity.PerfilPapelPK" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.seg.business.authentication.factory.AuthenticationFactory" target="br.gov.to.sefaz.seg.business.authentication.domain.UsuarioSistemaAuthentication" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="perfilPapel" source="br.gov.to.sefaz.seg.persistence.entity.PerfilSistema" target="br.gov.to.sefaz.seg.persistence.entity.PerfilPapel" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Set&lt;PerfilPapel&gt;"/>
+    <HasRelation name="perfisSistema" source="br.gov.to.sefaz.seg.persistence.entity.UsuarioPerfil" target="br.gov.to.sefaz.seg.persistence.entity.PerfilSistema" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Set&lt;PerfilSistema&gt;"/>
+    <UseRelation name="" source="br.gov.to.sefaz.seg.persistence.repository.PapelOpcaoRepository" target="br.gov.to.sefaz.seg.persistence.entity.PapelOpcao" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="activeGroup" source="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupManager" target="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupKey" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.seg.business.authentication.handler.AuthenticatedUserHandler" target="br.gov.to.sefaz.seg.business.authentication.domain.UsuarioSistemaAuthentication" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.seg.template.managedbean.DefaultTemplateMB" target="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupKey" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupManager" target="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupType" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="usuarioPerfilRepository" source="br.gov.to.sefaz.seg.business.authentication.factory.AuthenticationFactory" target="br.gov.to.sefaz.seg.persistence.repository.UsuarioPerfilRepository" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="opcaoAplicacaoRepository" source="br.gov.to.sefaz.seg.configuration.SecurityConfiguration" target="br.gov.to.sefaz.seg.persistence.repository.OpcaoAplicacaoRepository" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.seg.business.authentication.handler.AuthenticatedUserHandler" target="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupKey" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.seg.business.authentication.factory.AuthenticationFactory" target="br.gov.to.sefaz.seg.persistence.entity.PerfilSistema" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="br.gov.to.sefaz.seg.persistence.repository.PapelSistemaRepository" target="br.gov.to.sefaz.seg.persistence.entity.PapelSistema" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="papelOpcao" source="br.gov.to.sefaz.seg.persistence.entity.PapelSistema" target="br.gov.to.sefaz.seg.persistence.entity.PapelOpcao" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Set&lt;PapelOpcao&gt;"/>
+    <HasRelation name="type" source="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupKey" target="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupType" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="br.gov.to.sefaz.seg.persistence.repository.OpcaoAplicacaoRepository" target="br.gov.to.sefaz.seg.persistence.entity.OpcaoAplicacao" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

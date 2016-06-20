@@ -1,0 +1,692 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="CertificadoDigitalUtil" package="br.gov.to.sefaz.util.certificado" visibility="public" xPosition="59.0" yPosition="1196.0">
+      <Fields>
+        <Field name="OID_PF_DADOS_TITULAR" type="ASN1ObjectIdentifier" visibility="private" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getCpf" returnType="Optional&lt;String&gt;" visibility="public">
+          <Argument type="X509Certificate" name="certChain"/>
+        </Method>
+        <Method name="setCpfFromCertificate" returnType="List&lt;Optional&lt;String&gt;&gt;" visibility="private">
+          <Argument type="X509Certificate" name="certificate"/>
+        </Method>
+        <Method name="valueIsCpf" returnType="Optional&lt;String&gt;" visibility="private">
+          <Argument type="Object" name="value"/>
+        </Method>
+        <Method name="getValueOfTag" returnType="String" visibility="private">
+          <Argument type="ASN1Object" name="derObject"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="CertificadoDigitalException" package="br.gov.to.sefaz.util.certificado" visibility="public" xPosition="135.0" yPosition="739.0">
+      <Fields>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="message"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="ResetPasswordMB" package="br.gov.to.sefaz.seg.managedbean" visibility="public" xPosition="484.0" yPosition="519.0">
+      <Fields>
+        <Field name="beanFactoryMB" type="BeanFactoryMB" visibility="private"/>
+        <Field name="loginSistemaFacade" type="LoginSistemaFacade" visibility="private"/>
+        <Field name="dto" type="ResetPasswordDto" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="injectDependencies" returnType="void" visibility="protected"/>
+        <Method name="setLoginSistemaFacade" returnType="void" visibility="public">
+          <Argument type="LoginSistemaFacade" name="loginSistemaFacade"/>
+        </Method>
+        <Method name="getBeanFactoryMB" returnType="BeanFactoryMB" visibility="public"/>
+        <Method name="setBeanFactoryMB" returnType="void" visibility="public">
+          <Argument type="BeanFactoryMB" name="beanFactoryMB"/>
+        </Method>
+        <Method name="getDto" returnType="ResetPasswordDto" visibility="public"/>
+        <Method name="setDto" returnType="void" visibility="public">
+          <Argument type="ResetPasswordDto" name="dto"/>
+        </Method>
+        <Method name="resetPassword" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CertificadoDigitalMB" package="br.gov.to.sefaz.seg.managedbean" visibility="public" xPosition="139.0" yPosition="976.0">
+      <Fields>
+        <Field name="loginSistemaFacade" type="LoginSistemaFacade" visibility="private"/>
+        <Field name="certificadoDigitalUtil" type="CertificadoDigitalUtil" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getCpf" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="LdapAuthenticationProvider" package="br.gov.to.sefaz.seg.provider" visibility="public" xPosition="754.0" yPosition="1469.0">
+      <Fields>
+        <Field name="loginSistemaFacade" type="LoginSistemaFacade" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="LoginSistemaFacade" name="loginSistemaFacade"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="authenticate" returnType="Authentication" visibility="public">
+          <Argument type="Authentication" name="authentication"/>
+        </Method>
+        <Method name="supports" returnType="boolean" visibility="public">
+          <Argument type="Class&lt;?&gt;" name="authentication"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="SecurityApplicationInitializer" package="br.gov.to.sefaz.seg.configuration" visibility="public" xPosition="134.0" yPosition="251.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="onStartup" returnType="void" visibility="public">
+          <Argument type="ServletContext" name="servletContext"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="SecurityConfiguration" package="br.gov.to.sefaz.seg.configuration" visibility="public" xPosition="98.0" yPosition="1450.0">
+      <Fields>
+        <Field name="authenticationProvider" type="LdapAuthenticationProvider" visibility="private"/>
+        <Field name="opcaoAplicacaoRepository" type="OpcaoAplicacaoRepository" visibility="private"/>
+        <Field name="navegacaoFilterUtil" type="LogNavegacaoFilterUtil" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="configure" returnType="void" visibility="protected">
+          <Argument type="HttpSecurity" name="http"/>
+        </Method>
+        <Method name="configure" returnType="void" visibility="protected">
+          <Argument type="AuthenticationManagerBuilder" name="auth"/>
+        </Method>
+        <Method name="setOpcoesRules" returnType="void" visibility="private">
+          <Argument type="HttpSecurity" name="http"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="UsuarioSistema" package="br.gov.to.sefaz.seg.persistence.entity" visibility="public" xPosition="3013.0" yPosition="681.0">
+      <Fields>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="cpfUsuario" type="String" visibility="private"/>
+        <Field name="nomeCompletoUsuario" type="String" visibility="private"/>
+        <Field name="cep" type="String" visibility="private"/>
+        <Field name="codigoLogradouro" type="String" visibility="private"/>
+        <Field name="endereco" type="String" visibility="private"/>
+        <Field name="numeroEndereco" type="Integer" visibility="private"/>
+        <Field name="apartamento" type="Integer" visibility="private"/>
+        <Field name="complemento" type="String" visibility="private"/>
+        <Field name="bairro" type="String" visibility="private"/>
+        <Field name="codigoEstado" type="String" visibility="private"/>
+        <Field name="codigoMunicipio" type="Integer" visibility="private"/>
+        <Field name="telefoneResidencial" type="String" visibility="private"/>
+        <Field name="outroEnderecoContato" type="String" visibility="private"/>
+        <Field name="correioEletronico" type="String" visibility="private"/>
+        <Field name="telefoneCelular" type="String" visibility="private"/>
+        <Field name="crc" type="String" visibility="private"/>
+        <Field name="situacaoUsuario" type="SituacaoUsuarioEnum" visibility="private"/>
+        <Field name="alterarSenhaProximoAcesso" type="Boolean" visibility="private"/>
+        <Field name="dataUltimaAlteracaoSenha" type="LocalDateTime" visibility="private"/>
+        <Field name="justificacaoCriacao" type="String" visibility="private"/>
+        <Field name="estaBloqueado" type="Boolean" visibility="private"/>
+        <Field name="dataDesbloqueio" type="LocalDateTime" visibility="private"/>
+        <Field name="codigoTipoUsuario" type="Integer" visibility="private"/>
+        <Field name="tipoUsuario" type="TipoUsuario" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="String" visibility="public"/>
+        <Method name="getCpfUsuario" returnType="String" visibility="public"/>
+        <Method name="setCpfUsuario" returnType="void" visibility="public">
+          <Argument type="String" name="cpfUsuario"/>
+        </Method>
+        <Method name="getNomeCompletoUsuario" returnType="String" visibility="public"/>
+        <Method name="setNomeCompletoUsuario" returnType="void" visibility="public">
+          <Argument type="String" name="nomeCompletoUsuario"/>
+        </Method>
+        <Method name="getCep" returnType="String" visibility="public"/>
+        <Method name="setCep" returnType="void" visibility="public">
+          <Argument type="String" name="cep"/>
+        </Method>
+        <Method name="getCodigoLogradouro" returnType="String" visibility="public"/>
+        <Method name="setCodigoLogradouro" returnType="void" visibility="public">
+          <Argument type="String" name="codigoLogradouro"/>
+        </Method>
+        <Method name="getEndereco" returnType="String" visibility="public"/>
+        <Method name="setEndereco" returnType="void" visibility="public">
+          <Argument type="String" name="endereco"/>
+        </Method>
+        <Method name="getNumeroEndereco" returnType="Integer" visibility="public"/>
+        <Method name="setNumeroEndereco" returnType="void" visibility="public">
+          <Argument type="Integer" name="numeroEndereco"/>
+        </Method>
+        <Method name="getApartamento" returnType="Integer" visibility="public"/>
+        <Method name="setApartamento" returnType="void" visibility="public">
+          <Argument type="Integer" name="apartamento"/>
+        </Method>
+        <Method name="getComplemento" returnType="String" visibility="public"/>
+        <Method name="setComplemento" returnType="void" visibility="public">
+          <Argument type="String" name="complemento"/>
+        </Method>
+        <Method name="getBairro" returnType="String" visibility="public"/>
+        <Method name="setBairro" returnType="void" visibility="public">
+          <Argument type="String" name="bairro"/>
+        </Method>
+        <Method name="getCodigoEstado" returnType="String" visibility="public"/>
+        <Method name="setCodigoEstado" returnType="void" visibility="public">
+          <Argument type="String" name="codigoEstado"/>
+        </Method>
+        <Method name="getCodigoMunicipio" returnType="Integer" visibility="public"/>
+        <Method name="setCodigoMunicipio" returnType="void" visibility="public">
+          <Argument type="Integer" name="codigoMunicipio"/>
+        </Method>
+        <Method name="getTelefoneResidencial" returnType="String" visibility="public"/>
+        <Method name="setTelefoneResidencial" returnType="void" visibility="public">
+          <Argument type="String" name="telefoneResidencial"/>
+        </Method>
+        <Method name="getOutroEnderecoContato" returnType="String" visibility="public"/>
+        <Method name="setOutroEnderecoContato" returnType="void" visibility="public">
+          <Argument type="String" name="outroEnderecoContato"/>
+        </Method>
+        <Method name="getCorreioEletronico" returnType="String" visibility="public"/>
+        <Method name="setCorreioEletronico" returnType="void" visibility="public">
+          <Argument type="String" name="correioEletronico"/>
+        </Method>
+        <Method name="getTelefoneCelular" returnType="String" visibility="public"/>
+        <Method name="setTelefoneCelular" returnType="void" visibility="public">
+          <Argument type="String" name="telefoneCelular"/>
+        </Method>
+        <Method name="getCrc" returnType="String" visibility="public"/>
+        <Method name="setCrc" returnType="void" visibility="public">
+          <Argument type="String" name="crc"/>
+        </Method>
+        <Method name="getSituacaoUsuario" returnType="SituacaoUsuarioEnum" visibility="public"/>
+        <Method name="setSituacaoUsuario" returnType="void" visibility="public">
+          <Argument type="SituacaoUsuarioEnum" name="situacaoUsuario"/>
+        </Method>
+        <Method name="getAlterarSenhaProximoAcesso" returnType="Boolean" visibility="public"/>
+        <Method name="setAlterarSenhaProximoAcesso" returnType="void" visibility="public">
+          <Argument type="Boolean" name="alterarSenhaProximoAcesso"/>
+        </Method>
+        <Method name="getDataUltimaAlteracaoSenha" returnType="LocalDateTime" visibility="public"/>
+        <Method name="setDataUltimaAlteracaoSenha" returnType="void" visibility="public">
+          <Argument type="LocalDateTime" name="dataUltimaAlteracaoSenha"/>
+        </Method>
+        <Method name="getJustificacaoCriacao" returnType="String" visibility="public"/>
+        <Method name="setJustificacaoCriacao" returnType="void" visibility="public">
+          <Argument type="String" name="justificacaoCriacao"/>
+        </Method>
+        <Method name="getEstaBloqueado" returnType="Boolean" visibility="public"/>
+        <Method name="setEstaBloqueado" returnType="void" visibility="public">
+          <Argument type="Boolean" name="estaBloqueado"/>
+        </Method>
+        <Method name="getDataDesbloqueio" returnType="LocalDateTime" visibility="public"/>
+        <Method name="setDataDesbloqueio" returnType="void" visibility="public">
+          <Argument type="LocalDateTime" name="dataDesbloqueio"/>
+        </Method>
+        <Method name="getCodigoTipoUsuario" returnType="Integer" visibility="public"/>
+        <Method name="setCodigoTipoUsuario" returnType="void" visibility="public">
+          <Argument type="Integer" name="codigoTipoUsuario"/>
+        </Method>
+        <Method name="getTipoUsuario" returnType="TipoUsuario" visibility="public"/>
+        <Method name="setTipoUsuario" returnType="void" visibility="public">
+          <Argument type="TipoUsuario" name="tipoUsuario"/>
+        </Method>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="UsuarioSistemaCpfInativoValidator" package="br.gov.to.sefaz.seg.business.gestao.service.validator" visibility="public" xPosition="3648.0" yPosition="1590.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="support" returnType="boolean" visibility="public">
+          <Argument type="Class&lt;?&gt;" name="clazz"/>
+          <Argument type="String" name="context"/>
+        </Method>
+        <Method name="validate" returnType="Set&lt;CustomViolation&gt;" visibility="public">
+          <Argument type="UsuarioSistema" name="usuarioSistema"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="UsuarioSistemaCpfCadastradoValidator" package="br.gov.to.sefaz.seg.business.gestao.service.validator" visibility="public" xPosition="3661.0" yPosition="1796.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="support" returnType="boolean" visibility="public">
+          <Argument type="Class&lt;?&gt;" name="clazz"/>
+          <Argument type="String" name="context"/>
+        </Method>
+        <Method name="validate" returnType="Set&lt;CustomViolation&gt;" visibility="public">
+          <Argument type="UsuarioSistema" name="usuarioSistema"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="UsuarioSistemaCpfBloqueadoValidator" package="br.gov.to.sefaz.seg.business.gestao.service.validator" visibility="public" xPosition="3661.0" yPosition="1993.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="support" returnType="boolean" visibility="public">
+          <Argument type="Class&lt;?&gt;" name="clazz"/>
+          <Argument type="String" name="context"/>
+        </Method>
+        <Method name="validate" returnType="Set&lt;CustomViolation&gt;" visibility="public">
+          <Argument type="UsuarioSistema" name="usuarioSistema"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="UsuarioSistemaServiceImpl" package="br.gov.to.sefaz.seg.business.gestao.service.impl" visibility="public" xPosition="2479.0" yPosition="1535.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="UsuarioSistemaRepository" name="repository"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRepository" returnType="UsuarioSistemaRepository" visibility="protected"/>
+        <Method name="findAllByCpfAndName" returnType="Collection&lt;UsuarioSistema&gt;" visibility="public">
+          <Argument type="Long" name="cpf"/>
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="validate" returnType="void" visibility="public">
+          <Argument type="UsuarioSistema" name="usuarioSistema"/>
+        </Method>
+        <Method name="blockUser" returnType="void" visibility="public">
+          <Argument type="String" name="cpf"/>
+        </Method>
+        <Method name="unblockUser" returnType="void" visibility="public">
+          <Argument type="String" name="cpf"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="HistoricoLoginSistemaServiceImpl" package="br.gov.to.sefaz.seg.business.gestao.service.impl" visibility="public" xPosition="3672.0" yPosition="986.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="HistoricoLoginSistemaRepository" name="repository"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="saveHistoricoLoginSistema" returnType="HistoricoLoginSistema" visibility="public">
+          <Argument type="UsuarioSistema" name="usuarioSistema"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="LoginSistemaFacadeImpl" package="br.gov.to.sefaz.seg.business.authentication.facade.impl" visibility="public" xPosition="1320.0" yPosition="840.0">
+      <Fields>
+        <Field name="loginSistemaService" type="LoginSistemaService" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="LoginSistemaService" name="loginSistemaService"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="ldapAuthenticate" returnType="UsuarioSistemaAuthentication" visibility="public">
+          <Argument type="LoginDto" name="dto"/>
+        </Method>
+        <Method name="ldapResetPassword" returnType="void" visibility="public">
+          <Argument type="ResetPasswordDto" name="dto"/>
+        </Method>
+        <Method name="certAuthenticate" returnType="UsuarioSistemaAuthentication" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="LdapHandler" package="br.gov.to.sefaz.seg.business.authentication.handler" visibility="public" xPosition="3857.0" yPosition="270.0">
+      <Fields>
+        <Field name="RANDOM" type="Random" visibility="private" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getLdapProperties" returnType="LdapProperties" visibility="public" isStatic="true"/>
+        <Method name="getRandomPassword" returnType="String" visibility="public" isStatic="true">
+          <Argument type="int" name="length"/>
+        </Method>
+        <Method name="getRandomCharactere" returnType="char" visibility="private" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="LdapProvider" package="br.gov.to.sefaz.seg.business.authentication.provider" visibility="public" xPosition="3242.0" yPosition="203.0">
+      <Fields>
+        <Field name="ldapProperties" type="LdapProperties" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="authenticate" returnType="void" visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="passwdord"/>
+        </Method>
+        <Method name="resetPassword" returnType="void" visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="newPassword"/>
+        </Method>
+        <Method name="setAttribute" returnType="void" visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="ModificationItem" name="itens"/>
+        </Method>
+        <Method name="getAttribute" returnType="Object" visibility="public">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="att"/>
+        </Method>
+        <Method name="getNameInNamespace" returnType="String" visibility="private">
+          <Argument type="LdapContext" name="ctx"/>
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="getResults" returnType="NamingEnumeration&lt;SearchResult&gt;" visibility="private">
+          <Argument type="LdapContext" name="ctx"/>
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="closeResults" returnType="void" visibility="private">
+          <Argument type="NamingEnumeration&lt;SearchResult&gt;" name="results"/>
+        </Method>
+        <Method name="openConectionAD" returnType="LdapContext" visibility="private">
+          <Argument type="String" name="username"/>
+          <Argument type="String" name="passwdord"/>
+          <Argument type="boolean" name="ssl"/>
+        </Method>
+        <Method name="closeConectionAD" returnType="void" visibility="private">
+          <Argument type="LdapContext" name="ctx"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="LoginSistemaServiceImpl" package="br.gov.to.sefaz.seg.business.authentication.service.impl" visibility="public" xPosition="2411.0" yPosition="203.0">
+      <Fields>
+        <Field name="usuarioSistemaService" type="UsuarioSistemaService" visibility="private" isFinal="true"/>
+        <Field name="mailSenderService" type="MailSenderService" visibility="private" isFinal="true"/>
+        <Field name="ldapProvider" type="LdapProvider" visibility="private" isFinal="true"/>
+        <Field name="triesService" type="WrongPasswordTriesService" visibility="private" isFinal="true"/>
+        <Field name="historicoLoginSistemaService" type="HistoricoLoginSistemaService" visibility="private" isFinal="true"/>
+        <Field name="authenticationFactory" type="AuthenticationFactory" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="authenticate" returnType="UsuarioSistemaAuthentication" visibility="public">
+          <Argument type="LoginDto" name="dto"/>
+        </Method>
+        <Method name="certAuthenticate" returnType="UsuarioSistemaAuthentication" visibility="public">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="resetPassword" returnType="void" visibility="public">
+          <Argument type="ResetPasswordDto" name="dto"/>
+        </Method>
+        <Method name="authenticateAndRegister" returnType="UsuarioSistemaAuthentication" visibility="private">
+          <Argument type="UsuarioSistema" name="usuarioSistema"/>
+          <Argument type="String" name="password"/>
+        </Method>
+        <Method name="getUserIfUnblocked" returnType="UsuarioSistema" visibility="private">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="registerUserFailure" returnType="BusinessException" visibility="private">
+          <Argument type="SecurityException" name="e"/>
+          <Argument type="String" name="cpf"/>
+        </Method>
+        <Method name="validateEmailUsuario" returnType="void" visibility="private">
+          <Argument type="ResetPasswordDto" name="dto"/>
+          <Argument type="UsuarioSistema" name="usuario"/>
+        </Method>
+        <Method name="validate" returnType="void" visibility="private">
+          <Argument type="Object" name="dto"/>
+        </Method>
+        <Method name="getMailBodyResetPasswdMessage" returnType="String" visibility="private">
+          <Argument type="UsuarioSistema" name="usuario"/>
+          <Argument type="String" name="newPassword"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AuthenticationFactory" package="br.gov.to.sefaz.seg.business.authentication.factory" visibility="public" xPosition="1828.0" yPosition="571.0">
+      <Fields>
+        <Field name="usuarioPerfilRepository" type="UsuarioPerfilRepository" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="UsuarioPerfilRepository" name="usuarioPerfilRepository"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="create" returnType="UsuarioSistemaAuthentication" visibility="public">
+          <Argument type="String" name="password"/>
+          <Argument type="UsuarioSistema" name="usuarioSistema"/>
+        </Method>
+        <Method name="fillRoleGroupManager" returnType="void" visibility="private">
+          <Argument type="RoleGroupManager" name="roleGroupManager"/>
+          <Argument type="List&lt;PerfilSistema&gt;" name="perfis"/>
+        </Method>
+        <Method name="createRoleGroupKey" returnType="RoleGroupKey" visibility="private">
+          <Argument type="PerfilSistema" name="perfilSistema"/>
+        </Method>
+        <Method name="extractRoles" returnType="List&lt;String&gt;" visibility="private">
+          <Argument type="PerfilSistema" name="perfilSistema"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AuthenticatedUserHandler" package="br.gov.to.sefaz.seg.business.authentication.handler" visibility="public" xPosition="1932.0" yPosition="1753.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getAuthentication" returnType="UsuarioSistemaAuthentication" visibility="private" isStatic="true"/>
+        <Method name="isAuthenticated" returnType="boolean" visibility="public" isStatic="true"/>
+        <Method name="getUsuarioSistema" returnType="UsuarioSistema" visibility="public" isStatic="true"/>
+        <Method name="getCpf" returnType="String" visibility="public" isStatic="true"/>
+        <Method name="getNome" returnType="String" visibility="public" isStatic="true"/>
+        <Method name="getAuthorities" returnType="Collection&lt;? extends GrantedAuthority&gt;" visibility="public" isStatic="true"/>
+        <Method name="setActiveRoleGroup" returnType="void" visibility="public" isStatic="true">
+          <Argument type="RoleGroupType" name="type"/>
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="getGroupsByType" returnType="List&lt;RoleGroupKey&gt;" visibility="public" isStatic="true">
+          <Argument type="RoleGroupType" name="type"/>
+        </Method>
+        <Method name="getActiveGroup" returnType="Optional&lt;RoleGroupKey&gt;" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="ResetPasswordDto" package="br.gov.to.sefaz.seg.business.authentication.domain" visibility="public" xPosition="988.0" yPosition="225.0">
+      <Fields>
+        <Field name="cpf" type="String" visibility="private"/>
+        <Field name="email" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="cpf"/>
+          <Argument type="String" name="email"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCpf" returnType="String" visibility="public"/>
+        <Method name="setCpf" returnType="void" visibility="public">
+          <Argument type="String" name="cpf"/>
+        </Method>
+        <Method name="getEmail" returnType="String" visibility="public"/>
+        <Method name="setEmail" returnType="void" visibility="public">
+          <Argument type="String" name="email"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="LoginDto" package="br.gov.to.sefaz.seg.business.authentication.domain" visibility="public" xPosition="1414.0" yPosition="1364.0">
+      <Fields>
+        <Field name="cpf" type="String" visibility="private"/>
+        <Field name="passwd" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="String" name="cpf"/>
+          <Argument type="String" name="passwd"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCpf" returnType="String" visibility="public"/>
+        <Method name="setCpf" returnType="void" visibility="public">
+          <Argument type="String" name="cpf"/>
+        </Method>
+        <Method name="getPasswd" returnType="String" visibility="public"/>
+        <Method name="setPasswd" returnType="void" visibility="public">
+          <Argument type="String" name="passwd"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="UsuarioSistemaAuthentication" package="br.gov.to.sefaz.seg.business.authentication.domain" visibility="public" xPosition="1964.0" yPosition="1222.0">
+      <Fields>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="password" type="String" visibility="private" isFinal="true"/>
+        <Field name="ip" type="String" visibility="private" isFinal="true"/>
+        <Field name="roleGroupManager" type="RoleGroupManager" visibility="private" isFinal="true"/>
+        <Field name="usuarioSistema" type="UsuarioSistema" visibility="private" isFinal="true"/>
+        <Field name="authenticated" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getAuthorities" returnType="Collection&lt;? extends GrantedAuthority&gt;" visibility="public"/>
+        <Method name="getRoleGroupManager" returnType="RoleGroupManager" visibility="public"/>
+        <Method name="getCredentials" returnType="String" visibility="public"/>
+        <Method name="getDetails" returnType="String" visibility="public"/>
+        <Method name="getPrincipal" returnType="UsuarioSistema" visibility="public"/>
+        <Method name="isAuthenticated" returnType="boolean" visibility="public"/>
+        <Method name="setAuthenticated" returnType="void" visibility="public">
+          <Argument type="boolean" name="isAuthenticated"/>
+        </Method>
+        <Method name="getName" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="UsuarioSistemaRepository" package="br.gov.to.sefaz.seg.persistence.repository" visibility="public" xPosition="2411.0" yPosition="2114.0">
+      <Methods>
+        <Method name="updateEstaBloqueado" returnType="void" visibility="package">
+          <Argument type="boolean" name="bloqueado"/>
+          <Argument type="LocalDateTime" name="dataDesbloqueio"/>
+          <Argument type="String" name="cpf"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="HistoricoLoginSistemaRepository" package="br.gov.to.sefaz.seg.persistence.repository" visibility="public" xPosition="3892.0" yPosition="1249.0">
+      <Methods/>
+    </Interface>
+    <Interface name="UsuarioSistemaService" package="br.gov.to.sefaz.seg.business.gestao.service" visibility="public" xPosition="2479.0" yPosition="1230.0">
+      <Methods>
+        <Method name="findAllByCpfAndName" returnType="Collection&lt;UsuarioSistema&gt;" visibility="package">
+          <Argument type="Long" name="cpf"/>
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="validate" returnType="void" visibility="package">
+          <Argument type="UsuarioSistema" name="usuarioSistema"/>
+        </Method>
+        <Method name="blockUser" returnType="void" visibility="package">
+          <Argument type="String" name="cpf"/>
+        </Method>
+        <Method name="unblockUser" returnType="void" visibility="package">
+          <Argument type="String" name="cpf"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="HistoricoLoginSistemaService" package="br.gov.to.sefaz.seg.business.gestao.service" visibility="public" xPosition="3591.0" yPosition="661.0">
+      <Methods>
+        <Method name="saveHistoricoLoginSistema" returnType="HistoricoLoginSistema" visibility="package">
+          <Argument type="UsuarioSistema" name="usuarioSistema"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="LoginSistemaFacade" package="br.gov.to.sefaz.seg.business.authentication.facade" visibility="public" xPosition="838.0" yPosition="1120.0">
+      <Methods>
+        <Method name="ldapAuthenticate" returnType="UsuarioSistemaAuthentication" visibility="package">
+          <Argument type="LoginDto" name="dto"/>
+        </Method>
+        <Method name="ldapResetPassword" returnType="void" visibility="package">
+          <Argument type="ResetPasswordDto" name="dto"/>
+        </Method>
+        <Method name="certAuthenticate" returnType="UsuarioSistemaAuthentication" visibility="package">
+          <Argument type="String" name="username"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="LoginSistemaService" package="br.gov.to.sefaz.seg.business.authentication.service" visibility="public" xPosition="1412.0" yPosition="390.0">
+      <Methods>
+        <Method name="authenticate" returnType="UsuarioSistemaAuthentication" visibility="package">
+          <Argument type="LoginDto" name="dto"/>
+        </Method>
+        <Method name="certAuthenticate" returnType="UsuarioSistemaAuthentication" visibility="package">
+          <Argument type="String" name="username"/>
+        </Method>
+        <Method name="resetPassword" returnType="void" visibility="package">
+          <Argument type="ResetPasswordDto" name="dto"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Enum name="SituacaoUsuarioEnum" package="br.gov.to.sefaz.seg.persistence.enums" visibility="public" xPosition="3586.0" yPosition="1230.0">
+      <Literals>
+        <Literal name="ATIVO"/>
+        <Literal name="INATIVO"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="br.gov.to.sefaz.seg.business.authentication.service.impl.LoginSistemaServiceImpl" target="br.gov.to.sefaz.seg.business.authentication.domain.ResetPasswordDto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dto" source="br.gov.to.sefaz.seg.managedbean.ResetPasswordMB" target="br.gov.to.sefaz.seg.business.authentication.domain.ResetPasswordDto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="br.gov.to.sefaz.seg.business.authentication.facade.LoginSistemaFacade" target="br.gov.to.sefaz.seg.business.authentication.domain.LoginDto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="br.gov.to.sefaz.seg.persistence.repository.UsuarioSistemaRepository" target="br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.seg.business.authentication.facade.LoginSistemaFacade" target="br.gov.to.sefaz.seg.business.authentication.domain.UsuarioSistemaAuthentication" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="loginSistemaFacade" source="br.gov.to.sefaz.seg.managedbean.CertificadoDigitalMB" target="br.gov.to.sefaz.seg.business.authentication.facade.LoginSistemaFacade" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.seg.business.authentication.handler.AuthenticatedUserHandler" target="br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.seg.business.authentication.facade.impl.LoginSistemaFacadeImpl" target="br.gov.to.sefaz.seg.business.authentication.facade.LoginSistemaFacade"/>
+    <HasRelation name="ldapProvider" source="br.gov.to.sefaz.seg.business.authentication.service.impl.LoginSistemaServiceImpl" target="br.gov.to.sefaz.seg.business.authentication.provider.LdapProvider" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioSistemaServiceImpl" target="br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="loginSistemaService" source="br.gov.to.sefaz.seg.business.authentication.facade.impl.LoginSistemaFacadeImpl" target="br.gov.to.sefaz.seg.business.authentication.service.LoginSistemaService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.seg.business.authentication.service.LoginSistemaService" target="br.gov.to.sefaz.seg.business.authentication.domain.ResetPasswordDto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioSistemaServiceImpl" target="br.gov.to.sefaz.seg.persistence.repository.UsuarioSistemaRepository" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioSistemaServiceImpl" target="br.gov.to.sefaz.seg.business.gestao.service.UsuarioSistemaService"/>
+    <UseRelation source="br.gov.to.sefaz.seg.business.gestao.service.validator.UsuarioSistemaCpfBloqueadoValidator" target="br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.seg.business.gestao.service.validator.UsuarioSistemaCpfInativoValidator" target="br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.seg.business.gestao.service.HistoricoLoginSistemaService" target="br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="br.gov.to.sefaz.seg.provider.LdapAuthenticationProvider" target="br.gov.to.sefaz.seg.business.authentication.domain.LoginDto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="authenticationProvider" source="br.gov.to.sefaz.seg.configuration.SecurityConfiguration" target="br.gov.to.sefaz.seg.provider.LdapAuthenticationProvider" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="br.gov.to.sefaz.seg.managedbean.CertificadoDigitalMB" target="br.gov.to.sefaz.util.certificado.CertificadoDigitalException" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="usuarioSistemaService" source="br.gov.to.sefaz.seg.business.authentication.service.impl.LoginSistemaServiceImpl" target="br.gov.to.sefaz.seg.business.gestao.service.UsuarioSistemaService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.seg.business.authentication.facade.impl.LoginSistemaFacadeImpl" target="br.gov.to.sefaz.seg.business.authentication.domain.UsuarioSistemaAuthentication" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="certificadoDigitalUtil" source="br.gov.to.sefaz.seg.managedbean.CertificadoDigitalMB" target="br.gov.to.sefaz.util.certificado.CertificadoDigitalUtil" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="situacaoUsuario" source="br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema" target="br.gov.to.sefaz.seg.persistence.enums.SituacaoUsuarioEnum" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="br.gov.to.sefaz.seg.business.gestao.service.impl.HistoricoLoginSistemaServiceImpl" target="br.gov.to.sefaz.seg.persistence.repository.HistoricoLoginSistemaRepository" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.seg.business.authentication.service.LoginSistemaService" target="br.gov.to.sefaz.seg.business.authentication.domain.UsuarioSistemaAuthentication" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.seg.business.authentication.service.impl.LoginSistemaServiceImpl" target="br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.seg.business.authentication.handler.AuthenticatedUserHandler" target="br.gov.to.sefaz.seg.business.authentication.domain.UsuarioSistemaAuthentication" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="br.gov.to.sefaz.seg.business.authentication.facade.impl.LoginSistemaFacadeImpl" target="br.gov.to.sefaz.seg.business.authentication.domain.LoginDto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="loginSistemaFacade" source="br.gov.to.sefaz.seg.provider.LdapAuthenticationProvider" target="br.gov.to.sefaz.seg.business.authentication.facade.LoginSistemaFacade" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.seg.business.authentication.service.impl.LoginSistemaServiceImpl" target="br.gov.to.sefaz.seg.business.authentication.service.LoginSistemaService"/>
+    <UseRelation source="br.gov.to.sefaz.seg.business.authentication.facade.impl.LoginSistemaFacadeImpl" target="br.gov.to.sefaz.seg.business.authentication.domain.ResetPasswordDto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.seg.business.gestao.service.validator.UsuarioSistemaCpfCadastradoValidator" target="br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.seg.business.gestao.service.impl.HistoricoLoginSistemaServiceImpl" target="br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.seg.business.authentication.facade.LoginSistemaFacade" target="br.gov.to.sefaz.seg.business.authentication.domain.ResetPasswordDto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.seg.business.gestao.service.impl.HistoricoLoginSistemaServiceImpl" target="br.gov.to.sefaz.seg.business.gestao.service.HistoricoLoginSistemaService"/>
+    <UseRelation name="" source="br.gov.to.sefaz.seg.business.authentication.provider.LdapProvider" target="br.gov.to.sefaz.seg.business.authentication.handler.LdapHandler" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.seg.business.gestao.service.UsuarioSistemaService" target="br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.seg.business.authentication.factory.AuthenticationFactory" target="br.gov.to.sefaz.seg.business.authentication.domain.UsuarioSistemaAuthentication" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="authenticationFactory" source="br.gov.to.sefaz.seg.business.authentication.service.impl.LoginSistemaServiceImpl" target="br.gov.to.sefaz.seg.business.authentication.factory.AuthenticationFactory" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.seg.business.authentication.service.impl.LoginSistemaServiceImpl" target="br.gov.to.sefaz.seg.business.authentication.domain.UsuarioSistemaAuthentication" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="historicoLoginSistemaService" source="br.gov.to.sefaz.seg.business.authentication.service.impl.LoginSistemaServiceImpl" target="br.gov.to.sefaz.seg.business.gestao.service.HistoricoLoginSistemaService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="loginSistemaFacade" source="br.gov.to.sefaz.seg.managedbean.ResetPasswordMB" target="br.gov.to.sefaz.seg.business.authentication.facade.LoginSistemaFacade" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="usuarioSistema" source="br.gov.to.sefaz.seg.business.authentication.domain.UsuarioSistemaAuthentication" target="br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

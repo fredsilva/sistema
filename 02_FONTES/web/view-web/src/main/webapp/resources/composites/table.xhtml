@@ -35,7 +35,7 @@
     <ui:param name="fields" value="#{dataTableMB.parseFields(cc.attrs.fields)}"/>
     <ui:param name="columnDefs" value="#{cc.attrs.columnDefs}"/>
     <div id="#{cc.clientId}">
-        <table id="#{cc.clientId}-dt" class="table">
+        <table id="#{cc.clientId}-dt" class="table table-hover">
             <thead>
                 <tr>
                     <ui:repeat value="#{dataTableMB.parseHeaders(cc.attrs.headers, fields, cc.attrs.bundle)}"
@@ -85,7 +85,7 @@
                 <ui:repeat value="#{dataTableMB.parseActionEvents(cc.attrs.actionEvents)}" var="action">
                     bindDataTableEvents('#{cc.clientId}', '#{action.bindType}', '#{action.elementClass}',
                             '#{action.eventType}', '#{dataTableMB.buildJsCall(action, 'data')}',
-                            '#{arr_msg[action.complement]}');
+                            '#{dataTableMB.getFromBundle(action.complement, cc.attrs.bundle)}');
                 </ui:repeat>
             });
         </h:outputScript>

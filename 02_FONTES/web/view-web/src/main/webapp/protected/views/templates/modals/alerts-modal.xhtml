@@ -16,8 +16,9 @@
                             infoClass="alert alert-info"
                             fatalClass="alert alert-danger"/>
                 </a4j:outputPanel>
+                <div id="page-error" class="hide"><div class="alert alert-danger"><h:outputText value="#{facesContext.externalContext.requestMap['javax.servlet.error.message']}"/></div></div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">#{msg[alert.modal.fechar]}</button>
                 </div>
             </div>
         </div>

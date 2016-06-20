@@ -1,75 +1,82 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html">
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:ui="http://java.sun.com/jsf/facelets">
 <h:head>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <title>Sefaz TO</title>
-    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro"/>
-    <link href="#{facesContext.externalContext.requestContextPath}/resources/css/sat.css"
-          rel="stylesheet" type="text/css"/>
-    <link href="#{facesContext.externalContext.requestContextPath}/resources/css/bootstrap.css"
-            rel="stylesheet" type="text/css"/>
+    <link href="#{pathResolverMB.cssPath('sat.css')}" rel="stylesheet" type="text/css"/>
+    <link href="#{pathResolverMB.cssPath('bootstrap.css')}" rel="stylesheet" type="text/css"/>
+    <h:outputScript library="javax.faces" name="jsf.js"/>
+    <h:outputScript library="org.richfaces" name="jquery.js"/>
+    <h:outputScript library="org.richfaces" name="richfaces.js"/>
+    <h:outputScript library="org.richfaces" name="richfaces-queue.js"/>
+    <h:outputScript library="js" name="lib/bootstrap.min.js"/>
+    <h:outputScript library="js" name="lib/jquery.maskMoney.min.js"/>
+    <h:outputScript library="js" name="lib/jquery.mask.min.js"/>
+    <h:outputScript library="js" name="core/sat.jsf.js"/>
+    <h:outputScript library="js" name="core/sat.modals.js"/>
+    <h:outputScript library="js" name="core/sat.forms.js"/>
+    <h:outputScript library="js" name="seg/login.js"/>
+    
 </h:head>
 <body>
-    <div id="login-container">
-        <div class="row">
-            <div class="col-sm-8 col-md-5 col-lg-4">
-                <h3>
-                    <h:outputText value="#{msg['login.titulo']}"/>
-                </h3>
-                <h6>
-                    <h:outputText value="#{msg['login.subtitulo']}"/>
-                </h6>
-                <div class="panel panel-info">
-                    <div class="panel-heading">
-                        <p>Login do Sistema</p>
-                    </div>
-                    <div class="panel-body">
-                        <form id="login-form" method="post">
-                            <div class="form-group">
-                                <label for="password">#{msg['login.cpf']}</label>
-                                <div class="input-group">
-                                    <div class="input-group-addon"><i class="glyphicon glyphicon-user"/></div>
-                                    <input class="form-control" id="username" name="username" type="text"
-                                            placeholder="#{msg['login.cpf.placeholder']}"/>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="password">#{msg['login.senha']}</label>
-                                <div class="input-group">
-                                    <div class="input-group-addon"><i class="glyphicon glyphicon-lock"/></div>
-                                    <input class="form-control" id="password" name="password" type="password"
-                                            placeholder="#{msg['login.senha.placeholder']}"/>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                                <button type="submit" class="btn btn-primary">#{msg['login.entrar']}</button>
-                                <a class="btn btn-success" href="login.xhtml">#{msg['login.certificado.digital']}</a>
-                            </div>
-                        </form>
-                        <div id="login-footer">
-                            <hr />
-                            <a href="#"><h:outputText value="#{msg['login.lembrar.senha']}"/></a>
-                            <a href="#"><h:outputText value="#{msg['login.cadastre.aqui']}"/></a>
-                        </div>
-                    </div>
+<div id="login-container">
+    <div class="row">
+        <div class="col-sm-8 col-md-5 col-lg-4">
+            <h3>
+                <h:outputText value="#{seg_msg['login.titulo']}"/>
+            </h3>
+            <h6>
+                <h:outputText value="#{seg_msg['login.subtitulo']}"/>
+            </h6>
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <p>#{seg_msg['login.painel.titulo']}</p>
                 </div>
-
-                <h:panelGroup rendered="#{param.erro != null}">
-                    <div class="alert alert-danger"><h:outputText value="#{msg['login.erro']}"/></div>
-                </h:panelGroup>
-                <h:panelGroup rendered="#{param.logout != null}">
-                    <div class="alert alert-success"><h:outputText value="#{msg['login.logout.sucesso']}"/></div>
-                </h:panelGroup>
-                <div class="text-center">
-                    <a class="btn" href="#">Privacidade</a>
-                    <a class="btn" href="#">Condições</a>
-                    <a class="btn" href="#">Ajuda</a>
+                <div class="panel-body">
+                    <form id="login-form" method="post">
+                        <div class="form-group">
+                            <label for="username">#{seg_msg['login.form.cpf']}</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="glyphicon glyphicon-user"/></div>
+                                <input class="form-control cpf justInteger" id="username" name="username" type="text"
+                                        placeholder="#{seg_msg['login.form.cpf.placeholder']}" maxlength="14"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">#{seg_msg['login.form.senha']}</label>
+                            <div class="input-group">
+                                <div class="input-group-addon"><i class="glyphicon glyphicon-lock"/></div>
+                                <input class="form-control" id="password" name="password" type="password"
+                                        placeholder="#{seg_msg['login.form.senha.placeholder']}" maxlength="20"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+                            <button type="button" class="btn btn-primary"
+                                    onclick="login('#{pathResolverMB.getContextPath()}/login','#{pathResolverMB.getHomePath()}')">#{seg_msg['login.form.entrar']}
+                            </button>
+                            <button type="button" class="btn btn-success"
+                                    onclick="authCertificadoDigital('#{pathResolverMB.getCertificadoPath()}',
+                                        '#{pathResolverMB.getHomePath()}')">
+                                #{seg_msg['login.form.certificado.digital']}
+                            </button>
+                        </div>
+                    </form>
+                    <div id="login-footer">
+                        <hr/>
+                        <a href="script:void(0);"
+                                onclick="$('#reset-password-modal').modal('show');">#{seg_msg['login.form.lembrar.senha']}</a>
+                        <a href="#"><h:outputText value="#{seg_msg['login.form.cadastre.aqui']}"/></a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
+<ui:include src="/public/reset-password.xhtml"/>
+<ui:include src="/protected/views/templates/modals/core-modals.xhtml"/>
 </body>
 </html>

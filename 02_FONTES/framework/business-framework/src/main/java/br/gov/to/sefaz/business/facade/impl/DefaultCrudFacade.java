@@ -2,6 +2,8 @@ package br.gov.to.sefaz.business.facade.impl;
 
 import br.gov.to.sefaz.business.facade.CrudFacade;
 import br.gov.to.sefaz.business.service.CrudService;
+import br.gov.to.sefaz.persistence.entity.AbstractEntity;
+
 import org.springframework.transaction.annotation.Transactional;
 
 import java.io.Serializable;
@@ -17,7 +19,7 @@ import java.util.Optional;
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 14/04/2016 18:30:00
  */
-public class DefaultCrudFacade<E, I extends Serializable> implements CrudFacade<E, I> {
+public class DefaultCrudFacade<E extends AbstractEntity<I>, I extends Serializable> implements CrudFacade<E, I> {
 
     private final CrudService<E, I> service;
 

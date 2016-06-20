@@ -8,7 +8,7 @@ import java.util.stream.Stream;
  * @author <a href="mailto:roger.golveia@ntconsult.com.br">roger.golveia</a>
  * @since 19/04/2016 10:51:00
  */
-public enum SituacaoEnum {
+public enum SituacaoEnum implements EnumCodeLabel<Integer> {
 
     ATIVO(1, "Ativo"), CANCELADO(2, "Cancelado");
 
@@ -20,18 +20,19 @@ public enum SituacaoEnum {
         this.label = label;
     }
 
+    @Override
     public Integer getCode() {
         return code;
     }
 
+    @Override
     public String getLabel() {
         return label;
     }
 
     /**
-     * Converte inteiro em {@link SituacaoEnum} baseado no seu code. Se for
-     * passado inteiro que não existe no enum, é disparada
-     * {@link IllegalArgumentException}
+     * Converte inteiro em {@link SituacaoEnum} baseado no seu code. Se for passado inteiro que não existe no enum, é
+     * disparada {@link IllegalArgumentException}
      *
      * @param code valor do enum
      * @return {@link SituacaoEnum}

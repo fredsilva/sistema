@@ -33,12 +33,27 @@ public interface ReceitasRepository extends BaseRepository<Receitas, Integer> {
             + " or rc.ID_RECEITA_JUROS = re.ID_RECEITA or rc.ID_RECEITA_MULTA = re.ID_RECEITA"
             + " or rc.ID_RECEITA_TAXAS = re.ID_RECEITA))";
 
+    /**
+     * Busca todos os Receitas.
+     * @param idConvenio identificação convênio.
+     * @return lista de Receitas.
+     */
     @Query(value = FIND_RECEITAS_BY_IDCONVENIO, nativeQuery = true)
     List<Receitas> findAllReceitasByIdConvenio(@Param(value = "idConvenio") Long idConvenio);
 
+    /**
+     * Busca referências à este registro.
+     * @param idReceita identificação Receita.
+     * @return verdadeiro ou falso.
+     */
     @Query(value = EXISTS_LOCK_REFERENCE, nativeQuery = true)
     boolean existsLockReference(@Param("id") Integer idReceita);
 
+    /**
+     * Atualiza a situação.
+     * @param id identificação da Receita.
+     * @param situacao nova.
+     */
     @Modifying
     @Query("UPDATE Receitas SET situacao = :situacao WHERE idReceita = :id")
     void updateSituacao(@Param("id") Integer id, @Param("situacao") SituacaoEnum situacao);

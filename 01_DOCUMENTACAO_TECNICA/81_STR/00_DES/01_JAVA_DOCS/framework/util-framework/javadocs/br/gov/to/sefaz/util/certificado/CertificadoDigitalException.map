@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./CertificadoDigitalException.html" title="br.gov.to.sefaz.util.certificado.CertificadoDigitalException" alt="" coords="139,197,432,273"/>
+<area shape="rect" id="node1" href="./CertificadoDigitalException.html" title="&lt;TABLE&gt;" alt="" coords="128,192,443,279"/>
+<area shape="rect" id="node2_1" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Exception.html" title="java.lang.Exception" alt="" coords="16,11,288,139"/>
+<area shape="rect" id="node2" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Exception.html" title="&lt;TABLE&gt;" alt="" coords="5,5,299,144"/>
+<area shape="rect" id="node3_2" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/exception/HandledSystemException.html" title="br.gov.to.sefaz.exception.HandledSystemException" alt="" coords="334,53,503,96"/>
+<area shape="rect" id="node3" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/exception/HandledSystemException.html" title="&lt;TABLE&gt;" alt="" coords="323,48,514,101"/>
+</map>

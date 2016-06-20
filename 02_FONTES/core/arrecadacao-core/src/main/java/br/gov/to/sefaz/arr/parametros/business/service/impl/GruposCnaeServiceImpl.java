@@ -38,14 +38,14 @@ public class GruposCnaeServiceImpl extends DefaultCrudService<GruposCnae, Grupos
 
     @Override
     public Collection<GruposCnae> save(
-            @ValidationSuite(context = ValidationContext.SAVE, isCollection = true, clazz = GruposCnae.class)
+            @ValidationSuite(context = ValidationContext.SAVE)
             Collection<GruposCnae> list) {
         return super.save(list);
     }
 
     @Override
     public void validateDuplicated(
-            @ValidationSuite(context = DUPLICATED, isCollection = true, clazz = GruposCnae.class)
+            @ValidationSuite(context = DUPLICATED)
             Collection<GruposCnae> gruposCnaes) {
         // A validação é feita através do @ValidationSuite.
     }

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="UnhandledError" package="br.gov.to.sefaz.exception" visibility="public" xPosition="21.0" yPosition="311.0">
+      <Fields>
+        <Field name="cpf" type="String" visibility="private" isFinal="true"/>
+        <Field name="dateTime" type="LocalDateTime" visibility="private" isFinal="true"/>
+        <Field name="applicationServer" type="String" visibility="private" isFinal="true"/>
+        <Field name="systemModules" type="Set&lt;String&gt;" visibility="private" isFinal="true"/>
+        <Field name="systemStack" type="List&lt;String&gt;" visibility="private" isFinal="true"/>
+        <Field name="stackTrace" type="String" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getCpf" returnType="String" visibility="public"/>
+        <Method name="getDateTime" returnType="LocalDateTime" visibility="public"/>
+        <Method name="getApplicationServer" returnType="String" visibility="public"/>
+        <Method name="getSystemModules" returnType="Set&lt;String&gt;" visibility="public"/>
+        <Method name="getSystemStack" returnType="List&lt;String&gt;" visibility="public"/>
+        <Method name="getStackTrace" returnType="String" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ExceptionUtils" package="br.gov.to.sefaz.util.exception" visibility="public" xPosition="918.0" yPosition="387.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="isCausedByUnknownException" returnType="boolean" visibility="public" isStatic="true">
+          <Argument type="Throwable" name="throwable"/>
+        </Method>
+        <Method name="getSystemStackTrace" returnType="List&lt;String&gt;" visibility="public" isStatic="true">
+          <Argument type="Throwable" name="exception"/>
+        </Method>
+        <Method name="getSystemStackTrace" returnType="List&lt;String&gt;" visibility="private" isStatic="true">
+          <Argument type="Throwable" name="exception"/>
+          <Argument type="List&lt;String&gt;" name="systemStack"/>
+        </Method>
+        <Method name="getSystemModules" returnType="Set&lt;String&gt;" visibility="public" isStatic="true">
+          <Argument type="List&lt;String&gt;" name="systemPackages"/>
+        </Method>
+        <Method name="stackTraceToString" returnType="String" visibility="public" isStatic="true">
+          <Argument type="Throwable" name="exception"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="UnexpectedErrorException" package="br.gov.to.sefaz.exception" visibility="public" xPosition="673.0" yPosition="31.0">
+      <Fields>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="message"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="message"/>
+          <Argument type="Throwable" name="cause"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="Throwable" name="cause"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="SatExceptionHandlerFactory" package="br.gov.to.sefaz.exception" visibility="public" xPosition="109.0" yPosition="40.0">
+      <Fields>
+        <Field name="parent" type="ExceptionHandlerFactory" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="ExceptionHandlerFactory" name="parent"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getExceptionHandler" returnType="ExceptionHandler" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="BusinessException" package="br.gov.to.sefaz.exception" visibility="public" xPosition="1216.0" yPosition="40.0">
+      <Fields>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="message"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="message"/>
+          <Argument type="Throwable" name="cause"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="SatExceptionHandler" package="br.gov.to.sefaz.exception" visibility="public" xPosition="316.0" yPosition="349.0">
+      <Fields>
+        <Field name="LOG_NAME_PATTERN" type="String" visibility="public" isStatic="true" isFinal="true"/>
+        <Field name="wrapped" type="ExceptionHandler" visibility="private" isFinal="true"/>
+        <Field name="logDir" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="ExceptionHandler" name="wrapped"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getWrapped" returnType="ExceptionHandler" visibility="public"/>
+        <Method name="getUnhandledExceptionQueuedEvents" returnType="Collection&lt;ExceptionQueuedEvent&gt;" visibility="public"/>
+        <Method name="handle" returnType="void" visibility="public"/>
+        <Method name="logUnknownException" returnType="void" visibility="private">
+          <Argument type="ExceptionQueuedEventContext" name="context"/>
+          <Argument type="String" name="eventId"/>
+        </Method>
+        <Method name="addUnexpectedEvent" returnType="void" visibility="private">
+          <Argument type="String" name="eventId"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="HandledSystemException" package="br.gov.to.sefaz.exception" visibility="public" xPosition="1086.0" yPosition="263.0">
+      <Methods/>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation name="" source="br.gov.to.sefaz.util.exception.ExceptionUtils" target="br.gov.to.sefaz.exception.HandledSystemException" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="br.gov.to.sefaz.exception.SatExceptionHandlerFactory" target="br.gov.to.sefaz.exception.SatExceptionHandler" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="br.gov.to.sefaz.exception.SatExceptionHandler" target="br.gov.to.sefaz.util.exception.ExceptionUtils" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.exception.BusinessException" target="br.gov.to.sefaz.exception.HandledSystemException"/>
+    <UseRelation name="" source="br.gov.to.sefaz.exception.SatExceptionHandler" target="br.gov.to.sefaz.exception.UnhandledError" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.exception.UnexpectedErrorException" target="br.gov.to.sefaz.exception.HandledSystemException"/>
+    <UseRelation name="" source="br.gov.to.sefaz.exception.SatExceptionHandler" target="br.gov.to.sefaz.exception.UnexpectedErrorException" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

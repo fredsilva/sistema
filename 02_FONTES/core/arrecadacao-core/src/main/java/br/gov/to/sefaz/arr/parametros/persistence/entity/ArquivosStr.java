@@ -29,6 +29,8 @@ import javax.validation.constraints.Size;
 @SuppressWarnings("PMD")
 public class ArquivosStr extends AbstractEntity<Long> {
 
+    private static final long serialVersionUID = -6405776997435685568L;
+
     @Id
     @NotNull
     @Column(name = "ID_ARQUIVO_STR", nullable = false)

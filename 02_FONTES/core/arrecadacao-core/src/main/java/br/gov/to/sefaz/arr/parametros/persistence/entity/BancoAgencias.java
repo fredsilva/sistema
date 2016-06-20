@@ -141,6 +141,11 @@ public class BancoAgencias extends AbstractEntity<BancoAgenciasPK> {
         return idBanco;
     }
 
+    /**
+     * Atribui valor ao campo {@link #idBanco} e {@link #bancos}.
+     *
+     * @param idBanco id do banco
+     */
     public void setIdBanco(Integer idBanco) {
         this.idBanco = idBanco;
         this.bancos.setIdBanco(idBanco);
@@ -227,6 +232,11 @@ public class BancoAgencias extends AbstractEntity<BancoAgenciasPK> {
         return idMunicipio;
     }
 
+    /**
+     * Atribui valor ao campo {@link #idMunicipio} e {@link #municipio}.
+     *
+     * @param idMunicipio id do municipio
+     */
     public void setIdMunicipio(Integer idMunicipio) {
         this.idMunicipio = idMunicipio;
         this.municipio.setCodigoIbge(idMunicipio);
@@ -236,10 +246,12 @@ public class BancoAgencias extends AbstractEntity<BancoAgenciasPK> {
         return municipio != null ? municipio.getUnidadeFederacao() : "";
     }
 
+    /**
+     * Atribui valor ao campo {@link Municipio#setUnidadeFederacao(String)}.
+     *
+     * @param unidadeFederacao id do municipio
+     */
     public void setUnidadeFederacao(String unidadeFederacao) {
-        if (municipio == null) {
-            municipio = new Municipio();
-        }
         this.municipio.setUnidadeFederacao(unidadeFederacao);
     }
 

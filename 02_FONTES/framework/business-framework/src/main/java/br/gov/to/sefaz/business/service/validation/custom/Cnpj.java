@@ -20,7 +20,6 @@ import javax.validation.Payload;
 @Retention(RetentionPolicy.RUNTIME)
 @Constraint(validatedBy = CnpjValidator.class)
 @Documented
-@SuppressWarnings("checkstyle:abbreviationaswordinname")
 public @interface Cnpj {
 
     String message() default "#{msg['business.validation.cnpj.not.valid']}";

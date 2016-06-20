@@ -72,12 +72,12 @@ public class ReceitasTaxas extends AbstractEntity<ReceitasTaxasPK> {
     private BigDecimal valorUnitario;
 
     @Digits(integer = 6, fraction = 2, message = "#{arr_msg['parametros.conveniosTarifa.valor.digitos']}")
-    @DecimalMin(value = "0.01", message = "#{arr_msg['parametros.conveniosTarifa.valor.minimo']}")
+    @DecimalMin(value = "0.01", message = "#{arr_msg['parametros.receitasTaxas.valorLimite.minimo']}")
     @Column(name = "VALOR_LIMITE")
     private BigDecimal valorLimite;
 
     @Digits(integer = 6, fraction = 2, message = "#{arr_msg['parametros.conveniosTarifa.valor.digitos']}")
-    @DecimalMin(value = "0.01", message = "#{arr_msg['parametros.conveniosTarifa.valor.minimo']}")
+    @DecimalMin(value = "0.01", message = "#{arr_msg['parametros.receitasTaxas.valorAcrescimo.minimo']}")
     @Column(name = "VALOR_ACRESCIMO")
     private BigDecimal valorAcrescimo;
 

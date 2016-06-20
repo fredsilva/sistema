@@ -3,6 +3,7 @@ package br.gov.to.sefaz.arr.parametros.managedbean;
 import br.gov.to.sefaz.arr.parametros.business.facade.BancoAgenciasFacade;
 import br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgencias;
 import br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgenciasPK;
+import br.gov.to.sefaz.business.facade.CrudFacade;
 import br.gov.to.sefaz.cat.persistence.entity.Estado;
 import br.gov.to.sefaz.cat.persistence.entity.Municipio;
 import br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB;
@@ -43,6 +44,11 @@ public class BancoAgenciasMB extends DefaultCrudMB<BancoAgencias, BancoAgenciasP
         super(BancoAgencias::new);
     }
 
+    /**
+     * {@link DefaultCrudMB#setFacade(CrudFacade)}.
+     *
+     * @param facade fachado de BancoAgencias
+     */
     @Autowired
     public void setFacade(BancoAgenciasFacade facade) {
         super.setFacade(facade);

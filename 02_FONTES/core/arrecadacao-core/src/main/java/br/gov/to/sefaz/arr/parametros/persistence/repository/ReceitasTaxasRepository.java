@@ -30,13 +30,29 @@ public interface ReceitasTaxasRepository extends BaseRepository<ReceitasTaxas, R
     String DELETE_ALL_RECEITAS_TAXAS_BY_IDRECEITA = "DELETE ReceitasTaxas rt WHERE "
             + "rt.idReceita = :idReceita";
 
+    /**
+     * Remove todos os ReceitasTaxas.
+     * @param idReceita identificação da Receita.
+     */
     @Query(value = DELETE_ALL_RECEITAS_TAXAS_BY_IDRECEITA)
     @Modifying
     void deleteAllTaxasByIdReceita(@Param("idReceita") Integer idReceita);
 
+    /**
+     * Verifica se existem referências à esse registro.
+     * @param idSubcodigo identificação do subcódigo.
+     * @param idReceita identificação da Receita.
+     * @return verdadeiro ou falso.
+     */
     @Query(value = EXISTS_LOCK_REFERENCE, nativeQuery = true)
     boolean existsLockReference(@Param("idSubcodigo") Integer idSubcodigo, @Param("idReceita") Integer idReceita);
 
+    /**
+     * Atualiza a ReceitasTaxas.
+     * @param idSubcodigo identificação do subcódigo.
+     * @param idReceita identificação da Receita.
+     * @param situacaoEnum nova situação.
+     */
     @Modifying
     @Query("UPDATE ReceitasTaxas SET situacao = :situacao WHERE idSubcodigo = :idSubcodigo and idReceita = :idReceita")
     void updateSituacao(@Param("idSubcodigo") Integer idSubcodigo, @Param("idReceita") Integer idReceita,

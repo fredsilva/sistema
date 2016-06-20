@@ -45,6 +45,7 @@ public interface BancoAgenciasFacade extends CrudFacade<BancoAgencias, BancoAgen
      * valores dos atributos, duplicidade de Agências, duplicidade de CNPJ, CNPJ Raiz conforme o banco da agência,
      * unicidade de agência centralizadora e atributos específicos como CNPJ.
      *
+     * @param agencia agência a ser validada
      * @param list Lista de Agência a ser salva
      */
     void validateSave(BancoAgencias agencia, Collection<BancoAgencias> list);
@@ -54,6 +55,7 @@ public interface BancoAgenciasFacade extends CrudFacade<BancoAgencias, BancoAgen
      * valores dos atributos, duplicidade de Agências, duplicidade de CNPJ, CNPJ Raiz conforme o banco da agência,
      * unicidade de agência centralizadora e atributos específicos como CNPJ.
      *
+     * @param agencia agência a ser validada
      * @param list Lista de Agência a ser atualizada
      */
     void validateUpdate(BancoAgencias agencia, Collection<BancoAgencias> list);

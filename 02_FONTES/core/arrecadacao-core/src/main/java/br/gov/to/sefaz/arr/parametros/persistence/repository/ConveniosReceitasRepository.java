@@ -20,6 +20,10 @@ public interface ConveniosReceitasRepository extends BaseRepository<ConveniosRec
     String DELETE_ALL_CONVENIOS_TARIFAS_BY_IDCONVENIO = "DELETE ConveniosReceitas cr WHERE "
             + "cr.idConvenio = :idConvenio";
 
+    /**
+     * Remove todos os convenio tarifa pelo id do convênio.
+     * @param idConvenio identificação do convênio.
+     */
     @Query(value = DELETE_ALL_CONVENIOS_TARIFAS_BY_IDCONVENIO)
     @Modifying
     void deleteAllByIdConvenio(@Param(value = "idConvenio") Long idConvenio);

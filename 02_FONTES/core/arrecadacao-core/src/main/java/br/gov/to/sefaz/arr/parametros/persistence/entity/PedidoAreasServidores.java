@@ -91,6 +91,10 @@ public class PedidoAreasServidores extends AbstractEntity<PedidoAreasServidoresP
         return idServidor;
     }
 
+    /**
+     * Altera a identificação do servidor.
+     * @param idServidor novo.
+     */
     public void setIdServidor(Long idServidor) {
         this.idServidor = idServidor;
         this.usuario.setCpfUsuario(String.valueOf(idServidor));

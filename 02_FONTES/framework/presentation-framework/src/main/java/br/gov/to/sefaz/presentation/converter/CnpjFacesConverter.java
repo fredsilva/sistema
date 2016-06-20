@@ -1,11 +1,9 @@
 package br.gov.to.sefaz.presentation.converter;
 
-import br.gov.to.sefaz.exception.SystemException;
 import br.gov.to.sefaz.util.message.SourceBundle;
 
 import java.text.DecimalFormat;
 import java.text.ParseException;
-
 import javax.faces.application.FacesMessage;
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
@@ -57,8 +55,7 @@ public class CnpjFacesConverter implements Converter {
             mask.setValueContainsLiteralCharacters(false);
             retorno = mask.valueToString(retorno);
         } catch (ParseException e) {
-            throw new SystemException(
-                    "Erro ao formatar o cnpj " + cnpj.toString(), e);
+            throw new IllegalArgumentException("Erro ao formatar o cnpj " + cnpj.toString(), e);
         }
 
         return retorno;

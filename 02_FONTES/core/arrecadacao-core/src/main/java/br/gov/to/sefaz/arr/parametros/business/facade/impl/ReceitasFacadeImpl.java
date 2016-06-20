@@ -11,6 +11,7 @@ import br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas;
 import br.gov.to.sefaz.arr.parametros.persistence.entity.ReceitasRepasse;
 import br.gov.to.sefaz.arr.parametros.persistence.entity.ReceitasTaxas;
 import br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -33,7 +34,8 @@ public class ReceitasFacadeImpl extends DefaultCrudFacade<Receitas, Integer> imp
     private final ReceitasRepasseService receitasRepasseService;
 
     @Autowired
-    public ReceitasFacadeImpl(ReceitasService service, PlanoContasService planoContasService,
+    public ReceitasFacadeImpl(
+            ReceitasService service, PlanoContasService planoContasService,
             ReceitasTaxasService receitasTaxasService, ReceitasRepasseService receitasRepasseService) {
         super(service);
         this.service = service;
@@ -60,5 +62,10 @@ public class ReceitasFacadeImpl extends DefaultCrudFacade<Receitas, Integer> imp
     @Override
     public Collection<ReceitasRepasse> getReceitasRepasseByIdReceita(Integer idReceita) {
         return receitasRepasseService.getReceitasRepasseByIdReceita(idReceita);
+    }
+
+    @Override
+    public void validateReceitasRepasse(ReceitasRepasse receitasRepasse) {
+        receitasRepasseService.validateReceitasRepasse(receitasRepasse);
     }
 }

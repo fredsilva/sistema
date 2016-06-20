@@ -1,6 +1,6 @@
 package br.gov.to.sefaz.arr.parametros.persistence.enums;
 
-import br.gov.to.sefaz.business.managedbean.EnumCodeLabel;
+import br.gov.to.sefaz.persistence.enums.EnumCodeLabel;
 
 import java.util.stream.Stream;
 
@@ -12,15 +12,15 @@ import java.util.stream.Stream;
  */
 public enum ClassificacaoReceitaEnum implements EnumCodeLabel<Integer> {
 
-    ICMS(1, "ICMS"), IPVA(2, "IPVA"), ITCD(3, "ITCD"),
-    OUTRAS(4, "OUTRAS RECEITAS"), DEDUCOES(5, "DEDUÇÕES"),
-    ICMS_ATIVA(6, "ICMS DIVIDA ATIVA"), IPVA_ATIVA(7, "IPVA DIVIDA ATIVA"),
-    ITCD_ATIVA(8, "ITCD DIVIDA ATIVA"), OUTRAS_NAO_TRIBUTARIAS(9, "OUTRAS RECEITAS NÃO TRIBUTÁRIAS");
+    ICMS(1, "ICMS"), IPVA(2, "IPVA"), ITCD(3, "ITCD"), OUTRAS(4, "OUTRAS RECEITAS"), DEDUCOES(5,
+            "DEDUÇÕES"), ICMS_ATIVA(6, "ICMS DIVIDA ATIVA"), IPVA_ATIVA(7, "IPVA DIVIDA ATIVA"), ITCD_ATIVA(8,
+                    "ITCD DIVIDA ATIVA"), OUTRAS_NAO_TRIBUTARIAS(9, "OUTRAS RECEITAS NÃO TRIBUTÁRIAS");
 
     private final Integer code;
     private final String label;
 
-    ClassificacaoReceitaEnum(Integer code, String label) {
+    ClassificacaoReceitaEnum(
+            Integer code, String label) {
         this.code = code;
         this.label = label;
     }
@@ -36,8 +36,8 @@ public enum ClassificacaoReceitaEnum implements EnumCodeLabel<Integer> {
     }
 
     /**
-     * Converte inteiro em {@link ClassificacaoReceitaEnum} baseado no seu code. Se for passado inteiro que não
-     * existe no enum, é disparada {@link IllegalArgumentException}
+     * Converte inteiro em {@link ClassificacaoReceitaEnum} baseado no seu code. Se for passado inteiro que não existe
+     * no enum, é disparada {@link IllegalArgumentException}
      *
      * @param code valor do enum
      * @return {@link ClassificacaoReceitaEnum}

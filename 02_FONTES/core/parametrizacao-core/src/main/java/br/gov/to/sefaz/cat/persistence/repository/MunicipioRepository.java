@@ -18,6 +18,11 @@ import java.util.Collection;
 @Repository
 public interface MunicipioRepository extends BaseRepository<Municipio, Integer> {
 
+    /**
+     * Busca a lista de Municípios por UF.
+     * @param uf para ser buscados os municípios.
+     * @return Lista de Municipio.
+     */
     @Query("SELECT municipio FROM Municipio municipio WHERE municipio.unidadeFederacao = :uf")
     Collection<Municipio> findByUF(@Param("uf") String uf);
 }

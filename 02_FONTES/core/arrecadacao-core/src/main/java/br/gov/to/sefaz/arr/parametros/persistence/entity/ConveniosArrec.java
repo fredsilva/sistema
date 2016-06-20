@@ -170,6 +170,10 @@ public class ConveniosArrec extends AbstractEntity<Long> {
         return idBanco;
     }
 
+    /**
+     * Atribui o id do banco ao {@link #idBanco} e {@link #bancoAgencias}.
+     * @param idBanco id do banco
+     */
     public void setIdBanco(Integer idBanco) {
         this.idBanco = idBanco;
         bancoAgencias.setIdBanco(idBanco);
@@ -179,6 +183,10 @@ public class ConveniosArrec extends AbstractEntity<Long> {
         return idAgencia;
     }
 
+    /**
+     * Atribui o id do agencia ao {@link #idAgencia} e {@link #bancoAgencias}.
+     * @param idAgencia id do agencia
+     */
     public void setIdAgencia(Integer idAgencia) {
         this.idAgencia = idAgencia;
         bancoAgencias.setIdAgencia(idAgencia);
@@ -208,14 +216,26 @@ public class ConveniosArrec extends AbstractEntity<Long> {
         this.receitas = receitas;
     }
 
+    /**
+     * Adiciona uma tarifa ao {@link #conveniosTarifas}.
+     * @param tarifa tarifa
+     */
     public void addTarifa(ConveniosTarifas tarifa) {
         this.conveniosTarifas.add(tarifa);
     }
 
+    /**
+     * Remove uma tarifa do {@link #conveniosTarifas}.
+     * @param conveniosTarifas tarifa
+     */
     public void removeTarifa(ConveniosTarifas conveniosTarifas) {
         this.conveniosTarifas.remove(conveniosTarifas);
     }
 
+    /**
+     * Adiciona uma receita ao {@link #receitas}.
+     * @param receitas receitas
+     */
     public void addReceita(Receitas receitas) {
         this.receitas.add(receitas);
     }

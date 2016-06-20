@@ -7,7 +7,6 @@ import br.gov.to.sefaz.arr.parametros.persistence.repository.ReceitasTaxasReposi
 import br.gov.to.sefaz.business.service.impl.DefaultCrudService;
 import br.gov.to.sefaz.persistence.enums.SituacaoEnum;
 import br.gov.to.sefaz.persistence.predicate.AndPredicateBuilder;
-import br.gov.to.sefaz.util.message.MessageUtil;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
@@ -59,12 +58,10 @@ public class ReceitasTaxasServiceImpl extends DefaultCrudService<ReceitasTaxas, 
             getRepository().updateSituacao(id.getIdSubcodigo(), id.getIdReceita(), SituacaoEnum.CANCELADO);
             taxas = Optional.of(getRepository().findOne(id));
 
-            MessageUtil.addMesage(MessageUtil.ARR, "parametros.delecao.logica");
         } else {
             super.delete(id);
             taxas = Optional.empty();
 
-            MessageUtil.addMesage(MessageUtil.ARR, "parametros.delecao.fisica");
         }
 
         return taxas;

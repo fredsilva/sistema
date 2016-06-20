@@ -97,7 +97,7 @@
                         <h:inputText value="#{pedidoTiposMB.dto.quantidadeDiasAnalise}"
                                 id="qtdDias"
                                 styleClass="form-control justInteger"
-                                maxlength="10"/>
+                                maxlength="2"/>
                     </div>
                 </div>
                 <div class="row">
@@ -132,7 +132,7 @@
                                     <f:selectItems value="#{pedidoTiposMB.allPedidoTipoDoc}"
                                             var="doc"
                                             itemValue="#{doc.idTipoDocs}"
-                                            itemLabel="#{pedidoTiposMB.getPedidoDocLabel(doc)}"/>
+                                            itemLabel="#{doc.compositeName}"/>
                                 </h:selectOneMenu>
                             </div>
                             <div class="form-group col-md-2">
@@ -172,7 +172,7 @@
                                         parametros.pedidoDocsExigidosDto.tabela.tipoDocumento,
                                         parametros.pedidoDocsExigidosDto.tabela.situacao,
                                         parametros.pedidoDocsExigidosDto.tabela.obrigatorio"
-                                fields="idTipoDocs,tipoPedidoDescricao,situacao:string,docObrigatorio,situacao:hide"
+                                fields="idTipoDocs,tipoPedidoDescricao,situacao:string,docObrigatorio:boolean,situacao:hide"
                                 hasActions="true"
                                 actionEvents="select-row:click:selectTipoDocumentoRow">
                             <f:facet name="actions">
@@ -197,7 +197,7 @@
                                             var="tipoAcao"
                                             itemValue="#{tipoAcao}"
                                             itemLabel="#{enumsMB.getTiposPedidoAcaoLabel(tipoAcao)}"/>
-                                    <f:ajax render="tipoCampo" execute="tiposAcao idTipoPedido" 
+                                    <f:ajax render="tipoCampo" execute="tiposAcao idTipoPedido"
                                             listener="#{pedidoTiposMB.loadTiposPedidoCampos()}"/>
                                 </h:selectOneMenu>
                             </div>
@@ -255,7 +255,7 @@
                                         parametros.pedidoCamposAcoes.tabela.situacao,
                                         parametros.pedidoCamposAcoes.tabela.obrigatorio"
                                 fields="tipoAcao:string,tipoCampo:string,situacao:string,
-                                        campoObrigatorio,tipoAcao:hide,tipoCampo:hide,situacao:hide"
+                                        campoObrigatorio:boolean,tipoAcao:hide,tipoCampo:hide,situacao:hide"
                                 hasActions="true"
                                 actionEvents="select-row:click:selectAcaoRow">
                             <f:facet name="actions">
@@ -279,7 +279,7 @@
                                     <f:selectItems value="#{pedidoTiposMB.allReceitas}"
                                             var="receita"
                                             itemValue="#{receita.idReceita}"
-                                            itemLabel="#{pedidoTiposMB.getReceitaLabel(receita)}"/>
+                                            itemLabel="#{receita.compositeName}"/>
                                     <f:ajax render="subCodigo" listener="#{pedidoTiposMB.getAllReceitasTaxas()}"/>
                                 </h:selectOneMenu>
                             </div>
@@ -294,7 +294,7 @@
                                     <f:selectItems value="#{pedidoTiposMB.allReceitasTaxas}"
                                             var="receitaTaxa"
                                             itemValue="#{receitaTaxa.idSubcodigo}"
-                                            itemLabel="#{pedidoTiposMB.getReceitaTaxaLabel(receitaTaxa)}"/>
+                                            itemLabel="#{receitaTaxa.compositeName}"/>
                                 </h:selectOneMenu>
                             </div>
                             <div class="form-group col-md-2">

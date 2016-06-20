@@ -8,7 +8,7 @@ import br.gov.to.sefaz.business.service.impl.DefaultCrudService;
 import br.gov.to.sefaz.business.service.validation.ValidationSuite;
 import br.gov.to.sefaz.persistence.enums.SituacaoEnum;
 import br.gov.to.sefaz.persistence.predicate.AndPredicateBuilder;
-import br.gov.to.sefaz.util.message.MessageUtil;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Component;
@@ -34,7 +34,8 @@ public class PedidoAreasServidoresServiceImpl
     public static final String SERVIDOR_CHEFE_CONTEXT = "ServidorChefe";
 
     @Autowired
-    public PedidoAreasServidoresServiceImpl(PedidoAreasServidoresRepository repository) {
+    public PedidoAreasServidoresServiceImpl(
+            PedidoAreasServidoresRepository repository) {
         super(repository, new Sort(new Sort.Order(Sort.Direction.ASC, "idServidor"),
                 new Sort.Order(Sort.Direction.ASC, "idPedidoArea")));
     }
@@ -53,17 +54,13 @@ public class PedidoAreasServidoresServiceImpl
 
     @Override
     public void validateDuplicatedServidor(
-            @ValidationSuite(context = DUPLICATED_SERVIDOR_CONTEXT, isCollection = true,
-                    clazz = PedidoAreasServidores.class)
-            List<PedidoAreasServidores> servidores) {
+            @ValidationSuite(context = DUPLICATED_SERVIDOR_CONTEXT) List<PedidoAreasServidores> servidores) {
         // Método para validação de servidores chefe em uma lista de PedidoAreasServidores;
     }
 
     @Override
     public void validateServidorChefe(
-            @ValidationSuite(context = SERVIDOR_CHEFE_CONTEXT, isCollection = true,
-                    clazz = PedidoAreasServidores.class)
-            List<PedidoAreasServidores> servidores) {
+            @ValidationSuite(context = SERVIDOR_CHEFE_CONTEXT) List<PedidoAreasServidores> servidores) {
         // Método para validação de servidores chefe em uma lista de PedidoAreasServidores;
     }
 
@@ -89,13 +86,9 @@ public class PedidoAreasServidoresServiceImpl
         } else if (getRepository().existsLockReference(id.getIdPedidoArea(), id.getIdServidor())) {
             getRepository().updateSituacao(id.getIdPedidoArea(), id.getIdServidor(), SituacaoEnum.CANCELADO);
             entity = Optional.of(getRepository().findOne(id));
-
-            MessageUtil.addMesage(MessageUtil.ARR, "parametros.delecao.logica");
         } else {
             getRepository().delete(id.getIdPedidoArea(), id.getIdServidor());
             entity = Optional.empty();
-
-            MessageUtil.addMesage(MessageUtil.ARR, "parametros.delecao.fisica");
         }
 
         return entity;

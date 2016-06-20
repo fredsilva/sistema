@@ -29,6 +29,11 @@ public class PlanoContasFacadeImpl extends DefaultCrudFacade<PlanoContas, Long> 
         return (PlanoContasService) super.getService();
     }
 
+    /**
+     * Busca os PlanoContas filtrados.
+     * @param filter filtro preenchido em tela.
+     * @return lista de PlanoContas.
+     */
     public List<PlanoContas> find(PlanoContasFilter filter) {
         return getService().find(filter);
     }

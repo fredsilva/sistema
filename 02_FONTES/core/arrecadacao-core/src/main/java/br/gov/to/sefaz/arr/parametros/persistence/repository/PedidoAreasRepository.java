@@ -23,35 +23,71 @@ public interface PedidoAreasRepository extends BaseRepository<PedidoAreas, Integ
             + " ON pdp.id_pedido_area = pa.id_pedido_area"
             + " WHERE pa.id_pedido_area = :id";
 
-    String TOTAL_DAIS_OF_TIPO = "SELECT NVL(SUM(pa.quantidade_dias_analise), 0) FROM sefaz_arr.ta_pedido_areas pa"
+    String TOTAL_DIAS_OF_TIPO = "SELECT NVL(SUM(pa.quantidade_dias_analise), 0) FROM sefaz_arr.ta_pedido_areas pa"
             + " WHERE pa.id_tipo_pedido = :idTipoPedido";
     String ID_TIPO_PEDIDO = "idTipoPedido";
     String ID = "id";
 
+    /**
+     * Verifica se existe referências.
+     * @param id identificação do PedidoAreas.
+     * @return verdadeiro ou falso.
+     */
     @Query(value = HAS_LOCK_REFERENCE, nativeQuery = true)
     boolean existsLockReference(@Param(ID) Integer id);
 
+    /**
+     * Altera o pedido area.
+     * @param id identificação do Pedido Area.
+     * @param situacao nova situação do PedidoArea.
+     */
     @Modifying
     @Query("UPDATE PedidoAreas SET situacao = :situacao WHERE idPedidoArea = :id")
     void updateSituacao(@Param(ID) Integer id, @Param("situacao") SituacaoEnum situacao);
 
+    /**
+     * Busca o último ordem parecer pelo Tipo.
+     * @param idTipoPedido tipo de pedido.
+     * @return id da ordem parecer.
+     */
     @Query("SELECT MAX(pa.ordemParecer) FROM PedidoAreas pa WHERE pa.idTipoPedido = :idTipoPedido")
     Integer getLastOrdemParecerFromTipo(@Param(ID_TIPO_PEDIDO) Integer idTipoPedido);
 
+    /**
+     * Busca pelo Id do parecer final e pelo id tipo pedido.
+     * @param parecerFinal id do parecer final.
+     * @param idTipoPedido id do tipo pedido.
+     * @return id do pedido areas encontrado.
+     */
     @Query("SELECT pa.idPedidoArea FROM PedidoAreas pa"
             + " WHERE pa.parecerFinal = :parecerFinal AND pa.idTipoPedido = :idTipoPedido")
     Integer findIdByParecerFinalAndTipoPedido(@Param("parecerFinal") Boolean parecerFinal,
             @Param(ID_TIPO_PEDIDO) Integer idTipoPedido);
 
+    /**
+     * Remove o pedido areas pelo Id.
+     * @param id identificação do pedido areas.
+     */
     @Override
     @Modifying
     @Query("DELETE PedidoAreas WHERE idPedidoArea = :id")
     void delete(@Param(ID) Integer id);
 
-    @Query(value = TOTAL_DAIS_OF_TIPO, nativeQuery = true)
+    /**
+     * Busca o total de dias pelo tipo.
+     * @param idTipoPedido tipo de pedido.
+     * @return total de dias de análise.
+     */
+    @Query(value = TOTAL_DIAS_OF_TIPO, nativeQuery = true)
     Integer getTotalQtdDiasAnaliseByTipo(@Param(ID_TIPO_PEDIDO) Integer idTipoPedido);
 
-    @Query(value = TOTAL_DAIS_OF_TIPO + " AND pa.id_pedido_area <> :idPedidoArea",
+    /**
+     * Busca o total de dias de análise pelo tipo.
+     * @param idTipoPedido tipo de pedido.
+     * @param idPedidoArea identificação do pedido áreas.
+     * @return quantidade de dias de análise.
+     */
+    @Query(value = TOTAL_DIAS_OF_TIPO + " AND pa.id_pedido_area <> :idPedidoArea",
             nativeQuery = true)
     Integer getTotalQtdDiasAnaliseByTipoAndNotId(@Param(ID_TIPO_PEDIDO) Integer idTipoPedido,
             @Param("idPedidoArea") Integer idPedidoArea);

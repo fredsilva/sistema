@@ -1,7 +1,5 @@
 package br.gov.to.sefaz.util.session;
 
-import br.gov.to.sefaz.exception.SystemException;
-
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 
@@ -35,11 +33,12 @@ public class SessionContextUtil {
      * Método private que retorna o {@link ExternalContext}.
      *
      * @return {@link ExternalContext}
-     * @throws {@link SystemException} caso tenta usar o presente singleton de fora de uma requisição HTTP.
+     * @throws UnsupportedOperationException caso tenta usar o presente singleton de fora de
+     *      uma requisição HTTP.
      */
     private ExternalContext currentExternalContext() {
         if (FacesContext.getCurrentInstance() == null) {
-            throw new SystemException("O FacesContext não pode ser chamado fora de uma requisição HTTP");
+            throw new UnsupportedOperationException("O FacesContext não pode ser chamado fora de uma requisição HTTP");
         } else {
             return FacesContext.getCurrentInstance().getExternalContext();
         }

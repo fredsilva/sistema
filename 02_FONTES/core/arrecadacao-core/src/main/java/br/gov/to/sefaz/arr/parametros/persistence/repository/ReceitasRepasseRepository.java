@@ -20,6 +20,10 @@ public interface ReceitasRepasseRepository extends BaseRepository<ReceitasRepass
     String DELETE_ALL_RECEITAS_REPASSES_BY_IDRECEITA = "DELETE ReceitasRepasse rr WHERE "
             + "rr.idReceita = :idReceita";
 
+    /**
+     * Remove todos os ReceitasRepasses.
+     * @param idReceita identificação da Receita.
+     */
     @Query(value = DELETE_ALL_RECEITAS_REPASSES_BY_IDRECEITA)
     @Modifying
     void deleteAllRepassesByIdReceita(@Param("idReceita") Integer idReceita);

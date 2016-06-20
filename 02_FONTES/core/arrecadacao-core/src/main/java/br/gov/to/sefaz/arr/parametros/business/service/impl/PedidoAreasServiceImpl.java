@@ -13,6 +13,7 @@ import br.gov.to.sefaz.business.service.validation.ValidationSuite;
 import br.gov.to.sefaz.persistence.enums.SituacaoEnum;
 import br.gov.to.sefaz.persistence.predicate.AndPredicateBuilder;
 import br.gov.to.sefaz.util.message.MessageUtil;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Component;
@@ -82,6 +83,7 @@ public class PedidoAreasServiceImpl extends DefaultCrudService<PedidoAreas, Inte
         saved.setFaixaValor(faixaValor);
         saved.setPedidoAreasServidores(pedidoAreasServidores);
 
+        MessageUtil.addMesage(MessageUtil.ARR, "mensagem.sucesso.operacao");
         return saved;
     }
 
@@ -94,14 +96,12 @@ public class PedidoAreasServiceImpl extends DefaultCrudService<PedidoAreas, Inte
             getRepository().updateSituacao(id, SituacaoEnum.CANCELADO);
             entity = Optional.of(getRepository().findOne(id));
 
-            MessageUtil.addMesage(MessageUtil.ARR, "parametros.delecao.logica");
         } else {
             faixaValorService.delete(id);
             servidoresService.deleteByIdPedidoArea(id);
             getRepository().delete(id);
             entity = Optional.empty();
 
-            MessageUtil.addMesage(MessageUtil.ARR, "parametros.delecao.fisica");
         }
 
         return entity;

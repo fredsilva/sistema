@@ -8,7 +8,6 @@ import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.ValidationSuite;
 import br.gov.to.sefaz.persistence.enums.SituacaoEnum;
 import br.gov.to.sefaz.persistence.predicate.AndPredicateBuilder;
-import br.gov.to.sefaz.util.message.MessageUtil;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
@@ -28,7 +27,8 @@ import java.util.Optional;
 public class BancosServiceImpl extends DefaultCrudService<Bancos, Integer> implements BancosService {
 
     @Autowired
-    public BancosServiceImpl(BancosRepository repository) {
+    public BancosServiceImpl(
+            BancosRepository repository) {
         super(repository, new Sort(new Sort.Order(Sort.Direction.ASC, "idBanco")));
     }
 
@@ -39,18 +39,12 @@ public class BancosServiceImpl extends DefaultCrudService<Bancos, Integer> imple
 
     @Override
     public Bancos save(@ValidationSuite(context = ValidationContext.SAVE) Bancos entity) {
-        Bancos bancos = super.save(entity);
-        MessageUtil.addMesage(MessageUtil.ARR, "mensagem.sucesso.operacao");
-
-        return bancos;
+        return super.save(entity);
     }
 
     @Override
     public Bancos update(@ValidationSuite Bancos entity) {
-        Bancos bancos = super.update(entity);
-        MessageUtil.addMesage(MessageUtil.ARR, "mensagem.sucesso.operacao");
-
-        return bancos;
+        return super.update(entity);
     }
 
     @Override
@@ -59,15 +53,12 @@ public class BancosServiceImpl extends DefaultCrudService<Bancos, Integer> imple
         Optional<Bancos> banco;
 
         if (getRepository().existsLockReference(id)) {
+            getRepository().updateSituacaoAgencias(id, SituacaoEnum.CANCELADO);
             getRepository().updateSituacao(id, SituacaoEnum.CANCELADO);
             banco = Optional.of(getRepository().findOne(id));
-
-            MessageUtil.addMesage(MessageUtil.ARR, "parametros.delecao.logica");
         } else {
             super.delete(id);
             banco = Optional.empty();
-
-            MessageUtil.addMesage(MessageUtil.ARR, "parametros.delecao.fisica");
         }
 
         return banco;

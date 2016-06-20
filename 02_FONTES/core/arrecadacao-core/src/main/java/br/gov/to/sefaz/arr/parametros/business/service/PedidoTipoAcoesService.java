@@ -21,6 +21,12 @@ public interface PedidoTipoAcoesService extends CrudService<PedidoTipoAcoes, Int
      */
     void deleteAllTipoAcoesByIdTipoPedido(Integer idTipoPedido);
 
+    /**
+     * Atualiza a situação.
+     * @param idTipoPedido identificação do TipoPedido.
+     * @param situacao nova situação.
+     * @return código do banco de dados.
+     */
     int updateSituacaoByIdTipoPedido(Integer idTipoPedido, SituacaoEnum situacao);
 
 }

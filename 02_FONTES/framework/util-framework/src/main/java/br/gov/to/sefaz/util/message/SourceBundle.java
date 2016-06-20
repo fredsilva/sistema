@@ -1,9 +1,10 @@
 package br.gov.to.sefaz.util.message;
 
-import java.text.MessageFormat;
-import java.util.ResourceBundle;
+import org.apache.commons.lang3.StringUtils;
 
-import javax.faces.context.FacesContext;
+import java.text.MessageFormat;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 /**
  * Classe para internacionalização de mensagens.
@@ -12,6 +13,8 @@ import javax.faces.context.FacesContext;
  * @since 22/04/2016 16:20:00
  */
 public final class SourceBundle {
+
+    private static final String BASE_PKG_BUNDLE = "br.gov.to.sefaz.";
 
     public static final String DEFAULT_BUNDLE = "msg";
 
@@ -67,9 +70,35 @@ public final class SourceBundle {
         return MessageFormat.format(getMessage(DEFAULT_BUNDLE, key), params);
     }
 
+    /**
+     * Transforma uma expression language em uma mensagem tratada e cadastrada no(s) resouce(s) bungle(s).
+     *
+     * @param key Chave do message baundle no formato EL - Expression Language
+     * @return Mensagem tratada
+     */
+    public static String getMessageByExpression(String key) {
+        if (StringUtils.isEmpty(key)) {
+            return getMessage("mensagem.nao.encontrada");
+        }
+        String bundle = key.substring(key.indexOf('{') + 1, key.indexOf('['));
+        key = key.substring(key.indexOf('\'') + 1, key.lastIndexOf('\''));
+        return getMessage(bundle, key);
+        // FacesContext facesContext = FacesContext.getCurrentInstance();
+        // ExpressionFactory elFactory = facesContext.getApplication().getExpressionFactory();
+        // ValueExpression valueExp = elFactory.createValueExpression(facesContext.getELContext(), key, Object.class);
+        // Object value = valueExp.getValue(facesContext.getELContext());
+        //
+        // return value == null ? key : value.toString();
+    }
+
     private static ResourceBundle getResourceBundle(String bundle) {
-        FacesContext facesContext = FacesContext.getCurrentInstance();
-        return facesContext.getApplication().getResourceBundle(facesContext, bundle);
+        return ResourceBundle.getBundle(createNameBundle(bundle), new Locale("pt", "BR"));
+        // FacesContext facesContext = FacesContext.getCurrentInstance();
+        // return facesContext.getApplication().getResourceBundle(facesContext, bundle);
+    }
+
+    private static String createNameBundle(String bundle) {
+        return BASE_PKG_BUNDLE + bundle.replace("msg", "message");
     }
 
 }

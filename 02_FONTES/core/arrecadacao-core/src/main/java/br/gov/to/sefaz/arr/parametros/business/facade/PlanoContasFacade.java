@@ -14,5 +14,10 @@ import java.util.List;
  */
 public interface PlanoContasFacade extends CrudFacade<PlanoContas, Long> {
 
+    /**
+     * Busca PlanoContas filtrado.
+     * @param filter filtro preenchido em tela.
+     * @return Lista de PlanoContas.
+     */
     List<PlanoContas> find(PlanoContasFilter filter);
 }

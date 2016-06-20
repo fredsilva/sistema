@@ -152,6 +152,10 @@ public class PedidoAreas extends AbstractEntity<Integer> {
         return idPedidoArea;
     }
 
+    /**
+     * Seta o ID do pedido area.
+     * @param idPedidoArea identificação.
+     */
     public void setIdPedidoArea(Integer idPedidoArea) {
         this.idPedidoArea = idPedidoArea;
         this.faixaValor.setIdPedidoArea(idPedidoArea);
@@ -253,28 +257,52 @@ public class PedidoAreas extends AbstractEntity<Integer> {
         return getDelegaciaAgencias().getDescricao();
     }
 
+    /**
+     * Busca o tipo do pedido.
+     * @return identificação do tipo pedido.
+     */
     public Integer getIdTipoPedido() {
         return idTipoPedido;
     }
 
+    /**
+     * Altera o id do tipo pedido.
+     * @param idTipoPedido identificação nova.
+     */
     public void setIdTipoPedido(Integer idTipoPedido) {
         this.idTipoPedido = idTipoPedido;
         this.tipoPedido.setIdTipoPedido(idTipoPedido);
     }
 
+    /**
+     * Busca o ID da unidade delegacia.
+     * @return identificação da unidade delegacia.
+     */
     public Integer getIdUnidadeDelegacia() {
         return idUnidadeDelegacia;
     }
 
+    /**
+     * Seta a identificação da Unidade Delegacia.
+     * @param idUnidadeDelegacia nova identificação.
+     */
     public void setIdUnidadeDelegacia(Integer idUnidadeDelegacia) {
         this.idUnidadeDelegacia = idUnidadeDelegacia;
         this.delegaciaAgencias.setIdUnidadeDelegacia(idUnidadeDelegacia);
     }
 
+    /**
+     * Busca o Id da delegacia.
+     * @return identificação da delegacia.
+     */
     public Integer getIdDelegacia() {
         return idDelegacia;
     }
 
+    /**
+     * Altera a identificação da delegacia.
+     * @param idDelegacia nova.
+     */
     public void setIdDelegacia(Integer idDelegacia) {
         this.idDelegacia = idDelegacia;
         this.delegaciaAgencias.setIdDelegacia(idDelegacia);

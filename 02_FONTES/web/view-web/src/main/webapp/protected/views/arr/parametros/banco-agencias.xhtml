@@ -37,19 +37,19 @@
 
 <sat:panel title="#{arr_msg['parametros.bancoAgencias.form.banco.selecionado']}">
     <h:form id="banco-selecionado-form">
-    <div class="row">
-        <div class="form-group col-md-3">
-            <h:outputLabel for="idBanco">#{arr_msg['parametros.bancos.form.numero']}*</h:outputLabel>
-            <h:inputText value="#{bancoAgenciasMB.dto.idBanco}" id="idBanco"
-                         styleClass="form-control justInteger"
-                         maxlength="4" readonly="true"/>
+        <div class="row">
+            <div class="form-group col-md-3">
+                <h:outputLabel for="idBanco">#{arr_msg['parametros.bancos.form.numero']}*</h:outputLabel>
+                <h:inputText value="#{bancoAgenciasMB.dto.idBanco}" id="idBanco"
+                             styleClass="form-control justInteger"
+                             maxlength="4" readonly="true"/>
+            </div>
+            <div class="form-group col-md-9">
+                <h:outputLabel for="nomeBanco">#{arr_msg['parametros.bancos.form.nome']}*</h:outputLabel>
+                <h:inputText value="#{bancoAgenciasMB.dto.bancos.nomeBanco}" id="nomeBanco"
+                             styleClass="form-control" maxlength="150" readonly="true"/>
+            </div>
         </div>
-        <div class="form-group col-md-9">
-            <h:outputLabel for="nomeBanco">#{arr_msg['parametros.bancos.form.nome']}*</h:outputLabel>
-            <h:inputText value="#{bancoAgenciasMB.dto.bancos.nomeBanco}" id="nomeBanco"
-                         styleClass="form-control" maxlength="150" readonly="true"/>
-        </div>
-    </div>
     </h:form>
 </sat:panel>
 
@@ -168,24 +168,24 @@
     </sat:table>
     <h:form>
         <a4j:jsFunction name="deleteBancoAgenciasAdicionadas"
-                            action="#{bancoAgenciasMB.removerBancoAgencias}"
-                            render="banco-agencias-adicionadas-table"
-                            oncomplete="resetFieldsAgencias">
-                <a4j:param name="idAgencia" assignTo="#{bancoAgenciasMB.dto.idAgencia}"/>
-                <a4j:param name="idBanco" assignTo="#{bancoAgenciasMB.dto.idBanco}"/>
-            </a4j:jsFunction>
-            <div class="row">
-                <div class="col-md-offset-8 col-lg-4 text-right">
-                    <button type="button" class="btn btn-primary button-align-bottom" onclick="resetFieldsAgencias()">
-                        #{arr_msg['parametros.bancoAgencias.botao.novo']}
-                    </button>
-                    <h:commandButton type="button" value="#{arr_msg['parametros.bancoAgencias.botao.salvar']}"
-                                styleClass="btn btn-primary button-align-bottom" action="#{bancoAgenciasMB.saveAgenciasAdicionadas}">
-                        <f:ajax render="banco-agencias-table banco-agencias-adicionadas-table"/>
-                    </h:commandButton>
-                </div>
+                        action="#{bancoAgenciasMB.removerBancoAgencias}"
+                        render="banco-agencias-adicionadas-table"
+                        oncomplete="resetFieldsAgencias">
+            <a4j:param name="idAgencia" assignTo="#{bancoAgenciasMB.dto.idAgencia}"/>
+            <a4j:param name="idBanco" assignTo="#{bancoAgenciasMB.dto.idBanco}"/>
+        </a4j:jsFunction>
+        <div class="row">
+            <div class="col-md-offset-8 col-lg-4 text-right">
+                <button type="button" class="btn btn-primary button-align-bottom" onclick="resetFieldsAgencias()">
+                    #{arr_msg['parametros.bancoAgencias.botao.novo']}
+                </button>
+                <h:commandButton type="button" value="#{arr_msg['parametros.bancoAgencias.botao.salvar']}"
+                            styleClass="btn btn-primary button-align-bottom" action="#{bancoAgenciasMB.saveAgenciasAdicionadas}">
+                    <f:ajax render="banco-agencias-table banco-agencias-adicionadas-table"/>
+                </h:commandButton>
             </div>
-        </h:form>
+        </div>
+    </h:form>
 </sat:panel>
 
 </html>

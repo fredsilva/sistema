@@ -5,7 +5,10 @@ import br.gov.to.sefaz.arr.parametros.persistence.entity.ReceitasRepasse;
 import br.gov.to.sefaz.arr.parametros.persistence.entity.ReceitasRepassePK;
 import br.gov.to.sefaz.arr.parametros.persistence.repository.ReceitasRepasseRepository;
 import br.gov.to.sefaz.business.service.impl.DefaultCrudService;
+import br.gov.to.sefaz.business.service.validation.ValidationContext;
+import br.gov.to.sefaz.business.service.validation.ValidationSuite;
 import br.gov.to.sefaz.persistence.predicate.AndPredicateBuilder;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
@@ -25,7 +28,8 @@ public class ReceitasRepasseServiceImpl extends DefaultCrudService<ReceitasRepas
         implements ReceitasRepasseService {
 
     @Autowired
-    public ReceitasRepasseServiceImpl(ReceitasRepasseRepository repository) {
+    public ReceitasRepasseServiceImpl(
+            ReceitasRepasseRepository repository) {
         super(repository, new Sort(new Sort.Order(Sort.Direction.ASC, "idReceita")));
     }
 
@@ -44,5 +48,11 @@ public class ReceitasRepasseServiceImpl extends DefaultCrudService<ReceitasRepas
         return getRepository().findAll((root, query, cb) -> new AndPredicateBuilder(root, cb)
                 .equalsTo("idReceita", idReceita)
                 .build(), getDefaultSort());
+    }
+
+    @Override
+    public void validateReceitasRepasse(
+            @ValidationSuite(context = ValidationContext.SAVE) ReceitasRepasse receitasRepasse) {
+        // Método que valida a Lista de Receitas Repasse por anotação
     }
 }

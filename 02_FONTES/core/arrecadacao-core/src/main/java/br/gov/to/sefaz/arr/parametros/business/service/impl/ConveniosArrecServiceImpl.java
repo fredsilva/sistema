@@ -12,7 +12,6 @@ import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.ValidationSuite;
 import br.gov.to.sefaz.persistence.enums.SituacaoEnum;
 import br.gov.to.sefaz.persistence.predicate.AndPredicateBuilder;
-import br.gov.to.sefaz.util.message.MessageUtil;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Sort;
@@ -39,7 +38,8 @@ public class ConveniosArrecServiceImpl extends DefaultCrudService<ConveniosArrec
     private final ConveniosReceitasService receitasService;
 
     @Autowired
-    public ConveniosArrecServiceImpl(ConveniosArrecRepository repository,
+    public ConveniosArrecServiceImpl(
+            ConveniosArrecRepository repository,
             ConveniosTarifasService conveniosTarifasService, ConveniosReceitasService receitasService) {
         super(repository, new Sort(new Sort.Order(Sort.Direction.ASC, "idConvenio")));
         this.conveniosTarifasService = conveniosTarifasService;
@@ -59,10 +59,8 @@ public class ConveniosArrecServiceImpl extends DefaultCrudService<ConveniosArrec
         saveAllConveniosTarifas(entity);
         saveAllConveniosReceitas(entity);
 
-        MessageUtil.addMesage(MessageUtil.ARR, "mensagem.sucesso.operacao");
         return save;
     }
-
 
     @Override
     @Transactional
@@ -72,7 +70,6 @@ public class ConveniosArrecServiceImpl extends DefaultCrudService<ConveniosArrec
         saveAllConveniosTarifas(entity);
         saveAllConveniosReceitas(entity);
 
-        MessageUtil.addMesage(MessageUtil.ARR, "mensagem.sucesso.operacao");
         return update;
     }
 
@@ -84,13 +81,12 @@ public class ConveniosArrecServiceImpl extends DefaultCrudService<ConveniosArrec
             getRepository().updateSituacao(id, SituacaoEnum.CANCELADO);
             conveniosArrec = Optional.of(getRepository().findOne(id));
 
-            MessageUtil.addMesage(MessageUtil.ARR, "parametros.delecao.logica");
         } else {
             conveniosTarifasService.deleteAllByIdConvenio(id);
+            receitasService.deleteAllByIdConvenio(id);
             super.delete(id);
             conveniosArrec = Optional.empty();
 
-            MessageUtil.addMesage(MessageUtil.ARR, "parametros.delecao.fisica");
         }
 
         return conveniosArrec;
@@ -108,8 +104,8 @@ public class ConveniosArrecServiceImpl extends DefaultCrudService<ConveniosArrec
     }
 
     private void saveAllConveniosTarifas(ConveniosArrec entity) {
-        entity.getConveniosTarifas().stream().forEach(conveniosTarifas ->
-                conveniosTarifas.setIdConveniosArrec(entity.getIdConvenio()));
+        entity.getConveniosTarifas().stream()
+                .forEach(conveniosTarifas -> conveniosTarifas.setIdConveniosArrec(entity.getIdConvenio()));
 
         conveniosTarifasService.deleteAllByIdConvenio(entity.getIdConvenio());
         conveniosTarifasService.save(entity.getConveniosTarifas());
@@ -117,9 +113,8 @@ public class ConveniosArrecServiceImpl extends DefaultCrudService<ConveniosArrec
 
     private void saveAllConveniosReceitas(ConveniosArrec entity) {
         Collection<ConveniosReceitas> conveniosReceitas = new ArrayList<>();
-        entity.getReceitas().stream().forEach(receitas ->
-                conveniosReceitas.add(new ConveniosReceitas(receitas.getIdReceita(), entity.getIdConvenio()))
-        );
+        entity.getReceitas().stream().forEach(receitas -> conveniosReceitas
+                .add(new ConveniosReceitas(receitas.getIdReceita(), entity.getIdConvenio())));
 
         receitasService.deleteAllByIdConvenio(entity.getIdConvenio());
         receitasService.save(conveniosReceitas);

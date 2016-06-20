@@ -76,6 +76,9 @@ public class ReceitasMB extends DefaultCrudMB<Receitas, Integer> {
         this.receitasRepasseDto = receitasRepasseDto;
     }
 
+    /**
+     * Busca utilizando o filtro preenchido em tela.
+     */
     public void search() {
         clearDtos();
         List<Receitas> resultList = getFacade().find(filter);
@@ -87,6 +90,9 @@ public class ReceitasMB extends DefaultCrudMB<Receitas, Integer> {
         setResultList(resultList);
     }
 
+    /**
+     * Limpa os DTOs.
+     */
     public void clearDtos() {
         clearDto();
         receitasTaxasDto = new ReceitasTaxas();
@@ -97,16 +103,18 @@ public class ReceitasMB extends DefaultCrudMB<Receitas, Integer> {
         return getFacade().getAllPlanoContas();
     }
 
-    public String getPlanoContasLabel(PlanoContas planoContas) {
-        return planoContas.getCodigoPlanoContas() + " - " + planoContas.getNomeConta();
-    }
-
+    /**
+     * Busca os ReceitasTaxas e adiciona na view.
+     */
     public void getReceitasTaxas() {
         Collection<ReceitasTaxas> conveniosTarifas = getFacade()
                 .getReceitasTaxasByIdReceita(getDto().getIdReceita());
         getDto().setReceitasTaxas(conveniosTarifas.stream().collect(Collectors.toList()));
     }
 
+    /**
+     * Adiciona Taxa na view.
+     */
     public void addTaxa() {
         ReceitasTaxas receitasTaxas = new ReceitasTaxas();
         BeanUtils.copyProperties(receitasTaxasDto, receitasTaxas);
@@ -114,6 +122,9 @@ public class ReceitasMB extends DefaultCrudMB<Receitas, Integer> {
         getDto().addTaxa(receitasTaxas);
     }
 
+    /**
+     * Atualiza taxa.
+     */
     public void updateTaxa() {
         List<ReceitasTaxas> receitasTaxas = getDto().getReceitasTaxas();
 
@@ -128,6 +139,9 @@ public class ReceitasMB extends DefaultCrudMB<Receitas, Integer> {
         }
     }
 
+    /**
+     * Remove Taxa.
+     */
     public void deleteTaxa() {
         List<ReceitasTaxas> taxas = getDto().getReceitasTaxas();
         List<ReceitasTaxas> taxasRemove = taxas.stream()
@@ -137,19 +151,29 @@ public class ReceitasMB extends DefaultCrudMB<Receitas, Integer> {
         getDto().getReceitasTaxas().removeAll(taxasRemove);
     }
 
+    /**
+     * Busca as ReceitasRepasses e adiciona-os na view.
+     */
     public void getReceitasRepasses() {
         Collection<ReceitasRepasse> receitasRepasses = getFacade()
                 .getReceitasRepasseByIdReceita(getDto().getIdReceita());
         getDto().setReceitasRepasse(receitasRepasses.stream().collect(Collectors.toList()));
     }
 
+    /**
+     * Adiciona um Repasse na view.
+     */
     public void addRepasse() {
         ReceitasRepasse receitasRepasse = new ReceitasRepasse();
         BeanUtils.copyProperties(receitasRepasseDto, receitasRepasse);
-
+        receitasRepasse.setIdReceita(getDto().getId());
+        getFacade().validateReceitasRepasse(receitasRepasse);
         getDto().getReceitasRepasse().add(receitasRepasse);
     }
 
+    /**
+     * Atualiza um Repasse.
+     */
     public void updateRepasse() {
         List<ReceitasRepasse> receitasRepasse = getDto().getReceitasRepasse();
 
@@ -158,6 +182,8 @@ public class ReceitasMB extends DefaultCrudMB<Receitas, Integer> {
                         && repasse.getDataInicio().equals(receitasRepasseDto.getDataInicio()))
                 .findAny();
         if (anyRepasse.isPresent()) {
+            receitasRepasseDto.setIdReceita(getDto().getId());
+            getFacade().validateReceitasRepasse(receitasRepasseDto);
             receitasRepasse.remove(anyRepasse.get());
             receitasRepasse.add(receitasRepasseDto);
         } else {
@@ -165,6 +191,9 @@ public class ReceitasMB extends DefaultCrudMB<Receitas, Integer> {
         }
     }
 
+    /**
+     * Remove um Repasse.
+     */
     public void deleteRepasse() {
         List<ReceitasRepasse> repasses = getDto().getReceitasRepasse();
         List<ReceitasRepasse> repassesRemove = repasses.stream()

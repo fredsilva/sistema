@@ -2,8 +2,12 @@ package br.gov.to.sefaz.presentation.managedbean;
 
 import br.gov.to.sefaz.persistence.entity.AbstractEntity;
 
+import java.io.IOException;
 import java.io.Serializable;
+import java.sql.SQLException;
 import java.util.Collection;
+
+import javax.mail.MessagingException;
 
 /**
  * Interface de acesso às operações controle de CRUD.
@@ -39,8 +43,12 @@ public interface CrudMB<E extends AbstractEntity<I>, I extends Serializable> {
 
     /**
      * Persiste o {@link #getDto()} na base de dados.
+     *
+     * @throws MessagingException exceção de envio de e-mail
+     * @throws IOException exceção ao gravar anexos
+     * @throws SQLException exeção ao persistir log do e-mail enviado
      */
-    void save();
+    void save() throws MessagingException, IOException, SQLException;
 
     /**
      * Atualiza uma entidade a partir do {@link #getDto()} na base de dados.

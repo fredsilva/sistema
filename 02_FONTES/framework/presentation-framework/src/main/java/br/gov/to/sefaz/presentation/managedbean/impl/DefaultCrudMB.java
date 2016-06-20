@@ -2,17 +2,15 @@ package br.gov.to.sefaz.presentation.managedbean.impl;
 
 import br.gov.to.sefaz.business.facade.CrudFacade;
 import br.gov.to.sefaz.persistence.entity.AbstractEntity;
-import br.gov.to.sefaz.presentation.managedbean.BeanFactoryMB;
+import br.gov.to.sefaz.presentation.managedbean.AutowiredMB;
 import br.gov.to.sefaz.presentation.managedbean.CrudMB;
+import br.gov.to.sefaz.util.message.MessageUtil;
 
 import java.io.Serializable;
 import java.util.Collection;
 import java.util.Optional;
 import java.util.function.Supplier;
-
-import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ManagedProperty;
 
 /**
  * Implementação default de um {@link CrudMB}.
@@ -23,24 +21,17 @@ import javax.faces.bean.ManagedProperty;
  * @since 29/04/2016 18:52:00
  */
 @ManagedBean
-public class DefaultCrudMB<E extends AbstractEntity<I>, I extends Serializable> implements CrudMB<E, I> {
+public class DefaultCrudMB<E extends AbstractEntity<I>, I extends Serializable>
+        extends AutowiredMB implements CrudMB<E, I> {
 
-    @ManagedProperty("#{springBeanFactoryMB}")
-    private BeanFactoryMB beanFactoryMB;
     protected Collection<E> resultList;
     private E dto;
     private CrudFacade<E, I> facade;
     private final Supplier<E> dtoProvider;
 
-    public DefaultCrudMB(
-            Supplier<E> dtoProvider) {
+    public DefaultCrudMB(Supplier<E> dtoProvider) {
         this.dtoProvider = dtoProvider;
         clearDto();
-    }
-
-    @PostConstruct
-    protected void injectDependencies() {
-        beanFactoryMB.injectBeans(this);
     }
 
     protected void setFacade(CrudFacade<E, I> facade) {
@@ -49,14 +40,6 @@ public class DefaultCrudMB<E extends AbstractEntity<I>, I extends Serializable> 
 
     protected CrudFacade<E, I> getFacade() {
         return this.facade;
-    }
-
-    protected BeanFactoryMB getBeanFactoryMB() {
-        return beanFactoryMB;
-    }
-
-    public void setBeanFactoryMB(BeanFactoryMB beanFactoryMB) {
-        this.beanFactoryMB = beanFactoryMB;
     }
 
     @Override
@@ -91,6 +74,7 @@ public class DefaultCrudMB<E extends AbstractEntity<I>, I extends Serializable> 
     @Override
     public void save() {
         E save = getFacade().save(getDto());
+        showSaveMessage();
         getResultList().add(save);
         clearDto();
     }
@@ -102,6 +86,7 @@ public class DefaultCrudMB<E extends AbstractEntity<I>, I extends Serializable> 
     public void update() {
         E update = getFacade().update(getDto());
         getResultList().removeIf(e -> e.getId().equals(getDto().getId()));
+        showUpdateMessage();
         getResultList().add(update);
         clearDto();
     }
@@ -115,7 +100,10 @@ public class DefaultCrudMB<E extends AbstractEntity<I>, I extends Serializable> 
         getResultList().removeIf(e -> e.getId().equals(getDto().getId()));
 
         if (delete.isPresent()) {
+            showLogicalDeleteMessage();
             getResultList().add(delete.get());
+        } else {
+            showPhysicalDeleteMessage();
         }
 
         clearDto();
@@ -127,5 +115,35 @@ public class DefaultCrudMB<E extends AbstractEntity<I>, I extends Serializable> 
     @Override
     public void clearDto() {
         setDto(dtoProvider.get());
+    }
+
+    /**
+     * Métodos para responsavel pela exibição de mensagens ao fim do {@link #save()}.
+     */
+    protected void showSaveMessage() {
+        MessageUtil.addMesage("mensagem.sucesso.operacao");
+    }
+
+    /**
+     * Métodos para responsavel pela exibição de mensagens ao fim do {@link #update()}.
+     */
+
+    protected void showUpdateMessage() {
+        // Caso precise de mensagens no update este metodo deve ser sobreescrito.
+        MessageUtil.addMesage("mensagem.sucesso.operacao");
+    }
+
+    /**
+     * Métodos para responsavel pela exibição de mensagens ao fim do {@link #delete()}.
+     */
+    protected void showLogicalDeleteMessage() {
+        MessageUtil.addMesage("mensagem.delecao.logica");
+    }
+
+    /**
+     * Métodos para responsavel pela exibição de mensagens ao fim do {@link #delete()}.
+     */
+    protected void showPhysicalDeleteMessage() {
+        MessageUtil.addMesage("mensagem.delecao.fisica");
     }
 }

@@ -17,13 +17,36 @@ import java.util.List;
  */
 public interface TipoGruposCnaesFacade extends CrudFacade<TipoGruposCnaes, Integer> {
 
+    /**
+     * Busca os TipoGruposCnaes.
+     * @param filter filtro preenchido em tela.
+     * @return lista de TipoGruposCnaes.
+     */
     List<TipoGruposCnaes> find(TipoGruposCnaesFilter filter);
 
+    /**
+     * Busca todos os Cnaes.
+     * @return lista de AtividadeEconomica.
+     */
     Collection<AtividadeEconomica> findAllCnaes();
 
+    /**
+     * Busca todos os Cnaes pela identificação do Grupo.
+     * @param idGrupoCnae identificação do GrupoCnae.
+     * @return Lista de AtividadeEconomica.
+     */
     Collection<AtividadeEconomica> findAllCnaesByGrupo(Integer idGrupoCnae);
 
+    /**
+     * Remove Cnae do Grupo.
+     * @param idGrupoCnae identificação de GrupoCnae.
+     * @param codigoCnae identificação do Cnae.
+     */
     void removeCnaeFromGrupo(Integer idGrupoCnae, String codigoCnae);
 
+    /**
+     * Valida os grupos.
+     * @param gruposCnaes Lista de GruposCnaes.
+     */
     void validateGruposCnaes(Collection<GruposCnae> gruposCnaes);
 }
