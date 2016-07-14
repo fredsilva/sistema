@@ -195,7 +195,8 @@ public class LdapProvider {
         }
         env.put(Context.SECURITY_AUTHENTICATION, "simple");
         env.put(Context.REFERRAL, "follow");
-        env.put(Context.SECURITY_PRINCIPAL, ldapProperties.getDomain() + "\\" + username);
+        env.put(Context.PROVIDER_URL, env.get(Context.PROVIDER_URL)+"/"+ldapProperties.getDomain());
+        env.put(Context.SECURITY_PRINCIPAL, username);
         env.put(Context.SECURITY_CREDENTIALS, passwdord);
         env.put("java.naming.ldap.attributes.binary", "objectSID");
         env.put("com.sun.jndi.ldap.connect.timeout", ldapProperties.getTimeout());
