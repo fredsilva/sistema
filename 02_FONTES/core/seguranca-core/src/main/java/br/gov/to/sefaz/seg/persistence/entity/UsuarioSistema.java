@@ -1,20 +1,25 @@
 package br.gov.to.sefaz.seg.persistence.entity;
 
+import br.gov.to.sefaz.cat.persistence.entity.Municipio;
 import br.gov.to.sefaz.persistence.converter.YesOrNoBooleanConverter;
 import br.gov.to.sefaz.persistence.entity.AbstractEntity;
 import br.gov.to.sefaz.seg.persistence.converter.SituacaoUsuarioEnumConverter;
 import br.gov.to.sefaz.seg.persistence.enums.SituacaoUsuarioEnum;
 
 import java.time.LocalDateTime;
+import java.util.HashSet;
 import java.util.Objects;
-
+import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import javax.validation.constraints.NotNull;
 
 /**
@@ -73,6 +78,11 @@ public class UsuarioSistema extends AbstractEntity<String> {
     @Column(name = "CODIGO_MUNICIPIO")
     private Integer codigoMunicipio;
 
+    @JoinColumn(name = "CODIGO_MUNICIPIO", referencedColumnName = "CODIGO_IBGE",
+            insertable = false, updatable = false)
+    @ManyToOne
+    private Municipio municipio;
+
     @Column(name = "TELEFONE_RESIDENCIAL")
     private String telefoneResidencial;
 
@@ -121,8 +131,41 @@ public class UsuarioSistema extends AbstractEntity<String> {
     @ManyToOne(optional = false)
     private TipoUsuario tipoUsuario;
 
+    @OneToMany(mappedBy = "usuarioSistema")
+    private Set<HistoricoLoginSistema> historicoLoginSistema;
+
+    @OneToOne(mappedBy = "usuarioSistema")
+    private SolicitacaoUsuario solicitacaoUsuario;
+
+    @OneToOne(mappedBy = "usuarioSistema")
+    private UsuarioPostoTrabalho usuarioPostoTrabalho;
+
+    @Transient
+    private LocalDateTime ultimoLogin;
+
     public UsuarioSistema() {
         // Construtor para inicialização por reflexão.
+        municipio = new Municipio();
+        tipoUsuario = new TipoUsuario();
+    }
+
+    public UsuarioSistema(String nomeCompletoUsuario, String cpfUsuario, String descricaoTipoUsuario,
+            SituacaoUsuarioEnum situacaoUsuario, String nomeMunicipio, String usuarioInsercao, LocalDateTime
+            dataInsercao, LocalDateTime dataHoraLogin) {
+        super();
+        this.nomeCompletoUsuario = nomeCompletoUsuario;
+        this.cpfUsuario = cpfUsuario;
+        this.tipoUsuario.setDescricaoTipoUsuario(descricaoTipoUsuario);
+        this.situacaoUsuario = situacaoUsuario;
+        this.municipio.setNomeMunicipio(nomeMunicipio);
+        this.usuarioInsercao = usuarioInsercao;
+        this.dataInsercao = dataInsercao;
+        this.historicoLoginSistema = new HashSet<>();
+
+        HistoricoLoginSistema historicoLoginSistema = new HistoricoLoginSistema();
+        historicoLoginSistema.setDataHoraLogin(dataHoraLogin);
+
+        this.historicoLoginSistema.add(historicoLoginSistema);
     }
 
     public UsuarioSistema(
@@ -348,12 +391,81 @@ public class UsuarioSistema extends AbstractEntity<String> {
         this.codigoTipoUsuario = codigoTipoUsuario;
     }
 
-    public TipoUsuario getTipoUsuario() {
-        return tipoUsuario;
+    public String getUnidadeFederacao() {
+        return municipio != null ? municipio.getUnidadeFederacao() : "";
     }
 
-    public void setTipoUsuario(TipoUsuario tipoUsuario) {
-        this.tipoUsuario = tipoUsuario;
+    public String getNomeMunicipio() {
+        return municipio != null ? municipio.getNomeMunicipio() : "";
+    }
+
+    public String getDescricaoTipoUsuario() {
+        return Objects.isNull(tipoUsuario) ? "" : tipoUsuario.getDescricaoTipoUsuario();
+    }
+
+    public LocalDateTime getHistoricoLoginSistema() {
+        return getUltimoLogin();
+    }
+
+    public void setHistoricoLoginSistema(Set<HistoricoLoginSistema> historicoLoginSistema) {
+        this.historicoLoginSistema = historicoLoginSistema;
+    }
+
+    public SolicitacaoUsuario getSolicitacaoUsuario() {
+        return solicitacaoUsuario;
+    }
+
+    public void setSolicitacaoUsuario(SolicitacaoUsuario solicitacaoUsuario) {
+        this.solicitacaoUsuario = solicitacaoUsuario;
+    }
+
+    public UsuarioPostoTrabalho getUsuarioPostoTrabalho() {
+        return usuarioPostoTrabalho;
+    }
+
+    public void setUsuarioPostoTrabalho(UsuarioPostoTrabalho usuarioPostoTrabalho) {
+        this.usuarioPostoTrabalho = usuarioPostoTrabalho;
+    }
+
+    public String getNomeEstado() {
+        return municipio.getEstado().getNomeEstado();
+    }
+
+    public String getNomeCidade() {
+        return municipio.getNomeMunicipio();
+    }
+
+    /**
+     * Busca o nome da Unidade Organizacional referente ao usuário.
+     * @return nome da Unidade Organizacional.
+     */
+    public String getNomeUnidOrganizac() {
+        if (!Objects.isNull(usuarioPostoTrabalho) && !Objects.isNull(usuarioPostoTrabalho.getPostoTrabalho())
+                && !Objects.isNull(usuarioPostoTrabalho.getPostoTrabalho().getUnidadeOrganizacional())) {
+            return usuarioPostoTrabalho.getPostoTrabalho().getUnidadeOrganizacional().getNomeUnidOrganizac();
+        } else {
+            return "";
+        }
+    }
+
+    /**
+     * Busca o nome do Posto de Trabalho referente ao usuário.
+     * @return nome do Posto de Trabalho.
+     */
+    public String getNomePostodeTrabalho() {
+        if (!Objects.isNull(usuarioPostoTrabalho) && !Objects.isNull(usuarioPostoTrabalho.getPostoTrabalho())) {
+            return usuarioPostoTrabalho.getPostoTrabalho().getNomePostoTrabalho();
+        } else {
+            return "";
+        }
+    }
+
+    private LocalDateTime getUltimoLogin() {
+        return historicoLoginSistema.stream()
+                .map(HistoricoLoginSistema::getDataHoraLogin)
+                .sorted((o1, o2) -> o1.compareTo(o2) * -1)
+                .findFirst()
+                .orElseGet(() -> null);
     }
 
     @Override
@@ -427,4 +539,5 @@ public class UsuarioSistema extends AbstractEntity<String> {
                 + ", codigoTipoUsuario=" + codigoTipoUsuario
                 + '}';
     }
+
 }

@@ -70,6 +70,7 @@ public class Municipio extends AbstractEntity<Integer> {
 
     public Municipio() {
         // Construtor para inicialização por reflexão.
+        estado = new Estado();
     }
 
     public Municipio(Integer codigoIbge, Integer codigoMunicipio, String nomeMunicipio, Integer codigoMunicipioTom,

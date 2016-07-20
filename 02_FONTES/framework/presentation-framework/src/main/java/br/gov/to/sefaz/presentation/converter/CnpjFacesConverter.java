@@ -49,6 +49,10 @@ public class CnpjFacesConverter implements Converter {
         }
 
         DecimalFormat df = new DecimalFormat("00000000000000");
+        if (cnpj instanceof String) {
+            cnpj = Long.valueOf(cnpj.toString());
+        }
+
         String retorno = df.format(cnpj);
         try {
             MaskFormatter mask = new MaskFormatter("##.###.###/####-##");

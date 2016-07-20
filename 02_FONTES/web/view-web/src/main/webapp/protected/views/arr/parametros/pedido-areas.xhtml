@@ -109,9 +109,9 @@
                     <div class="form-group col-md-4">
                         <h:outputLabel for="situacao">#{arr_msg['parametros.pedidoAreas.form.situacao']}*</h:outputLabel>
                         <h:selectOneMenu value="#{pedidoAreasMB.dto.situacao}" id="situacao" styleClass="form-control">
-                            <f:selectItems value="#{enumsMB.situacoes}" var="situacao"
+                            <f:selectItems value="#{arrEnumsMB.situacoes}" var="situacao"
                                     itemValue="#{situacao}"
-                                    itemLabel="#{enumsMB.getSituacaoLabel(situacao)}"/>
+                                    itemLabel="#{arrEnumsMB.getSituacaoLabel(situacao)}"/>
                         </h:selectOneMenu>
                     </div>
                     <div class="form-group col-md-2">
@@ -197,9 +197,9 @@
                         <div class="form-group col-md-2">
                             <h:outputLabel for="situacaoServidor">#{arr_msg['parametros.pedidoAreas.form.servidor.situacao']}*</h:outputLabel>
                             <h:selectOneMenu value="#{pedidoAreasMB.servidorDto.situacao}" id="situacaoServidor" styleClass="form-control">
-                                <f:selectItems value="#{enumsMB.situacoes}" var="situacao"
+                                <f:selectItems value="#{arrEnumsMB.situacoes}" var="situacao"
                                         itemValue="#{situacao}"
-                                        itemLabel="#{enumsMB.getSituacaoLabel(situacao)}"/>
+                                        itemLabel="#{arrEnumsMB.getSituacaoLabel(situacao)}"/>
                             </h:selectOneMenu>
                         </div>
                         <div class="form-group col-md-6">

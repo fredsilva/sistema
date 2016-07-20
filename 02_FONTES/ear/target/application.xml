@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/application_6.xsd" version="6">
+  <description>Módulo onde o ear (Enterprise Archive) é compilado. Este módulo é usado para empacotamento e deploy da aplicação, ou seja, é aqui que será empacotado o war e todos os módulos do sistema, com suas respectivas dependências.</description>
+  <display-name>ear</display-name>
+  <module>
+    <web>
+      <web-uri>view-web-0.2.0-SNAPSHOT.war</web-uri>
+      <context-root>/sat</context-root>
+    </web>
+  </module>
+</application>

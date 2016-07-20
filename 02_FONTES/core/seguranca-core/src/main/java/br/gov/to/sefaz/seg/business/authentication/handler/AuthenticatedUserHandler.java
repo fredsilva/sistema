@@ -33,7 +33,7 @@ public class AuthenticatedUserHandler {
 
     /**
      * Verifica se o usuário está autenticado.
-     * 
+     *
      * @return true ou false
      */
     public static boolean isAuthenticated() {

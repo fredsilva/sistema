@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:h="http://java.sun.com/jsf/html">
+
+<ui:composition>
+    <div id="#{id}" class="panel panel-default">
+        <h:panelGroup styleClass="panel-heading" layout="block" rendered="#{!empty title}">
+            <h3 class="panel-title">#{title}</h3>
+        </h:panelGroup>
+        <div class="panel-body">
+            <ui:insert/>
+        </div>
+    </div>
+</ui:composition>
+</html>

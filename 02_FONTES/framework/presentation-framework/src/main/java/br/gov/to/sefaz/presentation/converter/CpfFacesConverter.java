@@ -36,6 +36,10 @@ public class CpfFacesConverter implements Converter {
         }
 
         DecimalFormat df = new DecimalFormat("00000000000");
+        if (cpf instanceof String) {
+            cpf = Long.valueOf(cpf.toString());
+        }
+
         String retorno = df.format(cpf);
         try {
             MaskFormatter mask = new MaskFormatter("##.###.###-##");

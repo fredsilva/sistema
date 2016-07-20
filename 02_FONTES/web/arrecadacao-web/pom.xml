@@ -8,7 +8,7 @@
     <parent>
         <groupId>br.gov.to.sefaz</groupId>
         <artifactId>web</artifactId>
-        <version>0.2.0-SNAPSHOT</version>
+        <version>0.2.0-RC1</version>
     </parent>
 
     <groupId>br.gov.to.sefaz.web</groupId>
@@ -17,17 +17,13 @@
     <name>arrecadacao-web</name>
     <description>
         Módulo web da arrecadação, onde se encontram todos os recursos do referido módulo acessados pelas
-        páginas xhtmls, como por exemplo, ManageBeans e Servlets. O resultado ddo presente módulo é um jar.
+        páginas xhtmls, como por exemplo, ManageBeans e Servlets. O resultado do presente módulo é um jar.
     </description>
 
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
         </dependency>
 
         <dependency>
