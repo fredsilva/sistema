@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" id="1" x="8" y="14" width="761" height="819" text="DARE ELETRÔNICO CONSOLIDADO - DARE - e ( PRINCIPAL )" measuredWidth="761" measuredHeight="819" verticalScrollbar="true">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Note" id="80" x="776" y="14" width="226" height="95" text="Instituições :                          ( NOTA 1 )&#xA;01 - SEFAZ&#xA;02 - TRIBUNAL DE JUSTIÇA&#xA;03 - SECRETARIA DE SAÚDE&#xA;04 - SECRETARIA SEGURANÇA PÚBLICA&#xA;05 - SECRETARIA MEIO AMBIENTE" measuredWidth="226" measuredHeight="95" textAlignment="Left">
+    <font size="10px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Note" id="81" x="1006" y="14" width="219" height="571" text="Tipo Imposto ICMS                  ( NOTA 5 )&#xA;&#xA;Origem do Débito:&#xA;01 - DECLARADO ICMS&#xA;02 - DECLARADO ICMS ST&#xA;03 - DECLARADO ICMS COMPL.&#xA;04 - COBRANÇA TRÂNSITO&#xA;05 - AUTO DE INFRAÇÃO / NLD&#xA;06 - PARCELAMENTO&#xA;07 - PARCELAMENTO DIVIDA ATIVA&#xA;08 - DIVIDA ATIVA&#xA;09 - NOTA AVULSA&#xA;10 - ICMS FRETE&#xA;11 - NF OPERAÇÕES EXPONTÂNEAS ST&#xA;12 - DPCA&#xA;&#xA;Tipo Imposto IPVA&#xA;&#xA;Origem do Débito :&#xA;13 - IPVA&#xA;06 - PARCELAMENTO&#xA;07 - PARCELAMENTO DIVIDA ATIVA&#xA;08 - DIVIDA ATIVA&#xA;&#xA;Tipo Imposto ITCD&#xA;&#xA;Origem do Débito :&#xA;14 - ITCD&#xA;06 - PARCELAMENTO&#xA;07 - PARCELAMENTO DIVIDA ATIVA&#xA;08 - DIVIDA ATIVA&#xA;&#xA;Tipo Imposto M/T E O. RECEITAS&#xA;&#xA;Origem do Débito:&#xA;15 - MULTAS&#xA;16 - TAXAS&#xA;17 - OUTRAS RECEITAS&#xA;&#xA;Tipo Imposto M/T E O. RECEITAS &#xA;                       N TRiBUTÁRIAS&#xA;&#xA;Origem do Débito:&#xA;15 - MULTAS&#xA;16 - TAXAS&#xA;17 - OUTRAS RECEITAS" measuredWidth="219" measuredHeight="571" textAlignment="Left">
+    <font size="10px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Group" id="123" x="18" y="552" width="727" height="271" text="Lista de Pagamentos Adicionados" measuredWidth="727" measuredHeight="271">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="124" x="28" y="571" width="707" height="154" text="Doc./Parcela,Periodo/Ano,Dt. Venc.,Receita,Vl.Imposto, Vl. Multa, Vl. Juros,Vl.Correção M., Vl.TSE, Vl. Redução,Vl. Total,&#xA;,,,,,,,,,,,{trash}&#xA;,,,,,,,,,,,{trash}&#xA;" measuredWidth="707" measuredHeight="154" selection="2" alternative="#cccccc">
+    <font size="10px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="181" x="18" y="110" measuredWidth="727" measuredHeight="81">
+    <widgets xsi:type="model:Group" id="67" width="727" height="81" text="Dados da Operação" measuredWidth="727" measuredHeight="81">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="68" x="10" y="17" text="Instituição: *" measuredWidth="78" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Combo" id="69" x="149" y="17" width="441" measuredWidth="441" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="162" x="13" y="48" text="UF Emissora : *" measuredWidth="93" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Combo" id="163" x="149" y="48" width="57" measuredWidth="57" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Combo" id="164" x="287" y="48" width="428" measuredWidth="428" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="165" x="211" y="48" text="Município : *" measuredWidth="77" measuredHeight="23">
+      <font/>
+    </widgets>
+  </widgets>
+  <widgets xsi:type="model:Note" id="166" x="776" y="196" width="226" height="229" text="Instituiçao SEFAZ                  ( NOTA 3 )&#xA;&#xA;Tipo do Imposto :&#xA;01 - ICMS&#xA;02 - IPVA&#xA;03 - ITCD&#xA;04 - TAXAS / MULTAS E OUTRAS &#xA;      RECEITAS TRIBUTÁRIAS&#xA;05 - TAXAS / MULTAS E OUTRAS &#xA;      RECEITAS NÃO TRIBUTÁRIAS&#xA;&#xA;Outras Instituições&#xA;&#xA;Tipo do Imposto :&#xA;04 - TAXAS / MULTAS E OUTRAS &#xA;      RECEITAS TRIBUTÁRIAS&#xA;05 - TAXAS / MULTAS E OUTRAS &#xA;      RECEITAS NÃO TRIBUTÁRIAS" measuredWidth="226" measuredHeight="229" textAlignment="Left">
+    <font size="10px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="461" x="18" y="303" measuredWidth="726" measuredHeight="81">
+    <widgets xsi:type="model:Group" id="88" width="726" height="81" text="Dados de Identificação do Pagamento" measuredWidth="726" measuredHeight="81">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="168" x="8" y="16" text="Tipo do Imposto : *" measuredWidth="115" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="169" x="8" y="48" text="Origem Débito : *" measuredWidth="105" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Combo" id="170" x="150" y="48" width="441" measuredWidth="441" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Combo" id="175" x="150" y="17" width="565" measuredWidth="565" measuredHeight="23">
+      <font/>
+    </widgets>
+  </widgets>
+  <widgets xsi:type="model:Button" id="179" x="564" y="525" width="164" text="{add} Adicionar Item na Lista" measuredWidth="164" measuredHeight="26">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Note" id="187" x="776" y="427" width="228" height="178" text="                                              ( NOTA 4 )&#xA;Tipo de Contribuinte / Tipo Identificação :&#xA;01 - ICMS&#xA;      * 1 - Inscrição Estadual&#xA;&#xA;02 - IPVA&#xA;      * 2 - Renavan, 3 - Chassi&#xA;&#xA;03 - ITCD&#xA;      * 4 - CPF, 5 - CNPJ&#xA;&#xA;04 - NÃO CONTRIBUINTE &#xA;      * 4 - CPF, 5 - CNPJ" measuredWidth="228" measuredHeight="178" textAlignment="Left">
+    <font size="10px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="196" x="26" y="787" width="93" text="{trash} Limpar" measuredWidth="93" measuredHeight="26">
+    <font bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="197" x="228" y="787" width="129" text="{print} Imprimir DARE" measuredWidth="129" measuredHeight="26">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="198" x="360" y="787" text="{email} Enviar E-Mail DARE" measuredWidth="148" measuredHeight="26">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="230" x="224" y="733" measuredWidth="267" measuredHeight="23">
+    <widgets xsi:type="model:TextField" id="231" x="58" width="17" text="1" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="232" x="79" width="18" text="2" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="233" x="99" width="18" text="3" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="234" x="118" width="17" text="4" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="235" x="137" width="20" text="5" measuredWidth="20" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="236" x="160" text="Próximo" measuredWidth="57" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="237" width="56" text="Anterior" measuredWidth="56" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Spinner" id="238" x="226" text="10" measuredWidth="41" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+  </widgets>
+  <widgets xsi:type="model:Label" id="239" x="501" y="733" text="Quantidade Documentos" measuredWidth="155" measuredHeight="23" foreground="#ff0000">
+    <font bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="240" x="711" y="732" text="0" measuredWidth="14" measuredHeight="23" foreground="#ff0000">
+    <font bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="241" x="501" y="755" text="Total DARE" measuredWidth="73" measuredHeight="23" foreground="#ff0000">
+    <font bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="242" x="655" y="755" text="R$ 0,00" measuredWidth="53" measuredHeight="23" foreground="#ff0000">
+    <font bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="460" x="18" y="195" height="107" measuredWidth="727" measuredHeight="107">
+    <widgets xsi:type="model:Group" id="40" width="727" height="107" text="Dados do Contribuinte" measuredWidth="727" measuredHeight="107">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="42" x="10" y="39" text="Tipo Identificação : *" measuredWidth="124" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="43" x="10" y="69" width="135" text="Nome / Razão Social :" measuredWidth="135" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="50" x="326" y="40" width="130" measuredWidth="130" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="52" x="149" y="69" width="568" measuredWidth="568" measuredHeight="23" background="#cccccc">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Button" id="177" x="457" y="39" width="33" height="22" text="{find}" measuredWidth="33" measuredHeight="22">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Combo" id="183" x="150" y="40" width="175" measuredWidth="175" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="185" x="567" y="40" width="146" measuredWidth="146" measuredHeight="23" background="#cccccc">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="188" x="502" y="40" text="CPF/CNPJ" measuredWidth="64" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Combo" id="287" x="150" y="13" width="173" measuredWidth="173" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="288" x="12" y="13" text="Tipo Contribuinte : *" measuredWidth="122" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Note" id="289" x="326" y="11" width="375" height="23" text="Tipos Contribuinte : 1 - ICMS, 2- IPVA, 3 - ITCD e 4 - Não Contribuinte" measuredWidth="375" measuredHeight="23" textAlignment="Left">
+      <font size="10px" bold="true"/>
+    </widgets>
+  </widgets>
+  <widgets xsi:type="model:Note" id="290" x="776" y="108" width="227" height="87" text="Instituiçao SEFAZ                  ( NOTA 2 )&#xA;Tipo Contribuinte : Todos os Tipos&#xA;&#xA;Outras Instituições&#xA;Tipo do Contribuinte : &#xA;04 - Não Contribuinte" measuredWidth="227" measuredHeight="87" textAlignment="Left">
+    <font size="10px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="319" x="888" y="1264" height="369" measuredWidth="726" measuredHeight="369">
+    <widgets xsi:type="model:Browser" id="292" width="726" height="369" text="ENVIAR EMAIL DARE" measuredWidth="726" measuredHeight="369">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Table" id="293" x="12" y="200" width="702" height="121" text="E-mail Destinatário Informado,&#xA;,{trash}" measuredWidth="702" measuredHeight="121" selection="2" alternative="#cccccc">
+      <font size="10px" bold="true"/>
+    </widgets>
+    <widgets xsi:type="model:Button" id="294" x="591" y="165" width="124" height="29" text="{add} Adicionar" measuredWidth="124" measuredHeight="29">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="309" x="10" y="108" width="100" text="Mensagem *" measuredWidth="100" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="311" x="10" y="75" width="79" text="Assunto *" measuredWidth="79" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Group" id="312" x="109" y="106" width="604" height="57" measuredWidth="604" measuredHeight="57">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Button" id="313" x="333" y="330" width="183" height="30" text="{home} Voltar" measuredWidth="183" measuredHeight="30">
+      <font bold="true"/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="315" x="109" y="75" width="604" measuredWidth="604" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="316" x="12" y="168" width="66" text="E-Mail *" measuredWidth="66" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="317" x="106" y="168" width="478" measuredWidth="478" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Button" id="318" x="523" y="330" width="189" height="30" text="{email} Enviar E-Mail DARE" measuredWidth="189" measuredHeight="30">
+      <font/>
+    </widgets>
+  </widgets>
+  <widgets xsi:type="model:Group" id="448" x="18" y="386" width="726" height="134" text="Dados do Pagamento ( Tipo do Imposto X Origem Débito )" measuredWidth="726" measuredHeight="134">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="449" x="629" y="787" width="105" text=" {save} &amp;Gerar DARE" measuredWidth="105" measuredHeight="26">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Group" id="451" x="18" y="66" width="727" height="43" text="%(color:red)DARE GERADO%" measuredWidth="727" measuredHeight="43">
+    <font bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="452" x="304" y="80" width="147" text="Data e Hora da Geração" measuredWidth="147" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="453" x="26" y="80" width="151" text="NOSSO NÚMERO" measuredWidth="151" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="454" x="130" y="80" width="167" measuredWidth="167" measuredHeight="23" background="#cccccc">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="455" x="442" y="80" width="155" measuredWidth="155" measuredHeight="23" background="#cccccc">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Group" id="464" x="888" y="822" width="726" height="435" text="Dados do Pagamento" measuredWidth="726" measuredHeight="435">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="465" x="1307" y="1134" width="289" height="29" text="{add} Adicionar Item na Lista" measuredWidth="289" measuredHeight="29">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:ColorPicker" id="466" x="1008" y="844" width="47" measuredWidth="47" measuredHeight="23" background="#ffffff"/>
+  <widgets xsi:type="model:Label" id="467" x="901" y="844" width="108" text="UF Origem *:" measuredWidth="108" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:ColorPicker" id="468" x="1008" y="876" width="47" measuredWidth="47" measuredHeight="23" background="#ffffff"/>
+  <widgets xsi:type="model:Label" id="469" x="901" y="876" width="111" text="UF Destino *:" measuredWidth="111" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:ColorPicker" id="470" x="1073" y="876" width="475" measuredWidth="475" measuredHeight="23" background="#ffffff"/>
+  <widgets xsi:type="model:ColorPicker" id="471" x="1073" y="844" width="475" measuredWidth="475" measuredHeight="23" background="#ffffff"/>
+  <widgets xsi:type="model:Label" id="472" x="901" y="909" width="161" text="Distância ( Km ) * :" measuredWidth="161" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="473" x="901" y="934" width="97" text="Peso ( T ) * :" measuredWidth="97" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="474" x="901" y="959" width="111" text="Nota Fiscal * :" measuredWidth="111" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="475" x="901" y="1011" width="89" text="Valor BC *" measuredWidth="89" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="476" x="1073" y="1011" width="143" text="Valor Imposto" measuredWidth="143" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="477" x="1259" y="1011" width="112" text="Valor Multa" measuredWidth="112" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="478" x="1496" y="1011" width="108" text="Valor Total Frete" measuredWidth="108" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="479" x="901" y="987" width="129" text="Aliquota ( % ) *:" measuredWidth="129" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="480" x="1259" y="987" width="106" text="Multa ( % ) *" measuredWidth="106" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="481" x="1438" y="1036" width="161" measuredWidth="161" measuredHeight="23" background="#cccccc">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="482" x="1073" y="909" width="161" measuredWidth="161" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="483" x="1073" y="934" width="161" measuredWidth="161" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="484" x="1073" y="959" width="161" measuredWidth="161" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="485" x="901" y="1036" width="161" measuredWidth="161" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="486" x="1073" y="1036" width="161" measuredWidth="161" measuredHeight="23" background="#cccccc">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="487" x="1259" y="1036" width="172" measuredWidth="172" measuredHeight="23" background="#cccccc">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="488" x="1046" y="1134" width="242" height="29" text="{home} Voltar" measuredWidth="242" measuredHeight="29">
+    <font bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Note" id="489" x="901" y="1214" width="701" height="35" text="Layout para os Tipos Impostos ICMS quando a Origem do Débito for: 10 - ICMS FRETE" measuredWidth="701" measuredHeight="35" textAlignment="Left">
+    <font size="10px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:ColorPicker" id="490" x="1073" y="987" width="47" measuredWidth="47" measuredHeight="23" background="#ffffff"/>
+  <widgets xsi:type="model:ColorPicker" id="491" x="1343" y="987" width="47" measuredWidth="47" measuredHeight="23" background="#ffffff"/>
+  <widgets xsi:type="model:Note" id="492" x="1259" y="909" width="313" height="23" text="Valores Aliquotas : 2%, 12%,18%,19%, 25%, 27%" measuredWidth="313" measuredHeight="23" textAlignment="Left">
+    <font size="10px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Note" id="493" x="1259" y="937" width="313" height="23" text="Valores Multas : 0%, 40%,60% " measuredWidth="313" measuredHeight="23" textAlignment="Left">
+    <font size="10px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Group" id="494" x="901" y="1064" width="699" height="60" text="Informações Complementares" measuredWidth="699" measuredHeight="60" verticalScrollbar="true">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Note" id="495" x="901" y="1169" width="701" height="35" text="OBS.: OS VALORES INFORMADOS NOS CÁLCULOS DO ICMS FRETE SERÃO INCLUÍDOS NAS INFORMAÇÕES COMPLEMENTARES DE CADA ITEM SELECIONADO" measuredWidth="701" measuredHeight="35" textAlignment="Left">
+    <font size="10px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Group" id="509" x="8" y="844" width="864" height="388" text="Dados do Pagamento" measuredWidth="864" measuredHeight="388">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="510" x="18" y="863" height="300" measuredWidth="847" measuredHeight="299">
+    <widgets xsi:type="model:Table" id="511" y="58" width="847" height="146" text="Doc./Parcela,Periodo/Ano,Dt. Venc.,Receita,Vl.Imposto, Vl. Multa, Vl. Juros,Vl.Correção M., Vl.TSE, Vl. Redução,Vl. Total, {unchecked} Todos&#xA;,,,,,,,,,,,{checked}&#xA;,,,,,,,,,,,{unchecked}&#xA;" measuredWidth="847" measuredHeight="146" selection="2" alternative="#cccccc">
+      <font size="10px" bold="true"/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="512" y="4" text="Documento: *" measuredWidth="85" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:WidgetGroup" id="513" x="265" y="214" height="29" measuredWidth="267" measuredHeight="23">
+      <widgets xsi:type="model:TextField" id="514" x="58" width="17" text="1" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+        <font/>
+      </widgets>
+      <widgets xsi:type="model:TextField" id="515" x="79" width="18" text="2" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+        <font/>
+      </widgets>
+      <widgets xsi:type="model:TextField" id="516" x="99" width="18" text="3" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+        <font/>
+      </widgets>
+      <widgets xsi:type="model:TextField" id="517" x="118" width="17" text="4" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+        <font/>
+      </widgets>
+      <widgets xsi:type="model:TextField" id="518" x="137" width="20" text="5" measuredWidth="20" measuredHeight="23" borderColor="#0000ff">
+        <font/>
+      </widgets>
+      <widgets xsi:type="model:TextField" id="519" x="160" text="Próximo" measuredWidth="57" measuredHeight="23" borderColor="#0000ff">
+        <font/>
+      </widgets>
+      <widgets xsi:type="model:TextField" id="520" width="56" text="Anterior" measuredWidth="56" measuredHeight="23" borderColor="#0000ff">
+        <font/>
+      </widgets>
+      <widgets xsi:type="model:Spinner" id="521" x="226" text="10" measuredWidth="41" measuredHeight="23" borderColor="#0000ff">
+        <font/>
+      </widgets>
+    </widgets>
+    <widgets xsi:type="model:Group" id="522" x="2" y="237" width="844" height="62" text="Informações Complementares" measuredWidth="844" measuredHeight="62">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="523" x="2" y="36" text="Lista de Débitos Localizados" measuredWidth="176" measuredHeight="23">
+      <font bold="true"/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="524" x="84" y="4" width="130" measuredWidth="130" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Button" id="525" x="215" width="33" height="27" text="{find}" measuredWidth="33" measuredHeight="27">
+      <font/>
+    </widgets>
+  </widgets>
+  <widgets xsi:type="model:Note" id="526" x="18" y="1169" width="845" height="35" text="Layout para os Tipos Impostos ICMS quando a Origem do Débito for: 06 - PARCELAMENTO, 07 - PARCELAMENTO DIVIDA ATIVA, 04 - COBRANÇA TRÂNSITO, 09 - NOTA AVULSA, 12 - DPCA" measuredWidth="845" measuredHeight="35" textAlignment="Left">
+    <font size="10px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="527" x="640" y="1071" text="Total a Recolher Selecionado" measuredWidth="179" measuredHeight="23" foreground="#ff0000">
+    <font bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="528" x="850" y="1070" text="0" measuredWidth="14" measuredHeight="23" foreground="#ff0000">
+    <font bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Group" id="529" x="8" y="1245" width="864" height="388" text="Dados do Pagamento" measuredWidth="864" measuredHeight="388">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="530" x="18" y="1264" measuredWidth="847" measuredHeight="299">
+    <widgets xsi:type="model:Table" id="531" y="58" width="847" height="146" text="Doc./Parcela,Periodo/Ano,Dt. Venc.,Receita,Vl.Imposto, Vl. Multa, Vl. Juros,Vl.Correção M., Vl.TSE, Vl. Redução,Vl. Total, {unchecked} Todos&#xA;,,,,,,,,,,,{checked}&#xA;,,,,,,,,,,,{unchecked}&#xA;" measuredWidth="847" measuredHeight="146" selection="2" alternative="#cccccc">
+      <font size="10px" bold="true"/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="532" y="4" text="Ano Referência Inicial: *" measuredWidth="141" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:WidgetGroup" id="533" x="265" y="214" height="29" measuredWidth="267" measuredHeight="23">
+      <widgets xsi:type="model:TextField" id="534" x="58" width="17" text="1" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+        <font/>
+      </widgets>
+      <widgets xsi:type="model:TextField" id="535" x="79" width="18" text="2" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+        <font/>
+      </widgets>
+      <widgets xsi:type="model:TextField" id="536" x="99" width="18" text="3" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+        <font/>
+      </widgets>
+      <widgets xsi:type="model:TextField" id="537" x="118" width="17" text="4" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+        <font/>
+      </widgets>
+      <widgets xsi:type="model:TextField" id="538" x="137" width="20" text="5" measuredWidth="20" measuredHeight="23" borderColor="#0000ff">
+        <font/>
+      </widgets>
+      <widgets xsi:type="model:TextField" id="539" x="160" text="Próximo" measuredWidth="57" measuredHeight="23" borderColor="#0000ff">
+        <font/>
+      </widgets>
+      <widgets xsi:type="model:TextField" id="540" width="56" text="Anterior" measuredWidth="56" measuredHeight="23" borderColor="#0000ff">
+        <font/>
+      </widgets>
+      <widgets xsi:type="model:Spinner" id="541" x="226" text="10" measuredWidth="41" measuredHeight="23" borderColor="#0000ff">
+        <font/>
+      </widgets>
+    </widgets>
+    <widgets xsi:type="model:Group" id="542" x="2" y="237" width="844" height="62" text="Informações Complementares" measuredWidth="844" measuredHeight="62">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="543" x="2" y="36" text="Lista de Débitos Localizados" measuredWidth="176" measuredHeight="23">
+      <font bold="true"/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="544" x="142" y="4" width="72" measuredWidth="72" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Button" id="545" x="446" width="33" height="27" text="{find}" measuredWidth="33" measuredHeight="27">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="547" x="226" y="2" text="Ano Referência Final: *" measuredWidth="135" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="548" x="360" y="2" width="80" measuredWidth="80" measuredHeight="23">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="549" x="622" y="214" text="Total a Recolher Selecionado" measuredWidth="179" measuredHeight="23" foreground="#ff0000">
+      <font bold="true"/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="550" x="832" y="213" text="0" measuredWidth="14" measuredHeight="23" foreground="#ff0000">
+      <font bold="true"/>
+    </widgets>
+  </widgets>
+  <widgets xsi:type="model:Note" id="546" x="18" y="1570" width="845" height="35" text="Layout para os Tipos Impostos IPVA quando a Origem do Débito for: 13 - IPVA" measuredWidth="845" measuredHeight="35" textAlignment="Left">
+    <font size="10px" bold="true"/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>
