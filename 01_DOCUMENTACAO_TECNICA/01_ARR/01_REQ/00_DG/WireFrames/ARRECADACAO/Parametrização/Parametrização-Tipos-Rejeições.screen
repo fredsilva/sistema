@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" id="1" x="10" y="32" width="519" height="257" text="PARAMETRIZAÇÃO DOS TIPOS DE REJEIÇÕES DOS ARQUIVOS" measuredWidth="519" measuredHeight="257">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="8" x="20" y="108" width="499" height="72" text="Código {neutral}, Motivo da Rejeição {neutral},Situação {neutral},&#xD;&#xA;1,Código do registro inválido,Ativo,{unselected}{trash}&#xD;&#xA;2,Código do Agente Arrecadador inválido,Ativo,{selected}{trash}" measuredWidth="499" measuredHeight="72" selection="2" alternative="#eeeeee">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="84" x="20" y="210" text="Código *" measuredWidth="56" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="114" x="20" y="88" text="Lista de Tipos de Rejeições" measuredWidth="161" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="116" x="400" y="258" width="117" text="Salvar" measuredWidth="117" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="118" x="20" y="232" width="66" measuredWidth="66" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="120" x="88" y="210" text="Motivo da Rejeição *" measuredWidth="123" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="121" x="88" y="232" width="309" measuredWidth="309" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="123" x="400" y="232" width="119" text="ATIVO" measuredWidth="119" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="124" x="400" y="210" text="Situação *" measuredWidth="65" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="132" x="144" y="183" measuredWidth="267" measuredHeight="23">
+    <widgets xsi:type="model:TextField" id="133" x="58" width="17" text="1" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="134" x="79" width="18" text="2" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="135" x="99" width="18" text="3" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="136" x="118" width="17" text="4" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="137" x="137" width="20" text="5" measuredWidth="20" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="138" x="160" text="Próximo" measuredWidth="57" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="139" width="56" text="Anterior" measuredWidth="56" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Spinner" id="140" x="226" text="10" measuredWidth="41" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+  </widgets>
+  <widgets xsi:type="model:Button" id="141" x="260" y="258" width="136" text="Novo Tipo de Rejeição" measuredWidth="136" measuredHeight="25">
+    <font/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

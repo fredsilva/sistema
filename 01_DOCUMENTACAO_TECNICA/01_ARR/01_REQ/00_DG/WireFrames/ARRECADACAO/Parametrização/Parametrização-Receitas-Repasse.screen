@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" id="107" x="46" y="16" width="707" height="697" text="PARAMETRIZAÇÃO DE RECEITAS" measuredWidth="707" measuredHeight="697">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="5" x="55" y="272" width="42" text="101" measuredWidth="42" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="7" x="55" y="250" text="Receita *" measuredWidth="58" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="18" x="543" y="679" width="99" height="23" text="&amp;Nova Receita" measuredWidth="99" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="22" x="643" y="679" width="98" height="23" text="Salvar" measuredWidth="98" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Note" id="23" x="760" y="133" width="182" height="182" text="Classificação das Receitas:&#xA;1 - ICMS&#xA;2 - IPVA&#xA;3 - ITCD&#xA;4 - OUTRAS RECEITAS&#xA;5 - DEDUÇÕES&#xA;6 - ICMS DIVIDA ATIVA&#xA;7 - IPVA DIVIDA ATIVA&#xA;8 - ITCD DIVIDA ATIVA&#xA;9 - OUTRAS RECEITAS NÃO TRIBUTÁRIAS" measuredWidth="182" measuredHeight="182">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="50" x="109" y="250" text="Descrição *" measuredWidth="73" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="51" x="109" y="272" width="225" text="ICMS NORMAL" measuredWidth="225" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="52" x="342" y="272" width="153" text="ICMS" measuredWidth="153" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="53" x="342" y="250" text="Classificação da Receita *" measuredWidth="154" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="54" x="500" y="272" width="184" text="IMPOSTO" measuredWidth="184" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="55" x="500" y="250" text="Tipo de Receita *" measuredWidth="104" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Note" id="56" x="760" y="16" width="182" height="107" text="Tipo da Receita&#xA;1-Imposto,&#xA;2- Multa,&#xA;3- Juros,&#xA;4-Correção Monetária,&#xA;5-Taxas" measuredWidth="182" measuredHeight="107">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="57" x="55" y="324" width="119" text="ATIVO" measuredWidth="119" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="58" x="55" y="302" text="Situação *" measuredWidth="65" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Checkbox" id="60" x="185" y="324" text="Imprime DARE?" measuredWidth="108" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="61" x="299" y="324" width="89" text="01" measuredWidth="89" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="62" x="299" y="302" text="Código da Barra" measuredWidth="98" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Checkbox" id="65" x="55" y="346" text="Permite SubCodigo?" measuredWidth="143" measuredHeight="23">
+    <font bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="66" x="55" y="391" width="78" text="404" measuredWidth="78" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="67" x="55" y="369" text="SubCódigo *" measuredWidth="78" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="70" x="641" y="390" width="101" text="Adicionar Taxa" measuredWidth="101" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="71" x="55" y="434" width="688" text="Sub Código {neutral},Descrição {neutral},Unid {neutral}, Vl.Unitário {neutral},Vl. Limite {neutral}, Vl.Acréscimos {neutral}, &#xA;404,taxa de nfa,,,,, {unselected} {trash}&#xA;405,Taxa de Dare,,,,, {unselected}{trash}&#xA;" measuredWidth="688" measuredHeight="70" alternative="#eeeeee">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="72" x="57" y="414" text="Lista de Taxas ( Sub-Código )" measuredWidth="174" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="74" x="404" y="324" width="280" measuredWidth="280" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="75" x="404" y="302" text="Plano de Contas" measuredWidth="99" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="77" x="60" y="513" text="Repasse da Receita" measuredWidth="122" measuredHeight="23">
+    <font bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="78" x="59" y="556" width="119" text="1-Estado" measuredWidth="119" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="79" x="59" y="534" text="Tipo de Repasse *" measuredWidth="110" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="80" x="183" y="556" width="65" text="75" measuredWidth="65" measuredHeight="23" textAlignment="Right">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="81" x="183" y="534" text="Percentual *" measuredWidth="76" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Note" id="82" x="760" y="324" width="182" height="104" text="Tipos de Repasse :&#xA;1 - Repasse UF, &#xA;2 - Repasse Fundeb UF, &#xA;3 - Repasse Municipio, &#xA;4 - Repasse Fundeb Municipio" measuredWidth="182" measuredHeight="104">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:DateField" id="83" x="270" y="556" width="105" text="  01/07/2012  " measuredWidth="105" measuredHeight="23"/>
+  <widgets xsi:type="model:DateField" id="84" x="381" y="556" text="  07/07/2012  " measuredWidth="115" measuredHeight="23"/>
+  <widgets xsi:type="model:Label" id="85" x="270" y="534" text="Data Início *" measuredWidth="76" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="86" x="389" y="534" text="Data Fim" measuredWidth="56" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:List" id="88" x="515" y="524" text="[x] Principal&#xA;[x] Multa&#xA;[x] Juros&#xA;" measuredWidth="80" measuredHeight="70" border="false" alpha="0">
+    <font/>
+    <items x="0" y="2" width="80" height="22" text="[x] Principal"/>
+    <items x="0" y="24" width="80" height="22" text="[x] Multa"/>
+    <items x="0" y="46" width="80" height="22" text="[x] Juros"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="89" x="564" y="502" text="Incidência: *" measuredWidth="77" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="90" x="57" y="604" width="686" text="Tipo {neutral},Percentual {neutral},Data Início {neutral},Data Fim {neutral},Incidência {neutral},&#xA;1 - ESTADO,75,01/07/2012,07/07/2012,P-M-J-C,{unselected}{trash}&#xA;2 - MUNICIPIO,25,01/07/2012,07/07/2012,P,{unselected}{trash}&#xA;" measuredWidth="686" measuredHeight="70" alternative="#eeeeee">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="91" x="55" y="582" text="Lista de Repasses" measuredWidth="109" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="92" x="626" y="572" width="117" text="Adicionar Repasse" measuredWidth="117" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="97" x="141" y="391" width="225" text="TAXA DE NFA" measuredWidth="225" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="98" x="374" y="391" width="41" text="TX" measuredWidth="41" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="99" x="419" y="391" width="76" text="75" measuredWidth="76" measuredHeight="23" textAlignment="Right">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="100" x="419" y="369" text="Vl.UNitário *" measuredWidth="77" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="102" x="504" y="391" width="65" text="75" measuredWidth="65" measuredHeight="23" textAlignment="Right">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="103" x="571" y="369" text="Vl.Acréscimo" measuredWidth="80" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="104" x="571" y="391" width="65" text="75" measuredWidth="65" measuredHeight="23" textAlignment="Right">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="105" x="504" y="369" text="Vl.Limite" measuredWidth="55" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="106" x="374" y="369" text="Unid. *" measuredWidth="46" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="108" x="55" y="88" width="42" text="101" measuredWidth="42" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="109" x="55" y="66" text="Receita" measuredWidth="49" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="110" x="109" y="66" text="Descrição" measuredWidth="63" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="111" x="109" y="88" width="225" text="ICMS NORMAL" measuredWidth="225" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="112" x="342" y="88" width="153" text="ICMS" measuredWidth="153" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="113" x="342" y="66" text="Classificação da Receita" measuredWidth="144" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="114" x="500" y="88" width="184" text="IMPOSTO" measuredWidth="184" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="115" x="500" y="66" text="Tipo de Receita" measuredWidth="94" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="116" x="55" y="128" width="119" text="ATIVO" measuredWidth="119" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="117" x="57" y="111" text="Situação" measuredWidth="56" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Note" id="118" x="181" y="111" width="78" height="39" text="Ativo ou Cancelado" measuredWidth="78" measuredHeight="39">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="119" x="637" y="128" width="101" height="23" text="&amp;Pesquisar" measuredWidth="101" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="120" x="55" y="160" width="688" height="65" text="Código {neutral},Descrição {neutral}, Classificação {neutral}, Tipo de Receita {neutral}, Situação {neutral}, Dt. Alteração {neutral}, Usuário {neutral},&#xA;,,,,,,,{selected}{trash}" measuredWidth="688" measuredHeight="65" alternative="#eeeeee">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:List" id="121" x="605" y="524" text="[x] Correção&#xA;[x] Taxas" measuredWidth="83" measuredHeight="48" border="false" alpha="0">
+    <font/>
+    <items x="0" y="2" width="83" height="22" text="[x] Correção"/>
+    <items x="0" y="24" width="83" height="22" text="[x] Taxas"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="143" x="141" y="369" text="Descrição do SubCódigo *" measuredWidth="156" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="144" x="271" y="226" measuredWidth="267" measuredHeight="23">
+    <widgets xsi:type="model:TextField" id="145" x="58" width="17" text="1" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="146" x="79" width="18" text="2" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="147" x="99" width="18" text="3" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="148" x="118" width="17" text="4" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="149" x="137" width="20" text="5" measuredWidth="20" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="150" x="160" text="Próximo" measuredWidth="57" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="151" width="56" text="Anterior" measuredWidth="56" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Spinner" id="152" x="226" text="10" measuredWidth="41" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="153" x="271" y="504" measuredWidth="267" measuredHeight="23">
+    <widgets xsi:type="model:TextField" id="154" x="58" width="17" text="1" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="155" x="79" width="18" text="2" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="156" x="99" width="18" text="3" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="157" x="118" width="17" text="4" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="158" x="137" width="20" text="5" measuredWidth="20" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="159" x="160" text="Próximo" measuredWidth="57" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="160" width="56" text="Anterior" measuredWidth="56" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Spinner" id="161" x="226" text="10" measuredWidth="41" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="162" x="271" y="675" measuredWidth="267" measuredHeight="23">
+    <widgets xsi:type="model:TextField" id="163" x="58" width="17" text="1" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="164" x="79" width="18" text="2" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="165" x="99" width="18" text="3" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="166" x="118" width="17" text="4" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="167" x="137" width="20" text="5" measuredWidth="20" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="168" x="160" text="Próximo" measuredWidth="57" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="169" width="56" text="Anterior" measuredWidth="56" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Spinner" id="170" x="226" text="10" measuredWidth="41" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>
