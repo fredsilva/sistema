@@ -37,7 +37,7 @@ public class ReceitasRepasse extends AbstractEntity<ReceitasRepassePK> {
     private static final long serialVersionUID = 3986002397242116268L;
 
     @Id
-    @NotNull(message = "#{arr_msg['parametros.receitasRepasse.idReceita.obrigatorio']}")
+    @NotNull(message = "#{arr_msg['parametros.receitas.idReceita.obrigatorio']}")
     @Max(value = 9999, message = "#{arr_msg['parametros.receitasRepasse.idReceita.maximo']}")
     @Column(name = "ID_RECEITA")
     private Integer idReceita;

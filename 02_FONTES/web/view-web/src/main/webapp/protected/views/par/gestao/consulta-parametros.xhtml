@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:sat="http://sefaz.to.gov.br/composites">
+
+<ui:composition template="/protected/views/templates/views/default-template.xhtml">
+
+    <ui:param name="pageTitle" value="#{par_msg['par.gestao.consultaParametros.titulo']}"/>
+
+    <ui:define name="header">
+        <h:outputScript library="js" name="par/gestao/manutencao-parametros.js"/>
+    </ui:define>
+
+    <ui:define name="content">
+        <sat:panel title="#{par_msg['par.gestao.consultaParametros.titulo']}">
+            <div class="col-md-12">
+                <h:form id="tipo-usuario-filtro">
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <h:outputLabel for="nomeParametroGeral">
+                                #{par_msg['par.gestao.manutencaoParametros.filter.nome']}
+                            </h:outputLabel>
+                            <h:inputText value="#{parametroGeralMB.filter.nomeParametroGeral}"
+                                    id="nomeParametroGeral"
+                                    styleClass="form-control"
+                                    maxlength="20"/>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+
+                                <div class="form-group col-sm-12 text-right">
+                                    <h:commandButton type="button"
+                                            value="#{par_msg['par.gestao.manutencaoParametros.button.consultar']}"
+                                            styleClass="btn btn-primary align-bottom"
+                                            action="#{parametroGeralMB.search()}">
+                                        <f:ajax render="parametros-table"
+                                                execute="nomeParametroGeral"/>
+                                    </h:commandButton>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </h:form>
+            </div>
+            <sat:table id="parametros-table"
+                    bundle="par_msg"
+                    content="#{parametroGeralMB.resultList}"
+                    headers="par.gestao.manutencaoParametros.table.id,
+                             par.gestao.manutencaoParametros.table.nome,
+                             par.gestao.manutencaoParametros.table.objetivo,
+                             par.gestao.manutencaoParametros.table.tipo,
+                             par.gestao.manutencaoParametros.table.conteudo"
+                    fields="idParametroGeral,nomeParametroGeral,objetivoParametro,tipoParametroGeral,conteudoValores"
+                    hasActions="false">
+            </sat:table>
+        </sat:panel>
+    </ui:define>
+</ui:composition>
+</html>

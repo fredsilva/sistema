@@ -1,9 +1,11 @@
 package br.gov.to.sefaz.seg.business.gestao.service;
 
 import br.gov.to.sefaz.business.service.CrudService;
+import br.gov.to.sefaz.seg.business.general.service.filter.UsuarioSistemaFilter;
 import br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema;
 
 import java.util.Collection;
+import java.util.List;
 
 /**
  * Contrato de acesso do serviço de Usuários do Sistema.
@@ -41,4 +43,11 @@ public interface UsuarioSistemaService extends CrudService<UsuarioSistema, Strin
      * @param cpf cpf do ususario
      */
     void unblockUser(String cpf);
+
+    /**
+     * Busca todos os usuários.
+     * @param filter filtro passado em tela.
+     * @return lista de {@link UsuarioSistema}.
+     */
+    List<UsuarioSistema> findAllUsuarioSistema(UsuarioSistemaFilter filter);
 }

@@ -59,10 +59,10 @@
                                     id="tipoConvenioFilter"
                                     styleClass="form-control">
                                 <f:selectItem value="#{null}" itemLabel=""/>
-                                <f:selectItems value="#{enumsMB.tiposConvenio}"
+                                <f:selectItems value="#{arrEnumsMB.tiposConvenio}"
                                         var="tipoConvenio"
                                         itemValue="#{tipoConvenio}"
-                                        itemLabel="#{enumsMB.getTipoConvenioLabel(tipoConvenio)}"/>
+                                        itemLabel="#{arrEnumsMB.getTipoConvenioLabel(tipoConvenio)}"/>
                             </h:selectOneMenu>
                         </div>
                         <div class="form-group col-md-2">
@@ -72,10 +72,10 @@
                             <h:selectOneMenu value="#{conveniosArrecMB.filter.tipoBarra}" id="barraFilter"
                                     styleClass="form-control">
                                 <f:selectItem value="#{null}" itemLabel=""/>
-                                <f:selectItems value="#{enumsMB.tiposBarra}"
+                                <f:selectItems value="#{arrEnumsMB.tiposBarra}"
                                         var="tipoBarra"
                                         itemValue="#{tipoBarra}"
-                                        itemLabel="#{enumsMB.getTipoBarraLabel(tipoBarra)}"/>
+                                        itemLabel="#{arrEnumsMB.getTipoBarraLabel(tipoBarra)}"/>
                             </h:selectOneMenu>
                         </div>
                     </div>
@@ -181,10 +181,10 @@
                             </h:outputLabel>
                             <h:selectOneMenu value="#{conveniosArrecMB.dto.tipoBarra}" id="barra"
                                     styleClass="form-control">
-                                <f:selectItems value="#{enumsMB.tiposBarra}"
+                                <f:selectItems value="#{arrEnumsMB.tiposBarra}"
                                         var="tipoBarra"
                                         itemValue="#{tipoBarra}"
-                                        itemLabel="#{enumsMB.getTipoBarraLabel(tipoBarra)}"/>
+                                        itemLabel="#{arrEnumsMB.getTipoBarraLabel(tipoBarra)}"/>
                             </h:selectOneMenu>
                         </div>
                         <div class="form-group col-md-2">
@@ -205,10 +205,10 @@
                                     </h:outputLabel>
                                     <h:selectOneMenu value="#{conveniosArrecMB.dto.situacao}" id="situacao"
                                             styleClass="form-control">
-                                        <f:selectItems value="#{enumsMB.situacoes}"
+                                        <f:selectItems value="#{arrEnumsMB.situacoes}"
                                                 var="situacao"
                                                 itemValue="#{situacao}"
-                                                itemLabel="#{enumsMB.getSituacaoLabel(situacao)}"/>
+                                                itemLabel="#{arrEnumsMB.getSituacaoLabel(situacao)}"/>
                                     </h:selectOneMenu>
                                 </div>
                                 <div class="form-group col-md-6">
@@ -218,10 +218,10 @@
                                     </h:outputLabel>
                                     <h:selectOneMenu value="#{conveniosArrecMB.dto.tipoConvenio}" id="tipoConvenio"
                                             styleClass="form-control">
-                                        <f:selectItems value="#{enumsMB.tiposConvenio}"
+                                        <f:selectItems value="#{arrEnumsMB.tiposConvenio}"
                                                 var="tipoConvenio"
                                                 itemValue="#{tipoConvenio}"
-                                                itemLabel="#{enumsMB.getTipoConvenioLabel(tipoConvenio)}"/>
+                                                itemLabel="#{arrEnumsMB.getTipoConvenioLabel(tipoConvenio)}"/>
                                     </h:selectOneMenu>
                                 </div>
                             </div>
@@ -302,10 +302,10 @@
                                                 value="#{conveniosArrecMB.conveniosTarifasDto.formaPagamento}"
                                                 id="formaPagamento"
                                                 styleClass="form-control">
-                                            <f:selectItems value="#{enumsMB.formasPagamento}"
+                                            <f:selectItems value="#{arrEnumsMB.formasPagamento}"
                                                     var="formaPagamento"
                                                     itemValue="#{formaPagamento}"
-                                                    itemLabel="#{enumsMB.getFormaPagamentoLabel(formaPagamento)}"/>
+                                                    itemLabel="#{arrEnumsMB.getFormaPagamentoLabel(formaPagamento)}"/>
                                         </h:selectOneMenu>
                                     </div>
                                     <div class='form-group col-sm-3'>
@@ -349,9 +349,9 @@
                                         <h:inputText value="#{conveniosArrecMB.conveniosTarifasDto.valor}"
                                                 id="valorTarifa"
                                                 styleClass="form-control decimal"
-                                                maxlength="8">
+                                                maxlength="6">
                                             <f:convertNumber locale="pt-BR" currencySymbol="R$" maxFractionDigits="2"
-                                                    maxIntegerDigits="5"/>
+                                                    maxIntegerDigits="3"/>
                                         </h:inputText>
                                         <h:outputScript>
                                             $("#convenios-arrec-form\\:valorTarifa").maskMoney({thousands:'.', decimal:',', allowZero:true});

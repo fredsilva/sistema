@@ -1,0 +1,26 @@
+<STR0020>
+	<CodMsg>STR0020R2</CodMsg> <!-- Código da mensagem: Sequencial de envio do arquivo -->
+	<NumCtrlIF>STR20151021000021378</NumCtrlIF> <!-- Número de controle IF: Número interno do banco -->
+	<ISPBIFDebtd>60701190</ISPBIFDebtd> <!-- ISPB (Identificador do Sistema de Pagamentos Brasileiro - CNPJ Raiz) IF Debitada -->
+	<ISPBIFCredtd>00000000</ISPBIFCredtd> <!-- ISPB (Identificador do Sistema de Pagamentos Brasileiro - CNPJ Raiz) IF Creditado -->
+	<AgCredtd>3615</AgCredtd> <!-- Agência Creditada -->
+	<CtCredtd>0000000149004</CtCredtd> <!-- Conta céditada da SEFAZ -->
+	<CodSEFAZ>0027</CodSEFAZ> <!-- Código da SEFAZ Tocantins -->
+	<TpReceita>01</TpReceita> <!-- 01 - ICMS (25%) -->
+	<TpRecolht>N</TpRecolht> <!-- Recolhimento Normal -->
+	<DtArrec>10072016</DtArrec> <!-- DDMMAAAA -->
+	<VlrLanc>10010</VlrLanc> <!-- Valor Total - Soma de todos os grupos (RS 100,10) -->
+	<NivelPref>1</NivelPref> <!-- Nivel de preferencia -->
+	<Grupo_STR0020_VlrInf> <!-- Repete N vezes -->
+		<TpVlrInf>02</TpVlrInf> <!-- 02 - ICMS Parcela Estado - 75% VlrArrec -->
+		<VlrInf>7508</VlrInf> <!-- RS75,08 -->
+	</Grupo_STR0020_VlrInf>
+	<Grupo_STR0020_VlrInf>
+		<TpVlrInf>03</TpVlrInf> <!-- 03 - ICMS Municipio - 25% VlrArrec -->
+		<VlrInf>2502</VlrInf> <!-- R$ 25,02 -->
+	</Grupo_STR0020_VlrInf>
+	<Hist></Hist> <!--  -->
+	<DtAgendt>11072016</DtAgendt> <!-- DDMMAAAA -->
+	<HrAgendt>123456</HrAgendt> <!-- HHMMSS -->
+	<DtMovto>11072016</DtMovto> <!-- DDMMAAAA -->
+</STR0020>	

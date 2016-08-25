@@ -63,7 +63,7 @@ public class TipoUsuarioMB extends DefaultCrudMB<TipoUsuario, Integer> {
 
     /**
      * Carrega todos os Tipo Usuarios existentes no Banco de Dados. - Utilizada para recarregar tabela.
-     * 
+     *
      * @return Lista das unidades.
      */
     @Override

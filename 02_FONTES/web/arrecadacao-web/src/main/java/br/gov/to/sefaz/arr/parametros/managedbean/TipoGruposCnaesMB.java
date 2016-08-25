@@ -115,6 +115,7 @@ public class TipoGruposCnaesMB extends DefaultCrudMB<TipoGruposCnaes, Integer> {
     public void removeCnaeFromGrupo() {
         getFacade().removeCnaeFromGrupo(getDto().getIdGrupoCnae(), selectedIdCnaeDto);
         getSelectedCnaes().removeIf(cf -> cf.getCodigoCnae().equals(selectedIdCnaeDto));
+        showPhysicalDeleteMessage();
     }
 
     /**

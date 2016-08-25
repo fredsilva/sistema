@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+        xmlns:sat="http://sefaz.to.gov.br/composites"
+        xmlns:a4j="http://richfaces.org/a4j">
+
+<ui:composition template="/protected/views/templates/views/default-template.xhtml">
+
+    <ui:param name="pageTitle" value="#{seg_msg['seg.gestao.criaSenha.titulo']}"/>
+
+    <ui:define name="header">
+        <h:outputScript library="js" name="seg/gestao/cria-usuario-senha.js"/>
+        <h:outputScript library="js" name="core/sat.date.js"/>
+    </ui:define>
+
+    <ui:define name="content">
+        <sat:panel title="#{seg_msg['seg.gestao.criaSenha.titulo']}">
+            <div class="col-md-12">
+                <h:form id="usuario-sistema-filtro">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <h:outputLabel for="nomeUsuario">
+                                #{seg_msg['seg.gestao.criaSenha.filter.nomeCompletoUsuario']}
+                            </h:outputLabel>
+                            <h:inputText value="#{cadastroSenhaMB.filter.nomeCompletoUsuario}"
+                                    id="nomeUsuario"
+                                    styleClass="form-control"
+                                    maxlength="60">
+                            </h:inputText>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <h:outputLabel for="cpfUsuario">
+                                #{seg_msg['seg.gestao.criaSenha.filter.cpf']}
+                            </h:outputLabel>
+                            <h:inputText value="#{cadastroSenhaMB.filter.cpfUsuario}"
+                                    id="cpfUsuario"
+                                    styleClass="form-control"
+                                    maxlength="14"
+                                    p:data-mask="999.999.999-99">
+                                <f:converter converterId="cpfFacesConverter"/>
+                            </h:inputText>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <h:outputLabel
+                                    for="statusSolicitacao">#{seg_msg['seg.gestao.criaSenha.filter.status']}
+                            </h:outputLabel>
+                            <h:selectOneMenu value="#{cadastroSenhaMB.filter.situacaoSolicitacao}"
+                                    id="statusSolicitacao"
+                                    styleClass="form-control">
+                                <f:selectItem value="#{null}"
+                                        itemValue=""
+                                        itemLabel="Todos"/>
+                                <f:selectItems value="#{segEnumsMB.situacoesSolicitacao}"
+                                        var="statusSolicitacao"
+                                        itemValue="#{statusSolicitacao}"
+                                        itemLabel="#{segEnumsMB.getSituacaoSolicitacaoLabel(statusSolicitacao)}"/>
+                            </h:selectOneMenu>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <h:outputLabel
+                                    for="dataSolicitacao">
+                                #{seg_msg['seg.gestao.criaSenha.filter.dataSolicitacao']}
+                            </h:outputLabel>
+                            <div class="input-group">
+                                <h:inputText id='dataSolicitacao'
+                                        value="#{cadastroSenhaMB.filter.dataSolicitacao}"
+                                        styleClass="form-control datepicker date-picker"
+                                        maxlength="8"
+                                        p:data-mask="99/99/9999">
+                                    <f:converter converterId="localDateFacesConverter"/>
+                                </h:inputText>
+                                <h:outputLabel for="dataSolicitacao"
+                                        class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"/>
+                                </h:outputLabel>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-12 text-right">
+                        <h:commandButton type="button"
+                                value="#{seg_msg['seg.gestao.criaSenha.table.button.consultar']}"
+                                styleClass="btn btn-primary align-bottom"
+                                action="#{cadastroSenhaMB.search}">
+                            <f:ajax render="usuario-sistema-table"
+                                    execute="nomeUsuario cpfUsuario statusSolicitacao dataSolicitacao"/>
+                        </h:commandButton>
+
+                        <sat:opcaoAjudaButton styleClass="align-bottom" />
+                    </div>
+                </h:form>
+            </div>
+            <sat:table id="usuario-sistema-table"
+                    bundle="seg_msg"
+                    content="#{cadastroSenhaMB.resultList}"
+                    headers="seg.gestao.criaSenha.table.nomeCompletoUsuario,
+                             seg.gestao.criaSenha.table.cpfUsuario,
+                             seg.gestao.criaSenha.table.status,
+                             seg.gestao.criaSenha.table.dataSolicitacao,
+                             seg.gestao.criaSenha.table.criadoPelo,
+                             seg.gestao.criaSenha.table.dataCriacao,
+                             seg.gestao.criaSenha.table.dataUltimaSenha"
+                    fields="nomeCompletoUsuario, cpfUsuario:cpf, statusSolicitacao:string, dataSolicitacao:dateTime,
+                    usuarioInsercao, dataInsercao:dateTime, dataUltimaAlteracaoSenha:dateTime, statusSolicitacao:hide,
+                    cpfUsuario:hide"
+                    actionsHeader="seg.gestao.criaSenha.table.acoes"
+                    hasActions="true"
+                    actionEvents="select-row:click:viewUser(8), lock-row:click:resetPassword(8)"
+                    actionVisible="select-row:hide:showLock(7),lock-row:show:showLock(7)">
+                <f:facet name="actions">
+                    <a href="javascript:void(0);" class="select-row glyphicon glyphicon-plus" data-toggle="tooltip" title="Criar usuário"/>
+                    <a href="javascript:void(0);" class="lock-row glyphicon glyphicon-lock" data-toggle="tooltip" title="Criar senha"/>
+                </f:facet>
+            </sat:table>
+            <h:form>
+                <a4j:jsFunction name="viewUser"
+                        action="#{cadastroSenhaMB.getUsuarioById}"
+                        render="consulta-usuario-form"
+                        oncomplete="openModal()">
+                    <a4j:param name="cpf" assignTo="#{cadastroSenhaMB.dto.cpfUsuario}"/>
+                </a4j:jsFunction>
+                <a4j:jsFunction name="resetPassword"
+                        action="#{cadastroSenhaMB.resetUserPassword}">
+                    <a4j:param name="cpf" assignTo="#{cadastroSenhaMB.dto.cpfUsuario}"/>
+                </a4j:jsFunction>
+                <a4j:jsFunction name="createUser"
+                        action="#{cadastroSenhaMB.authorizeUser}"
+                        render="usuario-sistema-table"
+                        oncomplete="resetOnSuccess(event)">
+                </a4j:jsFunction>
+                <h:outputScript>
+                    datePicker('.datepicker');
+                </h:outputScript>
+            </h:form>
+            <div id="usuarioSistemaModal" class="modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" id="usuarioSistemaModalDialog">
+                    <div class="modal-content" id="usuarioSistemaModalContent">
+                        <div class="modal-header" id="usuarioSistemaModalHeader">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"
+                                    onclick="resetFields()">
+                                <span aria-hidden="true">&#xd7;</span>
+                            </button>
+                            <h4 class="modal-title"
+                                    id="usuarioSistemaModalTitle">#{seg_msg['seg.gestao.criaSenha.form.titulo']}</h4>
+                        </div>
+                        <div class="modal-body" id="usuarioSistemaModalBody">
+                            <h:form id="consulta-usuario-form">
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <h:outputLabel
+                                                for="numeroSolicitaoUsuarioForm">
+                                            #{seg_msg['seg.gestao.criaSenha.form.numeroSolicitacao']}
+                                        </h:outputLabel>
+                                        <h:inputText
+                                                id="numeroSolicitaoUsuarioForm"
+                                                styleClass="form-control"
+                                                maxlength="40"
+                                                readonly="#{facesContext.renderResponse}"
+                                                value="#{cadastroSenhaMB.dto.solicitacaoUsuario.id}">
+                                        </h:inputText>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <h:outputLabel
+                                                for="dataSolicitacaoUsuarioForm">
+                                            #{seg_msg['seg.gestao.criaSenha.form.dataSolicitacao']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{cadastroSenhaMB.dto.solicitacaoUsuario.dataInsercao}"
+                                                id="dataSolicitacaoUsuarioForm"
+                                                styleClass="form-control"
+                                                maxlength="19"
+                                                converter="localDateTimeFacesConverter"
+                                                readonly="#{facesContext.renderResponse}"/>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <h:outputLabel
+                                                for="cpfUsuarioForm">
+                                            #{seg_msg['seg.gestao.criaSenha.form.cpfUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{cadastroSenhaMB.dto.cpfUsuario}"
+                                                id="cpfUsuarioForm"
+                                                styleClass="form-control"
+                                                maxlength="14"
+                                                converter="cpfFacesConverter"
+                                                readonly="#{facesContext.renderResponse}"/>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <h:outputLabel
+                                                for="nomeCompletoUsuarioForm">
+                                            #{seg_msg['seg.gestao.criaSenha.form.nomeCompletoUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{cadastroSenhaMB.dto.nomeCompletoUsuario}"
+                                                id="nomeCompletoUsuarioForm"
+                                                styleClass="form-control"
+                                                maxlength="40"
+                                                readonly="#{facesContext.renderResponse}"/>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <h:outputLabel
+                                                for="cepUsuarioForm">
+                                            #{seg_msg['seg.gestao.criaSenha.form.cepUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{cadastroSenhaMB.dto.cep}"
+                                                id="cepUsuarioForm"
+                                                styleClass="form-control"
+                                                converter="cepFacesConverter"
+                                                maxlength="9"
+                                                readonly="#{facesContext.renderResponse}"/>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <h:outputLabel
+                                                for="logradouroUsuarioForm">
+                                            #{seg_msg['seg.gestao.criaSenha.form.logradouroUsuario']}
+                                        </h:outputLabel>
+                                        <h:selectOneMenu value="#{cadastroSenhaMB.dto.codigoLogradouro}"
+                                                id="logradouroUsuarioForm"
+                                                styleClass="form-control"
+                                                disabled="true">
+                                            <f:selectItem value="#{null}"
+                                                    itemValue=""
+                                                    itemLabel="Selecione"/>
+                                            <f:selectItems value="#{cadastroSenhaMB.logradouros}"
+                                                    var="logradouroUsuarioForm"
+                                                    itemValue="#{logradouroUsuarioForm.codigoLogradouro}"
+                                                    itemLabel="#{logradouroUsuarioForm.descricaoLogradouro}"/>
+                                        </h:selectOneMenu>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <h:outputLabel
+                                                for="enderecoUsuarioForm">
+                                            #{seg_msg['seg.gestao.criaSenha.form.enderecoUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{cadastroSenhaMB.dto.endereco}"
+                                                id="enderecoUsuarioForm"
+                                                styleClass="form-control"
+                                                maxlength="100"
+                                                readonly="#{facesContext.renderResponse}"/>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <h:outputLabel
+                                                for="numeroEnderecoUsuarioForm">
+                                            #{seg_msg['seg.gestao.criaSenha.form.numeroEnderecoUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{cadastroSenhaMB.dto.numeroEndereco}"
+                                                id="numeroEnderecoUsuarioForm"
+                                                styleClass="form-control"
+                                                maxlength="8"
+                                                readonly="#{facesContext.renderResponse}"/>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <h:outputLabel
+                                                for="apartamentoUsuarioForm">
+                                            #{seg_msg['seg.gestao.criaSenha.form.apartamentoUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{cadastroSenhaMB.dto.apartamento}"
+                                                id="apartamentoUsuarioForm"
+                                                styleClass="form-control"
+                                                maxlength="8"
+                                                readonly="#{facesContext.renderResponse}"/>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <h:outputLabel
+                                                for="complementoUsuarioForm">
+                                            #{seg_msg['seg.gestao.criaSenha.form.complementoEnderecoUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{cadastroSenhaMB.dto.complemento}"
+                                                id="complementoUsuarioForm"
+                                                styleClass="form-control"
+                                                maxlength="30"
+                                                readonly="#{facesContext.renderResponse}"/>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <h:outputLabel
+                                                for="bairroUsuarioForm">
+                                            #{seg_msg['seg.gestao.criaSenha.form.bairroUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{cadastroSenhaMB.dto.bairro}"
+                                                id="bairroUsuarioForm"
+                                                styleClass="form-control"
+                                                maxlength="100"
+                                                readonly="#{facesContext.renderResponse}"/>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <h:outputLabel
+                                                for="estadoUsuarioForm">
+                                            #{seg_msg['seg.gestao.criaSenha.form.estadoUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{cadastroSenhaMB.dto.nomeEstado}"
+                                                id="estadoUsuarioForm"
+                                                styleClass="form-control"
+                                                readonly="#{facesContext.renderResponse}"/>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <h:outputLabel
+                                                for="cidadeUsuarioForm">
+                                            #{seg_msg['seg.gestao.criaSenha.form.cidadeUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{cadastroSenhaMB.dto.nomeCidade}"
+                                                id="cidadeUsuarioForm"
+                                                styleClass="form-control"
+                                                readonly="#{facesContext.renderResponse}"/>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <h:outputLabel
+                                                for="enderecoContatoUsuarioForm">
+                                            #{seg_msg['seg.gestao.criaSenha.form.enderecoContatoUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputTextarea value="#{cadastroSenhaMB.dto.outroEnderecoContato}"
+                                                id="enderecoContatoUsuarioForm"
+                                                styleClass="form-control"
+                                                p:maxlength="300"
+                                                readonly="#{facesContext.renderResponse}"/>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <h:outputLabel
+                                                for="telefoneResidencialUsuarioForm">
+                                            #{seg_msg['seg.gestao.criaSenha.form.telefoneUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{cadastroSenhaMB.dto.telefoneResidencial}"
+                                                id="telefoneResidencialUsuarioForm"
+                                                styleClass="form-control"
+                                                maxlength="20"
+                                                readonly="#{facesContext.renderResponse}"/>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <h:outputLabel
+                                                for="celularUsuarioForm">
+                                            #{seg_msg['seg.gestao.criaSenha.form.celularUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{cadastroSenhaMB.dto.telefoneCelular}"
+                                                id="celularUsuarioForm"
+                                                styleClass="form-control"
+                                                maxlength="10"
+                                                readonly="#{facesContext.renderResponse}"/>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <h:outputLabel
+                                                for="correioEletronicoUsuarioForm">
+                                            #{seg_msg['seg.gestao.criaSenha.form.correioEletronicoUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{cadastroSenhaMB.dto.correioEletronico}"
+                                                id="correioEletronicoUsuarioForm"
+                                                styleClass="form-control"
+                                                maxlength="50"
+                                                readonly="#{facesContext.renderResponse}"/>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <h:outputLabel
+                                                for="tipoUsuarioUsuarioForm">
+                                            #{seg_msg['seg.gestao.criaSenha.form.tipoUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{cadastroSenhaMB.dto.descricaoTipoUsuario}"
+                                                id="tipoUsuarioUsuarioForm"
+                                                styleClass="form-control"
+                                                readonly="#{facesContext.renderResponse}"/>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <h:outputLabel
+                                                for="crcUsuarioForm">
+                                            #{seg_msg['seg.gestao.criaSenha.form.crcUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{cadastroSenhaMB.dto.crc}"
+                                                id="crcUsuarioForm"
+                                                styleClass="form-control"
+                                                maxlength="9"
+                                                readonly="#{facesContext.renderResponse}"/>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <h:outputLabel
+                                                for="cnpjEmpresaUsuarioForm">
+                                            #{seg_msg['seg.gestao.criaSenha.form.cnpjEmpresaUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{cadastroSenhaMB.dto.solicitacaoUsuario.cnpjNegocio}"
+                                                id="cnpjEmpresaUsuarioForm"
+                                                styleClass="form-control"
+                                                converter="cnpjFacesConverter"
+                                                readonly="#{facesContext.renderResponse}"/>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <h:outputLabel
+                                                for="inscricaoEstadualUsuarioForm">
+                                            #{seg_msg['seg.gestao.criaSenha.form.inscricaoEstadualUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputText
+                                                value="#{cadastroSenhaMB.dto.solicitacaoUsuario.inscricaoEstadualNegocio}"
+                                                id="inscricaoEstadualUsuarioForm"
+                                                styleClass="form-control"
+                                                readonly="#{facesContext.renderResponse}"/>
+                                    </div>
+                                </div>
+                                <div class="modal-footer" id="usuarioSistemaModalFooter">
+                                    <button type="button" class="btn btn-default align-bottom" data-dismiss="modal"
+                                            value="#{seg_msg['seg.gestao.usuarioSistema.form.fechar']}"
+                                            aria-label="#{seg_msg['seg.gestao.criaSenha.form.fechar']}"
+                                            onclick="resetFields()">
+                                        <span aria-hidden="false">#{seg_msg['seg.gestao.criaSenha.form.fechar']}</span>
+                                    </button>
+                                    <button type="button" class="btn btn-primary align-bottom"
+                                            value="#{seg_msg['seg.gestao.usuarioSistema.form.criarUsuario']}"
+                                            aria-label="#{seg_msg['seg.gestao.criaSenha.form.criarUsuario']}"
+                                            onclick="createUser()">
+                                        <span aria-hidden="false">#{seg_msg['seg.gestao.criaSenha.form.criarUsuario']}</span>
+                                    </button>
+                                </div>
+                            </h:form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </sat:panel>
+    </ui:define>
+</ui:composition>
+</html>

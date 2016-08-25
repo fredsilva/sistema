@@ -1,2 +1,0 @@
-O Java Docs está disponível no link
-http://177.39.184.50:9080/docs

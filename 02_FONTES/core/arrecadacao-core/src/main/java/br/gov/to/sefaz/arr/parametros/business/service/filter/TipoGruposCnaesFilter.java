@@ -8,15 +8,15 @@ package br.gov.to.sefaz.arr.parametros.business.service.filter;
  */
 public class TipoGruposCnaesFilter {
 
-    private Integer idGrupoCnae;
+    private String idGrupoCnae;
     private String descricaoGrupo;
     private String cnaeFiscal;
 
-    public Integer getIdGrupoCnae() {
+    public String getIdGrupoCnae() {
         return idGrupoCnae;
     }
 
-    public void setIdGrupoCnae(Integer idGrupoCnae) {
+    public void setIdGrupoCnae(String idGrupoCnae) {
         this.idGrupoCnae = idGrupoCnae;
     }
 

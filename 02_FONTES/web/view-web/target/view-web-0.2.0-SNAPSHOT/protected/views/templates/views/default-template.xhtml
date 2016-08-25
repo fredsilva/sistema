@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <title>Sefaz-to - #{pageTitle}</title>
+
+    <h:outputScript library="javax.faces" name="jsf.js"/>
+    <h:outputScript library="org.richfaces" name="jquery.js"/>
+    <h:outputScript library="org.richfaces" name="richfaces.js"/>
+    <h:outputScript library="org.richfaces" name="richfaces-queue.js"/>
+    <h:outputScript library="js" name="lib/bootstrap.min.js"/>
+    <h:outputScript library="js" name="lib/jasny-bootstrap.min.js"/>
+    <h:outputScript library="js" name="lib/jquery.dataTables.js"/>
+    <h:outputScript library="js" name="lib/dataTables.bootstrap4.js"/>
+    <h:outputScript library="js" name="lib/natural.js"/>
+    <h:outputScript library="js" name="lib/jquery-ui.js"/>
+    <h:outputScript library="js" name="lib/jquery.maskMoney.min.js"/>
+    <h:outputScript library="js" name="lib/jquery.mask.js"/>
+    <h:outputScript library="js" name="core/sat.modals.js"/>
+    <h:outputScript library="js" name="core/sat.jsf.js"/>
+    <h:outputScript library="js" name="core/sat.forms.js"/>
+    <h:outputScript library="js" name="core/sat.dataTable.js"/>
+    <h:outputScript library="js" name="core/sat.defaultTemplate.js"/>
+
+    <link href="#{pathResolverMB.cssPath('bootstrap.css')}" rel="stylesheet" type="text/css"/>
+    <link href="#{pathResolverMB.cssPath('font-awesome.min.css')}" rel="stylesheet" type="text/css"/>
+    <link href="#{pathResolverMB.cssPath('dataTables.bootstrap4.css')}" rel="stylesheet" type="text/css"/>
+    <link href="#{pathResolverMB.cssPath('sb-admin.css')}" rel="stylesheet" type="text/css"/>
+    <link href="#{pathResolverMB.cssPath('sat.css')}" rel="stylesheet" type="text/css"/>
+    <link href="#{pathResolverMB.cssPath('jquery-ui.css')}" rel="stylesheet" type="text/css"/>
+
+    <ui:insert name="header"/>
+</h:head>
+<h:body>
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><strong>#{msg['home.titulo']}</strong></a>
+            </div>
+
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-envelope"/>
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu message-dropdown">
+                        <li class="message-preview">
+                            <a href="#">
+                                <div class="media">
+                                    <div class="media-body">
+                                        <h5 class="media-heading">
+                                            <strong>Anderson</strong>
+                                        </h5>
+                                        <p class="small text-muted">
+                                            <i class="fa fa-clock-o"/>13/06/2016
+                                        </p>
+                                        <p>Corpo da mensagem com um texto bacana</p>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="message-footer">
+                            <a href="#">Ler todas as mensagens</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-bell"/>
+                        <b class="caret"/>
+                    </a>
+                    <ul class="dropdown-menu alert-dropdown">
+                        <li>
+                            <a href="#">Nome do alerta<span class="label label-info">Isto é um alerta</span></a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="#">Ver tudo</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-user"/>
+                        <strong><h:outputText value="#{defaultTemplateMB.userName}"/></strong>
+                        <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="#{defaultTemplateMB.hasOnlyOneProfile()?'disabled':''}">
+                            <a href="javascript:void(0)" onclick="#{!defaultTemplateMB.hasOnlyOneProfile()?'$(\'#select-profile-modal\').modal()':''}">
+                                <i class="fa fa-fw fa-child"/>#{msg['home.header.opcoes.perfil']}
+                            </a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-fw fa-lock"/>#{msg['home.header.opcoes.senha']}</a></li>
+                        <li><a href="#"><i class="fa fa-fw fa-gear"/>#{msg['home.header.opcoes.procurado']}</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:void(0);" onclick="$('#confirm-modal-logout').modal();">
+                            <i class="fa fa-fw fa-power-off"/>#{msg['home.header.opcoes.sair']}
+                        </a></li>
+                    </ul>
+                </li>
+            </ul>
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+
+                <div class="nav navbar-nav side-nav-top">
+                    <select class="form-control btn-default" name="optModulo" id="optModulo" onchange="loadSelectedModule()">
+                        <ui:repeat value="#{defaultTemplateMB.modulosMenu}" var="modulo">
+                            <option value="modules-menu-#{modulo.id}">#{modulo.name}</option>
+                        </ui:repeat>
+                    </select>
+                </div>
+
+                <div id="modules-menus">
+                    <ui:repeat value="#{defaultTemplateMB.modulosMenu}" var="sysModulo">
+                        <ul id="modules-menu-#{sysModulo.id}" class="nav navbar-nav side-nav modules-menu">
+                            <ui:repeat value="#{sysModulo.childs}" var="appModulo">
+                                <li>
+                                    <a href="javascript:void(0);" data-toggle="collapse"
+                                            data-target="#opcoes-menu-#{appModulo.id}"><strong>#{appModulo.name}</strong> <i class="fa fa-fw fa-caret-down"/>
+                                    </a>
+                                    <ul id="opcoes-menu-#{appModulo.id}" class="collapse">
+                                    <ui:repeat value="#{appModulo.childs}" var="opcao">
+                                        <li>
+                                            <a href="#{pathResolverMB.protectedViewPath(opcao.ref)}">#{opcao.name}</a>
+                                        </li>
+                                    </ui:repeat>
+                                    </ul>
+                                </li>
+                            </ui:repeat>
+                        </ul>
+                    </ui:repeat>
+                </div>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+                <!-- Page Heading -->
+
+                <ui:insert name="content"/>
+
+                <!-- /.row -->
+            </div>
+            <!-- /.container-fluid -->
+
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+
+    <ui:include src="/protected/views/templates/modals/core-modals.xhtml"/>
+    <ui:include src="/protected/views/templates/modals/success-marker.xhtml"/>
+
+    <div id="confirm-modal-logout" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h:outputText value="#{seg_msg['logout.confirm']}"/>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-primary" role="button" href="#{pathResolverMB.logoutPath}">
+                        <h:outputText value="#{msg['label.sim']}"/>
+                    </a>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        <h:outputText value="#{msg['label.nao']}"/>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="select-profile-modal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    #{seg_msg['perfilSistema.selecao.titulo']}
+                </div>
+                <div class="modal-body">
+                    <p>#{seg_msg['perfilSistema.selecao.descricao']}</p>
+                    <h:form>
+                        <ul class="list-unmarked">
+                            <ui:repeat value="#{defaultTemplateMB.perfisSistema}" var="perfil">
+                                <li>
+                                    <h:commandLink action="#{defaultTemplateMB.setActiveProfile(perfil.id)}">
+                                        #{perfil.description}
+                                    </h:commandLink>
+                                </li>
+                            </ui:repeat>
+                        </ul>
+                    </h:form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h:outputScript rendered="#{!defaultTemplateMB.hasActiveProfile()}">
+        $('#select-profile-modal').modal();
+    </h:outputScript>
+</h:body>
+</html>

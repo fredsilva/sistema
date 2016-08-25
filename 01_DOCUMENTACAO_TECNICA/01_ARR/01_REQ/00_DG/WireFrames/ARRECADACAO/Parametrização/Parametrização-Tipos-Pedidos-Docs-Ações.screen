@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" id="1" x="48" y="15" width="656" height="738" text="PARAMETRIZAÇÃO DOS TIPOS DE PEDIDOS&#xA;http://..." measuredWidth="656" measuredHeight="738">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="50" x="155" y="189" text="Descrição do Tipo de Pedido *" measuredWidth="179" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="51" x="155" y="211" width="302" text="SOLICITAÇÃO DE CORREÇÃO DE PAGAMENTO" measuredWidth="302" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Checkbox" id="60" x="141" y="258" text="Parecer Automático?" measuredWidth="139" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:HLine" id="93" x="62" y="174" width="632" measuredWidth="632" measuredHeight="6"/>
+  <widgets xsi:type="model:Label" id="94" x="326" y="174" text="TIPO DE PEDIDO" measuredWidth="103" measuredHeight="23">
+    <font bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="96" x="64" y="258" width="73" text="10.00" measuredWidth="73" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="97" x="63" y="236" text="Valor Mínimo" measuredWidth="80" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="98" x="596" y="211" width="98" text="4" measuredWidth="98" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="99" x="589" y="189" text="QTD Dias Análise *" measuredWidth="113" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="146" x="461" y="212" width="131" text="ATIVO" measuredWidth="131" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="147" x="462" y="189" text="Situação *" measuredWidth="65" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="178" x="492" y="346" measuredWidth="6" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="189" x="63" y="189" text="Código * " measuredWidth="60" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="190" x="63" y="211" width="87" text="1" measuredWidth="87" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="191" x="63" y="94" width="631" height="59" text="Código {neutral}, Descrição Tipo Pedido {neutral}, Situação {neutral}, &#xA;1,CORREÇÃO DE PAGAMENTOS,1-ATIVO,[Detalhar] {trash}" measuredWidth="631" measuredHeight="59" alternative="#eeeeee">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="192" x="493" y="713" width="98" height="23" text="Novo Tipo" measuredWidth="98" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="193" x="596" y="714" width="91" height="23" text="Salvar" measuredWidth="91" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="194" x="62" y="77" text="Lista de Tipo de Pedidos Cadastrados" measuredWidth="221" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="203" x="64" y="282" text="Tipo Documento" measuredWidth="100" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="205" x="589" y="304" width="98" height="23" text="Adicionar" measuredWidth="98" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Checkbox" id="206" x="415" y="304" text="Doc. Obrigatório ?" measuredWidth="125" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="210" x="288" y="304" width="119" text="ATIVO" measuredWidth="119" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="211" x="288" y="282" text="Situação " measuredWidth="59" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="215" x="589" y="493" width="98" height="23" text="Adicionar" measuredWidth="98" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Checkbox" id="216" x="548" y="467" text="Campo Obrigatório ?" measuredWidth="139" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="220" x="456" y="468" width="89" text="ATIVO" measuredWidth="89" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="221" x="456" y="446" text="Situação *" measuredWidth="65" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="222" x="64" y="467" width="161" text="1-Corrigir Pagamentos" measuredWidth="161" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="223" x="64" y="445" text="Tipo Ação *" measuredWidth="73" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="225" x="233" y="448" text="Tipo de Campo *" measuredWidth="102" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="228" x="64" y="519" width="623" height="50" text="Tipo de Ação {neutral},Tipo do Campo {neutral},Obrigatório {neutral},Situação {neutral},&#xA;1-Corrigir Pagamento,7- Valor Total,Sim,Ativo,{unselected}&#xA;" measuredWidth="623" measuredHeight="50" alternative="#eeeeee">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Note" id="229" x="155" y="491" width="418" height="28" text="Tipo de Campo : 1-Inteiro; 2-Numérico; 3-Alfanumérico; 4-Data/Hora" measuredWidth="418" measuredHeight="28">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="231" x="64" y="352" width="623" height="71" text="Código {neutral},Tipo de Documento {neutral},Situação {neutral},Obrigatório {neutral},&#xA;1,Certidão,Ativo,Não, {unselected}&#xA;2,Endereço,Ativo,Sim,{unselected}" measuredWidth="623" measuredHeight="71" alternative="#eeeeee">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="234" x="64" y="332" text="Lista de Documentos" measuredWidth="126" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="235" x="64" y="497" text="Lista de Ações" measuredWidth="89" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="236" x="64" y="304" width="216" text="3 - Recibo de Pagamento" measuredWidth="216" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="237" x="64" y="621" width="201" text="104 - TAXA SSP" measuredWidth="201" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="238" x="64" y="599" text="Receitas" measuredWidth="55" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="239" x="62" y="661" width="623" text="Receita {neutral},Sub Código Receita {neutral},&#xA;101-ICMS, - ,{unselected}&#xA;" measuredWidth="623" measuredHeight="48" alternative="#eeeeee">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="240" x="64" y="644" text="Lista de Receitas Não Permitidas" measuredWidth="192" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="241" x="266" y="621" width="225" text="11.1 - LICENÇA PARA SHOWS" measuredWidth="225" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="242" x="266" y="599" width="95" text="Sub Código" measuredWidth="95" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="243" x="589" y="621" width="98" height="23" text="Adicionar" measuredWidth="98" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="273" x="218" y="152" measuredWidth="267" measuredHeight="23">
+    <widgets xsi:type="model:TextField" id="274" x="58" width="17" text="1" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="275" x="79" width="18" text="2" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="276" x="99" width="18" text="3" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="277" x="118" width="17" text="4" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="278" x="137" width="20" text="5" measuredWidth="20" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="279" x="160" text="Próximo" measuredWidth="57" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="280" width="56" text="Anterior" measuredWidth="56" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Spinner" id="281" x="226" text="10" measuredWidth="41" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="282" x="218" y="425" measuredWidth="267" measuredHeight="23">
+    <widgets xsi:type="model:TextField" id="283" x="58" width="17" text="1" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="284" x="79" width="18" text="2" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="285" x="99" width="18" text="3" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="286" x="118" width="17" text="4" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="287" x="137" width="20" text="5" measuredWidth="20" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="288" x="160" text="Próximo" measuredWidth="57" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="289" width="56" text="Anterior" measuredWidth="56" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Spinner" id="290" x="226" text="10" measuredWidth="41" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="291" x="218" y="572" measuredWidth="267" measuredHeight="23">
+    <widgets xsi:type="model:TextField" id="292" x="58" width="17" text="1" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="293" x="79" width="18" text="2" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="294" x="99" width="18" text="3" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="295" x="118" width="17" text="4" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="296" x="137" width="20" text="5" measuredWidth="20" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="297" x="160" text="Próximo" measuredWidth="57" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="298" width="56" text="Anterior" measuredWidth="56" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Spinner" id="299" x="226" text="10" measuredWidth="41" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="300" x="218" y="713" measuredWidth="267" measuredHeight="23">
+    <widgets xsi:type="model:TextField" id="301" x="58" width="17" text="1" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="302" x="79" width="18" text="2" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="303" x="99" width="18" text="3" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="304" x="118" width="17" text="4" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="305" x="137" width="20" text="5" measuredWidth="20" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="306" x="160" text="Próximo" measuredWidth="57" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="307" width="56" text="Anterior" measuredWidth="56" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Spinner" id="308" x="226" text="10" measuredWidth="41" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="310" x="712" y="15" measuredWidth="433" measuredHeight="735">
+    <widgets xsi:type="model:Note" id="311" y="142" width="201" height="106" text="Tipos de Ações:&#xD;&#xA;1- Corrigir Pagamento&#xD;&#xA;2 - Creditar em Conta Tributária&#xD;&#xA;3 - Créditar em Conta Corrente&#xD;&#xA;4 - Estonar Pagamento&#xD;&#xA;5- Pedido Indeferido" measuredWidth="201" measuredHeight="106" textAlignment="Left">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Note" id="312" width="433" height="138" text="Tipos de Pedidos: &#xD;&#xA;1- Solicitação de Correção Pagamento&#xD;&#xA;2 - Solicitação de Restituição de Pagamentos ( ICMS,IPVA) - CC Tributária&#xD;&#xA;3 - Solicitação de Restituição de Pagamentos ICMS&#xD;&#xA;4 - Solicitação de Restituição de Pagamentos Indébitos&#xD;&#xA;5 - Solicitação de Restituição de Instituição Bancária&#xD;&#xA;6 - Solicitação de Recurso" measuredWidth="433" measuredHeight="138" textAlignment="Left">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Note" id="313" y="250" width="433" height="485" text="1 ) Campos por Tipo Pedido e de Ação : &#xA;Tipo Pedido : 1- Solicitação de Correção Pagamento &#xA;Tipo Ação : 1 - Corrigir Pagamento&#xA;Tipo Campos : 1 - Nro. Documento, 2 - Periodo de Referência, 3 -Nro. Parcela, 4 -Inscrição Estadual, 5 - CPF/CNPJ, 6 - Renavan&#xA;&#xA;2 ) Campos por Tipo Pedido e de Ação :  &#xA;Tipo Pedido : 2 - Solicitação de Restituição de Pagamentos ( ICMS,IPVA) &#xA;Tipo de Ação : 2 -Conta Tributária&#xA;Tipo Campos :  7 -Valor Total&#xA;&#xA;3 ) Campos por Tipo Pedido e de Ação :  &#xA;Tipo de Pedido : 3 - Solicitação de Restituição de Pagamentos ( ICMS) &#xA;Tipo de Ação : 3 - Conta Contribuinte&#xA;Tipo Campos : 7 - Valor Total&#xA;&#xA;4 ) Campos por Tipo Pedido e de Ação :  &#xA;Tipo de Pedido : 4 - Solicitação de Restituição de Pagamentos Indébitos&#xA;Tipo de Ação : 3 - Conta Contribuinte&#xA;Tipo Campos :  7 - Valor Total&#xA;&#xA;4 ) Campos por Tipo Pedido e de Ação :  &#xA;Tipo de Pedido : 5 - Solicitação de Restituição de Instituição Bancária &#xA;Tipo de Ação : 4 - Estornar Pagamentos &#xA;Tipo de Campos: 8 - Numero Autenticação, 9 - Valor Autenticado, 10 -NSU, 1 - Documento &#xA;&#xA;5 ) Campos por Tipo Pedido e de Ação :  &#xA;Tipo de Pedido : 6 - Solicitação de Recurso &#xA;Tipo de Ação : 5 - Solicitação de Pedido Indeferido &#xA;Tipo de Campos : 11 - Numero Pedido Indeferido, 7 - Valor Total" measuredWidth="433" measuredHeight="485" textAlignment="Left">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Note" id="314" x="208" y="142" width="201" height="106" text="Tipos de Documentos:&#xD;&#xA;1 - Comprovante de Pagamento&#xD;&#xA;2 - Formulário de Solicitação/Processo&#xD;&#xA;3 - Outros" measuredWidth="201" measuredHeight="106" textAlignment="Left">
+      <font/>
+    </widgets>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="315" x="496" y="621" width="89" text="ATIVO" measuredWidth="89" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="316" x="497" y="599" text="Situação *" measuredWidth="65" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="317" x="233" y="467" width="215" text="ATIVO" measuredWidth="215" measuredHeight="23">
+    <font/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

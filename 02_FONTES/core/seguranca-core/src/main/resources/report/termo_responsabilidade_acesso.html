@@ -1,0 +1,127 @@
+<html>
+<head>
+    <title>Termo de Responsabilidade de Acesso</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="content">
+    <table id="header" border="1" cellspacing="0" cellpadding="0">
+        <tr>
+            <td>
+                <div id="header-left">
+                    <img src="logo-togov.jpg"/>
+                    <div style="width: 80%; float: left">
+                        <p>GOVERNO DO ESTADO DO TOCANTINS</p>
+                        <p>SECRETARIA DA FAZENDA</p>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div id="header-right">
+                    <div class="wrapper">
+                        <div class="date">${dataCriacao}</div>
+                        <div class="no">No. ${ano}-${id}</div>
+                    </div>
+                    <div>
+                        <h1>Solicitação para autorização de senhas de serviços (Termo de Responsabilidade de Acesso)</h1>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <table id="user-info" class="table" border="1" cellspacing="0" cellpadding="0">
+        <tr>
+            <th colspan="8">
+                Identificação do Requerente
+            </th>
+        </tr>
+        <tr>
+            <td>CPF:</td><td>${cpf}</td>
+            <td>CRC:</td><td>${crc}</td>
+            <td colspan="2">Nome Completo:</td><td colspan="2">${nome}</td>
+        </tr>
+        <tr>
+            <td>CEP:</td><td>${cep}</td>
+            <td>Lograd.:</td><td>${logradouro}</td>
+            <td>Endereço:</td><td colspan="3">${endereco}</td>
+        </tr>
+        <tr>
+            <td>Número:</td><td>${numero}</td>
+            <td>Apto:</td><td>${apartamento}</td>
+            <td>Compl.:</td><td>${complemento}</td>
+            <td>Bairro:</td><td>${bairro}</td>
+        </tr>
+        <tr>
+            <td>Estado:</td><td>${estado}</td>
+            <td>Cidade:</td><td colspan="3">${cidade}</td>
+            <td>Telefone:</td><td colspan="1">${telefone}</td>
+        </tr>
+        <tr>
+            <td colspan="2">Outro Endereço:</td><td colspan="6">${outroEndereco}</td>
+        </tr>
+        <tr>
+            <td>E-mail:</td><td colspan="5">${email}</td>
+            <td>Celular:</td><td colspan="1">${celular}</td>
+        </tr>
+    </table>
+    <table id="company-info" class="table" border="1" cellspacing="0" cellpadding="0">
+        <tr>
+            <th colspan="4">
+                Identificação da Empresa
+            </th>
+        </tr>
+        <tr>
+            <td colspan="4" class="center">
+                <small>Só para aqueles usuários que são principais para uma empresa</small>
+            </td>
+        </tr>
+        <tr>
+            <td>CNPJ:</td><td>${cnpj}</td>
+            <td>I.E.:</td><td>${inscricao}</td>
+        </tr>
+    </table>
+    <div id="description">
+        <p>
+            Eu, requerente acima identificado, venho mui respeitosamente solicitar a emissão de senha para os serviços
+            via internet fornecidos pela Secretaria de Fazenda do Estado do Tocantins para os contribuintes.
+            Tenho plena ciência da responsabilidade do uso desta senha e estou de acordo que a mesma será emitida sob
+            meu cuidado e proteção, sendo eu completamente responsável por qualquer ação no uso dos serviços on-line
+            que à Secretaria de Fazenda fornece para mim.
+        </p>
+        <p>
+            Nestes termos, peço deferimento
+        </p>
+    </div>
+    <div class="wrapper">
+        <div class="pen-line left">
+            Local e Data
+        </div>
+        <div class="pen-line right">
+            Assinatura
+        </div>
+    </div>
+    <div id="receipt">
+        <div class="header">RECIBO</div>
+        <div class="date">
+            <p>Recibi em ____/____/________ a senha objeto do requerimento acima.</p>
+        </div>
+        <div class="wrapper">
+            <div class="pen-line right">
+                Assinatura
+            </div>
+        </div>
+        <div class="details">
+            <p>
+                <b>Documentos necessários</b><br/>
+                1) 0 requerimento para a emissão de senha deverá ser impresso e assinado, com firma reconhecida, pelo interessado.<br/>
+                2) Carteira de Identidade (RG) - Original e Cópia<br/>
+                3) CPF - Original e Cópia<br/>
+                4) Procuração, nos casos em que o titular seja representado por outra pessoa - Original e Cópia<br/>
+                5) Tratando-se de Contabilista: CRC - Original e Cópia, emitido pelo CRCTO<br/>
+                6) Comprovante de endereço emitido por prestador de serviço público (energia, água. Telecomunicações, etc)
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

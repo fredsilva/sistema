@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1_0" href="../PedidoAreasFaixaValorService.html" title="br.gov.to.sefaz.arr.parametros.business.service.PedidoAreasFaixaValorService" alt="" coords="16,105,213,148"/>
-<area shape="rect" id="node1" href="../PedidoAreasFaixaValorService.html" title="&lt;TABLE&gt;" alt="" coords="5,100,224,153"/>
-<area shape="rect" id="node2_1" href="./PedidoAreasFaixaValorServiceImpl.html" title="br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoAreasFaixaValorServiceImpl" alt="" coords="43,301,551,377"/>
-<area shape="rect" id="node2" href="./PedidoAreasFaixaValorServiceImpl.html" title="&lt;TABLE&gt;" alt="" coords="33,296,562,383"/>
-<area shape="rect" id="node3_2" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/service/impl/DefaultCrudService.html" title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" alt="" coords="259,11,701,243"/>
-<area shape="rect" id="node3" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/service/impl/DefaultCrudService.html" title="&lt;TABLE&gt;" alt="" coords="249,5,711,248"/>
-</map>

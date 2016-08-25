@@ -25,6 +25,7 @@ import javax.validation.constraints.Size;
  */
 @Entity
 @Table(name = "TA_POSTO_TRABALHO", schema = "SEFAZ_SEG")
+
 public class PostoTrabalho extends AbstractEntity<Long> {
 
     private static final long serialVersionUID = -2743122709932667159L;

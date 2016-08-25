@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:sat="http://sefaz.to.gov.br/composites"
+        xmlns:a4j="http://richfaces.org/a4j">
+
+<ui:composition template="/protected/views/templates/views/default-template.xhtml">
+
+    <ui:param name="pageTitle" value="#{seg_msg['seg.gestao.manterPerfilSistema.titulo']}"/>
+
+    <ui:define name="header">
+        <h:outputScript library="js" name="seg/gestao/manter-perfil-sistema.js"/>
+        <h:outputScript library="js" name="core/sat.date.js"/>
+    </ui:define>
+
+    <ui:define name="content">
+        <sat:panel title="#{seg_msg['seg.gestao.manterPerfilSistema.titulo']}">
+            <div class="col-md-12">
+                <h:form id="manter-perfil-sistema-filtro">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <h:outputLabel for="nomePerfil">
+                                #{seg_msg['seg.gestao.manterPerfilSistema.filter.nomeDoPerfil']}
+                            </h:outputLabel>
+                            <h:inputText value="#{perfilSistemaMB.filter.nomePerfil}"
+                                    id="nomePerfil"
+                                    styleClass="form-control"
+                                    maxlength="30">
+                            </h:inputText>
+                        </div>
+                        <div class="form-group col-lg-12 text-right">
+                            <h:commandButton type="button"
+                                    value="#{seg_msg['seg.gestao.manterPerfilSistema.table.button.consultar']}"
+                                    styleClass="btn btn-primary align-bottom"
+                                    action="#{perfilSistemaMB.search}">
+                                <f:ajax render="manter-perfil-sistema-table"
+                                        execute="nomePerfil"/>
+                            </h:commandButton>
+                            <h:commandButton type="button"
+                                    value="#{seg_msg['seg.gestao.manterPerfilSistema.table.button.inserirPerfil']}"
+                                    styleClass="btn btn-primary align-bottom"
+                                    onclick="insertPerfil()">
+                            </h:commandButton>
+                            <sat:opcaoAjudaButton styleClass="btn btn-primary align-bottom"/>
+                        </div>
+                    </div>
+                </h:form>
+            </div>
+            <sat:table id="manter-perfil-sistema-table"
+                    bundle="seg_msg"
+                    content="#{perfilSistemaMB.resultList}"
+                    headers="seg.gestao.manterPerfilSistema.table.numero,
+                             seg.gestao.manterPerfilSistema.table.nomePerfil,
+                             seg.gestao.manterPerfilSistema.table.descricao,
+                             seg.gestao.manterPerfilSistema.table.totalPapeis,
+                             seg.gestao.manterPerfilSistema.table.vezesAtr"
+                    fields="identificacaoPerfil,
+                            nomePerfil,
+                            descricaoPerfil,
+                            totalPapeis,
+                            totalUsuarios"
+                    actionsHeader="seg.gestao.manterPerfilSistema.table.acoes"
+                    columnDefs="{'class': 'tbody-left', 'targets': [0,1,2,3,4,5]}, {'type': 'natural', 'targets': 0}"
+                    actionEvents="view-users:click:viewUsers(0;1),
+                                  view-functionalities:click:viewRoles(0;1),
+                                  edit-row:click:editPerfil(0),
+                                  remove-row:click:removePapel(0):confirm:seg.gestao.perfilSistema.tabela.excluir.confirmacao"
+                    hasActions="true">
+                <f:facet name="actions">
+                    <a href="javascript:void(0);" class="view-users glyphicon glyphicon-eye-open"
+                            data-toggle="tooltip"
+                            title="Ver usuários"/>
+                    <a href="javascript:void(0);" class="view-functionalities glyphicon glyphicon-list-alt"
+                            data-toggle="tooltip"
+                            title="Ver papéis"/>
+                    <a href="javascript:void(0);" class="edit-row glyphicon glyphicon-pencil" data-toggle="tooltip"
+                            title="Alterar"/>
+                    <a href="javascript:void(0);" class="remove-row glyphicon glyphicon-remove" data-toggle="tooltip"
+                            title="Excluir"/>
+                </f:facet>
+            </sat:table>
+            <h:form>
+                <a4j:jsFunction name="insertPerfil"
+                        action="#{perfilSistemaMB.loadAllPapelSistema}"
+                        render="panel-render"
+                        oncomplete="openModalInsert()">
+                </a4j:jsFunction>
+                <a4j:jsFunction name="editPerfil"
+                        action="#{perfilSistemaMB.findOnePerfilSistemaById}"
+                        render="panel-render"
+                        oncomplete="openModalEdit()">
+                    <a4j:param name="id" assignTo="#{perfilSistemaMB.dto.identificacaoPerfil}"/>
+                </a4j:jsFunction>
+                <a4j:jsFunction name="addOptionToList"
+                        action="#{perfilSistemaMB.addPapelToList}"
+                        render="panel-render-table-contador">
+                    <a4j:param name="identificacaoPapel"
+                            assignTo="#{perfilSistemaMB.identificacaoPapelSistema}"/>
+                </a4j:jsFunction>
+                <a4j:jsFunction name="removeOptionFromList"
+                        action="#{perfilSistemaMB.removePapelFromList}"
+                        render="panel-render-table-contador">
+                    <a4j:param name="identificacaoPapel"
+                            assignTo="#{perfilSistemaMB.identificacaoPapelSistema}"/>
+                </a4j:jsFunction>
+                <a4j:jsFunction name="removePapel"
+                        action="#{perfilSistemaMB.delete}"
+                        render="manter-perfil-sistema-table">
+                    <a4j:param name="identificacaoPapel"
+                            assignTo="#{perfilSistemaMB.dto.identificacaoPerfil}"/>
+                </a4j:jsFunction>
+                <a4j:jsFunction name="viewUsers"
+                        action="#{perfilSistemaMB.loadAllUsusariosByPerfil}"
+                        render="panel-render-usuarios"
+                        oncomplete="openModalUsuarios()">
+                    <a4j:param name="id" assignTo="#{perfilSistemaMB.dto.identificacaoPerfil}"/>
+                    <a4j:param name="name" assignTo="#{perfilSistemaMB.dto.nomePerfil}"/>
+                </a4j:jsFunction>
+                <a4j:jsFunction name="viewRoles"
+                        action="#{perfilSistemaMB.loadAllPapelByPerfil}"
+                        render="panel-render-papeis"
+                        oncomplete="openModalPerfis()">
+                    <a4j:param name="id" assignTo="#{perfilSistemaMB.dto.identificacaoPerfil}"/>
+                    <a4j:param name="name" assignTo="#{perfilSistemaMB.dto.nomePerfil}"/>
+                </a4j:jsFunction>
+                <a4j:jsFunction name="clearDto"
+                        action="#{perfilSistemaMB.clearDto}">
+                </a4j:jsFunction>
+            </h:form>
+            <div id="manterPerfilSistemaModalInsert" class="modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" >
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h:outputLabel styleClass="modal-title"
+                                    value="#{seg_msg['seg.gestao.manterPerfilSistema.form.insert.titulo.criar']}"/>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"
+                                    onclick="resetFields()">
+                                <span aria-hidden="true">&#xd7;</span>
+                            </button>
+                        </div>
+                            <div class="modal-body" id="perfilSistemaModalBody">
+                                <h:form id="manter-perfil-form-insert">
+                                    <h:panelGroup id="panel-render">
+                                            <h:inputHidden id="identificacaoPerfilSistemaInsertForm"
+                                                    value="#{perfilSistemaMB.dto.identificacaoPerfil}"/>
+                                            <div class="form-group col-md-12">
+                                                <h:outputLabel
+                                                        for="nomePerfilSistemaInsertForm"
+                                                        id="nomePerfilSistemaInsertLabel">
+                                                    #{seg_msg['seg.gestao.manterPerfilSistema.form.insert.nomeDoPerfil']}
+                                                </h:outputLabel>
+                                                <h:inputText
+                                                        id="nomePerfilSistemaInsertForm"
+                                                        styleClass="form-control"
+                                                        maxlength="30"
+                                                        value="#{perfilSistemaMB.dto.nomePerfil}">
+                                                </h:inputText>
+                                            </div>
+                                            <div class="form-group col-md-12">
+                                                <h:outputLabel
+                                                        for="descricaPerfilSistemaInsertForm" >
+                                                    #{seg_msg['seg.gestao.manterPerfilSistema.form.insert.descricaoPapel']}
+                                                </h:outputLabel>
+                                                <h:inputText
+                                                        id="descricaPerfilSistemaInsertForm"
+                                                        styleClass="form-control"
+                                                        maxlength="120"
+                                                        value="#{perfilSistemaMB.dto.descricaoPerfil}">
+                                                </h:inputText>
+                                            </div>
+                                        <h:panelGroup id="panel-render-table-contador">
+                                            <sat:table id="manter-perfil-sistema-table-insert"
+                                                        bundle="seg_msg"
+                                                        content="#{perfilSistemaMB.perfilPapelViewBeanCollection}"
+                                                        headers="seg.gestao.manterPerfilSistema.table.papel.nomePapel,
+                                                                 seg.gestao.manterPerfilSistema.table.papel.descricaoPapel"
+                                                        fields="nomePapel,
+                                                                descricaoPapel,
+                                                                identificacaoPapel:hide,
+                                                                using:hide"
+                                                        actionsHeader="seg.gestao.manterPerfilSistema.table.opcoes.acoes"
+                                                        columnDefs="{'class': 'tbody-left', 'targets': [0,1,2,3,4]}"
+                                                        actionEvents="toggle-inactive:click:removeOption(2),
+                                                                        toggle-active:click:addOption(2)"
+                                                        actionVisible="toggle-inactive:show:setToggle(3),toggle-active:hide:setToggle(3)"
+                                                        hasActions="true">
+                                                <f:facet name="actions">
+                                                    <a href="javascript:void(0);"
+                                                            class="toggle-list toggle-active glyphicon glyphicon-ok"
+                                                            data-toggle="tooltip"
+                                                            title="Adicionar"/>
+                                                    <a href="javascript:void(0);"
+                                                            class="toggle-list toggle-inactive glyphicon glyphicon-remove"
+                                                            data-toggle="tooltip"
+                                                            title="Remover"/>
+                                                </f:facet>
+                                            </sat:table>
+                                            <div class="modal-footer" >
+                                                <div class="row">
+                                                    <div class="form-group col-lg-6 text-left">
+                                                        <strong>
+                                                            #{seg_msg['seg.gestao.manterPerfilSistema.table.papel.total']}
+                                                            #{perfilSistemaMB.perfilPapelViewBeanCollection.size()}
+                                                            #{seg_msg['seg.gestao.manterPerfilSistema.table.papel.selecionadas']}
+                                                             #{perfilSistemaMB.perfilPapelViewBeanCollectionSize}
+                                                        </strong>
+                                                    </div>
+                                                    <div class="form-group col-lg-6 text-right">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal"
+                                                                value="#{seg_msg['seg.gestao.usuarioSistema.form.fechar']}"
+                                                                aria-label="#{seg_msg['seg.gestao.manterPerfilSistema.form.insert.fechar']}"
+                                                                onclick="resetFields()">
+                                                            <span aria-hidden="false">#{seg_msg['seg.gestao.manterPerfilSistema.form.insert.fechar']}</span>
+                                                        </button>
+                                                        <h:commandButton type="button"
+                                                                value="#{seg_msg['seg.gestao.manterPerfilSistema.form.insert.salvar']}"
+                                                                styleClass="btn btn-primary"
+                                                                onclick="savePerfilSistema()">
+                                                        </h:commandButton>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </h:panelGroup>
+                                    </h:panelGroup>
+                                    <a4j:jsFunction name="savePerfilSistema"
+                                            action="#{perfilSistemaMB.saveOrUpdatePerfilSistema}"
+                                            render="manter-perfil-sistema-table"
+                                            execute="identificacaoPerfilSistemaInsertForm nomePerfilSistemaInsertForm descricaPerfilSistemaInsertForm"
+                                            oncomplete="resetOnSaveSuccess(event)">
+                                    </a4j:jsFunction>
+                                </h:form>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div id="manterPerfilSistemaModalUsuarios" class="modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" >
+                    <div class="modal-content">
+                        <h:panelGroup id="panel-render-usuarios">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                    <span aria-hidden="true">&#xd7;</span>
+                                </button>
+                                <h4 class="modal-title">
+                                    #{seg_msg['seg.gestao.manterPerfil.form.usuarios.titulo']}
+                                    #{perfilSistemaMB.dto.nomePerfil}
+                                </h4>
+                            </div>
+                            <div class="modal-body well well-lg">
+                                <ul class="list-unmarked">
+                                    <ui:repeat value="#{perfilSistemaMB.usuarioPerfils}" var="usuarioSistema">
+                                        <li>
+                                            #{usuarioSistema.nomeUsuarioSistema}
+                                        </li>
+                                    </ui:repeat>
+                                </ul>
+                            </div>
+                            <div class="modal-footer text-right">
+                                <div class="right-button col-md-12 ">
+                                    <button type="button" class="btn btn-default align-bottom right-button" data-dismiss="modal"
+                                            value="#{seg_msg['seg.gestao.manterPerfil.form.fechar']}"
+                                            aria-label="#{seg_msg['seg.gestao.manterPerfil.form.fechar']}">
+                                        <span aria-hidden="false">#{seg_msg['seg.gestao.manterPerfil.form.fechar']}</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </h:panelGroup>
+                    </div>
+                </div>
+            </div>
+            <div id="manterPerfilSistemaModalPerfis" class="modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" >
+                    <div class="modal-content">
+                        <h:panelGroup id="panel-render-papeis">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                    <span aria-hidden="true">&#xd7;</span>
+                                </button>
+                                <h4 class="modal-title">
+                                    #{seg_msg['seg.gestao.manterPerfilSistema.form.papeis.titulo']}
+                                    #{perfilSistemaMB.dto.nomePerfil}
+                                </h4>
+                            </div>
+                            <div class="modal-body well well-lg">
+                                <ul class="list-unmarked">
+                                    <ui:repeat value="#{perfilSistemaMB.papelSistemasById}" var="papelSistema">
+                                        <li>#{papelSistema.nomePapel}</li>
+                                    </ui:repeat>
+                                </ul>
+                            </div>
+                            <div class="modal-footer text-right">
+                                <div class="right-button col-md-12 ">
+                                    <button type="button" class="btn btn-default align-bottom right-button" data-dismiss="modal"
+                                            value="#{seg_msg['seg.gestao.manterPerfil.form.fechar']}"
+                                            aria-label="#{seg_msg['seg.gestao.manterPerfil.form.fechar']}">
+                                        <span aria-hidden="false">#{seg_msg['seg.gestao.manterPerfil.form.fechar']}</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </h:panelGroup>
+                    </div>
+                </div>
+            </div>
+        </sat:panel>
+    </ui:define>
+</ui:composition>
+</html>

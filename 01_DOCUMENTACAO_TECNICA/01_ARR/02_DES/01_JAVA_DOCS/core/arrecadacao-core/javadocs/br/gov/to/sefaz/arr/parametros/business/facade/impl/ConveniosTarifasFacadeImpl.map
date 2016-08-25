@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1_0" href="../ConveniosTarifasFacade.html" title="br.gov.to.sefaz.arr.parametros.business.facade.ConveniosTarifasFacade" alt="" coords="42,97,202,139"/>
-<area shape="rect" id="node1" href="../ConveniosTarifasFacade.html" title="&lt;TABLE&gt;" alt="" coords="31,91,213,145"/>
-<area shape="rect" id="node2_1" href="./ConveniosTarifasFacadeImpl.html" title="br.gov.to.sefaz.arr.parametros.business.facade.impl.ConveniosTarifasFacadeImpl" alt="" coords="16,284,500,360"/>
-<area shape="rect" id="node2" href="./ConveniosTarifasFacadeImpl.html" title="&lt;TABLE&gt;" alt="" coords="5,279,511,365"/>
-<area shape="rect" id="node3_2" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/facade/impl/DefaultCrudFacade.html" title="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" alt="" coords="248,11,540,225"/>
-<area shape="rect" id="node3" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/facade/impl/DefaultCrudFacade.html" title="&lt;TABLE&gt;" alt="" coords="237,5,551,231"/>
-</map>

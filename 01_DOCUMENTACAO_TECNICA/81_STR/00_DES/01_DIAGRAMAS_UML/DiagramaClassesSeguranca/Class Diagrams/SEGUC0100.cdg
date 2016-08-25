@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="RoleGroupKey" package="br.gov.to.sefaz.seg.business.authentication.domain" visibility="public" xPosition="591.0" yPosition="16.0">
+      <Fields>
+        <Field name="type" type="RoleGroupType" visibility="private" isFinal="true"/>
+        <Field name="id" type="Long" visibility="private" isFinal="true"/>
+        <Field name="description" type="String" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="RoleGroupType" name="type"/>
+          <Argument type="Long" name="id"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="RoleGroupType" name="type"/>
+          <Argument type="Long" name="id"/>
+          <Argument type="String" name="description"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getType" returnType="RoleGroupType" visibility="public"/>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="getDescription" returnType="String" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="compareTo" returnType="int" visibility="public">
+          <Argument type="RoleGroupKey" name="o"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AuthenticatedUserHandler" package="br.gov.to.sefaz.seg.business.authentication.handler" visibility="public" xPosition="1342.0" yPosition="54.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="getAuthentication" returnType="UsuarioSistemaAuthentication" visibility="private" isStatic="true"/>
+        <Method name="isAuthenticated" returnType="boolean" visibility="public" isStatic="true"/>
+        <Method name="getUsuarioSistema" returnType="UsuarioSistema" visibility="public" isStatic="true"/>
+        <Method name="getCpf" returnType="String" visibility="public" isStatic="true"/>
+        <Method name="getNome" returnType="String" visibility="public" isStatic="true"/>
+        <Method name="getUserRoles" returnType="Collection&lt;String&gt;" visibility="public" isStatic="true"/>
+        <Method name="setActiveRoleGroup" returnType="void" visibility="public" isStatic="true">
+          <Argument type="RoleGroupType" name="type"/>
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="getGroupsByType" returnType="List&lt;RoleGroupKey&gt;" visibility="public" isStatic="true">
+          <Argument type="RoleGroupType" name="type"/>
+        </Method>
+        <Method name="getActiveGroup" returnType="Optional&lt;RoleGroupKey&gt;" visibility="public" isStatic="true"/>
+        <Method name="invalidateSession" returnType="void" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="DefaultTemplateMB" package="br.gov.to.sefaz.seg.template.managedbean" visibility="public" xPosition="525.0" yPosition="426.0">
+      <Fields>
+        <Field name="facade" type="ModuloSistemaFacade" visibility="private" isFinal="true"/>
+        <Field name="allModulos" type="Collection&lt;ModuloSistema&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="ModuloSistemaFacade" name="facade"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getModulosMenu" returnType="Collection&lt;MenuViewBean&gt;" visibility="public"/>
+        <Method name="hasOnlyOneProfile" returnType="boolean" visibility="public"/>
+        <Method name="hasActiveProfile" returnType="boolean" visibility="public"/>
+        <Method name="getUserName" returnType="String" visibility="public"/>
+        <Method name="getPerfisSistema" returnType="List&lt;RoleGroupKey&gt;" visibility="public"/>
+        <Method name="setActiveProfile" returnType="void" visibility="public">
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="invalidateSession" returnType="void" visibility="public"/>
+        <Method name="createMenuViewBean" returnType="MenuViewBean" visibility="private">
+          <Argument type="ModuloSistema" name="sysModulo"/>
+        </Method>
+        <Method name="createMenuViewBean" returnType="MenuViewBean" visibility="private">
+          <Argument type="AplicacaoModulo" name="appModulo"/>
+          <Argument type="List&lt;MenuViewBean&gt;" name="opsAplicacao"/>
+        </Method>
+        <Method name="createMenuViewBean" returnType="MenuViewBean" visibility="private">
+          <Argument type="OpcaoAplicacao" name="opcaoAplicacao"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="RoleGroupManager" package="br.gov.to.sefaz.seg.business.authentication.domain" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="groups" type="Map&lt;RoleGroupKey, Set&lt;String&gt;&gt;" visibility="private" isFinal="true"/>
+        <Field name="activeGroup" type="Optional&lt;RoleGroupKey&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="setActiveGroup" returnType="void" visibility="public">
+          <Argument type="RoleGroupType" name="type"/>
+          <Argument type="Long" name="id"/>
+        </Method>
+        <Method name="setActiveGroup" returnType="void" visibility="public">
+          <Argument type="RoleGroupKey" name="activeGroup"/>
+        </Method>
+        <Method name="getRoles" returnType="Set&lt;String&gt;" visibility="public"/>
+        <Method name="getKeys" returnType="Set&lt;RoleGroupKey&gt;" visibility="public"/>
+        <Method name="addRoles" returnType="void" visibility="public">
+          <Argument type="RoleGroupType" name="type"/>
+          <Argument type="Long" name="id"/>
+          <Argument type="String" name="roles"/>
+        </Method>
+        <Method name="addRoles" returnType="void" visibility="public">
+          <Argument type="RoleGroupType" name="type"/>
+          <Argument type="Long" name="id"/>
+          <Argument type="Collection&lt;String&gt;" name="roles"/>
+        </Method>
+        <Method name="addRoles" returnType="void" visibility="public">
+          <Argument type="RoleGroupKey" name="key"/>
+          <Argument type="String" name="roles"/>
+        </Method>
+        <Method name="addRoles" returnType="void" visibility="public">
+          <Argument type="RoleGroupKey" name="key"/>
+          <Argument type="Collection&lt;String&gt;" name="roles"/>
+        </Method>
+        <Method name="getActiveGroup" returnType="Optional&lt;RoleGroupKey&gt;" visibility="public"/>
+        <Method name="createIfAbsent" returnType="void" visibility="private">
+          <Argument type="RoleGroupKey" name="key"/>
+        </Method>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="MenuViewBean" package="br.gov.to.sefaz.seg.template.managedbean.viewbean" visibility="public" xPosition="10.0" yPosition="504.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private" isFinal="true"/>
+        <Field name="id" type="Long" visibility="private" isFinal="true"/>
+        <Field name="ref" type="String" visibility="private" isFinal="true"/>
+        <Field name="childs" type="List&lt;MenuViewBean&gt;" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="Long" name="id"/>
+          <Argument type="Collection&lt;MenuViewBean&gt;" name="childs"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="Long" name="id"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="Long" name="id"/>
+          <Argument type="String" name="ref"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="getChilds" returnType="List&lt;MenuViewBean&gt;" visibility="public"/>
+        <Method name="addAllChilds" returnType="void" visibility="public">
+          <Argument type="Collection&lt;MenuViewBean&gt;" name="menus"/>
+        </Method>
+        <Method name="addChild" returnType="void" visibility="public">
+          <Argument type="MenuViewBean" name="menu"/>
+        </Method>
+        <Method name="getRef" returnType="String" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="compareTo" returnType="int" visibility="public">
+          <Argument type="MenuViewBean" name="o"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ModuloSistemaFacadeImpl" package="br.gov.to.sefaz.seg.business.gestao.facade.impl" visibility="public" xPosition="649.0" yPosition="998.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="ModuloSistemaService" name="service"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="ModuloSistemaServiceImpl" package="br.gov.to.sefaz.seg.business.gestao.service.impl" visibility="public" xPosition="1286.0" yPosition="804.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="ModuloSistemaRepository" name="repository"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRepository" returnType="ModuloSistemaRepository" visibility="protected"/>
+        <Method name="findAll" returnType="Collection&lt;ModuloSistema&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ModuloSistema" package="br.gov.to.sefaz.seg.persistence.entity" visibility="public" xPosition="1832.0" yPosition="617.0">
+      <Fields>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="identificacaoModuloSistema" type="Long" visibility="private"/>
+        <Field name="abreviacaoModulo" type="String" visibility="private"/>
+        <Field name="descricaoModuloSistema" type="String" visibility="private"/>
+        <Field name="aplicacaoModulos" type="Set&lt;AplicacaoModulo&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="getIdentificacaoModuloSistema" returnType="Long" visibility="public"/>
+        <Method name="setIdentificacaoModuloSistema" returnType="void" visibility="public">
+          <Argument type="Long" name="identificacaoModuloSistema"/>
+        </Method>
+        <Method name="getAbreviacaoModulo" returnType="String" visibility="public"/>
+        <Method name="setAbreviacaoModulo" returnType="void" visibility="public">
+          <Argument type="String" name="abreviacaoModulo"/>
+        </Method>
+        <Method name="getDescricaoModuloSistema" returnType="String" visibility="public"/>
+        <Method name="setDescricaoModuloSistema" returnType="void" visibility="public">
+          <Argument type="String" name="descricaoModuloSistema"/>
+        </Method>
+        <Method name="getAplicacaoModulos" returnType="Set&lt;AplicacaoModulo&gt;" visibility="public"/>
+        <Method name="setAplicacaoModulos" returnType="void" visibility="public">
+          <Argument type="Set&lt;AplicacaoModulo&gt;" name="aplicacaoModulos"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="OpcaoAplicacao" package="br.gov.to.sefaz.seg.persistence.entity" visibility="public" xPosition="1264.0" yPosition="1184.0">
+      <Fields>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="identificacaoOpcaoAplicacao" type="Long" visibility="private"/>
+        <Field name="casoUso" type="String" visibility="private"/>
+        <Field name="descripcaoOpcao" type="String" visibility="private"/>
+        <Field name="opcaoUrl" type="String" visibility="private"/>
+        <Field name="ajudaOpcao" type="String" visibility="private"/>
+        <Field name="identificacaoAplicacaoModulo" type="Long" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="getIdentificacaoOpcaoAplicacao" returnType="Long" visibility="public"/>
+        <Method name="setIdentificacaoOpcaoAplicacao" returnType="void" visibility="public">
+          <Argument type="Long" name="identificacaoOpcaoAplicacao"/>
+        </Method>
+        <Method name="getCasoUso" returnType="String" visibility="public"/>
+        <Method name="setCasoUso" returnType="void" visibility="public">
+          <Argument type="String" name="casoUso"/>
+        </Method>
+        <Method name="getDescripcaoOpcao" returnType="String" visibility="public"/>
+        <Method name="setDescripcaoOpcao" returnType="void" visibility="public">
+          <Argument type="String" name="descripcaoOpcao"/>
+        </Method>
+        <Method name="getOpcaoUrl" returnType="String" visibility="public"/>
+        <Method name="setOpcaoUrl" returnType="void" visibility="public">
+          <Argument type="String" name="opcaoUrl"/>
+        </Method>
+        <Method name="getAjudaOpcao" returnType="String" visibility="public"/>
+        <Method name="setAjudaOpcao" returnType="void" visibility="public">
+          <Argument type="String" name="ajudaOpcao"/>
+        </Method>
+        <Method name="getIdentificacaoAplicacaoModulo" returnType="Long" visibility="public"/>
+        <Method name="setIdentificacaoAplicacaoModulo" returnType="void" visibility="public">
+          <Argument type="Long" name="identificacaoAplicacaoModulo"/>
+        </Method>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="AplicacaoModulo" package="br.gov.to.sefaz.seg.persistence.entity" visibility="public" xPosition="1825.0" yPosition="1298.0">
+      <Fields>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="identificacaoAplicacaoModulo" type="Long" visibility="private"/>
+        <Field name="descricaoAplicacaoModulo" type="String" visibility="private"/>
+        <Field name="identificacaoModuloSistema" type="Long" visibility="private"/>
+        <Field name="opcoesAplicacao" type="Set&lt;OpcaoAplicacao&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="Long" visibility="public"/>
+        <Method name="getIdentificacaoAplicacaoModulo" returnType="Long" visibility="public"/>
+        <Method name="setIdentificacaoAplicacaoModulo" returnType="void" visibility="public">
+          <Argument type="Long" name="identificacaoAplicacaoModulo"/>
+        </Method>
+        <Method name="getDescricaoAplicacaoModulo" returnType="String" visibility="public"/>
+        <Method name="setDescricaoAplicacaoModulo" returnType="void" visibility="public">
+          <Argument type="String" name="descricaoAplicacaoModulo"/>
+        </Method>
+        <Method name="getIdentificacaoModuloSistema" returnType="Long" visibility="public"/>
+        <Method name="setIdentificacaoModuloSistema" returnType="void" visibility="public">
+          <Argument type="Long" name="identificacaoModuloSistema"/>
+        </Method>
+        <Method name="getOpcoesAplicacao" returnType="Set&lt;OpcaoAplicacao&gt;" visibility="public"/>
+        <Method name="setOpcoesAplicacao" returnType="void" visibility="public">
+          <Argument type="Set&lt;OpcaoAplicacao&gt;" name="opcoesAplicacao"/>
+        </Method>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="ModuloSistemaFacade" package="br.gov.to.sefaz.seg.business.gestao.facade" visibility="public" xPosition="591.0" yPosition="838.0">
+      <Methods/>
+    </Interface>
+    <Interface name="ModuloSistemaService" package="br.gov.to.sefaz.seg.business.gestao.service" visibility="public" xPosition="911.0" yPosition="838.0">
+      <Methods/>
+    </Interface>
+    <Interface name="ModuloSistemaRepository" package="br.gov.to.sefaz.seg.persistence.repository" visibility="public" xPosition="1406.0" yPosition="1031.0">
+      <Methods>
+        <Method name="findAllFetched" returnType="Set&lt;ModuloSistema&gt;" visibility="package"/>
+      </Methods>
+    </Interface>
+    <Enum name="RoleGroupType" package="br.gov.to.sefaz.seg.business.authentication.domain" visibility="public" xPosition="1107.0" yPosition="192.0">
+      <Literals>
+        <Literal name="PERFIL"/>
+        <Literal name="PROCURACAO"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="aplicacaoModulos" source="br.gov.to.sefaz.seg.persistence.entity.ModuloSistema" target="br.gov.to.sefaz.seg.persistence.entity.AplicacaoModulo" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Set&lt;AplicacaoModulo&gt;"/>
+    <HasRelation name="childs" source="br.gov.to.sefaz.seg.template.managedbean.viewbean.MenuViewBean" target="br.gov.to.sefaz.seg.template.managedbean.viewbean.MenuViewBean" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;MenuViewBean&gt;"/>
+    <HasRelation name="opcoesAplicacao" source="br.gov.to.sefaz.seg.persistence.entity.AplicacaoModulo" target="br.gov.to.sefaz.seg.persistence.entity.OpcaoAplicacao" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Set&lt;OpcaoAplicacao&gt;"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.seg.business.gestao.facade.impl.ModuloSistemaFacadeImpl" target="br.gov.to.sefaz.seg.business.gestao.facade.ModuloSistemaFacade"/>
+    <UseRelation name="" source="br.gov.to.sefaz.seg.business.gestao.service.impl.ModuloSistemaServiceImpl" target="br.gov.to.sefaz.seg.persistence.repository.ModuloSistemaRepository" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="groups" source="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupManager" target="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupKey" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="Map&lt;RoleGroupKey, Set&lt;String&gt;&gt;"/>
+    <HasRelation name="allModulos" source="br.gov.to.sefaz.seg.template.managedbean.DefaultTemplateMB" target="br.gov.to.sefaz.seg.persistence.entity.ModuloSistema" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.seg.business.authentication.handler.AuthenticatedUserHandler" target="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupType" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.seg.business.gestao.service.impl.ModuloSistemaServiceImpl" target="br.gov.to.sefaz.seg.business.gestao.service.ModuloSistemaService"/>
+    <HasRelation name="activeGroup" source="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupManager" target="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupKey" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="moduloSistemaFacade" source="br.gov.to.sefaz.seg.template.managedbean.DefaultTemplateMB" target="br.gov.to.sefaz.seg.business.gestao.facade.ModuloSistemaFacade" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.seg.business.authentication.handler.AuthenticatedUserHandler" target="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupKey" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="br.gov.to.sefaz.seg.business.gestao.facade.impl.ModuloSistemaFacadeImpl" target="br.gov.to.sefaz.seg.business.gestao.service.ModuloSistemaService" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="type" source="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupKey" target="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupType" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.seg.business.gestao.service.impl.ModuloSistemaServiceImpl" target="br.gov.to.sefaz.seg.persistence.entity.ModuloSistema" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.seg.template.managedbean.DefaultTemplateMB" target="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupKey" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.seg.template.managedbean.DefaultTemplateMB" target="br.gov.to.sefaz.seg.template.managedbean.viewbean.MenuViewBean" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.seg.persistence.repository.ModuloSistemaRepository" target="br.gov.to.sefaz.seg.persistence.entity.ModuloSistema" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupManager" target="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupType" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

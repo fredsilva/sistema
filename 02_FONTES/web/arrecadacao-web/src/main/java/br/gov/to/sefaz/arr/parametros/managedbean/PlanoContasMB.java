@@ -52,7 +52,7 @@ public class PlanoContasMB extends DefaultCrudMB<PlanoContas, Long> {
         List<PlanoContas> resultList = getFacade().find(filter);
 
         if (resultList.isEmpty()) {
-            MessageUtil.addMesage(MessageUtil.SEG, "parametros.pesquisa.vazia");
+            MessageUtil.addMesage(MessageUtil.ARR, "parametros.pesquisa.vazia");
         }
 
         setResultList(resultList);

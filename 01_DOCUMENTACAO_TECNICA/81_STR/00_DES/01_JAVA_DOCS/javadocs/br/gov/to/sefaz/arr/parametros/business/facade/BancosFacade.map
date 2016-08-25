@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1_0" href="../../../../business/facade/CrudFacade.html" title="br.gov.to.sefaz.business.facade.CrudFacade" alt="" coords="24,11,296,225"/>
-<area shape="rect" id="node1" href="../../../../business/facade/CrudFacade.html" title="&lt;TABLE&gt;" alt="" coords="13,5,307,231"/>
-<area shape="rect" id="node2_1" href="./BancosFacade.html" title="br.gov.to.sefaz.arr.parametros.business.facade.BancosFacade" alt="" coords="107,284,213,327"/>
-<area shape="rect" id="node2" href="./BancosFacade.html" title="&lt;TABLE&gt;" alt="" coords="96,279,224,332"/>
-<area shape="rect" id="node3_2" href="./impl/BancosFacadeImpl.html" title="br.gov.to.sefaz.arr.parametros.business.facade.impl.BancosFacadeImpl" alt="" coords="16,385,304,461"/>
-<area shape="rect" id="node3" href="./impl/BancosFacadeImpl.html" title="&lt;TABLE&gt;" alt="" coords="5,380,315,467"/>
-</map>
