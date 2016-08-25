@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+        xmlns:sat="http://sefaz.to.gov.br/composites"
+        xmlns:a4j="http://richfaces.org/a4j">
+
+<ui:composition template="/protected/views/templates/views/default-template.xhtml">
+
+    <ui:param name="pageTitle" value="#{seg_msg['seg.gestao.manterUsuarioSistema.titulo']}"/>
+
+    <ui:define name="header">
+        <h:outputScript library="js" name="seg/gestao/manter-usuario-sistema.js"/>
+        <h:outputScript library="js" name="core/sat.date.js"/>
+    </ui:define>
+
+    <ui:define name="content">
+        <sat:panel title="#{seg_msg['seg.gestao.manterUsuarioSistema.titulo']}">
+            <div class="col-md-12">
+                <h:form id="manter-usuario-sistema-filtro">
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <h:outputLabel for="nomeUsuario">
+                                #{seg_msg['seg.gestao.manterUsuarioSistema.filter.nomeCompletoUsuario']}
+                            </h:outputLabel>
+                            <h:inputText value="#{manterUsuarioSistemaMB.filter.nomeCompletoUsuario}"
+                                    id="nomeUsuario"
+                                    styleClass="form-control"
+                                    maxlength="60">
+                            </h:inputText>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h:outputLabel for="cpfUsuario">
+                                #{seg_msg['seg.gestao.manterUsuarioSistema.filter.cpf']}
+                            </h:outputLabel>
+                            <h:inputText value="#{manterUsuarioSistemaMB.filter.cpfUsuario}"
+                                    id="cpfUsuario"
+                                    styleClass="form-control"
+                                    maxlength="14"
+                                    p:data-mask="999.999.999-99">
+                                <f:converter converterId="cpfFacesConverter"/>
+                            </h:inputText>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h:outputLabel
+                                    for="dataCriacao">
+                                #{seg_msg['seg.gestao.manterUsuarioSistema.filter.dataSolicitacao']}
+                            </h:outputLabel>
+                            <div class="input-group">
+                                <h:inputText id='dataCriacao'
+                                        value="#{manterUsuarioSistemaMB.filter.dataCriacao}"
+                                        styleClass="form-control datepicker date-picker"
+                                        maxlength="10"
+                                        p:data-mask="99/99/9999">
+                                    <f:converter converterId="localDateFacesConverter"/>
+                                </h:inputText>
+                                <h:outputLabel for="dataCriacao"
+                                        class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"/>
+                                </h:outputLabel>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h:outputLabel
+                                    for="situacaoUsuario">#{seg_msg['seg.gestao.manterUsuarioSistema.filter.status']}
+                            </h:outputLabel>
+                            <h:selectOneMenu value="#{manterUsuarioSistemaMB.filter.situacaoUsuario}" id="situacaoUsuario"
+                                    styleClass="form-control">
+                                <f:selectItem value="#{null}"
+                                        itemValue=""
+                                        itemLabel="Todos"/>
+                                <f:selectItems value="#{segEnumsMB.situacoes}"
+                                        var="situacaoUsuario"
+                                        itemValue="#{situacaoUsuario}"
+                                        itemLabel="#{segEnumsMB.getSituacaoLabel(situacaoUsuario)}"/>
+                            </h:selectOneMenu>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h:outputLabel for="unidadeOrganizacional">
+                                #{seg_msg['seg.gestao.manterUsuarioSistema.filter.unidadeOrganizacional']}
+                            </h:outputLabel>
+                            <h:selectOneMenu value="#{manterUsuarioSistemaMB.filter.codigoUnidadeOrganizacional}"
+                                    id="unidadeOrganizacional"
+                                    styleClass="form-control">
+                                <f:selectItem value="#{null}"
+                                        itemValue=""
+                                        itemLabel="Todas as Unidades"/>
+                                <f:selectItems value="#{manterUsuarioSistemaMB.allUnidadeOrganizacionais}"
+                                        var="unidadeOrganizacional"
+                                        itemValue="#{unidadeOrganizacional.identificacaoUnidOrganizac}"
+                                        itemLabel="#{unidadeOrganizacional.nomeUnidOrganizac}"/>
+                            </h:selectOneMenu>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h:outputLabel for="postoTrabalho">
+                                #{seg_msg['seg.gestao.manterUsuarioSistema.filter.postoTrabalho']}
+                            </h:outputLabel>
+                            <h:selectOneMenu value="#{manterUsuarioSistemaMB.filter.codigoPostoTrabalho}"
+                                    id="postoTrabalho"
+                                    styleClass="form-control">
+                                <f:selectItem value="#{null}"
+                                        itemValue=""
+                                        itemLabel="Todos os Postos"/>
+                                <f:selectItems value="#{manterUsuarioSistemaMB.allPostoTrabalho}"
+                                        var="postoTrabalho"
+                                        itemValue="#{postoTrabalho.identificacaoPostoTrabalho}"
+                                        itemLabel="#{postoTrabalho.nomePostoTrabalho}"/>
+                            </h:selectOneMenu>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-12 text-right">
+                        <h:commandButton type="button"
+                                value="#{seg_msg['seg.gestao.manterUsuarioSistema.table.button.consultar']}"
+                                styleClass="btn btn-primary align-bottom"
+                                action="#{manterUsuarioSistemaMB.search}">
+                            <f:ajax render="manter-usuario-sistema-table"
+                                    execute="nomeUsuario cpfUsuario dataCriacao situacaoUsuario unidadeOrganizacional postoTrabalho"/>
+                        </h:commandButton>
+                        <h:commandButton type="button"
+                                value="#{seg_msg['seg.gestao.manterUsuarioSistema.table.button.criarUsuario']}"
+                                styleClass="btn btn-primary align-bottom"
+                                action="#{manterUsuarioSistemaMB.getUsuarioById}"
+                                onclick="openModalCreate()">
+                        </h:commandButton>
+
+                        <sat:opcaoAjudaButton styleClass="align-bottom" />
+                    </div>
+                </h:form>
+            </div>
+            <h:panelGroup layout="block" id="manter-usuario-group-table">
+                <sat:table id="manter-usuario-sistema-table"
+                        bundle="seg_msg"
+                        content="#{manterUsuarioSistemaMB.resultList}"
+                        headers="seg.gestao.manterUsuarioSistema.table.nomeCompletoUsuario,
+                                 seg.gestao.manterUsuarioSistema.table.cpfUsuario,
+                                 seg.gestao.manterUsuarioSistema.table.tipoUsuario,
+                                 seg.gestao.manterUsuarioSistema.table.status,
+                                 seg.gestao.manterUsuarioSistema.table.dataCriacao,
+                                 seg.gestao.manterUsuarioSistema.table.criadoPelo,
+                                 seg.gestao.manterUsuarioSistema.table.unidadeOrganizacional,
+                                 seg.gestao.manterUsuarioSistema.table.postoTrabalho"
+                        fields="nomeCompletoUsuario, cpfUsuario:cpf, descricaoTipoUsuario, situacaoUsuario:string,
+                        dataInsercao:dateTime, usuarioInsercao, nomeUnidOrganizac, nomePostoDeTrabalho,
+                        situacaoUsuario:hide, cpfUsuario:hide, correioEletronico:hide"
+                        actionsHeader="seg.gestao.manterUsuarioSistema.table.acoes"
+                        hasActions="true"
+                        columnDefs="{'class': 'tbody-nowrap', 'targets': [1,4]}"
+                        actionEvents="select-row:click:editUser(9),
+                                        active:click:toggleUserStatus(9),
+                                        inactive:click:toggleUserStatus(9),
+                                        lock-row:click:resetPassword(9;10)"
+                        actionVisible="active:show:isActive(8),inactive:hide:isActive(8)">
+                    <f:facet name="actions">
+                        <a href="javascript:void(0);" class="select-row glyphicon glyphicon-pencil" data-toggle="tooltip"
+                                title="Criar usuário"/>
+                        <a href="javascript:void(0);" class="lock-row glyphicon glyphicon-lock" data-toggle="tooltip" title="Criar senha"/>
+                        <a href="javascript:void(0);" class="inactive glyphicon glyphicon-download" data-toggle="tooltip"
+                                title="Inativar Usuário"/>
+                        <a href="javascript:void(0);" class="active glyphicon glyphicon-upload" data-toggle="tooltip"
+                                title="Ativar Usuário"/>
+                    </f:facet>
+                </sat:table>
+            </h:panelGroup>
+            <h:form>
+                <a4j:jsFunction name="editUser"
+                        action="#{manterUsuarioSistemaMB.getUsuarioById}"
+                        render="manter-usuario-group"
+                        oncomplete="openModalUpdate()">
+                    <a4j:param name="cpf" assignTo="#{manterUsuarioSistemaMB.dto.cpfUsuario}"/>
+                </a4j:jsFunction>
+                <a4j:jsFunction name="resetPassword"
+                        action="#{manterUsuarioSistemaMB.resetUserPassword}">
+                    <a4j:param name="cpf" assignTo="#{manterUsuarioSistemaMB.dto.cpfUsuario}"/>
+                    <a4j:param name="email" assignTo="#{manterUsuarioSistemaMB.dto.correioEletronico}"/>
+                </a4j:jsFunction>
+                <a4j:jsFunction name="toggleUserStatus"
+                        action="#{manterUsuarioSistemaMB.toggleStatusUsuario}"
+                        render="manter-usuario-sistema-table">
+                    <a4j:param name="cpf" assignTo="#{manterUsuarioSistemaMB.dto.cpfUsuario}"/>
+                </a4j:jsFunction>
+                <h:outputScript>
+                    datePicker('.datepicker');
+                </h:outputScript>
+            </h:form>
+            <div id="manterUsuarioSistemaModal" class="modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" id="manterUsuarioSistemaModalDialog">
+                    <div class="modal-content" id="manterUsuarioSistemaModalContent">
+                        <div class="modal-header" id="manterUsuarioSistemaModalHeader">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"
+                                    onclick="resetFields()">
+                                <span aria-hidden="true">&#xd7;</span>
+                            </button>
+                            <h4>
+                                <h:outputText id="manterUsuarioSistemaModalTitleCreate"
+                                        value="#{seg_msg['seg.gestao.manterUsuarioSistema.form.titulo.criar']}"/>
+                                <h:outputText id="manterUsuarioSistemaModalTitleUpdate"
+                                        value="#{seg_msg['seg.gestao.manterUsuarioSistema.form.titulo.alterar']}"/>
+                            </h4>
+                        </div>
+                        <div class="modal-body" id="usuarioSistemaModalBody">
+                            <h:form id="manter-usuario-form">
+                                <h:panelGroup layout="block" id="manter-usuario-group">
+                                    <div class="row">
+                                        <div class="form-group col-md-6">
+                                            <h:outputLabel
+                                                    for="numeroSolicitaoUsuarioForm"
+                                                    id="numeroSolicitacaoLabel">
+                                                #{seg_msg['seg.gestao.manterUsuarioSistema.form.numeroSolicitacao']}
+                                            </h:outputLabel>
+                                            <h:inputText
+                                                    id="numeroSolicitaoUsuarioForm"
+                                                    styleClass="form-control"
+                                                    maxlength="20"
+                                                    readonly="#{facesContext.renderResponse}"
+                                                    value="#{manterUsuarioSistemaMB.dto.solicitacaoUsuario.id}">
+                                            </h:inputText>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <h:outputLabel
+                                                    for="dataSolicitacaoUsuarioForm"
+                                                    id="dataSolicitacaoLabel">
+                                                #{seg_msg['seg.gestao.manterUsuarioSistema.form.dataSolicitacao']}
+                                            </h:outputLabel>
+                                            <h:inputText value="#{manterUsuarioSistemaMB.dto.solicitacaoUsuario.dataInsercao}"
+                                                    id="dataSolicitacaoUsuarioForm"
+                                                    styleClass="form-control"
+                                                    maxlength="19"
+                                                    converter="localDateTimeFacesConverter"
+                                                    readonly="#{facesContext.renderResponse}"/>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <h:outputLabel
+                                                    for="cpfUsuarioForm">
+                                                #{seg_msg['seg.gestao.manterUsuarioSistema.form.cpfUsuario']}
+                                            </h:outputLabel>
+                                            <h:inputText value="#{manterUsuarioSistemaMB.dto.cpfUsuario}"
+                                                    id="cpfUsuarioForm"
+                                                    styleClass="form-control"
+                                                    maxlength="14"
+                                                    converter="cpfFacesConverter"
+                                                    p:data-mask="999.999.999-99"/>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <h:outputLabel
+                                                    for="nomeCompletoUsuarioForm" id="nomeCompletoFormLabelWith">
+                                                #{seg_msg['seg.gestao.manterUsuarioSistema.form.nomeCompletoUsuarioWith']}
+                                            </h:outputLabel>
+                                            <h:outputLabel
+                                                    for="nomeCompletoUsuarioForm" id="nomeCompletoFormLabelWithout">
+                                                #{seg_msg['seg.gestao.manterUsuarioSistema.form.nomeCompletoUsuarioWithout']}
+                                            </h:outputLabel>
+                                            <h:inputText value="#{manterUsuarioSistemaMB.dto.nomeCompletoUsuario}"
+                                                    id="nomeCompletoUsuarioForm"
+                                                    styleClass="form-control"
+                                                    maxlength="100"
+                                                    />
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <h:outputLabel
+                                                    for="cepUsuarioForm">
+                                                #{seg_msg['seg.gestao.manterUsuarioSistema.form.cepUsuario']}
+                                            </h:outputLabel>
+                                            <h:inputText value="#{manterUsuarioSistemaMB.dto.cep}"
+                                                    id="cepUsuarioForm"
+                                                    styleClass="form-control"
+                                                    converter="cepFacesConverter"
+                                                    p:data-mask="99999-999"
+                                                    maxlength="9"
+                                                    />
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                            <h:outputLabel
+                                                    for="logradouroUsuarioForm">
+                                                #{seg_msg['seg.gestao.manterUsuarioSistema.form.logradouroUsuario']}
+                                            </h:outputLabel>
+                                            <h:selectOneMenu value="#{manterUsuarioSistemaMB.dto.codigoLogradouro}"
+                                                    id="logradouroUsuarioForm"
+                                                    styleClass="form-control">
+                                                <f:selectItem value="#{null}"
+                                                        itemValue=""
+                                                        itemLabel="Selecione"/>
+                                                <f:selectItems value="#{manterUsuarioSistemaMB.logradouros}"
+                                                        var="logradouroUsuarioForm"
+                                                        itemValue="#{logradouroUsuarioForm.codigoLogradouro}"
+                                                        itemLabel="#{logradouroUsuarioForm.descricaoLogradouro}"/>
+                                            </h:selectOneMenu>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <h:outputLabel
+                                                    for="enderecoUsuarioForm">
+                                                #{seg_msg['seg.gestao.manterUsuarioSistema.form.enderecoUsuario']}
+                                            </h:outputLabel>
+                                            <h:inputText value="#{manterUsuarioSistemaMB.dto.endereco}"
+                                                    id="enderecoUsuarioForm"
+                                                    styleClass="form-control"
+                                                    maxlength="100"
+                                                    />
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <h:outputLabel
+                                                    for="numeroEnderecoUsuarioForm">
+                                                #{seg_msg['seg.gestao.manterUsuarioSistema.form.numeroEnderecoUsuario']}
+                                            </h:outputLabel>
+                                            <h:inputText value="#{manterUsuarioSistemaMB.dto.numeroEndereco}"
+                                                    id="numeroEnderecoUsuarioForm"
+                                                    styleClass="form-control justInteger"
+                                                    maxlength="8"
+                                                    />
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <h:outputLabel
+                                                    for="apartamentoUsuarioForm">
+                                                #{seg_msg['seg.gestao.manterUsuarioSistema.form.apartamentoUsuario']}
+                                            </h:outputLabel>
+                                            <h:inputText value="#{manterUsuarioSistemaMB.dto.apartamento}"
+                                                    id="apartamentoUsuarioForm"
+                                                    styleClass="form-control justInteger"
+                                                    maxlength="8"
+                                                    readonly="#{facesContext.renderResponse}"
+                                                    />
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <h:outputLabel
+                                                    for="complementoUsuarioForm">
+                                                #{seg_msg['seg.gestao.manterUsuarioSistema.form.complementoEnderecoUsuario']}
+                                            </h:outputLabel>
+                                            <h:inputText value="#{manterUsuarioSistemaMB.dto.complemento}"
+                                                    id="complementoUsuarioForm"
+                                                    styleClass="form-control"
+                                                    maxlength="30"
+                                                    readonly="#{facesContext.renderResponse}"
+                                                    />
+                                        </div>
+                                        <div class="form-group col-md-12">
+                                            <h:outputLabel
+                                                    for="bairroUsuarioForm">
+                                                #{seg_msg['seg.gestao.manterUsuarioSistema.form.bairroUsuario']}
+                                            </h:outputLabel>
+                                            <h:inputText value="#{manterUsuarioSistemaMB.dto.bairro}"
+                                                    id="bairroUsuarioForm"
+                                                    styleClass="form-control"
+                                                    maxlength="100"
+                                                    />
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <h:outputLabel
+                                                    for="estadoUsuarioForm">
+                                                #{seg_msg['seg.gestao.manterUsuarioSistema.form.estadoUsuario']}
+                                            </h:outputLabel>
+                                            <h:selectOneMenu value="#{manterUsuarioSistemaMB.dto.codigoEstado}"
+                                                    id="estadoUsuarioForm"
+                                                    styleClass="form-control">
+                                                <f:selectItem value="#{null}"
+                                                        itemValue=""
+                                                        itemLabel="Selecione um Estado"/>
+                                                <f:selectItems value="#{manterUsuarioSistemaMB.estados}"
+                                                        var="estadoUsuarioForm"
+                                                        itemValue="#{estadoUsuarioForm.unidadeFederacao}"
+                                                        itemLabel="#{estadoUsuarioForm.nomeEstado}"/>
+                                                <f:ajax render="cidadeUsuarioForm" listener="#{manterUsuarioSistemaMB.loadMunicipios}"/>
+                                            </h:selectOneMenu>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <h:outputLabel
+                                                    for="cidadeUsuarioForm">
+                                                #{seg_msg['seg.gestao.manterUsuarioSistema.form.cidadeUsuario']}
+                                            </h:outputLabel>
+                                            <h:selectOneMenu value="#{manterUsuarioSistemaMB.dto.codigoMunicipio}" id="cidadeUsuarioForm"
+                                                    styleClass="form-control">
+                                                <f:selectItem value="#{null}"
+                                                        itemValue=""
+                                                        itemLabel="Selecione uma Cidade"/>
+                                                <f:selectItems value="#{manterUsuarioSistemaMB.municipios}"
+                                                        var="cidadeUsuario"
+                                                        itemValue="#{cidadeUsuario.codigoIbge}"
+                                                        itemLabel="#{cidadeUsuario.nomeMunicipio}"/>
+                                            </h:selectOneMenu>
+                                        </div>
+                                        <div class="form-group col-md-12">
+                                            <h:outputLabel
+                                                    for="enderecoContatoUsuarioForm">
+                                                #{seg_msg['seg.gestao.manterUsuarioSistema.form.enderecoContatoUsuario']}
+                                            </h:outputLabel>
+                                            <h:inputTextarea value="#{manterUsuarioSistemaMB.dto.outroEnderecoContato}"
+                                                    id="enderecoContatoUsuarioForm"
+                                                    styleClass="form-control"
+                                                    p:maxlength="300"
+                                                    readonly="#{facesContext.renderResponse}"
+                                                    />
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <h:outputLabel
+                                                    for="telefoneResidencialUsuarioForm">
+                                                #{seg_msg['seg.gestao.manterUsuarioSistema.form.telefoneUsuario']}
+                                            </h:outputLabel>
+                                            <h:inputText value="#{manterUsuarioSistemaMB.dto.telefoneResidencial}"
+                                                    id="telefoneResidencialUsuarioForm"
+                                                    styleClass="form-control"
+                                                    maxlength="20"
+                                                    readonly="#{facesContext.renderResponse}"
+                                                    />
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <h:outputLabel
+                                                    for="celularUsuarioForm">
+                                                #{seg_msg['seg.gestao.manterUsuarioSistema.form.celularUsuario']}
+                                            </h:outputLabel>
+                                            <h:inputText value="#{manterUsuarioSistemaMB.dto.telefoneCelular}"
+                                                    id="celularUsuarioForm"
+                                                    styleClass="form-control justInteger"
+                                                    maxlength="10"
+                                                    readonly="#{facesContext.renderResponse}"
+                                                    />
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                            <h:outputLabel
+                                                    for="correioEletronicoUsuarioForm">
+                                                #{seg_msg['seg.gestao.manterUsuarioSistema.form.correioEletronicoUsuario']}
+                                            </h:outputLabel>
+                                            <h:inputText value="#{manterUsuarioSistemaMB.dto.correioEletronico}"
+                                                    id="correioEletronicoUsuarioForm"
+                                                    styleClass="form-control"
+                                                    maxlength="50"
+                                                    />
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <h:outputLabel for="tipoUsuarioForm">
+                                                #{seg_msg['seg.gestao.manterUsuarioSistema.form.tipoUsuario']}
+                                            </h:outputLabel>
+                                            <h:selectOneMenu
+                                                    value="#{manterUsuarioSistemaMB.dto.codigoTipoUsuario}"
+                                                    id="tipoUsuarioForm"
+                                                    styleClass="form-control"
+                                                    onchange="validateTipoUsuario(this.value)">
+                                                <f:selectItems value="#{manterUsuarioSistemaMB.tipoUsuarios}"
+                                                        var="tipoUsuarioForm"
+                                                        itemValue="#{tipoUsuarioForm.codigoTipoUsuario}"
+                                                        itemLabel="#{tipoUsuarioForm.descricaoTipoUsuario}"/>
+                                            </h:selectOneMenu>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <h:outputLabel
+                                                    for="crcUsuarioForm">
+                                                #{seg_msg['seg.gestao.manterUsuarioSistema.form.crcUsuario']}
+                                            </h:outputLabel>
+                                            <h:inputText value="#{manterUsuarioSistemaMB.dto.crc}"
+                                                    id="crcUsuarioForm"
+                                                    styleClass="form-control"
+                                                    maxlength="20"
+                                                    readonly="#{facesContext.renderResponse}"
+                                                    />
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <h:outputLabel for="unidadeOrganizacionalForm"
+                                                    id="unidadeOrganizacionalLabel">
+                                                #{seg_msg['seg.gestao.manterUsuarioSistema.form.unidadeOrganizacional']}
+                                            </h:outputLabel>
+                                            <h:selectOneMenu
+                                                    value="#{manterUsuarioSistemaMB.dto.unidadeOrganizacionalPostoTrabalho}"
+                                                    id="unidadeOrganizacionalForm"
+                                                    styleClass="form-control">
+                                                <f:selectItem value="#{null}"
+                                                        itemValue=""
+                                                        itemLabel="Todas as Unidades"/>
+                                                <f:selectItems value="#{manterUsuarioSistemaMB.allUnidadeOrganizacionais}"
+                                                        var="unidadeOrganizacionalForm"
+                                                        itemValue="#{unidadeOrganizacionalForm.identificacaoUnidOrganizac}"
+                                                        itemLabel="#{unidadeOrganizacionalForm.nomeUnidOrganizac}"/>
+                                                <f:ajax render="postoTrabalhoForm"
+                                                        listener="#{manterUsuarioSistemaMB.loadPostosTrabalho}"/>
+                                            </h:selectOneMenu>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <h:outputLabel for="postoTrabalho" id="postoTrabalhoLabel">
+                                                #{seg_msg['seg.gestao.manterUsuarioSistema.form.postoTrabalho']}
+                                            </h:outputLabel>
+                                            <h:selectOneMenu
+                                                    value="#{manterUsuarioSistemaMB.dto.usuarioPostoTrabalhoPostoTrabalhoIdentific}"
+                                                    id="postoTrabalhoForm"
+                                                    styleClass="form-control">
+                                                <f:selectItem value="#{null}"
+                                                        itemValue=""
+                                                        itemLabel="Todos os Postos"/>
+                                                <f:selectItems value="#{manterUsuarioSistemaMB.allPostoTrabalho}"
+                                                        var="postoTrabalhoForm"
+                                                        itemValue="#{postoTrabalhoForm.identificacaoPostoTrabalho}"
+                                                        itemLabel="#{postoTrabalhoForm.nomePostoTrabalho}"/>
+                                            </h:selectOneMenu>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <h:outputLabel
+                                                    for="cnpjEmpresaUsuarioForm">
+                                                #{seg_msg['seg.gestao.manterUsuarioSistema.form.cnpjEmpresaUsuario']}
+                                            </h:outputLabel>
+                                            <h:inputText value="#{manterUsuarioSistemaMB.dto.cnpjNegocio}"
+                                                    id="cnpjEmpresaUsuarioForm"
+                                                    styleClass="form-control"
+                                                    maxlength="19" p:data-mask="99.999.999/9999-99"
+                                                    readonly="#{facesContext.renderResponse}">
+                                            <f:converter converterId="cnpjFacesConverter"/>
+                                            </h:inputText>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <h:outputLabel
+                                                    for="inscricaoEstadualUsuarioForm">
+                                                #{seg_msg['seg.gestao.manterUsuarioSistema.form.inscricaoEstadualUsuario']}
+                                            </h:outputLabel>
+                                            <h:inputText
+                                                    value="#{manterUsuarioSistemaMB.dto.inscricaoEstadualNegocio}"
+                                                    id="inscricaoEstadualUsuarioForm"
+                                                    styleClass="form-control"
+                                                    readonly="#{facesContext.renderResponse}"
+                                                    maxlength="20"/>
+                                        </div>
+                                        <div class="form-group col-md-12">
+                                            <h:outputLabel
+                                                    for="justificacaoCriacaoUsuarioForm">
+                                                #{seg_msg['seg.gestao.manterUsuarioSistema.form.justificacaoCriacao']}
+                                            </h:outputLabel>
+                                            <h:inputTextarea
+                                                    value="#{manterUsuarioSistemaMB.dto.justificacaoCriacao}"
+                                                    id="justificacaoCriacaoUsuarioForm"
+                                                    styleClass="form-control"
+                                                    p:maxlength="300" />
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer" id="usuarioSistemaModalFooter">
+                                        <button type="button" class="btn btn-default" data-dismiss="modal"
+                                                value="#{seg_msg['seg.gestao.usuarioSistema.form.fechar']}"
+                                                aria-label="#{seg_msg['seg.gestao.manterUsuarioSistema.form.fechar']}"
+                                                onclick="resetFields()">
+                                            <span aria-hidden="false">#{seg_msg['seg.gestao.manterUsuarioSistema.form.fechar']}</span>
+                                        </button>
+                                        <sat:saveUpdateButton label="#{seg_msg['seg.gestao.manterUsuarioSistema.form.criarUsuario']}"
+                                                id="saveUpdateButton"
+                                                crudMb="#{manterUsuarioSistemaMB}"
+                                                render="manter-usuario-group-table"
+                                                onEvent="resetOnSuccess"
+                                                execute="cpfUsuarioForm nomeCompletoUsuarioForm cepUsuarioForm
+                                                        logradouroUsuarioForm enderecoUsuarioForm numeroEnderecoUsuarioForm
+                                                        apartamentoUsuarioForm complementoUsuarioForm bairroUsuarioForm
+                                                        estadoUsuarioForm cidadeUsuarioForm enderecoContatoUsuarioForm
+                                                        telefoneResidencialUsuarioForm celularUsuarioForm
+                                                        correioEletronicoUsuarioForm tipoUsuarioForm crcUsuarioForm
+                                                        unidadeOrganizacionalForm postoTrabalhoForm cnpjEmpresaUsuarioForm
+                                                        inscricaoEstadualUsuarioForm justificacaoCriacaoUsuarioForm"
+                                                saveAction="createUser"
+                                                updateAction="updateUser" />
+                                    </div>
+                                </h:panelGroup>
+                            </h:form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </sat:panel>
+    </ui:define>
+</ui:composition>
+</html>

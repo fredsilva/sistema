@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:sat="http://sefaz.to.gov.br/composites"
+        xmlns:a4j="http://richfaces.org/a4j"
+        xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+
+<ui:composition template="/protected/views/templates/views/default-template.xhtml">
+
+    <ui:param name="pageTitle" value="#{par_msg['par.gestao.manutencaoParametros.titulo']}"/>
+
+    <ui:define name="header">
+        <h:outputScript library="js" name="par/gestao/manutencao-parametros.js"/>
+    </ui:define>
+
+    <ui:define name="content">
+        <sat:panel title="#{par_msg['par.gestao.manutencaoParametros.titulo']}">
+            <div class="col-md-12">
+                <h:form id="tipo-usuario-filtro">
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <h:outputLabel for="nomeParametroGeral">
+                                #{par_msg['par.gestao.manutencaoParametros.filter.nome']}
+                            </h:outputLabel>
+                            <h:inputText value="#{parametroGeralMB.filter.nomeParametroGeral}"
+                                    id="nomeParametroGeral"
+                                    styleClass="form-control"
+                                    maxlength="20"/>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+
+                                <div class="form-group col-sm-12 text-right">
+                                    <h:commandButton type="button"
+                                            value="#{par_msg['par.gestao.manutencaoParametros.button.consultar']}"
+                                            styleClass="btn btn-primary align-bottom"
+                                            action="#{parametroGeralMB.search()}">
+                                        <f:ajax render="parametros-table"
+                                                execute="nomeParametroGeral"/>
+                                    </h:commandButton>
+
+                                    <h:commandButton type="button"
+                                            value="#{par_msg['par.gestao.manutencaoParametros.button.inserir']}"
+                                            styleClass="btn btn-primary align-bottom"
+                                            onclick="openModalInsert();">
+                                    </h:commandButton>
+
+                                    <sat:opcaoAjudaButton styleClass="align-bottom"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </h:form>
+            </div>
+            <sat:table id="parametros-table"
+                    bundle="par_msg"
+                    content="#{parametroGeralMB.resultList}"
+                    headers="par.gestao.manutencaoParametros.table.id,
+                             par.gestao.manutencaoParametros.table.nome,
+                             par.gestao.manutencaoParametros.table.objetivo,
+                             par.gestao.manutencaoParametros.table.tipo,
+                             par.gestao.manutencaoParametros.table.conteudo"
+                    fields="idParametroGeral,nomeParametroGeral,objetivoParametro,tipoParametroGeral:string,conteudoValores"
+                    hasActions="true"
+                    defaulSortColumn="1"
+                    actionsHeader="par.gestao.manutencaoParametros.table.acoes"
+                    actionEvents="edit-row:click:editRow,
+                                  delete-row:click:deleteParametroGeral(0):confirm:par.gestao.manutencaoParametros.modal.excluir.confirmacao">
+                <f:facet name="actions">
+                    <i class="edit-row glyphicon glyphicon-pencil" aria-hidden="true" data-toggle="tooltip"
+                            title="Alterar" role="button"/>
+                    <i class="delete-row glyphicon glyphicon-remove" aria-hidden="true" data-toggle="tooltip"
+                            title="Excluir" role="button"/>
+                </f:facet>
+            </sat:table>
+            <div id="manutencaoParametroModal" class="modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" id="manutencaoParametroModalDialog">
+                    <div class="modal-content" id="manutencaoParametroModalContent">
+                        <div class="modal-header" id="manutencaoParametroModalHeader">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                <span aria-hidden="true">&#xd7;</span>
+                            </button>
+                            <h4 class="modal-title"
+                                    id="manutencaoParametroTitle">#{par_msg['par.gestao.manutencaoParametros.modal.titulo']}</h4>
+                        </div>
+                        <div class="modal-body" id="manutencaoParametroModalBody">
+                            <h:form id="manutencao-parametro-form">
+                                <div class="row">
+                                    <div class="form-group col-md-12">
+                                        <h:inputHidden id="idParametroGeralModal"
+                                                value="#{parametroGeralMB.dto.idParametroGeral}"/>
+                                        <h:outputLabel
+                                                for="nomeParametroGeralModal">#{par_msg['par.gestao.manutencaoParametros.modal.nome']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{parametroGeralMB.dto.nomeParametroGeral}"
+                                                id="nomeParametroGeralModal"
+                                                styleClass="form-control" maxlength="50"/>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <h:outputLabel
+                                                for="objetivoParametroGeralModal">#{par_msg['par.gestao.manutencaoParametros.modal.objetivo']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{parametroGeralMB.dto.objetivoParametro}"
+                                                id="objetivoParametroGeralModal"
+                                                styleClass="form-control"
+                                                maxlength="200"/>
+
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <h:outputLabel
+                                                for="tipoParametroGeralModal">
+                                            #{par_msg['par.gestao.manutencaoParametros.modal.tipo']}
+                                        </h:outputLabel>
+                                        <h:selectOneRadio id="tipoParametroGeralModal" styleClass="jsf-radio"
+                                                value="#{parametroGeralMB.dto.tipoParametroGeral}">
+                                            <f:selectItems value="#{tipoParametroGeralMB.situacoes}"
+                                                    var="tipoParametro"
+                                                    itemValue="#{tipoParametro}"
+                                                    itemLabel="#{tipoParametroGeralMB.getSituacaoLabel(tipoParametro)}"/>
+                                        </h:selectOneRadio>
+                                    </div>
+
+                                    <div class="form-group col-md-12">
+                                        <h:outputLabel
+                                                for="conteudoValoresParametroGeralModal">#{par_msg['par.gestao.manutencaoParametros.modal.conteudo']}
+                                        </h:outputLabel>
+                                        <h:inputTextarea value="#{parametroGeralMB.dto.conteudoValores}"
+                                                id="conteudoValoresParametroGeralModal"
+                                                styleClass="form-control"
+                                                a:maxlength="4000"/>
+                                    </div>
+                                </div>
+                                <div class="modal-footer" id="manutencaoParametroFooter">
+                                    <button type="button" class="btn btn-default align-bottom" data-dismiss="modal"
+                                            value="#{par_msg['par.gestao.manutencaoParametros.modal.fechar']}"
+                                            aria-label="#{par_msg['par.gestao.manutencaoParametros.modal.fechar']}">
+                                        <span aria-hidden="false">#{par_msg['par.gestao.manutencaoParametros.modal.fechar']}</span>
+                                    </button>
+                                    <sat:saveUpdateButton
+                                            label="#{par_msg['par.gestao.manutencaoParametros.modal.salvar']}"
+                                            render="parametros-table"
+                                            execute="idParametroGeralModal nomeParametroGeralModal objetivoParametroGeralModal tipoParametroGeralModal conteudoValoresParametroGeralModal"
+                                            onEvent="resetOnSuccess" styleClass="align-bottom"
+                                            crudMb="#{parametroGeralMB}"/>
+                                </div>
+                                <a4j:jsFunction name="deleteParametroGeral"
+                                        action="#{parametroGeralMB.delete}"
+                                        render="parametros-table"
+                                        oncomplete="resetOnSuccess(event)">
+                                    <a4j:param name="idParametroGeral"
+                                            assignTo="#{parametroGeralMB.dto.idParametroGeral}"/>
+                                </a4j:jsFunction>
+                            </h:form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </sat:panel>
+    </ui:define>
+</ui:composition>
+</html>

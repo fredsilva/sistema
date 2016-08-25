@@ -29,7 +29,11 @@
                                 <h:inputText value="#{usuarioSistemaMB.filter.cpfUsuario}"
                                         id="cpfUsuarioSistema"
                                         styleClass="form-control"
+<<<<<<< Updated upstream
                                         maxlength="20"
+=======
+                                        maxlength="14"
+>>>>>>> Stashed changes
                                         p:data-mask="999.999.999-99">
                                     <f:converter converterId="cpfFacesConverter"/>
                                 </h:inputText>
@@ -41,7 +45,11 @@
                                 <h:inputText value="#{usuarioSistemaMB.filter.nomeCompletoUsuario}"
                                         id="nomeUsuarioSistema"
                                         styleClass="form-control"
+<<<<<<< Updated upstream
                                         maxlength="100">
+=======
+                                        maxlength="40">
+>>>>>>> Stashed changes
                                 </h:inputText>
                             </div>
                             <div class="form-group col-md-4">
@@ -50,6 +58,11 @@
                                 </h:outputLabel>
                                 <h:selectOneMenu value="#{usuarioSistemaMB.filter.situacaoUsuario}" id="situacaoUsuario"
                                         styleClass="form-control">
+<<<<<<< Updated upstream
+=======
+                                    <f:selectItem value="#{null}"
+                                            itemLabel="[Todos]" />
+>>>>>>> Stashed changes
                                     <f:selectItems value="#{segEnumsMB.situacoes}"
                                             var="situacaoUsuario"
                                             itemValue="#{situacaoUsuario}"
@@ -65,6 +78,11 @@
                                 <h:selectOneMenu value="#{usuarioSistemaMB.filter.tipoUsuario}"
                                         id="tipoUsuarioForm"
                                         styleClass="form-control">
+<<<<<<< Updated upstream
+=======
+                                    <f:selectItem value="#{null}"
+                                        itemLabel="[Todos]" />
+>>>>>>> Stashed changes
                                     <f:selectItems value="#{usuarioSistemaMB.allTipoUsuario}"
                                             var="tipoUsuarioForm"
                                             itemValue="#{tipoUsuarioForm.codigoTipoUsuario}"
@@ -77,11 +95,20 @@
                                 </h:outputLabel>
                                 <h:selectOneMenu value="#{usuarioSistemaMB.filter.codigoEstado}" id="codigoEstadoForm"
                                         styleClass="form-control">
+<<<<<<< Updated upstream
+=======
+                                    <f:selectItem value="#{null}"
+                                            itemLabel="[Todos]" />
+>>>>>>> Stashed changes
                                     <f:selectItems value="#{usuarioSistemaMB.estados}"
                                             var="codigoEstadoForm"
                                             itemValue="#{codigoEstadoForm.unidadeFederacao}"
                                             itemLabel="#{codigoEstadoForm.nomeEstado}"/>
+<<<<<<< Updated upstream
                                     <f:ajax render="municipio" listener="#{usuarioSistemaMB.loadMunicipios()}"/>
+=======
+                                    <f:ajax render="municipio" listener="#{usuarioSistemaMB.loadMunicipiosFilter()}"/>
+>>>>>>> Stashed changes
                                 </h:selectOneMenu>
                             </div>
                             <div class="form-group col-md-4">
@@ -90,6 +117,11 @@
                                 </h:outputLabel>
                                 <h:selectOneMenu value="#{usuarioSistemaMB.filter.codigoMunicipio}" id="municipio"
                                         styleClass="form-control">
+<<<<<<< Updated upstream
+=======
+                                    <f:selectItem value="#{null}"
+                                            itemLabel="[Todas]" />
+>>>>>>> Stashed changes
                                     <f:selectItems value="#{usuarioSistemaMB.municipios}"
                                             var="municipio"
                                             itemValue="#{municipio.codigoIbge}"
@@ -106,10 +138,15 @@
                                         execute="cpfUsuarioSistema nomeUsuarioSistema situacaoUsuario
                                         tipoUsuarioForm codigoEstadoForm municipio"/>
                             </h:commandButton>
+<<<<<<< Updated upstream
                             <h:commandButton type="button"
                                     value="#{seg_msg['seg.gestao.usuarioSistema.table.button.ajuda']}"
                                     styleClass="btn btn-primary align-bottom">
                             </h:commandButton>
+=======
+
+                            <sat:opcaoAjudaButton styleClass="align-bottom" />
+>>>>>>> Stashed changes
                         </div>
                 </h:form>
             </div>
@@ -128,7 +165,12 @@
                     fields="nomeCompletoUsuario, cpfUsuario:cpf, descricaoTipoUsuario, situacaoUsuario, nomeMunicipio,
                             dataInsercao:dateTime, usuarioInsercao, dataInsercao:dateTime, historicoLoginSistema:dateTime, cpfUsuario:hide"
                     actionsHeader="seg.gestao.usuarioSistema.table.acoes"
+<<<<<<< Updated upstream
                     hasActions="true" actionEvents="select-row:click:viewUser(9)">
+=======
+                    hasActions="true" actionEvents="select-row:click:viewUser(9)"
+                    columnDefs="{'class': 'tbody-nowrap', 'targets': [1, 5, 7, 8]}">
+>>>>>>> Stashed changes
                 <f:facet name="actions">
                     <i class="select-row glyphicon glyphicon-eye-open" role="button" />
                 </f:facet>
@@ -163,7 +205,11 @@
                                         <h:inputText
                                                 id="numeroSolicitaoUsuarioForm"
                                                 styleClass="form-control"
+<<<<<<< Updated upstream
                                                 maxlength="20"
+=======
+                                                maxlength="40"
+>>>>>>> Stashed changes
                                                 readonly="true"
                                                 value="#{usuarioSistemaMB.dto.solicitacaoUsuario.id}">
                                                 </h:inputText>
@@ -176,7 +222,11 @@
                                         <h:inputText value="#{usuarioSistemaMB.dto.solicitacaoUsuario.dataInsercao}"
                                                 id="dataSolicitacaoUsuarioForm"
                                                 styleClass="form-control"
+<<<<<<< Updated upstream
                                                 maxlength="21"
+=======
+                                                maxlength="19"
+>>>>>>> Stashed changes
                                                 converter="localDateTimeFacesConverter"
                                                 readonly="true"/>
                                     </div>
@@ -188,7 +238,11 @@
                                         <h:inputText value="#{usuarioSistemaMB.dto.cpfUsuario}"
                                                 id="cpfUsuarioForm"
                                                 styleClass="form-control"
+<<<<<<< Updated upstream
                                                 maxlength="20"
+=======
+                                                maxlength="14"
+>>>>>>> Stashed changes
                                                 converter="cpfFacesConverter"
                                                 readonly="true"/>
                                     </div>
@@ -200,7 +254,11 @@
                                         <h:inputText value="#{usuarioSistemaMB.dto.nomeCompletoUsuario}"
                                                 id="nomeCompletoUsuarioForm"
                                                 styleClass="form-control"
+<<<<<<< Updated upstream
                                                 maxlength="100"
+=======
+                                                maxlength="40"
+>>>>>>> Stashed changes
                                                 readonly="true"/>
                                     </div>
                                     <div class="form-group col-md-3">
@@ -220,11 +278,23 @@
                                                 for="logradouroUsuarioForm">
                                             #{seg_msg['seg.gestao.usuarioSistema.form.logradouroUsuario']}
                                         </h:outputLabel>
+<<<<<<< Updated upstream
                                         <h:inputText value="#{usuarioSistemaMB.dto.codigoLogradouro}"
                                                 id="logradouroUsuarioForm"
                                                 styleClass="form-control"
                                                 maxlength="100"
                                                 readonly="true"/>
+=======
+                                        <h:selectOneMenu value="#{usuarioSistemaMB.dto.codigoLogradouro}"
+                                                id="logradouroUsuarioForm"
+                                                styleClass="form-control"
+                                                disabled="true">
+                                            <f:selectItems value="#{usuarioSistemaMB.logradouros}"
+                                                    var="logradouroUsuarioForm"
+                                                    itemValue="#{logradouroUsuarioForm.codigoLogradouro}"
+                                                    itemLabel="#{logradouroUsuarioForm.descricaoLogradouro}"/>
+                                        </h:selectOneMenu>
+>>>>>>> Stashed changes
                                     </div>
                                     <div class="form-group col-md-6">
                                         <h:outputLabel
@@ -245,7 +315,11 @@
                                         <h:inputText value="#{usuarioSistemaMB.dto.numeroEndereco}"
                                                 id="numeroEnderecoUsuarioForm"
                                                 styleClass="form-control"
+<<<<<<< Updated upstream
                                                 maxlength="5"
+=======
+                                                maxlength="8"
+>>>>>>> Stashed changes
                                                 readonly="true"/>
                                     </div>
                                     <div class="form-group col-md-4">
@@ -256,7 +330,11 @@
                                         <h:inputText value="#{usuarioSistemaMB.dto.apartamento}"
                                                 id="apartamentoUsuarioForm"
                                                 styleClass="form-control"
+<<<<<<< Updated upstream
                                                 maxlength="100"
+=======
+                                                maxlength="8"
+>>>>>>> Stashed changes
                                                 readonly="true"/>
                                     </div>
                                     <div class="form-group col-md-4">
@@ -267,7 +345,11 @@
                                         <h:inputText value="#{usuarioSistemaMB.dto.complemento}"
                                                 id="complementoUsuarioForm"
                                                 styleClass="form-control"
+<<<<<<< Updated upstream
                                                 maxlength="100"
+=======
+                                                maxlength="30"
+>>>>>>> Stashed changes
                                                 readonly="true"/>
                                     </div>
                                     <div class="form-group col-md-12">
@@ -309,6 +391,10 @@
                                         <h:inputTextarea value="#{usuarioSistemaMB.dto.outroEnderecoContato}"
                                                 id="enderecoContatoUsuarioForm"
                                                 styleClass="form-control"
+<<<<<<< Updated upstream
+=======
+                                                p:maxlength="300"
+>>>>>>> Stashed changes
                                                 readonly="true"/>
                                     </div>
                                     <div class="form-group col-md-4">
@@ -319,6 +405,10 @@
                                         <h:inputText value="#{usuarioSistemaMB.dto.telefoneResidencial}"
                                                 id="telefoneResidencialUsuarioForm"
                                                 styleClass="form-control"
+<<<<<<< Updated upstream
+=======
+                                                maxlength="20"
+>>>>>>> Stashed changes
                                                 readonly="true"/>
                                     </div>
                                     <div class="form-group col-md-4">
@@ -329,6 +419,10 @@
                                         <h:inputText value="#{usuarioSistemaMB.dto.telefoneCelular}"
                                                 id="celularUsuarioForm"
                                                 styleClass="form-control"
+<<<<<<< Updated upstream
+=======
+                                                maxlength="10"
+>>>>>>> Stashed changes
                                                 readonly="true"/>
                                     </div>
                                     <div class="form-group col-md-4">
@@ -339,6 +433,10 @@
                                         <h:inputText value="#{usuarioSistemaMB.dto.correioEletronico}"
                                                 id="correioEletronicoUsuarioForm"
                                                 styleClass="form-control"
+<<<<<<< Updated upstream
+=======
+                                                maxlength="50"
+>>>>>>> Stashed changes
                                                 readonly="true"/>
                                     </div>
                                     <div class="form-group col-md-6">
@@ -359,6 +457,10 @@
                                         <h:inputText value="#{usuarioSistemaMB.dto.crc}"
                                                 id="crcUsuarioForm"
                                                 styleClass="form-control"
+<<<<<<< Updated upstream
+=======
+                                                maxlength="9"
+>>>>>>> Stashed changes
                                                 readonly="true"/>
                                     </div>
                                     <div class="form-group col-md-6">
@@ -376,7 +478,11 @@
                                                 for="postoTrabalhoUsuarioForm">
                                             #{seg_msg['seg.gestao.usuarioSistema.form.postoTrabalhoUsuario']}
                                         </h:outputLabel>
+<<<<<<< Updated upstream
                                         <h:inputText value="#{usuarioSistemaMB.dto.nomePostodeTrabalho}"
+=======
+                                        <h:inputText value="#{usuarioSistemaMB.dto.nomePostoDeTrabalho}"
+>>>>>>> Stashed changes
                                                 id="postoTrabalhoUsuarioForm"
                                                 styleClass="form-control"
                                                 readonly="true"/>

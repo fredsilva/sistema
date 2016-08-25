@@ -1,0 +1,1101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="Delegacias" package="br.gov.to.sefaz.arr.parametros.persistence.entity" visibility="public" xPosition="4170.0" yPosition="2834.0">
+      <Fields>
+        <Field name="idDelegacia" type="Integer" visibility="private"/>
+        <Field name="descricao" type="String" visibility="private"/>
+        <Field name="situacao" type="Integer" visibility="private"/>
+        <Field name="tipo" type="Integer" visibility="private"/>
+        <Field name="delegaciaHierarquica" type="Integer" visibility="private"/>
+        <Field name="delegaciaAgenciasCollection" type="Collection&lt;DelegaciaAgencias&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getId" returnType="Integer" visibility="public"/>
+        <Method name="getIdDelegacia" returnType="Integer" visibility="public"/>
+        <Method name="setIdDelegacia" returnType="void" visibility="public">
+          <Argument type="Integer" name="idDelegacia"/>
+        </Method>
+        <Method name="getDescricao" returnType="String" visibility="public"/>
+        <Method name="setDescricao" returnType="void" visibility="public">
+          <Argument type="String" name="descricao"/>
+        </Method>
+        <Method name="getSituacao" returnType="Integer" visibility="public"/>
+        <Method name="setSituacao" returnType="void" visibility="public">
+          <Argument type="Integer" name="situacao"/>
+        </Method>
+        <Method name="getTipo" returnType="Integer" visibility="public"/>
+        <Method name="setTipo" returnType="void" visibility="public">
+          <Argument type="Integer" name="tipo"/>
+        </Method>
+        <Method name="getDelegaciaHierarquica" returnType="Integer" visibility="public"/>
+        <Method name="setDelegaciaHierarquica" returnType="void" visibility="public">
+          <Argument type="Integer" name="delegaciaHierarquica"/>
+        </Method>
+        <Method name="getDelegaciaAgenciasCollection" returnType="Collection&lt;DelegaciaAgencias&gt;" visibility="public"/>
+        <Method name="setDelegaciaAgenciasCollection" returnType="void" visibility="public">
+          <Argument type="Collection&lt;DelegaciaAgencias&gt;" name="delegaciaAgenciasCollection"/>
+        </Method>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PedidoAreasFaixaValor" package="br.gov.to.sefaz.arr.parametros.persistence.entity" visibility="public" xPosition="2249.0" yPosition="4085.0">
+      <Fields>
+        <Field name="idPedidoArea" type="Integer" visibility="private"/>
+        <Field name="valorInicial" type="BigDecimal" visibility="private"/>
+        <Field name="valorFinal" type="BigDecimal" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+        <Constructor visibility="public">
+          <Argument type="Integer" name="idPedidoArea"/>
+          <Argument type="BigDecimal" name="valorInicial"/>
+          <Argument type="BigDecimal" name="valorFinal"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="Integer" visibility="public"/>
+        <Method name="getIdPedidoArea" returnType="Integer" visibility="public"/>
+        <Method name="setIdPedidoArea" returnType="void" visibility="public">
+          <Argument type="Integer" name="idPedidoArea"/>
+        </Method>
+        <Method name="getValorInicial" returnType="BigDecimal" visibility="public"/>
+        <Method name="setValorInicial" returnType="void" visibility="public">
+          <Argument type="BigDecimal" name="valorInicial"/>
+        </Method>
+        <Method name="getValorFinal" returnType="BigDecimal" visibility="public"/>
+        <Method name="setValorFinal" returnType="void" visibility="public">
+          <Argument type="BigDecimal" name="valorFinal"/>
+        </Method>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="DelegaciasServiceImpl" package="br.gov.to.sefaz.arr.parametros.business.service.impl" visibility="public" xPosition="4288.0" yPosition="2085.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="DelegaciasRepository" name="repository"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="PedidoAreasServidores" package="br.gov.to.sefaz.arr.parametros.persistence.entity" visibility="public" xPosition="650.0" yPosition="3491.0">
+      <Fields>
+        <Field name="idPedidoArea" type="Integer" visibility="private"/>
+        <Field name="idServidor" type="Long" visibility="private"/>
+        <Field name="emailServidor" type="String" visibility="private"/>
+        <Field name="situacao" type="SituacaoEnum" visibility="private"/>
+        <Field name="supervisor" type="Boolean" visibility="private"/>
+        <Field name="usuario" type="UsuarioSistema" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="PedidoAreasServidoresPK" visibility="public"/>
+        <Method name="getIdPedidoArea" returnType="Integer" visibility="public"/>
+        <Method name="setIdPedidoArea" returnType="void" visibility="public">
+          <Argument type="Integer" name="idPedidoArea"/>
+        </Method>
+        <Method name="getIdServidor" returnType="Long" visibility="public"/>
+        <Method name="setIdServidor" returnType="void" visibility="public">
+          <Argument type="Long" name="idServidor"/>
+        </Method>
+        <Method name="getEmailServidor" returnType="String" visibility="public"/>
+        <Method name="setEmailServidor" returnType="void" visibility="public">
+          <Argument type="String" name="emailServidor"/>
+        </Method>
+        <Method name="getSituacao" returnType="SituacaoEnum" visibility="public"/>
+        <Method name="setSituacao" returnType="void" visibility="public">
+          <Argument type="SituacaoEnum" name="situacao"/>
+        </Method>
+        <Method name="getSupervisor" returnType="Boolean" visibility="public"/>
+        <Method name="setSupervisor" returnType="void" visibility="public">
+          <Argument type="Boolean" name="supervisor"/>
+        </Method>
+        <Method name="getUsuario" returnType="UsuarioSistema" visibility="public"/>
+        <Method name="setUsuario" returnType="void" visibility="public">
+          <Argument type="UsuarioSistema" name="usuario"/>
+        </Method>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="AuditListner" package="br.gov.to.sefaz.persistence.entity" visibility="public" xPosition="1142.0" yPosition="4615.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="prePersist" returnType="void" visibility="public">
+          <Argument type="AbstractEntity&lt;?&gt;" name="entity"/>
+        </Method>
+        <Method name="preUpdate" returnType="void" visibility="public">
+          <Argument type="AbstractEntity&lt;?&gt;" name="entity"/>
+        </Method>
+        <Method name="preRemove" returnType="void" visibility="public">
+          <Argument type="AbstractEntity&lt;?&gt;" name="entity"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PedidoAreasServidoresChefeSetorValidator" package="br.gov.to.sefaz.arr.parametros.business.service.validator" visibility="public" xPosition="337.0" yPosition="2819.0">
+      <Fields>
+        <Field name="repository" type="PedidoAreasServidoresRepository" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="PedidoAreasServidoresRepository" name="repository"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="support" returnType="boolean" visibility="public">
+          <Argument type="Class&lt;?&gt;" name="clazz"/>
+          <Argument type="String" name="context"/>
+        </Method>
+        <Method name="validate" returnType="Set&lt;CustomViolation&gt;" visibility="public">
+          <Argument type="PedidoAreasServidores" name="target"/>
+        </Method>
+        <Method name="validateAll" returnType="Set&lt;CustomViolation&gt;" visibility="public">
+          <Argument type="Collection&lt;PedidoAreasServidores&gt;" name="target"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PedidoAreasValoresValidator" package="br.gov.to.sefaz.arr.parametros.business.service.validator" visibility="public" xPosition="2276.0" yPosition="3390.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="support" returnType="boolean" visibility="public">
+          <Argument type="Class&lt;?&gt;" name="clazz"/>
+          <Argument type="String" name="context"/>
+        </Method>
+        <Method name="validate" returnType="Set&lt;CustomViolation&gt;" visibility="public">
+          <Argument type="PedidoAreas" name="target"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PedidoAreasQtdDiasByTipoValidator" package="br.gov.to.sefaz.arr.parametros.business.service.validator" visibility="public" xPosition="1937.0" yPosition="2834.0">
+      <Fields>
+        <Field name="repository" type="PedidoAreasRepository" visibility="private" isFinal="true"/>
+        <Field name="tiposRepository" type="PedidoTiposRepository" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="PedidoAreasRepository" name="repository"/>
+          <Argument type="PedidoTiposRepository" name="tiposRepository"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="support" returnType="boolean" visibility="public">
+          <Argument type="Class&lt;?&gt;" name="clazz"/>
+          <Argument type="String" name="context"/>
+        </Method>
+        <Method name="validate" returnType="Set&lt;CustomViolation&gt;" visibility="public">
+          <Argument type="PedidoAreas" name="target"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DelegaciaAgenciasServiceImpl" package="br.gov.to.sefaz.arr.parametros.business.service.impl" visibility="public" xPosition="3538.0" yPosition="2076.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="DelegaciaAgenciasRepository" name="repository"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="findAllByDelegacia" returnType="Collection&lt;DelegaciaAgencias&gt;" visibility="public">
+          <Argument type="Integer" name="idDelegacia"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PedidoAreasServidoresEmptyValidator" package="br.gov.to.sefaz.arr.parametros.business.service.validator" visibility="public" xPosition="2266.0" yPosition="3897.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="support" returnType="boolean" visibility="public">
+          <Argument type="Class&lt;?&gt;" name="clazz"/>
+          <Argument type="String" name="context"/>
+        </Method>
+        <Method name="validate" returnType="Set&lt;CustomViolation&gt;" visibility="public">
+          <Argument type="PedidoAreas" name="target"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="UsuarioSistema" package="br.gov.to.sefaz.seg.persistence.entity" visibility="public" xPosition="103.0" yPosition="3194.0">
+      <Fields>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="cpfUsuario" type="String" visibility="private"/>
+        <Field name="nomeCompletoUsuario" type="String" visibility="private"/>
+        <Field name="cep" type="String" visibility="private"/>
+        <Field name="codigoLogradouro" type="String" visibility="private"/>
+        <Field name="endereco" type="String" visibility="private"/>
+        <Field name="numeroEndereco" type="int" visibility="private"/>
+        <Field name="apartamento" type="Integer" visibility="private"/>
+        <Field name="complemento" type="String" visibility="private"/>
+        <Field name="bairro" type="String" visibility="private"/>
+        <Field name="codigoEstado" type="String" visibility="private"/>
+        <Field name="codigoMunicipio" type="int" visibility="private"/>
+        <Field name="telefoneResidencial" type="String" visibility="private"/>
+        <Field name="outroEnderecoContato" type="String" visibility="private"/>
+        <Field name="correioEletronico" type="String" visibility="private"/>
+        <Field name="telefoneCelular" type="String" visibility="private"/>
+        <Field name="crc" type="String" visibility="private"/>
+        <Field name="situacaoUsuario" type="Character" visibility="private"/>
+        <Field name="alterarSenhaProximoAcesso" type="Character" visibility="private"/>
+        <Field name="dataUltimaAlteracaoSenha" type="LocalDateTime" visibility="private"/>
+        <Field name="justificacaoCriacao" type="String" visibility="private"/>
+        <Field name="estaBloqueado" type="Character" visibility="private"/>
+        <Field name="dataDesbloqueio" type="LocalDateTime" visibility="private"/>
+        <Field name="codigoTipoUsuario" type="Integer" visibility="private"/>
+        <Field name="tipoUsuario" type="TipoUsuario" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="String" visibility="public"/>
+        <Method name="getCpfUsuario" returnType="String" visibility="public"/>
+        <Method name="setCpfUsuario" returnType="void" visibility="public">
+          <Argument type="String" name="cpfUsuario"/>
+        </Method>
+        <Method name="getNomeCompletoUsuario" returnType="String" visibility="public"/>
+        <Method name="setNomeCompletoUsuario" returnType="void" visibility="public">
+          <Argument type="String" name="nomeCompletoUsuario"/>
+        </Method>
+        <Method name="getCep" returnType="String" visibility="public"/>
+        <Method name="setCep" returnType="void" visibility="public">
+          <Argument type="String" name="cep"/>
+        </Method>
+        <Method name="getCodigoLogradouro" returnType="String" visibility="public"/>
+        <Method name="setCodigoLogradouro" returnType="void" visibility="public">
+          <Argument type="String" name="codigoLogradouro"/>
+        </Method>
+        <Method name="getEndereco" returnType="String" visibility="public"/>
+        <Method name="setEndereco" returnType="void" visibility="public">
+          <Argument type="String" name="endereco"/>
+        </Method>
+        <Method name="getNumeroEndereco" returnType="int" visibility="public"/>
+        <Method name="setNumeroEndereco" returnType="void" visibility="public">
+          <Argument type="int" name="numeroEndereco"/>
+        </Method>
+        <Method name="getApartamento" returnType="Integer" visibility="public"/>
+        <Method name="setApartamento" returnType="void" visibility="public">
+          <Argument type="Integer" name="apartamento"/>
+        </Method>
+        <Method name="getComplemento" returnType="String" visibility="public"/>
+        <Method name="setComplemento" returnType="void" visibility="public">
+          <Argument type="String" name="complemento"/>
+        </Method>
+        <Method name="getBairro" returnType="String" visibility="public"/>
+        <Method name="setBairro" returnType="void" visibility="public">
+          <Argument type="String" name="bairro"/>
+        </Method>
+        <Method name="getCodigoEstado" returnType="String" visibility="public"/>
+        <Method name="setCodigoEstado" returnType="void" visibility="public">
+          <Argument type="String" name="codigoEstado"/>
+        </Method>
+        <Method name="getCodigoMunicipio" returnType="int" visibility="public"/>
+        <Method name="setCodigoMunicipio" returnType="void" visibility="public">
+          <Argument type="int" name="codigoMunicipio"/>
+        </Method>
+        <Method name="getTelefoneResidencial" returnType="String" visibility="public"/>
+        <Method name="setTelefoneResidencial" returnType="void" visibility="public">
+          <Argument type="String" name="telefoneResidencial"/>
+        </Method>
+        <Method name="getOutroEnderecoContato" returnType="String" visibility="public"/>
+        <Method name="setOutroEnderecoContato" returnType="void" visibility="public">
+          <Argument type="String" name="outroEnderecoContato"/>
+        </Method>
+        <Method name="getCorreioEletronico" returnType="String" visibility="public"/>
+        <Method name="setCorreioEletronico" returnType="void" visibility="public">
+          <Argument type="String" name="correioEletronico"/>
+        </Method>
+        <Method name="getTelefoneCelular" returnType="String" visibility="public"/>
+        <Method name="setTelefoneCelular" returnType="void" visibility="public">
+          <Argument type="String" name="telefoneCelular"/>
+        </Method>
+        <Method name="getCrc" returnType="String" visibility="public"/>
+        <Method name="setCrc" returnType="void" visibility="public">
+          <Argument type="String" name="crc"/>
+        </Method>
+        <Method name="getSituacaoUsuario" returnType="Character" visibility="public"/>
+        <Method name="setSituacaoUsuario" returnType="void" visibility="public">
+          <Argument type="Character" name="situacaoUsuario"/>
+        </Method>
+        <Method name="getAlterarSenhaProximoAcesso" returnType="Character" visibility="public"/>
+        <Method name="setAlterarSenhaProximoAcesso" returnType="void" visibility="public">
+          <Argument type="Character" name="alterarSenhaProximoAcesso"/>
+        </Method>
+        <Method name="getDataUltimaAlteracaoSenha" returnType="LocalDateTime" visibility="public"/>
+        <Method name="setDataUltimaAlteracaoSenha" returnType="void" visibility="public">
+          <Argument type="LocalDateTime" name="dataUltimaAlteracaoSenha"/>
+        </Method>
+        <Method name="getJustificacaoCriacao" returnType="String" visibility="public"/>
+        <Method name="setJustificacaoCriacao" returnType="void" visibility="public">
+          <Argument type="String" name="justificacaoCriacao"/>
+        </Method>
+        <Method name="getEstaBloqueado" returnType="Character" visibility="public"/>
+        <Method name="setEstaBloqueado" returnType="void" visibility="public">
+          <Argument type="Character" name="estaBloqueado"/>
+        </Method>
+        <Method name="getDataDesbloqueio" returnType="LocalDateTime" visibility="public"/>
+        <Method name="setDataDesbloqueio" returnType="void" visibility="public">
+          <Argument type="LocalDateTime" name="dataDesbloqueio"/>
+        </Method>
+        <Method name="getCodigoTipoUsuario" returnType="Integer" visibility="public"/>
+        <Method name="setCodigoTipoUsuario" returnType="void" visibility="public">
+          <Argument type="Integer" name="codigoTipoUsuario"/>
+        </Method>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PedidoTipos" package="br.gov.to.sefaz.arr.parametros.persistence.entity" visibility="public" xPosition="2940.0" yPosition="3279.0">
+      <Fields>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="idTipoPedido" type="Integer" visibility="private"/>
+        <Field name="descricao" type="String" visibility="private"/>
+        <Field name="parecerAutomatico" type="Boolean" visibility="private"/>
+        <Field name="situacao" type="SituacaoEnum" visibility="private"/>
+        <Field name="valorMinimo" type="BigDecimal" visibility="private"/>
+        <Field name="quantidadeDiasAnalise" type="Integer" visibility="private"/>
+        <Field name="pedidoAreasCollection" type="Collection&lt;PedidoAreas&gt;" visibility="private"/>
+        <Field name="pedidoDocsExigidos" type="List&lt;PedidoDocsExigidos&gt;" visibility="private"/>
+        <Field name="pedidoCamposAcoes" type="List&lt;PedidoCamposAcoes&gt;" visibility="private"/>
+        <Field name="pedidoReceitas" type="List&lt;PedidoReceita&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="Integer" visibility="public"/>
+        <Method name="getIdTipoPedido" returnType="Integer" visibility="public"/>
+        <Method name="setIdTipoPedido" returnType="void" visibility="public">
+          <Argument type="Integer" name="idTipoPedido"/>
+        </Method>
+        <Method name="getDescricao" returnType="String" visibility="public"/>
+        <Method name="setDescricao" returnType="void" visibility="public">
+          <Argument type="String" name="descricao"/>
+        </Method>
+        <Method name="getParecerAutomatico" returnType="Boolean" visibility="public"/>
+        <Method name="setParecerAutomatico" returnType="void" visibility="public">
+          <Argument type="Boolean" name="parecerAutomatico"/>
+        </Method>
+        <Method name="getSituacao" returnType="SituacaoEnum" visibility="public"/>
+        <Method name="setSituacao" returnType="void" visibility="public">
+          <Argument type="SituacaoEnum" name="situacao"/>
+        </Method>
+        <Method name="getValorMinimo" returnType="BigDecimal" visibility="public"/>
+        <Method name="setValorMinimo" returnType="void" visibility="public">
+          <Argument type="BigDecimal" name="valorMinimo"/>
+        </Method>
+        <Method name="getQuantidadeDiasAnalise" returnType="Integer" visibility="public"/>
+        <Method name="setQuantidadeDiasAnalise" returnType="void" visibility="public">
+          <Argument type="Integer" name="quantidadeDiasAnalise"/>
+        </Method>
+        <Method name="getPedidoAreasCollection" returnType="Collection&lt;PedidoAreas&gt;" visibility="public"/>
+        <Method name="setPedidoAreasCollection" returnType="void" visibility="public">
+          <Argument type="Collection&lt;PedidoAreas&gt;" name="pedidoAreasCollection"/>
+        </Method>
+        <Method name="getPedidoCamposAcoes" returnType="List&lt;PedidoCamposAcoes&gt;" visibility="public"/>
+        <Method name="setPedidoCamposAcoes" returnType="void" visibility="public">
+          <Argument type="List&lt;PedidoCamposAcoes&gt;" name="pedidoCamposAcoes"/>
+        </Method>
+        <Method name="getPedidoReceitas" returnType="List&lt;PedidoReceita&gt;" visibility="public"/>
+        <Method name="setPedidoReceitas" returnType="void" visibility="public">
+          <Argument type="List&lt;PedidoReceita&gt;" name="pedidoReceitas"/>
+        </Method>
+        <Method name="getPedidoDocsExigidos" returnType="List&lt;PedidoDocsExigidos&gt;" visibility="public"/>
+        <Method name="setPedidoDocsExigidos" returnType="void" visibility="public">
+          <Argument type="List&lt;PedidoDocsExigidos&gt;" name="pedidoDocsExigidos"/>
+        </Method>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PedidoAreasOrdemParecerSequenceValidator" package="br.gov.to.sefaz.arr.parametros.business.service.validator" visibility="public" xPosition="1349.0" yPosition="2654.0">
+      <Fields>
+        <Field name="repository" type="PedidoAreasRepository" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="PedidoAreasRepository" name="repository"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="support" returnType="boolean" visibility="public">
+          <Argument type="Class&lt;?&gt;" name="clazz"/>
+          <Argument type="String" name="context"/>
+        </Method>
+        <Method name="validate" returnType="Set&lt;CustomViolation&gt;" visibility="public">
+          <Argument type="PedidoAreas" name="target"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PedidoAreasFaixaValorServiceImpl" package="br.gov.to.sefaz.arr.parametros.business.service.impl" visibility="public" xPosition="2266.0" yPosition="2387.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="PedidoAreasFaixaValorRepository" name="repository"/>
+        </Constructor>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="PedidoTiposServiceImpl" package="br.gov.to.sefaz.arr.parametros.business.service.impl" visibility="public" xPosition="2997.0" yPosition="1971.0">
+      <Fields>
+        <Field name="pedidoDocsExigidosService" type="PedidoDocsExigidosService" visibility="private" isFinal="true"/>
+        <Field name="pedidoCamposAcoesService" type="PedidoCamposAcoesService" visibility="private" isFinal="true"/>
+        <Field name="pedidoTipoAcoesService" type="PedidoTipoAcoesService" visibility="private" isFinal="true"/>
+        <Field name="pedidoReceitaService" type="PedidoReceitaService" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getRepository" returnType="PedidoTiposRepository" visibility="protected"/>
+        <Method name="save" returnType="PedidoTipos" visibility="public">
+          <Argument type="PedidoTipos" name="pedidoTipos"/>
+        </Method>
+        <Method name="update" returnType="PedidoTipos" visibility="public">
+          <Argument type="PedidoTipos" name="pedidoTipos"/>
+        </Method>
+        <Method name="saveAllPedidoReceitas" returnType="void" visibility="private">
+          <Argument type="PedidoTipos" name="pedidoTipos"/>
+        </Method>
+        <Method name="saveAllPedidoDocsExigidos" returnType="void" visibility="private">
+          <Argument type="PedidoTipos" name="pedidoTipos"/>
+        </Method>
+        <Method name="delete" returnType="Optional&lt;PedidoTipos&gt;" visibility="public">
+          <Argument type="Integer" name="id"/>
+        </Method>
+        <Method name="saveAllPedidoCamposAcoes" returnType="void" visibility="private">
+          <Argument type="PedidoTipos" name="pedidoTipos"/>
+        </Method>
+        <Method name="cancelarPedidoTipo" returnType="void" visibility="private">
+          <Argument type="Integer" name="id"/>
+        </Method>
+        <Method name="removerPedidoTipo" returnType="void" visibility="private">
+          <Argument type="Integer" name="id"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PedidoAreas" package="br.gov.to.sefaz.arr.parametros.persistence.entity" visibility="public" xPosition="1480.0" yPosition="3043.0">
+      <Fields>
+        <Field name="idPedidoArea" type="Integer" visibility="private"/>
+        <Field name="situacao" type="SituacaoEnum" visibility="private"/>
+        <Field name="ordemParecer" type="Integer" visibility="private"/>
+        <Field name="quantidadeDiasAnalise" type="Integer" visibility="private"/>
+        <Field name="idTipoPedido" type="Integer" visibility="private"/>
+        <Field name="idUnidadeDelegacia" type="Integer" visibility="private"/>
+        <Field name="idDelegacia" type="Integer" visibility="private"/>
+        <Field name="parecerFinal" type="Boolean" visibility="private"/>
+        <Field name="exigeParecer" type="Boolean" visibility="private"/>
+        <Field name="permiteEncaminhamento" type="Boolean" visibility="private"/>
+        <Field name="exigeSupervisor" type="Boolean" visibility="private"/>
+        <Field name="faixaValor" type="PedidoAreasFaixaValor" visibility="private"/>
+        <Field name="delegaciaAgencias" type="DelegaciaAgencias" visibility="private"/>
+        <Field name="tipoPedido" type="PedidoTipos" visibility="private"/>
+        <Field name="pedidoAreasServidores" type="Collection&lt;PedidoAreasServidores&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="Integer" visibility="public"/>
+        <Method name="getIdPedidoArea" returnType="Integer" visibility="public"/>
+        <Method name="setIdPedidoArea" returnType="void" visibility="public">
+          <Argument type="Integer" name="idPedidoArea"/>
+        </Method>
+        <Method name="getParecerFinal" returnType="Boolean" visibility="public"/>
+        <Method name="setParecerFinal" returnType="void" visibility="public">
+          <Argument type="Boolean" name="parecerFinal"/>
+        </Method>
+        <Method name="getSituacao" returnType="SituacaoEnum" visibility="public"/>
+        <Method name="setSituacao" returnType="void" visibility="public">
+          <Argument type="SituacaoEnum" name="situacao"/>
+        </Method>
+        <Method name="getOrdemParecer" returnType="Integer" visibility="public"/>
+        <Method name="setOrdemParecer" returnType="void" visibility="public">
+          <Argument type="Integer" name="ordemParecer"/>
+        </Method>
+        <Method name="getExigeParecer" returnType="Boolean" visibility="public"/>
+        <Method name="setExigeParecer" returnType="void" visibility="public">
+          <Argument type="Boolean" name="exigeParecer"/>
+        </Method>
+        <Method name="getQuantidadeDiasAnalise" returnType="Integer" visibility="public"/>
+        <Method name="setQuantidadeDiasAnalise" returnType="void" visibility="public">
+          <Argument type="Integer" name="quantidadeDiasAnalise"/>
+        </Method>
+        <Method name="getPermiteEncaminhamento" returnType="Boolean" visibility="public"/>
+        <Method name="setPermiteEncaminhamento" returnType="void" visibility="public">
+          <Argument type="Boolean" name="permiteEncaminhamento"/>
+        </Method>
+        <Method name="getExigeSupervisor" returnType="Boolean" visibility="public"/>
+        <Method name="setExigeSupervisor" returnType="void" visibility="public">
+          <Argument type="Boolean" name="exigeSupervisor"/>
+        </Method>
+        <Method name="getDelegaciaAgencias" returnType="DelegaciaAgencias" visibility="public"/>
+        <Method name="setDelegaciaAgencias" returnType="void" visibility="public">
+          <Argument type="DelegaciaAgencias" name="delegaciaAgencias"/>
+        </Method>
+        <Method name="getTipoPedido" returnType="PedidoTipos" visibility="public"/>
+        <Method name="setTipoPedido" returnType="void" visibility="public">
+          <Argument type="PedidoTipos" name="tipoPedido"/>
+        </Method>
+        <Method name="getFaixaValor" returnType="PedidoAreasFaixaValor" visibility="public"/>
+        <Method name="setFaixaValor" returnType="void" visibility="public">
+          <Argument type="PedidoAreasFaixaValor" name="faixaValor"/>
+        </Method>
+        <Method name="getPedidoAreasServidores" returnType="Collection&lt;PedidoAreasServidores&gt;" visibility="public"/>
+        <Method name="setPedidoAreasServidores" returnType="void" visibility="public">
+          <Argument type="Collection&lt;PedidoAreasServidores&gt;" name="pedidoAreasServidores"/>
+        </Method>
+        <Method name="getDelegaciaDescricao" returnType="String" visibility="public"/>
+        <Method name="getDelegaciaAgenciaDescricao" returnType="String" visibility="public"/>
+        <Method name="getIdTipoPedido" returnType="Integer" visibility="public"/>
+        <Method name="setIdTipoPedido" returnType="void" visibility="public">
+          <Argument type="Integer" name="idTipoPedido"/>
+        </Method>
+        <Method name="getIdUnidadeDelegacia" returnType="Integer" visibility="public"/>
+        <Method name="setIdUnidadeDelegacia" returnType="void" visibility="public">
+          <Argument type="Integer" name="idUnidadeDelegacia"/>
+        </Method>
+        <Method name="getIdDelegacia" returnType="Integer" visibility="public"/>
+        <Method name="setIdDelegacia" returnType="void" visibility="public">
+          <Argument type="Integer" name="idDelegacia"/>
+        </Method>
+        <Method name="getValorInicial" returnType="BigDecimal" visibility="public"/>
+        <Method name="getValorFinal" returnType="BigDecimal" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="PedidoAreasMB" package="br.gov.to.sefaz.arr.parametros.managedbean" visibility="public" xPosition="132.0" yPosition="880.0">
+      <Fields>
+        <Field name="allPedidoTipos" type="Collection&lt;PedidoTipos&gt;" visibility="private"/>
+        <Field name="allDelegacias" type="Collection&lt;Delegacias&gt;" visibility="private"/>
+        <Field name="delegaciaAgencias" type="Collection&lt;DelegaciaAgencias&gt;" visibility="private"/>
+        <Field name="pedidoAreaServidores" type="Collection&lt;PedidoAreaServidorViewBean&gt;" visibility="private" isFinal="true"/>
+        <Field name="usuariosSistema" type="Collection&lt;UsuarioSistema&gt;" visibility="private" isFinal="true"/>
+        <Field name="servidorDto" type="PedidoAreasServidores" visibility="private" isFinal="true"/>
+        <Field name="selectedIdServidorDto" type="Long" visibility="private"/>
+        <Field name="idServidorSearchDto" type="Long" visibility="private"/>
+        <Field name="nomeServidorSearchDto" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="setFacade" returnType="void" visibility="protected">
+          <Argument type="PedidoAreasFacade" name="facade"/>
+        </Method>
+        <Method name="getFacade" returnType="PedidoAreasFacade" visibility="protected"/>
+        <Method name="save" returnType="void" visibility="public"/>
+        <Method name="update" returnType="void" visibility="public"/>
+        <Method name="prepareDto" returnType="void" visibility="private"/>
+        <Method name="getSelectedTipoDescriprion" returnType="String" visibility="public"/>
+        <Method name="getServidorDto" returnType="PedidoAreasServidores" visibility="public"/>
+        <Method name="getSelectedIdServidorDto" returnType="Long" visibility="public"/>
+        <Method name="setSelectedIdServidorDto" returnType="void" visibility="public">
+          <Argument type="Long" name="selectedIdServidorDto"/>
+        </Method>
+        <Method name="getAllPedidoTipos" returnType="Collection&lt;PedidoTipos&gt;" visibility="public"/>
+        <Method name="loadAreasCadastradas" returnType="void" visibility="public"/>
+        <Method name="getResultList" returnType="Collection&lt;PedidoAreas&gt;" visibility="public"/>
+        <Method name="getAllDelegacias" returnType="Collection&lt;Delegacias&gt;" visibility="public"/>
+        <Method name="loadDelegaciaAgencias" returnType="void" visibility="public"/>
+        <Method name="getDelegaciaAgencias" returnType="Collection&lt;DelegaciaAgencias&gt;" visibility="public"/>
+        <Method name="getServidoresViewBean" returnType="Collection&lt;PedidoAreaServidorViewBean&gt;" visibility="public"/>
+        <Method name="loadServidoresTable" returnType="void" visibility="public"/>
+        <Method name="addServidor" returnType="void" visibility="public"/>
+        <Method name="updateServidor" returnType="void" visibility="public"/>
+        <Method name="updateServidor" returnType="void" visibility="public">
+          <Argument type="PedidoAreasServidores" name="servidor"/>
+        </Method>
+        <Method name="addServidor" returnType="void" visibility="public">
+          <Argument type="PedidoAreasServidores" name="servidor"/>
+        </Method>
+        <Method name="updateDelegaciasFromServidores" returnType="void" visibility="public"/>
+        <Method name="removePedidoServidor" returnType="void" visibility="public"/>
+        <Method name="clearPedidoTables" returnType="void" visibility="public"/>
+        <Method name="getUsuariosSistema" returnType="Collection&lt;UsuarioSistema&gt;" visibility="public"/>
+        <Method name="getIdServidorSearchDto" returnType="Long" visibility="public"/>
+        <Method name="getNomeServidorSearchDto" returnType="String" visibility="public"/>
+        <Method name="setIdServidorSearchDto" returnType="void" visibility="public">
+          <Argument type="Long" name="idServidorSearchDto"/>
+        </Method>
+        <Method name="setNomeServidorSearchDto" returnType="void" visibility="public">
+          <Argument type="String" name="nomeServidorSearchDto"/>
+        </Method>
+        <Method name="searchServidor" returnType="void" visibility="public"/>
+        <Method name="buildServidoresList" returnType="List&lt;PedidoAreasServidores&gt;" visibility="private"/>
+        <Method name="cloneServidor" returnType="PedidoAreasServidores" visibility="private"/>
+      </Methods>
+    </Class>
+    <Class name="PedidoAreasServiceImpl" package="br.gov.to.sefaz.arr.parametros.business.service.impl" visibility="public" xPosition="1568.0" yPosition="2058.0">
+      <Fields>
+        <Field name="faixaValorService" type="PedidoAreasFaixaValorService" visibility="private" isFinal="true"/>
+        <Field name="servidoresService" type="PedidoAreasServidoresService" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getRepository" returnType="PedidoAreasRepository" visibility="protected"/>
+        <Method name="findAllByTipo" returnType="Collection&lt;PedidoAreas&gt;" visibility="public">
+          <Argument type="Integer" name="idTipoPedido"/>
+        </Method>
+        <Method name="save" returnType="PedidoAreas" visibility="public">
+          <Argument type="PedidoAreas" name="entity"/>
+        </Method>
+        <Method name="update" returnType="PedidoAreas" visibility="public">
+          <Argument type="PedidoAreas" name="entity"/>
+        </Method>
+        <Method name="saveAndUpdate" returnType="PedidoAreas" visibility="private">
+          <Argument type="PedidoAreas" name="entity"/>
+        </Method>
+        <Method name="delete" returnType="Optional&lt;PedidoAreas&gt;" visibility="public">
+          <Argument type="Integer" name="id"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PedidoAreasParecerFinalUniqueValidator" package="br.gov.to.sefaz.arr.parametros.business.service.validator" visibility="public" xPosition="960.0" yPosition="2829.0">
+      <Fields>
+        <Field name="repository" type="PedidoAreasRepository" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="PedidoAreasRepository" name="repository"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="support" returnType="boolean" visibility="public">
+          <Argument type="Class&lt;?&gt;" name="clazz"/>
+          <Argument type="String" name="context"/>
+        </Method>
+        <Method name="validate" returnType="Set&lt;CustomViolation&gt;" visibility="public">
+          <Argument type="PedidoAreas" name="target"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PedidoAreasServidoresDuplicatedValidator" package="br.gov.to.sefaz.arr.parametros.business.service.validator" visibility="public" xPosition="977.0" yPosition="3681.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="support" returnType="boolean" visibility="public">
+          <Argument type="Class&lt;?&gt;" name="clazz"/>
+          <Argument type="String" name="context"/>
+        </Method>
+        <Method name="validate" returnType="Set&lt;CustomViolation&gt;" visibility="public">
+          <Argument type="PedidoAreasServidores" name="target"/>
+        </Method>
+        <Method name="validateAll" returnType="Set&lt;CustomViolation&gt;" visibility="public">
+          <Argument type="Collection&lt;PedidoAreasServidores&gt;" name="target"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DelegaciaAgencias" package="br.gov.to.sefaz.arr.parametros.persistence.entity" visibility="public" xPosition="3517.0" yPosition="2962.0">
+      <Fields>
+        <Field name="idUnidadeDelegacia" type="Integer" visibility="private"/>
+        <Field name="idDelegacia" type="Integer" visibility="private"/>
+        <Field name="descricao" type="String" visibility="private"/>
+        <Field name="pedidoAreasCollection" type="Collection&lt;PedidoAreas&gt;" visibility="private"/>
+        <Field name="delegacias" type="Delegacias" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="DelegaciaAgenciasPK" visibility="public"/>
+        <Method name="getIdUnidadeDelegacia" returnType="Integer" visibility="public"/>
+        <Method name="setIdUnidadeDelegacia" returnType="void" visibility="public">
+          <Argument type="Integer" name="idUnidadeDelegacia"/>
+        </Method>
+        <Method name="getIdDelegacia" returnType="Integer" visibility="public"/>
+        <Method name="setIdDelegacia" returnType="void" visibility="public">
+          <Argument type="Integer" name="idDelegacia"/>
+        </Method>
+        <Method name="getDescricao" returnType="String" visibility="public"/>
+        <Method name="setDescricao" returnType="void" visibility="public">
+          <Argument type="String" name="descricao"/>
+        </Method>
+        <Method name="getPedidoAreasCollection" returnType="Collection&lt;PedidoAreas&gt;" visibility="public"/>
+        <Method name="setPedidoAreasCollection" returnType="void" visibility="public">
+          <Argument type="Collection&lt;PedidoAreas&gt;" name="pedidoAreasCollection"/>
+        </Method>
+        <Method name="getDelegacias" returnType="Delegacias" visibility="public"/>
+        <Method name="setDelegacias" returnType="void" visibility="public">
+          <Argument type="Delegacias" name="delegacias"/>
+        </Method>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="UsuarioSistemaServiceImpl" package="br.gov.to.sefaz.seg.business.service.impl" visibility="public" xPosition="114.0" yPosition="2115.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="UsuarioSistemaRepository" name="repository"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="findAllByCpfAndName" returnType="Collection&lt;UsuarioSistema&gt;" visibility="public">
+          <Argument type="Long" name="cpf"/>
+          <Argument type="String" name="nome"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PedidoAreasServidoresServiceImpl" package="br.gov.to.sefaz.arr.parametros.business.service.impl" visibility="public" xPosition="704.0" yPosition="2058.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="PedidoAreasServidoresRepository" name="repository"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRepository" returnType="PedidoAreasServidoresRepository" visibility="protected"/>
+        <Method name="findAllByPedido" returnType="Collection&lt;PedidoAreasServidores&gt;" visibility="public">
+          <Argument type="Integer" name="idPedidoArea"/>
+        </Method>
+        <Method name="validateDuplicatedServidor" returnType="void" visibility="public">
+          <Argument type="List&lt;PedidoAreasServidores&gt;" name="servidores"/>
+        </Method>
+        <Method name="validateServidorChefe" returnType="void" visibility="public">
+          <Argument type="List&lt;PedidoAreasServidores&gt;" name="servidores"/>
+        </Method>
+        <Method name="deleteByIdPedidoArea" returnType="void" visibility="public">
+          <Argument type="Integer" name="idPedidoArea"/>
+        </Method>
+        <Method name="save" returnType="Collection&lt;PedidoAreasServidores&gt;" visibility="public">
+          <Argument type="Collection&lt;PedidoAreasServidores&gt;" name="list"/>
+        </Method>
+        <Method name="delete" returnType="Optional&lt;PedidoAreasServidores&gt;" visibility="public">
+          <Argument type="PedidoAreasServidoresPK" name="id"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AbstractEntity" package="br.gov.to.sefaz.persistence.entity" visibility="public" isAbstract="true" xPosition="1591.0" yPosition="4261.0">
+      <Fields>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="usuarioInsercao" type="String" visibility="protected"/>
+        <Field name="dataInsercao" type="LocalDateTime" visibility="protected"/>
+        <Field name="usuarioAlteracao" type="String" visibility="protected"/>
+        <Field name="dataAlteracao" type="LocalDateTime" visibility="protected"/>
+        <Field name="registroExcluido" type="Boolean" visibility="protected"/>
+        <Field name="usuarioExclusao" type="String" visibility="protected"/>
+        <Field name="dataExclusao" type="LocalDateTime" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getId" returnType="I" visibility="public" isAbstract="true"/>
+        <Method name="getUsuarioInsercao" returnType="String" visibility="public"/>
+        <Method name="setUsuarioInsercao" returnType="void" visibility="public">
+          <Argument type="String" name="usuarioInsercao"/>
+        </Method>
+        <Method name="getDataInsercao" returnType="LocalDateTime" visibility="public"/>
+        <Method name="setDataInsercao" returnType="void" visibility="public">
+          <Argument type="LocalDateTime" name="dataInsercao"/>
+        </Method>
+        <Method name="getUsuarioAlteracao" returnType="String" visibility="public"/>
+        <Method name="setUsuarioAlteracao" returnType="void" visibility="public">
+          <Argument type="String" name="usuarioAlteracao"/>
+        </Method>
+        <Method name="getDataAlteracao" returnType="LocalDateTime" visibility="public"/>
+        <Method name="setDataAlteracao" returnType="void" visibility="public">
+          <Argument type="LocalDateTime" name="dataAlteracao"/>
+        </Method>
+        <Method name="getRegistroExcluido" returnType="Boolean" visibility="public"/>
+        <Method name="setRegistroExcluido" returnType="void" visibility="public">
+          <Argument type="Boolean" name="registroExcluido"/>
+        </Method>
+        <Method name="getUsuarioExclusao" returnType="String" visibility="public"/>
+        <Method name="setUsuarioExclusao" returnType="void" visibility="public">
+          <Argument type="String" name="usuarioExclusao"/>
+        </Method>
+        <Method name="getDataExclusao" returnType="LocalDateTime" visibility="public"/>
+        <Method name="setDataExclusao" returnType="void" visibility="public">
+          <Argument type="LocalDateTime" name="dataExclusao"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PedidoAreasFacadeImpl" package="br.gov.to.sefaz.arr.parametros.business.facade.impl" visibility="public" xPosition="1714.0" yPosition="1284.0">
+      <Fields>
+        <Field name="pedidoTiposService" type="PedidoTiposService" visibility="private" isFinal="true"/>
+        <Field name="delegaciasService" type="DelegaciasService" visibility="private" isFinal="true"/>
+        <Field name="delegaciaAgenciasService" type="DelegaciaAgenciasService" visibility="private" isFinal="true"/>
+        <Field name="servidoresService" type="PedidoAreasServidoresService" visibility="private" isFinal="true"/>
+        <Field name="usuarioSistemaService" type="UsuarioSistemaService" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getService" returnType="PedidoAreasService" visibility="protected"/>
+        <Method name="findAllPedidoTipos" returnType="Collection&lt;PedidoTipos&gt;" visibility="public"/>
+        <Method name="findAllByTipo" returnType="Collection&lt;PedidoAreas&gt;" visibility="public">
+          <Argument type="Integer" name="idTipoPedido"/>
+        </Method>
+        <Method name="findAllDelegacias" returnType="Collection&lt;Delegacias&gt;" visibility="public"/>
+        <Method name="findAgenciasByDelegacia" returnType="Collection&lt;DelegaciaAgencias&gt;" visibility="public">
+          <Argument type="Integer" name="idDelegacia"/>
+        </Method>
+        <Method name="findAllServidoresByPedido" returnType="Collection&lt;PedidoAreasServidores&gt;" visibility="public">
+          <Argument type="Integer" name="idPedidoArea"/>
+        </Method>
+        <Method name="removeServidor" returnType="Optional&lt;PedidoAreasServidores&gt;" visibility="public">
+          <Argument type="Integer" name="idPedidoArea"/>
+          <Argument type="Long" name="idServidor"/>
+        </Method>
+        <Method name="searchServidor" returnType="Collection&lt;UsuarioSistema&gt;" visibility="public">
+          <Argument type="Long" name="idServidorSearchDto"/>
+          <Argument type="String" name="nomeServidorSearchDto"/>
+        </Method>
+        <Method name="validateDuplicatedServidor" returnType="void" visibility="public">
+          <Argument type="List&lt;PedidoAreasServidores&gt;" name="servidores"/>
+        </Method>
+        <Method name="validateServidorChefe" returnType="void" visibility="public">
+          <Argument type="List&lt;PedidoAreasServidores&gt;" name="servidores"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="DelegaciasService" package="br.gov.to.sefaz.arr.parametros.business.service" visibility="public" xPosition="4383.0" yPosition="1824.0">
+      <Methods/>
+    </Interface>
+    <Interface name="DelegaciasRepository" package="br.gov.to.sefaz.arr.parametros.persistence.repository" visibility="public" xPosition="4380.0" yPosition="2405.0">
+      <Methods/>
+    </Interface>
+    <Interface name="UsuarioSistemaService" package="br.gov.to.sefaz.seg.business.service" visibility="public" xPosition="114.0" yPosition="1896.0">
+      <Methods>
+        <Method name="findAllByCpfAndName" returnType="Collection&lt;UsuarioSistema&gt;" visibility="package">
+          <Argument type="Long" name="cpf"/>
+          <Argument type="String" name="nome"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="PedidoAreasServidoresRepository" package="br.gov.to.sefaz.arr.parametros.persistence.repository" visibility="public" xPosition="700.0" yPosition="2451.0">
+      <Methods>
+        <Method name="existsLockReference" returnType="boolean" visibility="package">
+          <Argument type="Integer" name="idPedidoArea"/>
+          <Argument type="Long" name="idServidor"/>
+        </Method>
+        <Method name="updateSituacao" returnType="void" visibility="package">
+          <Argument type="Integer" name="idPedidoArea"/>
+          <Argument type="Long" name="idServidor"/>
+          <Argument type="SituacaoEnum" name="situacao"/>
+        </Method>
+        <Method name="delete" returnType="void" visibility="package">
+          <Argument type="Integer" name="idPedidoArea"/>
+          <Argument type="Long" name="idServidor"/>
+        </Method>
+        <Method name="existsChefeSetor" returnType="boolean" visibility="package">
+          <Argument type="Integer" name="idPedidoArea"/>
+          <Argument type="Boolean" name="supervisor"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="UsuarioSistemaRepository" package="br.gov.to.sefaz.seg.persistence.repository" visibility="public" xPosition="240.0" yPosition="2489.0">
+      <Methods/>
+    </Interface>
+    <Interface name="PedidoAreasFaixaValorRepository" package="br.gov.to.sefaz.arr.parametros.persistence.repository" visibility="public" xPosition="2666.0" yPosition="2952.0">
+      <Methods>
+        <Method name="delete" returnType="void" visibility="package">
+          <Argument type="Integer" name="id"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="PedidoAreasFaixaValorService" package="br.gov.to.sefaz.arr.parametros.business.service" visibility="public" xPosition="2397.0" yPosition="2139.0">
+      <Methods/>
+    </Interface>
+    <Interface name="DelegaciaAgenciasRepository" package="br.gov.to.sefaz.arr.parametros.persistence.repository" visibility="public" xPosition="3651.0" yPosition="2391.0">
+      <Methods/>
+    </Interface>
+    <Interface name="PedidoAreasServidoresService" package="br.gov.to.sefaz.arr.parametros.business.service" visibility="public" xPosition="726.0" yPosition="1786.0">
+      <Methods>
+        <Method name="findAllByPedido" returnType="Collection&lt;PedidoAreasServidores&gt;" visibility="package">
+          <Argument type="Integer" name="idPedidoArea"/>
+        </Method>
+        <Method name="validateDuplicatedServidor" returnType="void" visibility="package">
+          <Argument type="List&lt;PedidoAreasServidores&gt;" name="servidores"/>
+        </Method>
+        <Method name="validateServidorChefe" returnType="void" visibility="package">
+          <Argument type="List&lt;PedidoAreasServidores&gt;" name="servidores"/>
+        </Method>
+        <Method name="deleteByIdPedidoArea" returnType="void" visibility="package">
+          <Argument type="Integer" name="idPedidoArea"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="PedidoAreasRepository" package="br.gov.to.sefaz.arr.parametros.persistence.repository" visibility="public" xPosition="1485.0" yPosition="2391.0">
+      <Methods>
+        <Method name="existsLockReference" returnType="boolean" visibility="package">
+          <Argument type="Integer" name="id"/>
+        </Method>
+        <Method name="updateSituacao" returnType="void" visibility="package">
+          <Argument type="Integer" name="id"/>
+          <Argument type="SituacaoEnum" name="situacao"/>
+        </Method>
+        <Method name="getLastOrdemParecerFromTipo" returnType="Integer" visibility="package">
+          <Argument type="Integer" name="idTipoPedido"/>
+        </Method>
+        <Method name="findIdByParecerFinalAndTipoPedido" returnType="Integer" visibility="package">
+          <Argument type="Boolean" name="parecerFinal"/>
+          <Argument type="Integer" name="idTipoPedido"/>
+        </Method>
+        <Method name="delete" returnType="void" visibility="package">
+          <Argument type="Integer" name="id"/>
+        </Method>
+        <Method name="getTotalQtdDiasAnaliseByTipoAndNotId" returnType="Integer" visibility="package">
+          <Argument type="Integer" name="idTipoPedido"/>
+          <Argument type="Integer" name="idPedidoArea"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="PedidoTiposService" package="br.gov.to.sefaz.arr.parametros.business.service" visibility="public" xPosition="3102.0" yPosition="1786.0">
+      <Methods/>
+    </Interface>
+    <Interface name="DelegaciaAgenciasService" package="br.gov.to.sefaz.arr.parametros.business.service" visibility="public" xPosition="3541.0" yPosition="1815.0">
+      <Methods>
+        <Method name="findAllByDelegacia" returnType="Collection&lt;DelegaciaAgencias&gt;" visibility="package">
+          <Argument type="Integer" name="idDelegacia"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="PedidoTiposRepository" package="br.gov.to.sefaz.arr.parametros.persistence.repository" visibility="public" xPosition="2984.0" yPosition="2859.0">
+      <Methods>
+        <Method name="findExitsIdTipoPedido" returnType="Boolean" visibility="package">
+          <Argument type="Integer" name="idTipoPedido"/>
+        </Method>
+        <Method name="existsLockReference" returnType="Boolean" visibility="package">
+          <Argument type="Integer" name="idTipoPedido"/>
+        </Method>
+        <Method name="updateSituacao" returnType="int" visibility="package">
+          <Argument type="Integer" name="idTipoPedido"/>
+          <Argument type="SituacaoEnum" name="situacao"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="PedidoAreasService" package="br.gov.to.sefaz.arr.parametros.business.service" visibility="public" xPosition="1568.0" yPosition="1815.0">
+      <Methods>
+        <Method name="findAllByTipo" returnType="Collection&lt;PedidoAreas&gt;" visibility="package">
+          <Argument type="Integer" name="idTipoPedido"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="PedidoAreasFacade" package="br.gov.to.sefaz.arr.parametros.business.facade" visibility="public" xPosition="1714.0" yPosition="902.0">
+      <Methods>
+        <Method name="findAllPedidoTipos" returnType="Collection&lt;PedidoTipos&gt;" visibility="package"/>
+        <Method name="findAllByTipo" returnType="Collection&lt;PedidoAreas&gt;" visibility="package">
+          <Argument type="Integer" name="idTipoPedido"/>
+        </Method>
+        <Method name="findAllDelegacias" returnType="Collection&lt;Delegacias&gt;" visibility="package"/>
+        <Method name="findAgenciasByDelegacia" returnType="Collection&lt;DelegaciaAgencias&gt;" visibility="package">
+          <Argument type="Integer" name="idDelegacia"/>
+        </Method>
+        <Method name="findAllServidoresByPedido" returnType="Collection&lt;PedidoAreasServidores&gt;" visibility="package">
+          <Argument type="Integer" name="idPedidoArea"/>
+        </Method>
+        <Method name="removeServidor" returnType="Optional&lt;PedidoAreasServidores&gt;" visibility="package">
+          <Argument type="Integer" name="idPedidoArea"/>
+          <Argument type="Long" name="idServidor"/>
+        </Method>
+        <Method name="searchServidor" returnType="Collection&lt;UsuarioSistema&gt;" visibility="package">
+          <Argument type="Long" name="idServidorSearchDto"/>
+          <Argument type="String" name="nomeServidorSearchDto"/>
+        </Method>
+        <Method name="validateDuplicatedServidor" returnType="void" visibility="package">
+          <Argument type="List&lt;PedidoAreasServidores&gt;" name="servidores"/>
+        </Method>
+        <Method name="validateServidorChefe" returnType="void" visibility="package">
+          <Argument type="List&lt;PedidoAreasServidores&gt;" name="servidores"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Enum name="SituacaoEnum" package="br.gov.to.sefaz.persistence.enums" visibility="public" xPosition="780.0" yPosition="4784.0">
+      <Literals>
+        <Literal name="ATIVO"/>
+        <Literal name="CANCELADO"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation name="" source="br.gov.to.sefaz.arr.parametros.business.service.impl.DelegaciaAgenciasServiceImpl" target="br.gov.to.sefaz.arr.parametros.persistence.repository.DelegaciaAgenciasRepository" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoTiposServiceImpl" target="br.gov.to.sefaz.arr.parametros.business.service.PedidoTiposService"/>
+    <HasRelation name="delegaciasService" source="br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoAreasFacadeImpl" target="br.gov.to.sefaz.arr.parametros.business.service.DelegaciasService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoAreasFaixaValorServiceImpl" target="br.gov.to.sefaz.arr.parametros.business.service.PedidoAreasFaixaValorService"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.persistence.entity.DelegaciaAgencias" target="br.gov.to.sefaz.persistence.entity.AbstractEntity"/>
+    <UseRelation source="br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoAreasFacadeImpl" target="br.gov.to.sefaz.arr.parametros.business.service.PedidoAreasService" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="repository" source="br.gov.to.sefaz.arr.parametros.business.service.validator.PedidoAreasServidoresChefeSetorValidator" target="br.gov.to.sefaz.arr.parametros.persistence.repository.PedidoAreasServidoresRepository" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="br.gov.to.sefaz.seg.persistence.repository.UsuarioSistemaRepository" target="br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.arr.parametros.managedbean.PedidoAreasMB" target="br.gov.to.sefaz.arr.parametros.business.facade.PedidoAreasFacade" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="br.gov.to.sefaz.arr.parametros.business.service.impl.DelegaciasServiceImpl" target="br.gov.to.sefaz.arr.parametros.persistence.repository.DelegaciasRepository" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="br.gov.to.sefaz.arr.parametros.persistence.repository.PedidoAreasFaixaValorRepository" target="br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreasFaixaValor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreas" target="br.gov.to.sefaz.persistence.entity.AbstractEntity"/>
+    <UseRelation source="br.gov.to.sefaz.arr.parametros.business.service.validator.PedidoAreasValoresValidator" target="br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreas" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="repository" source="br.gov.to.sefaz.arr.parametros.business.service.validator.PedidoAreasOrdemParecerSequenceValidator" target="br.gov.to.sefaz.arr.parametros.persistence.repository.PedidoAreasRepository" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="pedidoAreasCollection" source="br.gov.to.sefaz.arr.parametros.persistence.entity.DelegaciaAgencias" target="br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreas" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="usuarioSistemaService" source="br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoAreasFacadeImpl" target="br.gov.to.sefaz.seg.business.service.UsuarioSistemaService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoAreasFacadeImpl" target="br.gov.to.sefaz.arr.parametros.business.facade.PedidoAreasFacade"/>
+    <UseRelation name="" source="br.gov.to.sefaz.arr.parametros.persistence.repository.PedidoAreasServidoresRepository" target="br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreasServidores" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="situacao" source="br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreas" target="br.gov.to.sefaz.persistence.enums.SituacaoEnum" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.arr.parametros.business.service.validator.PedidoAreasServidoresChefeSetorValidator" target="br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreas" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoTipos" target="br.gov.to.sefaz.persistence.entity.AbstractEntity"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.arr.parametros.business.service.impl.DelegaciaAgenciasServiceImpl" target="br.gov.to.sefaz.arr.parametros.business.service.DelegaciaAgenciasService"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema" target="br.gov.to.sefaz.persistence.entity.AbstractEntity"/>
+    <HasRelation name="servidoresService" source="br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoAreasServiceImpl" target="br.gov.to.sefaz.arr.parametros.business.service.PedidoAreasServidoresService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="delegaciaAgenciasCollection" source="br.gov.to.sefaz.arr.parametros.persistence.entity.Delegacias" target="br.gov.to.sefaz.arr.parametros.persistence.entity.DelegaciaAgencias" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="faixaValorService" source="br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoAreasServiceImpl" target="br.gov.to.sefaz.arr.parametros.business.service.PedidoAreasFaixaValorService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="br.gov.to.sefaz.arr.parametros.persistence.repository.DelegaciaAgenciasRepository" target="br.gov.to.sefaz.arr.parametros.persistence.entity.DelegaciaAgencias" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreasFaixaValor" target="br.gov.to.sefaz.persistence.entity.AbstractEntity"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoAreasServiceImpl" target="br.gov.to.sefaz.arr.parametros.business.service.PedidoAreasService"/>
+    <HasRelation name="pedidoAreasCollection" source="br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoTipos" target="br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreas" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="repository" source="br.gov.to.sefaz.arr.parametros.business.service.validator.PedidoAreasParecerFinalUniqueValidator" target="br.gov.to.sefaz.arr.parametros.persistence.repository.PedidoAreasRepository" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.arr.parametros.business.service.impl.DelegaciasServiceImpl" target="br.gov.to.sefaz.arr.parametros.business.service.DelegaciasService"/>
+    <UseRelation source="br.gov.to.sefaz.arr.parametros.business.service.validator.PedidoAreasServidoresDuplicatedValidator" target="br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreas" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="br.gov.to.sefaz.seg.business.service.impl.UsuarioSistemaServiceImpl" target="br.gov.to.sefaz.seg.persistence.repository.UsuarioSistemaRepository" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="pedidoAreasServidores" source="br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreas" target="br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreasServidores" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="servidoresService" source="br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoAreasFacadeImpl" target="br.gov.to.sefaz.arr.parametros.business.service.PedidoAreasServidoresService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="repository" source="br.gov.to.sefaz.arr.parametros.business.service.validator.PedidoAreasQtdDiasByTipoValidator" target="br.gov.to.sefaz.arr.parametros.persistence.repository.PedidoAreasRepository" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoAreasServidoresServiceImpl" target="br.gov.to.sefaz.arr.parametros.business.service.PedidoAreasServidoresService"/>
+    <UseRelation source="br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoTiposServiceImpl" target="br.gov.to.sefaz.arr.parametros.persistence.repository.PedidoTiposRepository" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.persistence.repository.PedidoTiposRepository" target="br.gov.to.sefaz.persistence.repository.BaseRepository"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.persistence.repository.DelegaciaAgenciasRepository" target="br.gov.to.sefaz.persistence.repository.BaseRepository"/>
+    <UseRelation source="br.gov.to.sefaz.arr.parametros.business.service.validator.PedidoAreasQtdDiasByTipoValidator" target="br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreas" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="pedidoTiposService" source="br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoAreasFacadeImpl" target="br.gov.to.sefaz.arr.parametros.business.service.PedidoTiposService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="br.gov.to.sefaz.arr.parametros.persistence.repository.DelegaciasRepository" target="br.gov.to.sefaz.arr.parametros.persistence.entity.Delegacias" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoAreasServiceImpl" target="br.gov.to.sefaz.arr.parametros.persistence.repository.PedidoAreasRepository" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.seg.business.service.impl.UsuarioSistemaServiceImpl" target="br.gov.to.sefaz.seg.business.service.UsuarioSistemaService"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.persistence.entity.Delegacias" target="br.gov.to.sefaz.persistence.entity.AbstractEntity"/>
+    <HasRelation name="tiposRepository" source="br.gov.to.sefaz.arr.parametros.business.service.validator.PedidoAreasQtdDiasByTipoValidator" target="br.gov.to.sefaz.arr.parametros.persistence.repository.PedidoTiposRepository" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="situacao" source="br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreasServidores" target="br.gov.to.sefaz.persistence.enums.SituacaoEnum" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.arr.parametros.business.service.validator.PedidoAreasOrdemParecerSequenceValidator" target="br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreas" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="situacao" source="br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoTipos" target="br.gov.to.sefaz.persistence.enums.SituacaoEnum" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="delegaciaAgencias" source="br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreas" target="br.gov.to.sefaz.arr.parametros.persistence.entity.DelegaciaAgencias" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="delegaciaAgenciasService" source="br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoAreasFacadeImpl" target="br.gov.to.sefaz.arr.parametros.business.service.DelegaciaAgenciasService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.persistence.repository.PedidoAreasRepository" target="br.gov.to.sefaz.persistence.repository.BaseRepository"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreasServidores" target="br.gov.to.sefaz.persistence.entity.AbstractEntity"/>
+    <UseRelation name="" source="br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoAreasServidoresServiceImpl" target="br.gov.to.sefaz.arr.parametros.persistence.repository.PedidoAreasServidoresRepository" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.persistence.entity.AuditListner" target="br.gov.to.sefaz.persistence.entity.AbstractEntity" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="tipoPedido" source="br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreas" target="br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoTipos" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="faixaValor" source="br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreas" target="br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreasFaixaValor" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.arr.parametros.business.service.validator.PedidoAreasParecerFinalUniqueValidator" target="br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreas" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoAreasFaixaValorServiceImpl" target="br.gov.to.sefaz.arr.parametros.persistence.repository.PedidoAreasFaixaValorRepository" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="delegacias" source="br.gov.to.sefaz.arr.parametros.persistence.entity.DelegaciaAgencias" target="br.gov.to.sefaz.arr.parametros.persistence.entity.Delegacias" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.arr.parametros.business.service.validator.PedidoAreasServidoresEmptyValidator" target="br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreas" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="usuario" source="br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreasServidores" target="br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

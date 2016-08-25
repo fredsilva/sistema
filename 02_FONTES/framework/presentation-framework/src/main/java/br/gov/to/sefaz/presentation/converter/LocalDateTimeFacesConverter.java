@@ -1,6 +1,10 @@
 package br.gov.to.sefaz.presentation.converter;
 
+<<<<<<< Updated upstream
 import br.gov.to.sefaz.util.message.SourceBundle;
+=======
+import br.gov.to.sefaz.util.message.MessageUtil;
+>>>>>>> Stashed changes
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -9,7 +13,10 @@ import javax.faces.application.FacesMessage;
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
+<<<<<<< Updated upstream
 import javax.faces.convert.ConverterException;
+=======
+>>>>>>> Stashed changes
 import javax.faces.convert.FacesConverter;
 
 /**
@@ -32,11 +39,18 @@ public class LocalDateTimeFacesConverter implements Converter {
 
         try {
             localDateTime = LocalDateTime.parse(stringValue, DateTimeFormatter.ofPattern("dd/MM/yyyy hh:mm:ss"));
+<<<<<<< Updated upstream
 
         } catch (DateTimeParseException e) {
             String message = SourceBundle.getMessage("presentation.converter.localDateTimeFacesConverter"
                     + ".dataFormatada");
             throw new ConverterException(new FacesMessage(FacesMessage.SEVERITY_ERROR, message, ""), e);
+=======
+        } catch (DateTimeParseException e) {
+            MessageUtil.addMessage(FacesMessage.SEVERITY_ERROR, "presentation.converter.localDateTimeFacesConverter"
+                    + ".dataFormatada");
+            throw e;
+>>>>>>> Stashed changes
         }
 
         return localDateTime;

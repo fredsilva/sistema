@@ -25,12 +25,20 @@ import javax.validation.constraints.NotNull;
 public class UsuarioPostoTrabalho extends AbstractEntity<UsuarioPostoTrabalhoPK> {
 
     @Id
+<<<<<<< Updated upstream
     @NotEmpty
+=======
+    @NotEmpty(message = "#{seg_msg['seg.usuarioPostoTrabalho.identificacaoPostoTrabalho.cpfVazio']}")
+>>>>>>> Stashed changes
     @Column(name = "CPF_USUARIO")
     private String cpfUsuario;
 
     @Id
+<<<<<<< Updated upstream
     @NotNull
+=======
+    @NotNull(message = "#{seg_msg['seg.usuarioPostoTrabalho.identificacaoPostoTrabalho.null']}")
+>>>>>>> Stashed changes
     @Column(name = "IDENTIFICACAO_POSTO_TRABALHO")
     private Integer identificacaoPostoTrabalho;
 
@@ -44,6 +52,12 @@ public class UsuarioPostoTrabalho extends AbstractEntity<UsuarioPostoTrabalhoPK>
     @ManyToOne(optional = false)
     private PostoTrabalho postoTrabalho;
 
+<<<<<<< Updated upstream
+=======
+    public UsuarioPostoTrabalho() {
+        this.postoTrabalho = new PostoTrabalho();
+    }
+>>>>>>> Stashed changes
 
     @Override
     public UsuarioPostoTrabalhoPK getId() {
@@ -66,10 +80,13 @@ public class UsuarioPostoTrabalho extends AbstractEntity<UsuarioPostoTrabalhoPK>
         this.identificacaoPostoTrabalho = identificacaoPostoTrabalho;
     }
 
+<<<<<<< Updated upstream
     public UsuarioPostoTrabalho() {
         // Construtor para inicialização por reflexão.
     }
 
+=======
+>>>>>>> Stashed changes
     public UsuarioPostoTrabalho(String cpfUsuario, Integer identificacaoPostoTrabalho) {
         this.cpfUsuario = cpfUsuario;
         this.identificacaoPostoTrabalho = identificacaoPostoTrabalho;
@@ -83,7 +100,18 @@ public class UsuarioPostoTrabalho extends AbstractEntity<UsuarioPostoTrabalhoPK>
         this.usuarioSistema = usuarioSistema;
     }
 
+<<<<<<< Updated upstream
     public PostoTrabalho getPostoTrabalho() {
+=======
+    /**
+     * Busca o Posto de Trabalho do Usuário.
+     * @return {@link PostoTrabalho}.
+     */
+    public PostoTrabalho getPostoTrabalho() {
+        if (postoTrabalho == null) {
+            postoTrabalho = new PostoTrabalho();
+        }
+>>>>>>> Stashed changes
         return postoTrabalho;
     }
 

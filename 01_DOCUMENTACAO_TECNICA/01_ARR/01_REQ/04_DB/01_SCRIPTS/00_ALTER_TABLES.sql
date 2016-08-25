@@ -1,0 +1,40 @@
+alter table TA_ARQUIVOS_STR drop constraint TA_ARQUIVOS_STR2;
+alter table TA_ARQUIVOS_STR drop constraint TA_ARQUIVOS_STR3;
+alter table TA_ARQUIVOS_STR drop constraint TA_ARQUIVOS_STR4;
+alter table TA_ARQUIVOS_STR drop constraint TA_ARQUIVOS_STR5;
+alter table TA_ARQUIVOS_STR drop constraint TA_ARQUIVOS_STR6;
+alter table TA_ARQUIVOS_STR drop constraint TA_ARQUIVOS_STR7;
+alter table TA_ARQUIVOS_STR drop constraint TA_ARQUIVOS_STR8;
+alter table TA_ARQUIVOS_STR drop constraint TA_ARQUIVOS_STR9;
+alter table TA_ARQUIVOS_STR drop constraint TA_ARQUIVOS_STR10;
+alter table TA_ARQUIVOS_STR drop constraint TA_ARQUIVOS_STR11;
+alter table TA_ARQUIVOS_STR drop constraint TA_ARQUIVOS_STR12;
+
+alter table SEFAZ_ARR.TA_ARQUIVO_RECEPCAO drop constraint NN_ARQUIVO_RECEPCAO2;
+alter table SEFAZ_ARR.TA_ARQUIVO_RECEPCAO drop constraint NN_ARQUIVO_RECEPCAO3;
+alter table SEFAZ_ARR.TA_ARQUIVO_RECEPCAO drop constraint NN_ARQUIVO_RECEPCAO4;
+alter table SEFAZ_ARR.TA_ARQUIVO_RECEPCAO drop constraint NN_ARQUIVO_RECEPCAO5;
+alter table SEFAZ_ARR.TA_ARQUIVO_RECEPCAO drop constraint NN_ARQUIVO_RECEPCAO6;
+alter table SEFAZ_ARR.TA_ARQUIVO_RECEPCAO drop constraint NN_ARQUIVO_RECEPCAO7;
+alter table SEFAZ_ARR.TA_ARQUIVO_RECEPCAO drop constraint NN_ARQUIVO_RECEPCAO8;
+alter table SEFAZ_ARR.TA_ARQUIVO_RECEPCAO drop constraint NN_ARQUIVO_RECEPCAO9;
+alter table SEFAZ_ARR.TA_ARQUIVO_RECEPCAO drop constraint NN_ARQUIVO_RECEPCAO10;
+alter table SEFAZ_ARR.TA_ARQUIVO_RECEPCAO drop constraint NN_ARQUIVO_RECEPCAO11;
+alter table SEFAZ_ARR.TA_ARQUIVO_RECEPCAO drop constraint NN_ARQUIVO_RECEPCAO12;
+alter table SEFAZ_ARR.TA_ARQUIVO_RECEPCAO drop constraint NN_ARQUIVO_RECEPCAO13;
+alter table SEFAZ_ARR.TA_ARQUIVO_RECEPCAO drop constraint NN_ARQUIVO_RECEPCAO14;
+alter table SEFAZ_ARR.TA_ARQUIVO_RECEPCAO drop constraint NN_ARQUIVO_RECEPCAO15;
+
+--Alterar para TA_ARQUIVO_DETALHE_PAGOS aceitar nulo
+alter table SEFAZ_ARR.TA_ARQUIVO_DETALHE_PAGOS modify (NUMERO_NSU NULL);
+alter table SEFAZ_ARR.TA_ARQUIVO_DETALHE_PAGOS modify (DATA_PAGAMENTO NULL);
+alter table SEFAZ_ARR.TA_ARQUIVO_DETALHE_PAGOS modify (CODIGO_BARRA NULL);
+alter table SEFAZ_ARR.TA_ARQUIVO_DETALHE_PAGOS modify (FORMA_PAGAMENTO NULL);
+
+-- Alterar para TA_ARQUIVO_ERRO aceitar nulo
+alter table SEFAZ_ARR.TA_ARQUIVO_ERRO modify (ID_CODIGO_REJEICAO NULL);
+
+-- Alterar para TA_PAGOS_ARREC aceitar nulo
+alter table SEFAZ_ARR.TA_PAGOS_ARREC modify (ID_REPASSE NULL);
+alter table SEFAZ_ARR.TA_PAGOS_ARREC modify (ID_NOSSO_NUMERO_DARE NULL);
+alter table SEFAZ_ARR.TA_PAGOS_ARREC modify(ID_SEQ_DARE_DETALHE NULL);

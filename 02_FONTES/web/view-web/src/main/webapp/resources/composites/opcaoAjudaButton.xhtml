@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+        xmlns:h="http://java.sun.com/jsf/html">
+
+<ui:composition>
+    <ui:param name="label" value="#{empty label ? msg['label.ajuda'] : label}" />
+
+    <button type="button" onclick="javascript:$('#modalOpcaoAjudaConteudo').modal('show')"
+            class="btn btn-primary #{styleClass}">
+        #{label}
+    </button>
+
+    <div id="modalOpcaoAjudaConteudo" class="modal text-left" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                        <span aria-hidden="true">&#xd7;</span>
+                    </button>
+                    <h4 class="modal-title">Ajuda para #{defaultTemplateMB.thisDescricaoOpcao}</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="text-left" id="opcaoAjudaContent">
+                        <h:outputText value="#{defaultTemplateMB.thisAjudaContent}" escape="false"/>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default align-bottom" data-dismiss="modal"
+                                value="#{seg_msg['seg.gestao.manutencaoCadastroFuncionalidade.form.fechar']}"
+                                aria-label="#{seg_msg['seg.gestao.manutencaoCadastroFuncionalidade.form.fechar']}">
+                            <span aria-hidden="false">#{seg_msg['seg.gestao.manutencaoCadastroFuncionalidade.form.fechar']}</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ui:composition>
+</html>

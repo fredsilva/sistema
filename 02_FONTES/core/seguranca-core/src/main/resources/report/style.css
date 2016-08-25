@@ -1,0 +1,170 @@
+@page {
+    margin: 5px;
+    border: 1px solid black;
+}
+
+body {
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    width: 754px;
+    margin: 15px 15px 0 14px;
+    text-align: left;
+}
+
+p {
+    line-height: 160%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    line-height: 150%;
+}
+
+#header {
+    width: 100%;
+}
+
+#header tr td {
+    margin: 0;
+    padding: 5px;
+}
+
+#header-left {
+    width: 374px;
+}
+
+#header-left p {
+    font-size: 1.0em;
+    font-weight: bold;
+    margin: 0;
+}
+
+#header-left img {
+    width: 20%;
+    float: left;
+}
+
+#header-right h1 {
+    text-align: center;
+    font-size: 1.4em;
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+#header-right .date {
+    float: left;
+}
+
+#header-right .no {
+    float: right;
+    font-weight: bold;
+}
+
+.center {
+    text-align: center;
+}
+
+.table {
+    width: 100%;
+}
+
+.table tr th {
+    background-color: #d9d9d9;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 3px;
+}
+
+.table tr td {
+    padding: 2px;
+}
+
+#user-info {
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+#user-info tr td {
+    width: 10%;
+}
+
+#user-info tr td:nth-child(1) {
+    width: 8%;
+}
+
+#user-info tr td:nth-child(2) {
+    width: 16%;
+}
+
+#user-info tr td:nth-child(3) {
+    width: 7%;
+}
+
+#user-info tr td:nth-child(6) {
+    width: 9%;
+}
+
+#user-info tr td:nth-child(8) {
+    width: 30%;
+}
+
+#company-info {
+    margin-top: 30px;
+}
+
+#company-info tr td {
+    width: 10%;
+}
+
+#company-info tr td:nth-child(2), #company-info tr td:nth-child(4) {
+    width: 40%;
+}
+
+#description p {
+    margin: 15px 35px 5px 5px;
+}
+
+.pen-line {
+    border-top: 1px solid black;
+    font-weight: bold;
+    text-align: center;
+    width: 40%;
+    margin-top: 60px;
+}
+
+.pen-line.left {
+    float: left;
+}
+
+.pen-line.right {
+    float: right;
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+#receipt {
+    border-top: 1px solid black;
+    margin-top: 30px;
+}
+
+#receipt .header {
+    font-weight: bold;
+    margin: 20px;
+    text-align: center;
+}
+
+#receipt .date p {
+    margin: 20px 0 0 0;
+    text-align: center;
+}
+
+#receipt .details p {
+    margin: 10px 5px 5px 5px;
+    font-size: 0.9em;
+}

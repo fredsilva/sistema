@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="GruposCnaeServiceImpl" package="br.gov.to.sefaz.arr.parametros.business.service.impl" visibility="public" xPosition="649.0" yPosition="1912.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="GruposCnaeRepository" name="repository"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRepository" returnType="GruposCnaeRepository" visibility="protected"/>
+        <Method name="save" returnType="Collection&lt;GruposCnae&gt;" visibility="public">
+          <Argument type="Collection&lt;GruposCnae&gt;" name="list"/>
+        </Method>
+        <Method name="validateDuplicated" returnType="void" visibility="public">
+          <Argument type="Collection&lt;GruposCnae&gt;" name="gruposCnaes"/>
+        </Method>
+        <Method name="deleteByGrupo" returnType="void" visibility="public">
+          <Argument type="Integer" name="idGrupoCnae"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TipoGruposCnaesFilter" package="br.gov.to.sefaz.arr.parametros.business.service.filter" visibility="public" xPosition="893.0" yPosition="28.0">
+      <Fields>
+        <Field name="idGrupoCnae" type="Integer" visibility="private"/>
+        <Field name="descricaoGrupo" type="String" visibility="private"/>
+        <Field name="cnaeFiscal" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getIdGrupoCnae" returnType="Integer" visibility="public"/>
+        <Method name="setIdGrupoCnae" returnType="void" visibility="public">
+          <Argument type="Integer" name="idGrupoCnae"/>
+        </Method>
+        <Method name="getDescricaoGrupo" returnType="String" visibility="public"/>
+        <Method name="setDescricaoGrupo" returnType="void" visibility="public">
+          <Argument type="String" name="descricaoGrupo"/>
+        </Method>
+        <Method name="getCnaeFiscal" returnType="String" visibility="public"/>
+        <Method name="setCnaeFiscal" returnType="void" visibility="public">
+          <Argument type="String" name="cnaeFiscal"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="GruposCnaeDuplicatedValidator" package="br.gov.to.sefaz.arr.parametros.business.service.validator" visibility="public" xPosition="639.0" yPosition="2525.0">
+      <Fields>
+        <Field name="repository" type="GruposCnaeRepository" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="GruposCnaeRepository" name="repository"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="support" returnType="boolean" visibility="public">
+          <Argument type="Class&lt;?&gt;" name="clazz"/>
+          <Argument type="String" name="context"/>
+        </Method>
+        <Method name="validate" returnType="Set&lt;CustomViolation&gt;" visibility="public">
+          <Argument type="GruposCnae" name="target"/>
+        </Method>
+        <Method name="validateAll" returnType="Set&lt;CustomViolation&gt;" visibility="public">
+          <Argument type="Collection&lt;GruposCnae&gt;" name="targets"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TipoGruposCnaesServiceImpl" package="br.gov.to.sefaz.arr.parametros.business.service.impl" visibility="public" xPosition="1289.0" yPosition="1775.0">
+      <Fields>
+        <Field name="gruposCnaeService" type="GruposCnaeService" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getRepository" returnType="TipoGruposCnaesRepository" visibility="protected"/>
+        <Method name="save" returnType="TipoGruposCnaes" visibility="public">
+          <Argument type="TipoGruposCnaes" name="entity"/>
+        </Method>
+        <Method name="update" returnType="TipoGruposCnaes" visibility="public">
+          <Argument type="TipoGruposCnaes" name="entity"/>
+        </Method>
+        <Method name="findAll" returnType="List&lt;TipoGruposCnaes&gt;" visibility="public">
+          <Argument type="TipoGruposCnaesFilter" name="filter"/>
+        </Method>
+        <Method name="delete" returnType="Optional&lt;TipoGruposCnaes&gt;" visibility="public">
+          <Argument type="Integer" name="id"/>
+        </Method>
+        <Method name="saveOrUpdate" returnType="TipoGruposCnaes" visibility="private">
+          <Argument type="TipoGruposCnaes" name="entity"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TipoGruposCnaesFacadeImpl" package="br.gov.to.sefaz.arr.parametros.business.facade.impl" visibility="public" xPosition="1245.0" yPosition="998.0">
+      <Fields>
+        <Field name="cnaeService" type="AtividadeEconomicaService" visibility="private" isFinal="true"/>
+        <Field name="gruposCnaeService" type="GruposCnaeService" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getService" returnType="TipoGruposCnaesService" visibility="protected"/>
+        <Method name="find" returnType="List&lt;TipoGruposCnaes&gt;" visibility="public">
+          <Argument type="TipoGruposCnaesFilter" name="filter"/>
+        </Method>
+        <Method name="findAllCnaes" returnType="Collection&lt;AtividadeEconomica&gt;" visibility="public"/>
+        <Method name="findAllCnaesByGrupo" returnType="Collection&lt;AtividadeEconomica&gt;" visibility="public">
+          <Argument type="Integer" name="idGrupoCnae"/>
+        </Method>
+        <Method name="removeCnaeFromGrupo" returnType="void" visibility="public">
+          <Argument type="Integer" name="idGrupoCnae"/>
+          <Argument type="String" name="codigoCnae"/>
+        </Method>
+        <Method name="validateGruposCnaes" returnType="void" visibility="public">
+          <Argument type="Collection&lt;GruposCnae&gt;" name="gruposCnaes"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="GruposCnae" package="br.gov.to.sefaz.arr.parametros.persistence.entity" visibility="public" xPosition="678.0" yPosition="2852.0">
+      <Fields>
+        <Field name="idGrupoCnae" type="Integer" visibility="private"/>
+        <Field name="cnaeFiscal" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getId" returnType="GruposCnaePK" visibility="public"/>
+        <Method name="getIdGrupoCnae" returnType="Integer" visibility="public"/>
+        <Method name="setIdGrupoCnae" returnType="void" visibility="public">
+          <Argument type="Integer" name="idGrupoCnae"/>
+        </Method>
+        <Method name="getCnaeFiscal" returnType="String" visibility="public"/>
+        <Method name="setCnaeFiscal" returnType="void" visibility="public">
+          <Argument type="String" name="cnaeFiscal"/>
+        </Method>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="TipoGruposCnaes" package="br.gov.to.sefaz.arr.parametros.persistence.entity" visibility="public" xPosition="1246.0" yPosition="2429.0">
+      <Fields>
+        <Field name="idGrupoCnae" type="Integer" visibility="private"/>
+        <Field name="descricaoGrupo" type="String" visibility="private"/>
+        <Field name="situacao" type="SituacaoEnum" visibility="private"/>
+        <Field name="gruposCnae" type="Collection&lt;GruposCnae&gt;" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getId" returnType="Integer" visibility="public"/>
+        <Method name="getIdGrupoCnae" returnType="Integer" visibility="public"/>
+        <Method name="setIdGrupoCnae" returnType="void" visibility="public">
+          <Argument type="Integer" name="idGrupoCnae"/>
+        </Method>
+        <Method name="getDescricaoGrupo" returnType="String" visibility="public"/>
+        <Method name="setDescricaoGrupo" returnType="void" visibility="public">
+          <Argument type="String" name="descricaoGrupo"/>
+        </Method>
+        <Method name="getSituacao" returnType="SituacaoEnum" visibility="public"/>
+        <Method name="setSituacao" returnType="void" visibility="public">
+          <Argument type="SituacaoEnum" name="situacao"/>
+        </Method>
+        <Method name="getGruposCnae" returnType="Collection&lt;GruposCnae&gt;" visibility="public"/>
+        <Method name="setGruposCnae" returnType="void" visibility="public">
+          <Argument type="Collection&lt;GruposCnae&gt;" name="gruposCnae"/>
+        </Method>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="TipoGruposCnaesMB" package="br.gov.to.sefaz.arr.parametros.managedbean" visibility="public" xPosition="1281.0" yPosition="25.0">
+      <Fields>
+        <Field name="filter" type="TipoGruposCnaesFilter" visibility="private" isFinal="true"/>
+        <Field name="cnaesDto" type="Collection&lt;AtividadeEconomica&gt;" visibility="private" isFinal="true"/>
+        <Field name="selectedCnaes" type="Collection&lt;AtividadeEconomica&gt;" visibility="private" isFinal="true"/>
+        <Field name="allCnaes" type="Collection&lt;AtividadeEconomica&gt;" visibility="private"/>
+        <Field name="selectedIdCnaeDto" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="setFacade" returnType="void" visibility="protected">
+          <Argument type="TipoGruposCnaesFacade" name="facade"/>
+        </Method>
+        <Method name="getFacade" returnType="TipoGruposCnaesFacade" visibility="protected"/>
+        <Method name="getFilter" returnType="TipoGruposCnaesFilter" visibility="public"/>
+        <Method name="getSelectedIdCnaeDto" returnType="String" visibility="public"/>
+        <Method name="setSelectedIdCnaeDto" returnType="void" visibility="public">
+          <Argument type="String" name="selectedIdCnaeDto"/>
+        </Method>
+        <Method name="getCnaesDto" returnType="Collection&lt;AtividadeEconomica&gt;" visibility="public"/>
+        <Method name="getSelectedCnaes" returnType="Collection&lt;AtividadeEconomica&gt;" visibility="public"/>
+        <Method name="getAllCnaes" returnType="Collection&lt;AtividadeEconomica&gt;" visibility="public"/>
+        <Method name="loadSelectedCnaes" returnType="void" visibility="public"/>
+        <Method name="addCnaeToDto" returnType="void" visibility="public"/>
+        <Method name="removeCnaeFromDto" returnType="void" visibility="public"/>
+        <Method name="removeCnaeFromGrupo" returnType="void" visibility="public"/>
+        <Method name="clearCnaesTables" returnType="void" visibility="public"/>
+        <Method name="search" returnType="void" visibility="public"/>
+        <Method name="save" returnType="void" visibility="public"/>
+        <Method name="update" returnType="void" visibility="public"/>
+        <Method name="prepareDto" returnType="void" visibility="private"/>
+        <Method name="buildGruposCnae" returnType="List&lt;GruposCnae&gt;" visibility="private"/>
+        <Method name="buildGruposCnae" returnType="Collection&lt;GruposCnae&gt;" visibility="private">
+          <Argument type="String" name="codigoCnae"/>
+        </Method>
+        <Method name="getCnaeLabel" returnType="String" visibility="public">
+          <Argument type="AtividadeEconomica" name="cnaes"/>
+        </Method>
+        <Method name="getTipoCnaeLabel" returnType="String" visibility="public">
+          <Argument type="TipoGruposCnaes" name="cnae"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DefaultCrudFacade" package="br.gov.to.sefaz.business.facade.impl" visibility="public" xPosition="757.0" yPosition="585.0">
+      <Fields>
+        <Field name="service" type="CrudService&lt;E, I&gt;" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="CrudService&lt;E, I&gt;" name="service"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="findOne" returnType="E" visibility="public">
+          <Argument type="I" name="id"/>
+        </Method>
+        <Method name="findAll" returnType="Collection&lt;E&gt;" visibility="public"/>
+        <Method name="findAll" returnType="Collection&lt;E&gt;" visibility="public">
+          <Argument type="Iterable&lt;I&gt;" name="list"/>
+        </Method>
+        <Method name="save" returnType="E" visibility="public">
+          <Argument type="E" name="entity"/>
+        </Method>
+        <Method name="save" returnType="Collection&lt;E&gt;" visibility="public">
+          <Argument type="Collection&lt;E&gt;" name="list"/>
+        </Method>
+        <Method name="update" returnType="E" visibility="public">
+          <Argument type="E" name="entity"/>
+        </Method>
+        <Method name="delete" returnType="Optional&lt;E&gt;" visibility="public">
+          <Argument type="I" name="id"/>
+        </Method>
+        <Method name="delete" returnType="void" visibility="public">
+          <Argument type="Iterable&lt;I&gt;" name="ids"/>
+        </Method>
+        <Method name="getService" returnType="CrudService&lt;E, I&gt;" visibility="protected"/>
+      </Methods>
+    </Class>
+    <Class name="DefaultCrudService" package="br.gov.to.sefaz.business.service.impl" visibility="public" xPosition="143.0" yPosition="1616.0">
+      <Fields>
+        <Field name="repository" type="BaseRepository&lt;E, I&gt;" visibility="private" isFinal="true"/>
+        <Field name="defaultSort" type="Sort" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="BaseRepository&lt;E, I&gt;" name="repository"/>
+          <Argument type="Sort" name="sort"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="findOne" returnType="E" visibility="public">
+          <Argument type="I" name="id"/>
+        </Method>
+        <Method name="findAll" returnType="Collection&lt;E&gt;" visibility="public"/>
+        <Method name="findAll" returnType="Collection&lt;E&gt;" visibility="public">
+          <Argument type="Iterable&lt;I&gt;" name="list"/>
+        </Method>
+        <Method name="save" returnType="E" visibility="public">
+          <Argument type="E" name="entity"/>
+        </Method>
+        <Method name="save" returnType="Collection&lt;E&gt;" visibility="public">
+          <Argument type="Collection&lt;E&gt;" name="list"/>
+        </Method>
+        <Method name="showSaveMessage" returnType="void" visibility="protected"/>
+        <Method name="update" returnType="E" visibility="public">
+          <Argument type="E" name="entity"/>
+        </Method>
+        <Method name="showUpdateMessage" returnType="void" visibility="protected"/>
+        <Method name="delete" returnType="Optional&lt;E&gt;" visibility="public">
+          <Argument type="I" name="id"/>
+        </Method>
+        <Method name="delete" returnType="void" visibility="public">
+          <Argument type="Iterable&lt;I&gt;" name="ids"/>
+        </Method>
+        <Method name="showDeleteMessage" returnType="void" visibility="protected"/>
+        <Method name="getRepository" returnType="BaseRepository&lt;E, I&gt;" visibility="protected"/>
+        <Method name="getDefaultSort" returnType="Sort" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="AtividadeEconomicaServiceImpl" package="br.gov.to.sefaz.cat.business.service.impl" visibility="public" xPosition="1858.0" yPosition="1654.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="AtividadeEconomicaRepository" name="repository"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getRepository" returnType="AtividadeEconomicaRepository" visibility="protected"/>
+        <Method name="findAllCnaesByGrupo" returnType="Collection&lt;AtividadeEconomica&gt;" visibility="public">
+          <Argument type="Integer" name="idGrupoCnae"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AtividadeEconomica" package="br.gov.to.sefaz.cat.persistence.entity" visibility="public" xPosition="1842.0" yPosition="2583.0">
+      <Fields>
+        <Field name="codigoCnae" type="String" visibility="private"/>
+        <Field name="descricaoCnae" type="String" visibility="private"/>
+        <Field name="codigoSuperiorCnae" type="String" visibility="private"/>
+        <Field name="idGrupoCnae" type="Integer" visibility="private"/>
+        <Field name="porcentagemCnae" type="Integer" visibility="private"/>
+        <Field name="situacaoCnae" type="Character" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getId" returnType="String" visibility="public"/>
+        <Method name="getCodigoCnae" returnType="String" visibility="public"/>
+        <Method name="setCodigoCnae" returnType="void" visibility="public">
+          <Argument type="String" name="codigoCnae"/>
+        </Method>
+        <Method name="getDescricaoCnae" returnType="String" visibility="public"/>
+        <Method name="setDescricaoCnae" returnType="void" visibility="public">
+          <Argument type="String" name="descricaoCnae"/>
+        </Method>
+        <Method name="getCodigoSuperiorCnae" returnType="String" visibility="public"/>
+        <Method name="setCodigoSuperiorCnae" returnType="void" visibility="public">
+          <Argument type="String" name="codigoSuperiorCnae"/>
+        </Method>
+        <Method name="getIdGrupoCnae" returnType="Integer" visibility="public"/>
+        <Method name="setIdGrupoCnae" returnType="void" visibility="public">
+          <Argument type="Integer" name="idGrupoCnae"/>
+        </Method>
+        <Method name="getPorcentagemCnae" returnType="Integer" visibility="public"/>
+        <Method name="setPorcentagemCnae" returnType="void" visibility="public">
+          <Argument type="Integer" name="porcentagemCnae"/>
+        </Method>
+        <Method name="getSituacaoCnae" returnType="Character" visibility="public"/>
+        <Method name="setSituacaoCnae" returnType="void" visibility="public">
+          <Argument type="Character" name="situacaoCnae"/>
+        </Method>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="o"/>
+        </Method>
+        <Method name="hashCode" returnType="int" visibility="public"/>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="AuditListner" package="br.gov.to.sefaz.persistence.entity" visibility="public" xPosition="686.0" yPosition="3218.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="prePersist" returnType="void" visibility="public">
+          <Argument type="AbstractEntity&lt;?&gt;" name="entity"/>
+        </Method>
+        <Method name="preUpdate" returnType="void" visibility="public">
+          <Argument type="AbstractEntity&lt;?&gt;" name="entity"/>
+        </Method>
+        <Method name="preRemove" returnType="void" visibility="public">
+          <Argument type="AbstractEntity&lt;?&gt;" name="entity"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="AbstractEntity" package="br.gov.to.sefaz.persistence.entity" visibility="public" isAbstract="true" xPosition="1246.0" yPosition="2905.0">
+      <Fields>
+        <Field name="serialVersionUID" type="long" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="usuarioInsercao" type="String" visibility="protected"/>
+        <Field name="dataInsercao" type="LocalDateTime" visibility="protected"/>
+        <Field name="usuarioAlteracao" type="String" visibility="protected"/>
+        <Field name="dataAlteracao" type="LocalDateTime" visibility="protected"/>
+        <Field name="registroExcluido" type="Boolean" visibility="protected"/>
+        <Field name="usuarioExclusao" type="String" visibility="protected"/>
+        <Field name="dataExclusao" type="LocalDateTime" visibility="protected"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getId" returnType="I" visibility="public" isAbstract="true"/>
+        <Method name="getUsuarioInsercao" returnType="String" visibility="public"/>
+        <Method name="setUsuarioInsercao" returnType="void" visibility="public">
+          <Argument type="String" name="usuarioInsercao"/>
+        </Method>
+        <Method name="getDataInsercao" returnType="LocalDateTime" visibility="public"/>
+        <Method name="setDataInsercao" returnType="void" visibility="public">
+          <Argument type="LocalDateTime" name="dataInsercao"/>
+        </Method>
+        <Method name="getUsuarioAlteracao" returnType="String" visibility="public"/>
+        <Method name="setUsuarioAlteracao" returnType="void" visibility="public">
+          <Argument type="String" name="usuarioAlteracao"/>
+        </Method>
+        <Method name="getDataAlteracao" returnType="LocalDateTime" visibility="public"/>
+        <Method name="setDataAlteracao" returnType="void" visibility="public">
+          <Argument type="LocalDateTime" name="dataAlteracao"/>
+        </Method>
+        <Method name="getRegistroExcluido" returnType="Boolean" visibility="public"/>
+        <Method name="setRegistroExcluido" returnType="void" visibility="public">
+          <Argument type="Boolean" name="registroExcluido"/>
+        </Method>
+        <Method name="getUsuarioExclusao" returnType="String" visibility="public"/>
+        <Method name="setUsuarioExclusao" returnType="void" visibility="public">
+          <Argument type="String" name="usuarioExclusao"/>
+        </Method>
+        <Method name="getDataExclusao" returnType="LocalDateTime" visibility="public"/>
+        <Method name="setDataExclusao" returnType="void" visibility="public">
+          <Argument type="LocalDateTime" name="dataExclusao"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="DefaultCrudMB" package="br.gov.to.sefaz.presentation.managedbean.impl" visibility="public" xPosition="1810.0" yPosition="101.0">
+      <Fields>
+        <Field name="beanFactoryMB" type="BeanFactoryMB" visibility="private"/>
+        <Field name="resultList" type="Collection&lt;E&gt;" visibility="protected"/>
+        <Field name="dto" type="E" visibility="private"/>
+        <Field name="facade" type="CrudFacade&lt;E, I&gt;" visibility="private"/>
+        <Field name="dtoProvider" type="Supplier&lt;E&gt;" visibility="private" isFinal="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Supplier&lt;E&gt;" name="dtoProvider"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="injectDependencies" returnType="void" visibility="protected"/>
+        <Method name="setFacade" returnType="void" visibility="protected">
+          <Argument type="CrudFacade&lt;E, I&gt;" name="facade"/>
+        </Method>
+        <Method name="getFacade" returnType="CrudFacade&lt;E, I&gt;" visibility="protected"/>
+        <Method name="getBeanFactoryMB" returnType="BeanFactoryMB" visibility="protected"/>
+        <Method name="setBeanFactoryMB" returnType="void" visibility="public">
+          <Argument type="BeanFactoryMB" name="beanFactoryMB"/>
+        </Method>
+        <Method name="setDto" returnType="void" visibility="public">
+          <Argument type="E" name="dto"/>
+        </Method>
+        <Method name="getDto" returnType="E" visibility="public"/>
+        <Method name="setResultList" returnType="void" visibility="public">
+          <Argument type="Collection&lt;E&gt;" name="resultList"/>
+        </Method>
+        <Method name="getResultList" returnType="Collection&lt;E&gt;" visibility="public"/>
+        <Method name="save" returnType="void" visibility="public"/>
+        <Method name="update" returnType="void" visibility="public"/>
+        <Method name="delete" returnType="void" visibility="public"/>
+        <Method name="clearDto" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="GruposCnaeService" package="br.gov.to.sefaz.arr.parametros.business.service" visibility="public" xPosition="708.0" yPosition="1496.0">
+      <Methods>
+        <Method name="validateDuplicated" returnType="void" visibility="package">
+          <Argument type="Collection&lt;GruposCnae&gt;" name="gruposCnaes"/>
+        </Method>
+        <Method name="deleteByGrupo" returnType="void" visibility="package">
+          <Argument type="Integer" name="idGrupoCnae"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="TipoGruposCnaesService" package="br.gov.to.sefaz.arr.parametros.business.service" visibility="public" xPosition="1289.0" yPosition="1506.0">
+      <Methods>
+        <Method name="findAll" returnType="List&lt;TipoGruposCnaes&gt;" visibility="package">
+          <Argument type="TipoGruposCnaesFilter" name="filter"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="TipoGruposCnaesFacade" package="br.gov.to.sefaz.arr.parametros.business.facade" visibility="public" xPosition="1229.0" yPosition="724.0">
+      <Methods>
+        <Method name="find" returnType="List&lt;TipoGruposCnaes&gt;" visibility="package">
+          <Argument type="TipoGruposCnaesFilter" name="filter"/>
+        </Method>
+        <Method name="findAllCnaes" returnType="Collection&lt;AtividadeEconomica&gt;" visibility="package"/>
+        <Method name="findAllCnaesByGrupo" returnType="Collection&lt;AtividadeEconomica&gt;" visibility="package">
+          <Argument type="Integer" name="idGrupoCnae"/>
+        </Method>
+        <Method name="removeCnaeFromGrupo" returnType="void" visibility="package">
+          <Argument type="Integer" name="idGrupoCnae"/>
+          <Argument type="String" name="codigoCnae"/>
+        </Method>
+        <Method name="validateGruposCnaes" returnType="void" visibility="package">
+          <Argument type="Collection&lt;GruposCnae&gt;" name="gruposCnaes"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="TipoGruposCnaesRepository" package="br.gov.to.sefaz.arr.parametros.persistence.repository" visibility="public" xPosition="1281.0" yPosition="2178.0">
+      <Methods>
+        <Method name="selectSituacao" returnType="SituacaoEnum" visibility="package">
+          <Argument type="Integer" name="id"/>
+        </Method>
+        <Method name="existsLockReference" returnType="boolean" visibility="package">
+          <Argument type="Integer" name="id"/>
+        </Method>
+        <Method name="updateSituacao" returnType="int" visibility="package">
+          <Argument type="Integer" name="id"/>
+          <Argument type="SituacaoEnum" name="situacao"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="GruposCnaeRepository" package="br.gov.to.sefaz.arr.parametros.persistence.repository" visibility="public" xPosition="702.0" yPosition="2155.0">
+      <Methods>
+        <Method name="existsCnaeFiscal" returnType="boolean" visibility="package">
+          <Argument type="String" name="cnaeFiscal"/>
+        </Method>
+        <Method name="deleteByGrupo" returnType="void" visibility="package">
+          <Argument type="Integer" name="idGrupoCnae"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="CrudFacade" package="br.gov.to.sefaz.business.facade" visibility="public" xPosition="1880.0" yPosition="621.0">
+      <Methods>
+        <Method name="findOne" returnType="E" visibility="package">
+          <Argument type="I" name="id"/>
+        </Method>
+        <Method name="findAll" returnType="Collection&lt;E&gt;" visibility="package"/>
+        <Method name="findAll" returnType="Collection&lt;E&gt;" visibility="package">
+          <Argument type="Iterable&lt;I&gt;" name="list"/>
+        </Method>
+        <Method name="save" returnType="E" visibility="package">
+          <Argument type="E" name="entity"/>
+        </Method>
+        <Method name="save" returnType="Collection&lt;E&gt;" visibility="package">
+          <Argument type="Collection&lt;E&gt;" name="list"/>
+        </Method>
+        <Method name="update" returnType="E" visibility="package">
+          <Argument type="E" name="entity"/>
+        </Method>
+        <Method name="delete" returnType="Optional&lt;E&gt;" visibility="package">
+          <Argument type="I" name="id"/>
+        </Method>
+        <Method name="delete" returnType="void" visibility="package">
+          <Argument type="Iterable&lt;I&gt;" name="list"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="CrudService" package="br.gov.to.sefaz.business.service" visibility="public" xPosition="779.0" yPosition="1064.0">
+      <Methods>
+        <Method name="findOne" returnType="E" visibility="package">
+          <Argument type="I" name="id"/>
+        </Method>
+        <Method name="findAll" returnType="Collection&lt;E&gt;" visibility="package"/>
+        <Method name="findAll" returnType="Collection&lt;E&gt;" visibility="package">
+          <Argument type="Iterable&lt;I&gt;" name="list"/>
+        </Method>
+        <Method name="save" returnType="E" visibility="package">
+          <Argument type="E" name="entity"/>
+        </Method>
+        <Method name="save" returnType="Collection&lt;E&gt;" visibility="package">
+          <Argument type="Collection&lt;E&gt;" name="list"/>
+        </Method>
+        <Method name="update" returnType="E" visibility="package">
+          <Argument type="E" name="entity"/>
+        </Method>
+        <Method name="delete" returnType="Optional&lt;E&gt;" visibility="package">
+          <Argument type="I" name="id"/>
+        </Method>
+        <Method name="delete" returnType="void" visibility="package">
+          <Argument type="Iterable&lt;I&gt;" name="ids"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="AtividadeEconomicaService" package="br.gov.to.sefaz.cat.business.service" visibility="public" xPosition="1774.0" yPosition="1506.0">
+      <Methods>
+        <Method name="findAllCnaesByGrupo" returnType="Collection&lt;AtividadeEconomica&gt;" visibility="package">
+          <Argument type="Integer" name="idGrupoCnae"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="AtividadeEconomicaRepository" package="br.gov.to.sefaz.cat.persistence.repository" visibility="public" xPosition="1789.0" yPosition="2338.0">
+      <Methods>
+        <Method name="findAllCnaesByGrupo" returnType="Collection&lt;AtividadeEconomica&gt;" visibility="package">
+          <Argument type="Integer" name="idGrupoCnae"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="BaseRepository" package="br.gov.to.sefaz.persistence.repository" visibility="public" xPosition="209.0" yPosition="2357.0">
+      <Methods/>
+    </Interface>
+    <Interface name="BeanFactoryMB" package="br.gov.to.sefaz.presentation.managedbean" visibility="public" xPosition="2231.0" yPosition="388.0">
+      <Methods>
+        <Method name="getBean" returnType="T" visibility="package">
+          <Argument type="Class&lt;T&gt;" name="requiredType"/>
+        </Method>
+        <Method name="getBean" returnType="T" visibility="package">
+          <Argument type="String" name="name"/>
+          <Argument type="Class&lt;T&gt;" name="requiredType"/>
+        </Method>
+        <Method name="injectBeans" returnType="void" visibility="package">
+          <Argument type="Object" name="object"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="CrudMB" package="br.gov.to.sefaz.presentation.managedbean" visibility="public" xPosition="2280.0" yPosition="77.0">
+      <Methods>
+        <Method name="getDto" returnType="E" visibility="package"/>
+        <Method name="setDto" returnType="void" visibility="package">
+          <Argument type="E" name="dto"/>
+        </Method>
+        <Method name="getResultList" returnType="Collection&lt;E&gt;" visibility="package"/>
+        <Method name="save" returnType="void" visibility="package"/>
+        <Method name="update" returnType="void" visibility="package"/>
+        <Method name="delete" returnType="void" visibility="package"/>
+        <Method name="clearDto" returnType="void" visibility="package"/>
+      </Methods>
+    </Interface>
+    <Enum name="SituacaoEnum" package="br.gov.to.sefaz.persistence.enums" visibility="public" xPosition="1723.0" yPosition="2109.0">
+      <Literals>
+        <Literal name="ATIVO"/>
+        <Literal name="CANCELADO"/>
+      </Literals>
+    </Enum>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="br.gov.to.sefaz.cat.persistence.repository.AtividadeEconomicaRepository" target="br.gov.to.sefaz.cat.persistence.entity.AtividadeEconomica" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.business.service.GruposCnaeService" target="br.gov.to.sefaz.business.service.CrudService"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.persistence.repository.TipoGruposCnaesRepository" target="br.gov.to.sefaz.persistence.repository.BaseRepository"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.cat.business.service.impl.AtividadeEconomicaServiceImpl" target="br.gov.to.sefaz.cat.business.service.AtividadeEconomicaService"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.persistence.entity.TipoGruposCnaes" target="br.gov.to.sefaz.persistence.entity.AbstractEntity"/>
+    <UseRelation source="br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB" target="br.gov.to.sefaz.business.facade.CrudFacade" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.arr.parametros.business.service.impl.TipoGruposCnaesServiceImpl" target="br.gov.to.sefaz.arr.parametros.business.service.TipoGruposCnaesService"/>
+    <UseRelation source="br.gov.to.sefaz.arr.parametros.business.service.validator.GruposCnaeDuplicatedValidator" target="br.gov.to.sefaz.arr.parametros.persistence.entity.GruposCnae" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation name="" source="br.gov.to.sefaz.arr.parametros.managedbean.TipoGruposCnaesMB" target="br.gov.to.sefaz.arr.parametros.business.facade.TipoGruposCnaesFacade" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.arr.parametros.business.service.impl.TipoGruposCnaesServiceImpl" target="br.gov.to.sefaz.arr.parametros.persistence.repository.TipoGruposCnaesRepository" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.business.service.impl.DefaultCrudService" target="br.gov.to.sefaz.business.service.CrudService"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.arr.parametros.business.service.impl.GruposCnaeServiceImpl" target="br.gov.to.sefaz.arr.parametros.business.service.GruposCnaeService"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.business.service.impl.GruposCnaeServiceImpl" target="br.gov.to.sefaz.business.service.impl.DefaultCrudService"/>
+    <HasRelation name="filter" source="br.gov.to.sefaz.arr.parametros.managedbean.TipoGruposCnaesMB" target="br.gov.to.sefaz.arr.parametros.business.service.filter.TipoGruposCnaesFilter" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="situacao" source="br.gov.to.sefaz.arr.parametros.persistence.entity.TipoGruposCnaes" target="br.gov.to.sefaz.persistence.enums.SituacaoEnum" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" target="br.gov.to.sefaz.business.facade.CrudFacade"/>
+    <HasRelation name="cnaeService" source="br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoGruposCnaesFacadeImpl" target="br.gov.to.sefaz.cat.business.service.AtividadeEconomicaService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="repository" source="br.gov.to.sefaz.arr.parametros.business.service.validator.GruposCnaeDuplicatedValidator" target="br.gov.to.sefaz.arr.parametros.persistence.repository.GruposCnaeRepository" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="beanFactoryMB" source="br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB" target="br.gov.to.sefaz.presentation.managedbean.BeanFactoryMB" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.cat.business.service.impl.AtividadeEconomicaServiceImpl" target="br.gov.to.sefaz.cat.persistence.repository.AtividadeEconomicaRepository" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoGruposCnaesFacadeImpl" target="br.gov.to.sefaz.arr.parametros.business.facade.TipoGruposCnaesFacade"/>
+    <UseRelation source="br.gov.to.sefaz.business.service.impl.DefaultCrudService" target="br.gov.to.sefaz.persistence.repository.BaseRepository" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="gruposCnaeService" source="br.gov.to.sefaz.arr.parametros.business.service.impl.TipoGruposCnaesServiceImpl" target="br.gov.to.sefaz.arr.parametros.business.service.GruposCnaeService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.business.facade.TipoGruposCnaesFacade" target="br.gov.to.sefaz.business.facade.CrudFacade"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoGruposCnaesFacadeImpl" target="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB" target="br.gov.to.sefaz.presentation.managedbean.CrudMB"/>
+    <UseRelation name="" source="br.gov.to.sefaz.arr.parametros.persistence.repository.TipoGruposCnaesRepository" target="br.gov.to.sefaz.arr.parametros.persistence.entity.TipoGruposCnaes" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.cat.persistence.entity.AtividadeEconomica" target="br.gov.to.sefaz.persistence.entity.AbstractEntity"/>
+    <UseRelation source="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" target="br.gov.to.sefaz.business.service.CrudService" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.persistence.repository.GruposCnaeRepository" target="br.gov.to.sefaz.persistence.repository.BaseRepository"/>
+    <UseRelation source="br.gov.to.sefaz.arr.parametros.persistence.entity.GruposCnae" target="br.gov.to.sefaz.arr.parametros.persistence.entity.GruposCnae" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.persistence.entity.AuditListner" target="br.gov.to.sefaz.persistence.entity.AbstractEntity" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.persistence.entity.GruposCnae" target="br.gov.to.sefaz.persistence.entity.AbstractEntity"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.cat.persistence.repository.AtividadeEconomicaRepository" target="br.gov.to.sefaz.persistence.repository.BaseRepository"/>
+    <HasRelation name="gruposCnae" source="br.gov.to.sefaz.arr.parametros.persistence.entity.TipoGruposCnaes" target="br.gov.to.sefaz.arr.parametros.persistence.entity.GruposCnae" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.business.service.TipoGruposCnaesService" target="br.gov.to.sefaz.business.service.CrudService"/>
+    <UseRelation source="br.gov.to.sefaz.arr.parametros.persistence.repository.TipoGruposCnaesRepository" target="br.gov.to.sefaz.persistence.enums.SituacaoEnum" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="br.gov.to.sefaz.arr.parametros.business.service.impl.GruposCnaeServiceImpl" target="br.gov.to.sefaz.arr.parametros.persistence.repository.GruposCnaeRepository" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.managedbean.TipoGruposCnaesMB" target="br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.cat.business.service.AtividadeEconomicaService" target="br.gov.to.sefaz.business.service.CrudService"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.cat.business.service.impl.AtividadeEconomicaServiceImpl" target="br.gov.to.sefaz.business.service.impl.DefaultCrudService"/>
+    <HasRelation name="gruposCnaeService" source="br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoGruposCnaesFacadeImpl" target="br.gov.to.sefaz.arr.parametros.business.service.GruposCnaeService" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="br.gov.to.sefaz.arr.parametros.business.service.impl.TipoGruposCnaesServiceImpl" target="br.gov.to.sefaz.business.service.impl.DefaultCrudService"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
