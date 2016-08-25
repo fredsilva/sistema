@@ -1,7 +1,7 @@
 package br.gov.to.sefaz.arr.parametros.business.service.validator;
 
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PlanoContas;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.TipoGruposCnaesRepository;
+import br.gov.to.sefaz.arr.persistence.entity.PlanoContas;
+import br.gov.to.sefaz.arr.persistence.repository.TipoGruposCnaesRepository;
 import br.gov.to.sefaz.business.service.validation.ServiceValidator;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.violation.CustomViolation;
@@ -18,7 +18,7 @@ import java.util.Set;
 /**
  * <p>
  * {@link br.gov.to.sefaz.business.service.validation.ServiceValidator} que valida se o
- * {@link br.gov.to.sefaz.arr.parametros.persistence.entity.PlanoContas#getGruposCnaes()} já esta com a Ativo. Um plano
+ * {@link br.gov.to.sefaz.arr.persistence.entity.PlanoContas#getGruposCnaes()} já esta com a Ativo. Um plano
  * de contas não pode utilizar um grupo cnae Cancelado.
  * </p>
  *

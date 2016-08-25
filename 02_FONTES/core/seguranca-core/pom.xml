@@ -1,19 +1,21 @@
 <?xml version="1.0"?>
 <project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
-    xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
         <groupId>br.gov.to.sefaz</groupId>
         <artifactId>core</artifactId>
-        <version>0.2.0-RC1</version>
+        <version>1.4.1</version>
     </parent>
 
     <groupId>br.gov.to.sefaz.core</groupId>
     <artifactId>seguranca-core</artifactId>
     <name>seguranca-core</name>
-    <description>Módulo core de segurança do Sistema, onde é desenvolvido toda a lógica de negócio e persistência do referido módulo. O resultado ddo presente módulo é um jar.</description>
+    <description>Módulo core de segurança do Sistema, onde é desenvolvido toda a lógica de negócio e persistência do
+        referido módulo. O resultado ddo presente módulo é um jar.
+    </description>
 
     <dependencies>
         <dependency>
@@ -40,7 +42,7 @@
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-web</artifactId>
         </dependency>
-         <dependency>
+        <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
         </dependency>

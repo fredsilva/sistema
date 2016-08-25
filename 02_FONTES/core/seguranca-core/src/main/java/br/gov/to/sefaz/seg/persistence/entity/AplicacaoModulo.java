@@ -8,6 +8,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
@@ -26,7 +27,7 @@ public class AplicacaoModulo extends AbstractEntity<Long> {
     private static final long serialVersionUID = 2262759749890737090L;
 
     @Id
-    @NotNull
+    @NotNull(message = "#{seg_msg['seg.gestao.aplicacaoModulo.identificacaoAplicacaoModulo.obrigatorio']}")
     @Column(name = "IDENTIFICACAO_APLICACAO_MODULO")
     private Long identificacaoAplicacaoModulo;
 
@@ -39,16 +40,22 @@ public class AplicacaoModulo extends AbstractEntity<Long> {
     @Column(name = "IDENTIFICACAO_MODULO_SISTEMA")
     private Long identificacaoModuloSistema;
 
-    @OneToMany
-    @JoinColumn(name = "IDENTIFICACAO_APLICACAO_MODULO", referencedColumnName = "IDENTIFICACAO_APLICACAO_MODULO")
+    @OneToMany(mappedBy = "aplicacaoModulo")
     private Set<OpcaoAplicacao> opcoesAplicacao;
+
+    @ManyToOne
+    @JoinColumn(name = "IDENTIFICACAO_MODULO_SISTEMA", referencedColumnName = "IDENTIFICACAO_MODULO_SISTEMA",
+            insertable = false, updatable = false)
+    private ModuloSistema moduloSistema;
 
     public AplicacaoModulo() {
         // Construtor para inicialização por reflexão.
+        moduloSistema = new ModuloSistema();
     }
 
     public AplicacaoModulo(Long identificacaoAplicacaoModulo, String descricaoAplicacaoModulo,
             Long identificacaoModuloSistema) {
+        this();
         this.identificacaoAplicacaoModulo = identificacaoAplicacaoModulo;
         this.descricaoAplicacaoModulo = descricaoAplicacaoModulo;
         this.identificacaoModuloSistema = identificacaoModuloSistema;
@@ -89,6 +96,18 @@ public class AplicacaoModulo extends AbstractEntity<Long> {
 
     public void setOpcoesAplicacao(Set<OpcaoAplicacao> opcoesAplicacao) {
         this.opcoesAplicacao = opcoesAplicacao;
+    }
+
+    public ModuloSistema getModuloSistema() {
+        return moduloSistema;
+    }
+
+    public void setModuloSistema(ModuloSistema moduloSistema) {
+        this.moduloSistema = moduloSistema;
+    }
+
+    public String getAbreviacaoSistema() {
+        return Objects.isNull(moduloSistema) ? "" : moduloSistema.getAbreviacaoModulo();
     }
 
     @Override

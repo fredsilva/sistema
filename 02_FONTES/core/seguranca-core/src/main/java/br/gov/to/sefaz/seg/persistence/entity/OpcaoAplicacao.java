@@ -1,13 +1,20 @@
 package br.gov.to.sefaz.seg.persistence.entity;
 
 import br.gov.to.sefaz.persistence.entity.AbstractEntity;
+import org.hibernate.validator.constraints.NotEmpty;
 
 import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
+import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -24,40 +31,56 @@ public class OpcaoAplicacao extends AbstractEntity<Long> {
     private static final long serialVersionUID = 6633954130829802798L;
 
     @Id
-    @NotNull
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_opcao_aplicacao")
+    @SequenceGenerator(name = "sq_opcao_aplicacao", schema = "SEFAZ_SEG",
+            sequenceName = "sq_opcao_aplicacao",
+            allocationSize = 1)
+    @Max(value = 9999999999L,
+            message = "#{seg_msg['seg.gestao.opcaoAplicacao.identificacaoOpcaoAplicacao.maximo']}")
     @Column(name = "IDENTIFICACAO_OPCAO_APLICACAO")
     private Long identificacaoOpcaoAplicacao;
 
-    @NotNull
-    @Size(min = 1, max = 10)
+    @NotEmpty(message = "#{seg_msg['seg.gestao.opcaoAplicacao.casoUso.obrigatorio']}")
+    @Size(max = 10, message = "#{seg_msg['seg.gestao.opcaoAplicacao.casoUso.tamanho']}")
     @Column(name = "CASO_USO")
     private String casoUso;
 
-    @NotNull
-    @Size(min = 1, max = 60)
+    @NotEmpty(message = "#{seg_msg['seg.gestao.opcaoAplicacao.opcao.obrigatorio']}")
+    @Size(max = 60, message = "#{seg_msg['seg.gestao.opcaoAplicacao.opcao.tamanho']}")
     @Column(name = "DESCRIPCAO_OPCAO")
     private String descripcaoOpcao;
 
-    @NotNull
-    @Size(min = 1, max = 100)
+    @NotEmpty(message = "#{seg_msg['seg.gestao.opcaoAplicacao.opcaoUrl.obrigatorio']}")
+    @Size(max = 100, message = "#{seg_msg['seg.gestao.opcaoAplicacao.opcaoUrl.tamanho']}")
     @Column(name = "OPCAO_URL")
     private String opcaoUrl;
 
-    @NotNull
+    @NotNull(message = "#{seg_msg['seg.gestao.opcaoAplicacao.ajudaOpcao.obrigatorio']}")
+    @Size(max = 2000, min = 1, message = "#{seg_msg['seg.gestao.opcaoAplicacao.ajudaOpcao.tamanho']}")
     @Lob
     @Column(name = "AJUDA_OPCAO")
     private String ajudaOpcao;
 
-    @NotNull
+    @NotNull(message = "#{seg_msg['seg.gestao.opcaoAplicacao.identificacaoAplicacaoModulo.obrigatorio']}")
+    @Max(value = 9999999999L,
+            message = "#{seg_msg['seg.gestao.opcaoAplicacao.identificacaoAplicacaoModulo.maximo']}")
     @Column(name = "IDENTIFICACAO_APLICACAO_MODULO")
     private Long identificacaoAplicacaoModulo;
 
+    @ManyToOne
+    @JoinColumn(name = "IDENTIFICACAO_APLICACAO_MODULO", referencedColumnName = "IDENTIFICACAO_APLICACAO_MODULO",
+            insertable = false, updatable = false)
+    private AplicacaoModulo aplicacaoModulo;
+
+
     public OpcaoAplicacao() {
         // Construtor para inicialização por reflexão.
+        aplicacaoModulo = new AplicacaoModulo();
     }
 
     public OpcaoAplicacao(Long identificacaoOpcaoAplicacao, String casoUso, String descripcaoOpcao, String opcaoUrl,
             String ajudaOpcao, Long identificacaoAplicacaoModulo) {
+        this();
         this.identificacaoOpcaoAplicacao = identificacaoOpcaoAplicacao;
         this.casoUso = casoUso;
         this.descripcaoOpcao = descripcaoOpcao;
@@ -117,6 +140,42 @@ public class OpcaoAplicacao extends AbstractEntity<Long> {
 
     public void setIdentificacaoAplicacaoModulo(Long identificacaoAplicacaoModulo) {
         this.identificacaoAplicacaoModulo = identificacaoAplicacaoModulo;
+    }
+
+    public AplicacaoModulo getAplicacaoModulo() {
+        return aplicacaoModulo;
+    }
+
+    public void setAplicacaoModulo(AplicacaoModulo aplicacaoModulo) {
+        this.aplicacaoModulo = aplicacaoModulo;
+    }
+
+    public String getDescricaoAplicacao() {
+        return Objects.isNull(aplicacaoModulo) ? "" : aplicacaoModulo.getDescricaoAplicacaoModulo() ;
+    }
+
+    public String getAbreviacaoModulo() {
+        return aplicacaoModulo.getAbreviacaoSistema();
+    }
+
+    /**
+     * Busca o id do módulo de uma funcionalidade.
+     *
+     * @return o id do módulo de uma funcionalidade
+     */
+    public Long getIdModulo() {
+        if (Objects.isNull(aplicacaoModulo) || Objects.isNull(aplicacaoModulo.getModuloSistema())) {
+            return null;
+        } else {
+            return aplicacaoModulo.getModuloSistema().getIdentificacaoModuloSistema();
+        }
+    }
+
+    public String getDescricaoModulo() {
+        return Objects.isNull(aplicacaoModulo) || Objects.isNull(aplicacaoModulo.getModuloSistema()) ? ""
+                : String.format("%s (%s)",
+                aplicacaoModulo.getModuloSistema().getAbreviacaoModulo(),
+                aplicacaoModulo.getModuloSistema().getDescricaoModuloSistema());
     }
 
     @Override

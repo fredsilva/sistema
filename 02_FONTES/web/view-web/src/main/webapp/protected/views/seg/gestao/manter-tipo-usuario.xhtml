@@ -41,10 +41,8 @@
                                     styleClass="btn btn-primary"
                                     onclick="openModalInsert()">
                             </h:commandButton>
-                            <h:commandButton type="button"
-                                    value="#{seg_msg['seg.gestao.tipoUsuario.table.button.ajuda']}"
-                                    styleClass="btn btn-primary">
-                            </h:commandButton>
+
+                            <sat:opcaoAjudaButton />
                         </div>
                     </div>
                 </h:form>
@@ -87,12 +85,12 @@
                                                 value="#{tipoUsuarioMB.dto.codigoTipoUsuario}"/>
                                         <h:outputLabel
                                                 for="descricaoTipoUsuarioForm">
-                                                #{seg.gestao.tipoUsuario.form.nomeTipoUsuario}
+                                                #{seg_msg['seg.gestao.tipoUsuario.form.nomeTipoUsuario']}
                                         </h:outputLabel>
                                         <h:inputText value="#{tipoUsuarioMB.dto.descricaoTipoUsuario}"
                                                 id="descricaoTipoUsuarioForm"
                                                 styleClass="form-control"
-                                                maxlength="20"/>
+                                                maxlength="30"/>
                                     </div>
                                 </div>
                                 <div class="modal-footer" id="tipoUsuarioModalFooter">

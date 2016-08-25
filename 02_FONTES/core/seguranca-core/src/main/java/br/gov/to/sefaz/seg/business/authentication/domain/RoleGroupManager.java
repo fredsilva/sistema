@@ -1,8 +1,5 @@
 package br.gov.to.sefaz.seg.business.authentication.domain;
 
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
@@ -22,7 +19,7 @@ import java.util.stream.Collectors;
  */
 public class RoleGroupManager {
 
-    private final Map<RoleGroupKey, Set<GrantedAuthority>> groups;
+    private final Map<RoleGroupKey, Set<String>> groups;
     private Optional<RoleGroupKey> activeGroup;
 
     public RoleGroupManager() {
@@ -57,7 +54,7 @@ public class RoleGroupManager {
      * @see #setActiveGroup(RoleGroupKey)
      * @return roles do usuario para o grupo ativo
      */
-    public Set<GrantedAuthority> getRoles() {
+    public Set<String> getRoles() {
         return groups.getOrDefault(activeGroup.orElse(null), new HashSet<>());
     }
 
@@ -68,6 +65,15 @@ public class RoleGroupManager {
      */
     public Set<RoleGroupKey> getKeys() {
         return groups.keySet().stream().collect(Collectors.toSet());
+    }
+
+    /**
+     * Retorna os grupos de permissões de acesso (roles) e as roles que o usuário possui na seesão atual.
+     *
+     * @return grupos de roles que o usuário tem ativo na sessão
+     */
+    public Set<Map.Entry<RoleGroupKey, Set<String>>> getEntries() {
+        return groups.entrySet().stream().collect(Collectors.toSet());
     }
 
     /**
@@ -111,7 +117,6 @@ public class RoleGroupManager {
     public void addRoles(RoleGroupKey key, Collection<String> roles) {
         createIfAbsent(key);
         groups.get(key).addAll(roles.stream()
-                .map(s -> new SimpleGrantedAuthority("ROLE_" + s))
                 .collect(Collectors.toSet()));
     }
 

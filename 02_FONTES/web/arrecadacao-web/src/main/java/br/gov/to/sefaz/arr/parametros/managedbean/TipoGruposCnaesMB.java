@@ -2,9 +2,9 @@ package br.gov.to.sefaz.arr.parametros.managedbean;
 
 import br.gov.to.sefaz.arr.parametros.business.facade.TipoGruposCnaesFacade;
 import br.gov.to.sefaz.arr.parametros.business.service.filter.TipoGruposCnaesFilter;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.GruposCnae;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.TipoGruposCnaes;
-import br.gov.to.sefaz.cat.persistence.entity.AtividadeEconomica;
+import br.gov.to.sefaz.arr.persistence.entity.GruposCnae;
+import br.gov.to.sefaz.arr.persistence.entity.TipoGruposCnaes;
+import br.gov.to.sefaz.par.gestao.persistence.entity.AtividadeEconomica;
 import br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB;
 import br.gov.to.sefaz.util.message.MessageUtil;
 
@@ -73,6 +73,7 @@ public class TipoGruposCnaesMB extends DefaultCrudMB<TipoGruposCnaes, Integer> {
 
     /**
      * Método para buscar todos os CNAEs cadastrados na base.
+     *
      * @return lista de {@link AtividadeEconomica}.
      */
     public Collection<AtividadeEconomica> getAllCnaes() {
@@ -134,7 +135,7 @@ public class TipoGruposCnaesMB extends DefaultCrudMB<TipoGruposCnaes, Integer> {
         List<TipoGruposCnaes> resultList = getFacade().find(filter);
 
         if (resultList.isEmpty()) {
-            MessageUtil.addMesage(MessageUtil.ARR, "parametros.pesquisa.vazia");
+            MessageUtil.addMessage("mensagem.pesquisa.vazia");
         }
 
         setResultList(resultList);

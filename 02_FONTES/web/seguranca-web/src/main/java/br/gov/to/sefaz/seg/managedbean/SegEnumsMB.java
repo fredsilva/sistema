@@ -1,9 +1,6 @@
 package br.gov.to.sefaz.seg.managedbean;
 
-<<<<<<< Updated upstream
-=======
 import br.gov.to.sefaz.seg.persistence.enums.SituacaoSolicitacaoEnum;
->>>>>>> Stashed changes
 import br.gov.to.sefaz.seg.persistence.enums.SituacaoUsuarioEnum;
 
 import javax.faces.bean.ManagedBean;
@@ -23,13 +20,10 @@ public class SegEnumsMB {
         return SituacaoUsuarioEnum.values();
     }
 
-<<<<<<< Updated upstream
-=======
     public SituacaoSolicitacaoEnum[] getSituacoesSolicitacao() {
         return SituacaoSolicitacaoEnum.values();
     }
 
->>>>>>> Stashed changes
     /**
      * Retorna a concatenação do Label da situação.
      * @param situacaoEnum situação para montar o retorno.
@@ -38,8 +32,6 @@ public class SegEnumsMB {
     public String getSituacaoLabel(SituacaoUsuarioEnum situacaoEnum) {
         return situacaoEnum.getLabel();
     }
-<<<<<<< Updated upstream
-=======
 
     /**
      Retorna a concatenação do Label da situação.
@@ -60,5 +52,4 @@ public class SegEnumsMB {
     }
 
 
->>>>>>> Stashed changes
 }

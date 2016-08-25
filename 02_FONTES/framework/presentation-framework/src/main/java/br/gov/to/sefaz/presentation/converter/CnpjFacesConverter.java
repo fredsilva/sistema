@@ -1,14 +1,10 @@
 package br.gov.to.sefaz.presentation.converter;
 
-import br.gov.to.sefaz.util.message.SourceBundle;
-
 import java.text.DecimalFormat;
 import java.text.ParseException;
-import javax.faces.application.FacesMessage;
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
-import javax.faces.convert.ConverterException;
 import javax.faces.convert.FacesConverter;
 import javax.swing.text.MaskFormatter;
 
@@ -30,16 +26,7 @@ public class CnpjFacesConverter implements Converter {
 
         stringValue = stringValue.replaceAll("[\\.\\-_/ ]", "");
 
-        Long cnpj;
-
-        try {
-            cnpj = Long.valueOf(stringValue);
-        } catch (NumberFormatException e) {
-            String message = SourceBundle.getMessage("presentation.converter.cnpjFacesConverter.format");
-            throw new ConverterException(new FacesMessage(FacesMessage.SEVERITY_ERROR, message, ""), e);
-        }
-
-        return cnpj;
+        return stringValue;
     }
 
     @Override

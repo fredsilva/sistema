@@ -4,8 +4,9 @@ import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.violation.CustomViolation;
 import br.gov.to.sefaz.seg.business.gestao.service.validator.PostoTrabalhoFuncionarioAssignedValidator;
 import br.gov.to.sefaz.seg.persistence.entity.PostoTrabalho;
-import br.gov.to.sefaz.seg.persistence.repository.PostoTrabalhoRepository;
+import br.gov.to.sefaz.seg.persistence.repository.UsuarioPostoTrabalhoRepository;
 import br.gov.to.sefaz.util.message.SourceBundle;
+import org.apache.commons.lang3.StringUtils;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -31,7 +32,7 @@ import static org.powermock.api.mockito.PowerMockito.when;
 public class PostoTrabalhoFuncionarioAssignedValidatorTest {
 
     @Mock
-    private PostoTrabalhoRepository postoTrabalhoRepository;
+    private UsuarioPostoTrabalhoRepository usuarioPostoTrabalhoRepository;
 
     @InjectMocks
     private PostoTrabalhoFuncionarioAssignedValidator validator;
@@ -55,16 +56,16 @@ public class PostoTrabalhoFuncionarioAssignedValidatorTest {
         // given
         PostoTrabalho postoTrabalho = createPostoTrabalhoMocked();
 
-        assertFalse(validator.support(postoTrabalho.getClass(), ""));
+        assertFalse(validator.support(postoTrabalho.getClass(), StringUtils.EMPTY));
     }
 
     @Test
-    public void shouldFailWhenUnidadePaiUsed() {
+    public void shouldFailWhenPostoAssignedToUser() {
         // given
         PostoTrabalho postoTrabalho = createPostoTrabalhoMocked();
 
-        when(postoTrabalho.getIdentificacaoPostoTrabalho()).thenReturn(2L);
-        when(postoTrabalhoRepository.existsLockReferenceFuncionario(postoTrabalho.getIdentificacaoPostoTrabalho()))
+        when(postoTrabalho.getIdentificacaoPostoTrabalho()).thenReturn(2);
+        when(usuarioPostoTrabalhoRepository.existsLockReferenceFuncionario(postoTrabalho.getIdentificacaoPostoTrabalho()))
                 .thenReturn(true);
 
         Set<CustomViolation> violationSet = validator.validate(postoTrabalho.getIdentificacaoPostoTrabalho());

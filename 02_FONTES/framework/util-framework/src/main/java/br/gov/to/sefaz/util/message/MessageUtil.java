@@ -27,7 +27,7 @@ public final class MessageUtil {
      * @param severity severidade do erro.
      * @param key chave para ser buscada a mensagem no bundle.
      */
-    public static void addMesage(String bundle, Severity severity, String key) {
+    public static void addMessage(String bundle, Severity severity, String key) {
         FacesMessage msg = getFacesMessage(bundle, severity, key);
         FacesContext.getCurrentInstance().addMessage(null, msg);
     }
@@ -37,8 +37,8 @@ public final class MessageUtil {
      * @param severity severidade do erro.
      * @param key chave para ser buscada a mensagem no bundle.
      */
-    public static void addMesage(Severity severity, String key) {
-        addMesage(null, severity, key);
+    public static void addMessage(Severity severity, String key) {
+        addMessage(null, severity, key);
     }
 
     /**
@@ -46,16 +46,16 @@ public final class MessageUtil {
      * @param bundle bundle no qual está presente a mensagem.
      * @param key chave para ser buscada a mensagem no bundle.
      */
-    public static void addMesage(String bundle, String key) {
-        addMesage(bundle, null, key);
+    public static void addMessage(String bundle, String key) {
+        addMessage(bundle, null, key);
     }
 
     /**
      * Adiciona mensagem ao SourceBundle para ser mostrado em tela.
      * @param key chave para ser buscada a mensagem no bundle.
      */
-    public static void addMesage(String key) {
-        addMesage(null, null, key);
+    public static void addMessage(String key) {
+        addMessage(null, null, key);
     }
 
     /**
@@ -66,7 +66,7 @@ public final class MessageUtil {
      */
     public static void addMessages(String bundle, Severity severity, String... keys) {
         for (String key : keys) {
-            addMesage(bundle, severity, key);
+            addMessage(bundle, severity, key);
         }
     }
 
@@ -77,7 +77,7 @@ public final class MessageUtil {
      */
     public static void addMessages(Severity severity, String... keys) {
         for (String key : keys) {
-            addMesage(null, severity, key);
+            addMessage(null, severity, key);
         }
     }
 
@@ -87,7 +87,7 @@ public final class MessageUtil {
      */
     public static void addMessages(String... keys) {
         for (String key : keys) {
-            addMesage(null, null, key);
+            addMessage(null, null, key);
         }
     }
 

@@ -1,14 +1,13 @@
 package br.gov.to.sefaz.arr.parametros.business.service.impl;
 
 import br.gov.to.sefaz.arr.parametros.business.service.GruposCnaeService;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.GruposCnae;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.GruposCnaePK;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.GruposCnaeRepository;
+import br.gov.to.sefaz.arr.persistence.entity.GruposCnae;
+import br.gov.to.sefaz.arr.persistence.entity.GruposCnaePK;
+import br.gov.to.sefaz.arr.persistence.repository.GruposCnaeRepository;
 import br.gov.to.sefaz.business.service.impl.DefaultCrudService;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.ValidationSuite;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -27,8 +26,7 @@ public class GruposCnaeServiceImpl extends DefaultCrudService<GruposCnae, Grupos
 
     @Autowired
     public GruposCnaeServiceImpl(GruposCnaeRepository repository) {
-        super(repository, new Sort(new Sort.Order(Sort.Direction.ASC, "idGrupoCnae"),
-                new Sort.Order(Sort.Direction.ASC, "cnaeFiscal")));
+        super(repository);
     }
 
     @Override

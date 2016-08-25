@@ -1,7 +1,7 @@
 package br.gov.to.sefaz.arr.parametros.business.service.validator;
 
-import br.gov.to.sefaz.arr.parametros.persistence.entity.Bancos;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.BancosRepository;
+import br.gov.to.sefaz.arr.persistence.entity.Bancos;
+import br.gov.to.sefaz.arr.persistence.repository.BancosRepository;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.violation.CustomViolation;
 import br.gov.to.sefaz.persistence.enums.SituacaoEnum;

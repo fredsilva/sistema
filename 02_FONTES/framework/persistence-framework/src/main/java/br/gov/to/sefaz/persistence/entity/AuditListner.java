@@ -1,7 +1,8 @@
 package br.gov.to.sefaz.persistence.entity;
 
-import java.time.LocalDateTime;
+import br.gov.to.sefaz.util.application.ApplicationUtil;
 
+import java.time.LocalDateTime;
 import javax.persistence.PrePersist;
 import javax.persistence.PreRemove;
 import javax.persistence.PreUpdate;
@@ -23,7 +24,7 @@ public class AuditListner {
      */
     @PrePersist
     public void prePersist(AbstractEntity<?> entity) {
-        entity.setUsuarioInsercao("admin");
+        entity.setUsuarioInsercao(ApplicationUtil.getSafeNameAuthenticatedUser());
         entity.setDataInsercao(LocalDateTime.now());
     }
 
@@ -35,8 +36,10 @@ public class AuditListner {
      */
     @PreUpdate
     public void preUpdate(AbstractEntity<?> entity) {
-        entity.setUsuarioAlteracao("admin");
-        entity.setDataAlteracao(LocalDateTime.now());
+        if (!AbstractEntity.SIM.equals(entity.getRegistroExcluido())) {
+            entity.setUsuarioAlteracao(ApplicationUtil.getSafeNameAuthenticatedUser());
+            entity.setDataAlteracao(LocalDateTime.now());
+        }
     }
 
     /**
@@ -47,8 +50,8 @@ public class AuditListner {
      */
     @PreRemove
     public void preRemove(AbstractEntity<?> entity) {
-        entity.setRegistroExcluido(Boolean.TRUE);
-        entity.setUsuarioExclusao("admin");
+        entity.setRegistroExcluido(AbstractEntity.SIM);
+        entity.setUsuarioExclusao(ApplicationUtil.getSafeNameAuthenticatedUser());
         entity.setDataExclusao(LocalDateTime.now());
     }
 

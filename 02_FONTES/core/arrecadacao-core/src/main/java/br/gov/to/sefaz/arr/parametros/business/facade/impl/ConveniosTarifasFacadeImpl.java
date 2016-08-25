@@ -1,7 +1,7 @@
 package br.gov.to.sefaz.arr.parametros.business.facade.impl;
 
 import br.gov.to.sefaz.arr.parametros.business.facade.ConveniosTarifasFacade;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.ConveniosTarifas;
+import br.gov.to.sefaz.arr.persistence.entity.ConveniosTarifas;
 import br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade;
 import br.gov.to.sefaz.business.service.CrudService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -3,17 +3,14 @@ package br.gov.to.sefaz.arr.parametros.business.service.impl;
 import br.gov.to.sefaz.arr.parametros.business.service.GruposCnaeService;
 import br.gov.to.sefaz.arr.parametros.business.service.TipoGruposCnaesService;
 import br.gov.to.sefaz.arr.parametros.business.service.filter.TipoGruposCnaesFilter;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.GruposCnae;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.TipoGruposCnaes;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.TipoGruposCnaesRepository;
+import br.gov.to.sefaz.arr.persistence.entity.GruposCnae;
+import br.gov.to.sefaz.arr.persistence.entity.TipoGruposCnaes;
+import br.gov.to.sefaz.arr.persistence.repository.TipoGruposCnaesRepository;
 import br.gov.to.sefaz.business.service.impl.DefaultCrudService;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.ValidationSuite;
 import br.gov.to.sefaz.persistence.enums.SituacaoEnum;
-import br.gov.to.sefaz.persistence.predicate.AndPredicateBuilder;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -21,6 +18,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 /**
  * Implementação do serviço da entidade PlanoContas.
@@ -37,7 +35,7 @@ public class TipoGruposCnaesServiceImpl extends DefaultCrudService<TipoGruposCna
     @Autowired
     public TipoGruposCnaesServiceImpl(
             TipoGruposCnaesRepository repository, GruposCnaeService gruposCnaeService) {
-        super(repository, new Sort(new Sort.Order(Sort.Direction.ASC, "idGrupoCnae")));
+        super(repository);
         this.gruposCnaeService = gruposCnaeService;
     }
 
@@ -63,11 +61,10 @@ public class TipoGruposCnaesServiceImpl extends DefaultCrudService<TipoGruposCna
     @Override
     public List<TipoGruposCnaes> findAll(TipoGruposCnaesFilter filter) {
         return getRepository()
-                .findAll((root, query, cb) -> new AndPredicateBuilder(root, cb)
-                        .like("idGrupoCnae", filter.getIdGrupoCnae())
-                        .like("descricaoGrupo", filter.getDescricaoGrupo())
-                        .equalsTo("gruposCnae.cnaeFiscal", filter.getCnaeFiscal())
-                        .build());
+                .find("tgc", sb -> sb.innerJoin("tgc.gruposCnae", "gc").where()
+                        .opt().equal("tgc.idGrupoCnae", filter.getIdGrupoCnae())
+                        .and().opt().like("tgc.descricaoGrupo", filter.getDescricaoGrupo())
+                        .and().opt().equal("gc.cnaeFiscal", filter.getCnaeFiscal()));
     }
 
     @Override
@@ -98,7 +95,8 @@ public class TipoGruposCnaesServiceImpl extends DefaultCrudService<TipoGruposCna
         TipoGruposCnaes save = getRepository().save(entity);
 
         // Força o Id do pai nos filhos antes de salva-los
-        gruposCnae.stream().forEach(gc -> gc.setIdGrupoCnae(save.getIdGrupoCnae()));
+        gruposCnae.forEach(gc -> gc.setIdGrupoCnae(save.getIdGrupoCnae()));
+        gruposCnaeService.delete(gruposCnae.stream().map(GruposCnae::getId).collect(Collectors.toList()));
         gruposCnaeService.save(gruposCnae);
 
         return save;

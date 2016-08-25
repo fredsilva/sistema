@@ -1,8 +1,8 @@
 package br.gov.to.sefaz.arr.parametros.business.service.validator;
 
-import br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgencias;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.Bancos;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.BancoAgenciasRepository;
+import br.gov.to.sefaz.arr.persistence.entity.BancoAgencias;
+import br.gov.to.sefaz.arr.persistence.entity.Bancos;
+import br.gov.to.sefaz.arr.persistence.repository.BancoAgenciasRepository;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.violation.CustomViolation;
 import br.gov.to.sefaz.persistence.enums.SituacaoEnum;
@@ -76,7 +76,7 @@ public class BancoAgenciasDuplicatedCentralizadoraValidatorTest {
         //given
         BancoAgencias agencia = createAgencia(true);
 
-        when(repository.findExitsCentralizadoraAndIdBanco(1,true)).thenReturn(true);
+        when(repository.findExitsCentralizadoraAndIdBanco(1, 1, true)).thenReturn(true);
 
         Set<CustomViolation> violationSet = validator.validate(agencia);
 

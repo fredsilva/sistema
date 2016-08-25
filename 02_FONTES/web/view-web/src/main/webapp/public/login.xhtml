@@ -2,7 +2,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
         xmlns:h="http://java.sun.com/jsf/html"
-        xmlns:ui="http://java.sun.com/jsf/facelets">
+        xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
 <h:head>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <title>Sefaz TO</title>
@@ -15,16 +16,19 @@
     <h:outputScript library="js" name="lib/bootstrap.min.js"/>
     <h:outputScript library="js" name="lib/jquery.maskMoney.min.js"/>
     <h:outputScript library="js" name="lib/jquery.mask.min.js"/>
-    <h:outputScript library="js" name="core/sat.jsf.js"/>
+    <h:outputScript library="js" name="core/sat.js"/>
     <h:outputScript library="js" name="core/sat.modals.js"/>
+    <h:outputScript library="js" name="core/sat.jsf.js"/>
     <h:outputScript library="js" name="core/sat.forms.js"/>
     <h:outputScript library="js" name="seg/login.js"/>
-    
+    <h:outputScript>
+        setHomePage('#{pathResolverMB.getHomePath()}');
+    </h:outputScript>
 </h:head>
 <body>
-<div id="login-container">
+<div id="login-container" class="container">
     <div class="row">
-        <div class="col-sm-8 col-md-5 col-lg-4">
+        <div class="col-md-5">
             <h3>
                 <h:outputText value="#{seg_msg['login.titulo']}"/>
             </h3>
@@ -36,41 +40,53 @@
                     <p>#{seg_msg['login.painel.titulo']}</p>
                 </div>
                 <div class="panel-body">
-                    <form id="login-form" method="post">
+                    <h:form id="login-form">
                         <div class="form-group">
-                            <label for="username">#{seg_msg['login.form.cpf']}</label>
+                            <h:outputLabel for="username">#{seg_msg['login.form.cpf']}</h:outputLabel>
                             <div class="input-group">
                                 <div class="input-group-addon"><i class="glyphicon glyphicon-user"/></div>
-                                <input class="form-control cpf justInteger" id="username" name="username" type="text"
-                                        placeholder="#{seg_msg['login.form.cpf.placeholder']}" maxlength="14"/>
+                                <h:inputText value="#{loginMB.dto.cpf}"
+                                        styleClass="form-control cpf" id="username"
+                                        p:placeholder="#{seg_msg['login.form.cpf.placeholder']}"
+                                        p:data-mask="999.999.999-99"
+                                        maxlength="14">
+                                    <f:converter converterId="cpfFacesConverter"/>
+                                </h:inputText>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="password">#{seg_msg['login.form.senha']}</label>
+                            <h:outputLabel for="password">#{seg_msg['login.form.senha']}</h:outputLabel>
                             <div class="input-group">
                                 <div class="input-group-addon"><i class="glyphicon glyphicon-lock"/></div>
-                                <input class="form-control" id="password" name="password" type="password"
-                                        placeholder="#{seg_msg['login.form.senha.placeholder']}" maxlength="20"/>
+                                <h:inputSecret value="#{loginMB.dto.passwd}"
+                                        styleClass="form-control" id="password"
+                                        p:placeholder="#{seg_msg['login.form.senha.placeholder']}"
+                                        maxlength="20"/>
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                            <button type="button" class="btn btn-primary"
-                                    onclick="login('#{pathResolverMB.getContextPath()}/login','#{pathResolverMB.getHomePath()}')">#{seg_msg['login.form.entrar']}
-                            </button>
+                            <h:commandButton id="submit-login" action="${loginMB.doLogin}"
+                                    type="button" styleClass="btn btn-primary"
+                                    value="#{seg_msg['login.form.entrar']}">
+                                <f:ajax execute="username password" onevent="redirectOnSuccess"/>
+                            </h:commandButton>
+                            <ui:param name="certificadoError" value="#{seg_msg['login.form.certificado.falha']}"/>
                             <button type="button" class="btn btn-success"
-                                    onclick="authCertificadoDigital('#{pathResolverMB.getCertificadoPath()}',
-                                        '#{pathResolverMB.getHomePath()}')">
+                                    onclick="authCertificadoDigital('#{pathResolverMB.getCertificadoLoginPath()}',
+                                    '#{certificadoError}')">
                                 #{seg_msg['login.form.certificado.digital']}
                             </button>
                         </div>
-                    </form>
-                    <div id="login-footer">
-                        <hr/>
-                        <a href="script:void(0);"
-                                onclick="$('#reset-password-modal').modal('show');">#{seg_msg['login.form.lembrar.senha']}</a>
-                        <a href="#"><h:outputText value="#{seg_msg['login.form.cadastre.aqui']}"/></a>
-                    </div>
+                        <div id="login-footer">
+                            <hr/>
+                            <a href="javascript:void(0);" onclick="$('#reset-password-modal').modal('show');">
+                                <h:outputText value="#{seg_msg['login.form.lembrar.senha']}"/>
+                            </a>
+                            <a href="#{pathResolverMB.publicViewPath('solicitacao-autorizacao-senha.jsf')}">
+                                <h:outputText value="#{seg_msg['login.form.cadastre.aqui']}"/>
+                            </a>
+                        </div>
+                    </h:form>
                 </div>
             </div>
         </div>
@@ -78,5 +94,6 @@
 </div>
 <ui:include src="/public/reset-password.xhtml"/>
 <ui:include src="/protected/views/templates/modals/core-modals.xhtml"/>
+<ui:include src="/protected/views/templates/modals/success-marker.xhtml"/>
 </body>
 </html>

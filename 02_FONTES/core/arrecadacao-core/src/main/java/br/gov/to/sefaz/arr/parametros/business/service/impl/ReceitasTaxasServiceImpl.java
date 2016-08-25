@@ -1,22 +1,19 @@
 package br.gov.to.sefaz.arr.parametros.business.service.impl;
 
 import br.gov.to.sefaz.arr.parametros.business.service.ReceitasTaxasService;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.ReceitasTaxas;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.ReceitasTaxasPK;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.ReceitasTaxasRepository;
+import br.gov.to.sefaz.arr.persistence.entity.ReceitasTaxas;
+import br.gov.to.sefaz.arr.persistence.entity.ReceitasTaxasPK;
+import br.gov.to.sefaz.arr.persistence.repository.ReceitasTaxasRepository;
 import br.gov.to.sefaz.business.service.impl.DefaultCrudService;
 import br.gov.to.sefaz.persistence.enums.SituacaoEnum;
-import br.gov.to.sefaz.persistence.predicate.AndPredicateBuilder;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 import java.util.Optional;
 
 /**
- * Implementação do serviço da entidade {@link br.gov.to.sefaz.arr.parametros.persistence.entity.ReceitasTaxas}.
+ * Implementação do serviço da entidade {@link br.gov.to.sefaz.arr.persistence.entity.ReceitasTaxas}.
  *
  * @author <a href="mailto:gabriel.santos@ntconsult.com.br">gabriel.santos</a>
  * @since 19/05/2016 17:23:00
@@ -26,11 +23,8 @@ public class ReceitasTaxasServiceImpl extends DefaultCrudService<ReceitasTaxas, 
         implements ReceitasTaxasService {
 
     @Autowired
-    public ReceitasTaxasServiceImpl(
-            ReceitasTaxasRepository repository) {
-        super(repository, new Sort(
-                new Sort.Order(Sort.Direction.ASC, "idSubcodigo"),
-                new Sort.Order(Sort.Direction.ASC, "idReceita")));
+    public ReceitasTaxasServiceImpl(ReceitasTaxasRepository repository) {
+        super(repository);
     }
 
     @Override
@@ -45,9 +39,10 @@ public class ReceitasTaxasServiceImpl extends DefaultCrudService<ReceitasTaxas, 
 
     @Override
     public Collection<ReceitasTaxas> getReceitasTaxasByIdReceita(Integer idReceita) {
-        return getRepository().findAll((root, query, cb) -> new AndPredicateBuilder(root, cb)
-                .equalsTo("idReceita", idReceita)
-                .build(), getDefaultSort());
+        return getRepository()
+                .find("rt", sb -> sb
+                        .innerJoinFetch("rt.receitas")
+                        .where().equal("rt.idReceita", idReceita).orderById());
     }
 
     @Override

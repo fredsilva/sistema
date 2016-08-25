@@ -1,6 +1,6 @@
 function selectRowAgencias(data) {
 	$("#bancoAgencias-form\\:estado").val(data[10]).change();
-	setTimeout(function(){$("#bancoAgencias-form\\:municipio").val(data[11]);}, 500);
+	setTimeout(function(){$("#bancoAgencias-form\\:municipio").val(data[11]);}, 50000000000);
 	$("#bancoAgencias-form\\:idAgencia").attr('readonly', true).val(data[7]);
 	$("#bancoAgencias-form\\:nomeAgencia").val(data[1]);
 	$("#bancoAgencias-form\\:cnpjAgencia").val(data[2]);

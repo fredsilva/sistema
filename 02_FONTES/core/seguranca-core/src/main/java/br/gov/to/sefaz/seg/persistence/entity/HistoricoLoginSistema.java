@@ -10,6 +10,7 @@ import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -39,12 +40,16 @@ public class HistoricoLoginSistema extends AbstractEntity<Long> {
     private Long identificacaoLoginSistema;
 
     @NotNull
+    @Column(name = "CPF_USUARIO")
+    private String cpfUsuario;
+
+    @NotNull
     @Column(name = "DATA_HORA_LOGIN")
     @Convert(converter = LocalDateTimeConverter.class)
     private LocalDateTime dataHoraLogin;
 
-    @JoinColumn(name = "CPF_USUARIO", referencedColumnName = "CPF_USUARIO")
-    @ManyToOne(optional = false)
+    @JoinColumn(name = "CPF_USUARIO", referencedColumnName = "CPF_USUARIO", insertable = false, updatable = false)
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private UsuarioSistema usuarioSistema;
 
     public HistoricoLoginSistema() {
@@ -52,9 +57,10 @@ public class HistoricoLoginSistema extends AbstractEntity<Long> {
     }
 
     public HistoricoLoginSistema(Long identificacaoLoginSistema, LocalDateTime dataHoraLogin,
-            UsuarioSistema usuarioSistema) {
+            String cpfUsuario, UsuarioSistema usuarioSistema) {
         this.identificacaoLoginSistema = identificacaoLoginSistema;
         this.dataHoraLogin = dataHoraLogin;
+        this.cpfUsuario = cpfUsuario;
         this.usuarioSistema = usuarioSistema;
     }
 
@@ -69,6 +75,14 @@ public class HistoricoLoginSistema extends AbstractEntity<Long> {
 
     public void setIdentificacaoLoginSistema(Long identificacaoLoginSistema) {
         this.identificacaoLoginSistema = identificacaoLoginSistema;
+    }
+
+    public String getCpfUsuario() {
+        return cpfUsuario;
+    }
+
+    public void setCpfUsuario(String cpfUsuario) {
+        this.cpfUsuario = cpfUsuario;
     }
 
     public LocalDateTime getDataHoraLogin() {
@@ -103,13 +117,13 @@ public class HistoricoLoginSistema extends AbstractEntity<Long> {
         HistoricoLoginSistema that = (HistoricoLoginSistema) obj;
         return Objects.equals(this.identificacaoLoginSistema, that.identificacaoLoginSistema)
                 && Objects.equals(this.dataHoraLogin, that.dataHoraLogin)
-                && Objects.equals(this.usuarioSistema, that.usuarioSistema);
+                && Objects.equals(this.cpfUsuario, that.cpfUsuario);
     }
 
     @Override
     public String toString() {
         return "HistoricoLoginSistema [identificacaoLoginSistema=" + identificacaoLoginSistema + ", dataHoraLogin="
-                + dataHoraLogin + ", usuarioSistema=" + usuarioSistema + "]";
+                + dataHoraLogin + ", cpfUsuario=" + cpfUsuario + "]";
     }
 
 }

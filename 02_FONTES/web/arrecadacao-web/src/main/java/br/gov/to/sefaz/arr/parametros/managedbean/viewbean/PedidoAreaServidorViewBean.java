@@ -1,6 +1,6 @@
 package br.gov.to.sefaz.arr.parametros.managedbean.viewbean;
 
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreasServidores;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoAreasServidores;
 import br.gov.to.sefaz.persistence.enums.SituacaoEnum;
 
 import java.util.Objects;

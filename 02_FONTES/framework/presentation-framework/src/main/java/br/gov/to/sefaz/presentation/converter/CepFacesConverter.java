@@ -1,22 +1,10 @@
 package br.gov.to.sefaz.presentation.converter;
 
-<<<<<<< Updated upstream
-import br.gov.to.sefaz.util.message.SourceBundle;
-
-import java.text.DecimalFormat;
-import java.text.ParseException;
-import javax.faces.application.FacesMessage;
-import javax.faces.component.UIComponent;
-import javax.faces.context.FacesContext;
-import javax.faces.convert.Converter;
-import javax.faces.convert.ConverterException;
-=======
 import java.text.DecimalFormat;
 import java.text.ParseException;
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
->>>>>>> Stashed changes
 import javax.faces.convert.FacesConverter;
 import javax.swing.text.MaskFormatter;
 
@@ -38,20 +26,7 @@ public class CepFacesConverter implements Converter {
 
         stringValue = stringValue.replaceAll("[\\.\\-_/ ]", "");
 
-<<<<<<< Updated upstream
-        Long cep;
-
-        try {
-            cep = Long.valueOf(stringValue);
-        } catch (NumberFormatException e) {
-            String message = SourceBundle.getMessage("presentation.converter.cnpjFacesConverter.format");
-            throw new ConverterException(new FacesMessage(FacesMessage.SEVERITY_ERROR, message, ""), e);
-        }
-
-        return cep;
-=======
         return stringValue;
->>>>>>> Stashed changes
     }
 
     @Override

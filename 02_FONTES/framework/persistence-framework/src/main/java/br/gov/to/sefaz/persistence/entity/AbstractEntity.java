@@ -1,11 +1,8 @@
 package br.gov.to.sefaz.persistence.entity;
 
-import br.gov.to.sefaz.persistence.converter.YesOrNoBooleanConverter;
-
 import java.io.Serializable;
 import java.time.LocalDateTime;
 import javax.persistence.Column;
-import javax.persistence.Convert;
 import javax.persistence.EntityListeners;
 import javax.persistence.MappedSuperclass;
 
@@ -23,6 +20,8 @@ import javax.persistence.MappedSuperclass;
 public abstract class AbstractEntity<I extends Serializable> implements Serializable {
 
     private static final long serialVersionUID = 4678335275783952713L;
+    public static final String SIM = "S";
+    public static final String NAO = "N";
 
     @Column(name = "USUARIO_INSERCAO", updatable = false)
     protected String usuarioInsercao;
@@ -36,9 +35,9 @@ public abstract class AbstractEntity<I extends Serializable> implements Serializ
     @Column(name = "DATA_ALTERACAO")
     protected LocalDateTime dataAlteracao;
 
+    // Não utilizar enums ou outros objetos que necessitem de converter pois vai dar problema em native queries
     @Column(name = "REGISTRO_EXCLUIDO", nullable = false)
-    @Convert(converter = YesOrNoBooleanConverter.class)
-    protected Boolean registroExcluido = Boolean.FALSE;
+    protected String registroExcluido = "N";
 
     @Column(name = "USUARIO_EXCLUSAO")
     protected String usuarioExclusao;
@@ -85,11 +84,11 @@ public abstract class AbstractEntity<I extends Serializable> implements Serializ
         this.dataAlteracao = dataAlteracao;
     }
 
-    public Boolean getRegistroExcluido() {
+    public String getRegistroExcluido() {
         return registroExcluido;
     }
 
-    public void setRegistroExcluido(Boolean registroExcluido) {
+    public void setRegistroExcluido(String registroExcluido) {
         this.registroExcluido = registroExcluido;
     }
 

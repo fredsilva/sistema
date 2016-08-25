@@ -1,15 +1,12 @@
 package br.gov.to.sefaz.arr.parametros.business.service.impl;
 
 import br.gov.to.sefaz.arr.parametros.business.service.PedidoReceitaService;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoReceita;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoReceitaPK;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.PedidoReceitaRepository;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoReceita;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoReceitaPK;
+import br.gov.to.sefaz.arr.persistence.repository.PedidoReceitaRepository;
 import br.gov.to.sefaz.business.service.impl.DefaultCrudService;
 import br.gov.to.sefaz.persistence.enums.SituacaoEnum;
-import br.gov.to.sefaz.persistence.predicate.AndPredicateBuilder;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
@@ -27,7 +24,7 @@ public class PedidoReceitaServiceImpl extends DefaultCrudService<PedidoReceita, 
     @Autowired
     public PedidoReceitaServiceImpl(
             PedidoReceitaRepository repository) {
-        super(repository, new Sort(new Sort.Order(Sort.Direction.ASC, "idTipoPedido")));
+        super(repository);
     }
 
     @Override
@@ -42,13 +39,11 @@ public class PedidoReceitaServiceImpl extends DefaultCrudService<PedidoReceita, 
 
     @Override
     public Collection<PedidoReceita> getPedidoReceitaByIdTipoPedido(Integer idTipoPedido) {
-        return getRepository().findAll((root, query, cb) -> new AndPredicateBuilder(root, cb)
-                .equalsTo("idTipoPedido", idTipoPedido)
-                .build(), getDefaultSort());
+        return getRepository().find(sb -> sb.where().equal("idTipoPedido", idTipoPedido).orderById());
     }
 
     @Override
-    public int updateSituacaoByIdTipoPedido(Integer idTipoPedido, SituacaoEnum situacao) {
-        return getRepository().updateSituacaoByIdTipoPedido(idTipoPedido, situacao);
+    public void updateSituacaoByIdTipoPedido(Integer idTipoPedido, SituacaoEnum situacao) {
+        getRepository().updateSituacaoByIdTipoPedido(idTipoPedido, situacao);
     }
 }

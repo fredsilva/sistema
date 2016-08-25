@@ -12,6 +12,5 @@ import org.springframework.stereotype.Repository;
  * @since 13/05/2016 17:41:56
  */
 @Repository
-public interface OperacaoAuditadaRepository extends BaseRepository<OperacaoAuditada, Long> {
-
+public class OperacaoAuditadaRepository extends BaseRepository<OperacaoAuditada, Long> {
 }

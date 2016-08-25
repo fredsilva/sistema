@@ -5,14 +5,15 @@ import br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupManager;
 import br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupType;
 import br.gov.to.sefaz.seg.business.authentication.domain.UsuarioSistemaAuthentication;
 import br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema;
-
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
@@ -41,6 +42,18 @@ public class AuthenticatedUserHandler {
 
         return authentication instanceof UsuarioSistemaAuthentication
                 && authentication.isAuthenticated();
+    }
+
+    /**
+     * Verifica se o usuário está autenticado por certificado digital.
+     *
+     * @return true ou false
+     */
+    public static boolean isAuthenticatedByCert() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+
+        return authentication instanceof UsuarioSistemaAuthentication
+                && ((UsuarioSistemaAuthentication) authentication).isAuthenticatedByCert();
     }
 
     /**
@@ -78,8 +91,8 @@ public class AuthenticatedUserHandler {
      * @return usuario autenticado
      * @throws IllegalStateException caso não tenha usuário authenticado na sessão ou não tenha uma sessão
      */
-    public static Collection<? extends GrantedAuthority> getAuthorities() {
-        return getAuthentication().getAuthorities();
+    public static Collection<String> getUserRoles() {
+        return getAuthentication().getRoleGroupManager().getRoles();
     }
 
     /**
@@ -108,5 +121,24 @@ public class AuthenticatedUserHandler {
 
     public static Optional<RoleGroupKey> getActiveGroup() {
         return getAuthentication().getRoleGroupManager().getActiveGroup();
+    }
+
+    /**
+     * Invalida a sessão atual.
+     */
+    public static void invalidateSession() {
+        SecurityContextHolder.getContext().setAuthentication(null);
+        ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes())
+                .getRequest().getSession().invalidate();
+    }
+
+    /**
+     * Retorna as roles de um usuario dado um tipo de grupo.
+     */
+    public static Set<String> getRolesByType(RoleGroupType type) {
+        return getAuthentication().getRoleGroupManager().getEntries().stream()
+                .filter(gk -> gk.getKey().getType() == type)
+                .flatMap(e -> e.getValue().stream())
+                .collect(Collectors.toSet());
     }
 }

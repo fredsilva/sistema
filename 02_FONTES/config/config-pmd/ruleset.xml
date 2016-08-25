@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <ruleset name="mybraces"
-         xmlns="http://pmd.sf.net/ruleset/1.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd"
-         xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd">
+        xmlns="http://pmd.sf.net/ruleset/1.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd"
+        xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd">
     <description>PMD ruleset</description>
 
     <rule ref="rulesets/java/basic.xml"/>
@@ -23,6 +23,7 @@
         <exclude name="DefaultPackage"/>
         <exclude name="CallSuperInConstructor"/>
         <exclude name="AvoidLiteralsInIfCondition"/>
+        <exclude name="UseConcurrentHashMap"/>
     </rule>
     <rule ref="rulesets/java/coupling.xml">
         <exclude name="LawOfDemeter"/>
@@ -40,7 +41,9 @@
     <rule ref="rulesets/java/imports.xml">
         <exclude name="TooManyStaticImports"/>
     </rule>
-    <rule ref="rulesets/java/j2ee.xml"/>
+    <rule ref="rulesets/java/j2ee.xml">
+        <exclude name="DoNotUseThreads"/>
+    </rule>
     <rule ref="rulesets/java/javabeans.xml">
         <exclude name="BeanMembersShouldSerialize"/>
     </rule>
@@ -63,6 +66,9 @@
         <exclude name="PrematureDeclaration"/>
     </rule>
     <rule ref="rulesets/java/strictexception.xml"/>
-    <rule ref="rulesets/java/strings.xml"/>
+    <rule ref="rulesets/java/strings.xml">
+        <exclude name="InsufficientStringBufferDeclaration"/>
+        <exclude name="AvoidStringBufferField"/>
+    </rule>
     <rule ref="rulesets/java/unusedcode.xml"/>
 </ruleset>

@@ -1,6 +1,6 @@
 package br.gov.to.sefaz.arr.parametros.business.facade;
 
-import br.gov.to.sefaz.arr.parametros.persistence.entity.Bancos;
+import br.gov.to.sefaz.arr.persistence.entity.Bancos;
 import br.gov.to.sefaz.business.facade.CrudFacade;
 
 /**

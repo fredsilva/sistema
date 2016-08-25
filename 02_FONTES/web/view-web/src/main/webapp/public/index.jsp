@@ -2,7 +2,7 @@
 <%@taglib prefix="sec" uri="http://www.springframework.org/security/tags"%>
 
 <sec:authorize access="isFullyAuthenticated()">
-    <c:redirect url="/protected/views/home.jsf"/>
+    <c:redirect url="/protected/views/home.xhtml"/>
 </sec:authorize>
 
 <sec:authorize access="!isFullyAuthenticated()">

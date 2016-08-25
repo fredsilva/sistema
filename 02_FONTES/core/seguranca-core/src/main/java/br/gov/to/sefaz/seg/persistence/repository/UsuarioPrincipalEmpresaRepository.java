@@ -6,12 +6,12 @@ import br.gov.to.sefaz.seg.persistence.entity.UsuarioPrincipalEmpresa;
 import org.springframework.stereotype.Repository;
 
 /**
- * Repositório de acesso à base dados da entidade {@link UsuarioPrincipalEmpresa}.
+ * Repositório de acesso à base dados da entidade
+ * {@link br.gov.to.sefaz.seg.persistence.entity.UsuarioPrincipalEmpresa}.
  *
  * @author <a href="mailto:cristiano.luis@ntconsult.com.br">cristiano.luis</a>
  * @since 13/05/2016 17:41:56
  */
 @Repository
-public interface UsuarioPrincipalEmpresaRepository extends BaseRepository<UsuarioPrincipalEmpresa, Long> {
-
+public class UsuarioPrincipalEmpresaRepository extends BaseRepository<UsuarioPrincipalEmpresa, Long> {
 }

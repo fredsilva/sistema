@@ -3,19 +3,15 @@ package br.gov.to.sefaz.arr.parametros.business.service.impl;
 import br.gov.to.sefaz.arr.parametros.business.service.PedidoAreasFaixaValorService;
 import br.gov.to.sefaz.arr.parametros.business.service.PedidoAreasService;
 import br.gov.to.sefaz.arr.parametros.business.service.PedidoAreasServidoresService;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreas;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreasFaixaValor;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreasServidores;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.PedidoAreasRepository;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoAreas;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoAreasFaixaValor;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoAreasServidores;
+import br.gov.to.sefaz.arr.persistence.repository.PedidoAreasRepository;
 import br.gov.to.sefaz.business.service.impl.DefaultCrudService;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.ValidationSuite;
 import br.gov.to.sefaz.persistence.enums.SituacaoEnum;
-import br.gov.to.sefaz.persistence.predicate.AndPredicateBuilder;
-import br.gov.to.sefaz.util.message.MessageUtil;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -38,7 +34,7 @@ public class PedidoAreasServiceImpl extends DefaultCrudService<PedidoAreas, Inte
     @Autowired
     public PedidoAreasServiceImpl(PedidoAreasRepository repository, PedidoAreasFaixaValorService faixaValorService,
             PedidoAreasServidoresService servidoresService) {
-        super(repository, new Sort(new Sort.Order(Sort.Direction.ASC, "idPedidoArea")));
+        super(repository);
         this.faixaValorService = faixaValorService;
         this.servidoresService = servidoresService;
     }
@@ -50,9 +46,7 @@ public class PedidoAreasServiceImpl extends DefaultCrudService<PedidoAreas, Inte
 
     @Override
     public Collection<PedidoAreas> findAllByTipo(Integer idTipoPedido) {
-        return getRepository().findAll((root, query, cb) -> new AndPredicateBuilder(root, cb)
-                .equalsTo("idTipoPedido", idTipoPedido)
-                .build());
+        return getRepository().find(sb -> sb.where().equal("idTipoPedido", idTipoPedido));
     }
 
     @Override
@@ -83,7 +77,6 @@ public class PedidoAreasServiceImpl extends DefaultCrudService<PedidoAreas, Inte
         saved.setFaixaValor(faixaValor);
         saved.setPedidoAreasServidores(pedidoAreasServidores);
 
-        MessageUtil.addMesage(MessageUtil.ARR, "mensagem.sucesso.operacao");
         return saved;
     }
 

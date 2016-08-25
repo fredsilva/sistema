@@ -3,7 +3,7 @@ function editRow(data) {
 
     showBtnUpdate("posto-trabalho-form");
     $("#posto-trabalho-form\\:identificacaoPostoTrabalhoForm").val(data[0]);
-    $("#posto-trabalho-form\\:nomePostoTrabalhoForm").val(data[1]);
+    $("#posto-trabalho-form\\:nomePostoTrabalhoForm").val(data[2]);
     $("#posto-trabalho-form\\:identificacaoUnidOrganizacForm").val(data[3]);
 }
 

@@ -3,13 +3,14 @@ package br.gov.to.sefaz.seg.business.gestao.service.impl;
 import br.gov.to.sefaz.business.service.impl.DefaultCrudService;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.ValidationSuite;
-import br.gov.to.sefaz.persistence.predicate.AndPredicateBuilder;
+import br.gov.to.sefaz.par.gestao.business.service.ParametroGeralService;
+import br.gov.to.sefaz.seg.business.gestao.converter.TipoUnidadeConverter;
 import br.gov.to.sefaz.seg.business.gestao.service.UnidadeOrganizacionalService;
 import br.gov.to.sefaz.seg.business.gestao.service.filter.UnidadeOrganizacionalFilter;
+import br.gov.to.sefaz.seg.persistence.domain.TipoUnidade;
 import br.gov.to.sefaz.seg.persistence.entity.UnidadeOrganizacional;
 import br.gov.to.sefaz.seg.persistence.repository.UnidadeOrganizacionalRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -25,9 +26,15 @@ import java.util.Optional;
 public class UnidadeOrganizacionalServiceImpl extends DefaultCrudService<UnidadeOrganizacional, Long> implements
         UnidadeOrganizacionalService {
 
+    private static final String LISTAGEM_TIPO_UNIDADE = "LISTAGEM_TIPO_UNIDADE";
+
+    private final ParametroGeralService parametroGeralService;
+
     @Autowired
-    public UnidadeOrganizacionalServiceImpl(UnidadeOrganizacionalRepository repository) {
-        super(repository, new Sort(new Sort.Order(Sort.Direction.ASC, "identificacaoUnidOrganizac")));
+    public UnidadeOrganizacionalServiceImpl(UnidadeOrganizacionalRepository repository, ParametroGeralService
+            parametroGeralService) {
+        super(repository);
+        this.parametroGeralService = parametroGeralService;
     }
 
     @Override
@@ -37,11 +44,24 @@ public class UnidadeOrganizacionalServiceImpl extends DefaultCrudService<Unidade
 
     @Override
     public List<UnidadeOrganizacional> findAll(UnidadeOrganizacionalFilter filter) {
-        return getRepository()
-                .findAll((root, query, cb) -> new AndPredicateBuilder(root, cb)
-                        .like("nomeUnidOrganizac", filter.getNomeUnidOrganizac())
-                        .like("unidOrganizacPai", filter.getUnidOrganizacPai())
-                        .build());
+        return getRepository().find(sb -> sb.where()
+                .opt().like("nomeUnidOrganizac", filter.getNomeUnidOrganizac())
+                .and().opt().equal("unidOrganizacPai", filter.getUnidOrganizacPai())
+                .and().opt().equal("codigoTipoUnidade", filter.getTipoUnidade()));
+    }
+
+    @Override
+    public UnidadeOrganizacional save(@ValidationSuite(context = ValidationContext.SAVE)
+            UnidadeOrganizacional entity) {
+        entity = super.save(entity);
+        return findOne(entity.getId());
+    }
+
+    @Override
+    public UnidadeOrganizacional update(@ValidationSuite(context = ValidationContext.UPDATE)
+            UnidadeOrganizacional entity) {
+        entity = super.update(entity);
+        return findOne(entity.getId());
     }
 
     @Override
@@ -52,13 +72,19 @@ public class UnidadeOrganizacionalServiceImpl extends DefaultCrudService<Unidade
         return super.delete(id);
     }
 
+    @Override
+    public List<TipoUnidade> findTiposUnidades() {
+        return parametroGeralService.findCodeData(new TipoUnidadeConverter(), LISTAGEM_TIPO_UNIDADE);
+    }
+
     /**
      * Classe para deleção de Unidade Organizacional.
+     *
      * @param unidadeOrganizacional unidade organizacional para remover pelo ID.
      */
     @SuppressWarnings("PMD")
-    private void validateDelete(@ValidationSuite(context = ValidationContext.DELETE) UnidadeOrganizacional
-            unidadeOrganizacional){
+    private void validateDelete(@ValidationSuite(context = ValidationContext.DELETE, onlyCustom = true)
+            UnidadeOrganizacional unidadeOrganizacional) {
         //Método que serve pra validar UnidadeOrganizacional unidadeOrganizacional.
     }
 }

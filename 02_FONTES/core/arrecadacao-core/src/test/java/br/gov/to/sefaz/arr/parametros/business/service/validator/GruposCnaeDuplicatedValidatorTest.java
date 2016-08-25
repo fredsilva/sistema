@@ -1,8 +1,8 @@
 package br.gov.to.sefaz.arr.parametros.business.service.validator;
 
-import br.gov.to.sefaz.arr.parametros.persistence.entity.GruposCnae;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.GruposCnaePK;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.GruposCnaeRepository;
+import br.gov.to.sefaz.arr.persistence.entity.GruposCnae;
+import br.gov.to.sefaz.arr.persistence.entity.GruposCnaePK;
+import br.gov.to.sefaz.arr.persistence.repository.GruposCnaeRepository;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.violation.CustomViolation;
 import br.gov.to.sefaz.util.message.SourceBundle;

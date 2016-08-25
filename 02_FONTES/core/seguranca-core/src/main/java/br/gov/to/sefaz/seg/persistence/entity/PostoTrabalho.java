@@ -13,7 +13,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -26,7 +25,7 @@ import javax.validation.constraints.Size;
 @Entity
 @Table(name = "TA_POSTO_TRABALHO", schema = "SEFAZ_SEG")
 
-public class PostoTrabalho extends AbstractEntity<Long> {
+public class PostoTrabalho extends AbstractEntity<Integer> {
 
     private static final long serialVersionUID = -2743122709932667159L;
 
@@ -35,14 +34,11 @@ public class PostoTrabalho extends AbstractEntity<Long> {
     @SequenceGenerator(name = "sq_posto_trabalho", schema = "SEFAZ_SEG",
             sequenceName = "sq_posto_trabalho",
             allocationSize = 1)
-    @Max(value = 9999999999L, message =
-            "#{seg_msg['seg.gestao.PostoTrabalho.identificacaoUnidOrganizac.maximo']}")
     @Column(name = "IDENTIFICACAO_POSTO_TRABALHO")
-    private Long identificacaoPostoTrabalho;
+    private Integer identificacaoPostoTrabalho;
 
     @Size(max = 100, message = "#{seg_msg['seg.gestao.PostoTrabalho.nomePostoTrabalho.tamanho']}")
     @NotEmpty(message = "#{seg_msg['seg.gestao.PostoTrabalho.nomePostoTrabalho.obrigatorio']}")
-    @NotNull(message = "#{seg_msg['seg.gestao.PostoTrabalho.nomePostoTrabalho.obrigatorio']}")
     @Column(name = "NOME_POSTO_TRABALHO")
     private String nomePostoTrabalho;
 
@@ -59,22 +55,23 @@ public class PostoTrabalho extends AbstractEntity<Long> {
         // Construtor para inicialização por reflexão.
     }
 
-    public PostoTrabalho(Long identificacaoPostoTrabalho, String nomePostoTrabalho, Long identificacaoUnidOrganizac) {
+    public PostoTrabalho(Integer identificacaoPostoTrabalho, String nomePostoTrabalho, Long
+            identificacaoUnidOrganizac) {
         this.identificacaoPostoTrabalho = identificacaoPostoTrabalho;
         this.nomePostoTrabalho = nomePostoTrabalho;
         this.identificacaoUnidOrganizac = identificacaoUnidOrganizac;
     }
 
     @Override
-    public Long getId() {
+    public Integer getId() {
         return identificacaoPostoTrabalho;
     }
 
-    public Long getIdentificacaoPostoTrabalho() {
+    public Integer getIdentificacaoPostoTrabalho() {
         return identificacaoPostoTrabalho;
     }
 
-    public void setIdentificacaoPostoTrabalho(Long identificacaoPostoTrabalho) {
+    public void setIdentificacaoPostoTrabalho(Integer identificacaoPostoTrabalho) {
         this.identificacaoPostoTrabalho = identificacaoPostoTrabalho;
     }
 

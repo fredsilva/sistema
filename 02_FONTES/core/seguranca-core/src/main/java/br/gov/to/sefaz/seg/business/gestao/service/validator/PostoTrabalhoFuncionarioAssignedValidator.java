@@ -4,7 +4,7 @@ import br.gov.to.sefaz.business.service.validation.ServiceValidator;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.violation.CustomViolation;
 import br.gov.to.sefaz.seg.persistence.entity.PostoTrabalho;
-import br.gov.to.sefaz.seg.persistence.repository.PostoTrabalhoRepository;
+import br.gov.to.sefaz.seg.persistence.repository.UsuarioPostoTrabalhoRepository;
 import br.gov.to.sefaz.util.message.MessageUtil;
 import br.gov.to.sefaz.util.message.SourceBundle;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,14 +19,14 @@ import java.util.Set;
  * @since 10/06/2016 17:03:00
  */
 @Component
-public class PostoTrabalhoFuncionarioAssignedValidator implements ServiceValidator<Long> {
+public class PostoTrabalhoFuncionarioAssignedValidator implements ServiceValidator<Integer> {
 
-    private final PostoTrabalhoRepository postoTrabalhoRepository;
+    private final UsuarioPostoTrabalhoRepository usuarioPostoTrabalhoRepository;
 
     @Autowired
-    public PostoTrabalhoFuncionarioAssignedValidator(PostoTrabalhoRepository
-            postoTrabalhoRepository) {
-        this.postoTrabalhoRepository = postoTrabalhoRepository;
+    public PostoTrabalhoFuncionarioAssignedValidator(UsuarioPostoTrabalhoRepository
+            usuarioPostoTrabalhoRepository) {
+        this.usuarioPostoTrabalhoRepository = usuarioPostoTrabalhoRepository;
     }
 
     @Override
@@ -35,10 +35,10 @@ public class PostoTrabalhoFuncionarioAssignedValidator implements ServiceValidat
     }
 
     @Override
-    public Set<CustomViolation> validate(Long target) {
+    public Set<CustomViolation> validate(Integer target) {
         HashSet<CustomViolation> customViolations = new HashSet<>();
 
-        if (postoTrabalhoRepository.existsLockReferenceFuncionario(target)) {
+        if (usuarioPostoTrabalhoRepository.existsLockReferenceFuncionario(target)) {
             String codigoCadastrado = SourceBundle.getMessage(MessageUtil.SEG,
                     "seg.gestao.PostoTrabalho.form.falha.funcionario");
             customViolations.add(new CustomViolation(codigoCadastrado));

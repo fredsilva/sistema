@@ -2,6 +2,7 @@ package br.gov.to.sefaz.seg.business.gestao.service;
 
 import br.gov.to.sefaz.business.service.CrudService;
 import br.gov.to.sefaz.seg.business.gestao.service.filter.UnidadeOrganizacionalFilter;
+import br.gov.to.sefaz.seg.persistence.domain.TipoUnidade;
 import br.gov.to.sefaz.seg.persistence.entity.UnidadeOrganizacional;
 
 import java.util.List;
@@ -21,4 +22,13 @@ public interface UnidadeOrganizacionalService extends CrudService<UnidadeOrganiz
      * @return lista de UnidadeOrganizacional ativos
      */
     List<UnidadeOrganizacional> findAll(UnidadeOrganizacionalFilter filter);
+
+    /**
+     * Consulta os tipos de Unidades Organizacionais.
+     *
+     * @return lista com os tipos de Unidades Organizacionais
+     */
+    List<TipoUnidade> findTiposUnidades();
+
+
 }

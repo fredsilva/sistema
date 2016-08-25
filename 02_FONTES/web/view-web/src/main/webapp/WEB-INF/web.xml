@@ -21,14 +21,6 @@
     <error-page>
         <location>/public/error-page.jsf</location>
     </error-page>
-    <error-page>
-        <exception-type>br.gov.to.sefaz.exception.UnexpectedErrorException</exception-type>
-        <location>/protected/views/home.jsf</location>
-    </error-page>
-    <error-page>
-        <exception-type>javax.faces.application.ViewExpiredException</exception-type>
-        <location>/public/login.jsf</location>
-    </error-page>
 
     <context-param>
         <param-name>javax.faces.DEFAULT_SUFFIX</param-name>
@@ -61,7 +53,7 @@
     </servlet-mapping>
 
     <session-config>
-        <session-timeout>5</session-timeout>
+        <session-timeout>5000</session-timeout>
     </session-config>
 
     <!-- Spring basic configurations -->

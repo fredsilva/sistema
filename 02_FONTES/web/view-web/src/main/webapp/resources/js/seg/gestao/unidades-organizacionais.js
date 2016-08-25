@@ -1,35 +1,35 @@
 function selectRow(data) {
     openModal();
     showBtnSave("unidade-organizacional-form");
-
     $("#unidade-organizacional-form\\:identificacaoUnidOrganizacForm").val(null);
     $("#unidade-organizacional-form\\:nomeUnidOrganizacForm").val(data[1]);
-    $("#unidade-organizacional-form\\:nomeUnidOrganizacPaiForm").val(data[6]);
-    $("#unidade-organizacional-form\\:enderecoForm").val(data[3]);
-    $("#unidade-organizacional-form\\:chefeGeralForm").val(data[4]);
-    $("#unidade-organizacional-form\\:telefoneForm").val(data[5]);
+    $("#unidade-organizacional-form\\:enderecoForm").val(data[4]);
+    $("#unidade-organizacional-form\\:chefeGeralForm").val(data[5]);
+    $("#unidade-organizacional-form\\:telefoneForm").val(data[6]);
+    $("#unidade-organizacional-form\\:nomeUnidOrganizacPaiForm").val(data[7]);
+    $("#unidade-organizacional-form\\:tipoUnidadeForm").val(data[8]);
 }
+
 function editRow(data) {
     openModal();
-
     showBtnUpdate("unidade-organizacional-form");
     $("#unidade-organizacional-form\\:identificacaoUnidOrganizacForm").val(data[0]);
     $("#unidade-organizacional-form\\:nomeUnidOrganizacForm").val(data[1]);
-    $("#unidade-organizacional-form\\:nomeUnidOrganizacPaiForm").val(data[6]);
-    $("#unidade-organizacional-form\\:enderecoForm").val(data[3]);
-    $("#unidade-organizacional-form\\:chefeGeralForm").val(data[4]);
-    $("#unidade-organizacional-form\\:telefoneForm").val(data[5]);
-
+    $("#unidade-organizacional-form\\:enderecoForm").val(data[4]);
+    $("#unidade-organizacional-form\\:chefeGeralForm").val(data[5]);
+    $("#unidade-organizacional-form\\:telefoneForm").val(data[6]);
+    $("#unidade-organizacional-form\\:nomeUnidOrganizacPaiForm").val(data[7]);
+    $("#unidade-organizacional-form\\:tipoUnidadeForm").val(data[8]);
 }
 
 function resetFields() {
     closeModal();
+    showBtnSave("unidade-organizacional-form");
     clearFields('unidade-organizacional-form');
     clearFields('unidades-organizacionais-table');
 }
 
 function resetOnSuccess(data) {
-    loadAllUnidadeOrganizacional();
     onSuccess(data, resetFields);
 }
 

@@ -1,14 +1,24 @@
 package br.gov.to.sefaz.seg.persistence.entity;
 
 import br.gov.to.sefaz.persistence.entity.AbstractEntity;
+import br.gov.to.sefaz.seg.persistence.converter.SituacaoSolicitacaoEnumConverter;
+import br.gov.to.sefaz.seg.persistence.enums.SituacaoSolicitacaoEnum;
+import org.hibernate.validator.constraints.NotEmpty;
+import org.hibernate.validator.constraints.br.CNPJ;
 
 import java.util.Objects;
 import javax.persistence.Column;
+import javax.persistence.Convert;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.validation.constraints.Max;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -25,26 +35,38 @@ public class SolicitacaoUsuario extends AbstractEntity<Long> {
     private static final long serialVersionUID = -4907743764166416720L;
 
     @Id
-    @NotNull
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_solicitacao_usuario")
+    @SequenceGenerator(name = "sq_solicitacao_usuario", schema = "SEFAZ_SEG",
+            sequenceName = "sq_solicitacao_usuario",
+            allocationSize = 1)
+    @Max(value = 9999999999L,
+            message = "#{seg_msg['seg.gestao.solicitacaoUsuario.identificacaoSolicitacao.maximo']}")
     @Column(name = "IDENTIFICACAO_SOLICITACAO")
     private Long identificacaoSolicitacao;
 
-    @NotNull
-    @Size(min = 1, max = 30)
+    @CNPJ(message = "#{seg_msg['seg.gestao.solicitacaoUsuario.identificacaoSolicitacao.cnpj.incorreto']}")
+    @NotEmpty(message = "#{seg_msg['seg.solicitacaoUsuario.cnpj.vazio']}")
+    @Size(max = 30, message = "#{seg_msg['seg.solicitacaoUsuario.cnpj.tamanho']}")
     @Column(name = "CNPJ_NEGOCIO")
     private String cnpjNegocio;
 
-    @NotNull
-    @Size(min = 1, max = 30)
+    @NotEmpty(message = "#{seg_msg['seg.solicitacaoUsuario.inscricaoEstadual.vazio']}")
+    @Size(max = 30, message = "#{seg_msg['seg.solicitacaoUsuario.inscricaoEstadual.tamanho']}")
     @Column(name = "INSCRICAO_ESTADUAL_NEGOCIO")
     private String inscricaoEstadualNegocio;
 
     @NotNull
+    @Convert(converter = SituacaoSolicitacaoEnumConverter.class)
     @Column(name = "SITUACAO_SOLICITACAO")
-    private Character situacaoSolicitacao;
+    private SituacaoSolicitacaoEnum situacaoSolicitacao = SituacaoSolicitacaoEnum.PENDENTE;
 
-    @JoinColumn(name = "CPF", referencedColumnName = "CPF_USUARIO")
-    @OneToOne(optional = false)
+    @NotEmpty(message = "#{seg_msg['usuarioSistema.cpfUsuario.obrigatorio']}")
+    @Size(max = 11, message = "#{seg_msg['usuarioSistema.cpfUsuario.tamanho']}")
+    @Column(name = "CPF")
+    private String cpfUsuario;
+
+    @JoinColumn(name = "CPF", referencedColumnName = "CPF_USUARIO", insertable = false, updatable = false)
+    @OneToOne(optional = false, fetch = FetchType.LAZY)
     private UsuarioSistema usuarioSistema;
 
     public SolicitacaoUsuario() {
@@ -52,7 +74,7 @@ public class SolicitacaoUsuario extends AbstractEntity<Long> {
     }
 
     public SolicitacaoUsuario(Long identificacaoSolicitacao, String cnpjNegocio, String inscricaoEstadualNegocio,
-            Character situacaoSolicitacao, UsuarioSistema usuarioSistema) {
+            SituacaoSolicitacaoEnum situacaoSolicitacao, UsuarioSistema usuarioSistema) {
         this.identificacaoSolicitacao = identificacaoSolicitacao;
         this.cnpjNegocio = cnpjNegocio;
         this.inscricaoEstadualNegocio = inscricaoEstadualNegocio;
@@ -89,11 +111,11 @@ public class SolicitacaoUsuario extends AbstractEntity<Long> {
         this.inscricaoEstadualNegocio = inscricaoEstadualNegocio;
     }
 
-    public Character getSituacaoSolicitacao() {
+    public SituacaoSolicitacaoEnum getSituacaoSolicitacao() {
         return situacaoSolicitacao;
     }
 
-    public void setSituacaoSolicitacao(Character situacaoSolicitacao) {
+    public void setSituacaoSolicitacao(SituacaoSolicitacaoEnum situacaoSolicitacao) {
         this.situacaoSolicitacao = situacaoSolicitacao;
     }
 
@@ -134,4 +156,11 @@ public class SolicitacaoUsuario extends AbstractEntity<Long> {
                 + situacaoSolicitacao + ", usuarioSistema=" + usuarioSistema + "]";
     }
 
+    public String getCpfUsuario() {
+        return cpfUsuario;
+    }
+
+    public void setCpfUsuario(String cpfUsuario) {
+        this.cpfUsuario = cpfUsuario;
+    }
 }

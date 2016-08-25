@@ -1,18 +1,23 @@
 package br.gov.to.sefaz.seg.persistence.entity;
 
 import br.gov.to.sefaz.persistence.entity.AbstractEntity;
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
+import org.hibernate.validator.constraints.NotEmpty;
 
+import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
+import java.util.stream.Collectors;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
+import javax.persistence.Transient;
 import javax.validation.constraints.Size;
 
 /**
@@ -28,34 +33,53 @@ public class PapelSistema extends AbstractEntity<Long> {
     private static final long serialVersionUID = 3619773195182690829L;
 
     @Id
-    @NotNull
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_papel_sistema")
+    @SequenceGenerator(name = "sq_papel_sistema", schema = "SEFAZ_SEG",
+            sequenceName = "sq_papel_sistema",
+            allocationSize = 1)
     @Column(name = "IDENTIFICACAO_PAPEL")
     private Long identificacaoPapel;
 
-    @NotNull
-    @Size(min = 1, max = 30)
+    @NotEmpty(message = "#{seg_msg['seg.gestao.papelSistema.nomePapelSistema.vazio']}")
+    @Size(max = 30, message = "#{seg_msg['seg.gestao.papelSistema.nomePapelSistema.maximo']}")
     @Column(name = "NOME_PAPEL")
     private String nomePapel;
 
-    @NotNull
-    @Size(min = 1, max = 120)
+    @NotEmpty(message = "#{seg_msg['seg.gestao.papelSistema.descricaoPapelSistema.vazio']}")
+    @Size(max = 120, message = "#{seg_msg['seg.gestao.papelSistema.descricaoPapelSistema.maximo']}")
     @Column(name = "DESCRICAO_PAPEL")
     private String descricaoPapel;
 
-    @OneToMany
+    @OneToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "IDENTIFICACAO_PAPEL", referencedColumnName = "IDENTIFICACAO_PAPEL",
             insertable = false, updatable = false)
-    @Fetch(FetchMode.JOIN)
     private Set<PapelOpcao> papelOpcao;
+
+    @OneToMany(mappedBy = "papelSistema", fetch = FetchType.LAZY)
+    private Set<PerfilPapel> perfilPapel;
+
+    @Transient
+    private Long totalOpcoes;
+
+    @Transient
+    private Long vezesAtribuido;
 
     public PapelSistema() {
         // Construtor para inicialização por reflexão.
+        papelOpcao = new HashSet<>();
     }
 
-    public PapelSistema(Long identificacaoPapel, String nomePapel, String descricaoPapel) {
+    public PapelSistema(Long identificacaoPapel) {
+        this.identificacaoPapel = identificacaoPapel;
+    }
+
+    public PapelSistema(Long identificacaoPapel, String nomePapel, String descricaoPapel, Long totalOpcoes,
+            Long vezesAtribuido) {
         this.identificacaoPapel = identificacaoPapel;
         this.nomePapel = nomePapel;
         this.descricaoPapel = descricaoPapel;
+        this.totalOpcoes = totalOpcoes;
+        this.vezesAtribuido = vezesAtribuido;
     }
 
     @Override
@@ -95,6 +119,36 @@ public class PapelSistema extends AbstractEntity<Long> {
         this.papelOpcao = papelOpcao;
     }
 
+    public Long getTotalOpcoes() {
+        return totalOpcoes;
+    }
+
+    public void setTotalOpcoes(Long totalOpcoes) {
+        this.totalOpcoes = totalOpcoes;
+    }
+
+    public Long getVezesAtribuido() {
+        return vezesAtribuido;
+    }
+
+    public void setVezesAtribuido(Long vezesAtribuido) {
+        this.vezesAtribuido = vezesAtribuido;
+    }
+
+    public Set<PerfilPapel> getPerfilPapel() {
+        return perfilPapel;
+    }
+
+    public void setPerfilPapel(Set<PerfilPapel> perfilPapel) {
+        this.perfilPapel = perfilPapel;
+    }
+
+    public String getListPerfis() {
+        return Objects.isNull(perfilPapel) ? "" : perfilPapel.stream()
+                .map(pp -> pp.getIdentificacaoPerfil().toString())
+                .collect(Collectors.joining(","));
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -106,12 +160,14 @@ public class PapelSistema extends AbstractEntity<Long> {
         PapelSistema that = (PapelSistema) o;
         return Objects.equals(identificacaoPapel, that.identificacaoPapel)
                 && Objects.equals(nomePapel, that.nomePapel)
-                && Objects.equals(descricaoPapel, that.descricaoPapel);
+                && Objects.equals(descricaoPapel, that.descricaoPapel)
+                && Objects.equals(totalOpcoes, that.totalOpcoes)
+                && Objects.equals(vezesAtribuido, that.vezesAtribuido);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(identificacaoPapel, nomePapel, descricaoPapel);
+        return Objects.hash(identificacaoPapel, nomePapel, descricaoPapel, totalOpcoes, vezesAtribuido);
     }
 
     @Override

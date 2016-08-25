@@ -1,7 +1,7 @@
 package br.gov.to.sefaz.arr.parametros.managedbean;
 
 import br.gov.to.sefaz.arr.parametros.business.facade.BancosFacade;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.Bancos;
+import br.gov.to.sefaz.arr.persistence.entity.Bancos;
 import br.gov.to.sefaz.business.facade.CrudFacade;
 import br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB;
 

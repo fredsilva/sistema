@@ -2,7 +2,6 @@ package br.gov.to.sefaz.seg.persistence.repository;
 
 import br.gov.to.sefaz.persistence.repository.BaseRepository;
 import br.gov.to.sefaz.seg.persistence.entity.ErroProcessoAuditoria;
-
 import org.springframework.stereotype.Repository;
 
 /**
@@ -12,6 +11,5 @@ import org.springframework.stereotype.Repository;
  * @since 13/05/2016 17:41:56
  */
 @Repository
-public interface ErroProcessoAuditoriaRepository extends BaseRepository<ErroProcessoAuditoria, Long> {
-
+public class ErroProcessoAuditoriaRepository extends BaseRepository<ErroProcessoAuditoria, Long> {
 }

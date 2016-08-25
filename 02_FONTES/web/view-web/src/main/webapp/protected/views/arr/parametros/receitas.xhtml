@@ -107,7 +107,7 @@
                                 dataAlteracao:date,usuarioAlteracao,
                                 classificacaoReceita:hide,tipoReceita:hide,
                                 situacao:hide,imprimeDare:hide,idBarra:hide,
-                                planoContas:hide,permiteTaxas:hide"
+                                idPlanoContas:hide,permiteTaxas:hide"
                         hasActions="true"
                         actionEvents="select-row:click:selectRow,
                                delete-row:click:deleteReceita(0)">
@@ -216,13 +216,13 @@
                             <h:outputLabel for="planoContas">
                                 #{arr_msg['parametros.receitas.form.planoContas']}
                             </h:outputLabel>
-                            <h:selectOneMenu value="#{receitasMB.dto.planoContas}"
+                            <h:selectOneMenu value="#{receitasMB.dto.idPlanoContas}"
                                     id="planoContas"
                                     styleClass="form-control">
                                 <f:selectItem value="#{null}" itemLabel=""/>
                                 <f:selectItems value="#{receitasMB.allPlanoContas}"
                                         var="planoConta"
-                                        itemValue="#{planoConta}"
+                                        itemValue="#{planoConta.id}"
                                         itemLabel="#{planoConta.compositeName}"/>
                             </h:selectOneMenu>
                         </div>
@@ -333,8 +333,8 @@
                                             parametros.receitas.form.taxas.tabela.valorUnitario,
                                             parametros.receitas.form.taxas.tabela.valorLimite,
                                             parametros.receitas.form.taxas.tabela.valorAcrescimo"
-                                    fields="subcodigo,descricao,unidade,valorUnitario,
-                                            valorLimite,valorAcrescimo"
+                                    fields="subcodigo,descricao,unidade,valorUnitario:number,
+                                            valorLimite:number,valorAcrescimo:number"
                                     hasActions="true"
                                     actionEvents="select-row:click:selectTaxaRow,
                                             delete-row:click:deleteTaxa(0)">
@@ -470,8 +470,8 @@
                                             <sat:saveUpdateButton
                                                     label="#{arr_msg['parametros.receitas.form.repasse.adicionar']}"
                                                     render="repasse-table"
-                                                    execute="idReceita tiposRepasse percentual dataInicio dataFinal principal
-                                                        correcao multa taxas juros"
+                                                    execute="idReceita tiposRepasse percentual dataInicio dataFinal
+                                                        principal correcao multa taxas juros"
                                                     onEvent="resetRepassesOnSuccess" crudMb="#{receitasMB}"
                                                     saveAction="addRepasse" updateAction="updateRepasse"/>
                                         </div>
@@ -518,7 +518,7 @@
                                     render="receitas-form receitas-table"/>
                             <sat:saveUpdateButton label="#{arr_msg['parametros.receitas.form.salvar']}"
                                     render="receitas-table" styleClass="align-bottom"
-                                    execute="idReceita descricaoReceita classificaoReceita tipoReceita situacao dare codigoBarra"
+                                    execute="idReceita descricaoReceita classificaoReceita tipoReceita situacao dare codigoBarra planoContas"
                                     onEvent="resetOnSuccess" crudMb="#{receitasMB}"/>
                         </div>
                     </div>

@@ -5,11 +5,8 @@ import br.gov.to.sefaz.seg.filter.LogNavegacaoFilterUtil;
 import br.gov.to.sefaz.seg.persistence.entity.OpcaoAplicacao;
 import br.gov.to.sefaz.seg.persistence.enums.TipoOperacaoEnum;
 import br.gov.to.sefaz.seg.persistence.repository.OpcaoAplicacaoRepository;
-import br.gov.to.sefaz.seg.provider.LdapAuthenticationProvider;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
@@ -26,8 +23,6 @@ import java.time.LocalDateTime;
 @EnableWebSecurity
 public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
-    @Autowired
-    private LdapAuthenticationProvider authenticationProvider;
     @Autowired
     private OpcaoAplicacaoRepository opcaoAplicacaoRepository;
     @Autowired
@@ -57,23 +52,14 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                         navegacaoFilterUtil.saveLogNavegacao(request, cpfUsuario, localDateTime,
                                 TipoOperacaoEnum.TENTATIVA_NEGADA, elapsedTime);
                     }
-                    response.sendRedirect(request.getContextPath() + "/protected/views/home.jsf");
+                    response.sendRedirect(request.getContextPath() + "/protected/views/home.jsf?acesso-negado");
                 })
                 .and()
-                .formLogin()
-                .loginPage("/login")
-                .defaultSuccessUrl("/protected/views/home.jsf")
-                .failureUrl("/public/login.jsf?erro")
-                .and()
+                .formLogin().disable()
                 .logout()
+                .logoutUrl("/public/logout")
                 .invalidateHttpSession(true)
-                .logoutSuccessUrl("/public/login.jsf?logout");
-    }
-
-    @Override
-    @SuppressWarnings("PMD.SignatureDeclareThrowsException")
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.authenticationProvider(authenticationProvider);
+                .logoutSuccessUrl("/public/login.jsf");
     }
 
     @SuppressWarnings("PMD.SignatureDeclareThrowsException")

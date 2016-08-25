@@ -1,14 +1,12 @@
 package br.gov.to.sefaz.arr.parametros.business.service.validator;
 
-import br.gov.to.sefaz.arr.parametros.persistence.entity.ConveniosTarifas;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.ConveniosTarifasRepository;
+import br.gov.to.sefaz.arr.persistence.entity.ConveniosTarifas;
+import br.gov.to.sefaz.arr.persistence.repository.ConveniosTarifasRepository;
 import br.gov.to.sefaz.business.service.validation.ServiceValidator;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.violation.CustomViolation;
-import br.gov.to.sefaz.persistence.predicate.AndPredicateBuilder;
 import br.gov.to.sefaz.util.message.MessageUtil;
 import br.gov.to.sefaz.util.message.SourceBundle;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -18,8 +16,8 @@ import java.util.Objects;
 import java.util.Set;
 
 /**
- * Validação para duplicação de {@link br.gov.to.sefaz.arr.parametros.persistence.entity.ConveniosTarifas} na lista de
- * {@link br.gov.to.sefaz.arr.parametros.persistence.entity.ConveniosArrec#getConveniosTarifas()}.
+ * Validação para duplicação de {@link br.gov.to.sefaz.arr.persistence.entity.ConveniosTarifas} na lista de
+ * {@link br.gov.to.sefaz.arr.persistence.entity.ConveniosArrec#getConveniosTarifas()}.
  *
  * @author <a href="mailto:gabriel.santos@ntconsult.com.br">gabriel.santos</a>
  * @since 14/05/2016 11:10:00
@@ -43,17 +41,15 @@ public class ConveniosArrecDuplicatedTarifaValidator implements ServiceValidator
     @Override
     public Set<CustomViolation> validate(ConveniosTarifas target) {
         List<ConveniosTarifas> tarifas = conveniosTarifasRepository
-                .findAll((root, query, cb) -> new AndPredicateBuilder(root, cb)
-                        .equalsTo("idConveniosArrec", target.getIdConveniosArrec())
-                        .build());
+                .find(sb -> sb.where().equal("idConveniosArrec", target.getIdConveniosArrec()));
 
         return validateDuplicatedTarifa(target, tarifas);
     }
 
     /**
-     * Valida se o {@link br.gov.to.sefaz.arr.parametros.persistence.entity.ConveniosTarifas} já possui um registro com
-     * a mesma {@link br.gov.to.sefaz.arr.parametros.persistence.entity.ConveniosTarifas#formaPagamento} e a mesma
-     * {@link br.gov.to.sefaz.arr.parametros.persistence.entity.ConveniosTarifas#dataInicio}.
+     * Valida se o {@link br.gov.to.sefaz.arr.persistence.entity.ConveniosTarifas} já possui um registro com
+     * a mesma {@link br.gov.to.sefaz.arr.persistence.entity.ConveniosTarifas#formaPagamento} e a mesma
+     * {@link br.gov.to.sefaz.arr.persistence.entity.ConveniosTarifas#dataInicio}.
      *
      * @param target a tarifa a qual será validada
      * @param tarifas lista de tarifas a serem validadas

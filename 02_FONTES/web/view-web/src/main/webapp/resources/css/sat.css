@@ -37,11 +37,6 @@ html, body {
     text-align: center;
 }
 
-.list-unmarked {
-    list-style: none;
-    padding-left: 20px;
-}
-
 #login-container .row > div {
     display: inline-block;
     float: none;
@@ -49,7 +44,18 @@ html, body {
 }
 
 #login-container form {
-    margin: 20px 50px 30px 50px;
+    margin: 20px 20px 30px 20px;
+}
+
+.procuracao-header  {
+    margin-top: 15px;
+    margin-left: 15px;
+    color: #ffff00;
+}
+
+.list-unmarked {
+    list-style: none;
+    padding-left: 20px;
 }
 
 form button, form input[type="button"], form input[type="submit"] {
@@ -57,13 +63,9 @@ form button, form input[type="button"], form input[type="submit"] {
     margin-left: 0;
 }
 
-form .text-right button, form .text-right input[type="button"], form .text-right input[type="submit"] {
+.text-right button, .text-right input[type="button"], .text-right input[type="submit"] {
     margin-left: 10px;
     margin-right: 0;
-}
-
-#login-footer {
-    margin: 0 50px 20px 50px;
 }
 
 #login-footer a {
@@ -152,10 +154,23 @@ legend.scheduler-border {
     font-size: 14px;
 }
 
-.align-bottom {
-    margin-top: 25px;
-}
-
 .scrollx {
     overflow-x: auto;
+}
+
+.jsf-radio td {
+    padding: 0 10px 0 10px;
+}
+
+.jsf-radio input {
+    margin-right: 5px !important;
+}
+
+.alert {
+    white-space: pre-line;
+}
+
+.form-group.only-text {
+    font-size: 1.4em;
+    padding-top: 25px;
 }

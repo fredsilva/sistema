@@ -2,11 +2,11 @@ package br.gov.to.sefaz.arr.parametros.managedbean;
 
 import br.gov.to.sefaz.arr.parametros.business.facade.PedidoAreasFacade;
 import br.gov.to.sefaz.arr.parametros.managedbean.viewbean.PedidoAreaServidorViewBean;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.DelegaciaAgencias;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.Delegacias;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreas;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreasServidores;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoTipos;
+import br.gov.to.sefaz.arr.persistence.entity.DelegaciaAgencias;
+import br.gov.to.sefaz.arr.persistence.entity.Delegacias;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoAreas;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoAreasServidores;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoTipos;
 import br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB;
 import br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema;
 import org.springframework.beans.BeanUtils;

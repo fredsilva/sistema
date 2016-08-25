@@ -1,14 +1,6 @@
 package br.gov.to.sefaz.seg.managedbean;
 
 import br.gov.to.sefaz.business.facade.CrudFacade;
-<<<<<<< Updated upstream
-import br.gov.to.sefaz.cat.persistence.entity.Estado;
-import br.gov.to.sefaz.cat.persistence.entity.Municipio;
-import br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB;
-import br.gov.to.sefaz.seg.business.general.facade.UsuarioSistemaFacade;
-import br.gov.to.sefaz.seg.business.general.service.filter.UsuarioSistemaFilter;
-import br.gov.to.sefaz.seg.persistence.entity.TipoUsuario;
-=======
 import br.gov.to.sefaz.par.gestao.persistence.entity.Estado;
 import br.gov.to.sefaz.par.gestao.persistence.entity.Logradouro;
 import br.gov.to.sefaz.par.gestao.persistence.entity.Municipio;
@@ -16,7 +8,6 @@ import br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB;
 import br.gov.to.sefaz.seg.business.gestao.facade.UsuarioSistemaFacade;
 import br.gov.to.sefaz.seg.business.gestao.service.filter.UsuarioSistemaFilter;
 import br.gov.to.sefaz.seg.persistence.domain.TipoUsuario;
->>>>>>> Stashed changes
 import br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema;
 import br.gov.to.sefaz.util.message.MessageUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -71,11 +62,7 @@ public class UsuarioSistemaMB extends DefaultCrudMB<UsuarioSistema, String> {
     public void search() {
         resultList = getFacade().find(filter);
         if (resultList.isEmpty()) {
-<<<<<<< Updated upstream
-            MessageUtil.addMesage(MessageUtil.SEG, "geral.pesquisa.vazia");
-=======
             MessageUtil.addMessage(MessageUtil.SEG, "geral.pesquisa.vazia");
->>>>>>> Stashed changes
         }
     }
 
@@ -86,11 +73,7 @@ public class UsuarioSistemaMB extends DefaultCrudMB<UsuarioSistema, String> {
      * @return Lista dos usuários.
      */
     public Collection<UsuarioSistema> getResultList() {
-<<<<<<< Updated upstream
-        return getFacade().find(filter);
-=======
         return resultList;
->>>>>>> Stashed changes
     }
 
     /**
@@ -139,12 +122,6 @@ public class UsuarioSistemaMB extends DefaultCrudMB<UsuarioSistema, String> {
      */
     public void loadMunicipios() {
 
-<<<<<<< Updated upstream
-        Optional<String> uf = Optional.ofNullable(filter.getCodigoEstado());
-
-        if (!uf.isPresent()) {
-            uf = getEstados().stream().findFirst().map(e -> e.getUnidadeFederacao());
-=======
         Optional<String> uf = Optional.ofNullable(getDto().getCodigoEstado());
 
         if (!uf.isPresent()) {
@@ -165,7 +142,6 @@ public class UsuarioSistemaMB extends DefaultCrudMB<UsuarioSistema, String> {
 
         if (!uf.isPresent()) {
             uf = getEstados().stream().findFirst().map(Estado::getUnidadeFederacao);
->>>>>>> Stashed changes
         }
 
         if (uf.isPresent()) {
@@ -173,22 +149,14 @@ public class UsuarioSistemaMB extends DefaultCrudMB<UsuarioSistema, String> {
         }
     }
 
-<<<<<<< Updated upstream
-=======
     public Collection<Logradouro> getLogradouros() {
         return getFacade().findAllLogradouros();
     }
 
->>>>>>> Stashed changes
     /**
      * Busca o Usuário selecionado em tela.
      */
     public void getUsuarioById() {
-<<<<<<< Updated upstream
-        UsuarioSistema usuarioSistema = getFacade().findOne(getDto().getCpfUsuario());
-        setDto(usuarioSistema);
-    }
-=======
         UsuarioSistema usuarioSistema = getFacade().findOneUsuarioSistema(getDto().getCpfUsuario());
         setDto(usuarioSistema);
     }
@@ -206,5 +174,4 @@ public class UsuarioSistemaMB extends DefaultCrudMB<UsuarioSistema, String> {
     protected void showSaveMessage() {
         MessageUtil.addMessage(MessageUtil.SEG, "geral.criaSenha.solicitacao");
     }
->>>>>>> Stashed changes
 }

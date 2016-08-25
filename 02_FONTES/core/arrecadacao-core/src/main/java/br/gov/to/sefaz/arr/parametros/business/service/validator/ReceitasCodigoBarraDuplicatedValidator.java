@@ -1,14 +1,12 @@
 package br.gov.to.sefaz.arr.parametros.business.service.validator;
 
-import br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.ReceitasRepository;
+import br.gov.to.sefaz.arr.persistence.entity.Receitas;
+import br.gov.to.sefaz.arr.persistence.repository.ReceitasRepository;
 import br.gov.to.sefaz.business.service.validation.ServiceValidator;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.violation.CustomViolation;
-import br.gov.to.sefaz.persistence.predicate.AndPredicateBuilder;
 import br.gov.to.sefaz.util.message.MessageUtil;
 import br.gov.to.sefaz.util.message.SourceBundle;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -18,7 +16,7 @@ import java.util.Objects;
 import java.util.Set;
 
 /**
- * Validação para duplicação de {@link br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas#idBarra}.
+ * Validação para duplicação de {@link br.gov.to.sefaz.arr.persistence.entity.Receitas#idBarra}.
  *
  * @author <a href="mailto:gabriel.santos@ntconsult.com.br">gabriel.santos</a>
  * @since 23/05/2016 15:45:00
@@ -45,12 +43,11 @@ public class ReceitasCodigoBarraDuplicatedValidator implements ServiceValidator<
     public Set<CustomViolation> validate(Receitas receitas) {
         HashSet<CustomViolation> customViolations = new HashSet<>();
         Integer idBarra = receitas.getIdBarra();
+        Integer receitasId = receitas.getId();
 
-        List<Receitas> receitasList = receitasRepository.findAll((root, query, cb) -> {
-            return new AndPredicateBuilder(root, cb)
-                    .equalsTo("idBarra", idBarra)
-                    .build();
-        });
+        List<Receitas> receitasList = receitasRepository.find(sb -> sb
+                .where().equal("idBarra", idBarra)
+                .and().different("idReceita", receitasId));
 
         if (!receitasList.isEmpty() && !Objects.isNull(idBarra)) {
             String message = SourceBundle.getMessage(

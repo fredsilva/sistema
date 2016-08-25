@@ -3,7 +3,6 @@ package br.gov.to.sefaz.seg.persistence.entity;
 import br.gov.to.sefaz.persistence.entity.AbstractEntity;
 
 import java.util.Objects;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -36,9 +35,9 @@ public class PapelOpcao extends AbstractEntity<PapelOpcaoPK> {
     @Column(name = "IDENTIFICACAO_PAPEL")
     private Long identificacaoPapel;
 
+    @ManyToOne
     @JoinColumn(name = "IDENTIFICACAO_OPCAO_APLICACAO", referencedColumnName = "IDENTIFICACAO_OPCAO_APLICACAO",
             insertable = false, updatable = false)
-    @ManyToOne(optional = false)
     private OpcaoAplicacao opcaoAplicacao;
 
     public PapelOpcao() {
@@ -61,6 +60,34 @@ public class PapelOpcao extends AbstractEntity<PapelOpcaoPK> {
 
     public void setOpcaoAplicacao(OpcaoAplicacao taOpcaoAplicacao) {
         this.opcaoAplicacao = taOpcaoAplicacao;
+    }
+
+    public Long getIdentificacaoOpcaoAplicacao() {
+        return identificacaoOpcaoAplicacao;
+    }
+
+    public void setIdentificacaoOpcaoAplicacao(Long identificacaoOpcaoAplicacao) {
+        this.identificacaoOpcaoAplicacao = identificacaoOpcaoAplicacao;
+    }
+
+    public void setIdentificacaoPapel(Long identificacaoPapel) {
+        this.identificacaoPapel = identificacaoPapel;
+    }
+
+    public Long getIdentificacaoPapel() {
+        return identificacaoPapel;
+    }
+
+    public String getDescricaoAplicacao() {
+        return opcaoAplicacao.getDescricaoAplicacao();
+    }
+
+    public String getAbreviacaoModulo() {
+        return opcaoAplicacao.getAbreviacaoModulo();
+    }
+
+    public String getDescricaoOpcao() {
+        return opcaoAplicacao.getDescripcaoOpcao();
     }
 
     @Override

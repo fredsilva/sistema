@@ -7,7 +7,7 @@
     <parent>
         <groupId>br.gov.to.sefaz</groupId>
         <artifactId>sat</artifactId>
-        <version>0.2.0-RC1</version>
+        <version>1.4.1</version>
     </parent>
 
     <artifactId>web</artifactId>
@@ -15,8 +15,8 @@
 
     <name>web</name>
     <description>
-        M�dulo web do Sistema. O presente est� subdividido em subm�dulos que correspondem � camada web de cada
-        um dos m�dulos do sistema e um m�dulo espec�ficos para as views.
+        Módulo web do Sistema. O presente está subdividido em submódulos que correspondem às camadas web de cada
+        uma das aplicações/módulos do sistema. Possui também um submódulo específico para as views.
     </description>
 
     <modules>

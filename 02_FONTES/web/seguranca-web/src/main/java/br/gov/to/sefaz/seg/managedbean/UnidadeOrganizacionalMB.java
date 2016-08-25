@@ -4,15 +4,13 @@ import br.gov.to.sefaz.business.facade.CrudFacade;
 import br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB;
 import br.gov.to.sefaz.seg.business.gestao.facade.UnidadeOrganizacionalFacade;
 import br.gov.to.sefaz.seg.business.gestao.service.filter.UnidadeOrganizacionalFilter;
+import br.gov.to.sefaz.seg.persistence.domain.TipoUnidade;
 import br.gov.to.sefaz.seg.persistence.entity.UnidadeOrganizacional;
 import br.gov.to.sefaz.util.message.MessageUtil;
-
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Collection;
-import java.util.List;
-import java.util.Optional;
-
+import java.util.Objects;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
@@ -28,9 +26,9 @@ public class UnidadeOrganizacionalMB extends DefaultCrudMB<UnidadeOrganizacional
 
     private final UnidadeOrganizacionalFilter filter;
     private Collection<UnidadeOrganizacional> allUnidadeOrganizacionais;
+    private Collection<TipoUnidade> allTiposUnidades;
 
     public UnidadeOrganizacionalMB() {
-
         super(UnidadeOrganizacional::new);
         filter = new UnidadeOrganizacionalFilter();
     }
@@ -54,41 +52,19 @@ public class UnidadeOrganizacionalMB extends DefaultCrudMB<UnidadeOrganizacional
         return (UnidadeOrganizacionalFacade) super.getFacade();
     }
 
-    /**
-     * Filtra as Unidades Organizacionais de acordo com os dados informados em tela.
-     */
-    public void search() {
-        List<UnidadeOrganizacional> resultList = getFacade().find(filter);
-
-        if (resultList.isEmpty()) {
-            MessageUtil.addMesage(MessageUtil.SEG, "geral.pesquisa.vazia");
-        }
-
-        setResultList(resultList);
-    }
-
     @Override
     public Collection<UnidadeOrganizacional> getResultList() {
         return resultList;
     }
 
-    public Long getUnidOrganizacPai() {
-        return getDto().getUnidOrganizacPai();
-    }
-
     /**
-     * Seta o objeto {@link UnidadeOrganizacional#unidadeOrganizacionalPai} para utilização das combos da tela.
-     *
-     * @param unidOrganizacPai identificação da Unidade Pai.
+     * Filtra as Unidades Organizacionais de acordo com os dados informados em tela.
      */
-    public void setUnidOrganizacPai(Long unidOrganizacPai) {
-        allUnidadeOrganizacionais.stream()
-                .filter(uo -> uo.getId().equals(unidOrganizacPai))
-                .findFirst()
-                .ifPresent(unidadeOrganizacional -> {
-                    getDto().setUnidOrganizacPai(unidOrganizacPai);
-                    getDto().setUnidadeOrganizacionalPai(unidadeOrganizacional);
-                });
+    public void search() {
+        resultList = getFacade().find(filter);
+        if (resultList.isEmpty()) {
+            MessageUtil.addMessage(MessageUtil.SEG, "geral.pesquisa.vazia");
+        }
     }
 
     /**
@@ -97,43 +73,66 @@ public class UnidadeOrganizacionalMB extends DefaultCrudMB<UnidadeOrganizacional
      * @return Lista das unidades.
      */
     public Collection<UnidadeOrganizacional> getAllUnidadeOrganizacionais() {
-        if (allUnidadeOrganizacionais == null) {
-            loadAllUnidadeOrganizacionais();
+        if (Objects.isNull(allUnidadeOrganizacionais)) {
+            allUnidadeOrganizacionais = getFacade().findAll();
         }
         return allUnidadeOrganizacionais;
     }
 
+
     /**
-     * Carrega todas as Unidades Organizacionais existentes no Banco de Dados.
+     * Carrega todos os Tipos de Unidadees.
+     *
+     * @return Lista dos tipos de unidades.
      */
-    public void loadAllUnidadeOrganizacionais() {
-        allUnidadeOrganizacionais = getFacade().findAll();
+    public Collection<TipoUnidade> getAllTiposUnidades() {
+        if (Objects.isNull(allTiposUnidades)) {
+            allTiposUnidades = getFacade().findTiposUnidades();
+        }
+        return allTiposUnidades;
     }
 
     @Override
     protected void showSaveMessage() {
-        MessageUtil.addMesage(MessageUtil.SEG, "seg.gestao.unidadesOrgazinacionais.form.sucesso.operacao");
+        MessageUtil.addMessage(MessageUtil.SEG, "seg.gestao.unidadesOrgazinacionais.form.sucesso.operacao");
     }
 
     @Override
-    public void delete() {
-        Optional<UnidadeOrganizacional> delete = getFacade().delete(getDto().getId());
-        getResultList().removeIf(e -> e.getId().equals(getDto().getId()));
+    protected void showUpdateMessage() {
+        MessageUtil.addMessage(MessageUtil.SEG, "seg.gestao.unidadesOrgazinacionais.form.sucesso.alterar");
+    }
 
-        if (delete.isPresent()) {
-            showDeleteMessage();
-            getResultList().add(delete.get());
-        } else {
-            showDeleteMessage();
+    @Override
+    protected void showPhysicalDeleteMessage() {
+        MessageUtil.addMessage(MessageUtil.SEG, "seg.gestao.unidadesOrgazinacionais.tabela.excluir.sucesso");
+    }
+
+    @Override
+    protected void showLogicalDeleteMessage() {
+        MessageUtil.addMessage(MessageUtil.SEG, "seg.gestao.unidadesOrgazinacionais.tabela.excluir.sucesso");
+    }
+
+    @Override
+    protected void executeAfterSave(UnidadeOrganizacional unidadeOrganizacional) {
+        allUnidadeOrganizacionais.add(unidadeOrganizacional);
+    }
+
+    @Override
+    protected void executeAfterUpdate(UnidadeOrganizacional unidadeOrganizacional) {
+        allUnidadeOrganizacionais.removeIf(e -> e.getId().equals(unidadeOrganizacional.getId()));
+        allUnidadeOrganizacionais.add(unidadeOrganizacional);
+        for (UnidadeOrganizacional unidade : getResultList()) {
+            if (!Objects.isNull(unidade.getUnidOrganizacPai())
+                    && unidadeOrganizacional.getId().compareTo(unidade.getUnidOrganizacPai()) == 0) {
+                unidade.setUnidOrganizacPai(unidadeOrganizacional.getId());
+                unidade.setUnidadeOrganizacionalPai(unidadeOrganizacional);
+            }
         }
-
-        clearDto();
     }
 
-    /**
-     * Mostra a mensagem de deleção específica para Unidades Organizacionais.
-     */
-    public void showDeleteMessage() {
-        MessageUtil.addMesage(MessageUtil.SEG, "seg.gestao.unidadesOrgazinacionais.tabela.excluir.sucesso");
+    @Override
+    protected void executeAfterDelete(Long id) {
+        allUnidadeOrganizacionais.removeIf(e -> e.getId().equals(id));
     }
+
 }

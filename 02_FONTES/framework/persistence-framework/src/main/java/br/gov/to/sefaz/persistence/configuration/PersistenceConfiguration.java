@@ -1,7 +1,11 @@
 package br.gov.to.sefaz.persistence.configuration;
 
+import br.gov.to.sefaz.persistence.query.QueryPackageMarker;
+import br.gov.to.sefaz.persistence.repository.BaseRepository;
+import br.gov.to.sefaz.persistence.satquery.SatQueryPackageMarker;
 import org.hibernate.jpa.HibernatePersistenceProvider;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
 import org.springframework.jdbc.datasource.lookup.JndiDataSourceLookup;
@@ -14,7 +18,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 import java.util.List;
 import java.util.Properties;
 import java.util.stream.Collectors;
-
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
@@ -25,6 +28,7 @@ import javax.sql.DataSource;
  * @since 14/04/2016 18:30:00
  */
 @Configuration
+@ComponentScan(basePackageClasses = {QueryPackageMarker.class, BaseRepository.class, SatQueryPackageMarker.class})
 @EnableTransactionManagement
 public class PersistenceConfiguration {
 
@@ -47,7 +51,7 @@ public class PersistenceConfiguration {
     @Bean
     public Properties hibernateProperties() {
         Properties properties = new Properties();
-        properties.put("hibernate.dialect", "org.hibernate.dialect.Oracle10gDialect");
+        properties.put("hibernate.dialect", "br.gov.to.sefaz.persistence.configuration.SatParseDialect");
         properties.put("hibernate.hbm2ddl.auto", "none");
         properties.put("hibernate.show_sql", "true");
         properties.put("hibernate.format_sql", "true");

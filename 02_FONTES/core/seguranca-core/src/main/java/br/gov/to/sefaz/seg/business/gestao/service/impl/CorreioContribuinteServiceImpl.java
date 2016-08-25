@@ -5,7 +5,6 @@ import br.gov.to.sefaz.seg.business.gestao.service.CorreioContribuinteService;
 import br.gov.to.sefaz.seg.persistence.entity.CorreioContribuinte;
 import br.gov.to.sefaz.seg.persistence.repository.CorreioContribuinteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 /**
@@ -20,6 +19,6 @@ public class CorreioContribuinteServiceImpl extends DefaultCrudService<CorreioCo
 
     @Autowired
     public CorreioContribuinteServiceImpl(CorreioContribuinteRepository repository) {
-        super(repository, new Sort(new Sort.Order(Sort.Direction.ASC, "identificacaoCorreioEnviado")));
+        super(repository);
     }
 }

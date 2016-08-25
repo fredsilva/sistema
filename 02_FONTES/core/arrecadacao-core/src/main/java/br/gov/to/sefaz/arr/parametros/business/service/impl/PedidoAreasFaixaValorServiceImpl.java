@@ -1,11 +1,10 @@
 package br.gov.to.sefaz.arr.parametros.business.service.impl;
 
 import br.gov.to.sefaz.arr.parametros.business.service.PedidoAreasFaixaValorService;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreasFaixaValor;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.PedidoAreasFaixaValorRepository;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoAreasFaixaValor;
+import br.gov.to.sefaz.arr.persistence.repository.PedidoAreasFaixaValorRepository;
 import br.gov.to.sefaz.business.service.impl.DefaultCrudService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 /**
@@ -20,6 +19,6 @@ public class PedidoAreasFaixaValorServiceImpl extends DefaultCrudService<PedidoA
 
     @Autowired
     public PedidoAreasFaixaValorServiceImpl(PedidoAreasFaixaValorRepository repository) {
-        super(repository, new Sort(new Sort.Order(Sort.Direction.ASC, "idPedidoArea")));
+        super(repository);
     }
 }

@@ -1,8 +1,10 @@
 package br.gov.to.sefaz.util.configuration;
 
 import br.gov.to.sefaz.util.certificado.CertificadoPackageMarker;
+import br.gov.to.sefaz.util.file.FilePackageMarker;
 import br.gov.to.sefaz.util.mail.MailPackageMarker;
 import br.gov.to.sefaz.util.properties.AppProperties;
+import br.gov.to.sefaz.util.xml.XmlPackageMarker;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -18,7 +20,8 @@ import java.util.Properties;
  * @since 14/04/2016 18:30:00
  */
 @Configuration
-@ComponentScan(basePackageClasses = {MailPackageMarker.class, CertificadoPackageMarker.class})
+@ComponentScan(basePackageClasses = {MailPackageMarker.class,
+        CertificadoPackageMarker.class, XmlPackageMarker.class, FilePackageMarker.class})
 public class UtilConfiguration {
 
     /**

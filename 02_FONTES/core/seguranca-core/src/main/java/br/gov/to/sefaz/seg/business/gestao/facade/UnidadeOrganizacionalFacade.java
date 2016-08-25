@@ -2,6 +2,7 @@ package br.gov.to.sefaz.seg.business.gestao.facade;
 
 import br.gov.to.sefaz.business.facade.CrudFacade;
 import br.gov.to.sefaz.seg.business.gestao.service.filter.UnidadeOrganizacionalFilter;
+import br.gov.to.sefaz.seg.persistence.domain.TipoUnidade;
 import br.gov.to.sefaz.seg.persistence.entity.UnidadeOrganizacional;
 
 import java.util.List;
@@ -20,5 +21,12 @@ public interface UnidadeOrganizacionalFacade extends CrudFacade<UnidadeOrganizac
      * @return a lista que foi encontrada através do filtro.
      */
     List<UnidadeOrganizacional> find(UnidadeOrganizacionalFilter filter);
+
+    /**
+     * Consulta os tipos de Unidades Organizacionais.
+     *
+     * @return lista com os tipos de Unidades Organizacionais
+     */
+    List<TipoUnidade> findTiposUnidades();
 }
 

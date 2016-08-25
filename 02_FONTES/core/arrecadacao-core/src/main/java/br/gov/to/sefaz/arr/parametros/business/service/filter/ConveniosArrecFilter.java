@@ -1,13 +1,13 @@
 package br.gov.to.sefaz.arr.parametros.business.service.filter;
 
-import br.gov.to.sefaz.arr.parametros.persistence.enums.TipoCodigoBarraEnum;
-import br.gov.to.sefaz.arr.parametros.persistence.enums.TipoConvenioEnum;
+import br.gov.to.sefaz.arr.persistence.enums.TipoCodigoBarraEnum;
+import br.gov.to.sefaz.arr.persistence.enums.TipoConvenioEnum;
 
 import java.util.Objects;
 
 /**
  * POJO para representar os campos de filtro para pesquisa de
- * {@link br.gov.to.sefaz.arr.parametros.persistence.entity.ConveniosArrec} na base de dados.
+ * {@link br.gov.to.sefaz.arr.persistence.entity.ConveniosArrec} na base de dados.
  *
  * @author <a href="mailto:gabriel.santos@ntconsult.com.br">gabriel.santos</a>
  * @since 16/05/2016 11:32:00

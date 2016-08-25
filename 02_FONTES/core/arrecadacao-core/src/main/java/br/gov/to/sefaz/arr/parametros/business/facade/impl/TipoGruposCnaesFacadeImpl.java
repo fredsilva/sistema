@@ -4,12 +4,12 @@ import br.gov.to.sefaz.arr.parametros.business.facade.TipoGruposCnaesFacade;
 import br.gov.to.sefaz.arr.parametros.business.service.GruposCnaeService;
 import br.gov.to.sefaz.arr.parametros.business.service.TipoGruposCnaesService;
 import br.gov.to.sefaz.arr.parametros.business.service.filter.TipoGruposCnaesFilter;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.GruposCnae;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.GruposCnaePK;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.TipoGruposCnaes;
+import br.gov.to.sefaz.arr.persistence.entity.GruposCnae;
+import br.gov.to.sefaz.arr.persistence.entity.GruposCnaePK;
+import br.gov.to.sefaz.arr.persistence.entity.TipoGruposCnaes;
 import br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade;
-import br.gov.to.sefaz.cat.business.service.AtividadeEconomicaService;
-import br.gov.to.sefaz.cat.persistence.entity.AtividadeEconomica;
+import br.gov.to.sefaz.par.gestao.business.service.AtividadeEconomicaService;
+import br.gov.to.sefaz.par.gestao.persistence.entity.AtividadeEconomica;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

@@ -2,7 +2,7 @@ package br.gov.to.sefaz.arr.parametros.managedbean;
 
 import br.gov.to.sefaz.arr.parametros.business.facade.PlanoContasFacade;
 import br.gov.to.sefaz.arr.parametros.business.service.filter.PlanoContasFilter;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PlanoContas;
+import br.gov.to.sefaz.arr.persistence.entity.PlanoContas;
 import br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB;
 import br.gov.to.sefaz.util.message.MessageUtil;
 
@@ -52,7 +52,7 @@ public class PlanoContasMB extends DefaultCrudMB<PlanoContas, Long> {
         List<PlanoContas> resultList = getFacade().find(filter);
 
         if (resultList.isEmpty()) {
-            MessageUtil.addMesage(MessageUtil.ARR, "parametros.pesquisa.vazia");
+            MessageUtil.addMessage("mensagem.pesquisa.vazia");
         }
 
         setResultList(resultList);

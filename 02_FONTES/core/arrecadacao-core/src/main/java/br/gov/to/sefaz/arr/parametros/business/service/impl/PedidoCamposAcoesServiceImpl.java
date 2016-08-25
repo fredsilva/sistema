@@ -1,13 +1,10 @@
 package br.gov.to.sefaz.arr.parametros.business.service.impl;
 
 import br.gov.to.sefaz.arr.parametros.business.service.PedidoCamposAcoesService;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoCamposAcoes;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.PedidoCamposAcoesRepository;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoCamposAcoes;
+import br.gov.to.sefaz.arr.persistence.repository.PedidoCamposAcoesRepository;
 import br.gov.to.sefaz.business.service.impl.DefaultCrudService;
-import br.gov.to.sefaz.persistence.predicate.AndPredicateBuilder;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
@@ -25,7 +22,7 @@ public class PedidoCamposAcoesServiceImpl extends DefaultCrudService<PedidoCampo
     @Autowired
     public PedidoCamposAcoesServiceImpl(
             PedidoCamposAcoesRepository repository) {
-        super(repository, new Sort(new Sort.Order(Sort.Direction.ASC, "idCampoPedido")));
+        super(repository);
     }
 
     @Override
@@ -35,9 +32,9 @@ public class PedidoCamposAcoesServiceImpl extends DefaultCrudService<PedidoCampo
 
     @Override
     public Collection<PedidoCamposAcoes> getPedidoCamposAcoesByIdTipoPedido(Integer idTipoPedido) {
-        return getRepository().findAll((root, query, cb) -> new AndPredicateBuilder(root, cb)
-                .equalsTo("pedidoTipoAcoes.idTipoPedido", idTipoPedido)
-                .build(), getDefaultSort());
+        return getRepository().find("pca", sb -> sb.innerJoin("pca.pedidoTipoAcoes", "pta").where()
+                .equal("pta.idTipoPedido", idTipoPedido)
+                .orderById());
     }
 
     @Override

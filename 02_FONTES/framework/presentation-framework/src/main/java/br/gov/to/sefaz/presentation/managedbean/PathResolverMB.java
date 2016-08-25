@@ -1,6 +1,7 @@
 package br.gov.to.sefaz.presentation.managedbean;
 
 import br.gov.to.sefaz.util.properties.AppProperties;
+import org.springframework.stereotype.Component;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
@@ -11,6 +12,7 @@ import javax.faces.context.FacesContext;
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 13/06/2016 09:36:00
  */
+@Component
 @ManagedBean(name = "pathResolverMB")
 public class PathResolverMB {
 
@@ -25,6 +27,27 @@ public class PathResolverMB {
     }
 
     /**
+     * Retorna true se a url passada é da pagina protected atual atualmente aberta.
+     *
+     * @param url url a ser comparada com a atual
+     * @return true se a url passada é da pagina protected atual atualmente aberta
+     */
+    public boolean isActualProtectedView(String url) {
+        String actualPath = FacesContext.getCurrentInstance().getExternalContext().getRequestServletPath();
+        return protectedViewPath(url).equals(getContextPath() + actualPath);
+    }
+
+    /**
+     * Resolve a rota para o diretorio de views publicas.
+     *
+     * @param route complemento da rota
+     * @return rota completa para o diretorio de views publicas
+     */
+    public String publicViewPath(String route) {
+        return getContextPath() + "/public/" + route;
+    }
+
+    /**
      * Resolve a rota para o diretorio de CSS.
      *
      * @param route complemento da rota
@@ -35,7 +58,7 @@ public class PathResolverMB {
     }
 
     public String getLogoutPath() {
-        return getContextPath() + "/logout";
+        return getContextPath() + "/public/logout";
     }
 
     public String getContextPath() {
@@ -46,11 +69,23 @@ public class PathResolverMB {
         return protectedViewPath("home.jsf");
     }
 
-    public String getCertificadoPath() {
+    public String getLoginPath() {
+        return publicViewPath("login.jsf");
+    }
+
+    public String getCertificadoLoginPath() {
         return "https://"
                 + FacesContext.getCurrentInstance().getExternalContext().getRequestServerName()
                 + ":" + AppProperties.getProperty("certificado.port").orElse("8844")
                 + FacesContext.getCurrentInstance().getExternalContext().getRequestContextPath()
-                + "/public/certificado.jsf";
+                + "/public/certificado.jsf?login";
+    }
+
+    public String getCertificadoSolicitacaoPath() {
+        return "https://"
+                + FacesContext.getCurrentInstance().getExternalContext().getRequestServerName()
+                + ":" + AppProperties.getProperty("certificado.port").orElse("8844")
+                + FacesContext.getCurrentInstance().getExternalContext().getRequestContextPath()
+                + "/public/certificado.jsf?solicitacao";
     }
 }

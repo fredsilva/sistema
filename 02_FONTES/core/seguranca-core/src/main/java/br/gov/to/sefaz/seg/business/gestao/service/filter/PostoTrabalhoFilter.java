@@ -1,5 +1,7 @@
 package br.gov.to.sefaz.seg.business.gestao.service.filter;
 
+import javax.validation.constraints.Pattern;
+
 /**
  * Classe de filtro para a tela de Postos de trabalho.
  * @author <a href="mailto:thiago.luz@ntconsult.com.br">thiago.luz</a>
@@ -8,6 +10,8 @@ package br.gov.to.sefaz.seg.business.gestao.service.filter;
 public class PostoTrabalhoFilter {
 
     private Long identificacaoPostoTrabalho;
+    @Pattern(regexp = "|.{3}.*",
+            message = "#{seg_msg['seg.gestao.PostoTrabalho.filter.tamanho.nomePostoTrabalho']}")
     private String nomePostoTrabalho;
     private Long identificacaoUnidOrganizac;
 

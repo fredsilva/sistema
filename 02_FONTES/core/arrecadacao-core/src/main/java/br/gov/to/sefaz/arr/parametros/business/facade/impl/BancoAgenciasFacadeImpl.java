@@ -2,13 +2,13 @@ package br.gov.to.sefaz.arr.parametros.business.facade.impl;
 
 import br.gov.to.sefaz.arr.parametros.business.facade.BancoAgenciasFacade;
 import br.gov.to.sefaz.arr.parametros.business.service.BancoAgenciasService;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgencias;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgenciasPK;
+import br.gov.to.sefaz.arr.persistence.entity.BancoAgencias;
+import br.gov.to.sefaz.arr.persistence.entity.BancoAgenciasPK;
 import br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade;
-import br.gov.to.sefaz.cat.business.service.EstadoService;
-import br.gov.to.sefaz.cat.business.service.MunicipioService;
-import br.gov.to.sefaz.cat.persistence.entity.Estado;
-import br.gov.to.sefaz.cat.persistence.entity.Municipio;
+import br.gov.to.sefaz.par.gestao.business.service.EstadoService;
+import br.gov.to.sefaz.par.gestao.business.service.MunicipioService;
+import br.gov.to.sefaz.par.gestao.persistence.entity.Estado;
+import br.gov.to.sefaz.par.gestao.persistence.entity.Municipio;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

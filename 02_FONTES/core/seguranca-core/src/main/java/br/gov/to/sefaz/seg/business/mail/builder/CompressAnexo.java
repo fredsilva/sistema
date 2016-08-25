@@ -10,7 +10,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 /**
- * Comprime os {@link Anexo} que serão armazenados no Banco
+ * Comprime os {@link br.gov.to.sefaz.seg.business.mail.domain.Anexo} que serão armazenados no Banco
  * e enviados por email.
  *
  * @author <a href="mailto:gabriel.santos@ntconsult.com.br">gabriel.santos</a>
@@ -20,9 +20,9 @@ import java.util.zip.ZipOutputStream;
 public class CompressAnexo {
 
     /**
-     * Gera os bytes referentes a um arquivo zip contendo todos os anéxos paassados por parametro.
+     * Gera os bytes referentes a um arquivo zip contendo todos os anexos paassados por parametro.
      *
-     * @param anexoList lista de anéxos que devem estar no .zip gerado
+     * @param anexoList lista de anexos que devem estar no .zip gerado
      * @return bytes para criação de um arquivo zip
      * @throws IOException caso ocorra algum erro de I/O
      */

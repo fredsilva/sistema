@@ -85,7 +85,7 @@ body {
 }
 
 .top-nav>.open>.dropdown-menu>li>a {
-    white-space: normal;
+    white-space: nowrap;
 }
 
 ul.message-dropdown {
@@ -154,6 +154,11 @@ ul.alert-dropdown {
     padding: 10px 15px 10px 38px;
     text-decoration: none;
     color: #22538E;
+}
+
+.side-nav li.active a {
+    outline: none;
+    background-color: #D6DBE2 !important;
 }
 
 .side-nav>li>ul>li>a:hover {

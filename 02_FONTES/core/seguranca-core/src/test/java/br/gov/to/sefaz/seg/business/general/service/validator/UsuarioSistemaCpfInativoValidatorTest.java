@@ -5,6 +5,7 @@ import br.gov.to.sefaz.seg.business.gestao.service.validator.UsuarioSistemaCpfIn
 import br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema;
 import br.gov.to.sefaz.seg.persistence.enums.SituacaoUsuarioEnum;
 import br.gov.to.sefaz.util.message.SourceBundle;
+import org.apache.commons.lang3.StringUtils;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -50,7 +51,7 @@ public class UsuarioSistemaCpfInativoValidatorTest {
     @Test
     public void shouldFailSupportWhenContextNotExists() {
         // then
-        assertFalse(validator.support(UsuarioSistema.class, ""));
+        assertFalse(validator.support(UsuarioSistema.class, StringUtils.EMPTY));
     }
 
     @Test

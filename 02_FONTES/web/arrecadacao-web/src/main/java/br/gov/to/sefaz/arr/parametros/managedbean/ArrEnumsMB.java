@@ -1,16 +1,5 @@
 package br.gov.to.sefaz.arr.parametros.managedbean;
 
-<<<<<<< Updated upstream
-import br.gov.to.sefaz.arr.parametros.persistence.enums.ClassificacaoReceitaEnum;
-import br.gov.to.sefaz.arr.parametros.persistence.enums.FormaPagamentoEnum;
-import br.gov.to.sefaz.arr.parametros.persistence.enums.TipoCodigoBarraEnum;
-import br.gov.to.sefaz.arr.parametros.persistence.enums.TipoContaEnum;
-import br.gov.to.sefaz.arr.parametros.persistence.enums.TipoConvenioEnum;
-import br.gov.to.sefaz.arr.parametros.persistence.enums.TipoPedidoAcoesEnum;
-import br.gov.to.sefaz.arr.parametros.persistence.enums.TipoPedidoCampoEnum;
-import br.gov.to.sefaz.arr.parametros.persistence.enums.TipoReceitaEnum;
-import br.gov.to.sefaz.arr.parametros.persistence.enums.TipoRepasseEnum;
-=======
 import br.gov.to.sefaz.arr.persistence.enums.ClassificacaoReceitaEnum;
 import br.gov.to.sefaz.arr.persistence.enums.FormaPagamentoEnum;
 import br.gov.to.sefaz.arr.persistence.enums.TipoCodigoBarraEnum;
@@ -20,7 +9,6 @@ import br.gov.to.sefaz.arr.persistence.enums.TipoPedidoAcoesEnum;
 import br.gov.to.sefaz.arr.persistence.enums.TipoPedidoCampoEnum;
 import br.gov.to.sefaz.arr.persistence.enums.TipoReceitaEnum;
 import br.gov.to.sefaz.arr.persistence.enums.TipoRepasseEnum;
->>>>>>> Stashed changes
 import br.gov.to.sefaz.persistence.enums.SituacaoEnum;
 
 import javax.faces.bean.ManagedBean;
@@ -167,11 +155,4 @@ public class ArrEnumsMB {
     public String getTiposPedidoCampoLabel(TipoPedidoCampoEnum tipoPedidoAcoes) {
         return tipoPedidoAcoes.getCode() + SEPARATOR + tipoPedidoAcoes.getLabel();
     }
-<<<<<<< Updated upstream
-
-    public String getGetReceitaTaxaLabel() {
-        return null;
-    }
-=======
->>>>>>> Stashed changes
 }

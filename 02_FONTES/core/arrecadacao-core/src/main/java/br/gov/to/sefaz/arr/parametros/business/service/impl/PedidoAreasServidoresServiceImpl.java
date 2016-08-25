@@ -1,16 +1,13 @@
 package br.gov.to.sefaz.arr.parametros.business.service.impl;
 
 import br.gov.to.sefaz.arr.parametros.business.service.PedidoAreasServidoresService;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreasServidores;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreasServidoresPK;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.PedidoAreasServidoresRepository;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoAreasServidores;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoAreasServidoresPK;
+import br.gov.to.sefaz.arr.persistence.repository.PedidoAreasServidoresRepository;
 import br.gov.to.sefaz.business.service.impl.DefaultCrudService;
 import br.gov.to.sefaz.business.service.validation.ValidationSuite;
 import br.gov.to.sefaz.persistence.enums.SituacaoEnum;
-import br.gov.to.sefaz.persistence.predicate.AndPredicateBuilder;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -36,8 +33,7 @@ public class PedidoAreasServidoresServiceImpl
     @Autowired
     public PedidoAreasServidoresServiceImpl(
             PedidoAreasServidoresRepository repository) {
-        super(repository, new Sort(new Sort.Order(Sort.Direction.ASC, "idServidor"),
-                new Sort.Order(Sort.Direction.ASC, "idPedidoArea")));
+        super(repository);
     }
 
     @Override
@@ -47,9 +43,7 @@ public class PedidoAreasServidoresServiceImpl
 
     @Override
     public Collection<PedidoAreasServidores> findAllByPedido(Integer idPedidoArea) {
-        return getRepository().findAll((root, query, cb) -> new AndPredicateBuilder(root, cb)
-                .equalsTo("idPedidoArea", idPedidoArea)
-                .build());
+        return getRepository().find(sb -> sb.where().equal("idPedidoArea", idPedidoArea));
     }
 
     @Override
@@ -87,7 +81,7 @@ public class PedidoAreasServidoresServiceImpl
             getRepository().updateSituacao(id.getIdPedidoArea(), id.getIdServidor(), SituacaoEnum.CANCELADO);
             entity = Optional.of(getRepository().findOne(id));
         } else {
-            getRepository().delete(id.getIdPedidoArea(), id.getIdServidor());
+            getRepository().delete(id);
             entity = Optional.empty();
         }
 

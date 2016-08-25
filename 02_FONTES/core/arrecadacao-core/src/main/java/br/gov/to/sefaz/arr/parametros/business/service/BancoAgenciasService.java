@@ -1,10 +1,11 @@
 package br.gov.to.sefaz.arr.parametros.business.service;
 
-import br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgencias;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgenciasPK;
+import br.gov.to.sefaz.arr.persistence.entity.BancoAgencias;
+import br.gov.to.sefaz.arr.persistence.entity.BancoAgenciasPK;
 import br.gov.to.sefaz.business.service.CrudService;
 
 import java.util.Collection;
+import java.util.List;
 
 /**
  * Contrato de acesso do serviço de Agências Bancárias.
@@ -15,10 +16,10 @@ import java.util.Collection;
 public interface BancoAgenciasService extends CrudService<BancoAgencias, BancoAgenciasPK> {
 
     /**
-     * Serviço para obter as {@link br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgencias} que possuem a
-     * {@link br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgencias#situacao}
+     * Serviço para obter as {@link br.gov.to.sefaz.arr.persistence.entity.BancoAgencias} que possuem a
+     * {@link br.gov.to.sefaz.arr.persistence.entity.BancoAgencias#situacao}
      * {@link br.gov.to.sefaz.persistence.enums.SituacaoEnum#ATIVO} por um determinado
-     * {@link br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgencias#idBanco}.
+     * {@link br.gov.to.sefaz.arr.persistence.entity.BancoAgencias#idBanco}.
      *
      * @param idBanco codigo do banco para realizar a consulta
      * @return uma lista com todas as agências que pertencem ao banco
@@ -62,11 +63,20 @@ public interface BancoAgenciasService extends CrudService<BancoAgencias, BancoAg
     void validateUpdate(Collection<BancoAgencias> list);
 
     /**
-     * Serviço para obter as {@link br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgencias} por um determinado
-     * {@link br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgencias#idBanco}.
+     * Serviço para obter as {@link br.gov.to.sefaz.arr.persistence.entity.BancoAgencias} por um determinado
+     * {@link br.gov.to.sefaz.arr.persistence.entity.BancoAgencias#idBanco}.
      *
      * @param idBanco codigo do banco para realizar a consulta
      * @return uma lista com todas as agências que pertencem ao banco
      */
     Collection<BancoAgencias> findByIdBanco(Integer idBanco);
+
+    /**
+     * Busca a {@link br.gov.to.sefaz.arr.persistence.entity.BancoAgencias} correspondente aos parâmetros.
+     *
+     * @param cnpjAgenteBancarioCreditado cnpj raiz do banco.
+     * @param agencia                     código da agência.
+     * @return a {@link br.gov.to.sefaz.arr.persistence.entity.BancoAgencias} correspondente aos parâmetros.
+     */
+    List<BancoAgencias> findByCtaBanco(Integer cnpjAgenteBancarioCreditado, Integer agencia);
 }

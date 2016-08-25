@@ -26,10 +26,10 @@ public class LdapHandler {
         ldapProperties.setSecurityUrl(AppProperties.getProperty("ldap.provider.url.ssl").orElse(""));
         ldapProperties.setDomain(AppProperties.getProperty("ldap.provider.domain").orElse(""));
         ldapProperties.setBaseDomain(AppProperties.getProperty("ldap.provider.baseDomain").orElse(""));
+        ldapProperties.setBaseFilter(AppProperties.getProperty("ldap.provider.baseFilter").orElse(""));
         ldapProperties.setTimeout(AppProperties.getProperty("ldap.connect.timeout").orElse(""));
         ldapProperties.setUserManager(AppProperties.getProperty("ldap.provider.userManager").orElse(""));
         ldapProperties.setPasswdManager(AppProperties.getProperty("ldap.provider.passwdManager").orElse(""));
-
         return ldapProperties;
     }
 
@@ -72,6 +72,8 @@ public class LdapHandler {
 
         private String baseDomain;
 
+        private String baseFilter;
+
         private String userManager;
 
         private String passwdManager;
@@ -108,6 +110,14 @@ public class LdapHandler {
 
         public void setBaseDomain(String baseDomain) {
             this.baseDomain = baseDomain;
+        }
+
+        public String getBaseFilter() {
+            return baseFilter;
+        }
+
+        public void setBaseFilter(String baseFilter) {
+            this.baseFilter = baseFilter;
         }
 
         public String getUserManager() {

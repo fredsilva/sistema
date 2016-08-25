@@ -23,6 +23,10 @@ function showBtnUpdate(formId) {
     form.find('.btn-update').show();
 }
 
+function setRadioValue(name, SelectdValue) {
+    $('input[name="' + name+ '"][value="' + SelectdValue + '"]').prop('checked', true);
+}
+
 function findTab(navId, tabId) {
     if (tabId) {
         return $("#" + navId).find("[href='#" + tabId + "']");
@@ -50,8 +54,19 @@ $(document).on("keypress", ".justInteger", function (e) {
     return (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) ? false : true;
 });
 
+$(document).on("keypress", ".justCharacter", function(e){
+    var inputValue = e.which;
+    if(!((inputValue >= 65 && inputValue <= 90) || (inputValue >= 97 && inputValue <= 122))) {
+        event.preventDefault();
+    }
+});
+
 $(document).ready(function () {
     $('.cpf').mask('000.000.000-00', {placeholder: "___.___.___-__", reverse: true});
+});
+
+$(document).ready(function () {
+    $('.cep').mask('00000-000', {placeholder: "_____-___", reverse: true});
 });
 
 $(document).ready(function () {

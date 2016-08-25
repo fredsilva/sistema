@@ -6,6 +6,7 @@
 <ui:composition>
     <ui:param name="save" value="#{empty saveAction ? 'save' : saveAction}" />
     <ui:param name="update" value="#{empty updateAction ? 'update' : updateAction}" />
+    <ui:param name="event" value="#{empty onEvent ? 'void(0)' : onEvent}" />
     <h:commandButton type="button" value="#{label}" styleClass="btn btn-primary btn-save #{styleClass}"
         action="#{crudMb[save]}">
         <f:ajax render="#{render}" execute="#{execute}" onevent="#{onEvent}" />

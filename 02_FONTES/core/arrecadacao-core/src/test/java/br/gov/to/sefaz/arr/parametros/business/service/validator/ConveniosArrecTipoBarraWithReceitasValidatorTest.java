@@ -1,9 +1,9 @@
 package br.gov.to.sefaz.arr.parametros.business.service.validator;
 
-import br.gov.to.sefaz.arr.parametros.persistence.entity.ConveniosArrec;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas;
-import br.gov.to.sefaz.arr.parametros.persistence.enums.TipoCodigoBarraEnum;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.ConveniosArrecRepository;
+import br.gov.to.sefaz.arr.persistence.entity.ConveniosArrec;
+import br.gov.to.sefaz.arr.persistence.entity.Receitas;
+import br.gov.to.sefaz.arr.persistence.enums.TipoCodigoBarraEnum;
+import br.gov.to.sefaz.arr.persistence.repository.ConveniosArrecRepository;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.violation.CustomViolation;
 import br.gov.to.sefaz.util.message.SourceBundle;

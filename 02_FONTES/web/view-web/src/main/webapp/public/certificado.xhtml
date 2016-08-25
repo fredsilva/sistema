@@ -1,9 +1,13 @@
-<?xml version='1.0' encoding='UTF-8' ?>
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-        xmlns:h="http://java.sun.com/jsf/html">
-<h:head/>
-<body>
-    <h:outputLabel value="#{certificadoDigitalMB.cpf}"/>
-</body>
-</html>
+<f:view encoding="UTF-8" contentType="text/html"
+xmlns="http://www.w3.org/1999/xhtml"
+xmlns:f="http://xmlns.jcp.org/jsf/core"
+xmlns:c="http://java.sun.com/jsp/jstl/core">
+<c:choose>
+<c:when test="#{param['login'] != null}">
+    #{certificadoDigitalMB.authenticate()}
+</c:when>
+<c:when test="#{param['solicitacao'] != null}">
+    #{certificadoDigitalMB.requestUser()}
+</c:when>
+</c:choose>
+</f:view>

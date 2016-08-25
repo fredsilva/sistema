@@ -2,9 +2,9 @@ package br.gov.to.sefaz.seg.persistence.repository;
 
 import br.gov.to.sefaz.persistence.repository.BaseRepository;
 import br.gov.to.sefaz.seg.persistence.entity.PostoTrabalho;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
+
+import java.util.Collection;
 
 /**
  * Repositório de acesso à base dados da entidade {@link PostoTrabalho}.
@@ -13,20 +13,15 @@ import org.springframework.stereotype.Repository;
  * @since 13/05/2016 17:41:56
  */
 @Repository
-public interface PostoTrabalhoRepository extends BaseRepository<PostoTrabalho, Long> {
-
-    String EXISTS_LOCK_REFERENCE_FUNCIONARIO =
-            "SELECT CASE WHEN (COUNT(TUPT.IDENTIFICACAO_POSTO_TRABALHO) > 0) THEN 'true' "
-                    + "ELSE 'false' END"
-                    + " from SEFAZ_SEG.TA_USUARIO_POSTO_TRABALHO TUPT "
-                    + "where TUPT.IDENTIFICACAO_POSTO_TRABALHO = :id";
+public class PostoTrabalhoRepository extends BaseRepository<PostoTrabalho, Integer> {
 
     /**
-     * Verifica se a Unidade Organizacional é pai de outras Unidades Organizacionais.
-     *
-     * @param id Identificação da Unidade Organizacional.
-     * @return Boolean se verdadeiro existe referência, se falso não existe.
+     * Busca todos os {@link PostoTrabalho} referentes à Unidade passada por parâmetro.
+     * @param identificUnidOrganizac identificação da
+     * {@link br.gov.to.sefaz.seg.persistence.entity.UnidadeOrganizacional}
+     * @return lista de {@link br.gov.to.sefaz.seg.persistence.entity.PostoTrabalho}.
      */
-    @Query(value = EXISTS_LOCK_REFERENCE_FUNCIONARIO, nativeQuery = true)
-    Boolean existsLockReferenceFuncionario(@Param(value = "id") Long id);
+    public Collection<PostoTrabalho> findAllByUnidadeOrganizacional(Long identificUnidOrganizac) {
+        return find(select -> select.where().equal("identificacaoUnidOrganizac", identificUnidOrganizac));
+    }
 }

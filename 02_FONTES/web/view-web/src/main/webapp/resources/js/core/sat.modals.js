@@ -1,5 +1,8 @@
 alertModal = {
     messages: [],
+    hasMessages: function () {
+        return this.messages.length > 0;
+    },
     clearMessage: function () {
         this.messages = [];
     },
@@ -38,7 +41,7 @@ alertModal = {
         this.putMessage(msg, "danger")
     },
     show: function () {
-        if (this.messages.length > 0) {
+        if (this.hasMessages()) {
             this.buildAlerts();
 
             $('#alert-modal').modal();
@@ -58,12 +61,27 @@ loaderModal = {
     }
 };
 
-$(document).ajaxSend(function () {
+$(document).ajaxSend(function (event, jqxhr, settings) {
+    if (settings.url.indexOf("?") > -1) {
+        settings.url = settings.url.replace("?", '?jquery&');
+    } else {
+        settings.url += '?jquery';
+    }
     loaderModal.show();
-});
-
-$(document).ajaxComplete(function () {
+}).ajaxComplete(function () {
     loaderModal.hide();
+}).ajaxError(function (error, args) {
+    var val = args.responseText.trim();
+    try {
+        var jsonData = JSON.parse(val);
+
+        $.each(jsonData, function (index, value) {
+            alertModal.putDanger(value.message);
+        });
+    } catch (e) {
+        alertModal.putDanger(val);
+    }
+    alertModal.show();
 });
 
 $(document).ready(function () {
@@ -77,3 +95,11 @@ $(document).ready(function () {
 document.addEventListener("contextmenu", function (e) {
     e.preventDefault();
 }, false);
+
+$(document).ready(function() {
+    $(".modal").on('hidden.bs.modal', function (event) {
+        if ($('.modal:visible').length) {
+            $('body').addClass('modal-open');
+        }
+    });
+});

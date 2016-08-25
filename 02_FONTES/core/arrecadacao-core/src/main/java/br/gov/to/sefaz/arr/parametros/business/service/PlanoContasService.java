@@ -1,7 +1,7 @@
 package br.gov.to.sefaz.arr.parametros.business.service;
 
 import br.gov.to.sefaz.arr.parametros.business.service.filter.PlanoContasFilter;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PlanoContas;
+import br.gov.to.sefaz.arr.persistence.entity.PlanoContas;
 import br.gov.to.sefaz.business.service.CrudService;
 
 import java.util.List;

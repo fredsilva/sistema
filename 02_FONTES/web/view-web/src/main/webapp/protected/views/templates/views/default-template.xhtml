@@ -2,7 +2,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
         xmlns:h="http://java.sun.com/jsf/html"
-        xmlns:ui="http://java.sun.com/jsf/facelets">
+        xmlns:ui="http://java.sun.com/jsf/facelets"
+>
 <h:head>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <title>Sefaz-to - #{pageTitle}</title>
@@ -19,6 +20,7 @@
     <h:outputScript library="js" name="lib/jquery-ui.js"/>
     <h:outputScript library="js" name="lib/jquery.maskMoney.min.js"/>
     <h:outputScript library="js" name="lib/jquery.mask.js"/>
+    <h:outputScript library="js" name="core/sat.js"/>
     <h:outputScript library="js" name="core/sat.modals.js"/>
     <h:outputScript library="js" name="core/sat.jsf.js"/>
     <h:outputScript library="js" name="core/sat.forms.js"/>
@@ -50,6 +52,9 @@
                 <a class="navbar-brand" href="#"><strong>#{msg['home.titulo']}</strong></a>
             </div>
 
+            <h:panelGroup rendered="#{defaultTemplateMB.procuracao}" styleClass="nav navbar-left top-nav procuracao-header">
+                [#{seg_msg['seg.geral.procuracaoUsuario.selecao.atuando']} #{defaultTemplateMB.procuracaoUserName}]
+            </h:panelGroup>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
                 <li class="dropdown">
@@ -103,12 +108,22 @@
                                 <i class="fa fa-fw fa-child"/>#{msg['home.header.opcoes.perfil']}
                             </a>
                         </li>
-                        <li><a href="#"><i class="fa fa-fw fa-lock"/>#{msg['home.header.opcoes.senha']}</a></li>
-                        <li><a href="#"><i class="fa fa-fw fa-gear"/>#{msg['home.header.opcoes.procurado']}</a></li>
+                        <li class="#{defaultTemplateMB.isAuthenticatedByCert()?'disabled':''}">
+                            <a href="javascript:void(0);" onclick="$('#change-password-modal').modal();">
+                                <i class="fa fa-fw fa-lock"/>#{msg['home.header.opcoes.senha']}
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" onclick="$('#select-procuracao-modal').modal();">
+                                <i class="fa fa-fw fa-gear"/>#{msg['home.header.opcoes.procurado']}
+                            </a>
+                        </li>
                         <li class="divider"></li>
-                        <li><a href="javascript:void(0);" onclick="$('#confirm-modal-logout').modal();">
-                            <i class="fa fa-fw fa-power-off"/>#{msg['home.header.opcoes.sair']}
-                        </a></li>
+                        <li>
+                            <a href="javascript:void(0);" onclick="$('#confirm-modal-logout').modal();">
+                                <i class="fa fa-fw fa-power-off"/>#{msg['home.header.opcoes.sair']}
+                            </a>
+                        </li>
                     </ul>
                 </li>
             </ul>
@@ -125,7 +140,8 @@
 
                 <div id="modules-menus">
                     <ui:repeat value="#{defaultTemplateMB.modulosMenu}" var="sysModulo">
-                        <ul id="modules-menu-#{sysModulo.id}" class="nav navbar-nav side-nav modules-menu">
+                        <ul id="modules-menu-#{sysModulo.id}" class="nav navbar-nav side-nav modules-menu"
+                                style="display: none;">
                             <ui:repeat value="#{sysModulo.childs}" var="appModulo">
                                 <li>
                                     <a href="javascript:void(0);" data-toggle="collapse"
@@ -133,7 +149,7 @@
                                     </a>
                                     <ul id="opcoes-menu-#{appModulo.id}" class="collapse">
                                     <ui:repeat value="#{appModulo.childs}" var="opcao">
-                                        <li>
+                                        <li class="#{pathResolverMB.isActualProtectedView(opcao.ref)?'active':''}">
                                             <a href="#{pathResolverMB.protectedViewPath(opcao.ref)}">#{opcao.name}</a>
                                         </li>
                                     </ui:repeat>
@@ -161,9 +177,6 @@
         </div>
         <!-- /#page-wrapper -->
     </div>
-
-    <ui:include src="/protected/views/templates/modals/core-modals.xhtml"/>
-    <ui:include src="/protected/views/templates/modals/success-marker.xhtml"/>
 
     <div id="confirm-modal-logout" class="modal" tabindex="-1" role="dialog">
         <div class="modal-dialog">
@@ -207,8 +220,42 @@
         </div>
     </div>
 
+    <div id="select-procuracao-modal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    #{seg_msg['seg.geral.procuracaoUsuario.selecao.titulo']}
+                </div>
+                <div class="modal-body">
+                    <p>#{seg_msg['seg.geral.procuracaoUsuario.selecao.descricao']}</p>
+                    <h:form>
+                        <ul class="list-unmarked">
+                            <ui:repeat value="#{defaultTemplateMB.procuradoresSistema}" var="procurador">
+                                <li>
+                                    <h:commandLink action="#{defaultTemplateMB.setActiveProcurador(procurador.id)}">
+                                        #{procurador.description}
+                                    </h:commandLink>
+                                </li>
+                            </ui:repeat>
+                        </ul>
+                    </h:form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <ui:include src="/protected/views/change-password.xhtml"/>
+    <ui:include src="/protected/views/templates/modals/core-modals.xhtml"/>
+    <ui:include src="/protected/views/templates/modals/success-marker.xhtml"/>
+
     <h:outputScript rendered="#{!defaultTemplateMB.hasActiveProfile()}">
         $('#select-profile-modal').modal();
+    </h:outputScript>
+    <h:outputScript rendered="#{param['acesso-negado'] != null}">
+        setTimeout(function() {
+            window.location.href = '#{pathResolverMB.loginPath}';
+        }, 100000000);
+        #{defaultTemplateMB.invalidateSession()}
     </h:outputScript>
 </h:body>
 </html>

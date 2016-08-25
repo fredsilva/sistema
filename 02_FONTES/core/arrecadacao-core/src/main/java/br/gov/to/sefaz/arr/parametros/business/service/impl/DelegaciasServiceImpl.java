@@ -1,11 +1,10 @@
 package br.gov.to.sefaz.arr.parametros.business.service.impl;
 
 import br.gov.to.sefaz.arr.parametros.business.service.DelegaciasService;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.Delegacias;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.DelegaciasRepository;
+import br.gov.to.sefaz.arr.persistence.entity.Delegacias;
+import br.gov.to.sefaz.arr.persistence.repository.DelegaciasRepository;
 import br.gov.to.sefaz.business.service.impl.DefaultCrudService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 /**
@@ -19,6 +18,6 @@ public class DelegaciasServiceImpl extends DefaultCrudService<Delegacias, Intege
 
     @Autowired
     public DelegaciasServiceImpl(DelegaciasRepository repository) {
-        super(repository, new Sort(new Sort.Order(Sort.Direction.ASC, "idDelegacia")));
+        super(repository);
     }
 }

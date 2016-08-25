@@ -12,6 +12,5 @@ import org.springframework.stereotype.Repository;
  * @since 13/05/2016 17:41:56
  */
 @Repository
-public interface CorreioContribuinteRepository extends BaseRepository<CorreioContribuinte, Long> {
-
+public class CorreioContribuinteRepository extends BaseRepository<CorreioContribuinte, Long> {
 }

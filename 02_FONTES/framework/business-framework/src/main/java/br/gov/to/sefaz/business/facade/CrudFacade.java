@@ -31,14 +31,6 @@ public interface CrudFacade<E, I extends Serializable> {
     Collection<E> findAll();
 
     /**
-     * Consulta uma lista de registros pelo id.
-     *
-     * @param list lista de id
-     * @return lista de entidades
-     */
-    Collection<E> findAll(Iterable<I> list);
-
-    /**
      * Salva a entidade na base de dados.
      *
      * @param entity entidade

@@ -48,15 +48,6 @@ public class DefaultCrudFacade<E extends AbstractEntity<I>, I extends Serializab
     /**
      * {@inheritDoc}.
      */
-    @Transactional(readOnly = true)
-    @Override
-    public Collection<E> findAll(Iterable<I> list) {
-        return service.findAll(list);
-    }
-
-    /**
-     * {@inheritDoc}.
-     */
     @Override
     public E save(E entity) {
         return service.save(entity);

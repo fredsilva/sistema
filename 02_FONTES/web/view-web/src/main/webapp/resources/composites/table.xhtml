@@ -27,15 +27,24 @@
             shortDescription="Chave para o texto do bundle para o cabeçalho da coluna de ações (só será exibido se hasActions=true), caso vazio nada será exibido no cabeçalho"/>
     <cc:attribute name="actionEvents" type="java.lang.String"
             shortDescription="Eventos vinculados aos elementos da coluna de ações da tablea cada eventos é separado por ',' (virgula) e os atributos do elemento são separados por ':' dois pontos. Mais detalhes em br.gov.to.sefaz.business.managedbean.composites.DataTableMB#parseActionEvents(String)"/>
+    <cc:attribute name="actionVisible" type="java.lang.String"
+            shortDescription="Elementos que precisam ser escondidos dado uma função que retorne true ou false. (classe) select-row: (ação) hide: (função boolean) showLock(7)"/>
+    <cc:attribute name="actionStyleClass" type="java.lang.String" default="tbody-right"
+            shortDescription="Pode colocar qualquer classe css (separadas por espaço), já existem as classes de alinhamento (no arquivo 'sat.css'): tbody-left, tbody-center, tbody-right e tbody-justify"/>
+    <cc:attribute name="defaulSortColumn" type="java.lang.Integer" default="0"
+            shortDescription="Índice da coluna para a qual deseja que a tabela inicie ordenada. Defaul 0, primeira coluna."/>
+    <cc:attribute name="defaulSortDirection" type="java.lang.String" default="asc"
+            shortDescription="Direção da ordenação default da tabela. Default asc. "/>
     <cc:facet name="actions"
             shortDescription="Elementos HTML que serão replicados em cada linha da coluna de ações da tabela. Os eventos são mapeados através da classe do elemento HTML. Mais detalhes em br.gov.to.sefaz.business.managedbean.composites.DataTableMB#parseActionEvents(String)"/>
+
 </cc:interface>
 
 <cc:implementation>
     <ui:param name="fields" value="#{dataTableMB.parseFields(cc.attrs.fields)}"/>
     <ui:param name="columnDefs" value="#{cc.attrs.columnDefs}"/>
     <div id="#{cc.clientId}">
-        <table id="#{cc.clientId}-dt" class="table table-hover">
+        <table id="#{cc.attrs.id}-dt" class="table table-hover">
             <thead>
                 <tr>
                     <ui:repeat value="#{dataTableMB.parseHeaders(cc.attrs.headers, fields, cc.attrs.bundle)}"
@@ -60,12 +69,12 @@
                 </ui:repeat>
             </tbody>
         </table>
-        <div id="default-content-#{cc.clientId}" class="hide">
+        <div id="default-content-#{cc.attrs.id}" class="hide">
             <c:if test="#{cc.attrs.hasActions}">
                 <cc:renderFacet name="actions"/>
             </c:if>
         </div>
-        <div id="confirm-modal-#{cc.clientId}" class="modal" tabindex="-1" role="dialog">
+        <div id="confirm-modal-#{cc.attrs.id}" class="modal" tabindex="-1" role="dialog">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-body">
@@ -80,12 +89,17 @@
         </div>
         <h:outputScript>
             $(document).ready(function () {
-                createDataTable('#{cc.clientId}', #{cc.attrs.paging},
-                        #{dataTableMB.parseColumnDefs(columnDefs, fields)}, #{cc.attrs.hasActions});
+                createDataTable('#{cc.attrs.id}', #{cc.attrs.paging},
+                        #{dataTableMB.parseColumnDefs(columnDefs, fields)}, #{cc.attrs.hasActions},
+                       '#{cc.attrs.actionStyleClass}', #{cc.attrs.defaulSortColumn}, '#{cc.attrs.defaulSortDirection}');
                 <ui:repeat value="#{dataTableMB.parseActionEvents(cc.attrs.actionEvents)}" var="action">
-                    bindDataTableEvents('#{cc.clientId}', '#{action.bindType}', '#{action.elementClass}',
+                    bindDataTableEvents('#{cc.attrs.id}', '#{action.bindType}', '#{action.elementClass}',
                             '#{action.eventType}', '#{dataTableMB.buildJsCall(action, 'data')}',
                             '#{dataTableMB.getFromBundle(action.complement, cc.attrs.bundle)}');
+                </ui:repeat>
+                <ui:repeat value="#{dataTableMB.parseActionVisible(cc.attrs.actionVisible)}" var="action">
+                    bindDataTableVisible('#{cc.attrs.id}', '#{action.elementClass}', '#{action.visibility}',
+                    '#{dataTableMB.buildJsCall(action, 'data')}');
                 </ui:repeat>
             });
         </h:outputScript>

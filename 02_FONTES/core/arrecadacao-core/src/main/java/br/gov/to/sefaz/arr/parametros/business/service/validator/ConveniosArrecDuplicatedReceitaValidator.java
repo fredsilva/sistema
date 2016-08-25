@@ -1,8 +1,8 @@
 package br.gov.to.sefaz.arr.parametros.business.service.validator;
 
-import br.gov.to.sefaz.arr.parametros.persistence.entity.ConveniosReceitas;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.ReceitasRepository;
+import br.gov.to.sefaz.arr.persistence.entity.ConveniosReceitas;
+import br.gov.to.sefaz.arr.persistence.entity.Receitas;
+import br.gov.to.sefaz.arr.persistence.repository.ReceitasRepository;
 import br.gov.to.sefaz.business.service.validation.ServiceValidator;
 import br.gov.to.sefaz.business.service.validation.violation.CustomViolation;
 import br.gov.to.sefaz.util.message.MessageUtil;
@@ -16,8 +16,8 @@ import java.util.List;
 import java.util.Set;
 
 /**
- * Validação para duplicação de {@link br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas} na lista de
- * {@link br.gov.to.sefaz.arr.parametros.persistence.entity.ConveniosArrec#getReceitas()}.
+ * Validação para duplicação de {@link br.gov.to.sefaz.arr.persistence.entity.Receitas} na lista de
+ * {@link br.gov.to.sefaz.arr.persistence.entity.ConveniosArrec#getReceitas()}.
  *
  * @author <a href="mailto:gabriel.santos@ntconsult.com.br">gabriel.santos</a>
  * @since 20/05/2016 12:04:00
@@ -46,8 +46,8 @@ public class ConveniosArrecDuplicatedReceitaValidator implements ServiceValidato
     }
 
     /**
-     * Valida se uma lista de {@link br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas} já possui um registro
-     * com a mesma {@link br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas#idReceita}.
+     * Valida se uma lista de {@link br.gov.to.sefaz.arr.persistence.entity.Receitas} já possui um registro
+     * com a mesma {@link br.gov.to.sefaz.arr.persistence.entity.Receitas#idReceita}.
      *
      * @param receitas Lista de receita a ser validada
      * @param idReceita código da receita

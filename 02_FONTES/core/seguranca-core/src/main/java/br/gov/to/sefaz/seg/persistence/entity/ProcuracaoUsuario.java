@@ -1,14 +1,21 @@
 package br.gov.to.sefaz.seg.persistence.entity;
 
 import br.gov.to.sefaz.persistence.entity.AbstractEntity;
+import org.hibernate.validator.constraints.NotEmpty;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 /**
@@ -24,7 +31,9 @@ public class ProcuracaoUsuario extends AbstractEntity<Long> {
     private static final long serialVersionUID = 4454342268629733352L;
 
     @Id
-    @NotNull
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_SOLICITACAO_USUARIO")
+    @SequenceGenerator(name = "SQ_SOLICITACAO_USUARIO", schema = "SEFAZ_SEG",
+            sequenceName = "SQ_SOLICITACAO_USUARIO", allocationSize = 1)
     @Column(name = "IDENTIFICACAO_PROCUR_USUARIO")
     private Long identificacaoProcurUsuario;
 
@@ -38,14 +47,27 @@ public class ProcuracaoUsuario extends AbstractEntity<Long> {
 
     @Size(max = 11)
     @Column(name = "CPF_PROCURADO")
+    @NotEmpty(message = "#{seg_msg['seg.geral.procuracaoUsuario.cpfProcurado.vazio']}")
     private String cpfProcurado;
 
+    @JoinColumn(name = "CPF_PROCURADO", referencedColumnName = "CPF_USUARIO",
+            updatable = false, insertable = false)
+    @OneToOne
+    private UsuarioSistema usuarioSistema;
+
+    @JoinColumn(name = "IDENTIFICACAO_PROCUR_USUARIO", referencedColumnName = "IDENTIFICACAO_PROCUR_USUARIO",
+            updatable = false, insertable = false)
+    @OneToMany
+    private List<ProcuracaoOpcao> procuracaoOpcoes;
+
     public ProcuracaoUsuario() {
+        procuracaoOpcoes = new ArrayList<>();
         // Construtor para inicialização por reflexão.
     }
 
     public ProcuracaoUsuario(Long identificacaoProcurUsuario, String cpfOrigem, String cnpjOrigem,
             String cpfProcurado) {
+        this();
         this.identificacaoProcurUsuario = identificacaoProcurUsuario;
         this.cpfOrigem = cpfOrigem;
         this.cnpjOrigem = cnpjOrigem;
@@ -87,6 +109,22 @@ public class ProcuracaoUsuario extends AbstractEntity<Long> {
 
     public void setCpfProcurado(String cpfProcurado) {
         this.cpfProcurado = cpfProcurado;
+    }
+
+    public List<ProcuracaoOpcao> getProcuracaoOpcoes() {
+        return procuracaoOpcoes;
+    }
+
+    public void setProcuracaoOpcoes(List<ProcuracaoOpcao> procuracaoOpcoes) {
+        this.procuracaoOpcoes = procuracaoOpcoes;
+    }
+
+    public UsuarioSistema getUsuarioSistema() {
+        return usuarioSistema;
+    }
+
+    public void setUsuarioSistema(UsuarioSistema usuarioSistema) {
+        this.usuarioSistema = usuarioSistema;
     }
 
     @Override

@@ -7,12 +7,9 @@ import br.gov.to.sefaz.seg.business.gestao.service.filter.PostoTrabalhoFilter;
 import br.gov.to.sefaz.seg.persistence.entity.PostoTrabalho;
 import br.gov.to.sefaz.seg.persistence.entity.UnidadeOrganizacional;
 import br.gov.to.sefaz.util.message.MessageUtil;
-
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Collection;
-import java.util.Optional;
-
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
@@ -24,7 +21,7 @@ import javax.faces.bean.ViewScoped;
  */
 @ManagedBean(name = "postoTrabalhoMB")
 @ViewScoped
-public class PostoTrabalhoMB extends DefaultCrudMB<PostoTrabalho, Long> {
+public class PostoTrabalhoMB extends DefaultCrudMB<PostoTrabalho, Integer> {
 
     private final PostoTrabalhoFilter filter;
     private Collection<UnidadeOrganizacional> allUnidadeOrganizacionais;
@@ -60,29 +57,10 @@ public class PostoTrabalhoMB extends DefaultCrudMB<PostoTrabalho, Long> {
         Collection<PostoTrabalho> resultList = getFacade().find(filter);
 
         if (resultList.isEmpty()) {
-            MessageUtil.addMesage(MessageUtil.SEG, "geral.pesquisa.vazia");
+            MessageUtil.addMessage(MessageUtil.SEG, "geral.pesquisa.vazia");
         }
 
         setResultList(resultList);
-    }
-
-    public Long getUnidOrganizac() {
-        return getDto().getIdentificacaoUnidOrganizac();
-    }
-
-    /**
-     * Seta o objeto {@link UnidadeOrganizacional#unidadeOrganizacionalPai} para utilização das combos da tela.
-     *
-     * @param unidOrganizac identificação da Unidade Pai.
-     */
-    public void setUnidOrganizac(Long unidOrganizac) {
-        allUnidadeOrganizacionais.stream()
-                .filter(uo -> uo.getId().equals(unidOrganizac))
-                .findFirst()
-                .ifPresent(unidadeOrganizacional -> {
-                    getDto().setIdentificacaoUnidOrganizac(unidOrganizac);
-                    getDto().setUnidadeOrganizacional(unidadeOrganizacional);
-                });
     }
 
     /**
@@ -106,34 +84,27 @@ public class PostoTrabalhoMB extends DefaultCrudMB<PostoTrabalho, Long> {
     }
 
     @Override
-    public void delete() {
-        Optional<PostoTrabalho> delete = getFacade().delete(getDto().getId());
-        getResultList().removeIf(e -> e.getId().equals(getDto().getId()));
-
-        if (delete.isPresent()) {
-            showDeleteMessage();
-            getResultList().add(delete.get());
-        } else {
-            showDeleteMessage();
-        }
-
-        clearDto();
-    }
-
-    @Override
     public Collection<PostoTrabalho> getResultList() {
         return resultList;
     }
 
-    /**
-     * Mostra a mensagem de deleção específica para Unidades Organizacionais.
-     */
-    public void showDeleteMessage() {
-        MessageUtil.addMesage(MessageUtil.SEG, "seg.gestao.PostoTrabalho.tabela.excluir.sucesso");
+    @Override
+    protected void showSaveMessage() {
+        MessageUtil.addMessage(MessageUtil.SEG, "seg.gestao.PostoTrabalho.form.sucesso.operacao");
     }
 
     @Override
-    protected void showSaveMessage() {
-        MessageUtil.addMesage(MessageUtil.SEG, "seg.gestao.PostoTrabalho.form.sucesso.operacao");
+    protected void showUpdateMessage() {
+        MessageUtil.addMessage(MessageUtil.SEG, "seg.gestao.PostoTrabalho.form.sucesso.update");
+    }
+
+    @Override
+    protected void showPhysicalDeleteMessage() {
+        MessageUtil.addMessage(MessageUtil.SEG, "seg.gestao.PostoTrabalho.tabela.excluir.sucesso");
+    }
+
+    @Override
+    protected void showLogicalDeleteMessage() {
+        MessageUtil.addMessage(MessageUtil.SEG, "seg.gestao.PostoTrabalho.tabela.excluir.sucesso");
     }
 }

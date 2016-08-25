@@ -3,9 +3,10 @@ package br.gov.to.sefaz.seg.business.mail.service.impl;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.ValidationSuite;
 import br.gov.to.sefaz.seg.business.gestao.service.CorreioContribuinteService;
+import br.gov.to.sefaz.seg.business.mail.domain.CorreioEletronico;
 import br.gov.to.sefaz.seg.business.mail.service.MailService;
 import br.gov.to.sefaz.seg.persistence.entity.CorreioContribuinte;
-import br.gov.to.sefaz.util.mail.MailSenderService;
+import br.gov.to.sefaz.util.mail.MailSender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,12 +24,12 @@ import javax.mail.MessagingException;
 @Service
 public class MailServiceImpl implements MailService {
 
-    private final MailSenderService mailSenderService;
+    private final MailSender mailSender;
     private final CorreioContribuinteService correioContribuinteService;
 
     @Autowired
-    public MailServiceImpl(MailSenderService mailSenderService, CorreioContribuinteService correioContribuinteService) {
-        this.mailSenderService = mailSenderService;
+    public MailServiceImpl(MailSender mailSender, CorreioContribuinteService correioContribuinteService) {
+        this.mailSender = mailSender;
         this.correioContribuinteService = correioContribuinteService;
     }
 
@@ -41,6 +42,12 @@ public class MailServiceImpl implements MailService {
         }
     }
 
+    @Override
+    public void sendMail(CorreioEletronico correioEletronico) throws MessagingException {
+        List<CorreioContribuinte> correiosContribuinte = correioEletronico.getCorreioContribuinte();
+        sendMail(correiosContribuinte, correioEletronico.isHtmlBody());
+    }
+
     private void sendMail(boolean isHtmlBody, Collection<CorreioContribuinte> correioContribuintes) throws
             MessagingException {
         CorreioContribuinte correioContribuinte = correioContribuintes.iterator().next();
@@ -50,11 +57,11 @@ public class MailServiceImpl implements MailService {
         String[] mailToArray = correiosEletronicos.toArray(new String[correiosEletronicos.size()]);
 
         if (correioContribuinte.getAnexo() != null) {
-            mailSenderService.sendMail(correioContribuinte.getAssunto(),
+            mailSender.sendMail(correioContribuinte.getAssunto(),
                     correioContribuinte.getConteudo(), isHtmlBody,
                     correioContribuinte.getAnexo(), mailToArray);
         } else {
-            mailSenderService.sendMail(correioContribuinte.getAssunto(), correioContribuinte.getConteudo(),
+            mailSender.sendMail(correioContribuinte.getAssunto(), correioContribuinte.getConteudo(),
                     isHtmlBody, mailToArray);
         }
     }

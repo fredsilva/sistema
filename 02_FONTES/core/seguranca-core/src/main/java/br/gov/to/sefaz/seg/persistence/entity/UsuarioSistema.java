@@ -1,18 +1,27 @@
 package br.gov.to.sefaz.seg.persistence.entity;
 
-import br.gov.to.sefaz.cat.persistence.entity.Municipio;
+import br.gov.to.sefaz.business.service.validation.custom.Cpf;
+import br.gov.to.sefaz.par.gestao.persistence.entity.Logradouro;
+import br.gov.to.sefaz.par.gestao.persistence.entity.Municipio;
 import br.gov.to.sefaz.persistence.converter.YesOrNoBooleanConverter;
 import br.gov.to.sefaz.persistence.entity.AbstractEntity;
 import br.gov.to.sefaz.seg.persistence.converter.SituacaoUsuarioEnumConverter;
+import br.gov.to.sefaz.seg.persistence.converter.TipoUsuarioConverter;
+import br.gov.to.sefaz.seg.persistence.domain.TipoUsuario;
+import br.gov.to.sefaz.seg.persistence.enums.SituacaoSolicitacaoEnum;
 import br.gov.to.sefaz.seg.persistence.enums.SituacaoUsuarioEnum;
+import org.apache.commons.lang3.StringUtils;
+import org.hibernate.validator.constraints.NotEmpty;
 
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
+import java.util.stream.Collectors;
 import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -20,7 +29,10 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 /**
  * Entidade referente a tabela SEFAZ_SEG.TA_USUARIO_SISTEMA do Banco de Dados.
@@ -36,66 +48,85 @@ public class UsuarioSistema extends AbstractEntity<String> {
     private static final long serialVersionUID = 8788036872437894647L;
 
     @Id
-    @NotNull(message = "#{seg_msg['usuarioSistema.cpfUsuario.obrigatorio']}")
+    @Cpf
+    @NotEmpty(message = "#{seg_msg['usuarioSistema.cpfUsuario.obrigatorio']}")
+    @Size(max = 11, message = "#{seg_msg['usuarioSistema.cpfUsuario.tamanho']}")
     @Column(name = "CPF_USUARIO")
     private String cpfUsuario;
 
-    @NotNull(message = "#{seg_msg['usuarioSistema.nomeCompletoUsuario.obrigatorio']}")
+    @NotEmpty(message = "#{seg_msg['usuarioSistema.nomeCompletoUsuario.obrigatorio']}")
+    @Size(max = 120, message = "#{seg_msg['usuarioSistema.nomeCompleto.tamanho']}")
     @Column(name = "NOME_COMPLETO_USUARIO")
     private String nomeCompletoUsuario;
 
-    @NotNull(message = "#{seg_msg['usuarioSistema.cep.obrigatorio']}")
+    @NotEmpty(message = "#{seg_msg['usuarioSistema.cep.obrigatorio']}")
+    @Size(max = 8, message = "#{seg_msg['usuarioSistema.cep.tamanho']}")
     @Column(name = "CEP")
     private String cep;
 
-    @NotNull(message = "#{seg_msg['usuarioSistema.codigoLogradouro.obrigatorio']}")
+    @NotEmpty(message = "#{seg_msg['usuarioSistema.codigoLogradouro.obrigatorio']}")
+    @Size(max = 3, message = "#{seg_msg['usuarioSistema.codigoLogradouro.tamanho']}")
     @Column(name = "CODIGO_LOGRADOURO")
     private String codigoLogradouro;
 
-    @NotNull(message = "#{seg_msg['usuarioSistema.endereco.obrigatorio']}")
+    @NotEmpty(message = "#{seg_msg['usuarioSistema.endereco.obrigatorio']}")
+    @Size(max = 100, message = "#{seg_msg['usuarioSistema.endereco.tamanho']}")
     @Column(name = "ENDERECO")
     private String endereco;
 
     @NotNull(message = "#{seg_msg['usuarioSistema.numeroEndereco.obrigatorio']}")
+    @Max(value = 99999999, message = "#{seg_msg['usuarioSistema.numeroEndereco.tamanho']}")
+    @Min(value = 1, message = "#{seg_msg['usuarioSistema.numeroEndereco.tamanho']}")
     @Column(name = "NUMERO_ENDERECO")
     private Integer numeroEndereco;
 
+    @Max(value = 99999999, message = "#{seg_msg['usuarioSistema.apartamento.tamanho']}")
+    @Min(value = 1, message = "#{seg_msg['usuarioSistema.apartamento.tamanho']}")
     @Column(name = "APARTAMENTO")
     private Integer apartamento;
 
-    @Column(name = "COMPLEMENTO")
-    private String complemento;
-
-    @NotNull(message = "#{seg_msg['usuarioSistema.bairro.obrigatorio']}")
+    @NotEmpty(message = "#{seg_msg['usuarioSistema.bairro.obrigatorio']}")
+    @Size(max = 100, message = "#{seg_msg['usuarioSistema.bairro.tamanho']}")
     @Column(name = "BAIRRO")
     private String bairro;
 
-    @NotNull(message = "#{seg_msg['usuarioSistema.codigoEstado.obrigatorio']}")
+    @Size(max = 30, message = "#{seg_msg['usuarioSistema.complemento.tamanho']}")
+    @Column(name = "COMPLEMENTO")
+    private String complemento;
+
+    @NotEmpty(message = "#{seg_msg['usuarioSistema.codigoEstado.obrigatorio']}")
+    @Size(max = 2, message = "#{seg_msg['usuarioSistema.codigoEstado.tamanho']}")
     @Column(name = "CODIGO_ESTADO")
     private String codigoEstado;
 
+    @Max(value = 9999999, message = "#{seg_msg['usuarioSistema.codigoMunicipio.tamanho']}")
     @NotNull(message = "#{seg_msg['usuarioSistema.codigoMunicipio.obrigatorio']}")
     @Column(name = "CODIGO_MUNICIPIO")
     private Integer codigoMunicipio;
 
     @JoinColumn(name = "CODIGO_MUNICIPIO", referencedColumnName = "CODIGO_IBGE",
             insertable = false, updatable = false)
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Municipio municipio;
 
+    @Size(max = 20, message = "#{seg_msg['usuarioSistema.telefoneResidencial.tamanho']}")
     @Column(name = "TELEFONE_RESIDENCIAL")
     private String telefoneResidencial;
 
+    @Size(max = 300, message = "#{seg_msg['usuarioSistema.outroEndereco.tamanho']}")
     @Column(name = "OUTRO_ENDERECO_CONTATO")
     private String outroEnderecoContato;
 
-    @NotNull(message = "#{seg_msg['usuarioSistema.correioEletronico.obrigatorio']}")
+    @NotEmpty(message = "#{seg_msg['usuarioSistema.correioEletronico.obrigatorio']}")
+    @Size(max = 50, message = "#{seg_msg['usuarioSistema.correioEletronico.tamanho']}")
     @Column(name = "CORREIO_ELETRONICO")
     private String correioEletronico;
 
+    @Size(max = 10, message = "#{seg_msg['usuarioSistema.telefoneCelular.tamanho']}")
     @Column(name = "TELEFONE_CELULAR")
     private String telefoneCelular;
 
+    @Size(max = 9, message = "#{seg_msg['usuarioSistema.crc.tamanho']}")
     @Column(name = "CRC")
     private String crc;
 
@@ -123,22 +154,33 @@ public class UsuarioSistema extends AbstractEntity<String> {
     @Column(name = "DATA_DESBLOQUEIO")
     private LocalDateTime dataDesbloqueio;
 
+    @NotNull(message = "#{seg_msg['usuarioSistema.tipoUsuario.obrigatorio']}")
     @Column(name = "CODIGO_TIPO_USUARIO")
     private Integer codigoTipoUsuario;
 
-    @JoinColumn(name = "CODIGO_TIPO_USUARIO", referencedColumnName = "CODIGO_TIPO_USUARIO", insertable = false,
-            updatable = false)
-    @ManyToOne(optional = false)
+    @Column(name = "CODIGO_TIPO_USUARIO", insertable = false, updatable = false)
+    @Convert(converter = TipoUsuarioConverter.class)
     private TipoUsuario tipoUsuario;
 
     @OneToMany(mappedBy = "usuarioSistema")
     private Set<HistoricoLoginSistema> historicoLoginSistema;
 
-    @OneToOne(mappedBy = "usuarioSistema")
+    @OneToOne(mappedBy = "usuarioSistema", fetch = FetchType.LAZY)
     private SolicitacaoUsuario solicitacaoUsuario;
 
-    @OneToOne(mappedBy = "usuarioSistema")
+    @OneToOne(optional = false, mappedBy = "usuarioSistema", fetch = FetchType.LAZY)
     private UsuarioPostoTrabalho usuarioPostoTrabalho;
+
+    @JoinColumn(name = "CODIGO_LOGRADOURO", referencedColumnName = "CODIGO_LOGRADOURO", insertable = false,
+            updatable = false)
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    private Logradouro logradouro;
+
+    @OneToMany(mappedBy = "usuarioSistema", fetch = FetchType.LAZY)
+    private Set<UsuarioPerfil> usuarioPerfil;
+
+    @Transient
+    private String usuarioPerfis;
 
     @Transient
     private LocalDateTime ultimoLogin;
@@ -146,7 +188,7 @@ public class UsuarioSistema extends AbstractEntity<String> {
     public UsuarioSistema() {
         // Construtor para inicialização por reflexão.
         municipio = new Municipio();
-        tipoUsuario = new TipoUsuario();
+        logradouro = new Logradouro();
     }
 
     public UsuarioSistema(String nomeCompletoUsuario, String cpfUsuario, String descricaoTipoUsuario,
@@ -155,7 +197,6 @@ public class UsuarioSistema extends AbstractEntity<String> {
         super();
         this.nomeCompletoUsuario = nomeCompletoUsuario;
         this.cpfUsuario = cpfUsuario;
-        this.tipoUsuario.setDescricaoTipoUsuario(descricaoTipoUsuario);
         this.situacaoUsuario = situacaoUsuario;
         this.municipio.setNomeMunicipio(nomeMunicipio);
         this.usuarioInsercao = usuarioInsercao;
@@ -198,8 +239,8 @@ public class UsuarioSistema extends AbstractEntity<String> {
         this.justificacaoCriacao = justificacaoCriacao;
         this.estaBloqueado = estaBloqueado;
         this.dataDesbloqueio = dataDesbloqueio;
-        this.tipoUsuario = tipoUsuario;
         this.codigoTipoUsuario = codigoTipoUsuario;
+        this.tipoUsuario = tipoUsuario;
     }
 
     @Override
@@ -235,8 +276,13 @@ public class UsuarioSistema extends AbstractEntity<String> {
         return codigoLogradouro;
     }
 
+    /**
+     * Seta o código do logradouro.
+     * @param codigoLogradouro código do logradouro
+     */
     public void setCodigoLogradouro(String codigoLogradouro) {
         this.codigoLogradouro = codigoLogradouro;
+        this.logradouro.setCodigoLogradouro(codigoLogradouro);
     }
 
     public String getEndereco() {
@@ -291,8 +337,13 @@ public class UsuarioSistema extends AbstractEntity<String> {
         return codigoMunicipio;
     }
 
+    /**
+     * Seta o código do município.
+     * @param codigoMunicipio código ibge do município
+     */
     public void setCodigoMunicipio(Integer codigoMunicipio) {
         this.codigoMunicipio = codigoMunicipio;
+        this.municipio.setCodigoIbge(codigoMunicipio);
     }
 
     public String getTelefoneResidencial() {
@@ -391,16 +442,24 @@ public class UsuarioSistema extends AbstractEntity<String> {
         this.codigoTipoUsuario = codigoTipoUsuario;
     }
 
+    public String getDescricaoTipoUsuario() {
+        return Objects.isNull(tipoUsuario) ? StringUtils.EMPTY : tipoUsuario.getDescricaoTipoUsuario();
+    }
+
+    public Municipio getMunicipio() {
+        return municipio;
+    }
+
+    public void setMunicipio(Municipio municipio) {
+        this.municipio = municipio;
+    }
+
     public String getUnidadeFederacao() {
-        return municipio != null ? municipio.getUnidadeFederacao() : "";
+        return municipio != null ? municipio.getUnidadeFederacao() : StringUtils.EMPTY;
     }
 
     public String getNomeMunicipio() {
-        return municipio != null ? municipio.getNomeMunicipio() : "";
-    }
-
-    public String getDescricaoTipoUsuario() {
-        return Objects.isNull(tipoUsuario) ? "" : tipoUsuario.getDescricaoTipoUsuario();
+        return municipio != null ? municipio.getNomeMunicipio() : StringUtils.EMPTY;
     }
 
     public LocalDateTime getHistoricoLoginSistema() {
@@ -411,7 +470,14 @@ public class UsuarioSistema extends AbstractEntity<String> {
         this.historicoLoginSistema = historicoLoginSistema;
     }
 
+    /**
+     * Retorna a solicitação do usuário.
+     * @return {@link SolicitacaoUsuario}.
+     */
     public SolicitacaoUsuario getSolicitacaoUsuario() {
+        if (solicitacaoUsuario == null ) {
+            solicitacaoUsuario = new SolicitacaoUsuario();
+        }
         return solicitacaoUsuario;
     }
 
@@ -419,7 +485,14 @@ public class UsuarioSistema extends AbstractEntity<String> {
         this.solicitacaoUsuario = solicitacaoUsuario;
     }
 
+    /**
+     * Retorna a referência de {@link PostoTrabalho} do {@link UsuarioSistema}.
+     * @return {@link UsuarioPostoTrabalho}.
+     */
     public UsuarioPostoTrabalho getUsuarioPostoTrabalho() {
+        if (usuarioPostoTrabalho == null) {
+            usuarioPostoTrabalho = new UsuarioPostoTrabalho();
+        }
         return usuarioPostoTrabalho;
     }
 
@@ -427,8 +500,61 @@ public class UsuarioSistema extends AbstractEntity<String> {
         this.usuarioPostoTrabalho = usuarioPostoTrabalho;
     }
 
+    public Integer getUsuarioPostoTrabalhoPostoTrabalhoIdentific() {
+        return getUsuarioPostoTrabalho().getIdentificacaoPostoTrabalho();
+    }
+
+    /**
+     * Altera a identificação do PostoTrabalho.
+     * @param postoTrabalhoPostoTrabalhoIdentific identificação nova.
+     */
+    public void setUsuarioPostoTrabalhoPostoTrabalhoIdentific(Integer postoTrabalhoPostoTrabalhoIdentific) {
+        getUsuarioPostoTrabalho().setIdentificacaoPostoTrabalho(postoTrabalhoPostoTrabalhoIdentific);
+    }
+
+    /**
+     * Altera a identificação da {@link UnidadeOrganizacional} do {@link PostoTrabalho} do {@link UsuarioSistema}.
+     * @param identificUnidOrganizac nova identificação.
+     */
+    public void setUnidadeOrganizacionalPostoTrabalho(Long identificUnidOrganizac) {
+        this.getUsuarioPostoTrabalho().getPostoTrabalho().setIdentificacaoUnidOrganizac(identificUnidOrganizac);
+    }
+
+    public Long getUnidadeOrganizacionalPostoTrabalho() {
+        return getUsuarioPostoTrabalho().getPostoTrabalho().getIdentificacaoUnidOrganizac();
+    }
+
+    /**
+     * Altera a identificação do {@link PostoTrabalho} do {@link UsuarioSistema}.
+     * @param identificacaoPostoTrabalho nova identificação.
+     */
+    public void setPostoTrabalho(Integer identificacaoPostoTrabalho) {
+        if (Objects.isNull(this.usuarioPostoTrabalho)) {
+            this.usuarioPostoTrabalho = new UsuarioPostoTrabalho();
+            if (Objects.isNull(this.usuarioPostoTrabalho.getPostoTrabalho())) {
+                this.usuarioPostoTrabalho.setPostoTrabalho(new PostoTrabalho());
+            }
+        }
+        this.usuarioPostoTrabalho.getPostoTrabalho().setIdentificacaoPostoTrabalho(identificacaoPostoTrabalho);
+    }
+
+    /**
+     * Retorna o status da solicitação.
+     * @return situação da solicitação.
+     */
+    public SituacaoSolicitacaoEnum getStatusSolicitacao() {
+        boolean isNull = Objects.isNull(solicitacaoUsuario);
+        return  isNull ? null : SituacaoSolicitacaoEnum.getValue(
+                getSolicitacaoUsuario().getSituacaoSolicitacao().getCode());
+    }
+
+    public LocalDateTime getDataSolicitacao() {
+        return Objects.isNull(solicitacaoUsuario) ? null : getSolicitacaoUsuario().getDataInsercao();
+    }
+
     public String getNomeEstado() {
-        return municipio.getEstado().getNomeEstado();
+        return Objects.isNull(municipio) || Objects.isNull(municipio.getEstado())
+                ? StringUtils.EMPTY : municipio.getEstado().getNomeEstado();
     }
 
     public String getNomeCidade() {
@@ -440,11 +566,12 @@ public class UsuarioSistema extends AbstractEntity<String> {
      * @return nome da Unidade Organizacional.
      */
     public String getNomeUnidOrganizac() {
-        if (!Objects.isNull(usuarioPostoTrabalho) && !Objects.isNull(usuarioPostoTrabalho.getPostoTrabalho())
-                && !Objects.isNull(usuarioPostoTrabalho.getPostoTrabalho().getUnidadeOrganizacional())) {
-            return usuarioPostoTrabalho.getPostoTrabalho().getUnidadeOrganizacional().getNomeUnidOrganizac();
+        if (Objects.isNull(getUsuarioPostoTrabalho()) || Objects.isNull(getUsuarioPostoTrabalho().getPostoTrabalho())
+                || Objects.isNull(getUsuarioPostoTrabalho().getPostoTrabalho().getUnidadeOrganizacional())) {
+            return StringUtils.EMPTY;
         } else {
-            return "";
+            return getUsuarioPostoTrabalho().getPostoTrabalho().getUnidadeOrganizacional()
+                    .getNomeUnidOrganizac();
         }
     }
 
@@ -452,11 +579,21 @@ public class UsuarioSistema extends AbstractEntity<String> {
      * Busca o nome do Posto de Trabalho referente ao usuário.
      * @return nome do Posto de Trabalho.
      */
-    public String getNomePostodeTrabalho() {
+    public String getNomePostoDeTrabalho() {
         if (!Objects.isNull(usuarioPostoTrabalho) && !Objects.isNull(usuarioPostoTrabalho.getPostoTrabalho())) {
             return usuarioPostoTrabalho.getPostoTrabalho().getNomePostoTrabalho();
         } else {
-            return "";
+            return StringUtils.EMPTY;
+        }
+    }
+
+    /**
+     * Altera o nome do {@link PostoTrabalho}.
+     * @param nomePostoDeTrabalho novo nome.
+     */
+    public void setNomePostoDeTrabalho(String nomePostoDeTrabalho) {
+        if (!Objects.isNull(usuarioPostoTrabalho) && !Objects.isNull(usuarioPostoTrabalho.getPostoTrabalho())) {
+            usuarioPostoTrabalho.getPostoTrabalho().setNomePostoTrabalho(nomePostoDeTrabalho);
         }
     }
 
@@ -465,7 +602,70 @@ public class UsuarioSistema extends AbstractEntity<String> {
                 .map(HistoricoLoginSistema::getDataHoraLogin)
                 .sorted((o1, o2) -> o1.compareTo(o2) * -1)
                 .findFirst()
-                .orElseGet(() -> null);
+                .orElse(null);
+    }
+
+    public String getInscricaoEstadualNegocio() {
+        return Objects.isNull(solicitacaoUsuario) ? StringUtils.EMPTY
+                : getSolicitacaoUsuario().getInscricaoEstadualNegocio();
+    }
+
+    /**
+     * Altera a {@link SolicitacaoUsuario#inscricaoEstadualNegocio}.
+     * @param inscricaoEstadualNegocio nova inscrição.
+     */
+    public void setInscricaoEstadualNegocio(String inscricaoEstadualNegocio) {
+        getSolicitacaoUsuario().setInscricaoEstadualNegocio(inscricaoEstadualNegocio);
+    }
+
+    public String getCnpjNegocio() {
+        return Objects.isNull(solicitacaoUsuario) ? null : getSolicitacaoUsuario().getCnpjNegocio();
+    }
+
+    /**
+     * Altera o {@link SolicitacaoUsuario#cnpjNegocio}.
+     * @param cnpjNegocio novo CNPJ.
+     */
+    public void setCnpjNegocio(String cnpjNegocio) {
+        getSolicitacaoUsuario().setCnpjNegocio(cnpjNegocio);
+    }
+
+    public String getUsuarioPerfis() {
+        return usuarioPerfis;
+    }
+
+    public void setUsuarioPerfis(String usuarioPerfis) {
+        this.usuarioPerfis = usuarioPerfis;
+    }
+
+    public Logradouro getLogradouro() {
+        return logradouro;
+    }
+
+    public void setLogradouro(Logradouro logradouro) {
+        this.logradouro = logradouro;
+    }
+
+    public TipoUsuario getTipoUsuario() {
+        return tipoUsuario;
+    }
+
+    public void setTipoUsuario(TipoUsuario tipoUsuario) {
+        this.tipoUsuario = tipoUsuario;
+    }
+
+    public Set<UsuarioPerfil> getUsuarioPerfil() {
+        return usuarioPerfil;
+    }
+
+    public void setUsuarioPerfil(Set<UsuarioPerfil> usuarioPerfil) {
+        this.usuarioPerfil = usuarioPerfil;
+    }
+
+    public String getListPerfisCommaSeparated() {
+        return Objects.isNull(usuarioPerfil) ? StringUtils.EMPTY : usuarioPerfil.stream()
+                .map(UsuarioPerfil::getNomePerfilSistema)
+                .collect(Collectors.joining(", "));
     }
 
     @Override
@@ -539,5 +739,4 @@ public class UsuarioSistema extends AbstractEntity<String> {
                 + ", codigoTipoUsuario=" + codigoTipoUsuario
                 + '}';
     }
-
 }

@@ -3,7 +3,7 @@ package br.gov.to.sefaz.arr.parametros.business.facade.impl;
 import br.gov.to.sefaz.arr.parametros.business.facade.PlanoContasFacade;
 import br.gov.to.sefaz.arr.parametros.business.service.PlanoContasService;
 import br.gov.to.sefaz.arr.parametros.business.service.filter.PlanoContasFilter;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PlanoContas;
+import br.gov.to.sefaz.arr.persistence.entity.PlanoContas;
 import br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

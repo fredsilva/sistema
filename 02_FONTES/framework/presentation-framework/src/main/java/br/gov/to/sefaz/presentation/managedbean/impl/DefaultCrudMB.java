@@ -77,6 +77,7 @@ public class DefaultCrudMB<E extends AbstractEntity<I>, I extends Serializable>
         showSaveMessage();
         getResultList().add(save);
         clearDto();
+        executeAfterSave(save);
     }
 
     /**
@@ -89,6 +90,7 @@ public class DefaultCrudMB<E extends AbstractEntity<I>, I extends Serializable>
         showUpdateMessage();
         getResultList().add(update);
         clearDto();
+        executeAfterUpdate(update);
     }
 
     /**
@@ -96,8 +98,9 @@ public class DefaultCrudMB<E extends AbstractEntity<I>, I extends Serializable>
      */
     @Override
     public void delete() {
-        Optional<E> delete = getFacade().delete(getDto().getId());
-        getResultList().removeIf(e -> e.getId().equals(getDto().getId()));
+        I id = getDto().getId();
+        Optional<E> delete = getFacade().delete(id);
+        getResultList().removeIf(e -> e.getId().equals(id));
 
         if (delete.isPresent()) {
             showLogicalDeleteMessage();
@@ -105,8 +108,29 @@ public class DefaultCrudMB<E extends AbstractEntity<I>, I extends Serializable>
         } else {
             showPhysicalDeleteMessage();
         }
-
         clearDto();
+        executeAfterDelete(id);
+    }
+
+    /**
+     * Método responsável pela execução de açoes pós {@link #save()}.
+     */
+    protected void executeAfterSave(E dto) {
+        // Método para ser sobreescrito quando for necessário executar algo após o {@link #save()}.
+    }
+
+    /**
+     * Método responsável pela execução de açoes pós {@link #update()}.
+     */
+    protected void executeAfterUpdate(E dto) {
+        // Método para ser sobreescrito quando for necessário executar algo após o {@link #update()}.
+    }
+
+    /**
+     * Método responsável pela execução de açoes pós {@link #delete()}.
+     */
+    protected void executeAfterDelete(I id) {
+        // Método para ser sobreescrito quando for necessário executar algo após o {@link #delete()}.
     }
 
     /**
@@ -118,32 +142,31 @@ public class DefaultCrudMB<E extends AbstractEntity<I>, I extends Serializable>
     }
 
     /**
-     * Métodos para responsavel pela exibição de mensagens ao fim do {@link #save()}.
+     * Método responsavel pela exibição de mensagens ao fim do {@link #save()}.
      */
     protected void showSaveMessage() {
-        MessageUtil.addMesage("mensagem.sucesso.operacao");
+        MessageUtil.addMessage("mensagem.sucesso.operacao");
     }
 
     /**
-     * Métodos para responsavel pela exibição de mensagens ao fim do {@link #update()}.
+     * Método responsavel pela exibição de mensagens ao fim do {@link #update()}.
      */
-
     protected void showUpdateMessage() {
         // Caso precise de mensagens no update este metodo deve ser sobreescrito.
-        MessageUtil.addMesage("mensagem.sucesso.operacao");
+        MessageUtil.addMessage("mensagem.sucesso.operacao");
     }
 
     /**
-     * Métodos para responsavel pela exibição de mensagens ao fim do {@link #delete()}.
+     * Método responsavel pela exibição de mensagens ao fim do {@link #delete()}.
      */
     protected void showLogicalDeleteMessage() {
-        MessageUtil.addMesage("mensagem.delecao.logica");
+        MessageUtil.addMessage("mensagem.delecao.logica");
     }
 
     /**
      * Métodos para responsavel pela exibição de mensagens ao fim do {@link #delete()}.
      */
     protected void showPhysicalDeleteMessage() {
-        MessageUtil.addMesage("mensagem.delecao.fisica");
+        MessageUtil.addMessage("mensagem.delecao.fisica");
     }
 }

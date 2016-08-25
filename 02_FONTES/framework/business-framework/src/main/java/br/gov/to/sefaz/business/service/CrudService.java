@@ -31,14 +31,6 @@ public interface CrudService<E, I extends Serializable> {
     Collection<E> findAll();
 
     /**
-     * Consulta uma lista de registros pelo id.
-     *
-     * @param list lista de id
-     * @return lista de entidades
-     */
-    Collection<E> findAll(Iterable<I> list);
-
-    /**
      * Salva a entidade na base de dados.
      *
      * @param entity entidade
@@ -61,6 +53,14 @@ public interface CrudService<E, I extends Serializable> {
      * @return entidade
      */
     E update(E entity);
+
+    /**
+     * Atualiza uma lista entidades na base de dados.
+     *
+     * @param list lista de entidades
+     * @return lista de entidades
+     */
+    Collection<E> update(Collection<E> list);
 
     /**
      * Remove um registro da base de dados ou atualiza um registro. Se o retorno for um {@link java.util.Optional#EMPTY}

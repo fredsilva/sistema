@@ -4,6 +4,7 @@ import br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade;
 import br.gov.to.sefaz.seg.business.gestao.facade.UnidadeOrganizacionalFacade;
 import br.gov.to.sefaz.seg.business.gestao.service.UnidadeOrganizacionalService;
 import br.gov.to.sefaz.seg.business.gestao.service.filter.UnidadeOrganizacionalFilter;
+import br.gov.to.sefaz.seg.persistence.domain.TipoUnidade;
 import br.gov.to.sefaz.seg.persistence.entity.UnidadeOrganizacional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -33,5 +34,10 @@ public class UnidadeOrganizacionalFacadeImpl extends DefaultCrudFacade<UnidadeOr
     @Override
     public List<UnidadeOrganizacional> find(UnidadeOrganizacionalFilter filter) {
         return getService().findAll(filter);
+    }
+
+    @Override
+    public List<TipoUnidade> findTiposUnidades() {
+        return getService().findTiposUnidades();
     }
 }

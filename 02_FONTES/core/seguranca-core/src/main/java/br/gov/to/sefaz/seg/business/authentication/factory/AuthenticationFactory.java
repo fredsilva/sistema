@@ -6,9 +6,15 @@ import br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupType;
 import br.gov.to.sefaz.seg.business.authentication.domain.UsuarioSistemaAuthentication;
 import br.gov.to.sefaz.seg.persistence.entity.PerfilPapel;
 import br.gov.to.sefaz.seg.persistence.entity.PerfilSistema;
+import br.gov.to.sefaz.seg.persistence.entity.ProcuracaoUsuario;
 import br.gov.to.sefaz.seg.persistence.entity.UsuarioPerfil;
 import br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema;
+import br.gov.to.sefaz.seg.persistence.enums.SituacaoUsuarioEnum;
+import br.gov.to.sefaz.seg.persistence.repository.ProcuracaoUsuarioRepository;
 import br.gov.to.sefaz.seg.persistence.repository.UsuarioPerfilRepository;
+import br.gov.to.sefaz.util.formatter.FormatterUtil;
+import br.gov.to.sefaz.util.message.MessageUtil;
+import br.gov.to.sefaz.util.message.SourceBundle;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
@@ -29,10 +35,14 @@ import java.util.stream.Collectors;
 public class AuthenticationFactory {
 
     private final UsuarioPerfilRepository usuarioPerfilRepository;
+    private final ProcuracaoUsuarioRepository procuracaoUsuarioRepository;
+    public static final String CPF_PROCURACAO_PATTERN = "%s (CPF: %s)";
 
     @Autowired
-    public AuthenticationFactory(UsuarioPerfilRepository usuarioPerfilRepository) {
+    public AuthenticationFactory(UsuarioPerfilRepository usuarioPerfilRepository,
+            ProcuracaoUsuarioRepository procuracaoUsuarioRepository) {
         this.usuarioPerfilRepository = usuarioPerfilRepository;
+        this.procuracaoUsuarioRepository = procuracaoUsuarioRepository;
     }
 
     /**
@@ -50,10 +60,14 @@ public class AuthenticationFactory {
         RoleGroupManager roleGroupManager = new RoleGroupManager();
 
         Set<UsuarioPerfil> usuarioPerfis = usuarioPerfilRepository
-                .findAllByUsuarioSistema(usuarioSistema.getCpfUsuario());
+                .findAllByUsuarioSistema(usuarioSistema.getCpfUsuario(), SituacaoUsuarioEnum.ATIVO);
         List<PerfilSistema> perfis = usuarioPerfis.stream()
-                .flatMap(up -> up.getPerfisSistema().stream()).collect(Collectors.toList());
+                .map(UsuarioPerfil::getPerfisSistema)
+                .collect(Collectors.toList());
+        Set<ProcuracaoUsuario> procuracaoUsuarios = procuracaoUsuarioRepository.findAllByUsuarioSistema(usuarioSistema
+                .getCpfUsuario());
         fillRoleGroupManager(roleGroupManager, perfis);
+        fillProcuracaoGroupManager(roleGroupManager, procuracaoUsuarios);
 
         return new UsuarioSistemaAuthentication(password, requestIp, roleGroupManager, usuarioSistema);
     }
@@ -70,6 +84,15 @@ public class AuthenticationFactory {
         }
     }
 
+    private void fillProcuracaoGroupManager(RoleGroupManager roleGroupManager,
+            Set<ProcuracaoUsuario> procuracaoUsuarios) {
+        Map<RoleGroupKey, List<String>> groups = procuracaoUsuarios.stream().collect(Collectors.toMap(
+                this::createProcuracaoGroupKey, this::extractProcuracoes));
+
+        groups.entrySet()
+                .forEach(g -> roleGroupManager.addRoles(g.getKey(), g.getValue()));
+    }
+
     private RoleGroupKey createRoleGroupKey(PerfilSistema perfilSistema) {
         return new RoleGroupKey(RoleGroupType.PERFIL, perfilSistema.getId(),
                 perfilSistema.getDescricaoPerfil());
@@ -81,5 +104,25 @@ public class AuthenticationFactory {
                 .flatMap(papelSistema -> papelSistema.getPapelOpcao().stream())
                 .map(papelOpcao -> papelOpcao.getOpcaoAplicacao().getId().toString())
                 .collect(Collectors.toList());
+    }
+
+    private RoleGroupKey createProcuracaoGroupKey(ProcuracaoUsuario procuracaoUsuario) {
+        String nomeCompletoUsuario;
+
+        if (!procuracaoUsuario.getCpfOrigem().equals(procuracaoUsuario.getUsuarioSistema().getCpfUsuario())) {
+            nomeCompletoUsuario = procuracaoUsuario.getUsuarioSistema().getNomeCompletoUsuario();
+        } else {
+            nomeCompletoUsuario = SourceBundle.getMessage(MessageUtil.SEG, "seg.geral.procuracaoUsuario.voceMesmo");
+        }
+
+        String formatCpf = FormatterUtil.formatCpf(procuracaoUsuario.getCpfProcurado());
+        String description = String.format(CPF_PROCURACAO_PATTERN, nomeCompletoUsuario, formatCpf);
+
+        return new RoleGroupKey(RoleGroupType.PROCURACAO, procuracaoUsuario.getId(), description);
+    }
+
+    private  List<String> extractProcuracoes(ProcuracaoUsuario procuracaoUsuario) {
+        return procuracaoUsuario.getProcuracaoOpcoes().stream().map(po -> po.getIdentificacaoOpcaoAplicacao()
+                .toString()).collect(Collectors.toList());
     }
 }

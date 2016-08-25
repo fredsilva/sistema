@@ -1,9 +1,15 @@
 package br.gov.to.sefaz.util.properties;
 
+import org.apache.commons.collections4.SetUtils;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Optional;
 import java.util.Properties;
 
@@ -48,10 +54,56 @@ public class AppProperties {
 
         public PropertyHolder() {
             properties = new Properties();
-            try {
-                properties.load(getClass().getResourceAsStream("/application.properties"));
+            Path filePath = Paths.get(System.getProperty("jboss.server.config.dir"), "application.properties");
+
+            Properties defaultProperties = loadDefaultProperties();
+            createIfNotExists(filePath, defaultProperties);
+            loadApplicationProperties(filePath);
+            setNewProperties(filePath, defaultProperties);
+        }
+
+        private void setNewProperties(Path filePath, Properties defaultProperties) {
+            SetUtils.SetView<Object> newProps = SetUtils
+                    .difference(defaultProperties.stringPropertyNames(), properties.stringPropertyNames());
+
+            if (!newProps.isEmpty()) {
+                defaultProperties.forEach(properties::put);
+                try (OutputStream os = Files.newOutputStream(filePath)) {
+                    properties.store(os, "");
+                } catch (IOException e) {
+                    throw new ApplicationPropertyLoadException(
+                            "Erro ao criar novas propriedades aos parametros da aplicação!", e);
+                }
+            }
+        }
+
+        private void loadApplicationProperties(Path filePath) {
+            try (InputStream stream = Files.newInputStream(filePath)) {
+                properties.load(stream);
             } catch (IOException e) {
                 throw new ApplicationPropertyLoadException("Erro ao carregar os parametros da aplicação!", e);
+            }
+        }
+
+        private void createIfNotExists(Path filePath, Properties defaultProperties) {
+            if (!Files.exists(filePath)) {
+                try (OutputStream stream = Files.newOutputStream(filePath)) {
+                    defaultProperties.store(stream, "");
+                } catch (IOException e) {
+                    throw new ApplicationPropertyLoadException("Erro ao criar os parametros da aplicação!", e);
+                }
+            }
+        }
+
+        private Properties loadDefaultProperties() {
+            try (InputStream stream = getClass().getResourceAsStream("/application.properties")) {
+                Properties defaultProperties = new Properties();
+
+                defaultProperties.load(stream);
+
+                return defaultProperties;
+            } catch (IOException e) {
+                throw new ApplicationPropertyLoadException("Erro ao carregar os parametros padrões da aplicação!", e);
             }
         }
 

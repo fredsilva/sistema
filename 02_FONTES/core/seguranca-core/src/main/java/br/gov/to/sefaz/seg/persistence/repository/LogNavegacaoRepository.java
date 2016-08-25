@@ -6,12 +6,11 @@ import br.gov.to.sefaz.seg.persistence.entity.LogNavegacao;
 import org.springframework.stereotype.Repository;
 
 /**
- * Repositório de acesso à base dados da entidade {@link LogNavegacao}.
+ * Repositório de acesso à base dados da entidade {@link br.gov.to.sefaz.seg.persistence.entity.LogNavegacao}.
  *
  * @author <a href="mailto:cristiano.luis@ntconsult.com.br">cristiano.luis</a>
  * @since 13/05/2016 17:41:56
  */
 @Repository
-public interface LogNavegacaoRepository extends BaseRepository<LogNavegacao, Long> {
-
+public class LogNavegacaoRepository extends BaseRepository<LogNavegacao, Long> {
 }

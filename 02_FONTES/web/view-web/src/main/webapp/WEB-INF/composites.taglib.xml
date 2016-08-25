@@ -26,6 +26,14 @@
         <source>../resources/composites/saveUpdateButton.xhtml</source>
 
         <attribute>
+            <name>save</name>
+            <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+            <name>update</name>
+            <type>java.lang.String</type>
+        </attribute>
+        <attribute>
             <name>label</name>
             <type>java.lang.String</type>
         </attribute>
@@ -48,6 +56,20 @@
         <attribute>
             <name>crudMb</name>
             <type>br.gov.to.sefaz.presentation.managedbean.CrudMB</type>
+        </attribute>
+    </tag>
+
+    <tag>
+        <tag-name>opcaoAjudaButton</tag-name>
+        <source>../resources/composites/opcaoAjudaButton.xhtml</source>
+
+        <attribute>
+            <name>label</name>
+            <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+            <name>styleClass</name>
+            <type>java.lang.String</type>
         </attribute>
     </tag>
 </facelet-taglib>

@@ -1,8 +1,8 @@
 package br.gov.to.sefaz.arr.parametros.business.service.validator;
 
-import br.gov.to.sefaz.arr.parametros.persistence.entity.ConveniosTarifas;
-import br.gov.to.sefaz.arr.parametros.persistence.enums.FormaPagamentoEnum;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.ConveniosTarifasRepository;
+import br.gov.to.sefaz.arr.persistence.entity.ConveniosTarifas;
+import br.gov.to.sefaz.arr.persistence.enums.FormaPagamentoEnum;
+import br.gov.to.sefaz.arr.persistence.repository.ConveniosTarifasRepository;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.violation.CustomViolation;
 import br.gov.to.sefaz.util.message.SourceBundle;
@@ -15,11 +15,11 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
-import org.springframework.data.jpa.domain.Specification;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
+import java.util.function.Consumer;
 
 import static org.junit.Assert.assertFalse;
 import static org.powermock.api.mockito.PowerMockito.mock;
@@ -72,7 +72,7 @@ public class ConveniosArrecDuplicatedTarifaValidatorTest {
         when(conveniosTarifas.getIdConveniosArrec()).thenReturn(1L);
         when(conveniosTarifas.getFormaPagamento()).thenReturn(FormaPagamentoEnum.ARRECADACAO);
         List<ConveniosTarifas> listaConvenios = createListConvenioTarifasMocked();
-        when(repository.findAll(Matchers.any(Specification.class))).thenReturn(listaConvenios);
+        when(repository.find(Matchers.any(Consumer.class))).thenReturn(listaConvenios);
 
         Set<CustomViolation> violationSet = validator.validate(conveniosTarifas);
 

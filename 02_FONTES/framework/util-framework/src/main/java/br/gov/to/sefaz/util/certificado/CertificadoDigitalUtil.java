@@ -17,6 +17,8 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 /**
@@ -29,6 +31,8 @@ import java.util.stream.Collectors;
 public class CertificadoDigitalUtil {
 
     private static final ASN1ObjectIdentifier OID_PF_DADOS_TITULAR = new ASN1ObjectIdentifier("2.16.76.1.3.1");
+    private static final String EMAIL_PATTERN = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\"
+            + ".[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?";
 
     /**
      * Retorna o CPF do usuário do certificado digital através do {@link java.security.cert.X509Certificate}, caso o
@@ -51,9 +55,62 @@ public class CertificadoDigitalUtil {
                 .orElse(Optional.empty());
     }
 
+    /**
+     * Retorna o Email do usuário do certificado digital através do {@link java.security.cert.X509Certificate}, caso o
+     * certificado digital não contenha um email o valor retornado será um {@link java.util.Optional#empty()}.
+     *
+     * @param certChain cadeia de certificado digital
+     * @return email do certificado digital
+     * @throws CertificateParsingException exception ao realizar o parser do certificdo digital
+     */
+    public String getMail(X509Certificate... certChain) throws CertificateParsingException {
+
+        String mails = "";
+
+        for (X509Certificate certificate : certChain) {
+            if (StringUtils.isEmpty(mails) || !isMail(mails)) {
+                mails = setMailFromCertificate(certificate);
+            }
+        }
+
+        return mails;
+    }
+
+    /**
+     * Retorna o nome do usuário do certificado digital através do {@link java.security.cert.X509Certificate}, caso o
+     * certificado digital não contenha um nome o valor retornado será vazio.
+     *
+     * @param certChain cadeia de certificado digital
+     * @return email do certificado digital
+     * @throws CertificateParsingException exception ao realizar o parser do certificdo digital
+     */
+    public String getNomeCompleto(X509Certificate... certChain) throws CertificateParsingException {
+
+        String nome = "";
+
+        for (X509Certificate certificate : certChain) {
+            if (StringUtils.isEmpty(nome)) {
+                String[] split = certificate.getSubjectX500Principal().getName().split(":");
+                String[] strings = split[0].split("=");
+                return strings[1];
+            }
+        }
+
+        return nome;
+    }
+
+    private boolean isMail(String email) {
+
+        Pattern pattern = Pattern.compile(EMAIL_PATTERN);
+        Matcher matcher = pattern.matcher(email);
+
+        return matcher.matches();
+    }
+
     private List<Optional<String>> setCpfFromCertificate(X509Certificate certificate)
             throws CertificateParsingException {
         Collection<?> alternativeNames = X509ExtensionUtil.getSubjectAlternativeNames(certificate);
+
         List<Optional<String>> cpfs = new ArrayList<>();
         alternativeNames.stream().filter(alternativeName -> alternativeName instanceof ArrayList)
                 .forEach(alternativeName -> {
@@ -63,6 +120,16 @@ public class CertificadoDigitalUtil {
                 });
 
         return cpfs.stream().filter(Optional::isPresent).collect(Collectors.toList());
+    }
+
+    private String setMailFromCertificate(X509Certificate certificate)
+            throws CertificateParsingException {
+        Collection<List<?>> subjectAlternativeNames = certificate.getSubjectAlternativeNames();
+        if (!subjectAlternativeNames.isEmpty() && null != subjectAlternativeNames.iterator().next().get(0)
+                && null != subjectAlternativeNames.iterator().next().get(1)) {
+            return subjectAlternativeNames.iterator().next().get(1).toString();
+        }
+        return "";
     }
 
     private Optional<String> valueIsCpf(Object value) {

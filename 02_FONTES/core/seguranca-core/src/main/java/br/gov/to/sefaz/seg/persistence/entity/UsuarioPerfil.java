@@ -1,16 +1,21 @@
 package br.gov.to.sefaz.seg.persistence.entity;
 
 import br.gov.to.sefaz.persistence.entity.AbstractEntity;
+import br.gov.to.sefaz.seg.persistence.converter.SituacaoUsuarioEnumConverter;
+import br.gov.to.sefaz.seg.persistence.enums.SituacaoUsuarioEnum;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
 
 import java.util.Objects;
-import java.util.Set;
 import javax.persistence.Column;
+import javax.persistence.Convert;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
@@ -27,13 +32,17 @@ public class UsuarioPerfil extends AbstractEntity<Long> {
     private static final long serialVersionUID = 8401087571441586038L;
 
     @Id
-    @NotNull
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_usuario_perfil")
+    @SequenceGenerator(name = "sq_usuario_perfil", schema = "SEFAZ_SEG",
+            sequenceName = "sq_usuario_perfil",
+            allocationSize = 1)
     @Column(name = "IDENTIFICACAO_USUARIO_PERFIL")
     private Long identificacaoUsuarioPerfil;
 
     @NotNull
+    @Convert(converter = SituacaoUsuarioEnumConverter.class)
     @Column(name = "SITUACAO_PERFIL")
-    private Character situacaoPerfil;
+    private SituacaoUsuarioEnum situacaoPerfil;
 
     @NotNull
     @Column(name = "CPF_USUARIO")
@@ -43,17 +52,28 @@ public class UsuarioPerfil extends AbstractEntity<Long> {
     @Column(name = "IDENTIFICACAO_PERFIL")
     private Long identificacaoPerfil;
 
-    @OneToMany
+    @ManyToOne
     @JoinColumn(name = "IDENTIFICACAO_PERFIL", referencedColumnName = "IDENTIFICACAO_PERFIL",
             insertable = false, updatable = false)
     @Fetch(FetchMode.JOIN)
-    private Set<PerfilSistema> perfisSistema;
+    private PerfilSistema perfisSistema;
+
+    @ManyToOne
+    @JoinColumn(name = "CPF_USUARIO", referencedColumnName = "CPF_USUARIO",
+            insertable = false, updatable = false)
+    @Fetch(FetchMode.JOIN)
+    private UsuarioSistema usuarioSistema;
 
     public UsuarioPerfil() {
         // Construtor para inicialização por reflexão.
     }
 
-    public UsuarioPerfil(Long identificacaoUsuarioPerfil, Character situacaoPerfil, String cpfUsuario,
+    public UsuarioPerfil(String cpfUsuario, Long identificacaoPerfil) {
+        this.cpfUsuario = cpfUsuario;
+        this.identificacaoPerfil = identificacaoPerfil;
+    }
+
+    public UsuarioPerfil(Long identificacaoUsuarioPerfil, SituacaoUsuarioEnum situacaoPerfil, String cpfUsuario,
             Long identificacaoPerfil) {
         this.identificacaoUsuarioPerfil = identificacaoUsuarioPerfil;
         this.situacaoPerfil = situacaoPerfil;
@@ -74,11 +94,11 @@ public class UsuarioPerfil extends AbstractEntity<Long> {
         this.identificacaoUsuarioPerfil = identificacaoUsuarioPerfil;
     }
 
-    public Character getSituacaoPerfil() {
+    public SituacaoUsuarioEnum getSituacaoPerfil() {
         return situacaoPerfil;
     }
 
-    public void setSituacaoPerfil(Character situacaoPerfil) {
+    public void setSituacaoPerfil(SituacaoUsuarioEnum situacaoPerfil) {
         this.situacaoPerfil = situacaoPerfil;
     }
 
@@ -90,11 +110,11 @@ public class UsuarioPerfil extends AbstractEntity<Long> {
         return identificacaoPerfil;
     }
 
-    public Set<PerfilSistema> getPerfisSistema() {
+    public PerfilSistema getPerfisSistema() {
         return perfisSistema;
     }
 
-    public void setPerfisSistema(Set<PerfilSistema> perfisSistema) {
+    public void setPerfisSistema(PerfilSistema perfisSistema) {
         this.perfisSistema = perfisSistema;
     }
 
@@ -104,6 +124,22 @@ public class UsuarioPerfil extends AbstractEntity<Long> {
 
     public void setCpfUsuario(String cpfUsuario) {
         this.cpfUsuario = cpfUsuario;
+    }
+
+    public String getNomePerfilSistema() {
+        return getPerfisSistema().getNomePerfil();
+    }
+
+    public UsuarioSistema getUsuarioSistema() {
+        return usuarioSistema;
+    }
+
+    public void setUsuarioSistema(UsuarioSistema usuarioSistema) {
+        this.usuarioSistema = usuarioSistema;
+    }
+
+    public String getNomeUsuarioSistema() {
+        return Objects.isNull(usuarioSistema) ? "" : usuarioSistema.getNomeCompletoUsuario();
     }
 
     @Override

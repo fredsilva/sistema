@@ -1,5 +1,6 @@
 package br.gov.to.sefaz.presentation.converter;
 
+import br.gov.to.sefaz.util.message.MessageUtil;
 import br.gov.to.sefaz.util.message.SourceBundle;
 
 import java.time.LocalDate;
@@ -35,6 +36,8 @@ public class LocalDateFacesConverter implements Converter {
 
         } catch (DateTimeParseException e) {
             String message = SourceBundle.getMessage("presentation.converter.localDateFacesConverter.dataFormatada");
+            MessageUtil.addMessage(FacesMessage.SEVERITY_ERROR, "presentation.converter.localDateFacesConverter"
+                    + ".dataFormatada");
             throw new ConverterException(new FacesMessage(FacesMessage.SEVERITY_ERROR, message, ""), e);
         }
 
