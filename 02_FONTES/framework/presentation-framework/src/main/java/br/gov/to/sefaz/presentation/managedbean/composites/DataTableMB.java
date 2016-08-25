@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
@@ -152,6 +153,9 @@ public class DataTableMB {
      * @return fieldValue formatado de acordo com o {@link DataTableFieldPrint} informado
      */
     public Object formatToPrint(Object fieldValue, DataTableFieldPrint printType) {
+        if (Objects.isNull(fieldValue)) {
+            return "";
+        }
         switch (printType) {
           case BOOLEAN:
               return booleanFormat(fieldValue);
@@ -452,7 +456,7 @@ public class DataTableMB {
     private String cpfCnpjFormat(Object value, String mask, int digits) {
 
         DecimalFormat df = new DecimalFormat(StringUtils.repeat('0', digits));
-        String retorno = df.format(value);
+        String retorno = df.format(Long.valueOf(value.toString()));
 
         try {
             MaskFormatter formatter = new MaskFormatter(mask);

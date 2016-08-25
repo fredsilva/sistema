@@ -84,10 +84,10 @@
                                             for="situacao">#{arr_msg['parametros.bancos.form.situacao']}*</h:outputLabel>
                                         <h:selectOneMenu value="#{bancosMB.dto.situacao}" id="situacao"
                                                          styleClass="form-control">
-                                            <f:selectItems value="#{enumsMB.situacoes}"
+                                            <f:selectItems value="#{arrEnumsMB.situacoes}"
                                                            var="situacao"
                                                            itemValue="#{situacao}"
-                                                           itemLabel="#{enumsMB.getSituacaoLabel(situacao)}"/>
+                                                           itemLabel="#{arrEnumsMB.getSituacaoLabel(situacao)}"/>
                                         </h:selectOneMenu>
                                     </div>
                                 </div>

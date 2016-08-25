@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" id="1" x="48" y="15" width="673" height="386" text="PARAMETRIZAÇÃO DOS BANCOS e AGÊNCIAS&#xA;http://..." measuredWidth="673" measuredHeight="386">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TabbedPane" id="159" x="58" y="240" width="649" height="153" text="Bancos,Agências" measuredWidth="649" measuredHeight="153" selection="0">
+    <items x="10" y="0" width="63" height="27" text="Bancos"/>
+    <items x="73" y="0" width="73" height="27" text="Agências"/>
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="198" x="599" y="360" width="98" height="23" text="Salvar" measuredWidth="98" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="199" x="58" y="94" width="623" height="115" text="Código {neutral},Nome {neutral},(align:center).CNPJ Raiz {neutral}, Situação {neutral},&#xA;001,Banco do Brasil,11111111,Ativo,{selected} {trash}&#xA;002,Caixa Econômica Federal,22222222,Ativo,{unselected} {trash}&#xA;" measuredWidth="623" measuredHeight="115" selection="1" alternative="#eeeeee">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="200" x="60" y="73" text="Lista de Bancos" measuredWidth="96" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="203" x="496" y="360" width="98" height="23" text="&amp;Novo Banco" measuredWidth="98" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="206" x="66" y="282" text="Número *" measuredWidth="61" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="207" x="66" y="304" width="63" measuredWidth="63" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="209" x="136" y="282" text="Nome do Banco *" measuredWidth="106" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="210" x="136" y="304" width="337" measuredWidth="337" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="211" x="591" y="304" width="119" text="ATIVO" measuredWidth="119" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="212" x="591" y="282" text="Situação *" measuredWidth="65" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Note" id="213" x="637" y="312" width="78" height="39" text="Ativo ou Cancelado" measuredWidth="78" measuredHeight="39">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="214" x="480" y="282" text="CNPJ Raiz *" measuredWidth="74" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="215" x="480" y="304" width="106" measuredWidth="106" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="224" x="214" y="208" measuredWidth="267" measuredHeight="23">
+    <widgets xsi:type="model:TextField" id="225" x="58" width="17" text="1" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="226" x="79" width="18" text="2" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="227" x="99" width="18" text="3" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="228" x="118" width="17" text="4" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="229" x="137" width="20" text="5" measuredWidth="20" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="230" x="160" text="Próximo" measuredWidth="57" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="231" width="56" text="Anterior" measuredWidth="56" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Spinner" id="232" x="226" text="10" measuredWidth="41" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

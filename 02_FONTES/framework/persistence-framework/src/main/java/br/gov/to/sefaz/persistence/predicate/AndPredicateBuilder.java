@@ -100,6 +100,18 @@ public class AndPredicateBuilder {
      * Realiza um inner join ao campo da entidade informado.
      *
      * @param fieldName nome do campo pré mapeado a entidade
+     * @param joinType tipo de Join.
+     * @return o {@link AndPredicateBuilder} que esta sendo montado
+     */
+    public AndPredicateBuilder fetch(String fieldName, JoinType joinType) {
+        root.fetch(fieldName, joinType);
+        return this;
+    }
+
+    /**
+     * Realiza um inner join ao campo da entidade informado.
+     *
+     * @param fieldName nome do campo pré mapeado a entidade
      * @return o {@link AndPredicateBuilder} que esta sendo montado
      */
     public AndPredicateBuilder fetch(String fieldName) {

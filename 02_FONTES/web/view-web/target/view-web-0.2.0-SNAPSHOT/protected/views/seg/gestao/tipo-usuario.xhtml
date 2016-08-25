@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:sat="http://sefaz.to.gov.br/composites">
+
+<ui:composition template="/protected/views/templates/views/default-template.xhtml">
+
+    <ui:param name="pageTitle" value="#{seg_msg['seg.gestao.tipoUsuario.titulo']}"/>
+
+    <ui:define name="content">
+        <sat:panel title="#{seg_msg['seg.gestao.tipoUsuario.titulo']}">
+            <div class="col-md-12">
+                <h:form id="tipo-usuario-filtro">
+                    <div class="row">
+                        <div class="form-group col-md-8">
+                            <h:outputLabel for="descricaoTipoUsuario">
+                                #{seg_msg['seg.gestao.tipoUsuario.filter.descricao']}
+                            </h:outputLabel>
+                            <h:inputText value="#{tipoUsuarioMB.filter.descricaoTipoUsuario}"
+                                    id="descricaoTipoUsuario"
+                                    styleClass="form-control"
+                                    maxlength="20"/>
+                        </div>
+                        <div class="form-group col-lg-4 text-right">
+                            <h:commandButton type="button"
+                                    value="#{seg_msg['seg.gestao.tipoUsuario.table.button.consultar']}"
+                                    styleClass="btn btn-primary align-bottom"
+                                    action="#{tipoUsuarioMB.search()}">
+                                <f:ajax render="tipos-usuarios-table"
+                                        execute="descricaoTipoUsuario"/>
+                            </h:commandButton>
+                        </div>
+                    </div>
+                </h:form>
+            </div>
+            <sat:table id="tipos-usuarios-table"
+                    bundle="seg_msg"
+                    content="#{tipoUsuarioMB.resultList}"
+                    headers="seg.gestao.tipoUsuario.table.numero,
+                                seg.gestao.tipoUsuario.table.descricao,
+                                seg.gestao.tipoUsuario.table.quantidade"
+                    fields="codigoTipoUsuario,descricaoTipoUsuario,quantidadeUsuarios"
+                    hasActions="false" >
+            </sat:table>
+        </sat:panel>
+    </ui:define>
+</ui:composition>
+</html>

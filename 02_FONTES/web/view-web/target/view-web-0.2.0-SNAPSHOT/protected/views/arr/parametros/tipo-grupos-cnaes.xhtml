@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:sat="http://sefaz.to.gov.br/composites"
+        xmlns:a4j="http://richfaces.org/a4j">
+
+<ui:composition template="/protected/views/templates/views/default-template.xhtml">
+    <ui:param name="pageTitle" value="Plano de Contas"/>
+    <ui:define name="header">
+        <h:outputScript library="js" name="arr/parametros/tipo-grupos-cnaes.js"/>
+    </ui:define>
+    <ui:define name="content">
+        <h:panelGroup layout="block" styleClass="col-md-12" id="bodydiv">
+            <sat:panel title="#{arr_msg['parametros.tipoGruposCnaes.tabela.grupos.titulo']}">
+                <h:form id="pesquisaform">
+                    <div class="row">
+                        <div class="form-group col-md-2">
+                            <h:outputLabel for="codigoFilter">#{arr_msg['parametros.tipoGruposCnaes.form.codigo']}</h:outputLabel>
+                            <h:inputText value="#{tipoGruposCnaeMB.filter.idGrupoCnae}"
+                                    id="codigoFilter"
+                                    styleClass="form-control justInteger" maxlength="20"/>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h:outputLabel for="nomeFilter">#{arr_msg['parametros.tipoGruposCnaes.form.descricao']}</h:outputLabel>
+                            <h:inputText value="#{tipoGruposCnaeMB.filter.descricaoGrupo}" id="nomeFilter"
+                                    styleClass="form-control" maxlength="150"/>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h:outputLabel for="cnaeFiscalFilter">#{arr_msg['parametros.tipoGruposCnaes.form.canes']}</h:outputLabel>
+                            <h:selectOneMenu value="#{tipoGruposCnaeMB.filter.cnaeFiscal}" id="cnaeFiscalFilter"
+                                    styleClass="form-control">
+                                <f:selectItem value="#{null}" itemLabel=""/>
+                                <f:selectItems value="#{tipoGruposCnaeMB.allCnaes}"
+                                        var="cnae"
+                                        itemValue="#{cnae.codigoCnae}"
+                                        itemLabel="#{cnae.compositeName}"/>
+                            </h:selectOneMenu>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <h:commandButton value="#{arr_msg['parametros.planoContas.pesquisa.pesquisar']}" styleClass="btn btn-primary align-bottom"
+                                    action="#{tipoGruposCnaeMB.search}">
+                                <f:ajax render="grupos-cnaes-table"
+                                        execute="codigoFilter nomeFilter cnaeFiscalFilter"
+                                        onevent="resetOnSuccess"/>
+                            </h:commandButton>
+                        </div>
+                    </div>
+                </h:form>
+                <sat:table id="grupos-cnaes-table"
+                        bundle="arr_msg"
+                        headers="parametros.tipoGruposCnaes.tabela.grupos.codigo,
+                                parametros.tipoGruposCnaes.tabela.grupos.descricao,
+                                parametros.tipoGruposCnaes.tabela.grupos.situacao"
+                        fields="idGrupoCnae,descricaoGrupo,situacao:string,situacao:hide"
+                        hasActions="true"
+                        content="#{tipoGruposCnaeMB.resultList}"
+                        actionEvents="select-row:click:selectRow, delete-row:click:deleteTipoGruposCnaes(0):confirm:parametros.tipoGruposCnaes.tabela.grupos.excluir.confirmacao">
+                    <f:facet name="actions">
+                        <input name="tipo-arquivos-selected" class="select-row" type="radio"/>
+                        <i class="glyphicon glyphicon-trash delete-row" role="button"/>
+                    </f:facet>
+                </sat:table>
+                <h:form>
+                    <a4j:jsFunction name="loadCnaesFromSelected"
+                            action="#{tipoGruposCnaeMB.loadSelectedCnaes}"
+                            render="grupos-cnaes-cnaes-table grupos-cnaes-dto-table">
+                        <a4j:param name="idGrupoCnae" assignTo="#{tipoGruposCnaeMB.dto.idGrupoCnae}"/>
+                    </a4j:jsFunction>
+                    <a4j:jsFunction name="deleteTipoGruposCnaes"
+                            action="#{tipoGruposCnaeMB.delete}"
+                            render="grupos-cnaes-table"
+                            oncomplete="resetFields">
+                        <a4j:param name="idGrupoCnae" assignTo="#{tipoGruposCnaeMB.dto.idGrupoCnae}"/>
+                    </a4j:jsFunction>
+                </h:form>
+            </sat:panel>
+
+            <sat:panel title="#{arr_msg['parametros.tipoGruposCnaes.tabela.cnaes.titulo']}">
+                <sat:table id="grupos-cnaes-cnaes-table"
+                        bundle="arr_msg"
+                        headers="parametros.tipoGruposCnaes.tabela.cnaes.codigo,
+                                parametros.tipoGruposCnaes.tabela.cnaes.descricao"
+                        fields="codigoCnae,descricaoCnae"
+                        hasActions="true"
+                        content="#{tipoGruposCnaeMB.selectedCnaes}"
+                        actionEvents="delete-row:click:removeCnaeFromGrupo(0):confirm:parametros.tipoGruposCnaes.tabela.cnaes.excluir.confirmacao">
+                    <f:facet name="actions">
+                        <i class="glyphicon glyphicon-trash delete-row" role="button"/>
+                    </f:facet>
+                </sat:table>
+                <h:form>
+                    <a4j:jsFunction name="removeCnaeFromGrupoRequest"
+                            action="#{tipoGruposCnaeMB.removeCnaeFromGrupo}"
+                            render="grupos-cnaes-cnaes-table">
+                        <a4j:param name="idGrupoCnae" assignTo="#{tipoGruposCnaeMB.dto.idGrupoCnae}"/>
+                        <a4j:param name="codigoCnae" assignTo="#{tipoGruposCnaeMB.selectedIdCnaeDto}"/>
+                    </a4j:jsFunction>
+                </h:form>
+            </sat:panel>
+
+            <sat:panel title="#{arr_msg['parametros.tipoGruposCnaes.form.titulo']}">
+                <h:form id="grupos-cnaes-form">
+                    <div class="row">
+                        <div class="form-group col-md-2">
+                            <h:outputLabel for="codigo">#{arr_msg['parametros.tipoGruposCnaes.form.codigo']}*</h:outputLabel>
+                            <h:inputText value="#{tipoGruposCnaeMB.dto.idGrupoCnae}" id="codigo"
+                                    styleClass="form-control justInteger" maxlength="2"/>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <h:outputLabel for="descricao">#{arr_msg['parametros.tipoGruposCnaes.form.descricao']}*</h:outputLabel>
+                            <h:inputText value="#{tipoGruposCnaeMB.dto.descricaoGrupo}" id="descricao"
+                                    styleClass="form-control" maxlength="100"/>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h:outputLabel for="situacao">#{arr_msg['parametros.tipoGruposCnaes.form.situacao']}*</h:outputLabel>
+                            <h:selectOneMenu value="#{tipoGruposCnaeMB.dto.situacao}" id="situacao"
+                                    styleClass="form-control">
+                                <f:selectItems value="#{enumsMB.situacoes}"
+                                        var="situacao"
+                                        itemValue="#{situacao}"
+                                        itemLabel="#{enumsMB.getSituacaoLabel(situacao)}"/>
+                            </h:selectOneMenu>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <h:outputLabel for="codigoCnae">#{arr_msg['parametros.tipoGruposCnaes.form.canes']}*</h:outputLabel>
+                            <h:selectOneMenu value="#{tipoGruposCnaeMB.selectedIdCnaeDto}" id="codigoCnae"
+                                    styleClass="form-control">
+                                <f:selectItems value="#{tipoGruposCnaeMB.allCnaes}"
+                                        var="cnae"
+                                        itemValue="#{cnae.codigoCnae}"
+                                        itemLabel="#{cnae.compositeName}"/>
+                            </h:selectOneMenu>
+                        </div>
+                        <div class="form-group col-md-2 text-right">
+                            <h:commandButton type="button" value="#{arr_msg['parametros.tipoGruposCnaes.form.adicionar']}"
+                                    styleClass="btn btn-primary align-bottom" action="#{tipoGruposCnaeMB.addCnaeToDto}">
+                                <f:ajax render="grupos-cnaes-dto-table" execute="codigoCnae codigo"/>
+                            </h:commandButton>
+                        </div>
+                    </div>
+                    <div class="row align-bottom">
+                        <div class="col-md-8">
+                            <sat:table id="grupos-cnaes-dto-table"
+                                    bundle="arr_msg"
+                                    headers="parametros.tipoGruposCnaes.tabela.cnaes.codigo,
+                                        parametros.tipoGruposCnaes.tabela.cnaes.descricao"
+                                    fields="codigoCnae,descricaoCnae"
+                                    hasActions="true"
+                                    actionsHeader="parametros.tipoGruposCnaes.tabela.cnaes.excluir"
+                                    content="#{tipoGruposCnaeMB.cnaesDto}"
+                                    actionEvents="delete-row:click:removeCnaeFromDto(0)">
+                                <f:facet name="actions">
+                                    <i class="glyphicon glyphicon-trash delete-row" role="button"/>
+                                </f:facet>
+                            </sat:table>
+                            <a4j:jsFunction name="removeCnaeFromDto"
+                                    action="#{tipoGruposCnaeMB.removeCnaeFromDto}"
+                                    render="grupos-cnaes-dto-table">
+                                <a4j:param name="idCnae" assignTo="#{tipoGruposCnaeMB.selectedIdCnaeDto}"/>
+                            </a4j:jsFunction>
+                            <a4j:jsFunction name="clearCnaesTables"
+                                    action="#{tipoGruposCnaeMB.clearCnaesTables}"
+                                    render="grupos-cnaes-cnaes-table grupos-cnaes-dto-table">
+                            </a4j:jsFunction>
+                        </div><div class="col-md-4 text-right">
+                            <button type="button" onclick="resetFields();"
+                                    class="btn btn-primary align-bottom">#{arr_msg['parametros.tipoGruposCnaes.form.novo']}</button>
+                            <sat:saveUpdateButton label="#{arr_msg['parametros.tipoGruposCnaes.form.salvar']}"
+                                    render="grupos-cnaes-table" execute="codigo descricao situacao"
+                                    onEvent="resetOnSuccess" styleClass="align-bottom"
+                                    crudMb="#{tipoGruposCnaeMB}"/>
+                        </div>
+                    </div>
+                </h:form>
+            </sat:panel>
+
+        </h:panelGroup>
+    </ui:define>
+</ui:composition>
+
+</html>

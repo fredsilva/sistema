@@ -3,12 +3,11 @@ package br.gov.to.sefaz.seg.persistence.entity;
 import br.gov.to.sefaz.persistence.entity.AbstractEntity;
 
 import java.util.Objects;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -45,7 +44,7 @@ public class SolicitacaoUsuario extends AbstractEntity<Long> {
     private Character situacaoSolicitacao;
 
     @JoinColumn(name = "CPF", referencedColumnName = "CPF_USUARIO")
-    @ManyToOne(optional = false)
+    @OneToOne(optional = false)
     private UsuarioSistema usuarioSistema;
 
     public SolicitacaoUsuario() {

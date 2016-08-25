@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" id="1" x="48" y="24" width="798" height="577" text="PARAMETRIZAÇÃO DOS CONVÊNIOS DA ARRECADAÇÃO&#xA;http://..." measuredWidth="798" measuredHeight="577">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="18" x="605" y="562" width="99" height="28" text="&amp;Novo Convênio" measuredWidth="99" measuredHeight="28">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="22" x="711" y="562" width="98" height="28" text="Salvar" measuredWidth="98" measuredHeight="28">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="93" x="149" y="279" text="Descrição do Convênio *" measuredWidth="147" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="94" x="149" y="301" width="178" measuredWidth="178" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="95" x="335" y="301" width="155" text="001-Banco do Brasil" measuredWidth="155" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="96" x="335" y="279" text="Banco *" measuredWidth="51" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="97" x="497" y="301" width="146" text="2786-9 AG PALMAS" measuredWidth="146" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="98" x="497" y="279" text="Agência *" measuredWidth="61" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="99" x="649" y="301" width="89" text="1-GNRE" measuredWidth="89" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="100" x="649" y="279" text="Tipo de Barra *" measuredWidth="92" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Note" id="101" x="848" y="24" height="121" text="Tipo da Barra :&#xA;1-GNRE; &#xA;2-DARE;&#xA;3-IPVA; &#xA;4-SIMPLES NACIONAL; &#xA;5-SEM BARRA" measuredWidth="153" measuredHeight="121" textAlignment="Left">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Note" id="111" x="848" y="163" width="153" height="139" text="Forma de Pagamento :&#xD;&#xA;1-Guiche de Caixa&#xD;&#xA;2- Arrecadação Eletrônica&#xD;&#xA;3-Internet&#xD;&#xA;4-Outros Meios&#xD;&#xA;5-Correspondente Bancário" measuredWidth="153" measuredHeight="139" textAlignment="Left">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="119" x="65" y="279" text="Código *" measuredWidth="56" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="120" x="65" y="301" width="79" measuredWidth="79" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="121" x="139" y="82" text="Descrição do Convênio" measuredWidth="137" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="122" x="139" y="104" width="178" measuredWidth="178" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="123" x="325" y="104" width="199" text="001-Banco do Brasil" measuredWidth="199" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="124" x="325" y="82" text="Banco" measuredWidth="42" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="125" x="536" y="104" width="146" text="027 - ICMS" measuredWidth="146" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="126" x="536" y="82" text="Tipo de Convênio" measuredWidth="105" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="127" x="693" y="104" width="134" text="1-GNRE" measuredWidth="134" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="128" x="693" y="82" text="Tipo de Barra" measuredWidth="83" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="129" x="55" y="82" text="Código" measuredWidth="47" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="130" x="55" y="104" width="79" measuredWidth="79" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="131" x="724" y="136" width="103" height="23" text="&amp;Pesquisar" measuredWidth="103" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="132" x="55" y="163" width="772" height="85" text="Código {neutral},Descrição Convênio  {neutral},Banco {neutral}, Agência {neutral}, Tipo de Barra {neutral}, Situação,&#xA;121456, CONVENIO BB ICMS, 001 - BB, 12314- AG PALMAS, 2 - ICMS, ATIVO, {selected} {trash}&#xA;&#xA;&#xA;" measuredWidth="772" measuredHeight="85" verticalScrollbar="true" alternative="#eeeeee">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="133" x="65" y="327" text="Situação do Convênio *" measuredWidth="139" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="134" x="65" y="349" width="130" text="1-ATIVO" measuredWidth="130" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="135" x="201" y="327" text="Tipo do Convênio *" measuredWidth="115" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="136" x="201" y="349" width="167" text="027 - ICMS" measuredWidth="167" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="137" x="745" y="301" width="83" text="5" measuredWidth="83" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="138" x="745" y="279" text="Versão Arquivo *" measuredWidth="101" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Note" id="139" x="48" y="608" width="910" height="41" text="TIPOS DE CONVÊNIOS : &#xA;027 - ICMS,  173 - IPVA ,174 - OUTRAS RECEITAS TRIBUTÁRIAS,175 - OUTRAS RECEITAS NÃO TRIBUTÁRIAS, 316 - GNRE,  607 - SIMPLES NACIONAL" measuredWidth="910" measuredHeight="41">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Group" id="140" x="59" y="386" width="318" height="177" text="Receitas X Convênio" measuredWidth="318" measuredHeight="177">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="141" x="69" y="400" text="Receitas" measuredWidth="55" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="142" x="69" y="422" width="222" text="1-ICMS NORMAL" measuredWidth="222" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="143" x="294" y="421" text="Adicionar" measuredWidth="74" measuredHeight="25">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="144" x="69" y="466" width="287" height="67" text="Código {neutral},Descrição {neutral},&#xA;101,ICMS NORMAL,{trash}&#xA;106,IPVA,{trash}&#xA;" measuredWidth="287" measuredHeight="67" verticalScrollbar="true" alternative="#eeeeee">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="145" x="69" y="443" text="Lista de Receitas" measuredWidth="103" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Group" id="146" x="382" y="338" width="446" height="225" text="Tarifas X Convênio" measuredWidth="446" measuredHeight="225">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="147" x="392" y="432" width="426" height="101" text="Forma de Pago {neutral},Data Inicio  {neutral}, Data Fim  {neutral}, Valor Tarifa  {neutral},&#xA;Guichê de Caixa,01/07/2012,,10.00,{trash}&#xA;&#xA;" measuredWidth="426" measuredHeight="101" verticalScrollbar="true" alternative="#eeeeee">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="157" x="387" y="376" width="138" text="1-Guichê de Caixa" measuredWidth="138" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="158" x="387" y="355" text="Forma de Pagamento" measuredWidth="127" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:DateField" id="159" x="529" y="376" width="113" text="  01/07/2012  " measuredWidth="113" measuredHeight="23"/>
+  <widgets xsi:type="model:DateField" id="160" x="648" y="376" width="92" measuredWidth="92" measuredHeight="23"/>
+  <widgets xsi:type="model:Label" id="161" x="529" y="355" text="Data Início" measuredWidth="66" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="162" x="648" y="355" text="Data Fim" measuredWidth="56" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="163" x="745" y="376" width="70" text="10.00" measuredWidth="70" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="164" x="745" y="355" text="Valor Tarifa" measuredWidth="70" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="165" x="725" y="403" width="91" height="26" text="Adicionar" measuredWidth="91" measuredHeight="26">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="187" x="290" y="249" measuredWidth="267" measuredHeight="23">
+    <widgets xsi:type="model:TextField" id="188" x="58" width="17" text="1" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="189" x="79" width="18" text="2" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="190" x="99" width="18" text="3" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="191" x="118" width="17" text="4" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="192" x="137" width="20" text="5" measuredWidth="20" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="193" x="160" text="Próximo" measuredWidth="57" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="194" width="56" text="Anterior" measuredWidth="56" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Spinner" id="195" x="226" text="10" measuredWidth="41" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="196" x="80" y="534" measuredWidth="267" measuredHeight="23">
+    <widgets xsi:type="model:TextField" id="197" x="58" width="17" text="1" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="198" x="79" width="18" text="2" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="199" x="99" width="18" text="3" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="200" x="118" width="17" text="4" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="201" x="137" width="20" text="5" measuredWidth="20" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="202" x="160" text="Próximo" measuredWidth="57" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="203" width="56" text="Anterior" measuredWidth="56" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Spinner" id="204" x="226" text="10" measuredWidth="41" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="205" x="479" y="534" measuredWidth="267" measuredHeight="23">
+    <widgets xsi:type="model:TextField" id="206" x="58" width="17" text="1" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="207" x="79" width="18" text="2" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="208" x="99" width="18" text="3" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="209" x="118" width="17" text="4" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="210" x="137" width="20" text="5" measuredWidth="20" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="211" x="160" text="Próximo" measuredWidth="57" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="212" width="56" text="Anterior" measuredWidth="56" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Spinner" id="213" x="226" text="10" measuredWidth="41" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+  </widgets>
+  <widgets xsi:type="model:Label" id="214" x="55" y="144" text="Lista de Convênios Cadastrados" measuredWidth="188" measuredHeight="23">
+    <font/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

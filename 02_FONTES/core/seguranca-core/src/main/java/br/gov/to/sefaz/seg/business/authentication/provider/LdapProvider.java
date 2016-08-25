@@ -44,7 +44,7 @@ public class LdapProvider {
      * @throws SecurityException exceção de segurança no caso de login inválido.
      */
     public void authenticate(String username, String passwdord) throws SecurityException {
-        LdapContext ctx = openConectionAD(username, passwdord, false);
+        LdapContext ctx = openConectionAD(username, passwdord);
         closeConectionAD(ctx);
     }
 
@@ -77,7 +77,7 @@ public class LdapProvider {
      * @throws SecurityException exceção de segurança no caso de erro ao setar a senha.
      */
     public void setAttribute(String username, ModificationItem... itens) throws SecurityException {
-        LdapContext ctx = openConectionAD(ldapProperties.getUserManager(), ldapProperties.getPasswdManager(), true);
+        LdapContext ctx = openConectionAD(ldapProperties.getUserManager(), ldapProperties.getPasswdManager());
 
         String name = getNameInNamespace(ctx, username);
 
@@ -107,7 +107,7 @@ public class LdapProvider {
     public Object getAttribute(String username, String att) throws SecurityException {
         Object obj = null;
 
-        LdapContext ctx = openConectionAD(ldapProperties.getUserManager(), ldapProperties.getPasswdManager(), true);
+        LdapContext ctx = openConectionAD(ldapProperties.getUserManager(), ldapProperties.getPasswdManager());
         NamingEnumeration<SearchResult> results = getResults(ctx, username);
 
         if (Objects.isNull(results)) {
@@ -181,22 +181,20 @@ public class LdapProvider {
     /**
      * Fecha a conexão com o AD (Active Directory).
      *
-     * @param ctx {@link LdapContext} contexto de conexão do AD (Active Directory)
+     * @param username usuário do ldap
+     * @param password senha do ldap
      * @throws SecurityException exceção de segurança no caso de login inválido.
      */
-    private LdapContext openConectionAD(String username, String passwdord, boolean ssl) throws SecurityException {
+    private LdapContext openConectionAD(String username, String password) throws SecurityException {
         Hashtable<String, String> env = new Hashtable<String, String>();
         env.put(Context.INITIAL_CONTEXT_FACTORY, "com.sun.jndi.ldap.LdapCtxFactory");
-        if (ssl) {
-            env.put(Context.PROVIDER_URL, ldapProperties.getSecurityUrl());
-            env.put(Context.SECURITY_PROTOCOL, "ssl");
-        } else {
-            env.put(Context.PROVIDER_URL, ldapProperties.getUrl());
-        }
+        env.put(Context.PROVIDER_URL, ldapProperties.getSecurityUrl());
+        env.put(Context.SECURITY_PROTOCOL, "ssl");
         env.put(Context.SECURITY_AUTHENTICATION, "simple");
         env.put(Context.REFERRAL, "follow");
-        env.put(Context.SECURITY_PRINCIPAL, ldapProperties.getDomain() + "\\" + username);
-        env.put(Context.SECURITY_CREDENTIALS, passwdord);
+        env.put(Context.PROVIDER_URL, env.get(Context.PROVIDER_URL)+"/"+ldapProperties.getDomain());
+        env.put(Context.SECURITY_PRINCIPAL, username);
+        env.put(Context.SECURITY_CREDENTIALS, password);
         env.put("java.naming.ldap.attributes.binary", "objectSID");
         env.put("com.sun.jndi.ldap.connect.timeout", ldapProperties.getTimeout());
 

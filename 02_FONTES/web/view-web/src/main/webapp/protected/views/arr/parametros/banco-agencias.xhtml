@@ -4,7 +4,7 @@
     xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
     xmlns:f="http://java.sun.com/jsf/core" xmlns:sat="http://sefaz.to.gov.br/composites"
     xmlns:a4j="http://richfaces.org/a4j">
-    
+
 <sat:panel title="#{arr_msg['parametros.bancoAgencias.tabela.titulo']}">
     <sat:table id="banco-agencias-table" bundle="arr_msg" content="#{bancoAgenciasMB.getResultList()}"
         headers="parametros.bancoAgencias.tabela.numero,
@@ -86,10 +86,10 @@
                 <h:outputLabel for="situacaoAgencia">#{arr_msg['parametros.bancoAgencias.form.situacao']}*</h:outputLabel>
                 <h:selectOneMenu value="#{bancoAgenciasMB.dto.situacao}" id="situacaoAgencia"
                                  styleClass="form-control">
-                    <f:selectItems value="#{enumsMB.situacoes}"
-                                   var="situacao"
-                                   itemValue="#{situacao}"
-                                   itemLabel="#{situacao.label}"/>
+                    <f:selectItems value="#{arrEnumsMB.situacoes}"
+                                   var="tipoUsuario"
+                                   itemValue="#{tipoUsuario}"
+                                   itemLabel="#{tipoUsuario.label}"/>
                 </h:selectOneMenu>
             </div>
         </div>
@@ -119,7 +119,7 @@
                             itemLabel="#{municipio.nomeMunicipio}"/>
                 </h:selectOneMenu>
             </div>
-            
+
             <div class="form-group col-md-2">
                 <h:outputLabel for="codigo">#{arr_msg['parametros.bancoAgencias.form.numeroCC']}*</h:outputLabel>
                 <h:inputText value="#{bancoAgenciasMB.dto.numeroContaCorrente}" id="numeroContaCorrente"
@@ -130,7 +130,7 @@
                 <h:inputText value="#{bancoAgenciasMB.dto.digitoContaCorrente}" id="digitoContaCorrente"
                              styleClass="form-control" maxlength="2"/>
             </div>
-        
+
         </div>
         <div class="row cols-bottom">
             <div class="form-group col-md-6">
@@ -143,9 +143,9 @@
                 <h:outputLabel for="centralizadora">#{arr_msg['parametros.bancoAgencias.form.centralizadora']}</h:outputLabel>
             </div>
             <div class="form-group col-md-2 text-right">
-                <sat:saveUpdateButton label="#{arr_msg['parametros.bancoAgencias.botao.adicionar']}" onEvent="resetOnSuccessAgencias" 
-                                      crudMb="#{bancoAgenciasMB}" render="banco-agencias-adicionadas-table" styleclass="button-align-bottom" 
-                                      execute="idBanco idAgencia digitoAgencia nomeAgencia cnpjAgencia situacaoAgencia centralizadora 
+                <sat:saveUpdateButton label="#{arr_msg['parametros.bancoAgencias.botao.adicionar']}" onEvent="resetOnSuccessAgencias"
+                                      crudMb="#{bancoAgenciasMB}" render="banco-agencias-adicionadas-table" styleclass="button-align-bottom"
+                                      execute="idBanco idAgencia digitoAgencia nomeAgencia cnpjAgencia situacaoAgencia centralizadora
                                                numeroContaCorrente digitoContaCorrente estado municipio email" />
             </div>
         </div>
@@ -160,7 +160,7 @@
                              parametros.bancoAgencias.tabela.municipio,
                              parametros.bancoAgencias.tabela.numero.cc,
                              parametros.bancoAgencias.tabela.email"
-        fields="numeroAgencia,nomeAgencia,cnpjAgencia:cnpj,nomeMunicipio,numeroCC,email,idBanco:hide,idAgencia:hide" 
+        fields="numeroAgencia,nomeAgencia,cnpjAgencia:cnpj,nomeMunicipio,numeroCC,email,idBanco:hide,idAgencia:hide"
         hasActions="true" actionEvents="delete:click:deleteBancoAgenciasAdicionadas(7;6)">
         <f:facet name="actions">
             <i class="delete glyphicon glyphicon-trash" role="button" />

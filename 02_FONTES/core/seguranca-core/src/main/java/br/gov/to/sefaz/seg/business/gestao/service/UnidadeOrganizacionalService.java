@@ -16,7 +16,7 @@ public interface UnidadeOrganizacionalService extends CrudService<UnidadeOrganiz
 
     /**
      * Busca todos os {@link UnidadeOrganizacional} cadastrados.
-     * 
+     *
      * @param filter filtros da busca
      * @return lista de UnidadeOrganizacional ativos
      */

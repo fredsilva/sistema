@@ -3,6 +3,7 @@ package br.gov.to.sefaz.seg.business.gestao.service.impl;
 import br.gov.to.sefaz.business.service.impl.DefaultCrudService;
 import br.gov.to.sefaz.business.service.validation.ValidationSuite;
 import br.gov.to.sefaz.persistence.predicate.AndPredicateBuilder;
+import br.gov.to.sefaz.seg.business.general.service.filter.UsuarioSistemaFilter;
 import br.gov.to.sefaz.seg.business.gestao.service.UsuarioSistemaService;
 import br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema;
 import br.gov.to.sefaz.seg.persistence.enums.SituacaoUsuarioEnum;
@@ -15,6 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.Collection;
+import java.util.List;
 
 /**
  * Implementação do serviço da entidade UsuarioSistema.
@@ -64,6 +66,11 @@ public class UsuarioSistemaServiceImpl extends DefaultCrudService<UsuarioSistema
     @Override
     public void unblockUser(String cpf) {
         getRepository().updateEstaBloqueado(false, null, cpf);
+    }
+
+    @Override
+    public List<UsuarioSistema> findAllUsuarioSistema(UsuarioSistemaFilter filter) {
+        return getRepository().findAllUsuarioSistema();
     }
 
 }

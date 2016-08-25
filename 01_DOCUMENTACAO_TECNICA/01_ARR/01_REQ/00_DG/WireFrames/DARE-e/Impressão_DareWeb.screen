@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" id="1" x="32" y="15" width="1089" height="1226" text="IMPRESSÃO DARE-e" measuredWidth="1089" measuredHeight="1226">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="80" x="472" y="111" measuredWidth="631" measuredHeight="21">
+    <widgets xsi:type="model:Label" id="64" x="570" y="1" text="1 VIA BANCO" measuredWidth="61" measuredHeight="18">
+      <font size="8px" bold="true"/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="72" x="336" y="1" width="107" text="0000 0000 000 0" measuredWidth="107" measuredHeight="20">
+      <font size="10px" bold="true"/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="73" width="107" text="0000 0000 000 0" measuredWidth="107" measuredHeight="20">
+      <font size="10px" bold="true"/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="74" x="112" y="1" width="107" text="0000 0000 000 0" measuredWidth="107" measuredHeight="20">
+      <font size="10px" bold="true"/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="75" x="224" y="1" width="107" text="0000 0000 000 0" measuredWidth="107" measuredHeight="20">
+      <font size="10px" bold="true"/>
+    </widgets>
+  </widgets>
+  <widgets xsi:type="model:HLine" id="76" x="32" y="418" width="1081" measuredWidth="1081" measuredHeight="6" lineStyle="dotted"/>
+  <widgets xsi:type="model:Label" id="77" x="52" y="362" text="AUTENTICAÇÃO BANCÁRIA" measuredWidth="144" measuredHeight="20">
+    <font size="10px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Panel" id="2" x="42" y="131" width="1067" height="229" measuredWidth="1067" measuredHeight="229"/>
+  <widgets xsi:type="model:Label" id="3" x="124" y="157" text="SECRETARIA DA FAZENDA" measuredWidth="270" measuredHeight="31">
+    <font size="20px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="4" x="124" y="133" text="GOVERNO DO ESTADO DO TOCANTINS" measuredWidth="434" measuredHeight="34">
+    <font size="22px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="5" x="124" y="206" text="DOCUMENTO DE ARRECADAÇÃO DE RECEITAS ESTADUAIS" measuredWidth="595" measuredHeight="31">
+    <font size="20px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="6" x="924" y="177" width="133" text="AA12345678" measuredWidth="133" measuredHeight="29" foreground="#ff0000">
+    <font size="18px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="7" x="924" y="161" text="NOSSO NÚMERO" measuredWidth="105" measuredHeight="23">
+    <font size="12px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="10" x="924" y="129" text="DARE-e" measuredWidth="114" measuredHeight="41" foreground="#20124d">
+    <font size="28px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="11" x="124" y="186" text="DIRETORIA DA RECEITA" measuredWidth="243" measuredHeight="31">
+    <font size="20px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:HLine" id="12" x="42" y="233" width="875" measuredWidth="875" measuredHeight="6"/>
+  <widgets xsi:type="model:Label" id="14" x="924" y="210" text="DATA E HORA DA EMISSÃO" measuredWidth="169" measuredHeight="23">
+    <font size="12px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="15" x="924" y="232" text="10/11/2015 15:00:12" measuredWidth="139" measuredHeight="23" foreground="#ff0000">
+    <font size="12px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:VLine" id="58" x="916" y="267" height="93" measuredWidth="6" measuredHeight="93"/>
+  <widgets xsi:type="model:Label" id="59" x="924" y="258" text="DATA DE VENCIMENTO" measuredWidth="145" measuredHeight="23">
+    <font size="12px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="60" x="924" y="309" text="TOTAL VALOR A RECOLHER" measuredWidth="171" measuredHeight="23">
+    <font size="12px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="61" x="924" y="273" width="133" text="10/11/2015" measuredWidth="133" measuredHeight="29" foreground="#ff0000">
+    <font size="18px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="62" x="924" y="331" width="175" text="R$  121.212,12" measuredWidth="175" measuredHeight="29" foreground="#ff0000">
+    <font size="18px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:VLine" id="63" x="916" y="131" height="142" measuredWidth="6" measuredHeight="142"/>
+  <widgets xsi:type="model:WidgetGroup" id="110" x="472" y="468" measuredWidth="631" measuredHeight="21">
+    <widgets xsi:type="model:Label" id="99" x="537" y="2" text="2 VIA CONTRIBUINTE" measuredWidth="94" measuredHeight="18">
+      <font size="8px" bold="true"/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="101" x="336" y="1" width="107" text="0000 0000 000 0" measuredWidth="107" measuredHeight="20">
+      <font size="10px" bold="true"/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="102" width="107" text="0000 0000 000 0" measuredWidth="107" measuredHeight="20">
+      <font size="10px" bold="true"/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="103" x="112" y="1" width="107" text="0000 0000 000 0" measuredWidth="107" measuredHeight="20">
+      <font size="10px" bold="true"/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="104" x="224" y="1" width="107" text="0000 0000 000 0" measuredWidth="107" measuredHeight="20">
+      <font size="10px" bold="true"/>
+    </widgets>
+  </widgets>
+  <widgets xsi:type="model:Panel" id="149" x="42" y="490" width="1067" height="242" measuredWidth="1067" measuredHeight="242"/>
+  <widgets xsi:type="model:Label" id="150" x="124" y="516" text="SECRETARIA DA FAZENDA" measuredWidth="270" measuredHeight="31">
+    <font size="20px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="151" x="124" y="492" text="GOVERNO DO ESTADO DO TOCANTINS" measuredWidth="434" measuredHeight="34">
+    <font size="22px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="152" x="124" y="565" text="DOCUMENTO DE ARRECADAÇÃO DE RECEITAS ESTADUAIS" measuredWidth="595" measuredHeight="31">
+    <font size="20px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="153" x="924" y="536" width="133" text="AA12345678" measuredWidth="133" measuredHeight="29" foreground="#ff0000">
+    <font size="18px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="154" x="924" y="520" text="NOSSO NÚMERO" measuredWidth="105" measuredHeight="23">
+    <font size="12px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="156" x="924" y="488" text="DARE-e" measuredWidth="114" measuredHeight="41" foreground="#20124d">
+    <font size="28px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="157" x="124" y="545" text="DIRETORIA DA RECEITA" measuredWidth="243" measuredHeight="31">
+    <font size="20px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:HLine" id="158" x="42" y="593" width="880" measuredWidth="880" measuredHeight="6"/>
+  <widgets xsi:type="model:Label" id="159" x="924" y="569" text="DATA E HORA DA EMISSÃO" measuredWidth="169" measuredHeight="23">
+    <font size="12px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="160" x="924" y="591" text="10/11/2015 15:00:12" measuredWidth="139" measuredHeight="23" foreground="#ff0000">
+    <font size="12px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:VLine" id="177" x="916" y="626" height="106" measuredWidth="6" measuredHeight="106"/>
+  <widgets xsi:type="model:Label" id="178" x="924" y="617" text="DATA DE VENCIMENTO" measuredWidth="145" measuredHeight="23">
+    <font size="12px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="179" x="924" y="688" text="TOTAL VALOR A RECOLHER" measuredWidth="171" measuredHeight="23">
+    <font size="12px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="180" x="924" y="632" width="133" text="10/11/2015" measuredWidth="133" measuredHeight="23" foreground="#ff0000">
+    <font size="12px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="181" x="924" y="709" width="133" text="R$  121.212,12" measuredWidth="133" measuredHeight="23" foreground="#ff0000">
+    <font size="12px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:VLine" id="182" x="916" y="490" height="142" measuredWidth="6" measuredHeight="142"/>
+  <widgets xsi:type="model:Group" id="185" x="42" y="848" width="1067" height="330" text="Lista de Pagamentos a Recolher" measuredWidth="1067" measuredHeight="330">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="208" x="42" y="1177" text="AUTENTICAÇÃO BANCÁRIA" measuredWidth="144" measuredHeight="20">
+    <font size="10px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="285" x="924" y="649" text="QUANTIDADE A RECOLHER" measuredWidth="167" measuredHeight="23">
+    <font size="12px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="286" x="924" y="666" width="133" text="7" measuredWidth="133" measuredHeight="23" foreground="#ff0000">
+    <font size="12px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="288" x="756" y="362" text="PAGAMENTO REALIZADOS NAS REDES BANCÁRIAS CREDENCIADAS" measuredWidth="347" measuredHeight="20">
+    <font size="10px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="289" x="756" y="1177" text="PAGAMENTO REALIZADOS NAS REDES BANCÁRIAS CREDENCIADAS" measuredWidth="347" measuredHeight="20">
+    <font size="10px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Image" id="290" x="45" y="142" measuredWidth="71" measuredHeight="80" src="../../assets/Captura%20de%20Tela%202015-11-10%20às%2010.41.27.png"/>
+  <widgets xsi:type="model:Image" id="291" x="45" y="500" measuredWidth="71" measuredHeight="80" src="../../assets/Captura%20de%20Tela%202015-11-10%20às%2010.41.27.png"/>
+  <widgets xsi:type="model:WidgetGroup" id="307" x="52" y="257" measuredWidth="338" measuredHeight="94">
+    <widgets xsi:type="model:Label" id="308" x="120" y="56" text="CONTRIBUINTE" measuredWidth="85" measuredHeight="20">
+      <font size="10px" bold="true"/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="309" x="209" y="56" text="RAZÃO SOCIAL / NOME" measuredWidth="124" measuredHeight="20">
+      <font size="10px" bold="true"/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="310" y="56" text="IDENTIFICAÇAO" measuredWidth="85" measuredHeight="20">
+      <font size="10px" bold="true"/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="311" y="74" text="INSCRIÇÃO ESTADUAL" measuredWidth="117" measuredHeight="20">
+      <font size="10px" bold="false"/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="312" x="120" y="74" text="19000000-9" measuredWidth="71" measuredHeight="20">
+      <font size="10px" bold="false"/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="313" x="209" y="74" text="XICO DA SERRA GRANDE" measuredWidth="129" measuredHeight="20">
+      <font size="10px" bold="false"/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="314" text="INSTITUIÇÃO : SEFAZ" measuredWidth="116" measuredHeight="20">
+      <font size="10px" bold="true"/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="317" y="22" text="UF EMISSORA" measuredWidth="77" measuredHeight="20">
+      <font size="10px" bold="true"/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="318" x="124" y="22" text="MUNICIPIO" measuredWidth="62" measuredHeight="20">
+      <font size="10px" bold="true"/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="319" y="38" text="TO" measuredWidth="20" measuredHeight="20">
+      <font size="10px" bold="false"/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="320" x="124" y="37" text="PALMAS" measuredWidth="47" measuredHeight="20">
+      <font size="10px" bold="false"/>
+    </widgets>
+  </widgets>
+  <widgets xsi:type="model:Image" id="321" x="42" y="77" width="423" height="53" measuredWidth="423" measuredHeight="53" src="../../assets/images.png"/>
+  <widgets xsi:type="model:Image" id="322" x="45" y="436" width="423" height="53" measuredWidth="423" measuredHeight="53" src="../../assets/images.png"/>
+  <widgets xsi:type="model:WidgetGroup" id="323" x="51" y="619" measuredWidth="338" measuredHeight="94">
+    <widgets xsi:type="model:Label" id="324" x="120" y="56" text="CONTRIBUINTE" measuredWidth="85" measuredHeight="20">
+      <font size="10px" bold="true"/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="325" x="209" y="56" text="RAZÃO SOCIAL / NOME" measuredWidth="124" measuredHeight="20">
+      <font size="10px" bold="true"/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="326" y="56" text="IDENTIFICAÇAO" measuredWidth="85" measuredHeight="20">
+      <font size="10px" bold="true"/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="327" y="74" text="INSCRIÇÃO ESTADUAL" measuredWidth="117" measuredHeight="20">
+      <font size="10px" bold="false"/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="328" x="120" y="74" text="19000000-9" measuredWidth="71" measuredHeight="20">
+      <font size="10px" bold="false"/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="329" x="209" y="74" text="XICO DA SERRA GRANDE" measuredWidth="129" measuredHeight="20">
+      <font size="10px" bold="false"/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="330" text="INSTITUIÇÃO : SEFAZ" measuredWidth="116" measuredHeight="20">
+      <font size="10px" bold="true"/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="331" y="22" text="UF EMISSORA" measuredWidth="77" measuredHeight="20">
+      <font size="10px" bold="true"/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="332" x="124" y="22" text="MUNICIPIO" measuredWidth="62" measuredHeight="20">
+      <font size="10px" bold="true"/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="333" y="38" text="TO" measuredWidth="20" measuredHeight="20">
+      <font size="10px" bold="false"/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="334" x="124" y="37" text="PALMAS" measuredWidth="47" measuredHeight="20">
+      <font size="10px" bold="false"/>
+    </widgets>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="349" x="50" y="864" measuredWidth="1076" measuredHeight="56">
+    <widgets xsi:type="model:WidgetGroup" id="348" x="29" measuredWidth="1047" measuredHeight="56">
+      <widgets xsi:type="model:WidgetGroup" id="345" measuredWidth="959" measuredHeight="20">
+        <widgets xsi:type="model:Label" id="186" text="DOCUMENTO/PARCELA" measuredWidth="125" measuredHeight="20">
+          <font size="10px" bold="true"/>
+        </widgets>
+        <widgets xsi:type="model:Label" id="188" x="124" text="PERIODO" measuredWidth="52" measuredHeight="20">
+          <font size="10px" bold="true"/>
+        </widgets>
+        <widgets xsi:type="model:Label" id="189" x="188" text="DATA VENCIMENTO" measuredWidth="106" measuredHeight="20">
+          <font size="10px" bold="true"/>
+        </widgets>
+        <widgets xsi:type="model:Label" id="190" x="300" text="VL.PRINCIPAL" measuredWidth="77" measuredHeight="20" textAlignment="Right">
+          <font size="10px" bold="true"/>
+        </widgets>
+        <widgets xsi:type="model:Label" id="191" x="484" text="VL.MULTA" measuredWidth="59" measuredHeight="20" textAlignment="Right">
+          <font size="10px" bold="true"/>
+        </widgets>
+        <widgets xsi:type="model:Label" id="192" x="561" text="VL.JUROS" measuredWidth="58" measuredHeight="20" textAlignment="Right">
+          <font size="10px" bold="true"/>
+        </widgets>
+        <widgets xsi:type="model:Label" id="193" x="376" text="VL.ATLZ.MONET." measuredWidth="93" measuredHeight="20" textAlignment="Right">
+          <font size="10px" bold="true"/>
+        </widgets>
+        <widgets xsi:type="model:Label" id="194" x="699" text="VL.TSE" measuredWidth="42" measuredHeight="20" textAlignment="Right">
+          <font size="10px" bold="true"/>
+        </widgets>
+        <widgets xsi:type="model:Label" id="195" x="760" text="VL.TOTAL" measuredWidth="57" measuredHeight="20" textAlignment="Right">
+          <font size="10px" bold="true"/>
+        </widgets>
+        <widgets xsi:type="model:Label" id="196" x="834" text="RECEITA / SUB CÓDIGO" measuredWidth="125" measuredHeight="20">
+          <font size="10px" bold="true"/>
+        </widgets>
+        <widgets xsi:type="model:Label" id="294" x="618" text="VL.REDUÇÕES" measuredWidth="78" measuredHeight="20" textAlignment="Right">
+          <font size="10px" bold="true"/>
+        </widgets>
+      </widgets>
+      <widgets xsi:type="model:WidgetGroup" id="346" y="16" measuredWidth="1047" measuredHeight="20">
+        <widgets xsi:type="model:Label" id="211" x="816" text="(*)" measuredWidth="19" measuredHeight="20" textAlignment="Right">
+          <font size="10px" bold="true"/>
+        </widgets>
+        <widgets xsi:type="model:Label" id="187" text="9789685" measuredWidth="53" measuredHeight="20">
+          <font size="10px" bold="false"/>
+        </widgets>
+        <widgets xsi:type="model:Label" id="199" x="124" text="10/2015" measuredWidth="50" measuredHeight="20">
+          <font size="10px" bold="false"/>
+        </widgets>
+        <widgets xsi:type="model:Label" id="200" x="188" text="15/11/2015" measuredWidth="66" measuredHeight="20">
+          <font size="10px" bold="false"/>
+        </widgets>
+        <widgets xsi:type="model:Label" id="201" x="300" width="77" text="1.000,00" measuredWidth="77" measuredHeight="20" textAlignment="Right">
+          <font size="10px" bold="false"/>
+        </widgets>
+        <widgets xsi:type="model:Label" id="203" x="388" width="77" text="0,12" measuredWidth="77" measuredHeight="20" textAlignment="Right">
+          <font size="10px" bold="false"/>
+        </widgets>
+        <widgets xsi:type="model:Label" id="204" x="468" width="77" text="0,00" measuredWidth="77" measuredHeight="20" textAlignment="Right">
+          <font size="10px" bold="false"/>
+        </widgets>
+        <widgets xsi:type="model:Label" id="205" x="542" width="77" text="43,00" measuredWidth="77" measuredHeight="20" textAlignment="Right">
+          <font size="10px" bold="false"/>
+        </widgets>
+        <widgets xsi:type="model:Label" id="206" x="664" width="77" text="3,00" measuredWidth="77" measuredHeight="20" textAlignment="Right">
+          <font size="10px" bold="false"/>
+        </widgets>
+        <widgets xsi:type="model:Label" id="207" x="740" width="77" text="1.043,12" measuredWidth="77" measuredHeight="20" textAlignment="Right">
+          <font size="10px" bold="false"/>
+        </widgets>
+        <widgets xsi:type="model:Label" id="209" x="834" width="213" text="101 - ICMS NORMAL" measuredWidth="213" measuredHeight="20">
+          <font size="10px" bold="false"/>
+        </widgets>
+        <widgets xsi:type="model:Label" id="295" x="618" width="73" text="0,00" measuredWidth="73" measuredHeight="20" textAlignment="Right">
+          <font size="10px" bold="false"/>
+        </widgets>
+      </widgets>
+      <widgets xsi:type="model:WidgetGroup" id="347" y="36" measuredWidth="1047" measuredHeight="20">
+        <widgets xsi:type="model:Label" id="226" text="1234567890 / 1" measuredWidth="89" measuredHeight="20">
+          <font size="10px" bold="false"/>
+        </widgets>
+        <widgets xsi:type="model:Label" id="227" x="124" text="08/2015" measuredWidth="50" measuredHeight="20">
+          <font size="10px" bold="false"/>
+        </widgets>
+        <widgets xsi:type="model:Label" id="228" x="188" text="15/09/2015" measuredWidth="66" measuredHeight="20">
+          <font size="10px" bold="false"/>
+        </widgets>
+        <widgets xsi:type="model:Label" id="229" x="300" width="77" text="1.000,00" measuredWidth="77" measuredHeight="20" textAlignment="Right">
+          <font size="10px" bold="false"/>
+        </widgets>
+        <widgets xsi:type="model:Label" id="230" x="388" width="77" text="30,00" measuredWidth="77" measuredHeight="20" textAlignment="Right">
+          <font size="10px" bold="false"/>
+        </widgets>
+        <widgets xsi:type="model:Label" id="231" x="468" width="77" text="0,00" measuredWidth="77" measuredHeight="20" textAlignment="Right">
+          <font size="10px" bold="false"/>
+        </widgets>
+        <widgets xsi:type="model:Label" id="232" x="542" width="77" text="43,00" measuredWidth="77" measuredHeight="20" textAlignment="Right">
+          <font size="10px" bold="false"/>
+        </widgets>
+        <widgets xsi:type="model:Label" id="233" x="664" width="77" text="3,00" measuredWidth="77" measuredHeight="20" textAlignment="Right">
+          <font size="10px" bold="false"/>
+        </widgets>
+        <widgets xsi:type="model:Label" id="234" x="740" width="77" text="1.076,00" measuredWidth="77" measuredHeight="20" textAlignment="Right">
+          <font size="10px" bold="false"/>
+        </widgets>
+        <widgets xsi:type="model:Label" id="235" x="834" width="213" text="201 - PARCELAMENTO ICMS" measuredWidth="213" measuredHeight="20">
+          <font size="10px" bold="false"/>
+        </widgets>
+        <widgets xsi:type="model:Label" id="298" x="625" width="66" text="0,00" measuredWidth="66" measuredHeight="20" textAlignment="Right">
+          <font size="10px" bold="false"/>
+        </widgets>
+      </widgets>
+    </widgets>
+    <widgets xsi:type="model:WidgetGroup" id="344" measuredWidth="31" measuredHeight="53">
+      <widgets xsi:type="model:Label" id="341" text="ITEM" measuredWidth="31" measuredHeight="20">
+        <font size="10px" bold="true"/>
+      </widgets>
+      <widgets xsi:type="model:Label" id="342" x="3" y="16" text="1" measuredWidth="13" measuredHeight="20">
+        <font size="10px" bold="false"/>
+      </widgets>
+      <widgets xsi:type="model:Label" id="343" x="3" y="33" text="2" measuredWidth="13" measuredHeight="20">
+        <font size="10px" bold="false"/>
+      </widgets>
+    </widgets>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="351" x="42" y="728" measuredWidth="1069" measuredHeight="121">
+    <widgets xsi:type="model:Group" id="197" width="1069" height="121" text="Informações Complementares" measuredWidth="1069" measuredHeight="121" background="#cfe2f3">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="210" x="807" y="9" text="VALORES INFORMADOS PELO CONTRIBUINTE ( * )" measuredWidth="261" measuredHeight="20">
+      <font size="10px" bold="true"/>
+    </widgets>
+    <widgets xsi:type="model:Label" id="350" x="7" y="14" text="ITEM 1 ) " measuredWidth="51" measuredHeight="20">
+      <font size="10px" bold="true"/>
+    </widgets>
+  </widgets>
+  <widgets xsi:type="model:Label" id="353" x="50" y="595" text="DADOS EMITENTE" measuredWidth="97" measuredHeight="20">
+    <font size="10px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="355" x="50" y="236" text="DADOS EMITENTE" measuredWidth="97" measuredHeight="20">
+    <font size="10px" bold="true"/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>
