@@ -162,6 +162,10 @@
                                         itemLabel="#{banco.compositeName}"/>
                                 <f:ajax render="agencia" listener="#{conveniosArrecMB.getBancoAgencias()}"/>
                             </h:selectOneMenu>
+                            <a4j:jsFunction name="getAgenciaBanco"
+                                    render="agencia" execute="banco">
+                                <a4j:param name="agencia" assignTo="#{conveniosArrecMB.dto.idAgencia}"/>
+                            </a4j:jsFunction>
                         </div>
                         <div class="form-group col-md-2">
                             <h:outputLabel for="agencia">

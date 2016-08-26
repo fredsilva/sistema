@@ -1,8 +1,8 @@
 function selectRow(data) {
     $("#convenios-arrec-form\\:codigo").attr('readonly', true).val(data[0]);
     $("#convenios-arrec-form\\:descricaoConvenio").val(data[1]);
-    $("#convenios-arrec-form\\:banco").val(data[6]).change();
-    setTimeout(function(){$("#convenios-arrec-form\\:agencia").val(data[7]);}, 500);
+    $("#convenios-arrec-form\\:banco").val(data[6]);
+    getAgenciaBanco(data[7]);
     $("#convenios-arrec-form\\:barra").val(data[8]);
     $("#convenios-arrec-form\\:situacao").val(data[9]);
     $("#convenios-arrec-form\\:versaoArquivo").val(data[10]);

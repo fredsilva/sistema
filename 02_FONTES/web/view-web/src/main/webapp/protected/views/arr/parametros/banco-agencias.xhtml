@@ -108,6 +108,11 @@
                             itemLabel="#{estado.unidadeFederacao}"/>
                     <f:ajax render="municipio" listener="#{bancoAgenciasMB.loadMunicipios()}"/>
                 </h:selectOneMenu>
+                <a4j:jsFunction name="loadMunicipios"
+                        action="#{bancoAgenciasMB.loadMunicipios()}"
+                        render="municipio" execute="estado">
+                    <a4j:param name="municipio" assignTo="#{bancoAgenciasMB.dto.idMunicipio}"/>
+                </a4j:jsFunction>
             </div>
             <div class="form-group col-md-6">
                 <h:outputLabel for="municipio">

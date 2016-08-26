@@ -68,7 +68,7 @@ public class PedidoTiposMB extends DefaultCrudMB<PedidoTipos, Integer> {
      */
     public void loadTiposPedidoCampos() {
         tiposPedidoCampos = getFacade().getTipoPedidoCampoEnumValues(getDto().getIdTipoPedido(),
-                pedidoTipoAcoesDto.getTipoAcao());
+            pedidoTipoAcoesDto.getTipoAcao());
     }
 
     @Autowired

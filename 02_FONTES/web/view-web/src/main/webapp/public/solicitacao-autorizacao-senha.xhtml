@@ -278,11 +278,11 @@
                             </h:outputLabel>
                             <h:selectOneRadio id="tipoUsuarioUsuarioForm" styleClass="jsf-radio"
                                     value="#{usuarioSistemaMB.dto.codigoTipoUsuario}">
-                                <f:selectItem itemValue="1"
-                                        itemLabel="#{msg['solicitacaoAutorizacao.form.contribuinte']}"/>
                                 <f:selectItem itemValue="2"
+                                        itemLabel="#{msg['solicitacaoAutorizacao.form.contribuinte']}"/>
+                                <f:selectItem itemValue="3"
                                         itemLabel="#{msg['solicitacaoAutorizacao.form.contribuinteOutroEstado']}"/>
-                                <f:selectItem itemValue="3" itemLabel="#{msg['solicitacaoAutorizacao.form.contador']}"/>
+                                <f:selectItem itemValue="1" itemLabel="#{msg['solicitacaoAutorizacao.form.contador']}"/>
                             </h:selectOneRadio>
                         </div>
                         <div class="form-group col-md-6">

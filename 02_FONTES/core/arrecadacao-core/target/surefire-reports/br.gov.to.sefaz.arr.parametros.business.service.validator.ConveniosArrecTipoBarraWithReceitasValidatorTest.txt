@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: br.gov.to.sefaz.arr.parametros.business.service.validator.ConveniosArrecTipoBarraWithReceitasValidatorTest
--------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.464 sec

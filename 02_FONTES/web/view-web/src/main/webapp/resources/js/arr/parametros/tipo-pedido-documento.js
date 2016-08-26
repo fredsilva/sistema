@@ -23,10 +23,10 @@ function selectTipoDocumentoRow(data) {
 
 function selectAcaoRow(data) {
     $("#tipo-pedido-form\\:tiposAcao").val(data[4]).change();
-    setTimeout(function(){$("#tipo-pedido-form\\:tipoCampo").val(data[5]);}, 500000000000);
+    setTipoCampo(data[5]);
     $("#tipo-pedido-form\\:situacaoTipoAcao").val(data[6]);
     $("#tipo-pedido-form\\:campoObrigatorio").prop("checked", JSON.parse(data[3]));
-    
+
     showBtnUpdate('tipo-acoes');
 }
 
@@ -44,7 +44,7 @@ function resetFields() {
     clearFields('tipo-documentos');
     clearFields('pedido-receitas');
     clearFields('tipo-acoes');
-    
+
     $("#tipo-pedido-form\\:valor").maskMoney({thousands:'.', decimal:',', allowZero:true});
 
     $("#receitas-form\\:idReceita").attr('readonly', false);

@@ -1,5 +1,6 @@
 package br.gov.to.sefaz.seg.business.authentication.provider;
 
+import br.gov.to.sefaz.seg.business.authentication.domain.SecurityErrorCodeType;
 import br.gov.to.sefaz.seg.business.authentication.handler.LdapHandler;
 import br.gov.to.sefaz.seg.business.authentication.handler.LdapHandler.LdapProperties;
 import br.gov.to.sefaz.seg.business.authentication.service.SecurityException;
@@ -9,6 +10,7 @@ import java.io.UnsupportedEncodingException;
 import java.text.MessageFormat;
 import java.util.Hashtable;
 import java.util.Objects;
+import javax.naming.AuthenticationException;
 import javax.naming.Context;
 import javax.naming.NamingEnumeration;
 import javax.naming.NamingException;
@@ -51,7 +53,7 @@ public class LdapProvider {
      * @throws SecurityException exceção de segurança no caso de login inválido.
      */
     public void authenticate(String userName, String passwdord) throws SecurityException {
-        LdapContext ctx = openConectionAD(userName, passwdord);
+        LdapContext ctx = openConectionAD(userName, passwdord, false);
         closeConectionAD(ctx);
     }
 
@@ -78,7 +80,7 @@ public class LdapProvider {
         attrs.put("userAccountControl",Integer.toString(UF_NORMAL_ACCOUNT + UF_ACCOUNTDISABLE));
 
         // Abre uma conexão segura com o AD
-        LdapContext ctx = openConectionAD(ldapProperties.getUserManager(), ldapProperties.getPasswdManager());
+        LdapContext ctx = openConectionAD(ldapProperties.getUserManager(), ldapProperties.getPasswdManager(), true);
         try {
             // Cria o usuário no AD
             Context result = ctx.createSubcontext(MessageFormat.format(ldapProperties.getBaseDomain(),
@@ -144,7 +146,7 @@ public class LdapProvider {
      */
     public void setAttribute(String userName, ModificationItem... itens) throws SecurityException {
         // Abre uma conexão segura com o AD
-        LdapContext ctx = openConectionAD(ldapProperties.getUserManager(), ldapProperties.getPasswdManager());
+        LdapContext ctx = openConectionAD(ldapProperties.getUserManager(), ldapProperties.getPasswdManager(), true);
 
         try {
             // Altera os atributos do usuário no AD
@@ -168,7 +170,7 @@ public class LdapProvider {
     public Object getAttribute(String userName, String att) throws SecurityException {
         Object obj = null;
         // Abre uma conexão segura com o AD
-        LdapContext ctx = openConectionAD(ldapProperties.getUserManager(), ldapProperties.getPasswdManager());
+        LdapContext ctx = openConectionAD(ldapProperties.getUserManager(), ldapProperties.getPasswdManager(), true);
         // Consulta as propriedades do usuário no AD
         NamingEnumeration<SearchResult> results = getResults(ctx, userName);
         // Caso resultado da consulta seja null retorna
@@ -251,11 +253,15 @@ public class LdapProvider {
      * @return ctx contexto de conexão do AD
      * @throws SecurityException exceção de segurança no caso de login inválido.
      */
-    private LdapContext openConectionAD(String userName, String password) throws SecurityException {
+    private LdapContext openConectionAD(String userName, String password, boolean ssl) throws SecurityException {
         Hashtable<String, String> env = new Hashtable<String, String>();
         env.put(Context.INITIAL_CONTEXT_FACTORY, "com.sun.jndi.ldap.LdapCtxFactory");
-        env.put(Context.PROVIDER_URL, ldapProperties.getSecurityUrl() + "/" + ldapProperties.getDomain());
-        env.put(Context.SECURITY_PROTOCOL, "ssl");
+        if (ssl) {
+            env.put(Context.PROVIDER_URL, ldapProperties.getSecurityUrl() + "/" + ldapProperties.getDomain());
+            env.put(Context.SECURITY_PROTOCOL, "ssl");
+        } else {
+            env.put(Context.PROVIDER_URL, ldapProperties.getUrl());
+        }
         env.put(Context.SECURITY_AUTHENTICATION, "simple");
         env.put(Context.REFERRAL, "follow");
         env.put(SECURITY_PRINCIPAL, userName);
@@ -266,6 +272,9 @@ public class LdapProvider {
         LdapContext ctx = null;
         try {
             ctx = new InitialLdapContext(env, null);
+        } catch(AuthenticationException e) {
+            throw new SecurityException("Não foi possível abrir uma conexão com AD.", SecurityErrorCodeType
+                    .AUTENTICATION, e);
         } catch (NamingException e) {
             throw new SecurityException("Não foi possível abrir uma conexão com AD.", e);
         }

@@ -200,6 +200,10 @@
                                     <f:ajax render="tipoCampo" execute="tiposAcao idTipoPedido"
                                             listener="#{pedidoTiposMB.loadTiposPedidoCampos()}"/>
                                 </h:selectOneMenu>
+                                <a4j:jsFunction name="setTipoCampo"
+                                        render="tipoCampo" execute="tiposAcao">
+                                    <a4j:param name="idTipoCampo" assignTo="#{pedidoTiposMB.pedidoCamposAcoesDto.tipoCampo}"/>
+                                </a4j:jsFunction>
                             </div>
                             <div class="form-group col-md-4">
                                 <h:outputLabel for="tipoCampo">

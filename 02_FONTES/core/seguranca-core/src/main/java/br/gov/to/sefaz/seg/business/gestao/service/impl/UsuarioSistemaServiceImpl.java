@@ -205,8 +205,8 @@ public class UsuarioSistemaServiceImpl extends DefaultCrudService<UsuarioSistema
         String mailBody = getMailBodyCreateCadastroCompleto(usuarioSistema, password);
         Anexo anexo = null;
 
-        // Se o tipo de usuário for contador, tipo = 3, o cadastro é incompleto
-        if (usuarioSistema.getCodigoTipoUsuario().compareTo(3) == 0) {
+        // Se o tipo de usuário for contador, tipo = 1, o cadastro é incompleto
+        if (usuarioSistema.getCodigoTipoUsuario().compareTo(1) == 0) {
             subject = SourceBundle.getMessage(MessageUtil.SEG, "seg.gestao.solicitacaoUsuario.form.mail.subject"
                     + ".cadastroIncompleto");
             mailBody = getMailBodyCreateCadastroIncompleto(usuarioSistema);

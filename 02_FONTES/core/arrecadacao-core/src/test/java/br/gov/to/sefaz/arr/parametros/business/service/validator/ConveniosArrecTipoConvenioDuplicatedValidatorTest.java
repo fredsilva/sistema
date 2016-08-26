@@ -67,7 +67,7 @@ public class ConveniosArrecTipoConvenioDuplicatedValidatorTest {
         ConveniosArrec conveniosTarifas = createConvenioArrecMocked();
 
         when(conveniosTarifas.getTipoConvenio()).thenReturn(TipoConvenioEnum.ICMS);
-        when(repository.findIdConvenioArrecByTipoConvenioAndAgencia(conveniosTarifas.getTipoConvenio().getCode(),
+        when(repository.findIdConvenioArrecByTipoConvenioAndAgencia(conveniosTarifas.getTipoConvenio(),
                 conveniosTarifas.getIdBanco(), conveniosTarifas.getIdAgencia()))
                         .thenReturn(createListIdConvenioMocked());
 

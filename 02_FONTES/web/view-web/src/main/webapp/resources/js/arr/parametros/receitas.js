@@ -18,6 +18,7 @@ function selectRow(data) {
 }
 
 function selectTaxaRow(data) {
+    clearDtos();
     $("#receitas-form\\:subCodigo").val(data[0]);
     $("#receitas-form\\:descricaoSubCodigo").val(data[1]);
     $("#receitas-form\\:unidade").val(data[2]);
@@ -78,7 +79,7 @@ function disableTaxasFields() {
     $("#receitas-form\\:valorAcrescimo").attr('readonly', true);
     $("#receitas-form\\:add-taxa").attr('disabled', true);
     $("#receitas-form\\:update-add-taxa").attr('disabled', false);
-    
+
 }
 
 function enableTaxasFields() {

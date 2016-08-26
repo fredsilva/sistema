@@ -1,6 +1,7 @@
 package br.gov.to.sefaz.arr.persistence.repository;
 
 import br.gov.to.sefaz.arr.persistence.entity.ConveniosArrec;
+import br.gov.to.sefaz.arr.persistence.enums.TipoConvenioEnum;
 import br.gov.to.sefaz.persistence.enums.SituacaoEnum;
 import br.gov.to.sefaz.persistence.repository.BaseRepository;
 import org.springframework.stereotype.Repository;
@@ -28,7 +29,7 @@ public class ConveniosArrecRepository extends BaseRepository<ConveniosArrec, Lon
      * @param idAgencia    Id da Agência.
      * @return lista de IDs.
      */
-    public Collection<Long> findIdConvenioArrecByTipoConvenioAndAgencia(Integer tipoConvenio, Integer idBanco,
+    public Collection<Long> findIdConvenioArrecByTipoConvenioAndAgencia(TipoConvenioEnum tipoConvenio, Integer idBanco,
             Integer idAgencia) {
         return findColumn("idConvenio", select -> select
                 .where().equal("tipoConvenio", tipoConvenio)

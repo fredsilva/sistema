@@ -4,6 +4,7 @@ import br.gov.to.sefaz.business.service.validation.ValidationSuite;
 import br.gov.to.sefaz.exception.BusinessException;
 import br.gov.to.sefaz.seg.business.authentication.domain.LoginDto;
 import br.gov.to.sefaz.seg.business.authentication.domain.ResetPasswordDto;
+import br.gov.to.sefaz.seg.business.authentication.domain.SecurityErrorCodeType;
 import br.gov.to.sefaz.seg.business.authentication.domain.UsuarioSistemaAuthentication;
 import br.gov.to.sefaz.seg.business.authentication.factory.AuthenticationFactory;
 import br.gov.to.sefaz.seg.business.authentication.provider.LdapProvider;
@@ -60,7 +61,11 @@ public class LoginSistemaServiceImpl implements LoginSistemaService {
         try {
             ldapProvider.authenticate(dto.getCpf(), dto.getPasswd());
         } catch (SecurityException e) {
-            throw registerUserFailure(e, dto.getCpf());
+            if (!Objects.isNull(e.getErrorCode()) && SecurityErrorCodeType.AUTENTICATION.equals(e.getErrorCode())) {
+                throw registerUserFailure(e, dto.getCpf());
+            } else {
+                throw e;
+            }
         }
 
         return authenticateAndRegister(usuarioSistema, dto.getPasswd());

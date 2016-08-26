@@ -1,5 +1,6 @@
 package br.gov.to.sefaz.seg.business.authentication.service;
 
+import br.gov.to.sefaz.seg.business.authentication.domain.SecurityErrorCodeType;
 import org.springframework.security.core.AuthenticationException;
 
 /**
@@ -12,7 +13,7 @@ public class SecurityException extends AuthenticationException {
 
     private static final long serialVersionUID = -1139201823589305801L;
 
-    private int errorCode;
+    private SecurityErrorCodeType errorCode;
 
     public SecurityException(
             String msg) {
@@ -20,15 +21,27 @@ public class SecurityException extends AuthenticationException {
     }
 
     public SecurityException(
+            String msg, SecurityErrorCodeType errorCode) {
+        super(msg);
+        this.errorCode = errorCode;
+    }
+
+    public SecurityException(
             String msg, Throwable ex) {
         super(msg, ex);
     }
 
-    public int getErrorCode() {
+    public SecurityException(
+            String msg, SecurityErrorCodeType errorCode, Throwable ex) {
+        super(msg, ex);
+        this.errorCode = errorCode;
+    }
+
+    public SecurityErrorCodeType getErrorCode() {
         return errorCode;
     }
 
-    public void setErrorCode(int errorCode) {
+    public void setErrorCode(SecurityErrorCodeType errorCode) {
         this.errorCode = errorCode;
     }
 
