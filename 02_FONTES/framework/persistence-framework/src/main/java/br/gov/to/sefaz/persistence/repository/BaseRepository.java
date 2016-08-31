@@ -26,7 +26,8 @@ import java.util.function.Consumer;
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 12/05/2016 15:14:00
  */
-@SuppressWarnings({"PMD.TooManyMethods", "PMD.AbstractNaming", "PMD.AbstractClassWithoutAbstractMethod"})
+@SuppressWarnings({"PMD.TooManyMethods", "PMD.AbstractNaming", "PMD.AbstractClassWithoutAbstractMethod",
+        "PMD.ExcessivePublicCount"})
 public abstract class BaseRepository<E extends AbstractEntity<I>, I extends Serializable> {
 
     protected final Class<E> entityClass;
@@ -44,6 +45,7 @@ public abstract class BaseRepository<E extends AbstractEntity<I>, I extends Seri
     public List<E> findAll() {
         return findRepository.findAll(entityClass);
     }
+
 
     public List<E> findNative(String alias, Consumer<SelectBuilder> selectConsumer) {
         return findRepository.findNative(tableName, entityClass, alias, selectConsumer);
@@ -79,6 +81,11 @@ public abstract class BaseRepository<E extends AbstractEntity<I>, I extends Seri
 
     public <R> List<R> findColumn(String column, I i) {
         return findRepository.findColumn(entityClass, column, i);
+    }
+
+    public <R> R findOneColumnNative(String tableName, String alias, String column, Consumer<SelectBuilder>
+            selectConsumer) {
+        return findRepository.findOneColumnNative(tableName, alias, column, selectConsumer);
     }
 
     public <R> R findOneColumnNative(String alias, String column, Consumer<SelectBuilder> selectConsumer) {
@@ -139,6 +146,10 @@ public abstract class BaseRepository<E extends AbstractEntity<I>, I extends Seri
 
     public Long count(I i) {
         return findRepository.count(entityClass, i);
+    }
+
+    public boolean existsNative(String tableName, String alias, Consumer<SelectBuilder> selectHandler) {
+        return findRepository.existsNative(tableName, alias, selectHandler);
     }
 
     public boolean existsNative(String alias, Consumer<SelectBuilder> selectHandler) {

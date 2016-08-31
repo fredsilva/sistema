@@ -1,8 +1,8 @@
 package br.gov.to.sefaz.util.application;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.util.StringUtils;
 
 import java.util.Locale;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public class ApplicationUtil {
     public static String getSafeNameAuthenticatedUser() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
-        if (!Objects.isNull(authentication) && StringUtils.isEmpty(authentication.getName())) {
+        if (!Objects.isNull(authentication) && StringUtils.isNotEmpty(authentication.getName())) {
             return authentication.getName();
         }
 

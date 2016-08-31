@@ -136,7 +136,6 @@ public class ManutencaoCadastroFuncionalidadeMB extends DefaultCrudMB<OpcaoAplic
     public void loadAplicacoesPorModulo() {
         this.aplicacoesPorModulo = getFacade()
                 .findAplicacoesPorModulo(getDto().getAplicacaoModulo().getIdentificacaoModuloSistema());
-        loadIdentificacaoAplicacaoModulo();
     }
 
     /**
@@ -145,33 +144,8 @@ public class ManutencaoCadastroFuncionalidadeMB extends DefaultCrudMB<OpcaoAplic
     public void loadAplicacoesPorModuloOpen(Long identificacaoModulo) {
         this.aplicacoesPorModulo = getFacade()
                 .findAplicacoesPorModulo(identificacaoModulo);
-        loadIdentificacaoAplicacaoModulo();
     }
 
-    /**
-     * Seta o identificador da aplicação baseado na entidade.
-     */
-    public void loadIdentificacaoAplicacaoModulo() {
-        getDto().getAplicacaoModulo()
-                .setIdentificacaoAplicacaoModulo(null);
-        getDto().getAplicacaoModulo()
-                .setDescricaoAplicacaoModulo(null);
-
-        aplicacoesPorModulo.stream().findFirst()
-                .ifPresent(aplicacaoModulo -> {
-                    getDto().getAplicacaoModulo()
-                            .setIdentificacaoAplicacaoModulo(aplicacaoModulo.getIdentificacaoAplicacaoModulo());
-                    getDto().getAplicacaoModulo()
-                            .setDescricaoAplicacaoModulo(aplicacaoModulo.getDescricaoAplicacaoModulo());
-                });
-        getDto().setIdentificacaoAplicacaoModulo(getDto().getAplicacaoModulo().getIdentificacaoAplicacaoModulo());
-    }
-
-    @Override
-    public void update() {
-        getDto().getAplicacaoModulo().setIdentificacaoAplicacaoModulo(getDto().getIdentificacaoAplicacaoModulo());
-        super.update();
-    }
 
     public Collection<AplicacaoModulo> getAplicacoesPorModulo() {
         return aplicacoesPorModulo;
@@ -185,5 +159,25 @@ public class ManutencaoCadastroFuncionalidadeMB extends DefaultCrudMB<OpcaoAplic
         opcaoAplicacao.setAjudaOpcao(getDto().getAjudaOpcao());
         setDto(opcaoAplicacao);
         super.update();
+    }
+
+    @Override
+    public void update() {
+        prepareDto();
+        super.update();
+    }
+
+    @Override
+    public void save() {
+        prepareDto();
+        super.save();
+    }
+
+    private void prepareDto() {
+        getResultList().stream().filter(opcaoAplicacao -> opcaoAplicacao
+                .getAplicacaoModulo().getIdentificacaoModuloSistema()
+                .equals(getDto().getAplicacaoModulo().getIdentificacaoModuloSistema()))
+                .findFirst()
+                .ifPresent(opcaoAplicacao -> getDto().setAplicacaoModulo(opcaoAplicacao.getAplicacaoModulo()));
     }
 }

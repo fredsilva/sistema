@@ -61,10 +61,15 @@ public class TipoGruposCnaesServiceImpl extends DefaultCrudService<TipoGruposCna
     @Override
     public List<TipoGruposCnaes> findAll(TipoGruposCnaesFilter filter) {
         return getRepository()
-                .find("tgc", sb -> sb.innerJoin("tgc.gruposCnae", "gc").where()
+                .find("tgc", sb -> sb.leftJoin("tgc.gruposCnae", "gc").where()
                         .opt().equal("tgc.idGrupoCnae", filter.getIdGrupoCnae())
                         .and().opt().like("tgc.descricaoGrupo", filter.getDescricaoGrupo())
                         .and().opt().equal("gc.cnaeFiscal", filter.getCnaeFiscal()));
+    }
+
+    @Override
+    public Collection<TipoGruposCnaes> findAllActive() {
+        return getRepository().find("tgc", select -> select.where().equal("tgc.situacao", SituacaoEnum.ATIVO));
     }
 
     @Override

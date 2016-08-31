@@ -87,7 +87,7 @@
                             <f:selectItems value="#{arrEnumsMB.situacoes}"
                                     var="situacao"
                                     itemValue="#{situacao}"
-                                    itemLabel="#{arrEnumsMB.getSituacaoLabel(situacao)}"/>
+                                    itemLabel="#{situacao.getCodeLabel()}"/>
                         </h:selectOneMenu>
                     </div>
                     <div class="form-group col-md-2">
@@ -109,7 +109,11 @@
                                 styleClass="form-control decimal" maxlength="18">
                             <f:convertNumber locale="pt-BR" maxFractionDigits="2" maxIntegerDigits="12"/>
                         </h:inputText>
-                        <h:outputScript>$("#tipo-pedido-form\\:valor").maskMoney({thousands:'.', decimal:',', allowZero:true});</h:outputScript>
+                        <h:outputScript>$("#tipo-pedido-form\\:valor").maskMoney({
+                            thousands: '.',
+                            decimal: ',',
+                            allowZero: true
+                        });</h:outputScript>
                     </div>
                     <div class="form-group col-md-2 align-bottom">
                         <h:selectBooleanCheckbox value="#{pedidoTiposMB.dto.parecerAutomatico}" id="parecer"/>
@@ -145,7 +149,7 @@
                                     <f:selectItems value="#{arrEnumsMB.situacoes}"
                                             var="situacao"
                                             itemValue="#{situacao}"
-                                            itemLabel="#{arrEnumsMB.getSituacaoLabel(situacao)}"/>
+                                            itemLabel="#{situacao.getCodeLabel()}"/>
                                 </h:selectOneMenu>
                             </div>
                             <div class="form-group col-md-2 align-bottom">
@@ -196,7 +200,7 @@
                                     <f:selectItems value="#{arrEnumsMB.tiposPedidoAcoes}"
                                             var="tipoAcao"
                                             itemValue="#{tipoAcao}"
-                                            itemLabel="#{arrEnumsMB.getTiposPedidoAcaoLabel(tipoAcao)}"/>
+                                            itemLabel="#{tipoAcao.getCodeLabel()}"/>
                                     <f:ajax render="tipoCampo" execute="tiposAcao idTipoPedido"
                                             listener="#{pedidoTiposMB.loadTiposPedidoCampos()}"/>
                                 </h:selectOneMenu>
@@ -216,7 +220,7 @@
                                     <f:selectItems value="#{pedidoTiposMB.tiposPedidoCampos}"
                                             var="tipoCampo"
                                             itemValue="#{tipoCampo}"
-                                            itemLabel="#{arrEnumsMB.getTiposPedidoCampoLabel(tipoCampo)}"/>
+                                            itemLabel="#{tipoCampo.getCodeLabel()}"/>
                                 </h:selectOneMenu>
                             </div>
                             <div class="form-group col-md-2">
@@ -229,7 +233,7 @@
                                     <f:selectItems value="#{arrEnumsMB.situacoes}"
                                             var="situacao"
                                             itemValue="#{situacao}"
-                                            itemLabel="#{arrEnumsMB.getSituacaoLabel(situacao)}"/>
+                                            itemLabel="#{situacao.getCodeLabel()}"/>
                                 </h:selectOneMenu>
                             </div>
                             <div class="form-group col-md-2 align-bottom">
@@ -311,7 +315,7 @@
                                     <f:selectItems value="#{arrEnumsMB.situacoes}"
                                             var="situacao"
                                             itemValue="#{situacao}"
-                                            itemLabel="#{arrEnumsMB.getSituacaoLabel(situacao)}"/>
+                                            itemLabel="#{situacao.getCodeLabel()}"/>
                                 </h:selectOneMenu>
                             </div>
                             <div class='form-group col-md-2 text-right align-bottom'>

@@ -1,5 +1,6 @@
 package br.gov.to.sefaz.presentation.configuration;
 
+import br.gov.to.sefaz.presentation.component.ComponentPackageMarker;
 import br.gov.to.sefaz.presentation.managedbean.ManagedBeanPackageMarker;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -11,6 +12,6 @@ import org.springframework.context.annotation.Configuration;
  * @since 14/04/2016 18:30:00
  */
 @Configuration
-@ComponentScan(basePackageClasses = ManagedBeanPackageMarker.class)
+@ComponentScan(basePackageClasses = {ManagedBeanPackageMarker.class, ComponentPackageMarker.class})
 public class PresentationConfiguration {
 }

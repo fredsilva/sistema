@@ -1,14 +1,19 @@
 package br.gov.to.sefaz.seg.persistence.entity;
 
+import br.gov.to.sefaz.business.service.validation.custom.Cnpj;
+import br.gov.to.sefaz.business.service.validation.custom.Cpf;
 import br.gov.to.sefaz.persistence.entity.AbstractEntity;
+import org.hibernate.validator.constraints.NotEmpty;
 
 import java.util.Objects;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
+import javax.persistence.Transient;
 import javax.validation.constraints.Size;
 
 /**
@@ -24,19 +29,34 @@ public class UsuarioPrincipalEmpresa extends AbstractEntity<Long> {
     private static final long serialVersionUID = 6717758278394618207L;
 
     @Id
-    @NotNull
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_USUARIO_PRINCIPAL_EMPRESA")
+    @SequenceGenerator(name = "SQ_USUARIO_PRINCIPAL_EMPRESA", schema = "SEFAZ_SEG",
+            sequenceName = "SQ_USUARIO_PRINCIPAL_EMPRESA",
+            allocationSize = 1)
     @Column(name = "IDENTIFICACAO_USUARIO_PRINCIP")
     private Long identificacaoUsuarioPrincip;
 
-    @NotNull
-    @Size(min = 1, max = 20)
+    @Cnpj(message = "#{seg_msg['seg.usuarioPrincipalEmpresa.cnpj.incorreto']}")
+    @NotEmpty(message = "#{seg_msg['seg.usuarioPrincipalEmpresa.cnpj.vazio'}")
+    @Size(max = 14, message = "#{seg_msg['seg.usuarioPrincipalEmpresa.cnpj.tamanho']}")
     @Column(name = "CNPJ_EMPRESA")
     private String cnpjEmpresa;
 
-    @NotNull
-    @Size(min = 1, max = 11)
+    @Cpf(message = "#{seg_msg['seg.usuarioPrincipalEmpresa.cpf.incorreto']}")
+    @NotEmpty(message = "#{seg_msg['seg.usuarioPrincipalEmpresa.cpf.vazio'}")
+    @Size(max = 14, message = "#{seg_msg['seg.usuarioPrincipalEmpresa.cpf.tamanho']}")
     @Column(name = "CPF_USUARIO")
     private String cpfUsuario;
+
+    @Transient
+    private String nomeEmpresa;
+
+    @Transient
+    private String nomeUsuario;
+
+    @Transient
+    @Cnpj
+    private String eCnpj;
 
     public UsuarioPrincipalEmpresa() {
         // Construtor para inicialização por reflexão.
@@ -75,6 +95,30 @@ public class UsuarioPrincipalEmpresa extends AbstractEntity<Long> {
 
     public void setCpfUsuario(String cpfUsuario) {
         this.cpfUsuario = cpfUsuario;
+    }
+
+    public String getNomeEmpresa() {
+        return nomeEmpresa;
+    }
+
+    public void setNomeEmpresa(String nomeEmpresa) {
+        this.nomeEmpresa = nomeEmpresa;
+    }
+
+    public String getNomeUsuario() {
+        return nomeUsuario;
+    }
+
+    public void setNomeUsuario(String nomeUsuario) {
+        this.nomeUsuario = nomeUsuario;
+    }
+
+    public String getECnpj() {
+        return eCnpj;
+    }
+
+    public void setECnpj(String eCnpj) {
+        this.eCnpj = eCnpj;
     }
 
     @Override

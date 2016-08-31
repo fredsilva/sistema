@@ -43,7 +43,7 @@
                                 <f:selectItems value="#{arrEnumsMB.tiposConta}"
                                         var="tipoConta"
                                         itemValue="#{tipoConta}"
-                                        itemLabel="#{arrEnumsMB.getTiposContaLabel(tipoConta)}"/>
+                                        itemLabel="#{tipoConta.getCodeLabel()}"/>
                             </h:selectOneMenu>
                         </div>
                         <div class="form-group col-md-2">
@@ -116,7 +116,7 @@
                                 <f:selectItems value="#{arrEnumsMB.tiposConta}"
                                         var="tipoConta"
                                         itemValue="#{tipoConta}"
-                                        itemLabel="#{arrEnumsMB.getTiposContaLabel(tipoConta)}"/>
+                                        itemLabel="#{tipoConta.getCodeLabel()}"/>
                             </h:selectOneMenu>
                         </div>
                     </div>
@@ -132,14 +132,14 @@
                                 <f:selectItems value="#{arrEnumsMB.situacoes}"
                                         var="situacao"
                                         itemValue="#{situacao}"
-                                        itemLabel="#{arrEnumsMB.getSituacaoLabel(situacao)}"/>
+                                        itemLabel="#{situacao.getCodeLabel()}"/>
                             </h:selectOneMenu>
                         </div>
                         <div class="form-group col-md-2">
                             <h:outputLabel for="grupoCnae">#{arr_msg['parametros.planoContas.form.grupoCnae']}*</h:outputLabel>
                             <h:selectOneMenu value="#{planoContasMB.dto.idGruposCnaes}" id="grupoCnae"
                                     styleClass="form-control">
-                                <f:selectItems value="#{tipoGruposCnaeMB.resultList}" var="tipoGrupoCnae"
+                                <f:selectItems value="#{planoContasMB.tipoGruposCnaesCollection}" var="tipoGrupoCnae"
                                         itemLabel="#{tipoGrupoCnae.compositeName}"
                                         itemValue="#{tipoGrupoCnae.idGrupoCnae}"/>
                             </h:selectOneMenu>

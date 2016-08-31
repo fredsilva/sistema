@@ -7,6 +7,7 @@ import br.gov.to.sefaz.util.certificado.CertificadoDigitalUtil;
 import br.gov.to.sefaz.util.json.JsonMapperUtils;
 import br.gov.to.sefaz.util.message.MessageUtil;
 import br.gov.to.sefaz.util.message.SourceBundle;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -66,10 +67,9 @@ public class CertificadoDigitalMB {
         X509Certificate[] certChain = (X509Certificate[]) requestMap.get("javax.servlet.request.X509Certificate");
 
         UsuarioCertificadoViewBean retorno = new UsuarioCertificadoViewBean(certificadoDigitalUtil.getCpf(certChain)
-                .orElse(""),certificadoDigitalUtil.getNomeCompleto(certChain),
+                .orElse(StringUtils.EMPTY),certificadoDigitalUtil.getNomeCompleto(certChain),
                 certificadoDigitalUtil.getMail(certChain));
 
         return JsonMapperUtils.objectToJson(retorno);
     }
-
 }

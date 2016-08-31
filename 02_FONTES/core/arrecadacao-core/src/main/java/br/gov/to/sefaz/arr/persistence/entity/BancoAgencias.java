@@ -93,7 +93,7 @@ public class BancoAgencias extends AbstractEntity<BancoAgenciasPK> {
 
     @NotEmpty(message = "#{arr_msg['parametros.bancoAgencias.email.obrigatorio']}")
     @Size(max = 150, message = "#{arr_msg['parametros.bancoAgencias.email.tamanho']}")
-    @Pattern(regexp = "[A-Za-z0-9\\._-]+@[A-Za-z0-9\\._-]+\\.[A-Za-z]{2,4}+",
+    @Pattern(regexp = "([A-Za-z0-9\\._-]+@[A-Za-z0-9\\._-]+\\.[A-Za-z]{2,4}+)|",
             message = "#{arr_msg['parametros.bancoAgencias.email.incorreto']}")
     @Column(name = "EMAIL", nullable = false, length = 150)
     private String email;
@@ -327,5 +327,4 @@ public class BancoAgencias extends AbstractEntity<BancoAgenciasPK> {
                 + ", email='" + email + '\''
                 + '}';
     }
-
 }

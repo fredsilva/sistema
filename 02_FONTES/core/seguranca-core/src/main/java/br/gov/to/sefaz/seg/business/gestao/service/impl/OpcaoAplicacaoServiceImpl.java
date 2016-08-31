@@ -1,11 +1,14 @@
 package br.gov.to.sefaz.seg.business.gestao.service.impl;
 
 import br.gov.to.sefaz.business.service.impl.DefaultCrudService;
+import br.gov.to.sefaz.business.service.validation.ValidationContext;
+import br.gov.to.sefaz.business.service.validation.ValidationSuite;
 import br.gov.to.sefaz.persistence.query.structure.select.orderby.Order;
 import br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupType;
 import br.gov.to.sefaz.seg.business.authentication.handler.AuthenticatedUserHandler;
 import br.gov.to.sefaz.seg.business.gestao.service.OpcaoAplicacaoService;
 import br.gov.to.sefaz.seg.business.gestao.service.filter.OpcaoAplicacaoFilter;
+import br.gov.to.sefaz.seg.persistence.entity.AplicacaoModulo;
 import br.gov.to.sefaz.seg.persistence.entity.OpcaoAplicacao;
 import br.gov.to.sefaz.seg.persistence.repository.OpcaoAplicacaoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -60,5 +63,23 @@ public class OpcaoAplicacaoServiceImpl extends DefaultCrudService<OpcaoAplicacao
                 .collect(Collectors.toList());
 
         return getRepository().findByIds(roles);
+    }
+
+    @Override
+    public OpcaoAplicacao save(@ValidationSuite(context = ValidationContext.SAVE) OpcaoAplicacao entity) {
+        AplicacaoModulo aplicacaoModulo = entity.getAplicacaoModulo();
+        entity.setAplicacaoModulo(null);
+        entity = super.save(entity);
+        entity.setAplicacaoModulo(aplicacaoModulo);
+        return entity;
+    }
+
+    @Override
+    public OpcaoAplicacao update(@ValidationSuite(context = ValidationContext.UPDATE) OpcaoAplicacao entity) {
+        AplicacaoModulo aplicacaoModulo = entity.getAplicacaoModulo();
+        entity.setAplicacaoModulo(null);
+        entity = super.update(entity);
+        entity.setAplicacaoModulo(aplicacaoModulo);
+        return entity;
     }
 }

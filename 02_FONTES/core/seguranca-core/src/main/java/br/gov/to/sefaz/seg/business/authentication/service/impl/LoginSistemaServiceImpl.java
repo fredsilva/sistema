@@ -61,7 +61,7 @@ public class LoginSistemaServiceImpl implements LoginSistemaService {
         try {
             ldapProvider.authenticate(dto.getCpf(), dto.getPasswd());
         } catch (SecurityException e) {
-            if (!Objects.isNull(e.getErrorCode()) && SecurityErrorCodeType.AUTENTICATION.equals(e.getErrorCode())) {
+            if (!Objects.isNull(e.getErrorCode()) && SecurityErrorCodeType.AUTHENTICATION.equals(e.getErrorCode())) {
                 throw registerUserFailure(e, dto.getCpf());
             } else {
                 throw e;

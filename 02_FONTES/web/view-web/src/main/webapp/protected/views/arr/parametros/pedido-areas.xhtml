@@ -111,7 +111,7 @@
                         <h:selectOneMenu value="#{pedidoAreasMB.dto.situacao}" id="situacao" styleClass="form-control">
                             <f:selectItems value="#{arrEnumsMB.situacoes}" var="situacao"
                                     itemValue="#{situacao}"
-                                    itemLabel="#{arrEnumsMB.getSituacaoLabel(situacao)}"/>
+                                    itemLabel="#{situacao.getCodeLabel()}"/>
                         </h:selectOneMenu>
                     </div>
                     <div class="form-group col-md-2">
@@ -199,7 +199,7 @@
                             <h:selectOneMenu value="#{pedidoAreasMB.servidorDto.situacao}" id="situacaoServidor" styleClass="form-control">
                                 <f:selectItems value="#{arrEnumsMB.situacoes}" var="situacao"
                                         itemValue="#{situacao}"
-                                        itemLabel="#{arrEnumsMB.getSituacaoLabel(situacao)}"/>
+                                        itemLabel="#{situacao.getCodeLabel()}"/>
                             </h:selectOneMenu>
                         </div>
                         <div class="form-group col-md-6">

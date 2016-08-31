@@ -3,13 +3,14 @@ package br.gov.to.sefaz.arr.parametros.managedbean;
 import br.gov.to.sefaz.arr.parametros.business.facade.PlanoContasFacade;
 import br.gov.to.sefaz.arr.parametros.business.service.filter.PlanoContasFilter;
 import br.gov.to.sefaz.arr.persistence.entity.PlanoContas;
+import br.gov.to.sefaz.arr.persistence.entity.TipoGruposCnaes;
 import br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB;
 import br.gov.to.sefaz.util.message.MessageUtil;
-
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.Collection;
 import java.util.List;
-
+import java.util.Objects;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
@@ -24,6 +25,7 @@ import javax.faces.bean.ViewScoped;
 public class PlanoContasMB extends DefaultCrudMB<PlanoContas, Long> {
 
     private final PlanoContasFilter filter;
+    private Collection<TipoGruposCnaes> tipoGruposCnaesCollection;
 
     @Autowired
     public PlanoContasMB() {
@@ -56,5 +58,23 @@ public class PlanoContasMB extends DefaultCrudMB<PlanoContas, Long> {
         }
 
         setResultList(resultList);
+    }
+
+    /**
+     * Busca lista de {@link br.gov.to.sefaz.arr.persistence.entity.TipoGruposCnaes} com o status
+     * {@link br.gov.to.sefaz.persistence.enums.SituacaoEnum#ATIVO}.
+     * @return Lista de {@link TipoGruposCnaes}.
+     */
+    public Collection<TipoGruposCnaes> getTipoGruposCnaesCollection() {
+
+        if (Objects.isNull(tipoGruposCnaesCollection)) {
+            tipoGruposCnaesCollection = getFacade().findAllActiveTipoGruposCnaes();
+        }
+
+        return tipoGruposCnaesCollection;
+    }
+
+    public void setTipoGruposCnaesCollection(Collection<TipoGruposCnaes> tipoGruposCnaesCollection) {
+        this.tipoGruposCnaesCollection = tipoGruposCnaesCollection;
     }
 }

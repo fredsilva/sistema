@@ -6,6 +6,8 @@ function openModalInsert() {
     $("#editarFuncionalidadeModalTitle").hide();
     $("#manter-funcionalidade-form\\:labelIdFuncionalidade").hide();
     $("#idFuncionalidadeForm").text("");
+    //Alterado para forçar o combo filho a ser setado.
+    loadAplicacoesPorModulo($("#manter-funcionalidade-form\\:moduloForm").val());
     openModal("modalManterFuncionalidade");
 
 }
@@ -17,6 +19,8 @@ function editOpcao(data) {
     $("#editarFuncionalidadeModalTitle").show();
 
 
+    $("#manter-funcionalidade-form\\:moduloForm").val(data[8]);
+    loadAplicacoesPorModulo(data[8], data[7]);
     $("#manter-funcionalidade-form\\:labelIdFuncionalidade").show();
     $("#manter-funcionalidade-form\\:casoUsoForm").val(data[1]);
     $("#manter-funcionalidade-form\\:descricaoOpcaoForm").val(data[3]);
@@ -26,9 +30,6 @@ function editOpcao(data) {
     var html = $('<p/>').html(data[6]).text();
     $("#manter-funcionalidade-form\\:ajudaOpcaoSaveForm").val(html.length == 0 ? " " : html);
     $("#manter-funcionalidade-form\\:identificacaoAplicacaoModuloForm").val(data[7]);
-    $("#manter-funcionalidade-form\\:moduloForm").val(data[8]);
-
-    loadAplicacoesPorModulo(data[8]);
 
 }
 

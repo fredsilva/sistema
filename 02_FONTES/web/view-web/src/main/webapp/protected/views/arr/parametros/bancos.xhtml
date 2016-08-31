@@ -87,7 +87,7 @@
                                             <f:selectItems value="#{arrEnumsMB.situacoes}"
                                                            var="situacao"
                                                            itemValue="#{situacao}"
-                                                           itemLabel="#{arrEnumsMB.getSituacaoLabel(situacao)}"/>
+                                                           itemLabel="#{situacao.getCodeLabel()}"/>
                                         </h:selectOneMenu>
                                     </div>
                                 </div>

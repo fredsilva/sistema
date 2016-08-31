@@ -14,8 +14,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
  * @since 09/08/2016 10:56:59
  */
 @Configuration
-@ComponentScan(basePackageClasses = {BusinessPackageMarker.class,
-        RepositoryPackageMarker.class, CciEntityPackageMarker.class})
+@ComponentScan(basePackageClasses = {BusinessPackageMarker.class, CciEntityPackageMarker.class,
+        RepositoryPackageMarker.class})
 @EnableJpaRepositories(basePackageClasses = {RepositoryPackageMarker.class})
 public class CciCoreConfiguration {
 

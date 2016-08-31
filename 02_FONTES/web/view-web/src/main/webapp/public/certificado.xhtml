@@ -9,5 +9,8 @@ xmlns:c="http://java.sun.com/jsp/jstl/core">
 <c:when test="#{param['solicitacao'] != null}">
     #{certificadoDigitalMB.requestUser()}
 </c:when>
+<c:when test="#{param['atuarUsuarioPrincipal'] != null}">
+    #{usuarioPrincipalEmpresaMB.requestCompanyMainUser(param['cnpj'], param['cpf'])}
+</c:when>
 </c:choose>
 </f:view>

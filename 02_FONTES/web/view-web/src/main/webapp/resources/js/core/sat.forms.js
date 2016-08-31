@@ -54,6 +54,13 @@ $(document).on("keypress", ".justInteger", function (e) {
     return (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) ? false : true;
 });
 
+$(document).on("paste", ".justInteger", function (e) {
+    e.preventDefault();
+    e.target.value = e.originalEvent.clipboardData.getData('text').replace(/\D/g, '');
+    return false;
+
+});
+
 $(document).on("keypress", ".justCharacter", function(e){
     var inputValue = e.which;
     if(!((inputValue >= 65 && inputValue <= 90) || (inputValue >= 97 && inputValue <= 122))) {

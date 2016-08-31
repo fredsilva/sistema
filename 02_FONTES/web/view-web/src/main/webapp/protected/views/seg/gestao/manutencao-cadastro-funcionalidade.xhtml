@@ -113,13 +113,6 @@
                 </f:facet>
 
             </sat:table>
-            <h:form>
-                <a4j:jsFunction name="insertPerfil"
-                        action="#{manutencaoCadastroFuncionalidadeMB.loadAllPapelSistema}"
-                        render="panel-render"
-                        oncomplete="openModalInsert()">
-                </a4j:jsFunction>
-            </h:form>
 
             <div id="modalManterFuncionalidade" class="modal" tabindex="-1" role="dialog">
                 <div class="modal-dialog" id="manterFuncionalidadeModalDialog">
@@ -171,7 +164,7 @@
                                             #{seg_msg['seg.gestao.manutencaoCadastroFuncionalidade.form.aplicacao']}
                                         </h:outputLabel>
                                         <h:selectOneMenu
-                                                value="#{manutencaoCadastroFuncionalidadeMB.dto.aplicacaoModulo.identificacaoAplicacaoModulo}"
+                                                value="#{manutencaoCadastroFuncionalidadeMB.dto.identificacaoAplicacaoModulo}"
                                                 id="identificacaoAplicacaoModuloForm"
                                                 styleClass="form-control">
                                             <f:selectItems
@@ -242,6 +235,8 @@
                                         render="identificacaoAplicacaoModuloForm">
                                     <a4j:param name="moduloForm"
                                             assignTo="#{manutencaoCadastroFuncionalidadeMB.dto.aplicacaoModulo.identificacaoModuloSistema}"/>
+                                    <a4j:param name="aplicacaoForm"
+                                            assignTo="#{manutencaoCadastroFuncionalidadeMB.dto.identificacaoAplicacaoModulo}"/>
                                 </a4j:jsFunction>
 
                             </h:form>

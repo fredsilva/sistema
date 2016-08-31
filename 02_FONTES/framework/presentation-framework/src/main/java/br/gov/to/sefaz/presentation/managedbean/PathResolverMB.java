@@ -88,4 +88,12 @@ public class PathResolverMB {
                 + FacesContext.getCurrentInstance().getExternalContext().getRequestContextPath()
                 + "/public/certificado.jsf?solicitacao";
     }
+
+    public String getCertificadoECnpjPath() {
+        return "https://"
+                + FacesContext.getCurrentInstance().getExternalContext().getRequestServerName()
+                + ":" + AppProperties.getProperty("certificado.port").orElse("8844")
+                + FacesContext.getCurrentInstance().getExternalContext().getRequestContextPath()
+                + "/public/certificado.jsf?atuarUsuarioPrincipal";
+    }
 }

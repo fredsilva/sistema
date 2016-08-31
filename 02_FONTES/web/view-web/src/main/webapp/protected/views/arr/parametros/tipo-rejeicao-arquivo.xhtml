@@ -66,7 +66,7 @@
                                 <f:selectItems value="#{arrEnumsMB.situacoes}"
                                         var="situacao"
                                         itemValue="#{situacao}"
-                                        itemLabel="#{arrEnumsMB.getSituacaoLabel(situacao)}"/>
+                                        itemLabel="#{situacao.getCodeLabel()}"/>
                             </h:selectOneMenu>
                         </div>
                     </div>
@@ -76,8 +76,9 @@
                                 #{arr_msg['parametros.tipoRejeicao.botao.novarejeicao']}
                             </button>
                             <sat:saveUpdateButton label="#{arr_msg['parametros.tipoRejeicao.botao.salvar']}"
-                                    render="tipo-rejeicao-table" execute="codigo motivo situacao" styleClass="align-bottom"
-                                    onEvent="resetOnSuccess" crudMb="#{tipoRejeicaoArquivosMB}" />
+                                    render="tipo-rejeicao-table" execute="codigo motivo situacao"
+                                    styleClass="align-bottom"
+                                    onEvent="resetOnSuccess" crudMb="#{tipoRejeicaoArquivosMB}"/>
                         </div>
                     </div>
                 </h:form>

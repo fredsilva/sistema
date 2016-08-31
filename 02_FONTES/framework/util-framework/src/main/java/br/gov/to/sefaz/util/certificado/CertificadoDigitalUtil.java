@@ -65,7 +65,7 @@ public class CertificadoDigitalUtil {
      */
     public String getMail(X509Certificate... certChain) throws CertificateParsingException {
 
-        String mails = "";
+        String mails = StringUtils.EMPTY;
 
         for (X509Certificate certificate : certChain) {
             if (StringUtils.isEmpty(mails) || !isMail(mails)) {
@@ -86,7 +86,7 @@ public class CertificadoDigitalUtil {
      */
     public String getNomeCompleto(X509Certificate... certChain) throws CertificateParsingException {
 
-        String nome = "";
+        String nome = StringUtils.EMPTY;
 
         for (X509Certificate certificate : certChain) {
             if (StringUtils.isEmpty(nome)) {
@@ -97,6 +97,29 @@ public class CertificadoDigitalUtil {
         }
 
         return nome;
+    }
+
+    /**
+     * Retorna o nome do usuário do certificado digital através do {@link java.security.cert.X509Certificate}, caso o
+     * certificado digital não contenha um nome o valor retornado será vazio.
+     *
+     * @param certChain cadeia de certificado digital
+     * @return email do certificado digital
+     * @throws CertificateParsingException exception ao realizar o parser do certificdo digital
+     */
+    public String getCnpjEmpresa(X509Certificate... certChain) throws CertificateParsingException {
+
+        String cnpj = StringUtils.EMPTY;
+
+        for (X509Certificate certificate : certChain) {
+            if (StringUtils.isEmpty(cnpj)) {
+                String[] split = certificate.getSubjectX500Principal().getName().split(":");
+                String[] strings = split[1].split(",");
+                cnpj = strings[0];
+            }
+        }
+
+        return cnpj;
     }
 
     private boolean isMail(String email) {
@@ -129,7 +152,7 @@ public class CertificadoDigitalUtil {
                 && null != subjectAlternativeNames.iterator().next().get(1)) {
             return subjectAlternativeNames.iterator().next().get(1).toString();
         }
-        return "";
+        return StringUtils.EMPTY;
     }
 
     private Optional<String> valueIsCpf(Object value) {

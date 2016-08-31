@@ -246,10 +246,12 @@ public class LdapProvider {
     }
 
     /**
-     * Abre uma conexão com o AD (Active Directory) com um determinado usuário e senha.
+     * Abre uma conexão com o AD (Active Directory) com um determinado usuário e senha. Se a flag ssl passada por
+     * parâmetro for a conexão com AD será SSL/LDAPS.
      *
      * @param userName usuário no AD
      * @param password senha do usuário no AD
+     * @param ssl flag que indica se a conexão com AD será SSL
      * @return ctx contexto de conexão do AD
      * @throws SecurityException exceção de segurança no caso de login inválido.
      */
@@ -272,9 +274,9 @@ public class LdapProvider {
         LdapContext ctx = null;
         try {
             ctx = new InitialLdapContext(env, null);
-        } catch(AuthenticationException e) {
+        } catch (AuthenticationException e) {
             throw new SecurityException("Não foi possível abrir uma conexão com AD.", SecurityErrorCodeType
-                    .AUTENTICATION, e);
+                    .AUTHENTICATION, e);
         } catch (NamingException e) {
             throw new SecurityException("Não foi possível abrir uma conexão com AD.", e);
         }
