@@ -30,7 +30,7 @@ function selectTaxaRow(data) {
 }
 
 function selectRepasseRow(data) {
-    $("#receitas-form\\:tipoRepasse").val(data[5]);
+    $("#receitas-form\\:tiposRepasse").val(data[5]);
     $("#receitas-form\\:percentual").val(data[1]);
     $("#receitas-form\\:dataInicio").val(data[2]);
     $("#receitas-form\\:dataFinal").val(data[3]);

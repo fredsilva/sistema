@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.persistence.enums.TipoOperacaoEnum
-	c3134 [label=<<table title="br.gov.to.sefaz.seg.persistence.enums.TipoOperacaoEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoOperacaoEnum.html">
+	c5588 [label=<<table title="br.gov.to.sefaz.seg.persistence.enums.TipoOperacaoEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoOperacaoEnum.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> TipoOperacaoEnum </td></tr>
@@ -24,7 +24,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoOperacaoEnum.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.enums.SituacaoUsuarioEnum
-	c3135 [label=<<table title="br.gov.to.sefaz.seg.persistence.enums.SituacaoUsuarioEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SituacaoUsuarioEnum.html">
+	c5589 [label=<<table title="br.gov.to.sefaz.seg.persistence.enums.SituacaoUsuarioEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SituacaoUsuarioEnum.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> SituacaoUsuarioEnum </td></tr>
@@ -37,5 +37,19 @@ digraph G {
 <tr><td align="left" balign="left"> INATIVO </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SituacaoUsuarioEnum.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.persistence.enums.SituacaoSolicitacaoEnum
+	c5590 [label=<<table title="br.gov.to.sefaz.seg.persistence.enums.SituacaoSolicitacaoEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SituacaoSolicitacaoEnum.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
+<tr><td align="center" balign="center"> SituacaoSolicitacaoEnum </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> PENDENTE </td></tr>
+<tr><td align="left" balign="left"> CRIADO </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SituacaoSolicitacaoEnum.html", fontname="arial", fontcolor="black", fontsize=10.0];
 }
 

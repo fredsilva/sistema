@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.facade.CrudFacade<E, I extends java.io.Serializable>
-	c197031 [label=<<table title="br.gov.to.sefaz.business.facade.CrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../business/facade/CrudFacade.html">
+	c788813 [label=<<table title="br.gov.to.sefaz.business.facade.CrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../business/facade/CrudFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CrudFacade&lt;E, I extends Serializable&gt; </td></tr>
@@ -21,7 +21,6 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findOne(id : I) : E </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAll() : Collection&lt;E&gt; </font></td></tr>
-<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAll(list : Iterable&lt;I&gt;) : Collection&lt;E&gt; </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + save(entity : E) : E </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + save(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + update(entity : E) : E </font></td></tr>
@@ -30,14 +29,14 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../../business/facade/CrudFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.TipoRejeicaoArquivosFacade
-	c197210 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.TipoRejeicaoArquivosFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TipoRejeicaoArquivosFacade.html">
+	c789123 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.TipoRejeicaoArquivosFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TipoRejeicaoArquivosFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> TipoRejeicaoArquivosFacade </td></tr>
 		</table></td></tr>
 		</table>>, URL="./TipoRejeicaoArquivosFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoRejeicaoArquivosFacadeImpl
-	c197220 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoRejeicaoArquivosFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/TipoRejeicaoArquivosFacadeImpl.html">
+	c789133 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoRejeicaoArquivosFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/TipoRejeicaoArquivosFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoRejeicaoArquivosFacadeImpl </td></tr>
 		</table></td></tr>
@@ -49,8 +48,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./impl/TipoRejeicaoArquivosFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.arr.parametros.business.facade.TipoRejeicaoArquivosFacade implements br.gov.to.sefaz.business.facade.CrudFacade<E, I extends java.io.Serializable>
-	c197031:p -> c197210:p [dir=back,arrowtail=empty,style=dashed];
+	c788813:p -> c789123:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoRejeicaoArquivosFacadeImpl implements br.gov.to.sefaz.arr.parametros.business.facade.TipoRejeicaoArquivosFacade
-	c197210:p -> c197220:p [dir=back,arrowtail=empty,style=dashed];
+	c789123:p -> c789133:p [dir=back,arrowtail=empty,style=dashed];
 }
 

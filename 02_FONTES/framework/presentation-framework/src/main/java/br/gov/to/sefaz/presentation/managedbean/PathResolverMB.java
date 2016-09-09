@@ -3,6 +3,7 @@ package br.gov.to.sefaz.presentation.managedbean;
 import br.gov.to.sefaz.util.properties.AppProperties;
 import org.springframework.stereotype.Component;
 
+import java.io.IOException;
 import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
 
@@ -71,6 +72,23 @@ public class PathResolverMB {
 
     public String getLoginPath() {
         return publicViewPath("login.jsf");
+    }
+
+    /**
+     * Redireciona o usuário para a página passada por parâmetro. Deve-se passar o nome da página com / .
+     * @param url da página a ser acessada.
+     * @throws IOException exceção de IO.
+     */
+    public void redirect(String url) throws IOException {
+        FacesContext.getCurrentInstance().getExternalContext().redirect(getContextPath() + url);
+    }
+
+    /**
+     * Redireciona o usuário para a página Home.
+     * @throws IOException exceção de IO.
+     */
+    public void redirectToHome() throws IOException {
+        FacesContext.getCurrentInstance().getExternalContext().redirect(getHomePath());
     }
 
     public String getCertificadoLoginPath() {

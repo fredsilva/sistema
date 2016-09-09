@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.util.message.MessageUtil
-	c388 [label=<<table title="br.gov.to.sefaz.util.message.MessageUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MessageUtil.html">
+	c768 [label=<<table title="br.gov.to.sefaz.util.message.MessageUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MessageUtil.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MessageUtil </td></tr>
 		</table></td></tr>
@@ -21,10 +21,10 @@ digraph G {
 <tr><td align="left" balign="left"> + SEG : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + addMesage(bundle : String, severity : FacesMessage.Severity, key : String) </td></tr>
-<tr><td align="left" balign="left"> + addMesage(severity : FacesMessage.Severity, key : String) </td></tr>
-<tr><td align="left" balign="left"> + addMesage(bundle : String, key : String) </td></tr>
-<tr><td align="left" balign="left"> + addMesage(key : String) </td></tr>
+<tr><td align="left" balign="left"> + addMessage(bundle : String, severity : FacesMessage.Severity, key : String) </td></tr>
+<tr><td align="left" balign="left"> + addMessage(severity : FacesMessage.Severity, key : String) </td></tr>
+<tr><td align="left" balign="left"> + addMessage(bundle : String, key : String) </td></tr>
+<tr><td align="left" balign="left"> + addMessage(key : String) </td></tr>
 <tr><td align="left" balign="left"> + addMessages(bundle : String, severity : FacesMessage.Severity, keys : String[]) </td></tr>
 <tr><td align="left" balign="left"> + addMessages(severity : FacesMessage.Severity, keys : String[]) </td></tr>
 <tr><td align="left" balign="left"> + addMessages(keys : String[]) </td></tr>

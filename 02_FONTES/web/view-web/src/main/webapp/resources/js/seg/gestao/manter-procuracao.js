@@ -1,6 +1,6 @@
-function disableFIeldsOnSuccess(data) {
+function disableFieldsOnSuccess(data) {
     onSuccess(data, function () {
-        $("#procurador-form\\:de").attr("readonly", true);
+        $("#procurador-form\\:de").attr("disabled", true);
         $("#procurador-form\\:para").attr("disabled", true);
         $("#procurador-form\\:carregar-cpf").attr("disabled", true);
     });

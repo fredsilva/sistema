@@ -112,6 +112,7 @@
     <orderEntry type="library" name="Maven: com.sun.mail:javax.mail:1.5.5" level="project" />
     <orderEntry type="library" name="Maven: javax.activation:activation:1.1" level="project" />
     <orderEntry type="library" name="Maven: org.bouncycastle:bcprov-jdk15on:1.54" level="project" />
+    <orderEntry type="library" name="Maven: org.jsoup:jsoup:1.9.2" level="project" />
     <orderEntry type="module" module-name="arrecadacao-web" />
     <orderEntry type="module" module-name="arrecadacao-core" />
     <orderEntry type="module" module-name="contribuinte-core" />

@@ -24,8 +24,8 @@
                         <h:selectOneMenu styleClass="form-control" id="de"
                                 value="#{manterProcuracaoMB.usuarioIdentification}">
                             <f:selectItems value="#{manterProcuracaoMB.usuarioIdentifications}" var="ids"
-                                    itemValue="#{ids.id}"
-                                    itemLabel="#{ids.label}"/>
+                                    itemValue="#{ids.cpfCnpj}"
+                                    itemLabel="#{ids.nomeContribuinte}"/>
                         </h:selectOneMenu>
                     </div>
                     <div class="form-group col-md-4">
@@ -44,7 +44,7 @@
                                 action="#{manterProcuracaoMB.loadUsuarioProcurador}">
                             <f:ajax render="opcao-procurador-table usuario-nome"
                                     execute="de para"
-                                    onevent="disableFIeldsOnSuccess"/>
+                                    onevent="disableFieldsOnSuccess"/>
                         </h:commandButton>
                         <h:commandButton type="button" styleClass="btn btn-primary"
                                 value="#{seg_msg['seg.gestao.manterProcuracao.button.salvarProcuracao']}"

@@ -9,19 +9,19 @@ digraph G {
 	node [fontname="arial",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// br.gov.to.sefaz.util.mail.impl.MailSenderServiceImpl
-	c2588 [label=<<table title="br.gov.to.sefaz.util.mail.impl.MailSenderServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MailSenderServiceImpl.html">
+	// br.gov.to.sefaz.util.mail.impl.MailSenderImpl
+	c7642 [label=<<table title="br.gov.to.sefaz.util.mail.impl.MailSenderImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MailSenderImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> MailSenderServiceImpl </td></tr>
+<tr><td align="center" balign="center"> MailSenderImpl </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + MailSenderServiceImpl(javaMailSender : JavaMailSender) </td></tr>
+<tr><td align="left" balign="left"> + MailSenderImpl(javaMailSender : JavaMailSender) </td></tr>
 <tr><td align="left" balign="left"> + sendMail(subject : String, mailBody : String, isHtmlBody : boolean, mailTo : String[]) </td></tr>
 <tr><td align="left" balign="left"> + sendMail(subject : String, mailBody : String, isHtmlBody : boolean, attachedFile : byte[], mailTo : String[]) </td></tr>
 		</table></td></tr>
-		</table>>, URL="./MailSenderServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./MailSenderImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 }
 

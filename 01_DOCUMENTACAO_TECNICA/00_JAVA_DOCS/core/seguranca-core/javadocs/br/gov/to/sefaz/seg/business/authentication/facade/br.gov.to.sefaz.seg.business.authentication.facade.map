@@ -1,4 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./LoginSistemaFacade.html" title="br.gov.to.sefaz.seg.business.authentication.facade.LoginSistemaFacade" alt="" coords="16,11,440,139"/>
-<area shape="rect" id="node1" href="./LoginSistemaFacade.html" title="&lt;TABLE&gt;" alt="" coords="5,5,451,144"/>
+<area shape="rect" id="node1_0" href="./LoginSistemaFacade.html" title="br.gov.to.sefaz.seg.business.authentication.facade.LoginSistemaFacade" alt="" coords="16,97,440,225"/>
+<area shape="rect" id="node1" href="./LoginSistemaFacade.html" title="&lt;TABLE&gt;" alt="" coords="5,92,451,231"/>
+<area shape="rect" id="node2_1" href="./DefaultTemplateFacade.html" title="br.gov.to.sefaz.seg.business.authentication.facade.DefaultTemplateFacade" alt="" coords="485,11,824,312"/>
+<area shape="rect" id="node2" href="./DefaultTemplateFacade.html" title="&lt;TABLE&gt;" alt="" coords="475,5,835,317"/>
 </map>

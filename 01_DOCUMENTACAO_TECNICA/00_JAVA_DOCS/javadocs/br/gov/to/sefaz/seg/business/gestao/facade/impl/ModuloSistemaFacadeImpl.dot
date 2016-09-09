@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c117637 [label=<<table title="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/facade/impl/DefaultCrudFacade.html">
+	c493162 [label=<<table title="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/facade/impl/DefaultCrudFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultCrudFacade&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
 		</table></td></tr>
@@ -21,7 +21,6 @@ digraph G {
 <tr><td align="left" balign="left"> + DefaultCrudFacade(service : CrudService&lt;E, I&gt;) </td></tr>
 <tr><td align="left" balign="left"> + findOne(id : I) : E </td></tr>
 <tr><td align="left" balign="left"> + findAll() : Collection&lt;E&gt; </td></tr>
-<tr><td align="left" balign="left"> + findAll(list : Iterable&lt;I&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + save(entity : E) : E </td></tr>
 <tr><td align="left" balign="left"> + save(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + update(entity : E) : E </td></tr>
@@ -29,8 +28,15 @@ digraph G {
 <tr><td align="left" balign="left"> + delete(ids : Iterable&lt;I&gt;) </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../../../business/facade/impl/DefaultCrudFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.facade.ModuloSistemaFacade
+	c493250 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.ModuloSistemaFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ModuloSistemaFacade.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> ModuloSistemaFacade </td></tr>
+		</table></td></tr>
+		</table>>, URL="../ModuloSistemaFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.facade.impl.ModuloSistemaFacadeImpl
-	c117697 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.ModuloSistemaFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ModuloSistemaFacadeImpl.html">
+	c493264 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.ModuloSistemaFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ModuloSistemaFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ModuloSistemaFacadeImpl </td></tr>
 		</table></td></tr>
@@ -41,16 +47,9 @@ digraph G {
 <tr><td align="left" balign="left"> + ModuloSistemaFacadeImpl(service : ModuloSistemaService) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ModuloSistemaFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	// br.gov.to.sefaz.seg.business.gestao.facade.ModuloSistemaFacade
-	c117701 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.ModuloSistemaFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ModuloSistemaFacade.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> ModuloSistemaFacade </td></tr>
-		</table></td></tr>
-		</table>>, URL="../ModuloSistemaFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.business.gestao.facade.impl.ModuloSistemaFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.seg.persistence.entity.ModuloSistema, java.lang.Long>
-	c117637:p -> c117697:p [dir=back,arrowtail=empty];
+	c493162:p -> c493264:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.business.gestao.facade.impl.ModuloSistemaFacadeImpl implements br.gov.to.sefaz.seg.business.gestao.facade.ModuloSistemaFacade
-	c117701:p -> c117697:p [dir=back,arrowtail=empty,style=dashed];
+	c493250:p -> c493264:p [dir=back,arrowtail=empty,style=dashed];
 }
 

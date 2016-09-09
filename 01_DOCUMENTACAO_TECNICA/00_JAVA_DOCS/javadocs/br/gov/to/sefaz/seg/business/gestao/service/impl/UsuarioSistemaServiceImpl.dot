@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.service.impl.DefaultCrudService<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c214628 [label=<<table title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/service/impl/DefaultCrudService.html">
+	c854044 [label=<<table title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/service/impl/DefaultCrudService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultCrudService&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
 		</table></td></tr>
@@ -18,20 +18,19 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + DefaultCrudService(repository : BaseRepository&lt;E, I&gt;, sort : Sort) </td></tr>
+<tr><td align="left" balign="left"> + DefaultCrudService(repository : BaseRepository&lt;E, I&gt;) </td></tr>
 <tr><td align="left" balign="left"> + findOne(id : I) : E </td></tr>
 <tr><td align="left" balign="left"> + findAll() : Collection&lt;E&gt; </td></tr>
-<tr><td align="left" balign="left"> + findAll(list : Iterable&lt;I&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + save(entity : E) : E </td></tr>
 <tr><td align="left" balign="left"> + save(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + update(entity : E) : E </td></tr>
+<tr><td align="left" balign="left"> + update(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + delete(id : I) : Optional&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + delete(ids : Iterable&lt;I&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getDefaultSort() : Sort </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../../../business/service/impl/DefaultCrudService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.UsuarioSistemaService
-	c214690 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.UsuarioSistemaService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../UsuarioSistemaService.html">
+	c854149 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.UsuarioSistemaService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../UsuarioSistemaService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> UsuarioSistemaService </td></tr>
@@ -41,30 +40,67 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllByCpfAndName(cpf : Long, nome : String) : Collection&lt;UsuarioSistema&gt; </font></td></tr>
-<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + validate(usuarioSistema : UsuarioSistema) </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + validateLogin(usuarioSistema : UsuarioSistema) </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + blockUser(cpf : String) </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + unblockUser(cpf : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllUsuarioSistema(filter : UsuarioSistemaFilter) : List&lt;UsuarioSistema&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + saveNewUsuarioSistemaSolicitacaoSenha(usuarioSistema : UsuarioSistema) </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + resetPassword(usuarioSistema : UsuarioSistema) : UsuarioSistema </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + changePassword(dto : ChangePasswordDto) </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllUsuarioSistemaPerfil(filter : AtivarInativarPerfilFilter) : List&lt;UsuarioSistema&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllUsuarioSistemaManutencao(filter : ManterUsuarioSistemaFilter) : List&lt;UsuarioSistema&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + updateStatusUsuario(usuarioSistema : UsuarioSistema) : UsuarioSistema </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + updateUsuarioSistema(usuarioSistema : UsuarioSistema) : UsuarioSistema </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + saveUsuarioSistema(usuarioSistema : UsuarioSistema) : UsuarioSistema </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + enableUser(usuarioSistema : UsuarioSistema) </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + countByTipoUsuario(tipoUsuario : TipoUsuario) : Long </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllByFilter(filter : AtribuirPerfilFilter) : Collection&lt;UsuarioSistema&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findNomeByCpf(usuarioCpf : String) : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + updateAtribuirUsuarioPerfil(dto : UsuarioSistema) </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../UsuarioSistemaService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioSistemaServiceImpl
-	c214701 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioSistemaServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UsuarioSistemaServiceImpl.html">
+	c854183 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioSistemaServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UsuarioSistemaServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UsuarioSistemaServiceImpl </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
+<tr><td align="left" balign="left"> + LOGIN_CONTEXT : String </td></tr>
+<tr><td align="left" balign="left"> + CHANGE_PASSWD_CONTEXT : String </td></tr>
+<tr><td align="left" balign="left"> + SAVE_USUARIO_JUSTIFICATIVA_CONTEXT : String </td></tr>
+<tr><td align="left" balign="left"> + ATIVAR_INATIVAR_PERFIL_FILTER_CONTEXT : String </td></tr>
+<tr><td align="left" balign="left"> + ATRIBUIR_PERFIL_FILTER_CONTEXT : String </td></tr>
+<tr><td align="left" balign="left"> + MANTER_USUARIO_SISTEMA_FILTER_CONTEXT : String </td></tr>
+<tr><td align="left" balign="left"> + ATRIBUIR_PERFIL_USUARIO_CONTEXT : String </td></tr>
+<tr><td align="left" balign="left"> + TERMO_RESPONSABILIDADE_PDF : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + UsuarioSistemaServiceImpl(repository : UsuarioSistemaRepository) </td></tr>
+<tr><td align="left" balign="left"> + UsuarioSistemaServiceImpl(repository : UsuarioSistemaRepository, solicitacaoUsuarioService : SolicitacaoUsuarioService, usuarioPostoTrabalhoService : UsuarioPostoTrabalhoService, mailService : MailService, ldapProvider : LdapProvider, usuarioPerfilService : UsuarioPerfilService) </td></tr>
+<tr><td align="left" balign="left"> + findAll() : Collection&lt;UsuarioSistema&gt; </td></tr>
 <tr><td align="left" balign="left"> + findAllByCpfAndName(cpf : Long, nome : String) : Collection&lt;UsuarioSistema&gt; </td></tr>
-<tr><td align="left" balign="left"> + validate(usuarioSistema : UsuarioSistema) </td></tr>
+<tr><td align="left" balign="left"> + validateLogin(usuarioSistema : UsuarioSistema) </td></tr>
 <tr><td align="left" balign="left"> + blockUser(cpf : String) </td></tr>
+<tr><td align="left" balign="left"> + resetPassword(usuarioSistema : UsuarioSistema) : UsuarioSistema </td></tr>
+<tr><td align="left" balign="left"> + changePassword(dto : ChangePasswordDto) </td></tr>
 <tr><td align="left" balign="left"> + unblockUser(cpf : String) </td></tr>
+<tr><td align="left" balign="left"> + findAllUsuarioSistema(filter : UsuarioSistemaFilter) : List&lt;UsuarioSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + saveNewUsuarioSistemaSolicitacaoSenha(usuarioSistema : UsuarioSistema) </td></tr>
+<tr><td align="left" balign="left"> + save(entity : UsuarioSistema) : UsuarioSistema </td></tr>
+<tr><td align="left" balign="left"> + findAllUsuarioSistemaPerfil(filter : AtivarInativarPerfilFilter) : List&lt;UsuarioSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllUsuarioSistemaManutencao(filter : ManterUsuarioSistemaFilter) : List&lt;UsuarioSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + updateStatusUsuario(usuarioSistema : UsuarioSistema) : UsuarioSistema </td></tr>
+<tr><td align="left" balign="left"> + updateUsuarioSistema(usuarioSistema : UsuarioSistema) : UsuarioSistema </td></tr>
+<tr><td align="left" balign="left"> + saveUsuarioSistema(usuarioSistema : UsuarioSistema) : UsuarioSistema </td></tr>
+<tr><td align="left" balign="left"> + enableUser(usuarioSistema : UsuarioSistema) </td></tr>
+<tr><td align="left" balign="left"> + countByTipoUsuario(tipoUsuario : TipoUsuario) : Long </td></tr>
+<tr><td align="left" balign="left"> + findAllByFilter(filter : AtribuirPerfilFilter) : Collection&lt;UsuarioSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findNomeByCpf(usuarioCpf : String) : String </td></tr>
+<tr><td align="left" balign="left"> + updateAtribuirUsuarioPerfil(dto : UsuarioSistema) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./UsuarioSistemaServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioSistemaServiceImpl extends br.gov.to.sefaz.business.service.impl.DefaultCrudService<br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema, java.lang.String>
-	c214628:p -> c214701:p [dir=back,arrowtail=empty];
+	c854044:p -> c854183:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioSistemaServiceImpl implements br.gov.to.sefaz.seg.business.gestao.service.UsuarioSistemaService
-	c214690:p -> c214701:p [dir=back,arrowtail=empty,style=dashed];
+	c854149:p -> c854183:p [dir=back,arrowtail=empty,style=dashed];
 }
 

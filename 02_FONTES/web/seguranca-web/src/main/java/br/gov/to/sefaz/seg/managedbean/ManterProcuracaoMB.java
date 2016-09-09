@@ -1,17 +1,14 @@
 package br.gov.to.sefaz.seg.managedbean;
 
+import br.gov.to.sefaz.business.service.validation.custom.CpfValidatorHandler;
 import br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB;
 import br.gov.to.sefaz.seg.business.gestao.facade.ProcuracaoUsuarioFacade;
 import br.gov.to.sefaz.seg.managedbean.viewbean.OpcaoUsedConverter;
 import br.gov.to.sefaz.seg.managedbean.viewbean.OpcaoUsedViewBean;
-import br.gov.to.sefaz.seg.managedbean.viewbean.UsuarioCpfCnpjViewBean;
+import br.gov.to.sefaz.seg.persistence.entity.ListagemCpfProcuracao;
 import br.gov.to.sefaz.seg.persistence.entity.OpcaoAplicacao;
 import br.gov.to.sefaz.seg.persistence.entity.ProcuracaoOpcao;
 import br.gov.to.sefaz.seg.persistence.entity.ProcuracaoUsuario;
-import br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema;
-import br.gov.to.sefaz.util.formatter.FormatterUtil;
-import br.gov.to.sefaz.util.message.MessageUtil;
-import br.gov.to.sefaz.util.message.SourceBundle;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
@@ -34,14 +31,17 @@ public class ManterProcuracaoMB extends DefaultCrudMB<ProcuracaoUsuario, Long> {
     @Autowired
     private OpcaoUsedConverter opcaoUsedConverter;
     private List<OpcaoUsedViewBean> opcoesFromUsuario;
-    private List<UsuarioCpfCnpjViewBean> usuarioIdentifications;
+    private List<ListagemCpfProcuracao> usuarioIdentifications;
     private String usuarioIdentification;
     private String procuradorNome;
     private String procuradorCpf;
     private Long identificacaoOpcaoApplicacao;
 
+    private final CpfValidatorHandler cpfValidator;
+
     public ManterProcuracaoMB() {
         super(ProcuracaoUsuario::new);
+        this.cpfValidator = new CpfValidatorHandler();
         opcoesFromUsuario = new ArrayList<>();
         procuradorNome = "";
     }
@@ -62,28 +62,28 @@ public class ManterProcuracaoMB extends DefaultCrudMB<ProcuracaoUsuario, Long> {
     public void loadUsuarioProcurador() {
         procuradorNome = getFacade().findUsuarioNomeById(procuradorCpf);
 
-        UsuarioCpfCnpjViewBean usuarioCpfCnpj = usuarioIdentifications.stream()
-                .filter(u -> u.getId().equals(usuarioIdentification))
+        ListagemCpfProcuracao usuarioCpfCnpj = usuarioIdentifications.stream()
+                .filter(u -> u.getCpfCnpj().equals(usuarioIdentification))
                 .findFirst().get();
 
         List<OpcaoAplicacao> opcaoAplicacaos;
         ProcuracaoUsuario procuracaoUsuario;
 
-        if (usuarioCpfCnpj.isCpf()) {
-            procuracaoUsuario = getFacade().findProcuracaoByCpf(usuarioCpfCnpj.getId(), procuradorCpf);
-            opcaoAplicacaos = getFacade().getOpcoesFromUsuario();
+        if (cpfValidator.validateLength(usuarioCpfCnpj.getCpfCnpj())) {
+            procuracaoUsuario = getFacade().findProcuracaoByCpf(usuarioCpfCnpj.getCpfCnpj(), procuradorCpf);
         } else {
-            procuracaoUsuario = getFacade().findProcuracaoByCnpj(usuarioCpfCnpj.getId(), procuradorCpf);
-            opcaoAplicacaos = new ArrayList<>();
+            procuracaoUsuario = getFacade().findProcuracaoByCnpj(usuarioCpfCnpj.getCpfCnpj(), procuradorCpf);
         }
+
+        opcaoAplicacaos = getFacade().getOpcoesFromUsuario();
 
         if (!Objects.isNull(procuracaoUsuario)) {
             setDto(procuracaoUsuario);
         } else {
-            if (usuarioCpfCnpj.isCpf()) {
-                getDto().setCpfOrigem(usuarioCpfCnpj.getId());
+            if (cpfValidator.validateLength(usuarioCpfCnpj.getCpfCnpj())) {
+                getDto().setCpfOrigem(usuarioCpfCnpj.getCpfCnpj());
             } else {
-                getDto().setCnpjOrigem(usuarioCpfCnpj.getId());
+                getDto().setCnpjOrigem(usuarioCpfCnpj.getCpfCnpj());
             }
 
             getDto().setCpfProcurado(procuradorCpf);
@@ -107,17 +107,9 @@ public class ManterProcuracaoMB extends DefaultCrudMB<ProcuracaoUsuario, Long> {
      *
      * @return lista com o cpf e cnpj
      */
-    public List<UsuarioCpfCnpjViewBean> getUsuarioIdentifications() {
+    public List<ListagemCpfProcuracao> getUsuarioIdentifications() {
         if (usuarioIdentifications == null) {
-            usuarioIdentifications = new ArrayList<>();
-            UsuarioSistema usuarioSistema = getFacade().findUsuarioSistema();
-            String cpfUsuario = usuarioSistema.getCpfUsuario();
-            String cpfComboPattern = SourceBundle
-                    .getMessage(MessageUtil.SEG, "seg.gestao.manterProcuracao.usuarioCpfPattern");
-            String cpfComboLabel = String
-                    .format(cpfComboPattern, FormatterUtil.formatCpf(cpfUsuario));
-
-            usuarioIdentifications.add(new UsuarioCpfCnpjViewBean(cpfUsuario, cpfComboLabel, true));
+            usuarioIdentifications = getFacade().findAllCpfProcuracaoFromUsuario();
         }
 
         return usuarioIdentifications;

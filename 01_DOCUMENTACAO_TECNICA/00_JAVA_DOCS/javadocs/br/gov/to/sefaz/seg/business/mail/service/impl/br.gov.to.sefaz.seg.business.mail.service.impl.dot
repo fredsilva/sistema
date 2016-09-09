@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.mail.service.impl.MailServiceImpl
-	c21585 [label=<<table title="br.gov.to.sefaz.seg.business.mail.service.impl.MailServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MailServiceImpl.html">
+	c92659 [label=<<table title="br.gov.to.sefaz.seg.business.mail.service.impl.MailServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MailServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MailServiceImpl </td></tr>
 		</table></td></tr>
@@ -18,8 +18,9 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + MailServiceImpl(mailSenderService : MailSenderService, correioContribuinteService : CorreioContribuinteService) </td></tr>
+<tr><td align="left" balign="left"> + MailServiceImpl(mailSender : MailSender, correioContribuinteService : CorreioContribuinteService) </td></tr>
 <tr><td align="left" balign="left"> + sendMail(correioContribuintes : Collection&lt;CorreioContribuinte&gt;, isHtmlBody : boolean) </td></tr>
+<tr><td align="left" balign="left"> + sendMail(correioEletronico : CorreioEletronico) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./MailServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 }

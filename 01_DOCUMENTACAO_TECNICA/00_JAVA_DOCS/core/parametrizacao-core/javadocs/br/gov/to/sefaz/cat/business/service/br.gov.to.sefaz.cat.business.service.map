@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1_0" href="./MunicipioService.html" title="br.gov.to.sefaz.cat.business.service.MunicipioService" alt="" coords="16,11,304,104"/>
-<area shape="rect" id="node1" href="./MunicipioService.html" title="&lt;TABLE&gt;" alt="" coords="5,5,315,109"/>
-<area shape="rect" id="node2_1" href="./EstadoService.html" title="br.gov.to.sefaz.cat.business.service.EstadoService" alt="" coords="350,36,453,79"/>
-<area shape="rect" id="node2" href="./EstadoService.html" title="&lt;TABLE&gt;" alt="" coords="339,31,463,84"/>
-<area shape="rect" id="node3_2" href="./AtividadeEconomicaService.html" title="br.gov.to.sefaz.cat.business.service.AtividadeEconomicaService" alt="" coords="498,11,990,104"/>
-<area shape="rect" id="node3" href="./AtividadeEconomicaService.html" title="&lt;TABLE&gt;" alt="" coords="487,5,1001,109"/>
-</map>

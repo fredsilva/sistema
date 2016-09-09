@@ -1,4 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./BaseRepository.html" title="br.gov.to.sefaz.persistence.repository.BaseRepository" alt="" coords="16,11,440,53"/>
-<area shape="rect" id="node1" href="./BaseRepository.html" title="&lt;TABLE&gt;" alt="" coords="5,5,451,59"/>
+<area shape="rect" id="node1_0" href="./PersistRepository.html" title="br.gov.to.sefaz.persistence.repository.PersistRepository" alt="" coords="16,271,588,624"/>
+<area shape="rect" id="node1" href="./PersistRepository.html" title="&lt;TABLE&gt;" alt="" coords="5,265,599,629"/>
+<area shape="rect" id="node2_1" href="./FindRepository.html" title="br.gov.to.sefaz.persistence.repository.FindRepository" alt="" coords="633,63,1389,832"/>
+<area shape="rect" id="node2" href="./FindRepository.html" title="&lt;TABLE&gt;" alt="" coords="623,57,1400,837"/>
+<area shape="rect" id="node3_2" href="./BaseRepository.html" title="br.gov.to.sefaz.persistence.repository.BaseRepository" alt="" coords="1435,11,2169,884"/>
+<area shape="rect" id="node3" href="./BaseRepository.html" title="&lt;TABLE&gt;" alt="" coords="1424,5,2180,889"/>
 </map>

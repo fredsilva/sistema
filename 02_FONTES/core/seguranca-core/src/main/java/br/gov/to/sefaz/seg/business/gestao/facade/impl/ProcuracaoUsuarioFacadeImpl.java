@@ -4,12 +4,13 @@ import br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade;
 import br.gov.to.sefaz.exception.BusinessException;
 import br.gov.to.sefaz.seg.business.authentication.handler.AuthenticatedUserHandler;
 import br.gov.to.sefaz.seg.business.gestao.facade.ProcuracaoUsuarioFacade;
+import br.gov.to.sefaz.seg.business.gestao.service.ListagemCpfProcuracaoService;
 import br.gov.to.sefaz.seg.business.gestao.service.OpcaoAplicacaoService;
 import br.gov.to.sefaz.seg.business.gestao.service.ProcuracaoUsuarioService;
 import br.gov.to.sefaz.seg.business.gestao.service.UsuarioSistemaService;
+import br.gov.to.sefaz.seg.persistence.entity.ListagemCpfProcuracao;
 import br.gov.to.sefaz.seg.persistence.entity.OpcaoAplicacao;
 import br.gov.to.sefaz.seg.persistence.entity.ProcuracaoUsuario;
-import br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema;
 import br.gov.to.sefaz.util.message.MessageUtil;
 import br.gov.to.sefaz.util.message.SourceBundle;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,13 +31,15 @@ public class ProcuracaoUsuarioFacadeImpl extends DefaultCrudFacade<ProcuracaoUsu
 
     private final OpcaoAplicacaoService opcaoService;
     private final UsuarioSistemaService usuarioService;
+    private final ListagemCpfProcuracaoService listagemCpfProcuracaoService;
 
     @Autowired
     public ProcuracaoUsuarioFacadeImpl(ProcuracaoUsuarioService service, OpcaoAplicacaoService opcaoService,
-            UsuarioSistemaService usuarioService) {
+            UsuarioSistemaService usuarioService, ListagemCpfProcuracaoService listagemCpfProcuracaoService) {
         super(service);
         this.opcaoService = opcaoService;
         this.usuarioService = usuarioService;
+        this.listagemCpfProcuracaoService = listagemCpfProcuracaoService;
     }
 
     @Override
@@ -50,8 +53,8 @@ public class ProcuracaoUsuarioFacadeImpl extends DefaultCrudFacade<ProcuracaoUsu
     }
 
     @Override
-    public UsuarioSistema findUsuarioSistema() {
-        return AuthenticatedUserHandler.getUsuarioSistema();
+    public List<ListagemCpfProcuracao> findAllCpfProcuracaoFromUsuario() {
+        return listagemCpfProcuracaoService.findByCpf(AuthenticatedUserHandler.getCpf());
     }
 
     @Override

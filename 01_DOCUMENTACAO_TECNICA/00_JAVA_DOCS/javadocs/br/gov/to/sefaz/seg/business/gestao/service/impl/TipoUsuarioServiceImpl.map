@@ -1,8 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="../../../../../business/service/impl/DefaultCrudService.html" title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" alt="" coords="16,11,457,243"/>
-<area shape="rect" id="node1" href="../../../../../business/service/impl/DefaultCrudService.html" title="&lt;TABLE&gt;" alt="" coords="5,5,468,248"/>
-<area shape="rect" id="node3_1" href="./TipoUsuarioServiceImpl.html" title="br.gov.to.sefaz.seg.business.gestao.service.impl.TipoUsuarioServiceImpl" alt="" coords="271,301,669,412"/>
-<area shape="rect" id="node3" href="./TipoUsuarioServiceImpl.html" title="&lt;TABLE&gt;" alt="" coords="260,296,680,417"/>
-<area shape="rect" id="node2_2" href="../TipoUsuarioService.html" title="br.gov.to.sefaz.seg.business.gestao.service.TipoUsuarioService" alt="" coords="503,80,904,173"/>
-<area shape="rect" id="node2" href="../TipoUsuarioService.html" title="&lt;TABLE&gt;" alt="" coords="492,75,915,179"/>
+<area shape="rect" id="node1_0" href="../TipoUsuarioService.html" title="br.gov.to.sefaz.seg.business.gestao.service.TipoUsuarioService" alt="" coords="205,11,563,139"/>
+<area shape="rect" id="node1" href="../TipoUsuarioService.html" title="&lt;TABLE&gt;" alt="" coords="195,5,573,144"/>
+<area shape="rect" id="node2_1" href="./TipoUsuarioServiceImpl.html" title="br.gov.to.sefaz.seg.business.gestao.service.impl.TipoUsuarioServiceImpl" alt="" coords="16,197,752,325"/>
+<area shape="rect" id="node2" href="./TipoUsuarioServiceImpl.html" title="&lt;TABLE&gt;" alt="" coords="5,192,763,331"/>
 </map>

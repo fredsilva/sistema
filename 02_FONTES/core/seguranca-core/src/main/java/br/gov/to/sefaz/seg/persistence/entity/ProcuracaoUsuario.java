@@ -50,10 +50,15 @@ public class ProcuracaoUsuario extends AbstractEntity<Long> {
     @NotEmpty(message = "#{seg_msg['seg.geral.procuracaoUsuario.cpfProcurado.vazio']}")
     private String cpfProcurado;
 
-    @JoinColumn(name = "CPF_PROCURADO", referencedColumnName = "CPF_USUARIO",
+    @JoinColumn(name = "CPF_ORIGEM", referencedColumnName = "CPF_CNPJ",
             updatable = false, insertable = false)
     @OneToOne
-    private UsuarioSistema usuarioSistema;
+    private ListagemCpfProcuracao cpfOrigemProcuracao;
+
+    @JoinColumn(name = "CNPJ_ORIGEM", referencedColumnName = "CPF_CNPJ",
+            updatable = false, insertable = false)
+    @OneToOne
+    private ListagemCpfProcuracao cnpjOrigemProcuracao;
 
     @JoinColumn(name = "IDENTIFICACAO_PROCUR_USUARIO", referencedColumnName = "IDENTIFICACAO_PROCUR_USUARIO",
             updatable = false, insertable = false)
@@ -119,12 +124,20 @@ public class ProcuracaoUsuario extends AbstractEntity<Long> {
         this.procuracaoOpcoes = procuracaoOpcoes;
     }
 
-    public UsuarioSistema getUsuarioSistema() {
-        return usuarioSistema;
+    public ListagemCpfProcuracao getCpfOrigemProcuracao() {
+        return cpfOrigemProcuracao;
     }
 
-    public void setUsuarioSistema(UsuarioSistema usuarioSistema) {
-        this.usuarioSistema = usuarioSistema;
+    public void setCpfOrigemProcuracao(ListagemCpfProcuracao cpfOrigemProcuracao) {
+        this.cpfOrigemProcuracao = cpfOrigemProcuracao;
+    }
+
+    public ListagemCpfProcuracao getCnpjOrigemProcuracao() {
+        return cnpjOrigemProcuracao;
+    }
+
+    public void setCnpjOrigemProcuracao(ListagemCpfProcuracao cnpjOrigemProcuracao) {
+        this.cnpjOrigemProcuracao = cnpjOrigemProcuracao;
     }
 
     @Override

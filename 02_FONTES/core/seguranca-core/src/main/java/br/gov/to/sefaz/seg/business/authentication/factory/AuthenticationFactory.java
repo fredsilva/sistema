@@ -15,6 +15,7 @@ import br.gov.to.sefaz.seg.persistence.repository.UsuarioPerfilRepository;
 import br.gov.to.sefaz.util.formatter.FormatterUtil;
 import br.gov.to.sefaz.util.message.MessageUtil;
 import br.gov.to.sefaz.util.message.SourceBundle;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
@@ -36,7 +37,7 @@ public class AuthenticationFactory {
 
     private final UsuarioPerfilRepository usuarioPerfilRepository;
     private final ProcuracaoUsuarioRepository procuracaoUsuarioRepository;
-    public static final String CPF_PROCURACAO_PATTERN = "%s (CPF: %s)";
+    public static final String PROCURACAO_PATTERN = "%s (%s: %s)";
 
     @Autowired
     public AuthenticationFactory(UsuarioPerfilRepository usuarioPerfilRepository,
@@ -61,11 +62,13 @@ public class AuthenticationFactory {
 
         Set<UsuarioPerfil> usuarioPerfis = usuarioPerfilRepository
                 .findAllByUsuarioSistema(usuarioSistema.getCpfUsuario(), SituacaoUsuarioEnum.ATIVO);
+
         List<PerfilSistema> perfis = usuarioPerfis.stream()
                 .map(UsuarioPerfil::getPerfisSistema)
                 .collect(Collectors.toList());
-        Set<ProcuracaoUsuario> procuracaoUsuarios = procuracaoUsuarioRepository.findAllByUsuarioSistema(usuarioSistema
+        Set<ProcuracaoUsuario> procuracaoUsuarios = procuracaoUsuarioRepository.findAllByCpfProcurado(usuarioSistema
                 .getCpfUsuario());
+
         fillRoleGroupManager(roleGroupManager, perfis);
         fillProcuracaoGroupManager(roleGroupManager, procuracaoUsuarios);
 
@@ -107,18 +110,39 @@ public class AuthenticationFactory {
     }
 
     private RoleGroupKey createProcuracaoGroupKey(ProcuracaoUsuario procuracaoUsuario) {
+        String idType;
         String nomeCompletoUsuario;
+        String formatCpfCnpj;
 
-        if (!procuracaoUsuario.getCpfOrigem().equals(procuracaoUsuario.getUsuarioSistema().getCpfUsuario())) {
-            nomeCompletoUsuario = procuracaoUsuario.getUsuarioSistema().getNomeCompletoUsuario();
+        if (StringUtils.isNotEmpty(procuracaoUsuario.getCpfOrigem())) {
+            nomeCompletoUsuario = getNomeCpfProcurador(procuracaoUsuario);
+            formatCpfCnpj = FormatterUtil.formatCpf(procuracaoUsuario.getCpfOrigem());
+            idType = SourceBundle.getMessage(MessageUtil.SEG, "seg.geral.procuracaoUsuario.cpf");
+
         } else {
-            nomeCompletoUsuario = SourceBundle.getMessage(MessageUtil.SEG, "seg.geral.procuracaoUsuario.voceMesmo");
+            nomeCompletoUsuario = procuracaoUsuario.getCnpjOrigemProcuracao().getNome();
+            formatCpfCnpj = FormatterUtil.formatCpf(procuracaoUsuario.getCnpjOrigem());
+            idType = SourceBundle.getMessage(MessageUtil.SEG, "seg.geral.procuracaoUsuario.cnpj");
+
         }
 
-        String formatCpf = FormatterUtil.formatCpf(procuracaoUsuario.getCpfProcurado());
-        String description = String.format(CPF_PROCURACAO_PATTERN, nomeCompletoUsuario, formatCpf);
+        String description = String.format(PROCURACAO_PATTERN,
+                StringUtils.trimToEmpty(nomeCompletoUsuario), idType, formatCpfCnpj);
 
         return new RoleGroupKey(RoleGroupType.PROCURACAO, procuracaoUsuario.getId(), description);
+    }
+
+    private String getNomeCpfProcurador(ProcuracaoUsuario procuracaoUsuario) {
+        String nomeCompletoUsuario;
+        nomeCompletoUsuario = SourceBundle.getMessage(MessageUtil.SEG, "seg.geral.procuracaoUsuario.voceMesmo");
+        if (isProcuradorSameAsProcurado(procuracaoUsuario)) {
+            nomeCompletoUsuario = procuracaoUsuario.getCpfOrigemProcuracao().getNome();
+        }
+        return nomeCompletoUsuario;
+    }
+
+    private boolean isProcuradorSameAsProcurado(ProcuracaoUsuario procuracaoUsuario) {
+        return procuracaoUsuario.getCpfProcurado().equals(procuracaoUsuario.getCpfOrigem());
     }
 
     private  List<String> extractProcuracoes(ProcuracaoUsuario procuracaoUsuario) {

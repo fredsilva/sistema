@@ -25,16 +25,15 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + DefaultCrudService(repository : BaseRepository&lt;E, I&gt;, sort : Sort) </td></tr>
+<tr><td align="left" balign="left"> + DefaultCrudService(repository : BaseRepository&lt;E, I&gt;) </td></tr>
 <tr><td align="left" balign="left"> + findOne(id : I) : E </td></tr>
 <tr><td align="left" balign="left"> + findAll() : Collection&lt;E&gt; </td></tr>
-<tr><td align="left" balign="left"> + findAll(list : Iterable&lt;I&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + save(entity : E) : E </td></tr>
 <tr><td align="left" balign="left"> + save(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + update(entity : E) : E </td></tr>
+<tr><td align="left" balign="left"> + update(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + delete(id : I) : Optional&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + delete(ids : Iterable&lt;I&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getDefaultSort() : Sort </td></tr>
 		</table></td></tr>
 		</table>>, URL="./DefaultCrudService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 }

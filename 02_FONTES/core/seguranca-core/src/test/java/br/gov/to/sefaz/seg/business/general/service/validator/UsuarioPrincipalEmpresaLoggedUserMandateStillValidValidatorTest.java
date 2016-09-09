@@ -74,7 +74,7 @@ public class UsuarioPrincipalEmpresaLoggedUserMandateStillValidValidatorTest {
         when(AuthenticatedUserHandler.isAuthenticated()).thenReturn(true);
         when(AuthenticatedUserHandler.getCpf()).thenReturn(CPF);
         when(usuarioPrincipalEmpresa.getCnpjEmpresa()).thenReturn(CNPJ);
-        when(usuarioPrincipalEmpresaRepository.isMandatoStillValid(CPF)).thenReturn(false);
+        when(usuarioPrincipalEmpresaRepository.isMandatoStillValid(CPF, CNPJ.substring(0,8))).thenReturn(false);
 
         Set<CustomViolation> violationSet = validator.validate(usuarioPrincipalEmpresa);
 
@@ -88,7 +88,8 @@ public class UsuarioPrincipalEmpresaLoggedUserMandateStillValidValidatorTest {
 
         when(AuthenticatedUserHandler.isAuthenticated()).thenReturn(true);
         when(AuthenticatedUserHandler.getCpf()).thenReturn(CPF);
-        when(usuarioPrincipalEmpresaRepository.isMandatoStillValid(CPF)).thenReturn(true);
+        when(usuarioPrincipalEmpresa.getCnpjEmpresa()).thenReturn(CNPJ);
+        when(usuarioPrincipalEmpresaRepository.isMandatoStillValid(CPF, CNPJ.substring(0,8))).thenReturn(true);
 
         Set<CustomViolation> violationSet = validator.validate(usuarioPrincipalEmpresa);
 

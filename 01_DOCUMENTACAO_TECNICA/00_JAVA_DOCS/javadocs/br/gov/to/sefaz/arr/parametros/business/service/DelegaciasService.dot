@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.service.CrudService<E, I extends java.io.Serializable>
-	c91033 [label=<<table title="br.gov.to.sefaz.business.service.CrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../business/service/CrudService.html">
+	c348308 [label=<<table title="br.gov.to.sefaz.business.service.CrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../business/service/CrudService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CrudService&lt;E, I extends Serializable&gt; </td></tr>
@@ -21,23 +21,23 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findOne(id : I) : E </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAll() : Collection&lt;E&gt; </font></td></tr>
-<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAll(list : Iterable&lt;I&gt;) : Collection&lt;E&gt; </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + save(entity : E) : E </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + save(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + update(entity : E) : E </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + update(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + delete(id : I) : Optional&lt;E&gt; </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + delete(ids : Iterable&lt;I&gt;) </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../../business/service/CrudService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.DelegaciasService
-	c91246 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.DelegaciasService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DelegaciasService.html">
+	c348652 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.DelegaciasService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DelegaciasService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> DelegaciasService </td></tr>
 		</table></td></tr>
 		</table>>, URL="./DelegaciasService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.impl.DelegaciasServiceImpl
-	c91273 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.DelegaciasServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/DelegaciasServiceImpl.html">
+	c348679 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.DelegaciasServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/DelegaciasServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DelegaciasServiceImpl </td></tr>
 		</table></td></tr>
@@ -49,8 +49,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./impl/DelegaciasServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.arr.parametros.business.service.DelegaciasService implements br.gov.to.sefaz.business.service.CrudService<E, I extends java.io.Serializable>
-	c91033:p -> c91246:p [dir=back,arrowtail=empty,style=dashed];
+	c348308:p -> c348652:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.arr.parametros.business.service.impl.DelegaciasServiceImpl implements br.gov.to.sefaz.arr.parametros.business.service.DelegaciasService
-	c91246:p -> c91273:p [dir=back,arrowtail=empty,style=dashed];
+	c348652:p -> c348679:p [dir=back,arrowtail=empty,style=dashed];
 }
 

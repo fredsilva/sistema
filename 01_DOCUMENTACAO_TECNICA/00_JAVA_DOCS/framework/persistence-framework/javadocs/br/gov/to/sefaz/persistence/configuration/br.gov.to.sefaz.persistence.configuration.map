@@ -1,6 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./PersistenceConfiguration.html" title="br.gov.to.sefaz.persistence.configuration.PersistenceConfiguration" alt="" coords="16,11,971,156"/>
-<area shape="rect" id="node1" href="./PersistenceConfiguration.html" title="&lt;TABLE&gt;" alt="" coords="5,5,981,161"/>
-<area shape="rect" id="node2_1" href="./EntityPackageMarker.html" title="br.gov.to.sefaz.persistence.configuration.EntityPackageMarker" alt="" coords="1016,62,1160,105"/>
-<area shape="rect" id="node2" href="./EntityPackageMarker.html" title="&lt;TABLE&gt;" alt="" coords="1005,57,1171,110"/>
+<area shape="rect" id="node1_0" href="./SatParseDialect.html" title="br.gov.to.sefaz.persistence.configuration.SatParseDialect" alt="" coords="16,37,292,130"/>
+<area shape="rect" id="node1" href="./SatParseDialect.html" title="&lt;TABLE&gt;" alt="" coords="5,31,303,135"/>
+<area shape="rect" id="node2_1" href="./PersistenceConfiguration.html" title="br.gov.to.sefaz.persistence.configuration.PersistenceConfiguration" alt="" coords="338,11,1293,156"/>
+<area shape="rect" id="node2" href="./PersistenceConfiguration.html" title="&lt;TABLE&gt;" alt="" coords="327,5,1303,161"/>
+<area shape="rect" id="node3_2" href="./EntityPackageMarker.html" title="br.gov.to.sefaz.persistence.configuration.EntityPackageMarker" alt="" coords="1338,62,1482,105"/>
+<area shape="rect" id="node3" href="./EntityPackageMarker.html" title="&lt;TABLE&gt;" alt="" coords="1327,57,1493,110"/>
+<area shape="rect" id="node4_3" href="./AuditableTablesIdentifier.html" title="br.gov.to.sefaz.persistence.configuration.AuditableTablesIdentifier" alt="" coords="1528,37,1844,130"/>
+<area shape="rect" id="node4" href="./AuditableTablesIdentifier.html" title="&lt;TABLE&gt;" alt="" coords="1517,31,1855,135"/>
 </map>

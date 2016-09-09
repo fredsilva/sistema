@@ -8,6 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
+ * Implementação custom de um {@link ConditionsParser} para regras especificas do projeto SAT,
+ * visando colunas de auditoria.
+ *
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 04/07/2016 16:35:00
  */

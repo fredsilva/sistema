@@ -10,12 +10,13 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.entity.AbstractEntity<I extends java.io.Serializable>
-	c116772 [label=<<table title="br.gov.to.sefaz.persistence.entity.AbstractEntity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/entity/AbstractEntity.html">
+	c491369 [label=<<table title="br.gov.to.sefaz.persistence.entity.AbstractEntity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/entity/AbstractEntity.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractEntity&lt;I extends Serializable&gt; </font></td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
+<tr><td align="left" balign="left"> + SIM : String </td></tr>
+<tr><td align="left" balign="left"> + NAO : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + AbstractEntity() </td></tr>
@@ -28,8 +29,8 @@ digraph G {
 <tr><td align="left" balign="left"> + setUsuarioAlteracao(usuarioAlteracao : String) </td></tr>
 <tr><td align="left" balign="left"> + getDataAlteracao() : LocalDateTime </td></tr>
 <tr><td align="left" balign="left"> + setDataAlteracao(dataAlteracao : LocalDateTime) </td></tr>
-<tr><td align="left" balign="left"> + getRegistroExcluido() : Boolean </td></tr>
-<tr><td align="left" balign="left"> + setRegistroExcluido(registroExcluido : Boolean) </td></tr>
+<tr><td align="left" balign="left"> + getRegistroExcluido() : String </td></tr>
+<tr><td align="left" balign="left"> + setRegistroExcluido(registroExcluido : String) </td></tr>
 <tr><td align="left" balign="left"> + getUsuarioExclusao() : String </td></tr>
 <tr><td align="left" balign="left"> + setUsuarioExclusao(usuarioExclusao : String) </td></tr>
 <tr><td align="left" balign="left"> + getDataExclusao() : LocalDateTime </td></tr>
@@ -37,7 +38,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../persistence/entity/AbstractEntity.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.entity.ModuloSistema
-	c116905 [label=<<table title="br.gov.to.sefaz.seg.persistence.entity.ModuloSistema" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ModuloSistema.html">
+	c491697 [label=<<table title="br.gov.to.sefaz.seg.persistence.entity.ModuloSistema" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ModuloSistema.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ModuloSistema </td></tr>
 		</table></td></tr>
@@ -62,6 +63,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ModuloSistema.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.persistence.entity.ModuloSistema extends br.gov.to.sefaz.persistence.entity.AbstractEntity<java.lang.Long>
-	c116772:p -> c116905:p [dir=back,arrowtail=empty];
+	c491369:p -> c491697:p [dir=back,arrowtail=empty];
 }
 

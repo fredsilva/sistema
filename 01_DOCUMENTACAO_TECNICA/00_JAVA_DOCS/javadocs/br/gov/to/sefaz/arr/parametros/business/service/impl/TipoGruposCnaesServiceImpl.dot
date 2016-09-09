@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.service.impl.DefaultCrudService<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c192741 [label=<<table title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/service/impl/DefaultCrudService.html">
+	c770174 [label=<<table title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/service/impl/DefaultCrudService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultCrudService&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
 		</table></td></tr>
@@ -18,20 +18,19 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + DefaultCrudService(repository : BaseRepository&lt;E, I&gt;, sort : Sort) </td></tr>
+<tr><td align="left" balign="left"> + DefaultCrudService(repository : BaseRepository&lt;E, I&gt;) </td></tr>
 <tr><td align="left" balign="left"> + findOne(id : I) : E </td></tr>
 <tr><td align="left" balign="left"> + findAll() : Collection&lt;E&gt; </td></tr>
-<tr><td align="left" balign="left"> + findAll(list : Iterable&lt;I&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + save(entity : E) : E </td></tr>
 <tr><td align="left" balign="left"> + save(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + update(entity : E) : E </td></tr>
+<tr><td align="left" balign="left"> + update(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + delete(id : I) : Optional&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + delete(ids : Iterable&lt;I&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getDefaultSort() : Sort </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../../../business/service/impl/DefaultCrudService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.TipoGruposCnaesService
-	c192937 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.TipoGruposCnaesService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../TipoGruposCnaesService.html">
+	c770501 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.TipoGruposCnaesService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../TipoGruposCnaesService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> TipoGruposCnaesService </td></tr>
@@ -41,10 +40,11 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAll(filter : TipoGruposCnaesFilter) : List&lt;TipoGruposCnaes&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllActive() : Collection&lt;TipoGruposCnaes&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../TipoGruposCnaesService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.impl.TipoGruposCnaesServiceImpl
-	c192964 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.TipoGruposCnaesServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TipoGruposCnaesServiceImpl.html">
+	c770528 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.TipoGruposCnaesServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TipoGruposCnaesServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoGruposCnaesServiceImpl </td></tr>
 		</table></td></tr>
@@ -56,12 +56,13 @@ digraph G {
 <tr><td align="left" balign="left"> + save(entity : TipoGruposCnaes) : TipoGruposCnaes </td></tr>
 <tr><td align="left" balign="left"> + update(entity : TipoGruposCnaes) : TipoGruposCnaes </td></tr>
 <tr><td align="left" balign="left"> + findAll(filter : TipoGruposCnaesFilter) : List&lt;TipoGruposCnaes&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllActive() : Collection&lt;TipoGruposCnaes&gt; </td></tr>
 <tr><td align="left" balign="left"> + delete(id : Integer) : Optional&lt;TipoGruposCnaes&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./TipoGruposCnaesServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	//br.gov.to.sefaz.arr.parametros.business.service.impl.TipoGruposCnaesServiceImpl extends br.gov.to.sefaz.business.service.impl.DefaultCrudService<br.gov.to.sefaz.arr.parametros.persistence.entity.TipoGruposCnaes, java.lang.Integer>
-	c192741:p -> c192964:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.arr.parametros.business.service.impl.TipoGruposCnaesServiceImpl extends br.gov.to.sefaz.business.service.impl.DefaultCrudService<br.gov.to.sefaz.arr.persistence.entity.TipoGruposCnaes, java.lang.Integer>
+	c770174:p -> c770528:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.parametros.business.service.impl.TipoGruposCnaesServiceImpl implements br.gov.to.sefaz.arr.parametros.business.service.TipoGruposCnaesService
-	c192937:p -> c192964:p [dir=back,arrowtail=empty,style=dashed];
+	c770501:p -> c770528:p [dir=back,arrowtail=empty,style=dashed];
 }
 

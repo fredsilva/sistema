@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./FileDetalheArrecBuilder.html" title="br.gov.to.sefaz.arr.processamento.domain.detalhe.arrecadacao.builder.FileDetalheArrecBuilder" alt="" coords="16,37,285,165"/>
+<area shape="rect" id="node1" href="./FileDetalheArrecBuilder.html" title="&lt;TABLE&gt;" alt="" coords="5,31,296,170"/>
+<area shape="rect" id="node2_1" href="./CodigoBarrasExtractor.html" title="br.gov.to.sefaz.arr.processamento.domain.detalhe.arrecadacao.builder.CodigoBarrasExtractor" alt="" coords="331,11,704,191"/>
+<area shape="rect" id="node2" href="./CodigoBarrasExtractor.html" title="&lt;TABLE&gt;" alt="" coords="320,5,715,196"/>
+<area shape="rect" id="node3_2" href="./CodigoBarraCreator.html" title="br.gov.to.sefaz.arr.processamento.domain.detalhe.arrecadacao.builder.CodigoBarraCreator" alt="" coords="749,45,1096,156"/>
+<area shape="rect" id="node3" href="./CodigoBarraCreator.html" title="&lt;TABLE&gt;" alt="" coords="739,40,1107,161"/>
+</map>

@@ -1,5 +1,8 @@
+br.gov.to.sefaz.presentation.component
 br.gov.to.sefaz.presentation.configuration
 br.gov.to.sefaz.presentation.converter
 br.gov.to.sefaz.presentation.managedbean
 br.gov.to.sefaz.presentation.managedbean.composites
+br.gov.to.sefaz.presentation.managedbean.composites.domain
 br.gov.to.sefaz.presentation.managedbean.impl
+br.gov.to.sefaz.presentation.mapper

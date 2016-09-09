@@ -10,23 +10,94 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioSistemaServiceImpl
-	c1678 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioSistemaServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioSistemaServiceImpl.html">
+	c3418 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioSistemaServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioSistemaServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UsuarioSistemaServiceImpl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + LOGIN_CONTEXT : String </td></tr>
+<tr><td align="left" balign="left"> + CHANGE_PASSWD_CONTEXT : String </td></tr>
+<tr><td align="left" balign="left"> + SAVE_USUARIO_JUSTIFICATIVA_CONTEXT : String </td></tr>
+<tr><td align="left" balign="left"> + ATIVAR_INATIVAR_PERFIL_FILTER_CONTEXT : String </td></tr>
+<tr><td align="left" balign="left"> + ATRIBUIR_PERFIL_FILTER_CONTEXT : String </td></tr>
+<tr><td align="left" balign="left"> + MANTER_USUARIO_SISTEMA_FILTER_CONTEXT : String </td></tr>
+<tr><td align="left" balign="left"> + ATRIBUIR_PERFIL_USUARIO_CONTEXT : String </td></tr>
+<tr><td align="left" balign="left"> + TERMO_RESPONSABILIDADE_PDF : String </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + UsuarioSistemaServiceImpl(repository : UsuarioSistemaRepository, solicitacaoUsuarioService : SolicitacaoUsuarioService, usuarioPostoTrabalhoService : UsuarioPostoTrabalhoService, mailService : MailService, ldapProvider : LdapProvider, usuarioPerfilService : UsuarioPerfilService) </td></tr>
+<tr><td align="left" balign="left"> + findAll() : Collection&lt;UsuarioSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllByCpfAndName(cpf : Long, nome : String) : Collection&lt;UsuarioSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + validateLogin(usuarioSistema : UsuarioSistema) </td></tr>
+<tr><td align="left" balign="left"> + blockUser(cpf : String) </td></tr>
+<tr><td align="left" balign="left"> + resetPassword(usuarioSistema : UsuarioSistema) : UsuarioSistema </td></tr>
+<tr><td align="left" balign="left"> + changePassword(dto : ChangePasswordDto) </td></tr>
+<tr><td align="left" balign="left"> + unblockUser(cpf : String) </td></tr>
+<tr><td align="left" balign="left"> + findAllUsuarioSistema(filter : UsuarioSistemaFilter) : List&lt;UsuarioSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + saveNewUsuarioSistemaSolicitacaoSenha(usuarioSistema : UsuarioSistema) </td></tr>
+<tr><td align="left" balign="left"> + save(entity : UsuarioSistema) : UsuarioSistema </td></tr>
+<tr><td align="left" balign="left"> + findAllUsuarioSistemaPerfil(filter : AtivarInativarPerfilFilter) : List&lt;UsuarioSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllUsuarioSistemaManutencao(filter : ManterUsuarioSistemaFilter) : List&lt;UsuarioSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + updateStatusUsuario(usuarioSistema : UsuarioSistema) : UsuarioSistema </td></tr>
+<tr><td align="left" balign="left"> + updateUsuarioSistema(usuarioSistema : UsuarioSistema) : UsuarioSistema </td></tr>
+<tr><td align="left" balign="left"> + saveUsuarioSistema(usuarioSistema : UsuarioSistema) : UsuarioSistema </td></tr>
+<tr><td align="left" balign="left"> + enableUser(usuarioSistema : UsuarioSistema) </td></tr>
+<tr><td align="left" balign="left"> + countByTipoUsuario(tipoUsuario : TipoUsuario) : Long </td></tr>
+<tr><td align="left" balign="left"> + findAllByFilter(filter : AtribuirPerfilFilter) : Collection&lt;UsuarioSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findNomeByCpf(usuarioCpf : String) : String </td></tr>
+<tr><td align="left" balign="left"> + updateAtribuirUsuarioPerfil(dto : UsuarioSistema) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./UsuarioSistemaServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioPrincipalEmpresaServiceImpl
+	c3419 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioPrincipalEmpresaServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioPrincipalEmpresaServiceImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> UsuarioPrincipalEmpresaServiceImpl </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + UsuarioSistemaServiceImpl(repository : UsuarioSistemaRepository) </td></tr>
-<tr><td align="left" balign="left"> + findAllByCpfAndName(cpf : Long, nome : String) : Collection&lt;UsuarioSistema&gt; </td></tr>
-<tr><td align="left" balign="left"> + validate(usuarioSistema : UsuarioSistema) </td></tr>
-<tr><td align="left" balign="left"> + blockUser(cpf : String) </td></tr>
-<tr><td align="left" balign="left"> + unblockUser(cpf : String) </td></tr>
+<tr><td align="left" balign="left"> + UsuarioPrincipalEmpresaServiceImpl(repository : UsuarioPrincipalEmpresaRepository, usuarioSistemaRepository : UsuarioSistemaRepository) </td></tr>
+<tr><td align="left" balign="left"> + save(entity : UsuarioPrincipalEmpresa) : UsuarioPrincipalEmpresa </td></tr>
 		</table></td></tr>
-		</table>>, URL="./UsuarioSistemaServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./UsuarioPrincipalEmpresaServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioPostoTrabalhoServiceImpl
+	c3420 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioPostoTrabalhoServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioPostoTrabalhoServiceImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> UsuarioPostoTrabalhoServiceImpl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + UsuarioPostoTrabalhoServiceImpl(usuarioPostoTrabalhoRepository : UsuarioPostoTrabalhoRepository) </td></tr>
+<tr><td align="left" balign="left"> + findAll() : Collection&lt;UsuarioPostoTrabalho&gt; </td></tr>
+<tr><td align="left" balign="left"> + removeUsuarioPostoTrabalho(cpf : String, postoTrabalho : PostoTrabalho) : Optional&lt;UsuarioPostoTrabalho&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./UsuarioPostoTrabalhoServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioPerfilServiceImpl
+	c3421 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioPerfilServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioPerfilServiceImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> UsuarioPerfilServiceImpl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + UsuarioPerfilServiceImpl(repository : UsuarioPerfilRepository) </td></tr>
+<tr><td align="left" balign="left"> + buildProfileString(allUsuarioSistema : Collection&lt;UsuarioSistema&gt;) </td></tr>
+<tr><td align="left" balign="left"> + update(list : Collection&lt;UsuarioPerfil&gt;) : Collection&lt;UsuarioPerfil&gt; </td></tr>
+<tr><td align="left" balign="left"> + getAllUsuarioPerfilByCpf(cpfUsuario : String) : Collection&lt;UsuarioPerfil&gt; </td></tr>
+<tr><td align="left" balign="left"> + updateUsuarioPerfil(usuarioPerfilList : Collection&lt;UsuarioPerfil&gt;) </td></tr>
+<tr><td align="left" balign="left"> + deleteAllWithPerfilId(id : Long) </td></tr>
+<tr><td align="left" balign="left"> + findAllUsuariosPerfilByPerfilId(identificacaoPerfil : Long) : Collection&lt;UsuarioPerfil&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllPerfilById(cpfUsuario : String) : Set&lt;UsuarioPerfil&gt; </td></tr>
+<tr><td align="left" balign="left"> + deleteUsuarioPerfilByUsuario(cpfUsuario : String) </td></tr>
+<tr><td align="left" balign="left"> + updateAtribuirUsuarioPerfil(usuarioPerfil : Set&lt;UsuarioPerfil&gt;, cpfUsuario : String) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./UsuarioPerfilServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.impl.UnidadeOrganizacionalServiceImpl
-	c1679 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.UnidadeOrganizacionalServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UnidadeOrganizacionalServiceImpl.html">
+	c3422 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.UnidadeOrganizacionalServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UnidadeOrganizacionalServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UnidadeOrganizacionalServiceImpl </td></tr>
 		</table></td></tr>
@@ -34,13 +105,16 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + UnidadeOrganizacionalServiceImpl(repository : UnidadeOrganizacionalRepository) </td></tr>
+<tr><td align="left" balign="left"> + UnidadeOrganizacionalServiceImpl(repository : UnidadeOrganizacionalRepository, parametroGeralService : ParametroGeralService) </td></tr>
 <tr><td align="left" balign="left"> + findAll(filter : UnidadeOrganizacionalFilter) : List&lt;UnidadeOrganizacional&gt; </td></tr>
+<tr><td align="left" balign="left"> + save(entity : UnidadeOrganizacional) : UnidadeOrganizacional </td></tr>
+<tr><td align="left" balign="left"> + update(entity : UnidadeOrganizacional) : UnidadeOrganizacional </td></tr>
 <tr><td align="left" balign="left"> + delete(id : Long) : Optional&lt;UnidadeOrganizacional&gt; </td></tr>
+<tr><td align="left" balign="left"> + findTiposUnidades() : List&lt;TipoUnidade&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./UnidadeOrganizacionalServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.impl.TipoUsuarioServiceImpl
-	c1680 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.TipoUsuarioServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoUsuarioServiceImpl.html">
+	c3423 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.TipoUsuarioServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoUsuarioServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoUsuarioServiceImpl </td></tr>
 		</table></td></tr>
@@ -48,27 +122,153 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + TipoUsuarioServiceImpl(repository : TipoUsuarioRepository) </td></tr>
-<tr><td align="left" balign="left"> + findAllByDescricao(filter : TipoUsuarioFilter) : List&lt;TipoUsuario&gt; </td></tr>
-<tr><td align="left" balign="left"> + delete(id : Integer) : Optional&lt;TipoUsuario&gt; </td></tr>
+<tr><td align="left" balign="left"> + TipoUsuarioServiceImpl(parametroGeralService : ParametroGeralService, usuarioSistemaService : UsuarioSistemaService) </td></tr>
+<tr><td align="left" balign="left"> + findByFilter(filter : TipoUsuarioFilter) : List&lt;TipoUsuario&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAll() : List&lt;TipoUsuario&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllCountUsers() : List&lt;TipoUsuario&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./TipoUsuarioServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	// br.gov.to.sefaz.seg.business.gestao.service.impl.PostoTrabalhoServiceImpl
-	c1681 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.PostoTrabalhoServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PostoTrabalhoServiceImpl.html">
+	// br.gov.to.sefaz.seg.business.gestao.service.impl.SolicitacaoUsuarioServiceImpl
+	c3424 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.SolicitacaoUsuarioServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SolicitacaoUsuarioServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> PostoTrabalhoServiceImpl </td></tr>
+<tr><td align="center" balign="center"> SolicitacaoUsuarioServiceImpl </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + SolicitacaoUsuarioServiceImpl(repository : SolicitacaoUsuarioRepository) </td></tr>
+<tr><td align="left" balign="left"> + save(usuarioSistema : UsuarioSistema) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SolicitacaoUsuarioServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.impl.ProcuracaoUsuarioServiceImpl
+	c3425 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.ProcuracaoUsuarioServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProcuracaoUsuarioServiceImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ProcuracaoUsuarioServiceImpl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ProcuracaoUsuarioServiceImpl(repository : ProcuracaoUsuarioRepository, procuracaoOpcaoService : ProcuracaoOpcaoService) </td></tr>
+<tr><td align="left" balign="left"> + findProcuracaoByCpf(cpfOrigem : String, procuradorCpf : String) : ProcuracaoUsuario </td></tr>
+<tr><td align="left" balign="left"> + findProcuracaoByCnpj(cnpjOrigem : String, procuradorCpf : String) : ProcuracaoUsuario </td></tr>
+<tr><td align="left" balign="left"> + save(entity : ProcuracaoUsuario) : ProcuracaoUsuario </td></tr>
+<tr><td align="left" balign="left"> + update(entity : ProcuracaoUsuario) : ProcuracaoUsuario </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ProcuracaoUsuarioServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.impl.ProcuracaoOpcaoServiceImpl
+	c3426 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.ProcuracaoOpcaoServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProcuracaoOpcaoServiceImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ProcuracaoOpcaoServiceImpl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ProcuracaoOpcaoServiceImpl(repository : ProcuracaoOpcaoRepository) </td></tr>
+<tr><td align="left" balign="left"> + deleteByProcuracao(identificacaoProcurUsuario : Long) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ProcuracaoOpcaoServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.impl.PostoTrabalhoServiceImpl
+	c3427 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.PostoTrabalhoServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PostoTrabalhoServiceImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> PostoTrabalhoServiceImpl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + POSTO_TRABALHO_FILTER_CONTEXT : String </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + PostoTrabalhoServiceImpl(repository : PostoTrabalhoRepository) </td></tr>
 <tr><td align="left" balign="left"> + findAll(filter : PostoTrabalhoFilter) : List&lt;PostoTrabalho&gt; </td></tr>
-<tr><td align="left" balign="left"> + delete(id : Long) : Optional&lt;PostoTrabalho&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllByUnidadeOrganizacional(identificUnidOrganizac : Long) : Collection&lt;PostoTrabalho&gt; </td></tr>
+<tr><td align="left" balign="left"> + save(entity : PostoTrabalho) : PostoTrabalho </td></tr>
+<tr><td align="left" balign="left"> + update(entity : PostoTrabalho) : PostoTrabalho </td></tr>
+<tr><td align="left" balign="left"> + delete(id : Integer) : Optional&lt;PostoTrabalho&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./PostoTrabalhoServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.impl.PerfilSistemaServiceImpl
+	c3428 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.PerfilSistemaServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PerfilSistemaServiceImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> PerfilSistemaServiceImpl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + PerfilSistemaServiceImpl(repository : PerfilSistemaRepository, perfilPapelService : PerfilPapelService) </td></tr>
+<tr><td align="left" balign="left"> + findAllPerfilSistemaByPapel(idPapel : Long) : List&lt;PerfilSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllPerfilSistema(filter : PerfilSistemaFilter) : Collection&lt;PerfilSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findOneComplete(id : Long) : PerfilSistema </td></tr>
+<tr><td align="left" balign="left"> + saveOrUpdatePerfilSistema(dto : PerfilSistema) : PerfilSistema </td></tr>
+<tr><td align="left" balign="left"> + delete(id : Long) : Optional&lt;PerfilSistema&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./PerfilSistemaServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.impl.PerfilPapelServiceImpl
+	c3429 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.PerfilPapelServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PerfilPapelServiceImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> PerfilPapelServiceImpl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + PerfilPapelServiceImpl(repository : BaseRepository&lt;PerfilPapel, PerfilPapelPK&gt;) </td></tr>
+<tr><td align="left" balign="left"> + deleteAllWithPerfilId(id : Long) </td></tr>
+<tr><td align="left" balign="left"> + findAllPerfilPapelByPerfil(id : Long) : Collection&lt;PerfilPapel&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./PerfilPapelServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.impl.PapelSistemaServiceImpl
+	c3430 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.PapelSistemaServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PapelSistemaServiceImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> PapelSistemaServiceImpl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + PapelSistemaServiceImpl(repository : BaseRepository&lt;PapelSistema, Long&gt;, papelOpcaoService : PapelOpcaoService) </td></tr>
+<tr><td align="left" balign="left"> + findAllPerfilPapelOpcao(filter : PapelSistemaFilter) : List&lt;PapelSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + saveOrUpdatePapelSistema(dto : PapelSistema) : PapelSistema </td></tr>
+<tr><td align="left" balign="left"> + findOneCounted(id : Long) : PapelSistema </td></tr>
+<tr><td align="left" balign="left"> + findAllPapeisPerfil() : Collection&lt;PapelSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllPapeisByPerfilId(id : Long) : Collection&lt;PapelSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + delete(id : Long) : Optional&lt;PapelSistema&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./PapelSistemaServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.impl.PapelOpcaoServiceImpl
+	c3431 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.PapelOpcaoServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PapelOpcaoServiceImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> PapelOpcaoServiceImpl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + PapelOpcaoServiceImpl(repository : BaseRepository&lt;PapelOpcao, PapelOpcaoPK&gt;) </td></tr>
+<tr><td align="left" balign="left"> + findAllPapelOpcao(id : Long) : Set&lt;PapelOpcao&gt; </td></tr>
+<tr><td align="left" balign="left"> + removeAllPapelOpcaoByPapelId(id : Long) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./PapelOpcaoServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.impl.OpcaoAplicacaoServiceImpl
+	c3432 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.OpcaoAplicacaoServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OpcaoAplicacaoServiceImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OpcaoAplicacaoServiceImpl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + OpcaoAplicacaoServiceImpl(repository : OpcaoAplicacaoRepository) </td></tr>
+<tr><td align="left" balign="left"> + findByFilter(filter : OpcaoAplicacaoFilter) : List&lt;OpcaoAplicacao&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllOpcoes() : List&lt;OpcaoAplicacao&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllFromPerfilUsuario() : List&lt;OpcaoAplicacao&gt; </td></tr>
+<tr><td align="left" balign="left"> + save(entity : OpcaoAplicacao) : OpcaoAplicacao </td></tr>
+<tr><td align="left" balign="left"> + update(entity : OpcaoAplicacao) : OpcaoAplicacao </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OpcaoAplicacaoServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.impl.ModuloSistemaServiceImpl
-	c1682 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.ModuloSistemaServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ModuloSistemaServiceImpl.html">
+	c3433 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.ModuloSistemaServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ModuloSistemaServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ModuloSistemaServiceImpl </td></tr>
 		</table></td></tr>
@@ -78,10 +278,11 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + ModuloSistemaServiceImpl(repository : ModuloSistemaRepository) </td></tr>
 <tr><td align="left" balign="left"> + findAll() : Collection&lt;ModuloSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllSortedByAbreviacao() : List&lt;ModuloSistema&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ModuloSistemaServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.impl.LogNavegacaoServiceImpl
-	c1683 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.LogNavegacaoServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LogNavegacaoServiceImpl.html">
+	c3434 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.LogNavegacaoServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LogNavegacaoServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LogNavegacaoServiceImpl </td></tr>
 		</table></td></tr>
@@ -92,8 +293,21 @@ digraph G {
 <tr><td align="left" balign="left"> + LogNavegacaoServiceImpl(repository : LogNavegacaoRepository) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./LogNavegacaoServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.impl.ListagemCpfProcuracaoServiceImpl
+	c3435 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.ListagemCpfProcuracaoServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ListagemCpfProcuracaoServiceImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ListagemCpfProcuracaoServiceImpl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ListagemCpfProcuracaoServiceImpl(repository : ListagemCpfProcuracaoRepository) </td></tr>
+<tr><td align="left" balign="left"> + findByCpf(cpf : String) : List&lt;ListagemCpfProcuracao&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ListagemCpfProcuracaoServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.impl.HistoricoLoginSistemaServiceImpl
-	c1684 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.HistoricoLoginSistemaServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./HistoricoLoginSistemaServiceImpl.html">
+	c3436 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.HistoricoLoginSistemaServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./HistoricoLoginSistemaServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HistoricoLoginSistemaServiceImpl </td></tr>
 		</table></td></tr>
@@ -102,11 +316,12 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + HistoricoLoginSistemaServiceImpl(repository : HistoricoLoginSistemaRepository) </td></tr>
+<tr><td align="left" balign="left"> + findAll() : Collection&lt;HistoricoLoginSistema&gt; </td></tr>
 <tr><td align="left" balign="left"> + saveHistoricoLoginSistema(usuarioSistema : UsuarioSistema) : HistoricoLoginSistema </td></tr>
 		</table></td></tr>
 		</table>>, URL="./HistoricoLoginSistemaServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.impl.CorreioContribuinteServiceImpl
-	c1685 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.CorreioContribuinteServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CorreioContribuinteServiceImpl.html">
+	c3437 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.CorreioContribuinteServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CorreioContribuinteServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CorreioContribuinteServiceImpl </td></tr>
 		</table></td></tr>
@@ -117,5 +332,36 @@ digraph G {
 <tr><td align="left" balign="left"> + CorreioContribuinteServiceImpl(repository : CorreioContribuinteRepository) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./CorreioContribuinteServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.impl.CadastroSenhaServiceImpl
+	c3438 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.CadastroSenhaServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CadastroSenhaServiceImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> CadastroSenhaServiceImpl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + CadastroSenhaServiceImpl(repository : UsuarioSistemaRepository, usuarioSistemaService : UsuarioSistemaService, solicitacaoUsuarioService : SolicitacaoUsuarioService, logradouroService : LogradouroService) </td></tr>
+<tr><td align="left" balign="left"> + findAll() : Collection&lt;UsuarioSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAll(filter : CadastroSenhaFilter) : Collection&lt;UsuarioSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + resetPassword(usuarioSistema : UsuarioSistema) </td></tr>
+<tr><td align="left" balign="left"> + authorizeUser(usuarioSistema : UsuarioSistema) </td></tr>
+<tr><td align="left" balign="left"> + findOneUsuarioSistema(cpfUsuario : String) : UsuarioSistema </td></tr>
+<tr><td align="left" balign="left"> + findAllLogradouros() : Collection&lt;Logradouro&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./CadastroSenhaServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.impl.AplicacaoModuloServiceImpl
+	c3439 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.AplicacaoModuloServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AplicacaoModuloServiceImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> AplicacaoModuloServiceImpl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + AplicacaoModuloServiceImpl(repository : AplicacaoModuloRepository) </td></tr>
+<tr><td align="left" balign="left"> + findByModuloSistema(identificacaoModuloSistema : Long) : Collection&lt;AplicacaoModulo&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./AplicacaoModuloServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 }
 

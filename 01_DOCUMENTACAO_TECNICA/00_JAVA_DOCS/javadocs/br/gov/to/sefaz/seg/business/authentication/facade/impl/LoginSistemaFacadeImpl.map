@@ -1,6 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./LoginSistemaFacadeImpl.html" title="br.gov.to.sefaz.seg.business.authentication.facade.impl.LoginSistemaFacadeImpl" alt="" coords="16,197,452,325"/>
-<area shape="rect" id="node1" href="./LoginSistemaFacadeImpl.html" title="&lt;TABLE&gt;" alt="" coords="5,192,463,331"/>
-<area shape="rect" id="node2_1" href="../LoginSistemaFacade.html" title="br.gov.to.sefaz.seg.business.authentication.facade.LoginSistemaFacade" alt="" coords="22,11,446,139"/>
-<area shape="rect" id="node2" href="../LoginSistemaFacade.html" title="&lt;TABLE&gt;" alt="" coords="11,5,457,144"/>
+<area shape="rect" id="node1_0" href="../LoginSistemaFacade.html" title="br.gov.to.sefaz.seg.business.authentication.facade.LoginSistemaFacade" alt="" coords="22,11,446,139"/>
+<area shape="rect" id="node1" href="../LoginSistemaFacade.html" title="&lt;TABLE&gt;" alt="" coords="11,5,457,144"/>
+<area shape="rect" id="node2_1" href="./LoginSistemaFacadeImpl.html" title="br.gov.to.sefaz.seg.business.authentication.facade.impl.LoginSistemaFacadeImpl" alt="" coords="16,197,452,325"/>
+<area shape="rect" id="node2" href="./LoginSistemaFacadeImpl.html" title="&lt;TABLE&gt;" alt="" coords="5,192,463,331"/>
 </map>

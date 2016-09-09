@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c166550 [label=<<table title="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/facade/impl/DefaultCrudFacade.html">
+	c679514 [label=<<table title="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/facade/impl/DefaultCrudFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultCrudFacade&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
 		</table></td></tr>
@@ -21,7 +21,6 @@ digraph G {
 <tr><td align="left" balign="left"> + DefaultCrudFacade(service : CrudService&lt;E, I&gt;) </td></tr>
 <tr><td align="left" balign="left"> + findOne(id : I) : E </td></tr>
 <tr><td align="left" balign="left"> + findAll() : Collection&lt;E&gt; </td></tr>
-<tr><td align="left" balign="left"> + findAll(list : Iterable&lt;I&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + save(entity : E) : E </td></tr>
 <tr><td align="left" balign="left"> + save(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + update(entity : E) : E </td></tr>
@@ -30,7 +29,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../../../business/facade/impl/DefaultCrudFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.ReceitasFacade
-	c166730 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.ReceitasFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ReceitasFacade.html">
+	c679825 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.ReceitasFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ReceitasFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ReceitasFacade </td></tr>
@@ -47,7 +46,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../ReceitasFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.impl.ReceitasFacadeImpl
-	c166740 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.ReceitasFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ReceitasFacadeImpl.html">
+	c679835 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.ReceitasFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ReceitasFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ReceitasFacadeImpl </td></tr>
 		</table></td></tr>
@@ -63,9 +62,9 @@ digraph G {
 <tr><td align="left" balign="left"> + validateReceitasRepasse(receitasRepasse : ReceitasRepasse) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ReceitasFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	//br.gov.to.sefaz.arr.parametros.business.facade.impl.ReceitasFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas, java.lang.Integer>
-	c166550:p -> c166740:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.arr.parametros.business.facade.impl.ReceitasFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.arr.persistence.entity.Receitas, java.lang.Integer>
+	c679514:p -> c679835:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.parametros.business.facade.impl.ReceitasFacadeImpl implements br.gov.to.sefaz.arr.parametros.business.facade.ReceitasFacade
-	c166730:p -> c166740:p [dir=back,arrowtail=empty,style=dashed];
+	c679825:p -> c679835:p [dir=back,arrowtail=empty,style=dashed];
 }
 

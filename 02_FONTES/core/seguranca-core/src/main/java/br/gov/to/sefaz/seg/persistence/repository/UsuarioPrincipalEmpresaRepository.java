@@ -47,12 +47,15 @@ public class UsuarioPrincipalEmpresaRepository extends BaseRepository<UsuarioPri
      * @param cpf cpf do usuário logado.
      * @return verdadeiro ou falso.
      */
-    public boolean isMandatoStillValid(String cpf) {
+    public boolean isMandatoStillValid(String cpf, String cnpj) {
         return existsNative("sefaz_cci.ta_representante_legal", "trl", select -> select
                 .where()
-                .isNull("trl.data_final_mandato")
-                .or().greaterThan("trl.data_final_mandato", GregorianCalendar.getInstance().getTime())
-                .and().equal("trl.num_cpf_representante", cpf));
+                .lessEqualThan("trl.data_inicio_mandato", GregorianCalendar.getInstance().getTime())
+                .and()
+                .condition(where -> where.isNull("trl.data_final_mandato")
+                        .or().greaterEqualThanColumns("trl.data_final_mandato", "trunc(sysdate)"))
+                .and().equal("trl.num_cpf_representante", cpf)
+                .and().equal("trl.num_base_cnpj", cnpj));
     }
 
     /**

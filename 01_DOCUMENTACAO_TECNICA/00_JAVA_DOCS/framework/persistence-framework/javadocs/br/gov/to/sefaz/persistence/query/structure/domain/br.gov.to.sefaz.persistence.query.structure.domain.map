@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./ValueType.html" title="br.gov.to.sefaz.persistence.query.structure.domain.ValueType" alt="" coords="16,71,120,182"/>
+<area shape="rect" id="node1" href="./ValueType.html" title="&lt;TABLE&gt;" alt="" coords="5,66,131,187"/>
+<area shape="rect" id="node2_1" href="./Value.html" title="br.gov.to.sefaz.persistence.query.structure.domain.Value" alt="" coords="166,11,426,243"/>
+<area shape="rect" id="node2" href="./Value.html" title="&lt;TABLE&gt;" alt="" coords="155,5,437,248"/>
+<area shape="rect" id="node3_2" href="./OptionalQuery.html" title="br.gov.to.sefaz.persistence.query.structure.domain.OptionalQuery" alt="" coords="472,54,728,199"/>
+<area shape="rect" id="node3" href="./OptionalQuery.html" title="&lt;TABLE&gt;" alt="" coords="461,49,739,205"/>
+<area shape="rect" id="node4_3" href="./Alias.html" title="br.gov.to.sefaz.persistence.query.structure.domain.Alias" alt="" coords="774,28,1109,225"/>
+<area shape="rect" id="node4" href="./Alias.html" title="&lt;TABLE&gt;" alt="" coords="763,23,1119,231"/>
+</map>

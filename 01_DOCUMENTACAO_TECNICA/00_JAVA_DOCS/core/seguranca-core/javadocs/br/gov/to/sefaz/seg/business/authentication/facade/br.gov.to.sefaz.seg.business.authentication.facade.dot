@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.authentication.facade.LoginSistemaFacade
-	c242 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.facade.LoginSistemaFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LoginSistemaFacade.html">
+	c216 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.facade.LoginSistemaFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LoginSistemaFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> LoginSistemaFacade </td></tr>
@@ -24,5 +24,30 @@ digraph G {
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + certAuthenticate(username : String) : UsuarioSistemaAuthentication </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./LoginSistemaFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.authentication.facade.DefaultTemplateFacade
+	c217 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.facade.DefaultTemplateFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DefaultTemplateFacade.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> DefaultTemplateFacade </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllModuloSistema() : Collection&lt;ModuloSistema&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + getUserRoles() : Collection&lt;String&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + getActiveProcurado() : Long </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + hasOnlyOneProfile() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + hasActiveProfile() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + getActiveGroup() : Optional&lt;RoleGroupKey&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + getUserName() : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + getPerfisSistema() : List&lt;RoleGroupKey&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + getProcuradoresSistema() : List&lt;RoleGroupKey&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + setActiveProfile(profileId : Long) </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + setActiveProcuracao(procuracaoId : Long) </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + invalidateSession() </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + isAuthenticatedByCert() : boolean </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./DefaultTemplateFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 }
 

@@ -9,21 +9,82 @@ digraph G {
 	node [fontname="arial",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// br.gov.to.sefaz.persistence.repository.BaseRepository<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c126216 [label=<<table title="br.gov.to.sefaz.persistence.repository.BaseRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/repository/BaseRepository.html">
+	// br.gov.to.sefaz.persistence.repository.BaseRepository<E, I extends java.io.Serializable>
+	c541433 [label=<<table title="br.gov.to.sefaz.persistence.repository.BaseRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/repository/BaseRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> BaseRepository&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
+<tr><td align="center" balign="center"><font face="arial italic"> BaseRepository&lt;E, I extends Serializable&gt; </font></td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + BaseRepository() </td></tr>
+<tr><td align="left" balign="left"> + findAll() : List&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> + findNative(alias : String, selectConsumer : Consumer&lt;SelectBuilder&gt;) : List&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> + findNative(selectConsumer : Consumer&lt;SelectBuilder&gt;) : List&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> + find(alias : String, selectConsumer : Consumer&lt;HqlSelectBuilder&gt;) : List&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> + find(selectConsumer : Consumer&lt;HqlSelectBuilder&gt;) : List&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> + findColumnNative(alias : String, column : String, selectConsumer : Consumer&lt;SelectBuilder&gt;) : List&lt;R&gt; </td></tr>
+<tr><td align="left" balign="left"> + findColumnNative(column : String, selectConsumer : Consumer&lt;SelectBuilder&gt;) : List&lt;R&gt; </td></tr>
+<tr><td align="left" balign="left"> + findColumn(alias : String, column : String, selectConsumer : Consumer&lt;HqlSelectBuilder&gt;) : List&lt;R&gt; </td></tr>
+<tr><td align="left" balign="left"> + findColumn(column : String, selectConsumer : Consumer&lt;HqlSelectBuilder&gt;) : List&lt;R&gt; </td></tr>
+<tr><td align="left" balign="left"> + findColumn(column : String, i : I) : List&lt;R&gt; </td></tr>
+<tr><td align="left" balign="left"> + findOneColumnNative(tableName : String, alias : String, column : String, selectConsumer : Consumer&lt;SelectBuilder&gt;) : R </td></tr>
+<tr><td align="left" balign="left"> + findOneColumnNative(alias : String, column : String, selectConsumer : Consumer&lt;SelectBuilder&gt;) : R </td></tr>
+<tr><td align="left" balign="left"> + findOneColumnNative(column : String, selectConsumer : Consumer&lt;SelectBuilder&gt;) : R </td></tr>
+<tr><td align="left" balign="left"> + findOneColumn(alias : String, column : String, selectConsumer : Consumer&lt;HqlSelectBuilder&gt;) : R </td></tr>
+<tr><td align="left" balign="left"> + findOneColumn(column : String, selectConsumer : Consumer&lt;HqlSelectBuilder&gt;) : R </td></tr>
+<tr><td align="left" balign="left"> + findOneNative(alias : String, selectConsumer : Consumer&lt;SelectBuilder&gt;) : E </td></tr>
+<tr><td align="left" balign="left"> + findOneNative(selectConsumer : Consumer&lt;SelectBuilder&gt;) : E </td></tr>
+<tr><td align="left" balign="left"> + findOne(alias : String, selectConsumer : Consumer&lt;HqlSelectBuilder&gt;) : E </td></tr>
+<tr><td align="left" balign="left"> + findOne(selectConsumer : Consumer&lt;HqlSelectBuilder&gt;) : E </td></tr>
+<tr><td align="left" balign="left"> + findOne(i : I) : E </td></tr>
+<tr><td align="left" balign="left"> + findOneColumn(column : String, i : I) : R </td></tr>
+<tr><td align="left" balign="left"> + countNative(alias : String, selectHandler : Consumer&lt;SelectBuilder&gt;) : Long </td></tr>
+<tr><td align="left" balign="left"> + countNative(selectHandler : Consumer&lt;SelectBuilder&gt;) : Long </td></tr>
+<tr><td align="left" balign="left"> + count(alias : String, selectHandler : Consumer&lt;HqlSelectBuilder&gt;) : Long </td></tr>
+<tr><td align="left" balign="left"> + count(selectHandler : Consumer&lt;HqlSelectBuilder&gt;) : Long </td></tr>
+<tr><td align="left" balign="left"> + count(i : I) : Long </td></tr>
+<tr><td align="left" balign="left"> + existsNative(tableName : String, alias : String, selectHandler : Consumer&lt;SelectBuilder&gt;) : boolean </td></tr>
+<tr><td align="left" balign="left"> + existsNative(alias : String, selectHandler : Consumer&lt;SelectBuilder&gt;) : boolean </td></tr>
+<tr><td align="left" balign="left"> + existsNative(selectHandler : Consumer&lt;SelectBuilder&gt;) : boolean </td></tr>
+<tr><td align="left" balign="left"> + exists(alias : String, selectHandler : Consumer&lt;HqlSelectBuilder&gt;) : boolean </td></tr>
+<tr><td align="left" balign="left"> + exists(selectHandler : Consumer&lt;HqlSelectBuilder&gt;) : boolean </td></tr>
+<tr><td align="left" balign="left"> + exists(i : I) : boolean </td></tr>
+<tr><td align="left" balign="left"> + save(entity : E) : E </td></tr>
+<tr><td align="left" balign="left"> + save(entities : Collection&lt;E&gt;) : Collection&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> + updateNative(alias : String, updateHandler : Consumer&lt;UpdateBuilder&gt;) </td></tr>
+<tr><td align="left" balign="left"> + updateNative(updateHandler : Consumer&lt;UpdateBuilder&gt;) </td></tr>
+<tr><td align="left" balign="left"> + update(alias : String, updateHandler : Consumer&lt;HqlUpdateBuilder&gt;) </td></tr>
+<tr><td align="left" balign="left"> + update(updateHandler : Consumer&lt;HqlUpdateBuilder&gt;) </td></tr>
+<tr><td align="left" balign="left"> + deleteNative(alias : String, deleteHandler : Consumer&lt;DeleteBuilder&gt;) </td></tr>
+<tr><td align="left" balign="left"> + deleteNative(deleteHandler : Consumer&lt;DeleteBuilder&gt;) </td></tr>
+<tr><td align="left" balign="left"> + delete(alias : String, deleteHandler : Consumer&lt;HqlDeleteBuilder&gt;) </td></tr>
+<tr><td align="left" balign="left"> + delete(deleteHandler : Consumer&lt;HqlDeleteBuilder&gt;) </td></tr>
+<tr><td align="left" balign="left"> + delete(id : I) </td></tr>
+<tr><td align="left" balign="left"> + delete(ids : Iterable&lt;I&gt;) </td></tr>
+<tr><td align="left" balign="left"> + extractEntityCLassFromGenerics() : Class&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> + flush() </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../persistence/repository/BaseRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.PapelSistemaRepository
-	c126366 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.PapelSistemaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./PapelSistemaRepository.html">
+	c541697 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.PapelSistemaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./PapelSistemaRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> PapelSistemaRepository </td></tr>
 		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + PapelSistemaRepository() </td></tr>
+<tr><td align="left" balign="left"> + findAllCounted(nomePapel : String) : List&lt;PapelSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findOneCounted(id : Long) : PapelSistema </td></tr>
+<tr><td align="left" balign="left"> + existsPerfilByPapel(id : Long) : boolean </td></tr>
+<tr><td align="left" balign="left"> + findAllWithPapeis() : List&lt;PapelSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllByPerfilId(id : Long) : Collection&lt;PapelSistema&gt; </td></tr>
+		</table></td></tr>
 		</table>>, URL="./PapelSistemaRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	//br.gov.to.sefaz.seg.persistence.repository.PapelSistemaRepository implements br.gov.to.sefaz.persistence.repository.BaseRepository<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c126216:p -> c126366:p [dir=back,arrowtail=empty,style=dashed];
+	//br.gov.to.sefaz.seg.persistence.repository.PapelSistemaRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.seg.persistence.entity.PapelSistema, java.lang.Long>
+	c541433:p -> c541697:p [dir=back,arrowtail=empty];
 }
 

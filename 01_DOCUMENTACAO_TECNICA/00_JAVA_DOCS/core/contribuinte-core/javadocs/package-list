@@ -1,0 +1,6 @@
+br.gov.to.sefaz.cci.business
+br.gov.to.sefaz.cci.business.service
+br.gov.to.sefaz.cci.business.service.impl
+br.gov.to.sefaz.cci.configuration
+br.gov.to.sefaz.cci.persistence.entity
+br.gov.to.sefaz.cci.persistence.repository

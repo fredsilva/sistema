@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.gestao.builder.LogNavegacaoBuilder
-	c16824 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.builder.LogNavegacaoBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LogNavegacaoBuilder.html">
+	c84071 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.builder.LogNavegacaoBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LogNavegacaoBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LogNavegacaoBuilder </td></tr>
 		</table></td></tr>
@@ -27,7 +27,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./LogNavegacaoBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.builder.DetalheNavegacao
-	c16825 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.builder.DetalheNavegacao" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DetalheNavegacao.html">
+	c84072 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.builder.DetalheNavegacao" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DetalheNavegacao.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DetalheNavegacao </td></tr>
 		</table></td></tr>

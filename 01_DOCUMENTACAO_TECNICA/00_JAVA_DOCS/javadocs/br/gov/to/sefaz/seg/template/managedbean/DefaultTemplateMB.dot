@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.template.managedbean.DefaultTemplateMB
-	c87976 [label=<<table title="br.gov.to.sefaz.seg.template.managedbean.DefaultTemplateMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DefaultTemplateMB.html">
+	c342218 [label=<<table title="br.gov.to.sefaz.seg.template.managedbean.DefaultTemplateMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DefaultTemplateMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultTemplateMB </td></tr>
 		</table></td></tr>
@@ -18,13 +18,22 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + DefaultTemplateMB(moduloSistemaFacade : ModuloSistemaFacade) </td></tr>
+<tr><td align="left" balign="left"> + DefaultTemplateMB(pathResolver : PathResolverMB, facade : DefaultTemplateFacade) </td></tr>
 <tr><td align="left" balign="left"> + getModulosMenu() : Collection&lt;MenuViewBean&gt; </td></tr>
 <tr><td align="left" balign="left"> + hasOnlyOneProfile() : boolean </td></tr>
 <tr><td align="left" balign="left"> + hasActiveProfile() : boolean </td></tr>
+<tr><td align="left" balign="left"> + isAuthenticatedByCert() : boolean </td></tr>
 <tr><td align="left" balign="left"> + getUserName() : String </td></tr>
+<tr><td align="left" balign="left"> + getProcuracaoUserName() : String </td></tr>
+<tr><td align="left" balign="left"> + isProcuracao() : boolean </td></tr>
 <tr><td align="left" balign="left"> + getPerfisSistema() : List&lt;RoleGroupKey&gt; </td></tr>
+<tr><td align="left" balign="left"> + getProcuradoresSistema() : List&lt;RoleGroupKey&gt; </td></tr>
 <tr><td align="left" balign="left"> + setActiveProfile(id : Long) </td></tr>
+<tr><td align="left" balign="left"> + setActiveProcurador(id : Long) </td></tr>
+<tr><td align="left" balign="left"> + invalidateSession() </td></tr>
+<tr><td align="left" balign="left"> + getThisAjudaContent() : String </td></tr>
+<tr><td align="left" balign="left"> + getThisDescricaoOpcao() : String </td></tr>
+<tr><td align="left" balign="left"> + getActiveOpcao() : Optional&lt;OpcaoAplicacao&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./DefaultTemplateMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 }

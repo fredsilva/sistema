@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoRejeicaoArquivosFacadeImpl
-	c29398 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoRejeicaoArquivosFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoRejeicaoArquivosFacadeImpl.html">
+	c114806 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoRejeicaoArquivosFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoRejeicaoArquivosFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoRejeicaoArquivosFacadeImpl </td></tr>
 		</table></td></tr>
@@ -22,7 +22,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoRejeicaoArquivosFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoGruposCnaesFacadeImpl
-	c29399 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoGruposCnaesFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoGruposCnaesFacadeImpl.html">
+	c114807 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoGruposCnaesFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoGruposCnaesFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoGruposCnaesFacadeImpl </td></tr>
 		</table></td></tr>
@@ -39,7 +39,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoGruposCnaesFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.impl.ReceitasFacadeImpl
-	c29400 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.ReceitasFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ReceitasFacadeImpl.html">
+	c114808 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.ReceitasFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ReceitasFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ReceitasFacadeImpl </td></tr>
 		</table></td></tr>
@@ -56,7 +56,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ReceitasFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.impl.PlanoContasFacadeImpl
-	c29401 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.PlanoContasFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PlanoContasFacadeImpl.html">
+	c114809 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.PlanoContasFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PlanoContasFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PlanoContasFacadeImpl </td></tr>
 		</table></td></tr>
@@ -64,12 +64,13 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + PlanoContasFacadeImpl(service : PlanoContasService) </td></tr>
+<tr><td align="left" balign="left"> + PlanoContasFacadeImpl(service : PlanoContasService, tipoGruposCnaesService : TipoGruposCnaesService) </td></tr>
 <tr><td align="left" balign="left"> + find(filter : PlanoContasFilter) : List&lt;PlanoContas&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllActiveTipoGruposCnaes() : Collection&lt;TipoGruposCnaes&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./PlanoContasFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoTiposFacadeImpl
-	c29402 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoTiposFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoTiposFacadeImpl.html">
+	c114810 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoTiposFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoTiposFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoTiposFacadeImpl </td></tr>
 		</table></td></tr>
@@ -88,7 +89,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PedidoTiposFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoAreasFacadeImpl
-	c29403 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoAreasFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoAreasFacadeImpl.html">
+	c114811 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoAreasFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoAreasFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoAreasFacadeImpl </td></tr>
 		</table></td></tr>
@@ -109,7 +110,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PedidoAreasFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.impl.ConveniosTarifasFacadeImpl
-	c29404 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.ConveniosTarifasFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConveniosTarifasFacadeImpl.html">
+	c114812 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.ConveniosTarifasFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConveniosTarifasFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ConveniosTarifasFacadeImpl </td></tr>
 		</table></td></tr>
@@ -121,7 +122,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ConveniosTarifasFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.impl.ConveniosArrecFacadeImpl
-	c29405 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.ConveniosArrecFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConveniosArrecFacadeImpl.html">
+	c114813 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.ConveniosArrecFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConveniosArrecFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ConveniosArrecFacadeImpl </td></tr>
 		</table></td></tr>
@@ -141,7 +142,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ConveniosArrecFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.impl.BancosFacadeImpl
-	c29406 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.BancosFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BancosFacadeImpl.html">
+	c114814 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.BancosFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BancosFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BancosFacadeImpl </td></tr>
 		</table></td></tr>
@@ -153,7 +154,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./BancosFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.impl.BancoAgenciasFacadeImpl
-	c29407 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.BancoAgenciasFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BancoAgenciasFacadeImpl.html">
+	c114815 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.BancoAgenciasFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BancoAgenciasFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BancoAgenciasFacadeImpl </td></tr>
 		</table></td></tr>

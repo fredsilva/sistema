@@ -1,5 +1,6 @@
 package br.gov.to.sefaz.persistence.satquery.parser.handler;
 
+import br.gov.to.sefaz.persistence.configuration.AuditableTablesIdentifier;
 import br.gov.to.sefaz.persistence.entity.AbstractEntity;
 import br.gov.to.sefaz.persistence.query.parser.domain.QueryLanguages;
 import br.gov.to.sefaz.persistence.query.structure.domain.Alias;
@@ -14,22 +15,39 @@ import java.util.ArrayList;
 import java.util.Optional;
 
 /**
+ * Classe utilitaria para manipulação de consultas que envolvam a coluna de auditoria, registro_excluido.
+ *
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 19/07/2016 09:36:00
  */
 public class RegistroExcluidoHandler {
 
-    public static ConditionsStructure createConditions(Optional<ConditionsStructure> original,
+    /**
+     * Cria uma condição where que contenha as condições originais (se tiver) e de "registro_excluido = N". Caso a
+     * tabela não seja uma tabela com colunas de auditoria ele irá retornar as condições originais passadas por
+     * parametro.
+     *
+     * @see AuditableTablesIdentifier
+     * @param original condições originais na consulta
+     * @param table nome e alias da tabela envolvida
+     * @param queryLanguage tipo de consulta
+     * @return Condição where alterada para colunas de auditoria, ou a original caso não seja de auditoria
+     */
+    public static Optional<ConditionsStructure> createConditions(Optional<ConditionsStructure> original,
             Alias<String> table, String queryLanguage) {
-        ConditionsStructure conditions = new ConditionsStructure();
+        if (AuditableTablesIdentifier.isAuditable(table.getValue())) {
+            ConditionsStructure conditions = new ConditionsStructure();
 
-        if (original.isPresent()) {
-            conditions.addCondition(new ConditionStructure(original.get(), new ArrayList<>()));
+            if (original.isPresent()) {
+                conditions.addCondition(new ConditionStructure(original.get(), new ArrayList<>()));
+            }
+
+            conditions.addCondition(createCondition(table, queryLanguage));
+
+            return Optional.of(conditions);
         }
 
-        conditions.addCondition(createCondition(table, queryLanguage));
-
-        return conditions;
+        return original;
     }
 
     public static String getRegistroExcluidoColumn(String queryLanguage) {

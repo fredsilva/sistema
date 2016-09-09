@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c148531 [label=<<table title="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/facade/impl/DefaultCrudFacade.html">
+	c599892 [label=<<table title="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/facade/impl/DefaultCrudFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultCrudFacade&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
 		</table></td></tr>
@@ -21,7 +21,6 @@ digraph G {
 <tr><td align="left" balign="left"> + DefaultCrudFacade(service : CrudService&lt;E, I&gt;) </td></tr>
 <tr><td align="left" balign="left"> + findOne(id : I) : E </td></tr>
 <tr><td align="left" balign="left"> + findAll() : Collection&lt;E&gt; </td></tr>
-<tr><td align="left" balign="left"> + findAll(list : Iterable&lt;I&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + save(entity : E) : E </td></tr>
 <tr><td align="left" balign="left"> + save(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + update(entity : E) : E </td></tr>
@@ -30,7 +29,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../../../business/facade/impl/DefaultCrudFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.PedidoTiposFacade
-	c148713 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.PedidoTiposFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../PedidoTiposFacade.html">
+	c600205 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.PedidoTiposFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../PedidoTiposFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> PedidoTiposFacade </td></tr>
@@ -49,7 +48,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../PedidoTiposFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoTiposFacadeImpl
-	c148723 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoTiposFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./PedidoTiposFacadeImpl.html">
+	c600215 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoTiposFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./PedidoTiposFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoTiposFacadeImpl </td></tr>
 		</table></td></tr>
@@ -67,9 +66,9 @@ digraph G {
 <tr><td align="left" balign="left"> + getTipoPedidoCampoEnumValues(idTipoPedido : Integer, tipoPedido : TipoPedidoAcoesEnum) : List&lt;TipoPedidoCampoEnum&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./PedidoTiposFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	//br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoTiposFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoTipos, java.lang.Integer>
-	c148531:p -> c148723:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoTiposFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.arr.persistence.entity.PedidoTipos, java.lang.Integer>
+	c599892:p -> c600215:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoTiposFacadeImpl implements br.gov.to.sefaz.arr.parametros.business.facade.PedidoTiposFacade
-	c148713:p -> c148723:p [dir=back,arrowtail=empty,style=dashed];
+	c600205:p -> c600215:p [dir=back,arrowtail=empty,style=dashed];
 }
 

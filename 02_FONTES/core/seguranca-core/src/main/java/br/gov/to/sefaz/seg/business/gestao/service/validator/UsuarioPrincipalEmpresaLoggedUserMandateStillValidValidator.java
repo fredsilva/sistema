@@ -42,7 +42,7 @@ public class UsuarioPrincipalEmpresaLoggedUserMandateStillValidValidator
         HashSet<CustomViolation> customViolations = new HashSet<>();
 
         if (StringUtils.isNotEmpty(target.getCnpjEmpresa()) && !usuarioPrincipalEmpresaRepository
-                .isMandatoStillValid(AuthenticatedUserHandler.getCpf())) {
+                .isMandatoStillValid(AuthenticatedUserHandler.getCpf(), target.getCnpjEmpresa().substring(0, 8))) {
             String violation = SourceBundle.getMessage(MessageUtil.SEG,
                     "seg.atuarUsuarioPrincipal.save.cpf.representativeMandateEnded");
             customViolations.add(new CustomViolation(violation));

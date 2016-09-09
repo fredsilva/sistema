@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupManager
-	c12120 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./RoleGroupManager.html">
+	c33605 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./RoleGroupManager.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> RoleGroupManager </td></tr>
 		</table></td></tr>
@@ -21,8 +21,9 @@ digraph G {
 <tr><td align="left" balign="left"> + RoleGroupManager() </td></tr>
 <tr><td align="left" balign="left"> + setActiveGroup(type : RoleGroupType, id : Long) </td></tr>
 <tr><td align="left" balign="left"> + setActiveGroup(activeGroup : RoleGroupKey) </td></tr>
-<tr><td align="left" balign="left"> + getRoles() : Set&lt;GrantedAuthority&gt; </td></tr>
+<tr><td align="left" balign="left"> + getRoles() : Set&lt;String&gt; </td></tr>
 <tr><td align="left" balign="left"> + getKeys() : Set&lt;RoleGroupKey&gt; </td></tr>
+<tr><td align="left" balign="left"> + getEntries() : Set&lt;Map.Entry&lt;RoleGroupKey, Set&lt;String&gt;&gt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + addRoles(type : RoleGroupType, id : Long, roles : String[]) </td></tr>
 <tr><td align="left" balign="left"> + addRoles(type : RoleGroupType, id : Long, roles : Collection&lt;String&gt;) </td></tr>
 <tr><td align="left" balign="left"> + addRoles(key : RoleGroupKey, roles : String[]) </td></tr>

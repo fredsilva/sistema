@@ -1,8 +1,10 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./WrongPasswordTriesService.html" title="br.gov.to.sefaz.seg.business.authentication.service.WrongPasswordTriesService" alt="" coords="16,19,220,130"/>
-<area shape="rect" id="node1" href="./WrongPasswordTriesService.html" title="&lt;TABLE&gt;" alt="" coords="5,14,231,135"/>
-<area shape="rect" id="node2_1" href="./PasswordMaxTriesException.html" title="br.gov.to.sefaz.seg.business.authentication.service.PasswordMaxTriesException" alt="" coords="266,37,573,113"/>
-<area shape="rect" id="node2" href="./PasswordMaxTriesException.html" title="&lt;TABLE&gt;" alt="" coords="255,31,583,118"/>
-<area shape="rect" id="node3_2" href="./LoginSistemaService.html" title="br.gov.to.sefaz.seg.business.authentication.service.LoginSistemaService" alt="" coords="618,11,1042,139"/>
-<area shape="rect" id="node3" href="./LoginSistemaService.html" title="&lt;TABLE&gt;" alt="" coords="607,5,1053,144"/>
+<area shape="rect" id="node1_0" href="./WrongPasswordTriesService.html" title="br.gov.to.sefaz.seg.business.authentication.service.WrongPasswordTriesService" alt="" coords="16,37,220,147"/>
+<area shape="rect" id="node1" href="./WrongPasswordTriesService.html" title="&lt;TABLE&gt;" alt="" coords="5,31,231,153"/>
+<area shape="rect" id="node2_1" href="./SecurityException.html" title="br.gov.to.sefaz.seg.business.authentication.service.SecurityException" alt="" coords="265,11,784,173"/>
+<area shape="rect" id="node2" href="./SecurityException.html" title="&lt;TABLE&gt;" alt="" coords="255,5,795,179"/>
+<area shape="rect" id="node3_2" href="./PasswordMaxTriesException.html" title="br.gov.to.sefaz.seg.business.authentication.service.PasswordMaxTriesException" alt="" coords="830,54,1137,130"/>
+<area shape="rect" id="node3" href="./PasswordMaxTriesException.html" title="&lt;TABLE&gt;" alt="" coords="819,49,1147,135"/>
+<area shape="rect" id="node4_3" href="./LoginSistemaService.html" title="br.gov.to.sefaz.seg.business.authentication.service.LoginSistemaService" alt="" coords="1182,28,1606,156"/>
+<area shape="rect" id="node4" href="./LoginSistemaService.html" title="&lt;TABLE&gt;" alt="" coords="1171,23,1617,161"/>
 </map>

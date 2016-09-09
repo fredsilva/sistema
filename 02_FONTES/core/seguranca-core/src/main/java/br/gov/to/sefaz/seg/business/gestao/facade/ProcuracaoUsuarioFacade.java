@@ -1,9 +1,9 @@
 package br.gov.to.sefaz.seg.business.gestao.facade;
 
 import br.gov.to.sefaz.business.facade.CrudFacade;
+import br.gov.to.sefaz.seg.persistence.entity.ListagemCpfProcuracao;
 import br.gov.to.sefaz.seg.persistence.entity.OpcaoAplicacao;
 import br.gov.to.sefaz.seg.persistence.entity.ProcuracaoUsuario;
-import br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema;
 
 import java.util.List;
 
@@ -22,10 +22,11 @@ public interface ProcuracaoUsuarioFacade extends CrudFacade<ProcuracaoUsuario, L
     List<OpcaoAplicacao> getOpcoesFromUsuario();
 
     /**
-     * Seleciona o usuario sistema logado na sessão atual.
-     * @return o usuario sistema
+     * Seleciona os CPFs e CNPJs do usuario logado na sessão.
+     *
+     * @return identificações do usuario logado
      */
-    UsuarioSistema findUsuarioSistema();
+    List<ListagemCpfProcuracao> findAllCpfProcuracaoFromUsuario();
 
     /**
      * Retorna o nome do usuario baseado no CPF.

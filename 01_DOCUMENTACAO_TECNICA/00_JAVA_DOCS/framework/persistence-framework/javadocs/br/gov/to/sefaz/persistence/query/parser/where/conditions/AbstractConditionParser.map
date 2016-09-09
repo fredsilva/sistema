@@ -1,0 +1,20 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../QueryStructureParser.html" title="br.gov.to.sefaz.persistence.query.parser.QueryStructureParser" alt="" coords="2582,11,3126,139"/>
+<area shape="rect" id="node1" href="../../QueryStructureParser.html" title="&lt;TABLE&gt;" alt="" coords="2571,5,3137,144"/>
+<area shape="rect" id="node9_1" href="./AbstractConditionParser.html" title="br.gov.to.sefaz.persistence.query.parser.where.conditions.AbstractConditionParser" alt="" coords="2466,197,3242,308"/>
+<area shape="rect" id="node9" href="./AbstractConditionParser.html" title="&lt;TABLE&gt;" alt="" coords="2455,192,3253,313"/>
+<area shape="rect" id="node2_2" href="./SimpleConditionParser.html" title="br.gov.to.sefaz.persistence.query.parser.where.conditions.SimpleConditionParser" alt="" coords="16,367,788,460"/>
+<area shape="rect" id="node2" href="./SimpleConditionParser.html" title="&lt;TABLE&gt;" alt="" coords="5,361,799,465"/>
+<area shape="rect" id="node3_3" href="./LikeParser.html" title="br.gov.to.sefaz.persistence.query.parser.where.conditions.LikeParser" alt="" coords="833,367,1605,460"/>
+<area shape="rect" id="node3" href="./LikeParser.html" title="&lt;TABLE&gt;" alt="" coords="823,361,1616,465"/>
+<area shape="rect" id="node4_4" href="./IsNullParser.html" title="br.gov.to.sefaz.persistence.query.parser.where.conditions.IsNullParser" alt="" coords="1651,367,2423,460"/>
+<area shape="rect" id="node4" href="./IsNullParser.html" title="&lt;TABLE&gt;" alt="" coords="1640,361,2433,465"/>
+<area shape="rect" id="node5_5" href="./InParser.html" title="br.gov.to.sefaz.persistence.query.parser.where.conditions.InParser" alt="" coords="2468,367,3240,460"/>
+<area shape="rect" id="node5" href="./InParser.html" title="&lt;TABLE&gt;" alt="" coords="2457,361,3251,465"/>
+<area shape="rect" id="node6_6" href="./GroupedCondictionParser.html" title="br.gov.to.sefaz.persistence.query.parser.where.conditions.GroupedCondictionParser" alt="" coords="3285,367,4057,460"/>
+<area shape="rect" id="node6" href="./GroupedCondictionParser.html" title="&lt;TABLE&gt;" alt="" coords="3275,361,4068,465"/>
+<area shape="rect" id="node7_7" href="./ExistsParser.html" title="br.gov.to.sefaz.persistence.query.parser.where.conditions.ExistsParser" alt="" coords="4103,367,4875,460"/>
+<area shape="rect" id="node7" href="./ExistsParser.html" title="&lt;TABLE&gt;" alt="" coords="4092,361,4885,465"/>
+<area shape="rect" id="node8_8" href="./BetweenParser.html" title="br.gov.to.sefaz.persistence.query.parser.where.conditions.BetweenParser" alt="" coords="4920,367,5692,460"/>
+<area shape="rect" id="node8" href="./BetweenParser.html" title="&lt;TABLE&gt;" alt="" coords="4909,361,5703,465"/>
+</map>

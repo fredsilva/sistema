@@ -49,15 +49,17 @@ public class ProcuracaoUsuarioRepository extends BaseRepository<ProcuracaoUsuari
     }
 
     /**
-     * Busca todos os Procurados do {@link br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema}.
+     * Busca todas as Procurações de um {@link br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema}.
+     *
      * @param cpfUsuario cpf do usuário.
      * @return Lista de Procurados.
      */
-    public Set<ProcuracaoUsuario> findAllByUsuarioSistema(String cpfUsuario) {
+    public Set<ProcuracaoUsuario> findAllByCpfProcurado(String cpfUsuario) {
         return find("po", select -> select
-                .innerJoinFetch("po.usuarioSistema", "us")
+                .leftJoinFetch("po.cnpjOrigemProcuracao", "cnpj")
+                .leftJoinFetch("po.cpfOrigemProcuracao", "cpf")
                 .leftJoinFetch("po.procuracaoOpcoes","proc")
-                .where().equal("po.cpfOrigem", cpfUsuario))
+                .where().equal("po.cpfProcurado", cpfUsuario))
                 .stream()
                 .collect(Collectors.toSet());
     }

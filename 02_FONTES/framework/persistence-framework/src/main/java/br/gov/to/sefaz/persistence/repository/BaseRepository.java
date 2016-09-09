@@ -1,6 +1,5 @@
 package br.gov.to.sefaz.persistence.repository;
 
-import br.gov.to.sefaz.persistence.entity.AbstractEntity;
 import br.gov.to.sefaz.persistence.query.builder.ParamsBuilder;
 import br.gov.to.sefaz.persistence.query.builder.hql.delete.HqlDeleteBuilder;
 import br.gov.to.sefaz.persistence.query.builder.hql.handler.EntityHandler;
@@ -28,7 +27,7 @@ import java.util.function.Consumer;
  */
 @SuppressWarnings({"PMD.TooManyMethods", "PMD.AbstractNaming", "PMD.AbstractClassWithoutAbstractMethod",
         "PMD.ExcessivePublicCount"})
-public abstract class BaseRepository<E extends AbstractEntity<I>, I extends Serializable> {
+public abstract class BaseRepository<E, I extends Serializable> {
 
     protected final Class<E> entityClass;
     protected final String tableName;

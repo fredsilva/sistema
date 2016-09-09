@@ -19,13 +19,7 @@ public class CpfValidatorHandler {
      * @return ture para cpf válido, false para cpf inválido
      */
     public boolean validateLength(String cpf) {
-        boolean valid = true;
-
-        if (!StringUtils.isEmpty(cpf) && cpf.length() != 11) {
-            valid = false;
-        }
-
-        return valid;
+        return StringUtils.trimToEmpty(cpf).length() == 11;
     }
 
     /**

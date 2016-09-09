@@ -1,6 +1,14 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./TipoOperacaoEnumConverter.html" title="br.gov.to.sefaz.seg.persistence.converter.TipoOperacaoEnumConverter" alt="" coords="16,11,515,121"/>
-<area shape="rect" id="node1" href="./TipoOperacaoEnumConverter.html" title="&lt;TABLE&gt;" alt="" coords="5,5,525,127"/>
-<area shape="rect" id="node2_1" href="./SituacaoUsuarioEnumConverter.html" title="br.gov.to.sefaz.seg.persistence.converter.SituacaoUsuarioEnumConverter" alt="" coords="561,11,1090,121"/>
-<area shape="rect" id="node2" href="./SituacaoUsuarioEnumConverter.html" title="&lt;TABLE&gt;" alt="" coords="550,5,1101,127"/>
+<area shape="rect" id="node1_0" href="./TipoUsuarioConverter.html" title="br.gov.to.sefaz.seg.persistence.converter.TipoUsuarioConverter" alt="" coords="16,11,405,139"/>
+<area shape="rect" id="node1" href="./TipoUsuarioConverter.html" title="&lt;TABLE&gt;" alt="" coords="5,5,416,144"/>
+<area shape="rect" id="node2_1" href="./TipoUnidadeConverter.html" title="br.gov.to.sefaz.seg.persistence.converter.TipoUnidadeConverter" alt="" coords="451,11,863,139"/>
+<area shape="rect" id="node2" href="./TipoUnidadeConverter.html" title="&lt;TABLE&gt;" alt="" coords="441,5,874,144"/>
+<area shape="rect" id="node3_2" href="./TipoOperacaoEnumConverter.html" title="br.gov.to.sefaz.seg.persistence.converter.TipoOperacaoEnumConverter" alt="" coords="909,19,1408,130"/>
+<area shape="rect" id="node3" href="./TipoOperacaoEnumConverter.html" title="&lt;TABLE&gt;" alt="" coords="899,14,1419,135"/>
+<area shape="rect" id="node4_3" href="./SituacaoUsuarioEnumConverter.html" title="br.gov.to.sefaz.seg.persistence.converter.SituacaoUsuarioEnumConverter" alt="" coords="1454,19,1983,130"/>
+<area shape="rect" id="node4" href="./SituacaoUsuarioEnumConverter.html" title="&lt;TABLE&gt;" alt="" coords="1443,14,1994,135"/>
+<area shape="rect" id="node5_4" href="./SituacaoSolicitacaoEnumConverter.html" title="br.gov.to.sefaz.seg.persistence.converter.SituacaoSolicitacaoEnumConverter" alt="" coords="2029,19,2598,130"/>
+<area shape="rect" id="node5" href="./SituacaoSolicitacaoEnumConverter.html" title="&lt;TABLE&gt;" alt="" coords="2018,14,2609,135"/>
+<area shape="rect" id="node6_5" href="./ConverterPackageMarker.html" title="br.gov.to.sefaz.seg.persistence.converter.ConverterPackageMarker" alt="" coords="2643,53,2807,96"/>
+<area shape="rect" id="node6" href="./ConverterPackageMarker.html" title="&lt;TABLE&gt;" alt="" coords="2633,48,2818,101"/>
 </map>

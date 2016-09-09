@@ -27,7 +27,7 @@ public class UsuarioSistemaRepository extends BaseRepository<UsuarioSistema, Str
     private static final String US_USUARIO_POSTO_TRABALHO = "us.usuarioPostoTrabalho";
     private static final String UPT_POSTO_TRABALHO = "upt.postoTrabalho";
     private static final String US_LOGRADOURO = "us.logradouro";
-    private static final String LO_IGNORE = "lo_ignore";
+    private static final String LO = "lo";
     private static final String SU = "su";
     private static final String PT = "pt";
     private static final String UPT = "upt";
@@ -93,7 +93,7 @@ public class UsuarioSistemaRepository extends BaseRepository<UsuarioSistema, Str
     public List<UsuarioSistema> findAllUsuarioSistemaPerfil(String cpfUsuario, String nomeCompletoUsuario,
             Long codigoUnidadeOrganizacional, Integer codigoPostoTrabalho) {
         return find("us", select -> select
-                .innerJoinFetch(US_LOGRADOURO, LO_IGNORE)
+                .innerJoinFetch(US_LOGRADOURO, LO)
                 .leftJoinFetch(US_SOLICITACAO_USUARIO, SU)
                 .leftJoinFetch(US_USUARIO_POSTO_TRABALHO, UPT)
                 .leftJoinFetch(UPT_POSTO_TRABALHO, PT)
@@ -120,7 +120,7 @@ public class UsuarioSistemaRepository extends BaseRepository<UsuarioSistema, Str
                 .leftJoinFetch(UPT_POSTO_TRABALHO, PT)
                 .leftJoinFetch("pt.unidadeOrganizacional", "uo")
                 .innerJoinFetch("us.municipio", "mu")
-                .innerJoinFetch(US_LOGRADOURO, LO_IGNORE)
+                .innerJoinFetch(US_LOGRADOURO, LO)
                 .whereId(cpf));
     }
 
@@ -148,7 +148,7 @@ public class UsuarioSistemaRepository extends BaseRepository<UsuarioSistema, Str
                 .leftJoinFetch(UPT_POSTO_TRABALHO, PT)
                 .leftJoinFetch("pt.unidadeOrganizacional", "uo")
                 .leftJoinFetch("us.municipio", "mu")
-                .innerJoinFetch("us.logradouro", "lo_ignore")
+                .innerJoinFetch("us.logradouro", "lo")
                 .innerJoinFetch("mu.estado", "es")
                 .where().opt().equal(US_CPF_USUARIO, cpf)
                 .and().opt().like("us.nomeCompletoUsuario", nomeCompletoUsuario)

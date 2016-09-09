@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../../QueryStructureBuilder.html" title="br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder" alt="" coords="16,11,204,121"/>
+<area shape="rect" id="node1" href="../../../QueryStructureBuilder.html" title="&lt;TABLE&gt;" alt="" coords="5,5,215,127"/>
+<area shape="rect" id="node2_1" href="./GroupByBuilder.html" title="br.gov.to.sefaz.persistence.query.builder.sql.select.groupby.GroupByBuilder" alt="" coords="67,180,439,343"/>
+<area shape="rect" id="node2" href="./GroupByBuilder.html" title="&lt;TABLE&gt;" alt="" coords="56,175,449,348"/>
+<area shape="rect" id="node3_2" href="../signature/Orderable.html" title="br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Orderable" alt="" coords="249,11,541,121"/>
+<area shape="rect" id="node3" href="../signature/Orderable.html" title="&lt;TABLE&gt;" alt="" coords="239,5,552,127"/>
+</map>

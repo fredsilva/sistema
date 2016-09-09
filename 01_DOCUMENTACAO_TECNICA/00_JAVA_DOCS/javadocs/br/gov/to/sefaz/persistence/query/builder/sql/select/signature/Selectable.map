@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../../hql/select/signature/HqlSelectable.html" title="br.gov.to.sefaz.persistence.query.builder.hql.select.signature.HqlSelectable" alt="" coords="360,669,556,712"/>
+<area shape="rect" id="node1" href="../../../hql/select/signature/HqlSelectable.html" title="&lt;TABLE&gt;" alt="" coords="349,664,567,717"/>
+<area shape="rect" id="node2_1" href="../SelectBuilder.html" title="br.gov.to.sefaz.persistence.query.builder.sql.select.SelectBuilder" alt="" coords="602,471,1082,911"/>
+<area shape="rect" id="node2" href="../SelectBuilder.html" title="&lt;TABLE&gt;" alt="" coords="591,465,1093,916"/>
+<area shape="rect" id="node3_2" href="./Selectable.html" title="br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Selectable" alt="" coords="523,301,777,412"/>
+<area shape="rect" id="node3" href="./Selectable.html" title="&lt;TABLE&gt;" alt="" coords="513,296,787,417"/>
+<area shape="rect" id="node4_3" href="./Orderable.html" title="br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Orderable" alt="" coords="16,71,308,182"/>
+<area shape="rect" id="node4" href="./Orderable.html" title="&lt;TABLE&gt;" alt="" coords="5,66,319,187"/>
+<area shape="rect" id="node5_4" href="./Joinable.html" title="br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Joinable" alt="" coords="353,11,648,243"/>
+<area shape="rect" id="node5" href="./Joinable.html" title="&lt;TABLE&gt;" alt="" coords="343,5,659,248"/>
+<area shape="rect" id="node6_5" href="./Groupable.html" title="br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Groupable" alt="" coords="694,80,905,173"/>
+<area shape="rect" id="node6" href="./Groupable.html" title="&lt;TABLE&gt;" alt="" coords="683,75,915,179"/>
+<area shape="rect" id="node7_6" href="./Conditionable.html" title="br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Conditionable" alt="" coords="950,80,1073,173"/>
+<area shape="rect" id="node7" href="./Conditionable.html" title="&lt;TABLE&gt;" alt="" coords="939,75,1083,179"/>
+</map>

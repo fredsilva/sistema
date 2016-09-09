@@ -1,0 +1,12 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./TipoValorInformativoEnum.html" title="br.gov.to.sefaz.arr.processamento.domain.str.TipoValorInformativoEnum" alt="" coords="16,97,380,607"/>
+<area shape="rect" id="node1" href="./TipoValorInformativoEnum.html" title="&lt;TABLE&gt;" alt="" coords="5,92,391,612"/>
+<area shape="rect" id="node2_1" href="./TipoRejeicaoEnum.html" title="br.gov.to.sefaz.arr.processamento.domain.str.TipoRejeicaoEnum" alt="" coords="426,11,706,693"/>
+<area shape="rect" id="node2" href="./TipoRejeicaoEnum.html" title="&lt;TABLE&gt;" alt="" coords="415,5,717,699"/>
+<area shape="rect" id="node3_2" href="./STR0020.html" title="br.gov.to.sefaz.arr.processamento.domain.str.STR0020" alt="" coords="752,141,1111,563"/>
+<area shape="rect" id="node3" href="./STR0020.html" title="&lt;TABLE&gt;" alt="" coords="741,135,1121,569"/>
+<area shape="rect" id="node4_3" href="./SituacaoProcessamentoStrEnum.html" title="br.gov.to.sefaz.arr.processamento.domain.str.SituacaoProcessamentoStrEnum" alt="" coords="1157,279,1402,425"/>
+<area shape="rect" id="node4" href="./SituacaoProcessamentoStrEnum.html" title="&lt;TABLE&gt;" alt="" coords="1146,274,1413,430"/>
+<area shape="rect" id="node5_4" href="./GrupoValorInformativo.html" title="br.gov.to.sefaz.arr.processamento.domain.str.GrupoValorInformativo" alt="" coords="1448,253,1785,451"/>
+<area shape="rect" id="node5" href="./GrupoValorInformativo.html" title="&lt;TABLE&gt;" alt="" coords="1437,248,1796,456"/>
+</map>

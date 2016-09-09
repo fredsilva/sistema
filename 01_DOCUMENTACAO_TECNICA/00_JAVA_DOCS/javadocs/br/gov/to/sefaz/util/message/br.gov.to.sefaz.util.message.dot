@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.util.message.SourceBundle
-	c3449 [label=<<table title="br.gov.to.sefaz.util.message.SourceBundle" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SourceBundle.html">
+	c9339 [label=<<table title="br.gov.to.sefaz.util.message.SourceBundle" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SourceBundle.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SourceBundle </td></tr>
 		</table></td></tr>
@@ -26,7 +26,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SourceBundle.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.util.message.MessageUtil
-	c3450 [label=<<table title="br.gov.to.sefaz.util.message.MessageUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MessageUtil.html">
+	c9340 [label=<<table title="br.gov.to.sefaz.util.message.MessageUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MessageUtil.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MessageUtil </td></tr>
 		</table></td></tr>
@@ -37,10 +37,10 @@ digraph G {
 <tr><td align="left" balign="left"> + SEG : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + addMesage(bundle : String, severity : FacesMessage.Severity, key : String) </td></tr>
-<tr><td align="left" balign="left"> + addMesage(severity : FacesMessage.Severity, key : String) </td></tr>
-<tr><td align="left" balign="left"> + addMesage(bundle : String, key : String) </td></tr>
-<tr><td align="left" balign="left"> + addMesage(key : String) </td></tr>
+<tr><td align="left" balign="left"> + addMessage(bundle : String, severity : FacesMessage.Severity, key : String) </td></tr>
+<tr><td align="left" balign="left"> + addMessage(severity : FacesMessage.Severity, key : String) </td></tr>
+<tr><td align="left" balign="left"> + addMessage(bundle : String, key : String) </td></tr>
+<tr><td align="left" balign="left"> + addMessage(key : String) </td></tr>
 <tr><td align="left" balign="left"> + addMessages(bundle : String, severity : FacesMessage.Severity, keys : String[]) </td></tr>
 <tr><td align="left" balign="left"> + addMessages(severity : FacesMessage.Severity, keys : String[]) </td></tr>
 <tr><td align="left" balign="left"> + addMessages(keys : String[]) </td></tr>

@@ -1,0 +1,12 @@
+br.gov.to.sefaz.par.configuration
+br.gov.to.sefaz.par.gestao.business.facade.impl
+br.gov.to.sefaz.par.gestao.business.facade
+br.gov.to.sefaz.par.gestao.business
+br.gov.to.sefaz.par.gestao.business.service
+br.gov.to.sefaz.par.gestao.business.service.filter
+br.gov.to.sefaz.par.gestao.business.service.impl
+br.gov.to.sefaz.par.gestao.business.service.validator
+br.gov.to.sefaz.par.gestao.persistence.converter
+br.gov.to.sefaz.par.gestao.persistence.entity
+br.gov.to.sefaz.par.gestao.persistence.enums
+br.gov.to.sefaz.par.gestao.persistence.repository

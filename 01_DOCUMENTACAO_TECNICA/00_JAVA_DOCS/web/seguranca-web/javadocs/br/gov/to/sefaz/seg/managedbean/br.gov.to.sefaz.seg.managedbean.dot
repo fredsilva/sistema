@@ -9,8 +9,47 @@ digraph G {
 	node [fontname="arial",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// br.gov.to.sefaz.seg.managedbean.UsuarioSistemaMB
+	c85 [label=<<table title="br.gov.to.sefaz.seg.managedbean.UsuarioSistemaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioSistemaMB.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> UsuarioSistemaMB </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + UsuarioSistemaMB() </td></tr>
+<tr><td align="left" balign="left"> + getFilter() : UsuarioSistemaFilter </td></tr>
+<tr><td align="left" balign="left"> + setFacade(facade : UsuarioSistemaFacade) </td></tr>
+<tr><td align="left" balign="left"> + search() </td></tr>
+<tr><td align="left" balign="left"> + getResultList() : Collection&lt;UsuarioSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + getAllTipoUsuario() : Collection&lt;TipoUsuario&gt; </td></tr>
+<tr><td align="left" balign="left"> + getEstados() : Collection&lt;Estado&gt; </td></tr>
+<tr><td align="left" balign="left"> + getMunicipios() : Collection&lt;Municipio&gt; </td></tr>
+<tr><td align="left" balign="left"> + loadMunicipios() </td></tr>
+<tr><td align="left" balign="left"> + loadMunicipiosFilter() </td></tr>
+<tr><td align="left" balign="left"> + getLogradouros() : Collection&lt;Logradouro&gt; </td></tr>
+<tr><td align="left" balign="left"> + getUsuarioById() </td></tr>
+<tr><td align="left" balign="left"> + saveNewUsuarioSistema() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./UsuarioSistemaMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.managedbean.UsuarioPrincipalEmpresaMB
+	c86 [label=<<table title="br.gov.to.sefaz.seg.managedbean.UsuarioPrincipalEmpresaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioPrincipalEmpresaMB.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> UsuarioPrincipalEmpresaMB </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + UsuarioPrincipalEmpresaMB() </td></tr>
+<tr><td align="left" balign="left"> + setFacade(facade : UsuarioPrincipalEmpresaFacade) </td></tr>
+<tr><td align="left" balign="left"> + setCertificadoDigitalUtil(certificadoDigitalUtil : CertificadoDigitalUtil) </td></tr>
+<tr><td align="left" balign="left"> + requestCompanyMainUser(cnpj : String, cpf : String) : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./UsuarioPrincipalEmpresaMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.UnidadeOrganizacionalMB
-	c45 [label=<<table title="br.gov.to.sefaz.seg.managedbean.UnidadeOrganizacionalMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UnidadeOrganizacionalMB.html">
+	c87 [label=<<table title="br.gov.to.sefaz.seg.managedbean.UnidadeOrganizacionalMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UnidadeOrganizacionalMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UnidadeOrganizacionalMB </td></tr>
 		</table></td></tr>
@@ -21,18 +60,14 @@ digraph G {
 <tr><td align="left" balign="left"> + UnidadeOrganizacionalMB() </td></tr>
 <tr><td align="left" balign="left"> + getFilter() : UnidadeOrganizacionalFilter </td></tr>
 <tr><td align="left" balign="left"> + setFacade(facade : UnidadeOrganizacionalFacade) </td></tr>
-<tr><td align="left" balign="left"> + search() </td></tr>
 <tr><td align="left" balign="left"> + getResultList() : Collection&lt;UnidadeOrganizacional&gt; </td></tr>
-<tr><td align="left" balign="left"> + getUnidOrganizacPai() : Long </td></tr>
-<tr><td align="left" balign="left"> + setUnidOrganizacPai(unidOrganizacPai : Long) </td></tr>
+<tr><td align="left" balign="left"> + search() </td></tr>
 <tr><td align="left" balign="left"> + getAllUnidadeOrganizacionais() : Collection&lt;UnidadeOrganizacional&gt; </td></tr>
-<tr><td align="left" balign="left"> + loadAllUnidadeOrganizacionais() </td></tr>
-<tr><td align="left" balign="left"> + delete() </td></tr>
-<tr><td align="left" balign="left"> + showDeleteMessage() </td></tr>
+<tr><td align="left" balign="left"> + getAllTiposUnidades() : Collection&lt;TipoUnidade&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./UnidadeOrganizacionalMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.TipoUsuarioMB
-	c46 [label=<<table title="br.gov.to.sefaz.seg.managedbean.TipoUsuarioMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoUsuarioMB.html">
+	c88 [label=<<table title="br.gov.to.sefaz.seg.managedbean.TipoUsuarioMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoUsuarioMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoUsuarioMB </td></tr>
 		</table></td></tr>
@@ -41,15 +76,34 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + TipoUsuarioMB() </td></tr>
-<tr><td align="left" balign="left"> + getFilter() : TipoUsuarioFilter </td></tr>
+<tr><td align="left" balign="left"> + getBeanFactoryMB() : BeanFactoryMB </td></tr>
+<tr><td align="left" balign="left"> + setBeanFactoryMB(beanFactoryMB : BeanFactoryMB) </td></tr>
 <tr><td align="left" balign="left"> + setFacade(facade : TipoUsuarioFacade) </td></tr>
+<tr><td align="left" balign="left"> + getFilter() : TipoUsuarioFilter </td></tr>
 <tr><td align="left" balign="left"> + search() </td></tr>
 <tr><td align="left" balign="left"> + getResultList() : Collection&lt;TipoUsuario&gt; </td></tr>
 <tr><td align="left" balign="left"> + loadAllTipoUsuarios() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./TipoUsuarioMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.managedbean.SegEnumsMB
+	c89 [label=<<table title="br.gov.to.sefaz.seg.managedbean.SegEnumsMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SegEnumsMB.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> SegEnumsMB </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + SegEnumsMB() </td></tr>
+<tr><td align="left" balign="left"> + getSituacoes() : SituacaoUsuarioEnum[] </td></tr>
+<tr><td align="left" balign="left"> + getSituacoesSolicitacao() : SituacaoSolicitacaoEnum[] </td></tr>
+<tr><td align="left" balign="left"> + getSituacaoLabel(situacaoEnum : SituacaoUsuarioEnum) : String </td></tr>
+<tr><td align="left" balign="left"> + getSituacaoSolicitacaoLabel(situacaoSolicitacaoEnum : SituacaoSolicitacaoEnum) : String </td></tr>
+<tr><td align="left" balign="left"> + getSituacaoSolicitacaoCode(situacaoSolicitacaoEnum : SituacaoSolicitacaoEnum) : Character </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SegEnumsMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.ResetPasswordMB
-	c47 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ResetPasswordMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ResetPasswordMB.html">
+	c90 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ResetPasswordMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ResetPasswordMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ResetPasswordMB </td></tr>
 		</table></td></tr>
@@ -67,7 +121,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ResetPasswordMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.PostoTrabalhoMB
-	c48 [label=<<table title="br.gov.to.sefaz.seg.managedbean.PostoTrabalhoMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PostoTrabalhoMB.html">
+	c91 [label=<<table title="br.gov.to.sefaz.seg.managedbean.PostoTrabalhoMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PostoTrabalhoMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PostoTrabalhoMB </td></tr>
 		</table></td></tr>
@@ -79,24 +133,210 @@ digraph G {
 <tr><td align="left" balign="left"> + getFilter() : PostoTrabalhoFilter </td></tr>
 <tr><td align="left" balign="left"> + setFacade(facade : PostoTrabalhoFacade) </td></tr>
 <tr><td align="left" balign="left"> + search() </td></tr>
-<tr><td align="left" balign="left"> + getUnidOrganizac() : Long </td></tr>
-<tr><td align="left" balign="left"> + setUnidOrganizac(unidOrganizac : Long) </td></tr>
 <tr><td align="left" balign="left"> + getAllUnidadeOrganizacionais() : Collection&lt;UnidadeOrganizacional&gt; </td></tr>
 <tr><td align="left" balign="left"> + loadAllUnidadeOrganizacionais() </td></tr>
-<tr><td align="left" balign="left"> + delete() </td></tr>
 <tr><td align="left" balign="left"> + getResultList() : Collection&lt;PostoTrabalho&gt; </td></tr>
-<tr><td align="left" balign="left"> + showDeleteMessage() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./PostoTrabalhoMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.managedbean.PerfilSistemaMB
+	c92 [label=<<table title="br.gov.to.sefaz.seg.managedbean.PerfilSistemaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PerfilSistemaMB.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> PerfilSistemaMB </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + PerfilSistemaMB() </td></tr>
+<tr><td align="left" balign="left"> + getFilter() : PerfilSistemaFilter </td></tr>
+<tr><td align="left" balign="left"> + setFacade(facade : PerfilSistemaFacade) </td></tr>
+<tr><td align="left" balign="left"> + search() </td></tr>
+<tr><td align="left" balign="left"> + getResultList() : Collection&lt;PerfilSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + loadAllPapelSistema() </td></tr>
+<tr><td align="left" balign="left"> + loadAllPapelByPerfil() </td></tr>
+<tr><td align="left" balign="left"> + loadAllUsusariosByPerfil() </td></tr>
+<tr><td align="left" balign="left"> + findOnePerfilSistemaById() </td></tr>
+<tr><td align="left" balign="left"> + getAllPapelSistemas() : Collection&lt;PapelSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + addPapelToList() </td></tr>
+<tr><td align="left" balign="left"> + removePapelFromList() </td></tr>
+<tr><td align="left" balign="left"> + setAllPapelSistemas(allPapelSistemas : Collection&lt;PapelSistema&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getIdentificacaoPapelSistema() : Long </td></tr>
+<tr><td align="left" balign="left"> + setIdentificacaoPapelSistema(identificacaoPapelSistema : Long) </td></tr>
+<tr><td align="left" balign="left"> + getUsuarioPerfils() : Collection&lt;UsuarioPerfil&gt; </td></tr>
+<tr><td align="left" balign="left"> + getPerfilPapelViewBeanCollection() : Collection&lt;PerfilPapelViewBean&gt; </td></tr>
+<tr><td align="left" balign="left"> + getPerfilPapelViewBeanCollectionSize() : Integer </td></tr>
+<tr><td align="left" balign="left"> + setPerfilPapelViewBeanCollection(perfilPapelViewBeanCollection : Collection&lt;PerfilPapelViewBean&gt;) </td></tr>
+<tr><td align="left" balign="left"> + saveOrUpdatePerfilSistema() </td></tr>
+<tr><td align="left" balign="left"> + getPapelSistemasById() : Collection&lt;PapelSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + delete() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./PerfilSistemaMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.managedbean.PapelSistemaMB
+	c93 [label=<<table title="br.gov.to.sefaz.seg.managedbean.PapelSistemaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PapelSistemaMB.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> PapelSistemaMB </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + PapelSistemaMB() </td></tr>
+<tr><td align="left" balign="left"> + getFilter() : PapelSistemaFilter </td></tr>
+<tr><td align="left" balign="left"> + setFacade(facade : PapelSistemaFacade) </td></tr>
+<tr><td align="left" balign="left"> + search() </td></tr>
+<tr><td align="left" balign="left"> + getResultList() : Collection&lt;PapelSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + loadAllPerfisByPapel() </td></tr>
+<tr><td align="left" balign="left"> + loadAllOpcoesByPapel() </td></tr>
+<tr><td align="left" balign="left"> + findOnePapelSistemaById() </td></tr>
+<tr><td align="left" balign="left"> + getOpcaoAplicacaos() : Collection&lt;OpcaoAplicacao&gt; </td></tr>
+<tr><td align="left" balign="left"> + getOpcaoFromPapel() : Collection&lt;OpcaoUsedViewBean&gt; </td></tr>
+<tr><td align="left" balign="left"> + loadAllPapelOpcao() </td></tr>
+<tr><td align="left" balign="left"> + addOptionToList() </td></tr>
+<tr><td align="left" balign="left"> + removeOptionFromList() </td></tr>
+<tr><td align="left" balign="left"> + getPapelOpcaoListSize() : int </td></tr>
+<tr><td align="left" balign="left"> + setOpcaoAplicacaos(opcaoAplicacaos : Collection&lt;OpcaoAplicacao&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getIdentificacaoOpcaoAplicacao() : Long </td></tr>
+<tr><td align="left" balign="left"> + getAllPerfilSistema() : Collection&lt;PerfilSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + setIdentificacaoOpcaoAplicacao(identificacaoOpcaoAplicacao : Long) </td></tr>
+<tr><td align="left" balign="left"> + getPapelOpcaos() : Collection&lt;PapelOpcao&gt; </td></tr>
+<tr><td align="left" balign="left"> + saveOrUpdatePapelSistema() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./PapelSistemaMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.managedbean.ModuloSistemaMB
+	c94 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ModuloSistemaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ModuloSistemaMB.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ModuloSistemaMB </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ModuloSistemaMB() </td></tr>
+<tr><td align="left" balign="left"> + setFacade(facade : ModuloSistemaFacade) </td></tr>
+<tr><td align="left" balign="left"> + update() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ModuloSistemaMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.managedbean.ManutencaoCadastroFuncionalidadeMB
+	c95 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ManutencaoCadastroFuncionalidadeMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ManutencaoCadastroFuncionalidadeMB.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ManutencaoCadastroFuncionalidadeMB </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ManutencaoCadastroFuncionalidadeMB() </td></tr>
+<tr><td align="left" balign="left"> + getAllModuloSistema() : Collection&lt;ModuloSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + getAllAplicacaoModulo() : Collection&lt;AplicacaoModulo&gt; </td></tr>
+<tr><td align="left" balign="left"> + loadAllModuloSistema() </td></tr>
+<tr><td align="left" balign="left"> + loadAllAplicacaoModulo() </td></tr>
+<tr><td align="left" balign="left"> + getFilter() : OpcaoAplicacaoFilter </td></tr>
+<tr><td align="left" balign="left"> + setFacade(facade : ManutencaoCadastroFuncionalidadeFacade) </td></tr>
+<tr><td align="left" balign="left"> + search() </td></tr>
+<tr><td align="left" balign="left"> + getResultList() : Collection&lt;OpcaoAplicacao&gt; </td></tr>
+<tr><td align="left" balign="left"> + loadAplicacoesPorModulo() </td></tr>
+<tr><td align="left" balign="left"> + loadAplicacoesPorModuloOpen(identificacaoModulo : Long) </td></tr>
+<tr><td align="left" balign="left"> + getAplicacoesPorModulo() : Collection&lt;AplicacaoModulo&gt; </td></tr>
+<tr><td align="left" balign="left"> + manterAjuda() </td></tr>
+<tr><td align="left" balign="left"> + update() </td></tr>
+<tr><td align="left" balign="left"> + save() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ManutencaoCadastroFuncionalidadeMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.managedbean.ManterUsuarioSistemaMB
+	c96 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ManterUsuarioSistemaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ManterUsuarioSistemaMB.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ManterUsuarioSistemaMB </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ManterUsuarioSistemaMB() </td></tr>
+<tr><td align="left" balign="left"> + getFilter() : ManterUsuarioSistemaFilter </td></tr>
+<tr><td align="left" balign="left"> + setFacade(facade : ManterUsuarioSistemaFacade) </td></tr>
+<tr><td align="left" balign="left"> + search() </td></tr>
+<tr><td align="left" balign="left"> + getResultList() : Collection&lt;UsuarioSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + getUsuarioById() </td></tr>
+<tr><td align="left" balign="left"> + resetUserPassword() </td></tr>
+<tr><td align="left" balign="left"> + toggleStatusUsuario() </td></tr>
+<tr><td align="left" balign="left"> + getAllUnidadeOrganizacionais() : Collection&lt;UnidadeOrganizacional&gt; </td></tr>
+<tr><td align="left" balign="left"> + loadAllUnidadeOrganizacionais() </td></tr>
+<tr><td align="left" balign="left"> + getAllPostoTrabalho() : Collection&lt;PostoTrabalho&gt; </td></tr>
+<tr><td align="left" balign="left"> + updateUser() </td></tr>
+<tr><td align="left" balign="left"> + createUser() </td></tr>
+<tr><td align="left" balign="left"> + getEstados() : Collection&lt;Estado&gt; </td></tr>
+<tr><td align="left" balign="left"> + getMunicipios() : Collection&lt;Municipio&gt; </td></tr>
+<tr><td align="left" balign="left"> + getTipoUsuarios() : Collection&lt;TipoUsuario&gt; </td></tr>
+<tr><td align="left" balign="left"> + loadMunicipios() </td></tr>
+<tr><td align="left" balign="left"> + loadPostosTrabalho() </td></tr>
+<tr><td align="left" balign="left"> + getLogradouros() : Collection&lt;Logradouro&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ManterUsuarioSistemaMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.managedbean.ManterProcuracaoMB
+	c97 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ManterProcuracaoMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ManterProcuracaoMB.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ManterProcuracaoMB </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ManterProcuracaoMB() </td></tr>
+<tr><td align="left" balign="left"> + loadUsuarioProcurador() </td></tr>
+<tr><td align="left" balign="left"> + getOpcoesFromUsuario() : List&lt;OpcaoUsedViewBean&gt; </td></tr>
+<tr><td align="left" balign="left"> + getUsuarioIdentifications() : List&lt;ListagemCpfProcuracao&gt; </td></tr>
+<tr><td align="left" balign="left"> + getProcuradorNome() : String </td></tr>
+<tr><td align="left" balign="left"> + getUsuarioIdentification() : String </td></tr>
+<tr><td align="left" balign="left"> + setUsuarioIdentification(usuarioIdentification : String) </td></tr>
+<tr><td align="left" balign="left"> + getProcuradorCpf() : String </td></tr>
+<tr><td align="left" balign="left"> + setProcuradorCpf(procuradorCpf : String) </td></tr>
+<tr><td align="left" balign="left"> + setIdentificacaoOpcaoApplicacao(identificacaoOpcaoApplicacao : Long) </td></tr>
+<tr><td align="left" balign="left"> + getIdentificacaoOpcaoApplicacao() : Long </td></tr>
+<tr><td align="left" balign="left"> + toggleOpcaoAplicacao() </td></tr>
+<tr><td align="left" balign="left"> + save() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ManterProcuracaoMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.ManagedBeanPackageMarker
-	c49 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ManagedBeanPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ManagedBeanPackageMarker.html">
+	c98 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ManagedBeanPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ManagedBeanPackageMarker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ManagedBeanPackageMarker </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ManagedBeanPackageMarker.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.managedbean.LoginMB
+	c99 [label=<<table title="br.gov.to.sefaz.seg.managedbean.LoginMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LoginMB.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> LoginMB </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + LoginMB() </td></tr>
+<tr><td align="left" balign="left"> + doLogin() </td></tr>
+<tr><td align="left" balign="left"> + getDto() : LoginDto </td></tr>
+		</table></td></tr>
+		</table>>, URL="./LoginMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.managedbean.ChangePasswordMB
+	c100 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ChangePasswordMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ChangePasswordMB.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ChangePasswordMB </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ChangePasswordMB() </td></tr>
+<tr><td align="left" balign="left"> + getBeanFactoryMB() : BeanFactoryMB </td></tr>
+<tr><td align="left" balign="left"> + setBeanFactoryMB(beanFactoryMB : BeanFactoryMB) </td></tr>
+<tr><td align="left" balign="left"> + setFacade(facade : UsuarioSistemaFacade) </td></tr>
+<tr><td align="left" balign="left"> + getDto() : ChangePasswordDto </td></tr>
+<tr><td align="left" balign="left"> + setDto(dto : ChangePasswordDto) </td></tr>
+<tr><td align="left" balign="left"> + executeChangePasswd() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ChangePasswordMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.CertificadoDigitalMB
-	c50 [label=<<table title="br.gov.to.sefaz.seg.managedbean.CertificadoDigitalMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CertificadoDigitalMB.html">
+	c101 [label=<<table title="br.gov.to.sefaz.seg.managedbean.CertificadoDigitalMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CertificadoDigitalMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CertificadoDigitalMB </td></tr>
 		</table></td></tr>
@@ -105,8 +345,85 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + CertificadoDigitalMB() </td></tr>
-<tr><td align="left" balign="left"> + getCpf() : String </td></tr>
+<tr><td align="left" balign="left"> + authenticate() : String </td></tr>
+<tr><td align="left" balign="left"> + requestUser() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./CertificadoDigitalMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.managedbean.CadastroSenhaMB
+	c102 [label=<<table title="br.gov.to.sefaz.seg.managedbean.CadastroSenhaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CadastroSenhaMB.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> CadastroSenhaMB </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + CadastroSenhaMB() </td></tr>
+<tr><td align="left" balign="left"> + getFilter() : CadastroSenhaFilter </td></tr>
+<tr><td align="left" balign="left"> + setFacade(facade : CadastroSenhaFacade) </td></tr>
+<tr><td align="left" balign="left"> + search() </td></tr>
+<tr><td align="left" balign="left"> + getResultList() : Collection&lt;UsuarioSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + getUsuarioById() </td></tr>
+<tr><td align="left" balign="left"> + resetUserPassword() </td></tr>
+<tr><td align="left" balign="left"> + authorizeUser() </td></tr>
+<tr><td align="left" balign="left"> + getLogradouros() : Collection&lt;Logradouro&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./CadastroSenhaMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.managedbean.AtribuirPerfilMB
+	c103 [label=<<table title="br.gov.to.sefaz.seg.managedbean.AtribuirPerfilMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AtribuirPerfilMB.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> AtribuirPerfilMB </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + AtribuirPerfilMB() </td></tr>
+<tr><td align="left" balign="left"> + getFilter() : AtribuirPerfilFilter </td></tr>
+<tr><td align="left" balign="left"> + setFacade(facade : AtribuirPerfilFacade) </td></tr>
+<tr><td align="left" balign="left"> + search() </td></tr>
+<tr><td align="left" balign="left"> + getResultList() : Collection&lt;UsuarioSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + getAllUnidadeOrganizacionais() : Collection&lt;UnidadeOrganizacional&gt; </td></tr>
+<tr><td align="left" balign="left"> + loadAllUnidadeOrganizacionais() </td></tr>
+<tr><td align="left" balign="left"> + getAllPostoTrabalho() : Collection&lt;PostoTrabalho&gt; </td></tr>
+<tr><td align="left" balign="left"> + getTipoUsuarios() : Collection&lt;TipoUsuario&gt; </td></tr>
+<tr><td align="left" balign="left"> + loadPostosTrabalho() </td></tr>
+<tr><td align="left" balign="left"> + getAllPerfilSistema() : Collection&lt;PerfilSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + getUsuarioPerfilViewBeanCollection() : Collection&lt;UsuarioPerfilViewBean&gt; </td></tr>
+<tr><td align="left" balign="left"> + findOneUsuarioById() </td></tr>
+<tr><td align="left" balign="left"> + toggleConcederPerfil() </td></tr>
+<tr><td align="left" balign="left"> + atribuirUsuarioPerfil() </td></tr>
+<tr><td align="left" balign="left"> + getIdentificacaoPerfilSistema() : Long </td></tr>
+<tr><td align="left" balign="left"> + setIdentificacaoPerfilSistema(identificacaoPerfilSistema : Long) </td></tr>
+<tr><td align="left" balign="left"> + setUsuarioPerfilViewBeanCollection(usuarioPerfilViewBeanCollection : Collection&lt;UsuarioPerfilViewBean&gt;) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./AtribuirPerfilMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.managedbean.AtivarInativarPerfilMB
+	c104 [label=<<table title="br.gov.to.sefaz.seg.managedbean.AtivarInativarPerfilMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AtivarInativarPerfilMB.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> AtivarInativarPerfilMB </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + AtivarInativarPerfilMB() </td></tr>
+<tr><td align="left" balign="left"> + getFilter() : AtivarInativarPerfilFilter </td></tr>
+<tr><td align="left" balign="left"> + setFacade(facade : AtivarInativarPerfilFacade) </td></tr>
+<tr><td align="left" balign="left"> + search() </td></tr>
+<tr><td align="left" balign="left"> + getResultList() : Collection&lt;UsuarioPerfil&gt; </td></tr>
+<tr><td align="left" balign="left"> + getAllPostoTrabalho() : Collection&lt;PostoTrabalho&gt; </td></tr>
+<tr><td align="left" balign="left"> + getAllUnidadeOrganizacional() : Collection&lt;UnidadeOrganizacional&gt; </td></tr>
+<tr><td align="left" balign="left"> + getAllPerfisUsuario() : Collection&lt;UsuarioPerfil&gt; </td></tr>
+<tr><td align="left" balign="left"> + setAllPerfisUsuariosView() </td></tr>
+<tr><td align="left" balign="left"> + toggleSituacao() </td></tr>
+<tr><td align="left" balign="left"> + updatePerfilUsuario() </td></tr>
+<tr><td align="left" balign="left"> + getIdPerfilDto() : Long </td></tr>
+<tr><td align="left" balign="left"> + setIdPerfilDto(idPerfilDto : Long) </td></tr>
+<tr><td align="left" balign="left"> + getNomeUsuario() : String </td></tr>
+<tr><td align="left" balign="left"> + getAllUsuarioSistema() : Collection&lt;UsuarioSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + setAllUsuarioSistema(allUsuarioSistema : Collection&lt;UsuarioSistema&gt;) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./AtivarInativarPerfilMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 }
 

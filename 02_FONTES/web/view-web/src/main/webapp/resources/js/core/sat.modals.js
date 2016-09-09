@@ -19,7 +19,7 @@ alertModal = {
         });
     },
     putMessage: function (message, type) {
-        if (message.trim()) {
+        if (message && message.trim()) {
             var alertClass = "alert-info";
             if (type) {
                 alertClass = "alert-" + type;

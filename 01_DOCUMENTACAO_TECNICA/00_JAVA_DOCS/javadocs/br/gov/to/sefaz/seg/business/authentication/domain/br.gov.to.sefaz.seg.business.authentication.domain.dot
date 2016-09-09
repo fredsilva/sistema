@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.authentication.domain.UsuarioSistemaAuthentication
-	c12944 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.domain.UsuarioSistemaAuthentication" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioSistemaAuthentication.html">
+	c75577 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.domain.UsuarioSistemaAuthentication" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioSistemaAuthentication.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UsuarioSistemaAuthentication </td></tr>
 		</table></td></tr>
@@ -27,10 +27,26 @@ digraph G {
 <tr><td align="left" balign="left"> + isAuthenticated() : boolean </td></tr>
 <tr><td align="left" balign="left"> + setAuthenticated(isAuthenticated : boolean) </td></tr>
 <tr><td align="left" balign="left"> + getName() : String </td></tr>
+<tr><td align="left" balign="left"> + isAuthenticatedByCert() : boolean </td></tr>
+<tr><td align="left" balign="left"> + setAuthenticatedByCert(authenticatedByCert : boolean) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./UsuarioSistemaAuthentication.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.authentication.domain.SecurityErrorCodeType
+	c75578 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.domain.SecurityErrorCodeType" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SecurityErrorCodeType.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
+<tr><td align="center" balign="center"> SecurityErrorCodeType </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> AUTHENTICATION </td></tr>
+<tr><td align="left" balign="left"> PERFOM </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SecurityErrorCodeType.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupType
-	c12945 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupType" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RoleGroupType.html">
+	c75579 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupType" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RoleGroupType.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> RoleGroupType </td></tr>
@@ -44,7 +60,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./RoleGroupType.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupManager
-	c12946 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RoleGroupManager.html">
+	c75580 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RoleGroupManager.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> RoleGroupManager </td></tr>
 		</table></td></tr>
@@ -55,8 +71,9 @@ digraph G {
 <tr><td align="left" balign="left"> + RoleGroupManager() </td></tr>
 <tr><td align="left" balign="left"> + setActiveGroup(type : RoleGroupType, id : Long) </td></tr>
 <tr><td align="left" balign="left"> + setActiveGroup(activeGroup : RoleGroupKey) </td></tr>
-<tr><td align="left" balign="left"> + getRoles() : Set&lt;GrantedAuthority&gt; </td></tr>
+<tr><td align="left" balign="left"> + getRoles() : Set&lt;String&gt; </td></tr>
 <tr><td align="left" balign="left"> + getKeys() : Set&lt;RoleGroupKey&gt; </td></tr>
+<tr><td align="left" balign="left"> + getEntries() : Set&lt;Map.Entry&lt;RoleGroupKey, Set&lt;String&gt;&gt;&gt; </td></tr>
 <tr><td align="left" balign="left"> + addRoles(type : RoleGroupType, id : Long, roles : String[]) </td></tr>
 <tr><td align="left" balign="left"> + addRoles(type : RoleGroupType, id : Long, roles : Collection&lt;String&gt;) </td></tr>
 <tr><td align="left" balign="left"> + addRoles(key : RoleGroupKey, roles : String[]) </td></tr>
@@ -67,7 +84,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./RoleGroupManager.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupKey
-	c12947 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupKey" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RoleGroupKey.html">
+	c75581 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupKey" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RoleGroupKey.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> RoleGroupKey </td></tr>
 		</table></td></tr>
@@ -87,7 +104,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./RoleGroupKey.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.authentication.domain.ResetPasswordDto
-	c12948 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.domain.ResetPasswordDto" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ResetPasswordDto.html">
+	c75582 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.domain.ResetPasswordDto" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ResetPasswordDto.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ResetPasswordDto </td></tr>
 		</table></td></tr>
@@ -107,7 +124,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ResetPasswordDto.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.authentication.domain.LoginDto
-	c12949 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.domain.LoginDto" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LoginDto.html">
+	c75583 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.domain.LoginDto" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LoginDto.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LoginDto </td></tr>
 		</table></td></tr>
@@ -126,19 +143,27 @@ digraph G {
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./LoginDto.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	// br.gov.to.sefaz.seg.business.authentication.domain.ErrorCodeType
-	c12950 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.domain.ErrorCodeType" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ErrorCodeType.html">
+	// br.gov.to.sefaz.seg.business.authentication.domain.ChangePasswordDto
+	c75584 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.domain.ChangePasswordDto" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ChangePasswordDto.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
-<tr><td align="center" balign="center"> ErrorCodeType </td></tr>
+<tr><td align="center" balign="center"> ChangePasswordDto </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> AUTENTICATION </td></tr>
-<tr><td align="left" balign="left"> PERFOM </td></tr>
+<tr><td align="left" balign="left"> + ChangePasswordDto() </td></tr>
+<tr><td align="left" balign="left"> + ChangePasswordDto(senhaAtual : String, novaSenha : String, confirmarNovaSenha : String) </td></tr>
+<tr><td align="left" balign="left"> + getSenhaAtual() : String </td></tr>
+<tr><td align="left" balign="left"> + setSenhaAtual(senhaAtual : String) </td></tr>
+<tr><td align="left" balign="left"> + getNovaSenha() : String </td></tr>
+<tr><td align="left" balign="left"> + setNovaSenha(novaSenha : String) </td></tr>
+<tr><td align="left" balign="left"> + getConfirmarNovaSenha() : String </td></tr>
+<tr><td align="left" balign="left"> + setConfirmarNovaSenha(confirmarNovaSenha : String) </td></tr>
+<tr><td align="left" balign="left"> + equals(o : Object) : boolean </td></tr>
+<tr><td align="left" balign="left"> + hashCode() : int </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
-		</table>>, URL="./ErrorCodeType.html", fontname="arial", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./ChangePasswordDto.html", fontname="arial", fontcolor="black", fontsize=10.0];
 }
 

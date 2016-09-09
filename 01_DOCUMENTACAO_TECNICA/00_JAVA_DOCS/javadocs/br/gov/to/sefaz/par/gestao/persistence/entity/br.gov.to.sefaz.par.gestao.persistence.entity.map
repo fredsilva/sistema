@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./ParametroGeral.html" title="br.gov.to.sefaz.par.gestao.persistence.entity.ParametroGeral" alt="" coords="16,63,904,399"/>
+<area shape="rect" id="node1" href="./ParametroGeral.html" title="&lt;TABLE&gt;" alt="" coords="5,57,915,404"/>
+<area shape="rect" id="node2_1" href="./Pais.html" title="br.gov.to.sefaz.par.gestao.persistence.entity.Pais" alt="" coords="949,115,1237,347"/>
+<area shape="rect" id="node2" href="./Pais.html" title="&lt;TABLE&gt;" alt="" coords="939,109,1248,352"/>
+<area shape="rect" id="node3_2" href="./Municipio.html" title="br.gov.to.sefaz.par.gestao.persistence.entity.Municipio" alt="" coords="1283,11,2415,451"/>
+<area shape="rect" id="node3" href="./Municipio.html" title="&lt;TABLE&gt;" alt="" coords="1273,5,2426,456"/>
+<area shape="rect" id="node4_3" href="./Logradouro.html" title="br.gov.to.sefaz.par.gestao.persistence.entity.Logradouro" alt="" coords="2461,123,2886,338"/>
+<area shape="rect" id="node4" href="./Logradouro.html" title="&lt;TABLE&gt;" alt="" coords="2450,118,2897,343"/>
+<area shape="rect" id="node5_4" href="./Estado.html" title="br.gov.to.sefaz.par.gestao.persistence.entity.Estado" alt="" coords="2932,28,4169,433"/>
+<area shape="rect" id="node5" href="./Estado.html" title="&lt;TABLE&gt;" alt="" coords="2921,23,4180,439"/>
+<area shape="rect" id="node6_5" href="./CatEntityPackageMarker.html" title="br.gov.to.sefaz.par.gestao.persistence.entity.CatEntityPackageMarker" alt="" coords="4215,193,4399,269"/>
+<area shape="rect" id="node6" href="./CatEntityPackageMarker.html" title="&lt;TABLE&gt;" alt="" coords="4204,187,4409,274"/>
+<area shape="rect" id="node7_6" href="./AtividadeEconomica.html" title="br.gov.to.sefaz.par.gestao.persistence.entity.AtividadeEconomica" alt="" coords="4445,37,5478,425"/>
+<area shape="rect" id="node7" href="./AtividadeEconomica.html" title="&lt;TABLE&gt;" alt="" coords="4434,31,5489,430"/>
+</map>

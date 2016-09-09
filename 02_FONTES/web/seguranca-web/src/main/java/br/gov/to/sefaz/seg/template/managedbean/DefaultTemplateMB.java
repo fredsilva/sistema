@@ -15,6 +15,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Component;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -156,8 +157,9 @@ public class DefaultTemplateMB {
      * @param id identificação do grupo
      * @see AuthenticatedUserHandler#setActiveRoleGroup(RoleGroupType, Long)
      */
-    public void setActiveProfile(Long id) {
+    public void setActiveProfile(Long id) throws IOException {
         facade.setActiveProfile(id);
+        pathResolver.redirectToHome();
     }
 
     /**
@@ -166,8 +168,9 @@ public class DefaultTemplateMB {
      * @param id identificação do grupo
      * @see AuthenticatedUserHandler#setActiveRoleGroup(RoleGroupType, Long)
      */
-    public void setActiveProcurador(Long id) {
+    public void setActiveProcurador(Long id) throws IOException {
         facade.setActiveProcuracao(id);
+        pathResolver.redirectToHome();
     }
 
     /**

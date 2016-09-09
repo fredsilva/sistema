@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.facade.CrudFacade<E, I extends java.io.Serializable>
-	c86311 [label=<<table title="br.gov.to.sefaz.business.facade.CrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../CrudFacade.html">
+	c337294 [label=<<table title="br.gov.to.sefaz.business.facade.CrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../CrudFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CrudFacade&lt;E, I extends Serializable&gt; </td></tr>
@@ -21,7 +21,6 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findOne(id : I) : E </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAll() : Collection&lt;E&gt; </font></td></tr>
-<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAll(list : Iterable&lt;I&gt;) : Collection&lt;E&gt; </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + save(entity : E) : E </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + save(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + update(entity : E) : E </font></td></tr>
@@ -30,7 +29,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../CrudFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c86312 [label=<<table title="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DefaultCrudFacade.html">
+	c337295 [label=<<table title="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DefaultCrudFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultCrudFacade&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
 		</table></td></tr>
@@ -41,7 +40,6 @@ digraph G {
 <tr><td align="left" balign="left"> + DefaultCrudFacade(service : CrudService&lt;E, I&gt;) </td></tr>
 <tr><td align="left" balign="left"> + findOne(id : I) : E </td></tr>
 <tr><td align="left" balign="left"> + findAll() : Collection&lt;E&gt; </td></tr>
-<tr><td align="left" balign="left"> + findAll(list : Iterable&lt;I&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + save(entity : E) : E </td></tr>
 <tr><td align="left" balign="left"> + save(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + update(entity : E) : E </td></tr>
@@ -49,8 +47,54 @@ digraph G {
 <tr><td align="left" balign="left"> + delete(ids : Iterable&lt;I&gt;) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./DefaultCrudFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.par.gestao.business.facade.impl.ParametroGeralFacadeImpl
+	c337316 [label=<<table title="br.gov.to.sefaz.par.gestao.business.facade.impl.ParametroGeralFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../par/gestao/business/facade/impl/ParametroGeralFacadeImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ParametroGeralFacadeImpl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ParametroGeralFacadeImpl(service : ParametroGeralService) </td></tr>
+<tr><td align="left" balign="left"> + find(filter : ParametroGeralFilter) : List&lt;ParametroGeral&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../../par/gestao/business/facade/impl/ParametroGeralFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.facade.impl.UsuarioSistemaFacadeImpl
+	c337389 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.UsuarioSistemaFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/business/gestao/facade/impl/UsuarioSistemaFacadeImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> UsuarioSistemaFacadeImpl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + UsuarioSistemaFacadeImpl(service : UsuarioSistemaService, tipoUsuarioService : TipoUsuarioService, estadoService : EstadoService, municipioService : MunicipioService, logradouroService : LogradouroService) </td></tr>
+<tr><td align="left" balign="left"> + find(filter : UsuarioSistemaFilter) : List&lt;UsuarioSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllTipoUsuario() : Collection&lt;TipoUsuario&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllEstados() : Collection&lt;Estado&gt; </td></tr>
+<tr><td align="left" balign="left"> + findMunicipiosByUF(uf : String) : Collection&lt;Municipio&gt; </td></tr>
+<tr><td align="left" balign="left"> + findUnidadeOrganizacional() : UnidadeOrganizacional </td></tr>
+<tr><td align="left" balign="left"> + saveNewUsuarioSistema(usuarioSistema : UsuarioSistema) </td></tr>
+<tr><td align="left" balign="left"> + findOneUsuarioSistema(cpf : String) : UsuarioSistema </td></tr>
+<tr><td align="left" balign="left"> + changePassword(dto : ChangePasswordDto) </td></tr>
+<tr><td align="left" balign="left"> + findAllLogradouros() : Collection&lt;Logradouro&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../../seg/business/gestao/facade/impl/UsuarioSistemaFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.facade.impl.UsuarioPrincipalEmpresaFacadeImpl
+	c337390 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.UsuarioPrincipalEmpresaFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/business/gestao/facade/impl/UsuarioPrincipalEmpresaFacadeImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> UsuarioPrincipalEmpresaFacadeImpl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + UsuarioPrincipalEmpresaFacadeImpl(service : UsuarioPrincipalEmpresaService) </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../../seg/business/gestao/facade/impl/UsuarioPrincipalEmpresaFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.facade.impl.UnidadeOrganizacionalFacadeImpl
-	c86369 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.UnidadeOrganizacionalFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/business/gestao/facade/impl/UnidadeOrganizacionalFacadeImpl.html">
+	c337391 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.UnidadeOrganizacionalFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/business/gestao/facade/impl/UnidadeOrganizacionalFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UnidadeOrganizacionalFacadeImpl </td></tr>
 		</table></td></tr>
@@ -60,23 +104,28 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + UnidadeOrganizacionalFacadeImpl(service : UnidadeOrganizacionalService) </td></tr>
 <tr><td align="left" balign="left"> + find(filter : UnidadeOrganizacionalFilter) : List&lt;UnidadeOrganizacional&gt; </td></tr>
+<tr><td align="left" balign="left"> + findTiposUnidades() : List&lt;TipoUnidade&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../seg/business/gestao/facade/impl/UnidadeOrganizacionalFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	// br.gov.to.sefaz.seg.business.gestao.facade.impl.TipoUsuarioFacadeImpl
-	c86370 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.TipoUsuarioFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/business/gestao/facade/impl/TipoUsuarioFacadeImpl.html">
+	// br.gov.to.sefaz.seg.business.gestao.facade.impl.ProcuracaoUsuarioFacadeImpl
+	c337393 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.ProcuracaoUsuarioFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/business/gestao/facade/impl/ProcuracaoUsuarioFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> TipoUsuarioFacadeImpl </td></tr>
+<tr><td align="center" balign="center"> ProcuracaoUsuarioFacadeImpl </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + TipoUsuarioFacadeImpl(service : TipoUsuarioService) </td></tr>
-<tr><td align="left" balign="left"> + find(filter : TipoUsuarioFilter) : List&lt;TipoUsuario&gt; </td></tr>
+<tr><td align="left" balign="left"> + ProcuracaoUsuarioFacadeImpl(service : ProcuracaoUsuarioService, opcaoService : OpcaoAplicacaoService, usuarioService : UsuarioSistemaService, listagemCpfProcuracaoService : ListagemCpfProcuracaoService) </td></tr>
+<tr><td align="left" balign="left"> + getOpcoesFromUsuario() : List&lt;OpcaoAplicacao&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllCpfProcuracaoFromUsuario() : List&lt;ListagemCpfProcuracao&gt; </td></tr>
+<tr><td align="left" balign="left"> + findUsuarioNomeById(usuarioCpf : String) : String </td></tr>
+<tr><td align="left" balign="left"> + findProcuracaoByCpf(cpfOrigem : String, procuradorCpf : String) : ProcuracaoUsuario </td></tr>
+<tr><td align="left" balign="left"> + findProcuracaoByCnpj(cnpjOrigem : String, procuradorCpf : String) : ProcuracaoUsuario </td></tr>
 		</table></td></tr>
-		</table>>, URL="../../../seg/business/gestao/facade/impl/TipoUsuarioFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
+		</table>>, URL="../../../seg/business/gestao/facade/impl/ProcuracaoUsuarioFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.facade.impl.PostoTrabalhoFacadeImpl
-	c86371 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.PostoTrabalhoFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/business/gestao/facade/impl/PostoTrabalhoFacadeImpl.html">
+	c337394 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.PostoTrabalhoFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/business/gestao/facade/impl/PostoTrabalhoFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PostoTrabalhoFacadeImpl </td></tr>
 		</table></td></tr>
@@ -89,8 +138,47 @@ digraph G {
 <tr><td align="left" balign="left"> + findAllUnidadeOrganizacional() : Collection&lt;UnidadeOrganizacional&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../seg/business/gestao/facade/impl/PostoTrabalhoFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.facade.impl.PerfilSistemaFacadeImpl
+	c337395 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.PerfilSistemaFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/business/gestao/facade/impl/PerfilSistemaFacadeImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> PerfilSistemaFacadeImpl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + PerfilSistemaFacadeImpl(service : PerfilSistemaService, papelSistemaService : PapelSistemaService, usuarioPerfilService : UsuarioPerfilService, perfilPapelService : PerfilPapelService) </td></tr>
+<tr><td align="left" balign="left"> + findByFilter(filter : PerfilSistemaFilter) : Collection&lt;PerfilSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllPerfilSistema(filter : PerfilSistemaFilter) : Collection&lt;PerfilSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + saveOrUpdatePerfilSistema(dto : PerfilSistema) : PerfilSistema </td></tr>
+<tr><td align="left" balign="left"> + findOneComplete(id : Long) : PerfilSistema </td></tr>
+<tr><td align="left" balign="left"> + findAllPapelByPerfil(id : Long) : Collection&lt;PapelSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllPerfilPapelByPerfil(id : Long) : Collection&lt;PerfilPapel&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllPapelSistema() : Collection&lt;PapelSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllUsuariosByPerfil(identificacaoPerfil : Long) : Collection&lt;UsuarioPerfil&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../../seg/business/gestao/facade/impl/PerfilSistemaFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.facade.impl.PapelSistemaFacadeImpl
+	c337396 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.PapelSistemaFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/business/gestao/facade/impl/PapelSistemaFacadeImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> PapelSistemaFacadeImpl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + PapelSistemaFacadeImpl(service : PapelSistemaService, opcaoAplicacaoService : OpcaoAplicacaoService, papelOpcaoService : PapelOpcaoService, perfilSistemaService : PerfilSistemaService) </td></tr>
+<tr><td align="left" balign="left"> + findByFilter(filter : PapelSistemaFilter) : Collection&lt;PapelSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllPapelSistema() : List&lt;PapelSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllOpcaoAplicacao() : List&lt;OpcaoAplicacao&gt; </td></tr>
+<tr><td align="left" balign="left"> + saveOrUpdatePapelSistema(dto : PapelSistema) : PapelSistema </td></tr>
+<tr><td align="left" balign="left"> + findOneCounted(id : Long) : PapelSistema </td></tr>
+<tr><td align="left" balign="left"> + findAllPapelOpcaoById(idPapel : Long) : Set&lt;PapelOpcao&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllPerfilByPapel(id : Long) : Collection&lt;PerfilSistema&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../../seg/business/gestao/facade/impl/PapelSistemaFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.facade.impl.ModuloSistemaFacadeImpl
-	c86372 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.ModuloSistemaFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/business/gestao/facade/impl/ModuloSistemaFacadeImpl.html">
+	c337397 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.ModuloSistemaFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/business/gestao/facade/impl/ModuloSistemaFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ModuloSistemaFacadeImpl </td></tr>
 		</table></td></tr>
@@ -101,8 +189,106 @@ digraph G {
 <tr><td align="left" balign="left"> + ModuloSistemaFacadeImpl(service : ModuloSistemaService) </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../seg/business/gestao/facade/impl/ModuloSistemaFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.facade.impl.ManutencaoCadastroFuncionalidadeFacadeImpl
+	c337398 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.ManutencaoCadastroFuncionalidadeFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/business/gestao/facade/impl/ManutencaoCadastroFuncionalidadeFacadeImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ManutencaoCadastroFuncionalidadeFacadeImpl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ManutencaoCadastroFuncionalidadeFacadeImpl(service : OpcaoAplicacaoService, moduloSistemaService : ModuloSistemaService, aplicacaoModuloService : AplicacaoModuloService) </td></tr>
+<tr><td align="left" balign="left"> + findAllModuloSistema() : Collection&lt;ModuloSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllAplicacaoModulo() : Collection&lt;AplicacaoModulo&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAplicacoesPorModulo(identificacaoModuloSistema : Long) : Collection&lt;AplicacaoModulo&gt; </td></tr>
+<tr><td align="left" balign="left"> + find(filter : OpcaoAplicacaoFilter) : List&lt;OpcaoAplicacao&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../../seg/business/gestao/facade/impl/ManutencaoCadastroFuncionalidadeFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.facade.impl.ManterUsuarioSistemaFacadeImpl
+	c337399 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.ManterUsuarioSistemaFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/business/gestao/facade/impl/ManterUsuarioSistemaFacadeImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ManterUsuarioSistemaFacadeImpl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ManterUsuarioSistemaFacadeImpl(service : UsuarioSistemaService, unidadeOrganizacionalService : UnidadeOrganizacionalService, postoTrabalhoService : PostoTrabalhoService, estadoService : EstadoService, municipioService : MunicipioService, tipoUsuarioService : TipoUsuarioService, logradouroService : LogradouroService) </td></tr>
+<tr><td align="left" balign="left"> + find(filter : ManterUsuarioSistemaFilter) : Collection&lt;UsuarioSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + resetPassword(usuarioSistema : UsuarioSistema) </td></tr>
+<tr><td align="left" balign="left"> + toggleUserStatus(usuarioSistema : UsuarioSistema) : UsuarioSistema </td></tr>
+<tr><td align="left" balign="left"> + findOneUsuarioSistema(cpfUsuario : String) : UsuarioSistema </td></tr>
+<tr><td align="left" balign="left"> + findAllUnidadeOrganizacional() : Collection&lt;UnidadeOrganizacional&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllPostoTrabalho() : Collection&lt;PostoTrabalho&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllEstados() : Collection&lt;Estado&gt; </td></tr>
+<tr><td align="left" balign="left"> + findMunicipiosByUF(s : String) : Collection&lt;Municipio&gt; </td></tr>
+<tr><td align="left" balign="left"> + loadTipoUsuario() : Collection&lt;TipoUsuario&gt; </td></tr>
+<tr><td align="left" balign="left"> + updateUser(usuarioSistema : UsuarioSistema) : UsuarioSistema </td></tr>
+<tr><td align="left" balign="left"> + findAllPostoTrabalhoByUnidadeOrganizacional(identificUnidOrganizac : Long) : Collection&lt;PostoTrabalho&gt; </td></tr>
+<tr><td align="left" balign="left"> + saveUsuarioSistema(usuarioSistema : UsuarioSistema) : UsuarioSistema </td></tr>
+<tr><td align="left" balign="left"> + findAllLogradouros() : Collection&lt;Logradouro&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../../seg/business/gestao/facade/impl/ManterUsuarioSistemaFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.facade.impl.CadastroSenhaFacadeImpl
+	c337400 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.CadastroSenhaFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/business/gestao/facade/impl/CadastroSenhaFacadeImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> CadastroSenhaFacadeImpl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + CadastroSenhaFacadeImpl(service : CadastroSenhaService, logradouroService : LogradouroService) </td></tr>
+<tr><td align="left" balign="left"> + find(filter : CadastroSenhaFilter) : Collection&lt;UsuarioSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + resetPassword(usuarioSistema : UsuarioSistema) </td></tr>
+<tr><td align="left" balign="left"> + authorizeUser(usuarioSistema : UsuarioSistema) </td></tr>
+<tr><td align="left" balign="left"> + findOneUsuarioSistema(cpfUsuario : String) : UsuarioSistema </td></tr>
+<tr><td align="left" balign="left"> + findAllLogradouros() : Collection&lt;Logradouro&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../../seg/business/gestao/facade/impl/CadastroSenhaFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.facade.impl.AtribuirPerfilFacadeImpl
+	c337401 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.AtribuirPerfilFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/business/gestao/facade/impl/AtribuirPerfilFacadeImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> AtribuirPerfilFacadeImpl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + AtribuirPerfilFacadeImpl(usuarioSistemaService : UsuarioSistemaService, perfilSistemaService : PerfilSistemaService, unidadeOrganizacionalService : UnidadeOrganizacionalService, postoTrabalhoService : PostoTrabalhoService, tipoUsuarioService : TipoUsuarioService) </td></tr>
+<tr><td align="left" balign="left"> + find(filter : AtribuirPerfilFilter) : Collection&lt;UsuarioSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findOneUsuarioSistema(cpfUsuario : String) : UsuarioSistema </td></tr>
+<tr><td align="left" balign="left"> + findAllUnidadeOrganizacional() : Collection&lt;UnidadeOrganizacional&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllPostoTrabalho() : Collection&lt;PostoTrabalho&gt; </td></tr>
+<tr><td align="left" balign="left"> + loadTipoUsuario() : Collection&lt;TipoUsuario&gt; </td></tr>
+<tr><td align="left" balign="left"> + updateUsuarioPerfil(dto : UsuarioSistema) : UsuarioSistema </td></tr>
+<tr><td align="left" balign="left"> + findAllPostoTrabalhoByUnidadeOrganizacional(identificUnidOrganizac : Long) : Collection&lt;PostoTrabalho&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllPerfilSistema() : Collection&lt;PerfilSistema&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../../seg/business/gestao/facade/impl/AtribuirPerfilFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.facade.impl.AtivarInativarPerfilFacadeImpl
+	c337402 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.AtivarInativarPerfilFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/business/gestao/facade/impl/AtivarInativarPerfilFacadeImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> AtivarInativarPerfilFacadeImpl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + AtivarInativarPerfilFacadeImpl(service : UsuarioPerfilService, usuarioSistemaService : UsuarioSistemaService, unidadeOrganizacionalService : UnidadeOrganizacionalService, postoTrabalhoService : PostoTrabalhoService) </td></tr>
+<tr><td align="left" balign="left"> + find(filter : AtivarInativarPerfilFilter) : Collection&lt;UsuarioSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + loadAllUsuarioPerfil(usuarioSistema : UsuarioSistema) : Collection&lt;UsuarioPerfil&gt; </td></tr>
+<tr><td align="left" balign="left"> + buildProfileString(usuarioSistemas : Collection&lt;UsuarioSistema&gt;) </td></tr>
+<tr><td align="left" balign="left"> + updatePerfilUsuarioList(usuarioPerfilList : Collection&lt;UsuarioPerfil&gt;) </td></tr>
+<tr><td align="left" balign="left"> + findAllPostoTrabalho() : Collection&lt;PostoTrabalho&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllUnidadeOrganizacional() : Collection&lt;UnidadeOrganizacional&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllUsuarioSistema(filter : AtivarInativarPerfilFilter) : List&lt;UsuarioSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllPostoTrabalhoByUnidadeOrganizacional(identificUnidOrganizac : Long) : Collection&lt;PostoTrabalho&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../../seg/business/gestao/facade/impl/AtivarInativarPerfilFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoRejeicaoArquivosFacadeImpl
-	c86500 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoRejeicaoArquivosFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/business/facade/impl/TipoRejeicaoArquivosFacadeImpl.html">
+	c337614 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoRejeicaoArquivosFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/business/facade/impl/TipoRejeicaoArquivosFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoRejeicaoArquivosFacadeImpl </td></tr>
 		</table></td></tr>
@@ -114,7 +300,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../arr/parametros/business/facade/impl/TipoRejeicaoArquivosFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoGruposCnaesFacadeImpl
-	c86501 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoGruposCnaesFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/business/facade/impl/TipoGruposCnaesFacadeImpl.html">
+	c337615 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoGruposCnaesFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/business/facade/impl/TipoGruposCnaesFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoGruposCnaesFacadeImpl </td></tr>
 		</table></td></tr>
@@ -131,7 +317,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../arr/parametros/business/facade/impl/TipoGruposCnaesFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.impl.ReceitasFacadeImpl
-	c86502 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.ReceitasFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/business/facade/impl/ReceitasFacadeImpl.html">
+	c337616 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.ReceitasFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/business/facade/impl/ReceitasFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ReceitasFacadeImpl </td></tr>
 		</table></td></tr>
@@ -148,7 +334,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../arr/parametros/business/facade/impl/ReceitasFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.impl.PlanoContasFacadeImpl
-	c86503 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.PlanoContasFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/business/facade/impl/PlanoContasFacadeImpl.html">
+	c337617 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.PlanoContasFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/business/facade/impl/PlanoContasFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PlanoContasFacadeImpl </td></tr>
 		</table></td></tr>
@@ -156,12 +342,13 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + PlanoContasFacadeImpl(service : PlanoContasService) </td></tr>
+<tr><td align="left" balign="left"> + PlanoContasFacadeImpl(service : PlanoContasService, tipoGruposCnaesService : TipoGruposCnaesService) </td></tr>
 <tr><td align="left" balign="left"> + find(filter : PlanoContasFilter) : List&lt;PlanoContas&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllActiveTipoGruposCnaes() : Collection&lt;TipoGruposCnaes&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../arr/parametros/business/facade/impl/PlanoContasFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoTiposFacadeImpl
-	c86504 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoTiposFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/business/facade/impl/PedidoTiposFacadeImpl.html">
+	c337618 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoTiposFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/business/facade/impl/PedidoTiposFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoTiposFacadeImpl </td></tr>
 		</table></td></tr>
@@ -180,7 +367,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../arr/parametros/business/facade/impl/PedidoTiposFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoAreasFacadeImpl
-	c86505 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoAreasFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/business/facade/impl/PedidoAreasFacadeImpl.html">
+	c337619 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoAreasFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/business/facade/impl/PedidoAreasFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoAreasFacadeImpl </td></tr>
 		</table></td></tr>
@@ -201,7 +388,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../arr/parametros/business/facade/impl/PedidoAreasFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.impl.ConveniosTarifasFacadeImpl
-	c86506 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.ConveniosTarifasFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/business/facade/impl/ConveniosTarifasFacadeImpl.html">
+	c337620 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.ConveniosTarifasFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/business/facade/impl/ConveniosTarifasFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ConveniosTarifasFacadeImpl </td></tr>
 		</table></td></tr>
@@ -213,7 +400,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../arr/parametros/business/facade/impl/ConveniosTarifasFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.impl.ConveniosArrecFacadeImpl
-	c86507 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.ConveniosArrecFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/business/facade/impl/ConveniosArrecFacadeImpl.html">
+	c337621 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.ConveniosArrecFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/business/facade/impl/ConveniosArrecFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ConveniosArrecFacadeImpl </td></tr>
 		</table></td></tr>
@@ -233,7 +420,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../arr/parametros/business/facade/impl/ConveniosArrecFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.impl.BancosFacadeImpl
-	c86508 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.BancosFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/business/facade/impl/BancosFacadeImpl.html">
+	c337622 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.BancosFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/business/facade/impl/BancosFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BancosFacadeImpl </td></tr>
 		</table></td></tr>
@@ -245,7 +432,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../arr/parametros/business/facade/impl/BancosFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.impl.BancoAgenciasFacadeImpl
-	c86509 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.BancoAgenciasFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/business/facade/impl/BancoAgenciasFacadeImpl.html">
+	c337623 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.BancoAgenciasFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/business/facade/impl/BancoAgenciasFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BancoAgenciasFacadeImpl </td></tr>
 		</table></td></tr>
@@ -262,34 +449,54 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../arr/parametros/business/facade/impl/BancoAgenciasFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable> implements br.gov.to.sefaz.business.facade.CrudFacade<E, I extends java.io.Serializable>
-	c86311:p -> c86312:p [dir=back,arrowtail=empty,style=dashed];
+	c337294:p -> c337295:p [dir=back,arrowtail=empty,style=dashed];
+	//br.gov.to.sefaz.par.gestao.business.facade.impl.ParametroGeralFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.par.gestao.persistence.entity.ParametroGeral, java.lang.Integer>
+	c337295:p -> c337316:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.seg.business.gestao.facade.impl.UsuarioSistemaFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema, java.lang.String>
+	c337295:p -> c337389:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.seg.business.gestao.facade.impl.UsuarioPrincipalEmpresaFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.seg.persistence.entity.UsuarioPrincipalEmpresa, java.lang.Long>
+	c337295:p -> c337390:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.business.gestao.facade.impl.UnidadeOrganizacionalFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.seg.persistence.entity.UnidadeOrganizacional, java.lang.Long>
-	c86312:p -> c86369:p [dir=back,arrowtail=empty];
-	//br.gov.to.sefaz.seg.business.gestao.facade.impl.TipoUsuarioFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.seg.persistence.entity.TipoUsuario, java.lang.Integer>
-	c86312:p -> c86370:p [dir=back,arrowtail=empty];
-	//br.gov.to.sefaz.seg.business.gestao.facade.impl.PostoTrabalhoFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.seg.persistence.entity.PostoTrabalho, java.lang.Long>
-	c86312:p -> c86371:p [dir=back,arrowtail=empty];
+	c337295:p -> c337391:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.seg.business.gestao.facade.impl.ProcuracaoUsuarioFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.seg.persistence.entity.ProcuracaoUsuario, java.lang.Long>
+	c337295:p -> c337393:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.seg.business.gestao.facade.impl.PostoTrabalhoFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.seg.persistence.entity.PostoTrabalho, java.lang.Integer>
+	c337295:p -> c337394:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.seg.business.gestao.facade.impl.PerfilSistemaFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.seg.persistence.entity.PerfilSistema, java.lang.Long>
+	c337295:p -> c337395:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.seg.business.gestao.facade.impl.PapelSistemaFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.seg.persistence.entity.PapelSistema, java.lang.Long>
+	c337295:p -> c337396:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.business.gestao.facade.impl.ModuloSistemaFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.seg.persistence.entity.ModuloSistema, java.lang.Long>
-	c86312:p -> c86372:p [dir=back,arrowtail=empty];
-	//br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoRejeicaoArquivosFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.arr.parametros.persistence.entity.TipoRejeicaoArquivos, java.lang.Integer>
-	c86312:p -> c86500:p [dir=back,arrowtail=empty];
-	//br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoGruposCnaesFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.arr.parametros.persistence.entity.TipoGruposCnaes, java.lang.Integer>
-	c86312:p -> c86501:p [dir=back,arrowtail=empty];
-	//br.gov.to.sefaz.arr.parametros.business.facade.impl.ReceitasFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas, java.lang.Integer>
-	c86312:p -> c86502:p [dir=back,arrowtail=empty];
-	//br.gov.to.sefaz.arr.parametros.business.facade.impl.PlanoContasFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.arr.parametros.persistence.entity.PlanoContas, java.lang.Long>
-	c86312:p -> c86503:p [dir=back,arrowtail=empty];
-	//br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoTiposFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoTipos, java.lang.Integer>
-	c86312:p -> c86504:p [dir=back,arrowtail=empty];
-	//br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoAreasFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreas, java.lang.Integer>
-	c86312:p -> c86505:p [dir=back,arrowtail=empty];
-	//br.gov.to.sefaz.arr.parametros.business.facade.impl.ConveniosTarifasFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.arr.parametros.persistence.entity.ConveniosTarifas, java.lang.Integer>
-	c86312:p -> c86506:p [dir=back,arrowtail=empty];
-	//br.gov.to.sefaz.arr.parametros.business.facade.impl.ConveniosArrecFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.arr.parametros.persistence.entity.ConveniosArrec, java.lang.Long>
-	c86312:p -> c86507:p [dir=back,arrowtail=empty];
-	//br.gov.to.sefaz.arr.parametros.business.facade.impl.BancosFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.arr.parametros.persistence.entity.Bancos, java.lang.Integer>
-	c86312:p -> c86508:p [dir=back,arrowtail=empty];
-	//br.gov.to.sefaz.arr.parametros.business.facade.impl.BancoAgenciasFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgencias, br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgenciasPK>
-	c86312:p -> c86509:p [dir=back,arrowtail=empty];
+	c337295:p -> c337397:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.seg.business.gestao.facade.impl.ManutencaoCadastroFuncionalidadeFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.seg.persistence.entity.OpcaoAplicacao, java.lang.Long>
+	c337295:p -> c337398:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.seg.business.gestao.facade.impl.ManterUsuarioSistemaFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema, java.lang.String>
+	c337295:p -> c337399:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.seg.business.gestao.facade.impl.CadastroSenhaFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema, java.lang.String>
+	c337295:p -> c337400:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.seg.business.gestao.facade.impl.AtribuirPerfilFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema, java.lang.String>
+	c337295:p -> c337401:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.seg.business.gestao.facade.impl.AtivarInativarPerfilFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.seg.persistence.entity.UsuarioPerfil, java.lang.Long>
+	c337295:p -> c337402:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoRejeicaoArquivosFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.arr.persistence.entity.TipoRejeicaoArquivos, java.lang.Integer>
+	c337295:p -> c337614:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoGruposCnaesFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.arr.persistence.entity.TipoGruposCnaes, java.lang.Integer>
+	c337295:p -> c337615:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.arr.parametros.business.facade.impl.ReceitasFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.arr.persistence.entity.Receitas, java.lang.Integer>
+	c337295:p -> c337616:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.arr.parametros.business.facade.impl.PlanoContasFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.arr.persistence.entity.PlanoContas, java.lang.Long>
+	c337295:p -> c337617:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoTiposFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.arr.persistence.entity.PedidoTipos, java.lang.Integer>
+	c337295:p -> c337618:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoAreasFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.arr.persistence.entity.PedidoAreas, java.lang.Integer>
+	c337295:p -> c337619:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.arr.parametros.business.facade.impl.ConveniosTarifasFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.arr.persistence.entity.ConveniosTarifas, java.lang.Integer>
+	c337295:p -> c337620:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.arr.parametros.business.facade.impl.ConveniosArrecFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.arr.persistence.entity.ConveniosArrec, java.lang.Long>
+	c337295:p -> c337621:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.arr.parametros.business.facade.impl.BancosFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.arr.persistence.entity.Bancos, java.lang.Integer>
+	c337295:p -> c337622:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.arr.parametros.business.facade.impl.BancoAgenciasFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.arr.persistence.entity.BancoAgencias, br.gov.to.sefaz.arr.persistence.entity.BancoAgenciasPK>
+	c337295:p -> c337623:p [dir=back,arrowtail=empty];
 }
 

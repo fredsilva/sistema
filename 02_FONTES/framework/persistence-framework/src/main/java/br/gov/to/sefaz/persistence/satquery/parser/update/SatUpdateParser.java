@@ -11,7 +11,11 @@ import br.gov.to.sefaz.persistence.satquery.parser.handler.RegistroExcluidoHandl
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+
 /**
+ * Implementação custom de um {@link UpdateParser} para regras especificas do projeto SAT,
+ * visando colunas de auditoria.
+ *
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 04/07/2016 11:29:00
  */
@@ -28,8 +32,9 @@ public class SatUpdateParser extends UpdateParser {
 
     @Override
     public ResultQuery parse(UpdateStructure structure, int indentationLvl, ParamIdGenerator paramId) {
-        structure.setWhere(RegistroExcluidoHandler
-                .createConditions(structure.getWhere(), structure.getFrom(), structure.getQueryLanguage()));
+        RegistroExcluidoHandler
+                .createConditions(structure.getWhere(), structure.getFrom(), structure.getQueryLanguage())
+                .ifPresent(structure::setWhere);
         return super.parse(structure, indentationLvl, paramId);
     }
 }

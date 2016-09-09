@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.converter.YesOrNoBooleanConverter
-	c217616 [label=<<table title="br.gov.to.sefaz.persistence.converter.YesOrNoBooleanConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./YesOrNoBooleanConverter.html">
+	c868335 [label=<<table title="br.gov.to.sefaz.persistence.converter.YesOrNoBooleanConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./YesOrNoBooleanConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> YesOrNoBooleanConverter </td></tr>
 		</table></td></tr>
@@ -22,7 +22,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./YesOrNoBooleanConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.converter.DefaultBooleanConverter<T>
-	c217620 [label=<<table title="br.gov.to.sefaz.persistence.converter.DefaultBooleanConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DefaultBooleanConverter.html">
+	c868339 [label=<<table title="br.gov.to.sefaz.persistence.converter.DefaultBooleanConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DefaultBooleanConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultBooleanConverter&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -36,6 +36,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./DefaultBooleanConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.persistence.converter.YesOrNoBooleanConverter extends br.gov.to.sefaz.persistence.converter.DefaultBooleanConverter<java.lang.Character>
-	c217620:p -> c217616:p [dir=back,arrowtail=empty];
+	c868339:p -> c868335:p [dir=back,arrowtail=empty];
 }
 

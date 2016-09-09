@@ -1,5 +1,6 @@
 package br.gov.to.sefaz.persistence.satquery.parser.delete;
 
+import br.gov.to.sefaz.persistence.configuration.AuditableTablesIdentifier;
 import br.gov.to.sefaz.persistence.entity.AbstractEntity;
 import br.gov.to.sefaz.persistence.query.parser.QueryStructureParser;
 import br.gov.to.sefaz.persistence.query.parser.delete.DeleteParser;
@@ -24,6 +25,9 @@ import static br.gov.to.sefaz.persistence.satquery.parser.handler.RegistroExclui
 import static br.gov.to.sefaz.persistence.satquery.parser.handler.RegistroExcluidoHandler.getUsuarioExclusaoColumn;
 
 /**
+ * Implementação custom de um {@link DeleteParser} para regras especificas do projeto SAT,
+ * visando colunas de auditoria.
+ *
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 04/07/2016 11:29:00
  */
@@ -48,23 +52,27 @@ public class SatDeleteParser extends DeleteParser {
 
     @Override
     public ResultQuery parse(DeleteStructure structure, int indentationLvl, ParamIdGenerator paramId) {
-        String queryLanguage = structure.getQueryLanguage();
+        if (AuditableTablesIdentifier.isAuditable(structure.getFrom().getValue())) {
+            String queryLanguage = structure.getQueryLanguage();
 
-        Map<String, Value> sets = new HashMap<>();
-        String registroExcluidoColumn = prependFrom(getRegistroExcluidoColumn(queryLanguage), structure.getFrom());
-        String dataExclusaoColumn = prependFrom(getDataExclusaoColumn(queryLanguage), structure.getFrom());
-        String usuarioExclusaoColumn = prependFrom(getUsuarioExclusaoColumn(queryLanguage), structure.getFrom());
+            Map<String, Value> sets = new HashMap<>();
+            String registroExcluidoColumn = prependFrom(getRegistroExcluidoColumn(queryLanguage), structure.getFrom());
+            String dataExclusaoColumn = prependFrom(getDataExclusaoColumn(queryLanguage), structure.getFrom());
+            String usuarioExclusaoColumn = prependFrom(getUsuarioExclusaoColumn(queryLanguage), structure.getFrom());
 
-        String user = SecurityContextHolder.getContext().getAuthentication().getName();
+            String user = SecurityContextHolder.getContext().getAuthentication().getName();
 
-        sets.put(registroExcluidoColumn, Value.ofParam(AbstractEntity.SIM));
-        sets.put(dataExclusaoColumn, Value.ofParam(LocalDateTime.now()));
-        sets.put(usuarioExclusaoColumn, Value.ofParam(user));
+            sets.put(registroExcluidoColumn, Value.ofParam(AbstractEntity.SIM));
+            sets.put(dataExclusaoColumn, Value.ofParam(LocalDateTime.now()));
+            sets.put(usuarioExclusaoColumn, Value.ofParam(user));
 
-        UpdateStructure updateStructure = new UpdateStructure(queryLanguage, structure.getFrom(), sets);
-        structure.getWhere().ifPresent(updateStructure::setWhere);
+            UpdateStructure updateStructure = new UpdateStructure(queryLanguage, structure.getFrom(), sets);
+            structure.getWhere().ifPresent(updateStructure::setWhere);
 
-        return updateParser.parse(updateStructure, indentationLvl, paramId);
+            return updateParser.parse(updateStructure, indentationLvl, paramId);
+        }
+
+        return super.parse(structure, indentationLvl, paramId);
     }
 
     private String prependFrom(String column, Alias<String> from) {

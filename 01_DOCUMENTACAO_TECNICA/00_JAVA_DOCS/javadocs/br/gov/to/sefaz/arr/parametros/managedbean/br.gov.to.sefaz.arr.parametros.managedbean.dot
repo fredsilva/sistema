@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.arr.parametros.managedbean.TipoRejeicaoArquivosMB
-	c35595 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.TipoRejeicaoArquivosMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoRejeicaoArquivosMB.html">
+	c160071 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.TipoRejeicaoArquivosMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoRejeicaoArquivosMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoRejeicaoArquivosMB </td></tr>
 		</table></td></tr>
@@ -23,7 +23,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoRejeicaoArquivosMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.managedbean.TipoGruposCnaesMB
-	c35596 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.TipoGruposCnaesMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoGruposCnaesMB.html">
+	c160072 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.TipoGruposCnaesMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoGruposCnaesMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoGruposCnaesMB </td></tr>
 		</table></td></tr>
@@ -49,7 +49,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoGruposCnaesMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.managedbean.ReceitasMB
-	c35597 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.ReceitasMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ReceitasMB.html">
+	c160073 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.ReceitasMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ReceitasMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ReceitasMB </td></tr>
 		</table></td></tr>
@@ -78,7 +78,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ReceitasMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.managedbean.PlanoContasMB
-	c35598 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.PlanoContasMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PlanoContasMB.html">
+	c160074 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.PlanoContasMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PlanoContasMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PlanoContasMB </td></tr>
 		</table></td></tr>
@@ -89,10 +89,12 @@ digraph G {
 <tr><td align="left" balign="left"> + PlanoContasMB() </td></tr>
 <tr><td align="left" balign="left"> + getFilter() : PlanoContasFilter </td></tr>
 <tr><td align="left" balign="left"> + search() </td></tr>
+<tr><td align="left" balign="left"> + getTipoGruposCnaesCollection() : Collection&lt;TipoGruposCnaes&gt; </td></tr>
+<tr><td align="left" balign="left"> + setTipoGruposCnaesCollection(tipoGruposCnaesCollection : Collection&lt;TipoGruposCnaes&gt;) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./PlanoContasMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.managedbean.PedidoTiposMB
-	c35599 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.PedidoTiposMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoTiposMB.html">
+	c160075 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.PedidoTiposMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoTiposMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoTiposMB </td></tr>
 		</table></td></tr>
@@ -127,7 +129,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PedidoTiposMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.managedbean.PedidoAreasMB
-	c35600 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.PedidoAreasMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoAreasMB.html">
+	c160076 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.PedidoAreasMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoAreasMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoAreasMB </td></tr>
 		</table></td></tr>
@@ -166,47 +168,14 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PedidoAreasMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.managedbean.ManagedBeanPackageMarker
-	c35601 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.ManagedBeanPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ManagedBeanPackageMarker.html">
+	c160077 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.ManagedBeanPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ManagedBeanPackageMarker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ManagedBeanPackageMarker </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ManagedBeanPackageMarker.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	// br.gov.to.sefaz.arr.parametros.managedbean.EnumsMB
-	c35602 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.EnumsMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EnumsMB.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> EnumsMB </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + EnumsMB() </td></tr>
-<tr><td align="left" balign="left"> + getSituacoes() : SituacaoEnum[] </td></tr>
-<tr><td align="left" balign="left"> + getTiposConta() : TipoContaEnum[] </td></tr>
-<tr><td align="left" balign="left"> + getTiposBarra() : TipoCodigoBarraEnum[] </td></tr>
-<tr><td align="left" balign="left"> + getTiposConvenio() : TipoConvenioEnum[] </td></tr>
-<tr><td align="left" balign="left"> + getFormasPagamento() : FormaPagamentoEnum[] </td></tr>
-<tr><td align="left" balign="left"> + getClassificacaoReceitas() : ClassificacaoReceitaEnum[] </td></tr>
-<tr><td align="left" balign="left"> + getTiposReceita() : TipoReceitaEnum[] </td></tr>
-<tr><td align="left" balign="left"> + getTiposRepasse() : TipoRepasseEnum[] </td></tr>
-<tr><td align="left" balign="left"> + getTiposPedidoAcoes() : TipoPedidoAcoesEnum[] </td></tr>
-<tr><td align="left" balign="left"> + getTiposPedidoCampos() : TipoPedidoCampoEnum[] </td></tr>
-<tr><td align="left" balign="left"> + getSituacaoLabel(situacaoEnum : SituacaoEnum) : String </td></tr>
-<tr><td align="left" balign="left"> + getTiposContaLabel(tipoContaEnum : TipoContaEnum) : String </td></tr>
-<tr><td align="left" balign="left"> + getTipoBarraLabel(tipoBarra : TipoCodigoBarraEnum) : String </td></tr>
-<tr><td align="left" balign="left"> + getTipoConvenioLabel(tipoConvenio : TipoConvenioEnum) : String </td></tr>
-<tr><td align="left" balign="left"> + getFormaPagamentoLabel(formaPagamento : FormaPagamentoEnum) : String </td></tr>
-<tr><td align="left" balign="left"> + getClassificacaoReceitaLabel(classificacaoReceita : ClassificacaoReceitaEnum) : String </td></tr>
-<tr><td align="left" balign="left"> + getTiposReceitaLabel(tipoReceita : TipoReceitaEnum) : String </td></tr>
-<tr><td align="left" balign="left"> + getTiposRepasseLabel(tipoRepasse : TipoRepasseEnum) : String </td></tr>
-<tr><td align="left" balign="left"> + getTiposPedidoAcaoLabel(tipoPedidoAcoes : TipoPedidoAcoesEnum) : String </td></tr>
-<tr><td align="left" balign="left"> + getTiposPedidoCampoLabel(tipoPedidoAcoes : TipoPedidoCampoEnum) : String </td></tr>
-<tr><td align="left" balign="left"> + getGetReceitaTaxaLabel() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./EnumsMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.managedbean.ConveniosArrecMB
-	c35603 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.ConveniosArrecMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConveniosArrecMB.html">
+	c160078 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.ConveniosArrecMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConveniosArrecMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ConveniosArrecMB </td></tr>
 		</table></td></tr>
@@ -236,7 +205,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ConveniosArrecMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.managedbean.BancosMB
-	c35604 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.BancosMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BancosMB.html">
+	c160079 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.BancosMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BancosMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BancosMB </td></tr>
 		</table></td></tr>
@@ -249,7 +218,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./BancosMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.managedbean.BancoAgenciasMB
-	c35605 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.BancoAgenciasMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BancoAgenciasMB.html">
+	c160080 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.BancoAgenciasMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BancoAgenciasMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BancoAgenciasMB </td></tr>
 		</table></td></tr>
@@ -272,5 +241,27 @@ digraph G {
 <tr><td align="left" balign="left"> + clearDto() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./BancoAgenciasMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.arr.parametros.managedbean.ArrEnumsMB
+	c160081 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.ArrEnumsMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArrEnumsMB.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ArrEnumsMB </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ArrEnumsMB() </td></tr>
+<tr><td align="left" balign="left"> + getSituacoes() : SituacaoEnum[] </td></tr>
+<tr><td align="left" balign="left"> + getTiposConta() : TipoContaEnum[] </td></tr>
+<tr><td align="left" balign="left"> + getTiposBarra() : TipoCodigoBarraEnum[] </td></tr>
+<tr><td align="left" balign="left"> + getTiposConvenio() : TipoConvenioEnum[] </td></tr>
+<tr><td align="left" balign="left"> + getFormasPagamento() : FormaPagamentoEnum[] </td></tr>
+<tr><td align="left" balign="left"> + getClassificacaoReceitas() : ClassificacaoReceitaEnum[] </td></tr>
+<tr><td align="left" balign="left"> + getTiposReceita() : TipoReceitaEnum[] </td></tr>
+<tr><td align="left" balign="left"> + getTiposRepasse() : TipoRepasseEnum[] </td></tr>
+<tr><td align="left" balign="left"> + getTiposPedidoAcoes() : TipoPedidoAcoesEnum[] </td></tr>
+<tr><td align="left" balign="left"> + getTiposPedidoCampos() : TipoPedidoCampoEnum[] </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ArrEnumsMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 }
 
