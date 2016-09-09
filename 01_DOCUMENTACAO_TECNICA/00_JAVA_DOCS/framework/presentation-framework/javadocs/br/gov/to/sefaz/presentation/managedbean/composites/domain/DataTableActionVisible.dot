@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.presentation.managedbean.composites.domain.JsFunctionSignature
-	c491 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.composites.domain.JsFunctionSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./JsFunctionSignature.html">
+	c538 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.composites.domain.JsFunctionSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./JsFunctionSignature.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> JsFunctionSignature </td></tr>
@@ -24,7 +24,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./JsFunctionSignature.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.presentation.managedbean.composites.domain.DataTableActionVisible
-	c494 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.composites.domain.DataTableActionVisible" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DataTableActionVisible.html">
+	c541 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.composites.domain.DataTableActionVisible" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DataTableActionVisible.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DataTableActionVisible </td></tr>
 		</table></td></tr>
@@ -43,6 +43,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./DataTableActionVisible.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.presentation.managedbean.composites.domain.DataTableActionVisible implements br.gov.to.sefaz.presentation.managedbean.composites.domain.JsFunctionSignature
-	c491:p -> c494:p [dir=back,arrowtail=empty,style=dashed];
+	c538:p -> c541:p [dir=back,arrowtail=empty,style=dashed];
 }
 

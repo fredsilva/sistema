@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.authentication.facade.impl.LoginSistemaFacadeImpl
-	c77281 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.facade.impl.LoginSistemaFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LoginSistemaFacadeImpl.html">
+	c79920 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.facade.impl.LoginSistemaFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LoginSistemaFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LoginSistemaFacadeImpl </td></tr>
 		</table></td></tr>
@@ -25,7 +25,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./LoginSistemaFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.authentication.facade.impl.DefaultTemplateFacadeImpl
-	c77282 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.facade.impl.DefaultTemplateFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DefaultTemplateFacadeImpl.html">
+	c79921 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.facade.impl.DefaultTemplateFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DefaultTemplateFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultTemplateFacadeImpl </td></tr>
 		</table></td></tr>
@@ -33,7 +33,7 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + DefaultTemplateFacadeImpl(moduloSistemaService : ModuloSistemaService) </td></tr>
+<tr><td align="left" balign="left"> + DefaultTemplateFacadeImpl(moduloSistemaService : ModuloSistemaService, correioContribuinteService : CorreioContribuinteService, smsContribuinteService : SmsContribuinteService) </td></tr>
 <tr><td align="left" balign="left"> + findAllModuloSistema() : Collection&lt;ModuloSistema&gt; </td></tr>
 <tr><td align="left" balign="left"> + getUserRoles() : Collection&lt;String&gt; </td></tr>
 <tr><td align="left" balign="left"> + getActiveProcurado() : Long </td></tr>
@@ -43,10 +43,16 @@ digraph G {
 <tr><td align="left" balign="left"> + getUserName() : String </td></tr>
 <tr><td align="left" balign="left"> + getPerfisSistema() : List&lt;RoleGroupKey&gt; </td></tr>
 <tr><td align="left" balign="left"> + getProcuradoresSistema() : List&lt;RoleGroupKey&gt; </td></tr>
+<tr><td align="left" balign="left"> + getUsuarioSistema() : UsuarioSistema </td></tr>
 <tr><td align="left" balign="left"> + setActiveProfile(profileId : Long) </td></tr>
 <tr><td align="left" balign="left"> + setActiveProcuracao(procuracaoId : Long) </td></tr>
 <tr><td align="left" balign="left"> + invalidateSession() </td></tr>
 <tr><td align="left" balign="left"> + isAuthenticatedByCert() : boolean </td></tr>
+<tr><td align="left" balign="left"> + findLastSentEmailsForUser(usuarioSistema : UsuarioSistema) : List&lt;CorreioContribuinte&gt; </td></tr>
+<tr><td align="left" balign="left"> + findLastSentSMSsForUser(usuarioSistema : UsuarioSistema) : List&lt;SmsContribuinte&gt; </td></tr>
+<tr><td align="left" balign="left"> + getMessagePreviewLength() : int </td></tr>
+<tr><td align="left" balign="left"> + findAllSentEmailsForLoggedUser(usuarioSistema : UsuarioSistema) : Collection&lt;CorreioContribuinte&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllSentSMSsForUser(usuarioSistema : UsuarioSistema) : Collection&lt;SmsContribuinte&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./DefaultTemplateFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 }

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.presentation.managedbean.composites.domain.DataTableFieldPrint
-	c544 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.composites.domain.DataTableFieldPrint" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DataTableFieldPrint.html">
+	c593 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.composites.domain.DataTableFieldPrint" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DataTableFieldPrint.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> DataTableFieldPrint </td></tr>
@@ -24,10 +24,12 @@ digraph G {
 <tr><td align="left" balign="left"> NUMBER </td></tr>
 <tr><td align="left" balign="left"> DATE </td></tr>
 <tr><td align="left" balign="left"> DATE_TIME </td></tr>
+<tr><td align="left" balign="left"> DATE_TIME_SECS </td></tr>
 <tr><td align="left" balign="left"> CPF </td></tr>
 <tr><td align="left" balign="left"> CNPJ </td></tr>
 <tr><td align="left" balign="left"> CNPJ_RAIZ </td></tr>
 <tr><td align="left" balign="left"> BOOLEAN </td></tr>
+<tr><td align="left" balign="left"> CPF_CNPJ </td></tr>
 		</table></td></tr>
 		</table>>, URL="./DataTableFieldPrint.html", fontname="arial", fontcolor="black", fontsize=10.0];
 }

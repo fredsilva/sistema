@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.util.mail.impl.MailSenderImpl
-	c476945 [label=<<table title="br.gov.to.sefaz.util.mail.impl.MailSenderImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/MailSenderImpl.html">
+	c518679 [label=<<table title="br.gov.to.sefaz.util.mail.impl.MailSenderImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/MailSenderImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MailSenderImpl </td></tr>
 		</table></td></tr>
@@ -24,7 +24,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./impl/MailSenderImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.util.mail.MailSender
-	c476946 [label=<<table title="br.gov.to.sefaz.util.mail.MailSender" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MailSender.html">
+	c518680 [label=<<table title="br.gov.to.sefaz.util.mail.MailSender" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./MailSender.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> MailSender </td></tr>
@@ -38,6 +38,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./MailSender.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.util.mail.impl.MailSenderImpl implements br.gov.to.sefaz.util.mail.MailSender
-	c476946:p -> c476945:p [dir=back,arrowtail=empty,style=dashed];
+	c518680:p -> c518679:p [dir=back,arrowtail=empty,style=dashed];
 }
 

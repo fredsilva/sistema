@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.persistence.repository.UsuarioPerfilRepository
-	c41930 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.UsuarioPerfilRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UsuarioPerfilRepository.html">
+	c53723 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.UsuarioPerfilRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UsuarioPerfilRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UsuarioPerfilRepository </td></tr>
 		</table></td></tr>
@@ -27,9 +27,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./UsuarioPerfilRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.persistence.repository.UsuarioPerfilRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.seg.persistence.entity.UsuarioPerfil, java.lang.Long>
-	c41952:p -> c41930:p [dir=back,arrowtail=empty];
+	c53747:p -> c53723:p [dir=back,arrowtail=empty];
 	// br.gov.to.sefaz.persistence.repository.BaseRepository<E, I extends java.io.Serializable>
-	c41952 [label=<<table title="br.gov.to.sefaz.persistence.repository.BaseRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/persistence/repository/BaseRepository.html">
+	c53747 [label=<<table title="br.gov.to.sefaz.persistence.repository.BaseRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/persistence/repository/BaseRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> BaseRepository&lt;E, I extends Serializable&gt; </font></td></tr>
 		</table></td></tr>
@@ -43,6 +43,7 @@ digraph G {
 <tr><td align="left" balign="left"> + findNative(arg0 : Consumer&lt;SelectBuilder&gt;) : List&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + find(arg0 : String, arg1 : Consumer&lt;HqlSelectBuilder&gt;) : List&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + find(arg0 : Consumer&lt;HqlSelectBuilder&gt;) : List&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> + find(arg0 : Consumer&lt;HqlSelectBuilder&gt;, arg1 : int) : List&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + findColumnNative(arg0 : String, arg1 : String, arg2 : Consumer&lt;SelectBuilder&gt;) : List&lt;R&gt; </td></tr>
 <tr><td align="left" balign="left"> + findColumnNative(arg0 : String, arg1 : Consumer&lt;SelectBuilder&gt;) : List&lt;R&gt; </td></tr>
 <tr><td align="left" balign="left"> + findColumn(arg0 : String, arg1 : String, arg2 : Consumer&lt;HqlSelectBuilder&gt;) : List&lt;R&gt; </td></tr>

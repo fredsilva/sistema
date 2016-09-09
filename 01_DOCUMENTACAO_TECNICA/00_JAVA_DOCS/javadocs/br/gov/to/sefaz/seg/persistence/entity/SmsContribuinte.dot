@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.entity.AbstractEntity<I extends java.io.Serializable>
-	c747196 [label=<<table title="br.gov.to.sefaz.persistence.entity.AbstractEntity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/entity/AbstractEntity.html">
+	c798181 [label=<<table title="br.gov.to.sefaz.persistence.entity.AbstractEntity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/entity/AbstractEntity.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractEntity&lt;I extends Serializable&gt; </font></td></tr>
 		</table></td></tr>
@@ -38,7 +38,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../persistence/entity/AbstractEntity.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.entity.SmsContribuinte
-	c747511 [label=<<table title="br.gov.to.sefaz.seg.persistence.entity.SmsContribuinte" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SmsContribuinte.html">
+	c798514 [label=<<table title="br.gov.to.sefaz.seg.persistence.entity.SmsContribuinte" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SmsContribuinte.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SmsContribuinte </td></tr>
 		</table></td></tr>
@@ -47,14 +47,14 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + SmsContribuinte() </td></tr>
-<tr><td align="left" balign="left"> + SmsContribuinte(identificacaoSmsEnviado : Long, numeroTelefone : String, dataEnvio : Date, assunto : String, conteudo : String, destinatario : UsuarioSistema) </td></tr>
+<tr><td align="left" balign="left"> + SmsContribuinte(identificacaoSmsEnviado : Long, numeroTelefone : String, dataEnvio : LocalDateTime, assunto : String, conteudo : String, destinatario : UsuarioSistema) </td></tr>
 <tr><td align="left" balign="left"> + getId() : Long </td></tr>
 <tr><td align="left" balign="left"> + getIdentificacaoSmsEnviado() : Long </td></tr>
 <tr><td align="left" balign="left"> + setIdentificacaoSmsEnviado(identificacaoSmsEnviado : Long) </td></tr>
 <tr><td align="left" balign="left"> + getNumeroTelefone() : String </td></tr>
 <tr><td align="left" balign="left"> + setNumeroTelefone(numeroTelefone : String) </td></tr>
-<tr><td align="left" balign="left"> + getDataEnvio() : Date </td></tr>
-<tr><td align="left" balign="left"> + setDataEnvio(dataEnvio : Date) </td></tr>
+<tr><td align="left" balign="left"> + getDataEnvio() : LocalDateTime </td></tr>
+<tr><td align="left" balign="left"> + setDataEnvio(dataEnvio : LocalDateTime) </td></tr>
 <tr><td align="left" balign="left"> + getAssunto() : String </td></tr>
 <tr><td align="left" balign="left"> + setAssunto(assunto : String) </td></tr>
 <tr><td align="left" balign="left"> + getConteudo() : String </td></tr>
@@ -67,6 +67,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SmsContribuinte.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.persistence.entity.SmsContribuinte extends br.gov.to.sefaz.persistence.entity.AbstractEntity<java.lang.Long>
-	c747196:p -> c747511:p [dir=back,arrowtail=empty];
+	c798181:p -> c798514:p [dir=back,arrowtail=empty];
 }
 

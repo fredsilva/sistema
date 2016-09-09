@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.query.parser.QueryStructureParser<S>
-	c728608 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.QueryStructureParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../QueryStructureParser.html">
+	c778955 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.QueryStructureParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../QueryStructureParser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> QueryStructureParser&lt;S&gt; </td></tr>
@@ -25,7 +25,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../QueryStructureParser.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.parser.select.SelectParser
-	c728611 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.select.SelectParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SelectParser.html">
+	c778958 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.select.SelectParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SelectParser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SelectParser </td></tr>
 		</table></td></tr>
@@ -39,7 +39,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SelectParser.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.satquery.parser.select.SatSelectParser
-	c728649 [label=<<table title="br.gov.to.sefaz.persistence.satquery.parser.select.SatSelectParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../satquery/parser/select/SatSelectParser.html">
+	c778996 [label=<<table title="br.gov.to.sefaz.persistence.satquery.parser.select.SatSelectParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../satquery/parser/select/SatSelectParser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SatSelectParser </td></tr>
 		</table></td></tr>
@@ -53,8 +53,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../satquery/parser/select/SatSelectParser.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.persistence.query.parser.select.SelectParser implements br.gov.to.sefaz.persistence.query.parser.QueryStructureParser<S>
-	c728608:p -> c728611:p [dir=back,arrowtail=empty,style=dashed];
+	c778955:p -> c778958:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.persistence.satquery.parser.select.SatSelectParser extends br.gov.to.sefaz.persistence.query.parser.select.SelectParser
-	c728611:p -> c728649:p [dir=back,arrowtail=empty];
+	c778958:p -> c778996:p [dir=back,arrowtail=empty];
 }
 

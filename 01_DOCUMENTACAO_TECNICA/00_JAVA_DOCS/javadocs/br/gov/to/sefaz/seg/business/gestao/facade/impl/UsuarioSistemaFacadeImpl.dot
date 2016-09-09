@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c848959 [label=<<table title="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/facade/impl/DefaultCrudFacade.html">
+	c908681 [label=<<table title="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/facade/impl/DefaultCrudFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultCrudFacade&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
 		</table></td></tr>
@@ -29,7 +29,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../../../business/facade/impl/DefaultCrudFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.facade.UsuarioSistemaFacade
-	c849039 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.UsuarioSistemaFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../UsuarioSistemaFacade.html">
+	c908776 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.UsuarioSistemaFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../UsuarioSistemaFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> UsuarioSistemaFacade </td></tr>
@@ -50,7 +50,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../UsuarioSistemaFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.facade.impl.UsuarioSistemaFacadeImpl
-	c849053 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.UsuarioSistemaFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UsuarioSistemaFacadeImpl.html">
+	c908790 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.UsuarioSistemaFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UsuarioSistemaFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UsuarioSistemaFacadeImpl </td></tr>
 		</table></td></tr>
@@ -71,8 +71,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./UsuarioSistemaFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.business.gestao.facade.impl.UsuarioSistemaFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema, java.lang.String>
-	c848959:p -> c849053:p [dir=back,arrowtail=empty];
+	c908681:p -> c908790:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.business.gestao.facade.impl.UsuarioSistemaFacadeImpl implements br.gov.to.sefaz.seg.business.gestao.facade.UsuarioSistemaFacade
-	c849039:p -> c849053:p [dir=back,arrowtail=empty,style=dashed];
+	c908776:p -> c908790:p [dir=back,arrowtail=empty,style=dashed];
 }
 

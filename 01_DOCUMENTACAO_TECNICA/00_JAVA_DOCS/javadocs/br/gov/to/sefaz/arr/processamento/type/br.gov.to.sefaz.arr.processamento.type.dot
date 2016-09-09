@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.arr.processamento.type.ProcessFileTypeSN
-	c143903 [label=<<table title="br.gov.to.sefaz.arr.processamento.type.ProcessFileTypeSN" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProcessFileTypeSN.html">
+	c154085 [label=<<table title="br.gov.to.sefaz.arr.processamento.type.ProcessFileTypeSN" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProcessFileTypeSN.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ProcessFileTypeSN </td></tr>
 		</table></td></tr>
@@ -25,7 +25,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ProcessFileTypeSN.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.type.ProcessFileTypeArrec
-	c143904 [label=<<table title="br.gov.to.sefaz.arr.processamento.type.ProcessFileTypeArrec" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProcessFileTypeArrec.html">
+	c154086 [label=<<table title="br.gov.to.sefaz.arr.processamento.type.ProcessFileTypeArrec" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProcessFileTypeArrec.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ProcessFileTypeArrec </td></tr>
 		</table></td></tr>
@@ -40,7 +40,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ProcessFileTypeArrec.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.type.ProcessFileType
-	c143905 [label=<<table title="br.gov.to.sefaz.arr.processamento.type.ProcessFileType" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProcessFileType.html">
+	c154087 [label=<<table title="br.gov.to.sefaz.arr.processamento.type.ProcessFileType" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProcessFileType.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ProcessFileType </td></tr>
@@ -55,7 +55,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ProcessFileType.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.type.FileTypeEnum
-	c143906 [label=<<table title="br.gov.to.sefaz.arr.processamento.type.FileTypeEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FileTypeEnum.html">
+	c154088 [label=<<table title="br.gov.to.sefaz.arr.processamento.type.FileTypeEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FileTypeEnum.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> FileTypeEnum </td></tr>
@@ -69,8 +69,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./FileTypeEnum.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.arr.processamento.type.ProcessFileTypeSN implements br.gov.to.sefaz.arr.processamento.type.ProcessFileType
-	c143905:p -> c143903:p [dir=back,arrowtail=empty,style=dashed];
+	c154087:p -> c154085:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.arr.processamento.type.ProcessFileTypeArrec implements br.gov.to.sefaz.arr.processamento.type.ProcessFileType
-	c143905:p -> c143904:p [dir=back,arrowtail=empty,style=dashed];
+	c154087:p -> c154086:p [dir=back,arrowtail=empty,style=dashed];
 }
 

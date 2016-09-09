@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.repository.BaseRepository<E, I extends java.io.Serializable>
-	c551597 [label=<<table title="br.gov.to.sefaz.persistence.repository.BaseRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../persistence/repository/BaseRepository.html">
+	c595883 [label=<<table title="br.gov.to.sefaz.persistence.repository.BaseRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../persistence/repository/BaseRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> BaseRepository&lt;E, I extends Serializable&gt; </font></td></tr>
 		</table></td></tr>
@@ -24,6 +24,7 @@ digraph G {
 <tr><td align="left" balign="left"> + findNative(selectConsumer : Consumer&lt;SelectBuilder&gt;) : List&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + find(alias : String, selectConsumer : Consumer&lt;HqlSelectBuilder&gt;) : List&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + find(selectConsumer : Consumer&lt;HqlSelectBuilder&gt;) : List&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> + find(selectConsumer : Consumer&lt;HqlSelectBuilder&gt;, maxResults : int) : List&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + findColumnNative(alias : String, column : String, selectConsumer : Consumer&lt;SelectBuilder&gt;) : List&lt;R&gt; </td></tr>
 <tr><td align="left" balign="left"> + findColumnNative(column : String, selectConsumer : Consumer&lt;SelectBuilder&gt;) : List&lt;R&gt; </td></tr>
 <tr><td align="left" balign="left"> + findColumn(alias : String, column : String, selectConsumer : Consumer&lt;HqlSelectBuilder&gt;) : List&lt;R&gt; </td></tr>
@@ -68,7 +69,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../../persistence/repository/BaseRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.par.gestao.persistence.repository.ParametroGeralRepository
-	c551656 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.repository.ParametroGeralRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ParametroGeralRepository.html">
+	c595942 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.repository.ParametroGeralRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ParametroGeralRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ParametroGeralRepository </td></tr>
 		</table></td></tr>
@@ -82,6 +83,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ParametroGeralRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.par.gestao.persistence.repository.ParametroGeralRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.par.gestao.persistence.entity.ParametroGeral, java.lang.Integer>
-	c551597:p -> c551656:p [dir=back,arrowtail=empty];
+	c595883:p -> c595942:p [dir=back,arrowtail=empty];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.query.structure.insert.InsertStructure
-	c434682 [label=<<table title="br.gov.to.sefaz.persistence.query.structure.insert.InsertStructure" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./InsertStructure.html">
+	c474966 [label=<<table title="br.gov.to.sefaz.persistence.query.structure.insert.InsertStructure" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./InsertStructure.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> InsertStructure </td></tr>
 		</table></td></tr>

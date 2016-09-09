@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.query.parser.insert.InsertParser
-	c433814 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.insert.InsertParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./InsertParser.html">
+	c474069 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.insert.InsertParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./InsertParser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> InsertParser </td></tr>
 		</table></td></tr>
@@ -24,7 +24,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./InsertParser.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.parser.QueryStructureParser<S>
-	c433815 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.QueryStructureParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../QueryStructureParser.html">
+	c474070 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.QueryStructureParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../QueryStructureParser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> QueryStructureParser&lt;S&gt; </td></tr>
@@ -39,7 +39,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../QueryStructureParser.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.satquery.parser.insert.SatInsertParser
-	c433853 [label=<<table title="br.gov.to.sefaz.persistence.satquery.parser.insert.SatInsertParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../satquery/parser/insert/SatInsertParser.html">
+	c474108 [label=<<table title="br.gov.to.sefaz.persistence.satquery.parser.insert.SatInsertParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../satquery/parser/insert/SatInsertParser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SatInsertParser </td></tr>
 		</table></td></tr>
@@ -52,8 +52,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../satquery/parser/insert/SatInsertParser.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.persistence.query.parser.insert.InsertParser implements br.gov.to.sefaz.persistence.query.parser.QueryStructureParser<S>
-	c433815:p -> c433814:p [dir=back,arrowtail=empty,style=dashed];
+	c474070:p -> c474069:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.persistence.satquery.parser.insert.SatInsertParser extends br.gov.to.sefaz.persistence.query.parser.insert.InsertParser
-	c433814:p -> c433853:p [dir=back,arrowtail=empty];
+	c474069:p -> c474108:p [dir=back,arrowtail=empty];
 }
 

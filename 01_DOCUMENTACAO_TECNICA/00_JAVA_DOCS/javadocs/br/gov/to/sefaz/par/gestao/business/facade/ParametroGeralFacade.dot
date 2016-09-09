@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.facade.CrudFacade<E, I extends java.io.Serializable>
-	c547373 [label=<<table title="br.gov.to.sefaz.business.facade.CrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../business/facade/CrudFacade.html">
+	c591514 [label=<<table title="br.gov.to.sefaz.business.facade.CrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../business/facade/CrudFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CrudFacade&lt;E, I extends Serializable&gt; </td></tr>
@@ -29,7 +29,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../../business/facade/CrudFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.par.gestao.business.facade.impl.ParametroGeralFacadeImpl
-	c547395 [label=<<table title="br.gov.to.sefaz.par.gestao.business.facade.impl.ParametroGeralFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/ParametroGeralFacadeImpl.html">
+	c591536 [label=<<table title="br.gov.to.sefaz.par.gestao.business.facade.impl.ParametroGeralFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/ParametroGeralFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ParametroGeralFacadeImpl </td></tr>
 		</table></td></tr>
@@ -42,7 +42,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./impl/ParametroGeralFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.par.gestao.business.facade.ParametroGeralFacade
-	c547396 [label=<<table title="br.gov.to.sefaz.par.gestao.business.facade.ParametroGeralFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ParametroGeralFacade.html">
+	c591537 [label=<<table title="br.gov.to.sefaz.par.gestao.business.facade.ParametroGeralFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ParametroGeralFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ParametroGeralFacade </td></tr>
@@ -55,8 +55,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ParametroGeralFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.par.gestao.business.facade.impl.ParametroGeralFacadeImpl implements br.gov.to.sefaz.par.gestao.business.facade.ParametroGeralFacade
-	c547396:p -> c547395:p [dir=back,arrowtail=empty,style=dashed];
+	c591537:p -> c591536:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.par.gestao.business.facade.ParametroGeralFacade implements br.gov.to.sefaz.business.facade.CrudFacade<E, I extends java.io.Serializable>
-	c547373:p -> c547396:p [dir=back,arrowtail=empty,style=dashed];
+	c591514:p -> c591537:p [dir=back,arrowtail=empty,style=dashed];
 }
 

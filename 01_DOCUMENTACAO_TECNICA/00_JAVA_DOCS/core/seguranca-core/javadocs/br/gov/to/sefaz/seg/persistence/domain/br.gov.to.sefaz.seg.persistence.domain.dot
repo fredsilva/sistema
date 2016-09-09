@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.persistence.domain.TipoUsuario
-	c5143 [label=<<table title="br.gov.to.sefaz.seg.persistence.domain.TipoUsuario" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoUsuario.html">
+	c7129 [label=<<table title="br.gov.to.sefaz.seg.persistence.domain.TipoUsuario" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoUsuario.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoUsuario </td></tr>
 		</table></td></tr>
@@ -29,7 +29,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoUsuario.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.domain.TipoUnidade
-	c5144 [label=<<table title="br.gov.to.sefaz.seg.persistence.domain.TipoUnidade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoUnidade.html">
+	c7130 [label=<<table title="br.gov.to.sefaz.seg.persistence.domain.TipoUnidade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoUnidade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoUnidade </td></tr>
 		</table></td></tr>

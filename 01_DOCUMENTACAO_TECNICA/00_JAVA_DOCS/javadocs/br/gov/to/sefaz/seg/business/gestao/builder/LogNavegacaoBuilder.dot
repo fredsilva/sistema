@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.gestao.builder.LogNavegacaoBuilder
-	c453423 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.builder.LogNavegacaoBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./LogNavegacaoBuilder.html">
+	c494360 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.builder.LogNavegacaoBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./LogNavegacaoBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LogNavegacaoBuilder </td></tr>
 		</table></td></tr>
@@ -23,6 +23,8 @@ digraph G {
 <tr><td align="left" balign="left"> + withDataOperacao(dateTime : LocalDateTime) : LogNavegacaoBuilder </td></tr>
 <tr><td align="left" balign="left"> + withDetalheNavegacao(detalheNavegacao : DetalheNavegacao) : LogNavegacaoBuilder </td></tr>
 <tr><td align="left" balign="left"> + withTipoOperacao(tipoOperacao : TipoOperacaoEnum) : LogNavegacaoBuilder </td></tr>
+<tr><td align="left" balign="left"> + withCpfCnpjProcurado(cpfCnpj : String) : LogNavegacaoBuilder </td></tr>
+<tr><td align="left" balign="left"> + withUrlAcesso(resource : String) : LogNavegacaoBuilder </td></tr>
 <tr><td align="left" balign="left"> + build() : LogNavegacao </td></tr>
 		</table></td></tr>
 		</table>>, URL="./LogNavegacaoBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];

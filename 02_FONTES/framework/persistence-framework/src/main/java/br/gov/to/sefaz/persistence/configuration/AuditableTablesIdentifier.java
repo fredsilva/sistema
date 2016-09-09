@@ -30,7 +30,7 @@ public class AuditableTablesIdentifier {
 
 
     /**
-     * Classe que contem o nome e schema de todas as tabelas e views não auditaveis do sistema.
+     * Classe que contém o nome e schema de todas as tabelas e views não auditáveis do sistema.
      */
     private static class NonAuditableTablesHolder {
 
@@ -39,9 +39,10 @@ public class AuditableTablesIdentifier {
         public NonAuditableTablesHolder() {
             names = new ArrayList<>();
 
-            // tabelas que não possuem colunas de auditoria
+            // tabelas/views que não possuem colunas de auditoria
             names.add("SEFAZ_PAR.TA_LOGRADOURO");
             names.add("SEFAZ_SEG.VW_COMUNICACAO_CONTRIBUINTE");
+            names.add("SEFAZ_SEG.VW_HISTORICO_NAVEGACAO");
             names.add("SEFAZ_SEG.VW_LISTAGEM_CPF_PROCURACAO");
         }
 

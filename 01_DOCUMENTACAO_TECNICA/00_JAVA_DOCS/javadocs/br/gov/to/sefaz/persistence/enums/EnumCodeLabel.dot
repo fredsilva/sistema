@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.enums.SituacaoEnum
-	c363456 [label=<<table title="br.gov.to.sefaz.persistence.enums.SituacaoEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SituacaoEnum.html">
+	c396047 [label=<<table title="br.gov.to.sefaz.persistence.enums.SituacaoEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SituacaoEnum.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> SituacaoEnum </td></tr>
@@ -24,7 +24,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SituacaoEnum.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.enums.EnumCodeLabel<T>
-	c363457 [label=<<table title="br.gov.to.sefaz.persistence.enums.EnumCodeLabel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./EnumCodeLabel.html">
+	c396048 [label=<<table title="br.gov.to.sefaz.persistence.enums.EnumCodeLabel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./EnumCodeLabel.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> EnumCodeLabel&lt;T&gt; </td></tr>
@@ -39,7 +39,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./EnumCodeLabel.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.par.gestao.persistence.enums.TipoParametroGeralEnum
-	c363599 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.enums.TipoParametroGeralEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../par/gestao/persistence/enums/TipoParametroGeralEnum.html">
+	c396190 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.enums.TipoParametroGeralEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../par/gestao/persistence/enums/TipoParametroGeralEnum.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> TipoParametroGeralEnum </td></tr>
@@ -52,8 +52,28 @@ digraph G {
 <tr><td align="left" balign="left"> DINAMICO </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../par/gestao/persistence/enums/TipoParametroGeralEnum.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.persistence.enums.TipoPeriodoConsultaComunicacaoEnum
+	c396401 [label=<<table title="br.gov.to.sefaz.seg.persistence.enums.TipoPeriodoConsultaComunicacaoEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/enums/TipoPeriodoConsultaComunicacaoEnum.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
+<tr><td align="center" balign="center"> TipoPeriodoConsultaComunicacaoEnum </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> HOJE </td></tr>
+<tr><td align="left" balign="left"> ULTIMO_7 </td></tr>
+<tr><td align="left" balign="left"> ULTIMO_15 </td></tr>
+<tr><td align="left" balign="left"> ULTIMO_30 </td></tr>
+<tr><td align="left" balign="left"> ULTIMO_45 </td></tr>
+<tr><td align="left" balign="left"> ULTIMO_60 </td></tr>
+<tr><td align="left" balign="left"> ULTIMO_90 </td></tr>
+<tr><td align="left" balign="left"> PERIODO </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../seg/persistence/enums/TipoPeriodoConsultaComunicacaoEnum.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.enums.TipoOperacaoEnum
-	c363790 [label=<<table title="br.gov.to.sefaz.seg.persistence.enums.TipoOperacaoEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/enums/TipoOperacaoEnum.html">
+	c396402 [label=<<table title="br.gov.to.sefaz.seg.persistence.enums.TipoOperacaoEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/enums/TipoOperacaoEnum.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> TipoOperacaoEnum </td></tr>
@@ -66,8 +86,22 @@ digraph G {
 <tr><td align="left" balign="left"> TENTATIVA_NEGADA </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../seg/persistence/enums/TipoOperacaoEnum.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.persistence.enums.TipoComunicacaoEnum
+	c396403 [label=<<table title="br.gov.to.sefaz.seg.persistence.enums.TipoComunicacaoEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/enums/TipoComunicacaoEnum.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
+<tr><td align="center" balign="center"> TipoComunicacaoEnum </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> EMAIL </td></tr>
+<tr><td align="left" balign="left"> SMS </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../seg/persistence/enums/TipoComunicacaoEnum.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.enums.SituacaoUsuarioEnum
-	c363791 [label=<<table title="br.gov.to.sefaz.seg.persistence.enums.SituacaoUsuarioEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/enums/SituacaoUsuarioEnum.html">
+	c396404 [label=<<table title="br.gov.to.sefaz.seg.persistence.enums.SituacaoUsuarioEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/enums/SituacaoUsuarioEnum.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> SituacaoUsuarioEnum </td></tr>
@@ -81,7 +115,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../seg/persistence/enums/SituacaoUsuarioEnum.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.enums.SituacaoSolicitacaoEnum
-	c363792 [label=<<table title="br.gov.to.sefaz.seg.persistence.enums.SituacaoSolicitacaoEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/enums/SituacaoSolicitacaoEnum.html">
+	c396405 [label=<<table title="br.gov.to.sefaz.seg.persistence.enums.SituacaoSolicitacaoEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/enums/SituacaoSolicitacaoEnum.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> SituacaoSolicitacaoEnum </td></tr>
@@ -95,7 +129,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../seg/persistence/enums/SituacaoSolicitacaoEnum.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.enums.TipoRepasseEnum
-	c364039 [label=<<table title="br.gov.to.sefaz.arr.persistence.enums.TipoRepasseEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/enums/TipoRepasseEnum.html">
+	c396655 [label=<<table title="br.gov.to.sefaz.arr.persistence.enums.TipoRepasseEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/enums/TipoRepasseEnum.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> TipoRepasseEnum </td></tr>
@@ -111,7 +145,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/enums/TipoRepasseEnum.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.enums.TipoRecolhimentoStrEnum
-	c364040 [label=<<table title="br.gov.to.sefaz.arr.persistence.enums.TipoRecolhimentoStrEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/enums/TipoRecolhimentoStrEnum.html">
+	c396656 [label=<<table title="br.gov.to.sefaz.arr.persistence.enums.TipoRecolhimentoStrEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/enums/TipoRecolhimentoStrEnum.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> TipoRecolhimentoStrEnum </td></tr>
@@ -126,7 +160,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/enums/TipoRecolhimentoStrEnum.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.enums.TipoReceitaStrEnum
-	c364041 [label=<<table title="br.gov.to.sefaz.arr.persistence.enums.TipoReceitaStrEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/enums/TipoReceitaStrEnum.html">
+	c396657 [label=<<table title="br.gov.to.sefaz.arr.persistence.enums.TipoReceitaStrEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/enums/TipoReceitaStrEnum.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> TipoReceitaStrEnum </td></tr>
@@ -144,7 +178,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/enums/TipoReceitaStrEnum.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.enums.TipoReceitaEnum
-	c364042 [label=<<table title="br.gov.to.sefaz.arr.persistence.enums.TipoReceitaEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/enums/TipoReceitaEnum.html">
+	c396658 [label=<<table title="br.gov.to.sefaz.arr.persistence.enums.TipoReceitaEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/enums/TipoReceitaEnum.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> TipoReceitaEnum </td></tr>
@@ -161,7 +195,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/enums/TipoReceitaEnum.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.enums.TipoPedidoCampoEnum
-	c364044 [label=<<table title="br.gov.to.sefaz.arr.persistence.enums.TipoPedidoCampoEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/enums/TipoPedidoCampoEnum.html">
+	c396660 [label=<<table title="br.gov.to.sefaz.arr.persistence.enums.TipoPedidoCampoEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/enums/TipoPedidoCampoEnum.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> TipoPedidoCampoEnum </td></tr>
@@ -184,7 +218,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/enums/TipoPedidoCampoEnum.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.enums.TipoPedidoAcoesEnum
-	c364045 [label=<<table title="br.gov.to.sefaz.arr.persistence.enums.TipoPedidoAcoesEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/enums/TipoPedidoAcoesEnum.html">
+	c396661 [label=<<table title="br.gov.to.sefaz.arr.persistence.enums.TipoPedidoAcoesEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/enums/TipoPedidoAcoesEnum.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> TipoPedidoAcoesEnum </td></tr>
@@ -201,7 +235,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/enums/TipoPedidoAcoesEnum.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.enums.TipoConvenioEnum
-	c364047 [label=<<table title="br.gov.to.sefaz.arr.persistence.enums.TipoConvenioEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/enums/TipoConvenioEnum.html">
+	c396663 [label=<<table title="br.gov.to.sefaz.arr.persistence.enums.TipoConvenioEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/enums/TipoConvenioEnum.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> TipoConvenioEnum </td></tr>
@@ -219,7 +253,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/enums/TipoConvenioEnum.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.enums.TipoContaEnum
-	c364048 [label=<<table title="br.gov.to.sefaz.arr.persistence.enums.TipoContaEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/enums/TipoContaEnum.html">
+	c396664 [label=<<table title="br.gov.to.sefaz.arr.persistence.enums.TipoContaEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/enums/TipoContaEnum.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> TipoContaEnum </td></tr>
@@ -233,7 +267,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/enums/TipoContaEnum.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.enums.TipoCodigoBarraEnum
-	c364049 [label=<<table title="br.gov.to.sefaz.arr.persistence.enums.TipoCodigoBarraEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/enums/TipoCodigoBarraEnum.html">
+	c396665 [label=<<table title="br.gov.to.sefaz.arr.persistence.enums.TipoCodigoBarraEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/enums/TipoCodigoBarraEnum.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> TipoCodigoBarraEnum </td></tr>
@@ -250,7 +284,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/enums/TipoCodigoBarraEnum.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.enums.SituacaoConciliacaoEnum
-	c364051 [label=<<table title="br.gov.to.sefaz.arr.persistence.enums.SituacaoConciliacaoEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/enums/SituacaoConciliacaoEnum.html">
+	c396667 [label=<<table title="br.gov.to.sefaz.arr.persistence.enums.SituacaoConciliacaoEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/enums/SituacaoConciliacaoEnum.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> SituacaoConciliacaoEnum </td></tr>
@@ -264,7 +298,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/enums/SituacaoConciliacaoEnum.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.enums.FormaPagamentoEnum
-	c364053 [label=<<table title="br.gov.to.sefaz.arr.persistence.enums.FormaPagamentoEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/enums/FormaPagamentoEnum.html">
+	c396669 [label=<<table title="br.gov.to.sefaz.arr.persistence.enums.FormaPagamentoEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/enums/FormaPagamentoEnum.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> FormaPagamentoEnum </td></tr>
@@ -281,7 +315,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/enums/FormaPagamentoEnum.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.enums.ClassificacaoReceitaEnum
-	c364055 [label=<<table title="br.gov.to.sefaz.arr.persistence.enums.ClassificacaoReceitaEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/enums/ClassificacaoReceitaEnum.html">
+	c396671 [label=<<table title="br.gov.to.sefaz.arr.persistence.enums.ClassificacaoReceitaEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/enums/ClassificacaoReceitaEnum.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> ClassificacaoReceitaEnum </td></tr>
@@ -302,7 +336,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/enums/ClassificacaoReceitaEnum.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.converter.str.ValorInformativoToConvenioEnum
-	c364093 [label=<<table title="br.gov.to.sefaz.arr.processamento.converter.str.ValorInformativoToConvenioEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/processamento/converter/str/ValorInformativoToConvenioEnum.html">
+	c396709 [label=<<table title="br.gov.to.sefaz.arr.processamento.converter.str.ValorInformativoToConvenioEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/processamento/converter/str/ValorInformativoToConvenioEnum.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> ValorInformativoToConvenioEnum </td></tr>
@@ -339,7 +373,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/processamento/converter/str/ValorInformativoToConvenioEnum.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.domain.str.TipoValorInformativoEnum
-	c364118 [label=<<table title="br.gov.to.sefaz.arr.processamento.domain.str.TipoValorInformativoEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/processamento/domain/str/TipoValorInformativoEnum.html">
+	c396734 [label=<<table title="br.gov.to.sefaz.arr.processamento.domain.str.TipoValorInformativoEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/processamento/domain/str/TipoValorInformativoEnum.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> TipoValorInformativoEnum </td></tr>
@@ -376,7 +410,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/processamento/domain/str/TipoValorInformativoEnum.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.domain.str.TipoRejeicaoEnum
-	c364119 [label=<<table title="br.gov.to.sefaz.arr.processamento.domain.str.TipoRejeicaoEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/processamento/domain/str/TipoRejeicaoEnum.html">
+	c396735 [label=<<table title="br.gov.to.sefaz.arr.processamento.domain.str.TipoRejeicaoEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/processamento/domain/str/TipoRejeicaoEnum.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> TipoRejeicaoEnum </td></tr>
@@ -423,7 +457,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/processamento/domain/str/TipoRejeicaoEnum.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.domain.str.SituacaoProcessamentoStrEnum
-	c364121 [label=<<table title="br.gov.to.sefaz.arr.processamento.domain.str.SituacaoProcessamentoStrEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/processamento/domain/str/SituacaoProcessamentoStrEnum.html">
+	c396737 [label=<<table title="br.gov.to.sefaz.arr.processamento.domain.str.SituacaoProcessamentoStrEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/processamento/domain/str/SituacaoProcessamentoStrEnum.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> SituacaoProcessamentoStrEnum </td></tr>
@@ -439,46 +473,50 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/processamento/domain/str/SituacaoProcessamentoStrEnum.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.persistence.enums.SituacaoEnum implements br.gov.to.sefaz.persistence.enums.EnumCodeLabel<T>
-	c363457:p -> c363456:p [dir=back,arrowtail=empty,style=dashed];
+	c396048:p -> c396047:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.par.gestao.persistence.enums.TipoParametroGeralEnum implements br.gov.to.sefaz.persistence.enums.EnumCodeLabel<T>
-	c363457:p -> c363599:p [dir=back,arrowtail=empty,style=dashed];
+	c396048:p -> c396190:p [dir=back,arrowtail=empty,style=dashed];
+	//br.gov.to.sefaz.seg.persistence.enums.TipoPeriodoConsultaComunicacaoEnum implements br.gov.to.sefaz.persistence.enums.EnumCodeLabel<T>
+	c396048:p -> c396401:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.seg.persistence.enums.TipoOperacaoEnum implements br.gov.to.sefaz.persistence.enums.EnumCodeLabel<T>
-	c363457:p -> c363790:p [dir=back,arrowtail=empty,style=dashed];
+	c396048:p -> c396402:p [dir=back,arrowtail=empty,style=dashed];
+	//br.gov.to.sefaz.seg.persistence.enums.TipoComunicacaoEnum implements br.gov.to.sefaz.persistence.enums.EnumCodeLabel<T>
+	c396048:p -> c396403:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.seg.persistence.enums.SituacaoUsuarioEnum implements br.gov.to.sefaz.persistence.enums.EnumCodeLabel<T>
-	c363457:p -> c363791:p [dir=back,arrowtail=empty,style=dashed];
+	c396048:p -> c396404:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.seg.persistence.enums.SituacaoSolicitacaoEnum implements br.gov.to.sefaz.persistence.enums.EnumCodeLabel<T>
-	c363457:p -> c363792:p [dir=back,arrowtail=empty,style=dashed];
+	c396048:p -> c396405:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.arr.persistence.enums.TipoRepasseEnum implements br.gov.to.sefaz.persistence.enums.EnumCodeLabel<T>
-	c363457:p -> c364039:p [dir=back,arrowtail=empty,style=dashed];
+	c396048:p -> c396655:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.arr.persistence.enums.TipoRecolhimentoStrEnum implements br.gov.to.sefaz.persistence.enums.EnumCodeLabel<T>
-	c363457:p -> c364040:p [dir=back,arrowtail=empty,style=dashed];
+	c396048:p -> c396656:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.arr.persistence.enums.TipoReceitaStrEnum implements br.gov.to.sefaz.persistence.enums.EnumCodeLabel<T>
-	c363457:p -> c364041:p [dir=back,arrowtail=empty,style=dashed];
+	c396048:p -> c396657:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.arr.persistence.enums.TipoReceitaEnum implements br.gov.to.sefaz.persistence.enums.EnumCodeLabel<T>
-	c363457:p -> c364042:p [dir=back,arrowtail=empty,style=dashed];
+	c396048:p -> c396658:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.arr.persistence.enums.TipoPedidoCampoEnum implements br.gov.to.sefaz.persistence.enums.EnumCodeLabel<T>
-	c363457:p -> c364044:p [dir=back,arrowtail=empty,style=dashed];
+	c396048:p -> c396660:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.arr.persistence.enums.TipoPedidoAcoesEnum implements br.gov.to.sefaz.persistence.enums.EnumCodeLabel<T>
-	c363457:p -> c364045:p [dir=back,arrowtail=empty,style=dashed];
+	c396048:p -> c396661:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.arr.persistence.enums.TipoConvenioEnum implements br.gov.to.sefaz.persistence.enums.EnumCodeLabel<T>
-	c363457:p -> c364047:p [dir=back,arrowtail=empty,style=dashed];
+	c396048:p -> c396663:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.arr.persistence.enums.TipoContaEnum implements br.gov.to.sefaz.persistence.enums.EnumCodeLabel<T>
-	c363457:p -> c364048:p [dir=back,arrowtail=empty,style=dashed];
+	c396048:p -> c396664:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.arr.persistence.enums.TipoCodigoBarraEnum implements br.gov.to.sefaz.persistence.enums.EnumCodeLabel<T>
-	c363457:p -> c364049:p [dir=back,arrowtail=empty,style=dashed];
+	c396048:p -> c396665:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.arr.persistence.enums.SituacaoConciliacaoEnum implements br.gov.to.sefaz.persistence.enums.EnumCodeLabel<T>
-	c363457:p -> c364051:p [dir=back,arrowtail=empty,style=dashed];
+	c396048:p -> c396667:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.arr.persistence.enums.FormaPagamentoEnum implements br.gov.to.sefaz.persistence.enums.EnumCodeLabel<T>
-	c363457:p -> c364053:p [dir=back,arrowtail=empty,style=dashed];
+	c396048:p -> c396669:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.arr.persistence.enums.ClassificacaoReceitaEnum implements br.gov.to.sefaz.persistence.enums.EnumCodeLabel<T>
-	c363457:p -> c364055:p [dir=back,arrowtail=empty,style=dashed];
+	c396048:p -> c396671:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.arr.processamento.converter.str.ValorInformativoToConvenioEnum implements br.gov.to.sefaz.persistence.enums.EnumCodeLabel<T>
-	c363457:p -> c364093:p [dir=back,arrowtail=empty,style=dashed];
+	c396048:p -> c396709:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.arr.processamento.domain.str.TipoValorInformativoEnum implements br.gov.to.sefaz.persistence.enums.EnumCodeLabel<T>
-	c363457:p -> c364118:p [dir=back,arrowtail=empty,style=dashed];
+	c396048:p -> c396734:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.arr.processamento.domain.str.TipoRejeicaoEnum implements br.gov.to.sefaz.persistence.enums.EnumCodeLabel<T>
-	c363457:p -> c364119:p [dir=back,arrowtail=empty,style=dashed];
+	c396048:p -> c396735:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.arr.processamento.domain.str.SituacaoProcessamentoStrEnum implements br.gov.to.sefaz.persistence.enums.EnumCodeLabel<T>
-	c363457:p -> c364121:p [dir=back,arrowtail=empty,style=dashed];
+	c396048:p -> c396737:p [dir=back,arrowtail=empty,style=dashed];
 }
 

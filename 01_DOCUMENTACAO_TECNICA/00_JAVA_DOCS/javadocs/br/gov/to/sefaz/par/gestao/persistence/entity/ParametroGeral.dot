@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.entity.AbstractEntity<I extends java.io.Serializable>
-	c546428 [label=<<table title="br.gov.to.sefaz.persistence.entity.AbstractEntity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../persistence/entity/AbstractEntity.html">
+	c590540 [label=<<table title="br.gov.to.sefaz.persistence.entity.AbstractEntity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../persistence/entity/AbstractEntity.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractEntity&lt;I extends Serializable&gt; </font></td></tr>
 		</table></td></tr>
@@ -38,7 +38,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../../persistence/entity/AbstractEntity.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.par.gestao.persistence.entity.ParametroGeral
-	c546565 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.entity.ParametroGeral" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ParametroGeral.html">
+	c590677 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.entity.ParametroGeral" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ParametroGeral.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ParametroGeral </td></tr>
 		</table></td></tr>
@@ -65,6 +65,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ParametroGeral.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.par.gestao.persistence.entity.ParametroGeral extends br.gov.to.sefaz.persistence.entity.AbstractEntity<java.lang.Integer>
-	c546428:p -> c546565:p [dir=back,arrowtail=empty];
+	c590540:p -> c590677:p [dir=back,arrowtail=empty];
 }
 

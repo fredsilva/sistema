@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.repository.BaseRepository<E, I extends java.io.Serializable>
-	c615974 [label=<<table title="br.gov.to.sefaz.persistence.repository.BaseRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/repository/BaseRepository.html">
+	c662464 [label=<<table title="br.gov.to.sefaz.persistence.repository.BaseRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/repository/BaseRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> BaseRepository&lt;E, I extends Serializable&gt; </font></td></tr>
 		</table></td></tr>
@@ -24,6 +24,7 @@ digraph G {
 <tr><td align="left" balign="left"> + findNative(selectConsumer : Consumer&lt;SelectBuilder&gt;) : List&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + find(alias : String, selectConsumer : Consumer&lt;HqlSelectBuilder&gt;) : List&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + find(selectConsumer : Consumer&lt;HqlSelectBuilder&gt;) : List&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> + find(selectConsumer : Consumer&lt;HqlSelectBuilder&gt;, maxResults : int) : List&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + findColumnNative(alias : String, column : String, selectConsumer : Consumer&lt;SelectBuilder&gt;) : List&lt;R&gt; </td></tr>
 <tr><td align="left" balign="left"> + findColumnNative(column : String, selectConsumer : Consumer&lt;SelectBuilder&gt;) : List&lt;R&gt; </td></tr>
 <tr><td align="left" balign="left"> + findColumn(alias : String, column : String, selectConsumer : Consumer&lt;HqlSelectBuilder&gt;) : List&lt;R&gt; </td></tr>
@@ -68,7 +69,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../persistence/repository/BaseRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.PerfilSistemaRepository
-	c616236 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.PerfilSistemaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./PerfilSistemaRepository.html">
+	c662748 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.PerfilSistemaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./PerfilSistemaRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PerfilSistemaRepository </td></tr>
 		</table></td></tr>
@@ -84,6 +85,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PerfilSistemaRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.persistence.repository.PerfilSistemaRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.seg.persistence.entity.PerfilSistema, java.lang.Long>
-	c615974:p -> c616236:p [dir=back,arrowtail=empty];
+	c662464:p -> c662748:p [dir=back,arrowtail=empty];
 }
 

@@ -41,6 +41,7 @@ digraph G {
 <tr><td align="left" balign="left"> + findNative(arg0 : Consumer&lt;SelectBuilder&gt;) : List&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + find(arg0 : String, arg1 : Consumer&lt;HqlSelectBuilder&gt;) : List&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + find(arg0 : Consumer&lt;HqlSelectBuilder&gt;) : List&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> + find(arg0 : Consumer&lt;HqlSelectBuilder&gt;, arg1 : int) : List&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + findColumnNative(arg0 : String, arg1 : String, arg2 : Consumer&lt;SelectBuilder&gt;) : List&lt;R&gt; </td></tr>
 <tr><td align="left" balign="left"> + findColumnNative(arg0 : String, arg1 : Consumer&lt;SelectBuilder&gt;) : List&lt;R&gt; </td></tr>
 <tr><td align="left" balign="left"> + findColumn(arg0 : String, arg1 : String, arg2 : Consumer&lt;HqlSelectBuilder&gt;) : List&lt;R&gt; </td></tr>

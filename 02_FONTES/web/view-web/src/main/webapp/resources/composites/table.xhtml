@@ -35,6 +35,8 @@
             shortDescription="Índice da coluna para a qual deseja que a tabela inicie ordenada. Defaul 0, primeira coluna."/>
     <cc:attribute name="defaulSortDirection" type="java.lang.String" default="asc"
             shortDescription="Direção da ordenação default da tabela. Default asc. "/>
+    <cc:attribute name="rowCallback" type="java.lang.String" default="null"
+            shortDescription="Método de callback para pós-processamento depois que cada row for gerada pela tabela."/>
     <cc:facet name="actions"
             shortDescription="Elementos HTML que serão replicados em cada linha da coluna de ações da tabela. Os eventos são mapeados através da classe do elemento HTML. Mais detalhes em br.gov.to.sefaz.business.managedbean.composites.DataTableMB#parseActionEvents(String)"/>
 
@@ -91,7 +93,8 @@
             $(document).ready(function () {
                 createDataTable('#{cc.attrs.id}', #{cc.attrs.paging},
                         #{dataTableMB.parseColumnDefs(columnDefs, fields)}, #{cc.attrs.hasActions},
-                       '#{cc.attrs.actionStyleClass}', #{cc.attrs.defaulSortColumn}, '#{cc.attrs.defaulSortDirection}');
+                       '#{cc.attrs.actionStyleClass}', #{cc.attrs.defaulSortColumn}, '#{cc.attrs.defaulSortDirection}',
+                        #{cc.attrs.rowCallback});
                 <ui:repeat value="#{dataTableMB.parseActionEvents(cc.attrs.actionEvents)}" var="action">
                     bindDataTableEvents('#{cc.attrs.id}', '#{action.bindType}', '#{action.elementClass}',
                             '#{action.eventType}', '#{dataTableMB.buildJsCall(action, 'data')}',

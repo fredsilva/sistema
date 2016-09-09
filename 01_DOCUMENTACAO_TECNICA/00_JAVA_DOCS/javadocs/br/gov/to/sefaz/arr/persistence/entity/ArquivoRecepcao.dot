@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.entity.AbstractEntity<I extends java.io.Serializable>
-	c186409 [label=<<table title="br.gov.to.sefaz.persistence.entity.AbstractEntity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/entity/AbstractEntity.html">
+	c198045 [label=<<table title="br.gov.to.sefaz.persistence.entity.AbstractEntity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/entity/AbstractEntity.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractEntity&lt;I extends Serializable&gt; </font></td></tr>
 		</table></td></tr>
@@ -38,7 +38,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../persistence/entity/AbstractEntity.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.ArquivoRecepcao
-	c186988 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ArquivoRecepcao" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ArquivoRecepcao.html">
+	c198649 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ArquivoRecepcao" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ArquivoRecepcao.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArquivoRecepcao </td></tr>
 		</table></td></tr>
@@ -95,6 +95,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ArquivoRecepcao.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.arr.persistence.entity.ArquivoRecepcao extends br.gov.to.sefaz.persistence.entity.AbstractEntity<java.lang.Long>
-	c186409:p -> c186988:p [dir=back,arrowtail=empty];
+	c198045:p -> c198649:p [dir=back,arrowtail=empty];
 }
 

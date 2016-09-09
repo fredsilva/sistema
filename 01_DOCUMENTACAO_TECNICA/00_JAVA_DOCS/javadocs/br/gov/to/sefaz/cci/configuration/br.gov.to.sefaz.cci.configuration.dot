@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.cci.configuration.CciCoreConfiguration
-	c109701 [label=<<table title="br.gov.to.sefaz.cci.configuration.CciCoreConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CciCoreConfiguration.html">
+	c118723 [label=<<table title="br.gov.to.sefaz.cci.configuration.CciCoreConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CciCoreConfiguration.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CciCoreConfiguration </td></tr>
 		</table></td></tr>

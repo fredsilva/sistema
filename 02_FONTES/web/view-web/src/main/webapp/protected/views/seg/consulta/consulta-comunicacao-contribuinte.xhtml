@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:sat="http://sefaz.to.gov.br/composites"
+        xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+
+<ui:composition template="/protected/views/templates/views/default-template.xhtml">
+
+    <ui:param name="pageTitle" value="#{seg_msg['seg.gestao.consultaComunicacaoContribuinte.titulo']}"/>
+
+    <ui:define name="header">
+        <h:outputScript library="js" name="core/sat.date.js"/>
+    </ui:define>
+
+    <ui:define name="content">
+        <sat:panel title="#{seg_msg['seg.gestao.consultaComunicacaoContribuinte.pesquisa.titulo']}">
+            <div class="col-md-12">
+                <h:form id="consulta-comunicacoes-contribuinte-filtro">
+                    <div class="form-group col-md-3">
+                        <h:outputLabel for="cpfDestinatarioFilter">
+                            #{seg_msg['seg.gestao.consultaComunicacaoContribuinte.pesquisa.cpf']}
+                        </h:outputLabel>
+
+                        <h:inputText value="#{consultaComunicacaoContribuinteMB.filter.cpf}"
+                                id="cpfDestinatarioFilter"
+                                styleClass="form-control"
+                                maxlength="14"
+                                p:data-mask="999.999.999-99">
+                            <f:converter converterId="cpfFacesConverter"/>
+                        </h:inputText>
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <h:outputLabel for="nomeDestinatarioFilter">
+                            #{seg_msg['seg.gestao.consultaComunicacaoContribuinte.pesquisa.nomeDestinatario']}
+                        </h:outputLabel>
+
+                        <h:inputText value="#{consultaComunicacaoContribuinteMB.filter.nomeDestinatario}"
+                                id="nomeDestinatarioFilter"
+                                styleClass="form-control"
+                                maxlength="40"/>
+                    </div>
+
+                    <div class="form-group col-md-2">
+                        <h:outputLabel for="tipoComunicacaoFilter">
+                            #{seg_msg['seg.gestao.consultaComunicacaoContribuinte.pesquisa.tipoComunicacao']}
+                        </h:outputLabel>
+                        <h:selectOneMenu value="#{consultaComunicacaoContribuinteMB.filter.tipoComunicacao}"
+                                id="tipoComunicacaoFilter"
+                                styleClass="form-control">
+                            <f:selectItem value="#{null}" itemLabel="[Todos]"/>
+                            <f:selectItems value="#{consultaComunicacaoContribuinteMB.allTiposComunicacao}"
+                                    var="tipoComunicacao"
+                                    itemValue="#{tipoComunicacao}"
+                                    itemLabel="#{tipoComunicacao.label}"/>
+                        </h:selectOneMenu>
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <h:outputLabel for="dataComunicacaoFilter">
+                            #{seg_msg['seg.gestao.consultaComunicacaoContribuinte.pesquisa.dataComunicacao']}
+                        </h:outputLabel>
+
+                        <div class='input-group'>
+                            <h:inputText id='dataComunicacaoFilter'
+                                    value="#{consultaComunicacaoContribuinteMB.filter.dataComunicacao}"
+                                    styleClass="form-control datepicker">
+                                <f:converter converterId="localDateFacesConverter"/>
+                            </h:inputText>
+                            <h:outputLabel for="dataComunicacaoFilter"
+                                    class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"/>
+                            </h:outputLabel>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="form-group col-md-12 text-right">
+                            <h:commandButton type="button"
+                                    value="#{seg_msg['seg.gestao.consultaComunicacaoContribuinte.pesquisa.consultar']}"
+                                    styleClass="btn btn-primary"
+                                    action="#{consultaComunicacaoContribuinteMB.search()}">
+                                <f:ajax render="consulta-comunicacoes-table"
+                                        execute="cpfDestinatarioFilter nomeDestinatarioFilter tipoComunicacaoFilter dataComunicacaoFilter"/>
+                            </h:commandButton>
+
+
+                            <sat:opcaoAjudaButton/>
+                        </div>
+                    </div>
+                    <h:outputScript>
+                        datePicker('.datepicker');
+                    </h:outputScript>
+                </h:form>
+            </div>
+
+            <sat:table id="consulta-comunicacoes-table"
+                    bundle="seg_msg"
+                    content="#{consultaComunicacaoContribuinteMB.resultList}"
+                    headers="seg.gestao.consultaComunicacaoContribuinte.tabela.cpf,
+                             seg.gestao.consultaComunicacaoContribuinte.tabela.nomeDestinatario,
+                             seg.gestao.consultaComunicacaoContribuinte.tabela.tipoComunicacao,
+                             seg.gestao.consultaComunicacaoContribuinte.tabela.dataComunicacao,
+                             seg.gestao.consultaComunicacaoContribuinte.tabela.mensagem,
+                             seg.gestao.consultaComunicacaoContribuinte.tabela.temAnexo,
+                             seg.gestao.consultaComunicacaoContribuinte.tabela.temErro"
+
+                    fields="cpfDestinatario:cpf,
+                            nomeDestinatario,
+                            tipoComunicacao:string,
+                            dataHoraComunicacao:dateTimeSecs,
+                            assunto,
+                            possuiAnexo:boolean,
+                            possuiErro:boolean"
+                    hasActions="false"
+                    defaulSortColumn="1"
+                    columnDefs="{'class': 'tbody-nowrap', 'targets': [0, 2, 5, 6]}">
+            </sat:table>
+
+        </sat:panel>
+    </ui:define>
+</ui:composition>
+</html>

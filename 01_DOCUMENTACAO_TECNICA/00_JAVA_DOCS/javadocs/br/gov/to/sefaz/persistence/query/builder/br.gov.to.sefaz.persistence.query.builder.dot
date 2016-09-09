@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder<T, S>
-	c26321 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./QueryStructureBuilder.html">
+	c27220 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./QueryStructureBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> QueryStructureBuilder&lt;T, S&gt; </td></tr>
@@ -24,7 +24,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./QueryStructureBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.QueryBuilder
-	c26322 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.QueryBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./QueryBuilder.html">
+	c27221 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.QueryBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./QueryBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> QueryBuilder </td></tr>
 		</table></td></tr>
@@ -51,7 +51,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./QueryBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.ParamsBuilder
-	c26323 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.ParamsBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ParamsBuilder.html">
+	c27222 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.ParamsBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ParamsBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ParamsBuilder </td></tr>
 		</table></td></tr>

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.authentication.domain.UsuarioSistemaAuthentication
-	c75577 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.domain.UsuarioSistemaAuthentication" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioSistemaAuthentication.html">
+	c78158 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.domain.UsuarioSistemaAuthentication" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioSistemaAuthentication.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UsuarioSistemaAuthentication </td></tr>
 		</table></td></tr>
@@ -32,7 +32,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./UsuarioSistemaAuthentication.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.authentication.domain.SecurityErrorCodeType
-	c75578 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.domain.SecurityErrorCodeType" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SecurityErrorCodeType.html">
+	c78159 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.domain.SecurityErrorCodeType" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SecurityErrorCodeType.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> SecurityErrorCodeType </td></tr>
@@ -46,7 +46,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SecurityErrorCodeType.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupType
-	c75579 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupType" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RoleGroupType.html">
+	c78160 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupType" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RoleGroupType.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> RoleGroupType </td></tr>
@@ -60,7 +60,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./RoleGroupType.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupManager
-	c75580 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RoleGroupManager.html">
+	c78161 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupManager" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RoleGroupManager.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> RoleGroupManager </td></tr>
 		</table></td></tr>
@@ -84,7 +84,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./RoleGroupManager.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupKey
-	c75581 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupKey" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RoleGroupKey.html">
+	c78162 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupKey" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RoleGroupKey.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> RoleGroupKey </td></tr>
 		</table></td></tr>
@@ -104,7 +104,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./RoleGroupKey.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.authentication.domain.ResetPasswordDto
-	c75582 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.domain.ResetPasswordDto" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ResetPasswordDto.html">
+	c78163 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.domain.ResetPasswordDto" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ResetPasswordDto.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ResetPasswordDto </td></tr>
 		</table></td></tr>
@@ -124,7 +124,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ResetPasswordDto.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.authentication.domain.LoginDto
-	c75583 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.domain.LoginDto" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LoginDto.html">
+	c78164 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.domain.LoginDto" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LoginDto.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LoginDto </td></tr>
 		</table></td></tr>
@@ -144,7 +144,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./LoginDto.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.authentication.domain.ChangePasswordDto
-	c75584 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.domain.ChangePasswordDto" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ChangePasswordDto.html">
+	c78165 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.domain.ChangePasswordDto" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ChangePasswordDto.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ChangePasswordDto </td></tr>
 		</table></td></tr>

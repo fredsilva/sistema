@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.gestao.service.TipoUsuarioService
-	c39091 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.TipoUsuarioService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TipoUsuarioService.html">
+	c50565 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.TipoUsuarioService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TipoUsuarioService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> TipoUsuarioService </td></tr>
@@ -25,7 +25,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoUsuarioService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.impl.TipoUsuarioServiceImpl
-	c39125 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.TipoUsuarioServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/TipoUsuarioServiceImpl.html">
+	c50600 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.TipoUsuarioServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/TipoUsuarioServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoUsuarioServiceImpl </td></tr>
 		</table></td></tr>
@@ -40,6 +40,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./impl/TipoUsuarioServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.business.gestao.service.impl.TipoUsuarioServiceImpl implements br.gov.to.sefaz.seg.business.gestao.service.TipoUsuarioService
-	c39091:p -> c39125:p [dir=back,arrowtail=empty,style=dashed];
+	c50565:p -> c50600:p [dir=back,arrowtail=empty,style=dashed];
 }
 

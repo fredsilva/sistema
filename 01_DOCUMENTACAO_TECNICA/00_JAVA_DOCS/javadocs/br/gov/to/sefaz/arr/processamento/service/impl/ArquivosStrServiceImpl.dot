@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.service.impl.DefaultCrudService<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c194134 [label=<<table title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../business/service/impl/DefaultCrudService.html">
+	c206031 [label=<<table title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../business/service/impl/DefaultCrudService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultCrudService&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
 		</table></td></tr>
@@ -30,7 +30,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../../business/service/impl/DefaultCrudService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.service.ArquivosStrService
-	c194731 [label=<<table title="br.gov.to.sefaz.arr.processamento.service.ArquivosStrService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ArquivosStrService.html">
+	c206653 [label=<<table title="br.gov.to.sefaz.arr.processamento.service.ArquivosStrService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ArquivosStrService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ArquivosStrService </td></tr>
@@ -44,7 +44,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../ArquivosStrService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.service.impl.ArquivosStrServiceImpl
-	c194743 [label=<<table title="br.gov.to.sefaz.arr.processamento.service.impl.ArquivosStrServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ArquivosStrServiceImpl.html">
+	c206665 [label=<<table title="br.gov.to.sefaz.arr.processamento.service.impl.ArquivosStrServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ArquivosStrServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArquivosStrServiceImpl </td></tr>
 		</table></td></tr>
@@ -58,8 +58,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ArquivosStrServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.arr.processamento.service.impl.ArquivosStrServiceImpl extends br.gov.to.sefaz.business.service.impl.DefaultCrudService<br.gov.to.sefaz.arr.persistence.entity.ArquivosStr, java.lang.Long>
-	c194134:p -> c194743:p [dir=back,arrowtail=empty];
+	c206031:p -> c206665:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.processamento.service.impl.ArquivosStrServiceImpl implements br.gov.to.sefaz.arr.processamento.service.ArquivosStrService
-	c194731:p -> c194743:p [dir=back,arrowtail=empty,style=dashed];
+	c206653:p -> c206665:p [dir=back,arrowtail=empty,style=dashed];
 }
 

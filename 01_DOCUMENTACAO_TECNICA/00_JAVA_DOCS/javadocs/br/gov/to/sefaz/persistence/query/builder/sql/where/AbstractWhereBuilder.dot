@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.query.builder.hql.select.groupby.HqlHavingBuilder
-	c164393 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.select.groupby.HqlHavingBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../hql/select/groupby/HqlHavingBuilder.html">
+	c175275 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.select.groupby.HqlHavingBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../hql/select/groupby/HqlHavingBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HqlHavingBuilder </td></tr>
 		</table></td></tr>
@@ -22,7 +22,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../hql/select/groupby/HqlHavingBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.hql.select.where.HqlSelectWhereBuilder
-	c164403 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.select.where.HqlSelectWhereBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../hql/select/where/HqlSelectWhereBuilder.html">
+	c175285 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.select.where.HqlSelectWhereBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../hql/select/where/HqlSelectWhereBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HqlSelectWhereBuilder </td></tr>
 		</table></td></tr>
@@ -34,7 +34,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../hql/select/where/HqlSelectWhereBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder<T, S>
-	c164406 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../QueryStructureBuilder.html">
+	c175288 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../QueryStructureBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> QueryStructureBuilder&lt;T, S&gt; </td></tr>
@@ -48,7 +48,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../QueryStructureBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.sql.select.groupby.HavingBuilder
-	c164412 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.select.groupby.HavingBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../select/groupby/HavingBuilder.html">
+	c175294 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.select.groupby.HavingBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../select/groupby/HavingBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HavingBuilder </td></tr>
 		</table></td></tr>
@@ -62,7 +62,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../select/groupby/HavingBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.sql.select.where.SelectWhereBuilder
-	c164422 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.select.where.SelectWhereBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../select/where/SelectWhereBuilder.html">
+	c175304 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.select.where.SelectWhereBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../select/where/SelectWhereBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SelectWhereBuilder </td></tr>
 		</table></td></tr>
@@ -74,7 +74,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../select/where/SelectWhereBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.sql.where.WhereBuilder<T>
-	c164426 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.where.WhereBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WhereBuilder.html">
+	c175308 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.where.WhereBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WhereBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WhereBuilder&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -86,7 +86,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./WhereBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractWhereBuilder<W extends br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractWhereBuilder<W, T, J>, T, J extends br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractJunctionBuilder<W, T>>
-	c164429 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractWhereBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AbstractWhereBuilder.html">
+	c175311 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractWhereBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AbstractWhereBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractWhereBuilder&lt;W extends AbstractWhereBuilder&lt;W, T, J&gt;, T, J extends AbstractJunctionBuilder&lt;W, T&gt;&gt; </font></td></tr>
 		</table></td></tr>
@@ -126,16 +126,16 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./AbstractWhereBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.persistence.query.builder.hql.select.groupby.HqlHavingBuilder extends br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractWhereBuilder<br.gov.to.sefaz.persistence.query.builder.hql.select.groupby.HqlHavingBuilder, br.gov.to.sefaz.persistence.query.builder.hql.select.HqlSelectBuilder, br.gov.to.sefaz.persistence.query.builder.hql.select.groupby.HqlHavingJunctionBuilder>
-	c164429:p -> c164393:p [dir=back,arrowtail=empty];
+	c175311:p -> c175275:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.persistence.query.builder.hql.select.where.HqlSelectWhereBuilder extends br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractWhereBuilder<br.gov.to.sefaz.persistence.query.builder.hql.select.where.HqlSelectWhereBuilder, br.gov.to.sefaz.persistence.query.builder.hql.select.HqlSelectBuilder, br.gov.to.sefaz.persistence.query.builder.hql.select.where.HqlSelectJunctionBuilder>
-	c164429:p -> c164403:p [dir=back,arrowtail=empty];
+	c175311:p -> c175285:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.persistence.query.builder.sql.select.groupby.HavingBuilder extends br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractWhereBuilder<br.gov.to.sefaz.persistence.query.builder.sql.select.groupby.HavingBuilder, br.gov.to.sefaz.persistence.query.builder.sql.select.SelectBuilder, br.gov.to.sefaz.persistence.query.builder.sql.select.groupby.HavingJunctionBuilder>
-	c164429:p -> c164412:p [dir=back,arrowtail=empty];
+	c175311:p -> c175294:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.persistence.query.builder.sql.select.where.SelectWhereBuilder extends br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractWhereBuilder<br.gov.to.sefaz.persistence.query.builder.sql.select.where.SelectWhereBuilder, br.gov.to.sefaz.persistence.query.builder.sql.select.SelectBuilder, br.gov.to.sefaz.persistence.query.builder.sql.select.where.SelectJunctionBuilder>
-	c164429:p -> c164422:p [dir=back,arrowtail=empty];
+	c175311:p -> c175304:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.persistence.query.builder.sql.where.WhereBuilder<T> extends br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractWhereBuilder<br.gov.to.sefaz.persistence.query.builder.sql.where.WhereBuilder<T>, T, br.gov.to.sefaz.persistence.query.builder.sql.where.JunctionBuilder<T>>
-	c164429:p -> c164426:p [dir=back,arrowtail=empty];
+	c175311:p -> c175308:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractWhereBuilder<W extends br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractWhereBuilder<W, T, J>, T, J extends br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractJunctionBuilder<W, T>> implements br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder<T, S>
-	c164406:p -> c164429:p [dir=back,arrowtail=empty,style=dashed];
+	c175288:p -> c175311:p [dir=back,arrowtail=empty,style=dashed];
 }
 

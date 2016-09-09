@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.presentation.managedbean.composites.domain.JsFunctionSignature
-	c148 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.composites.domain.JsFunctionSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./JsFunctionSignature.html">
+	c154 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.composites.domain.JsFunctionSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./JsFunctionSignature.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> JsFunctionSignature </td></tr>
@@ -24,7 +24,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./JsFunctionSignature.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.presentation.managedbean.composites.domain.DataTableFieldPrint
-	c149 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.composites.domain.DataTableFieldPrint" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DataTableFieldPrint.html">
+	c155 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.composites.domain.DataTableFieldPrint" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DataTableFieldPrint.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> DataTableFieldPrint </td></tr>
@@ -38,14 +38,16 @@ digraph G {
 <tr><td align="left" balign="left"> NUMBER </td></tr>
 <tr><td align="left" balign="left"> DATE </td></tr>
 <tr><td align="left" balign="left"> DATE_TIME </td></tr>
+<tr><td align="left" balign="left"> DATE_TIME_SECS </td></tr>
 <tr><td align="left" balign="left"> CPF </td></tr>
 <tr><td align="left" balign="left"> CNPJ </td></tr>
 <tr><td align="left" balign="left"> CNPJ_RAIZ </td></tr>
 <tr><td align="left" balign="left"> BOOLEAN </td></tr>
+<tr><td align="left" balign="left"> CPF_CNPJ </td></tr>
 		</table></td></tr>
 		</table>>, URL="./DataTableFieldPrint.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.presentation.managedbean.composites.domain.DataTableField
-	c150 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.composites.domain.DataTableField" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DataTableField.html">
+	c156 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.composites.domain.DataTableField" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DataTableField.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DataTableField </td></tr>
 		</table></td></tr>
@@ -60,7 +62,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./DataTableField.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.presentation.managedbean.composites.domain.DataTableActionVisible
-	c151 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.composites.domain.DataTableActionVisible" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DataTableActionVisible.html">
+	c157 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.composites.domain.DataTableActionVisible" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DataTableActionVisible.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DataTableActionVisible </td></tr>
 		</table></td></tr>
@@ -79,7 +81,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./DataTableActionVisible.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.presentation.managedbean.composites.domain.DataTableActionEvents
-	c152 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.composites.domain.DataTableActionEvents" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DataTableActionEvents.html">
+	c158 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.composites.domain.DataTableActionEvents" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DataTableActionEvents.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DataTableActionEvents </td></tr>
 		</table></td></tr>
@@ -100,8 +102,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./DataTableActionEvents.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.presentation.managedbean.composites.domain.DataTableActionVisible implements br.gov.to.sefaz.presentation.managedbean.composites.domain.JsFunctionSignature
-	c148:p -> c151:p [dir=back,arrowtail=empty,style=dashed];
+	c154:p -> c157:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.presentation.managedbean.composites.domain.DataTableActionEvents implements br.gov.to.sefaz.presentation.managedbean.composites.domain.JsFunctionSignature
-	c148:p -> c152:p [dir=back,arrowtail=empty,style=dashed];
+	c154:p -> c158:p [dir=back,arrowtail=empty,style=dashed];
 }
 

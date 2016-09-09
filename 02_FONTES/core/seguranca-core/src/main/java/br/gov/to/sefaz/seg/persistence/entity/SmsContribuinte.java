@@ -2,17 +2,14 @@ package br.gov.to.sefaz.seg.persistence.entity;
 
 import br.gov.to.sefaz.persistence.entity.AbstractEntity;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 import java.util.Objects;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -40,8 +37,7 @@ public class SmsContribuinte extends AbstractEntity<Long> {
 
     @NotNull
     @Column(name = "DATA_ENVIO")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date dataEnvio;
+    private LocalDateTime dataEnvio;
 
     @NotNull
     @Size(min = 1, max = 30)
@@ -61,7 +57,7 @@ public class SmsContribuinte extends AbstractEntity<Long> {
         // Construtor para inicialização por reflexão.
     }
 
-    public SmsContribuinte(Long identificacaoSmsEnviado, String numeroTelefone, Date dataEnvio, String assunto,
+    public SmsContribuinte(Long identificacaoSmsEnviado, String numeroTelefone, LocalDateTime dataEnvio, String assunto,
             String conteudo, UsuarioSistema destinatario) {
         this.identificacaoSmsEnviado = identificacaoSmsEnviado;
         this.numeroTelefone = numeroTelefone;
@@ -92,11 +88,11 @@ public class SmsContribuinte extends AbstractEntity<Long> {
         this.numeroTelefone = numeroTelefone;
     }
 
-    public Date getDataEnvio() {
+    public LocalDateTime getDataEnvio() {
         return dataEnvio;
     }
 
-    public void setDataEnvio(Date dataEnvio) {
+    public void setDataEnvio(LocalDateTime dataEnvio) {
         this.dataEnvio = dataEnvio;
     }
 
