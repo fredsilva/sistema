@@ -2,6 +2,8 @@ function editRow(data) {
     openModal();
 
     showBtnUpdate("posto-trabalho-form");
+    $("#postoTrabalhoModalTitleInsert").hide();
+    $("#postoTrabalhoModalTitleEdit").show();
     $("#posto-trabalho-form\\:identificacaoPostoTrabalhoForm").val(data[0]);
     $("#posto-trabalho-form\\:nomePostoTrabalhoForm").val(data[2]);
     $("#posto-trabalho-form\\:identificacaoUnidOrganizacForm").val(data[3]);
@@ -25,7 +27,9 @@ function openModal() {
 }
 function openModalInsert() {
     showBtnSave("posto-trabalho-form");
-    clearFields("posto-trabalho-form")
+    clearFields("posto-trabalho-form");
+    $("#postoTrabalhoModalTitleEdit").hide();
+    $("#postoTrabalhoModalTitleInsert").show();
     $("#posto-trabalho-form\\:identificacaoPostoTrabalhoForm").val(null);
     $("#posto-trabalho-form\\:identificacaoUnidOrganizacForm").val(null);
     openModal();

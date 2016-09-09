@@ -24,6 +24,7 @@ digraph G {
 <tr><td align="left" balign="left"> + findNative(tableName : String, entityClass : Class&lt;E&gt;, selectConsumer : Consumer&lt;SelectBuilder&gt;) : List&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + find(entityClass : Class&lt;E&gt;, alias : String, selectConsumer : Consumer&lt;HqlSelectBuilder&gt;) : List&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + find(entityClass : Class&lt;E&gt;, selectConsumer : Consumer&lt;HqlSelectBuilder&gt;) : List&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> + find(entityClass : Class&lt;E&gt;, selectConsumer : Consumer&lt;HqlSelectBuilder&gt;, maxResults : int) : List&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + findColumnNative(tableName : String, alias : String, column : String, selectConsumer : Consumer&lt;SelectBuilder&gt;) : List&lt;R&gt; </td></tr>
 <tr><td align="left" balign="left"> + findColumnNative(tableName : String, column : String, selectConsumer : Consumer&lt;SelectBuilder&gt;) : List&lt;R&gt; </td></tr>
 <tr><td align="left" balign="left"> + findColumn(entityClass : Class&lt;?&gt;, alias : String, column : String, selectConsumer : Consumer&lt;HqlSelectBuilder&gt;) : List&lt;R&gt; </td></tr>
@@ -53,6 +54,7 @@ digraph G {
 <tr><td align="left" balign="left"> + selectColumn(selectBuilder : HqlSelectBuilder) : List&lt;R&gt; </td></tr>
 <tr><td align="left" balign="left"> + selectEntityNative(entityClass : Class&lt;E&gt;, selectBuilder : SelectBuilder) : List&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + selectEntity(entityClass : Class&lt;E&gt;, hqlSelectBuilder : HqlSelectBuilder) : List&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> + selectEntity(entityClass : Class&lt;E&gt;, hqlSelectBuilder : HqlSelectBuilder, maxResults : int) : List&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + selectOneNative(entityClass : Class&lt;E&gt;, selectBuilder : SelectBuilder) : E </td></tr>
 <tr><td align="left" balign="left"> + selectOne(entityClass : Class&lt;E&gt;, hqlSelectBuilder : HqlSelectBuilder) : E </td></tr>
 <tr><td align="left" balign="left"> + selectOneColumn(hqlSelectBuilder : HqlSelectBuilder) : R </td></tr>

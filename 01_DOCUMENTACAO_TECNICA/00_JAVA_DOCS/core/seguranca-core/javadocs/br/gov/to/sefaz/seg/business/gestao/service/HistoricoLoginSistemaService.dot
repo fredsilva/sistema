@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.gestao.service.HistoricoLoginSistemaService
-	c14259 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.HistoricoLoginSistemaService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./HistoricoLoginSistemaService.html">
+	c20085 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.HistoricoLoginSistemaService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./HistoricoLoginSistemaService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> HistoricoLoginSistemaService </td></tr>
@@ -23,7 +23,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./HistoricoLoginSistemaService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.impl.HistoricoLoginSistemaServiceImpl
-	c14293 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.HistoricoLoginSistemaServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/HistoricoLoginSistemaServiceImpl.html">
+	c20120 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.HistoricoLoginSistemaServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/HistoricoLoginSistemaServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HistoricoLoginSistemaServiceImpl </td></tr>
 		</table></td></tr>
@@ -37,11 +37,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./impl/HistoricoLoginSistemaServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.business.gestao.service.HistoricoLoginSistemaService implements br.gov.to.sefaz.business.service.CrudService<E, I extends java.io.Serializable>
-	c14393:p -> c14259:p [dir=back,arrowtail=empty,style=dashed];
+	c20227:p -> c20085:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.seg.business.gestao.service.impl.HistoricoLoginSistemaServiceImpl implements br.gov.to.sefaz.seg.business.gestao.service.HistoricoLoginSistemaService
-	c14259:p -> c14293:p [dir=back,arrowtail=empty,style=dashed];
+	c20085:p -> c20120:p [dir=back,arrowtail=empty,style=dashed];
 	// br.gov.to.sefaz.business.service.CrudService<E, I extends java.io.Serializable>
-	c14393 [label=<<table title="br.gov.to.sefaz.business.service.CrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/service/CrudService.html">
+	c20227 [label=<<table title="br.gov.to.sefaz.business.service.CrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/service/CrudService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CrudService&lt;E, I extends Serializable&gt; </td></tr>

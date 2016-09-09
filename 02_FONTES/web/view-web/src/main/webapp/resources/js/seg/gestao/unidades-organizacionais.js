@@ -1,6 +1,8 @@
 function selectRow(data) {
     openModal();
     showBtnSave("unidade-organizacional-form");
+    $('#unidadeOrganizacionalModalTitleInserir').show();
+    $('#unidadeOrganizacionalModalTitleEditar').hide();
     $("#unidade-organizacional-form\\:identificacaoUnidOrganizacForm").val(null);
     $("#unidade-organizacional-form\\:nomeUnidOrganizacForm").val(data[1]);
     $("#unidade-organizacional-form\\:enderecoForm").val(data[4]);
@@ -13,6 +15,8 @@ function selectRow(data) {
 function editRow(data) {
     openModal();
     showBtnUpdate("unidade-organizacional-form");
+    $('#unidadeOrganizacionalModalTitleInserir').hide();
+    $('#unidadeOrganizacionalModalTitleEditar').show();
     $("#unidade-organizacional-form\\:identificacaoUnidOrganizacForm").val(data[0]);
     $("#unidade-organizacional-form\\:nomeUnidOrganizacForm").val(data[1]);
     $("#unidade-organizacional-form\\:enderecoForm").val(data[4]);
@@ -33,15 +37,6 @@ function resetOnSuccess(data) {
     onSuccess(data, resetFields);
 }
 
-function phoneMask() {
-    $("#unidade-organizacional-form\\:telefoneForm").mask('(00) 00000-0009');
-    if ($("#unidade-organizacional-form\\:telefoneForm").val().length == 15) { // Celular com 9 dígitos + 2 dígitos DDD e 4 da máscara
-        $("#unidade-organizacional-form\\:telefoneForm").mask('(00) 00000-0009');
-    } else {
-        $("#unidade-organizacional-form\\:telefoneForm").mask('(00) 0000-00009');
-    }
-}
-
 function openModal() {
     var modal = $('#unidadeOrganizacionalModal').modal();
     modal.modal('toggle');
@@ -49,6 +44,8 @@ function openModal() {
 }
 function openModalInsert() {
     showBtnSave("unidade-organizacional-form");
+    $('#unidadeOrganizacionalModalTitleInserir').show();
+    $('#unidadeOrganizacionalModalTitleEditar').hide();
     openModal();
 }
 

@@ -6,8 +6,10 @@ import br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupType;
 import br.gov.to.sefaz.seg.business.authentication.facade.DefaultTemplateFacade;
 import br.gov.to.sefaz.seg.business.authentication.handler.AuthenticatedUserHandler;
 import br.gov.to.sefaz.seg.persistence.entity.AplicacaoModulo;
+import br.gov.to.sefaz.seg.persistence.entity.CorreioContribuinte;
 import br.gov.to.sefaz.seg.persistence.entity.ModuloSistema;
 import br.gov.to.sefaz.seg.persistence.entity.OpcaoAplicacao;
+import br.gov.to.sefaz.seg.persistence.entity.SmsContribuinte;
 import br.gov.to.sefaz.seg.template.managedbean.viewbean.MenuViewBean;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +36,9 @@ import javax.faces.bean.ManagedBean;
 @Scope(proxyMode = ScopedProxyMode.TARGET_CLASS, value = "session")
 @ManagedBean(name = "defaultTemplateMB")
 public class DefaultTemplateMB {
+
+    private static final String REGEX_REPLACE_HTML_TAGS = "\\<.*?>";
+    private static final String BLANK_STRING = " ";
 
     private final DefaultTemplateFacade facade;
     private final PathResolverMB pathResolver;
@@ -201,6 +206,59 @@ public class DefaultTemplateMB {
             allModulos = facade.findAllModuloSistema();
         }
         return allModulos;
+    }
+
+    /**
+     * Busca todos emails enviados para usuário logado.
+     *
+     * @return @return Lista contendo objetos do tipo
+     * {@link br.gov.to.sefaz.seg.persistence.entity.CorreioContribuinte}.
+     */
+    public Collection<CorreioContribuinte> getAllSentEmailsForLoggedUser() {
+        return facade.findAllSentEmailsForLoggedUser(facade.getUsuarioSistema());
+    }
+
+    /**
+     * Busca todos SMSs enviados para usuário logado.
+     *
+     * @return Lista contendo objetos do tipo {@link br.gov.to.sefaz.seg.persistence.entity.SmsContribuinte}.
+     */
+    public Collection<SmsContribuinte> getAllSentSMSsForLoggedUser() {
+        return facade.findAllSentSMSsForUser(facade.getUsuarioSistema());
+    }
+
+    /**
+     * Busca últimos emails enviados para usuário logado. O número de emails retornados está definido em regra de
+     * negócio.
+     *
+     * @return @return Lista contendo objetos do tipo
+     * {@link br.gov.to.sefaz.seg.persistence.entity.CorreioContribuinte}
+     */
+    public List<CorreioContribuinte> getLastSentEmailsForLoggedUser() {
+        return facade.findLastSentEmailsForUser(facade.getUsuarioSistema());
+    }
+
+    /**
+     * Obtém o preview do conteúdo do e-mail enviado para o usuário logado. O preview do conteúdo terá um número
+     * máximo de caracteres, conforme definido em regra de negócio. Além disso, as tags html serão removidas do
+     * conteúdo.
+     *
+     * @param correioContribuinte Item de correio enviado para o contribuinte.
+     * @return Texto plano, sem formatação html e limitado ao número de caracteres definidos na regra de negócio.
+     */
+    public String getSentEmailContentPreview(CorreioContribuinte correioContribuinte) {
+        String conteudo = StringUtils.trimToEmpty(correioContribuinte.getConteudo());
+        return StringUtils.abbreviate(conteudo.replaceAll(REGEX_REPLACE_HTML_TAGS, BLANK_STRING),
+                facade.getMessagePreviewLength());
+    }
+
+    /**
+     * Busca últimos SMSs enviados para usuário logado. O número de SMSs retornados está definido em regra de negócio.
+     *
+     * @return Lista contendo objetos do tipo {@link br.gov.to.sefaz.seg.persistence.entity.SmsContribuinte}
+     */
+    public List<SmsContribuinte> getLastSentSMSsForLoggedUser() {
+        return facade.findLastSentSMSsForUser(facade.getUsuarioSistema());
     }
 
     private MenuViewBean createMenuViewBean(ModuloSistema sysModulo) {

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.gestao.service.ProcuracaoUsuarioService
-	c32413 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.ProcuracaoUsuarioService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ProcuracaoUsuarioService.html">
+	c41722 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.ProcuracaoUsuarioService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ProcuracaoUsuarioService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ProcuracaoUsuarioService </td></tr>
@@ -24,7 +24,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ProcuracaoUsuarioService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.impl.ProcuracaoUsuarioServiceImpl
-	c32447 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.ProcuracaoUsuarioServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/ProcuracaoUsuarioServiceImpl.html">
+	c41757 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.ProcuracaoUsuarioServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/ProcuracaoUsuarioServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ProcuracaoUsuarioServiceImpl </td></tr>
 		</table></td></tr>
@@ -40,11 +40,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./impl/ProcuracaoUsuarioServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.business.gestao.service.ProcuracaoUsuarioService implements br.gov.to.sefaz.business.service.CrudService<E, I extends java.io.Serializable>
-	c32558:p -> c32413:p [dir=back,arrowtail=empty,style=dashed];
+	c41875:p -> c41722:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.seg.business.gestao.service.impl.ProcuracaoUsuarioServiceImpl implements br.gov.to.sefaz.seg.business.gestao.service.ProcuracaoUsuarioService
-	c32413:p -> c32447:p [dir=back,arrowtail=empty,style=dashed];
+	c41722:p -> c41757:p [dir=back,arrowtail=empty,style=dashed];
 	// br.gov.to.sefaz.business.service.CrudService<E, I extends java.io.Serializable>
-	c32558 [label=<<table title="br.gov.to.sefaz.business.service.CrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/service/CrudService.html">
+	c41875 [label=<<table title="br.gov.to.sefaz.business.service.CrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/service/CrudService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CrudService&lt;E, I extends Serializable&gt; </td></tr>

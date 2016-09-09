@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.arr.processamento.domain.str.TipoValorInformativoEnum
-	c131991 [label=<<table title="br.gov.to.sefaz.arr.processamento.domain.str.TipoValorInformativoEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoValorInformativoEnum.html">
+	c141767 [label=<<table title="br.gov.to.sefaz.arr.processamento.domain.str.TipoValorInformativoEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoValorInformativoEnum.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> TipoValorInformativoEnum </td></tr>
@@ -47,7 +47,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoValorInformativoEnum.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.domain.str.TipoRejeicaoEnum
-	c131992 [label=<<table title="br.gov.to.sefaz.arr.processamento.domain.str.TipoRejeicaoEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoRejeicaoEnum.html">
+	c141768 [label=<<table title="br.gov.to.sefaz.arr.processamento.domain.str.TipoRejeicaoEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoRejeicaoEnum.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> TipoRejeicaoEnum </td></tr>
@@ -94,7 +94,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoRejeicaoEnum.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.domain.str.STR0020
-	c131993 [label=<<table title="br.gov.to.sefaz.arr.processamento.domain.str.STR0020" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./STR0020.html">
+	c141769 [label=<<table title="br.gov.to.sefaz.arr.processamento.domain.str.STR0020" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./STR0020.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> STR0020 </td></tr>
 		</table></td></tr>
@@ -126,7 +126,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./STR0020.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.domain.str.SituacaoProcessamentoStrEnum
-	c131994 [label=<<table title="br.gov.to.sefaz.arr.processamento.domain.str.SituacaoProcessamentoStrEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SituacaoProcessamentoStrEnum.html">
+	c141770 [label=<<table title="br.gov.to.sefaz.arr.processamento.domain.str.SituacaoProcessamentoStrEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SituacaoProcessamentoStrEnum.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> SituacaoProcessamentoStrEnum </td></tr>
@@ -142,7 +142,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SituacaoProcessamentoStrEnum.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.domain.str.GrupoValorInformativo
-	c131995 [label=<<table title="br.gov.to.sefaz.arr.processamento.domain.str.GrupoValorInformativo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./GrupoValorInformativo.html">
+	c141771 [label=<<table title="br.gov.to.sefaz.arr.processamento.domain.str.GrupoValorInformativo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./GrupoValorInformativo.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> GrupoValorInformativo </td></tr>
 		</table></td></tr>

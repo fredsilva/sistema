@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
         xmlns:h="http://java.sun.com/jsf/html"
+        xmlns:f="http://java.sun.com/jsf/core"
         xmlns:ui="http://java.sun.com/jsf/facelets"
-        xmlns:f="http://xmlns.jcp.org/jsf/core"
 >
 <h:head>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
@@ -65,23 +65,34 @@
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu message-dropdown">
-                        <li class="message-preview">
-                            <a href="#">
+                        <ui:repeat value="#{defaultTemplateMB.lastSentEmailsForLoggedUser}" var="item">
+                            <li class="message-preview">
                                 <div class="media">
                                     <div class="media-body">
-                                        <h5 class="media-heading">
-                                            <strong>Anderson</strong>
-                                        </h5>
                                         <p class="small text-muted">
-                                            <i class="fa fa-clock-o"/>13/06/2016
+                                            <i class="fa fa-clock-o"/>
+                                            <span class="message-date">
+                                                <h:outputText value="#{item.dataEnvio}">
+                                                    <f:converter converterId="localDateTimeFacesConverter"/>
+                                                </h:outputText>
+                                            </span>
                                         </p>
-                                        <p>Corpo da mensagem com um texto bacana</p>
+                                        <!---->
+                                        <p class="message-content">
+
+                                            <h:outputText
+                                                    value="#{defaultTemplateMB.getSentEmailContentPreview(item)}"/>
+                                        </p>
                                     </div>
                                 </div>
-                            </a>
-                        </li>
+                            </li>
+                        </ui:repeat>
                         <li class="message-footer">
-                            <a href="#">Ler todas as mensagens</a>
+                            <a
+                                    href="#{pathResolverMB.protectedViewPath('seg/consulta/consulta-comunicacao-sistema.jsf')}?tipoComunicacao=EMAIL">
+                                #{msg['home.mail.modal.lerTodas']}
+                            </a>
+
                         </li>
                     </ul>
                 </li>
@@ -90,12 +101,32 @@
                         <i class="fa fa-bell"/>
                         <b class="caret"/>
                     </a>
-                    <ul class="dropdown-menu alert-dropdown">
-                        <li>
-                            <a href="#">Nome do alerta<span class="label label-info">Isto é um alerta</span></a>
+                    <ul class="dropdown-menu message-dropdown">
+                        <ui:repeat value="#{defaultTemplateMB.lastSentSMSsForLoggedUser}" var="item">
+                            <li class="message-preview">
+                                <div class="media">
+                                    <div class="media-body">
+                                        <p class="small text-muted">
+                                            <i class="fa fa-clock-o"/>
+                                            <span class="message-date">
+                                                <h:outputText value="#{item.dataEnvio}">
+                                                    <f:converter converterId="localDateTimeFacesConverter"/>
+                                                </h:outputText>
+                                            </span>
+                                        </p>
+                                        <p class="message-content">
+                                            #{item.conteudo}
+                                        </p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ui:repeat>
+                        <li class="message-footer">
+                            <a
+                                    href="#{pathResolverMB.protectedViewPath('seg/consulta/consulta-comunicacao-sistema.jsf')}?tipoComunicacao=SMS">
+                                #{msg['home.sms.modal.verTudo']}
+                            </a>
                         </li>
-                        <li class="divider"></li>
-                        <li><a href="#">Ver tudo</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">

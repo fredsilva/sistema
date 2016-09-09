@@ -46,10 +46,14 @@ public class DataTableMB {
     private static final String END_PARAMS_MARK = ")";
     private static final String BEGIN_PARAMS_MARK = "(";
     private static final String DATE_TIME_PATTERN = "dd/MM/yyyy HH:mm";
+    private static final String DATE_TIME_SECS_PATTERN = "dd/MM/yyyy HH:mm:ss";
     private static final String DATE_PATTERN = "dd/MM/yyyy";
     private static final String CPF_MASK = "###.###.###-##";
     private static final String CNPJ_MASK = "##.###.###/####-##";
     private static final String CNPJ_RAIZ_MASK = "##.###.###";
+
+    private static final int CPF_LENGTH = 11;
+    private static final int CNPJ_LENGTH = 14;
 
     /**
      * <p>
@@ -121,6 +125,8 @@ public class DataTableMB {
                 printType = DataTableFieldPrint.DATE;
             } else if (defs.contains("dateTime")) {
                 printType = DataTableFieldPrint.DATE_TIME;
+            } else if (defs.contains("dateTimeSecs")) {
+                printType = DataTableFieldPrint.DATE_TIME_SECS;
             } else if (defs.contains("number")) {
                 printType = DataTableFieldPrint.NUMBER;
             } else if (defs.contains("cpf")) {
@@ -129,6 +135,8 @@ public class DataTableMB {
                 printType = DataTableFieldPrint.CNPJ;
             } else if (defs.contains("cnpjRaiz")) {
                 printType = DataTableFieldPrint.CNPJ_RAIZ;
+            } else if (defs.contains("cpfCnpj")) {
+                printType = DataTableFieldPrint.CPF_CNPJ;
             }
 
             dataTableFields.add(new DataTableField(name, hide, printType));
@@ -168,16 +176,20 @@ public class DataTableMB {
                 return toDateFormat(fieldValue, DATE_PATTERN);
             case DATE_TIME:
                 return toDateFormat(fieldValue, DATE_TIME_PATTERN);
+            case DATE_TIME_SECS:
+                return toDateFormat(fieldValue, DATE_TIME_SECS_PATTERN);
             case STRING:
                 return fieldValue.toString();
             case NUMBER:
                 return FormatterUtil.formatNumber((Number) fieldValue);
             case CPF:
-                return cpfCnpjFormat(fieldValue, CPF_MASK, 11);
+                return cpfCnpjFormat(fieldValue, CPF_MASK, CPF_LENGTH);
             case CNPJ:
-                return cpfCnpjFormat(fieldValue, CNPJ_MASK, 14);
+                return cpfCnpjFormat(fieldValue, CNPJ_MASK, CNPJ_LENGTH);
             case CNPJ_RAIZ:
                 return cpfCnpjFormat(fieldValue, CNPJ_RAIZ_MASK, 8);
+            case CPF_CNPJ:
+                return cpfCnpjFormat(fieldValue);
             case NONE:
             default:
                 return fieldValue;
@@ -480,6 +492,16 @@ public class DataTableMB {
             return formatter.format((TemporalAccessor) value);
         } else {
             return value == null ? "" : value.toString();
+        }
+    }
+
+    private String cpfCnpjFormat(Object value) {
+        String valueToFormat = StringUtils.trim(value.toString());
+
+        if (valueToFormat.length() == CPF_LENGTH) {
+            return cpfCnpjFormat(valueToFormat, CPF_MASK, CPF_LENGTH);
+        } else {
+            return cpfCnpjFormat(valueToFormat, CNPJ_MASK, CNPJ_LENGTH);
         }
     }
 

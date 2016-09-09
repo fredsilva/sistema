@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.cci.persistence.entity.RepresentanteLegalPK
-	c698447 [label=<<table title="br.gov.to.sefaz.cci.persistence.entity.RepresentanteLegalPK" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./RepresentanteLegalPK.html">
+	c747775 [label=<<table title="br.gov.to.sefaz.cci.persistence.entity.RepresentanteLegalPK" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./RepresentanteLegalPK.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> RepresentanteLegalPK </td></tr>
 		</table></td></tr>
@@ -32,9 +32,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./RepresentanteLegalPK.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.cci.persistence.entity.RepresentanteLegalPK implements java.io.Serializable
-	c698855:p -> c698447:p [dir=back,arrowtail=empty,style=dashed];
+	c748187:p -> c747775:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
-	c698855 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/io/Serializable.html">
+	c748187 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Serializable </td></tr>

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.repository.FindRepository
-	c394884 [label=<<table title="br.gov.to.sefaz.persistence.repository.FindRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./FindRepository.html">
+	c428548 [label=<<table title="br.gov.to.sefaz.persistence.repository.FindRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./FindRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> FindRepository </td></tr>
 		</table></td></tr>
@@ -24,6 +24,7 @@ digraph G {
 <tr><td align="left" balign="left"> + findNative(tableName : String, entityClass : Class&lt;E&gt;, selectConsumer : Consumer&lt;SelectBuilder&gt;) : List&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + find(entityClass : Class&lt;E&gt;, alias : String, selectConsumer : Consumer&lt;HqlSelectBuilder&gt;) : List&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + find(entityClass : Class&lt;E&gt;, selectConsumer : Consumer&lt;HqlSelectBuilder&gt;) : List&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> + find(entityClass : Class&lt;E&gt;, selectConsumer : Consumer&lt;HqlSelectBuilder&gt;, maxResults : int) : List&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + findColumnNative(tableName : String, alias : String, column : String, selectConsumer : Consumer&lt;SelectBuilder&gt;) : List&lt;R&gt; </td></tr>
 <tr><td align="left" balign="left"> + findColumnNative(tableName : String, column : String, selectConsumer : Consumer&lt;SelectBuilder&gt;) : List&lt;R&gt; </td></tr>
 <tr><td align="left" balign="left"> + findColumn(entityClass : Class&lt;?&gt;, alias : String, column : String, selectConsumer : Consumer&lt;HqlSelectBuilder&gt;) : List&lt;R&gt; </td></tr>
@@ -53,6 +54,7 @@ digraph G {
 <tr><td align="left" balign="left"> + selectColumn(selectBuilder : HqlSelectBuilder) : List&lt;R&gt; </td></tr>
 <tr><td align="left" balign="left"> + selectEntityNative(entityClass : Class&lt;E&gt;, selectBuilder : SelectBuilder) : List&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + selectEntity(entityClass : Class&lt;E&gt;, hqlSelectBuilder : HqlSelectBuilder) : List&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> + selectEntity(entityClass : Class&lt;E&gt;, hqlSelectBuilder : HqlSelectBuilder, maxResults : int) : List&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + selectOneNative(entityClass : Class&lt;E&gt;, selectBuilder : SelectBuilder) : E </td></tr>
 <tr><td align="left" balign="left"> + selectOne(entityClass : Class&lt;E&gt;, hqlSelectBuilder : HqlSelectBuilder) : E </td></tr>
 <tr><td align="left" balign="left"> + selectOneColumn(hqlSelectBuilder : HqlSelectBuilder) : R </td></tr>

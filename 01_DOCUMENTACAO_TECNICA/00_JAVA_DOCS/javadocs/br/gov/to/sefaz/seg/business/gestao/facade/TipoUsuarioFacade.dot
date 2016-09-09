@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.gestao.facade.TipoUsuarioFacade
-	c800758 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.TipoUsuarioFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TipoUsuarioFacade.html">
+	c858842 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.TipoUsuarioFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TipoUsuarioFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> TipoUsuarioFacade </td></tr>
@@ -24,7 +24,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoUsuarioFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.facade.impl.TipoUsuarioFacadeImpl
-	c800772 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.TipoUsuarioFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/TipoUsuarioFacadeImpl.html">
+	c858856 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.TipoUsuarioFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/TipoUsuarioFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoUsuarioFacadeImpl </td></tr>
 		</table></td></tr>
@@ -38,6 +38,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./impl/TipoUsuarioFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.business.gestao.facade.impl.TipoUsuarioFacadeImpl implements br.gov.to.sefaz.seg.business.gestao.facade.TipoUsuarioFacade
-	c800758:p -> c800772:p [dir=back,arrowtail=empty,style=dashed];
+	c858842:p -> c858856:p [dir=back,arrowtail=empty,style=dashed];
 }
 

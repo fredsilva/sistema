@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.gestao.service.UsuarioSistemaService
-	c2968 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.UsuarioSistemaService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioSistemaService.html">
+	c4711 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.UsuarioSistemaService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioSistemaService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> UsuarioSistemaService </td></tr>
@@ -40,14 +40,14 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./UsuarioSistemaService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.UsuarioPrincipalEmpresaService
-	c2969 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.UsuarioPrincipalEmpresaService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioPrincipalEmpresaService.html">
+	c4712 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.UsuarioPrincipalEmpresaService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioPrincipalEmpresaService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> UsuarioPrincipalEmpresaService </td></tr>
 		</table></td></tr>
 		</table>>, URL="./UsuarioPrincipalEmpresaService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.UsuarioPostoTrabalhoService
-	c2970 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.UsuarioPostoTrabalhoService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioPostoTrabalhoService.html">
+	c4713 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.UsuarioPostoTrabalhoService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioPostoTrabalhoService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> UsuarioPostoTrabalhoService </td></tr>
@@ -60,7 +60,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./UsuarioPostoTrabalhoService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.UsuarioPerfilService
-	c2971 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.UsuarioPerfilService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioPerfilService.html">
+	c4714 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.UsuarioPerfilService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioPerfilService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> UsuarioPerfilService </td></tr>
@@ -80,7 +80,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./UsuarioPerfilService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.UnidadeOrganizacionalService
-	c2972 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.UnidadeOrganizacionalService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UnidadeOrganizacionalService.html">
+	c4715 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.UnidadeOrganizacionalService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UnidadeOrganizacionalService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> UnidadeOrganizacionalService </td></tr>
@@ -94,7 +94,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./UnidadeOrganizacionalService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.TipoUsuarioService
-	c2973 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.TipoUsuarioService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoUsuarioService.html">
+	c4716 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.TipoUsuarioService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoUsuarioService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> TipoUsuarioService </td></tr>
@@ -109,7 +109,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoUsuarioService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.SolicitacaoUsuarioService
-	c2974 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.SolicitacaoUsuarioService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SolicitacaoUsuarioService.html">
+	c4717 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.SolicitacaoUsuarioService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SolicitacaoUsuarioService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SolicitacaoUsuarioService </td></tr>
@@ -121,8 +121,21 @@ digraph G {
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + save(usuarioSistema : UsuarioSistema) </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./SolicitacaoUsuarioService.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.SmsContribuinteService
+	c4718 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.SmsContribuinteService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SmsContribuinteService.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> SmsContribuinteService </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findLastSentSMSsForUser(usuarioSistema : UsuarioSistema) : List&lt;SmsContribuinte&gt; </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./SmsContribuinteService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.ProcuracaoUsuarioService
-	c2975 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.ProcuracaoUsuarioService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProcuracaoUsuarioService.html">
+	c4719 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.ProcuracaoUsuarioService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProcuracaoUsuarioService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ProcuracaoUsuarioService </td></tr>
@@ -136,7 +149,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ProcuracaoUsuarioService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.ProcuracaoOpcaoService
-	c2976 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.ProcuracaoOpcaoService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProcuracaoOpcaoService.html">
+	c4720 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.ProcuracaoOpcaoService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProcuracaoOpcaoService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ProcuracaoOpcaoService </td></tr>
@@ -149,7 +162,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ProcuracaoOpcaoService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.PostoTrabalhoService
-	c2977 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.PostoTrabalhoService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PostoTrabalhoService.html">
+	c4721 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.PostoTrabalhoService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PostoTrabalhoService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> PostoTrabalhoService </td></tr>
@@ -163,7 +176,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PostoTrabalhoService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.PerfilSistemaService
-	c2978 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.PerfilSistemaService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PerfilSistemaService.html">
+	c4722 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.PerfilSistemaService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PerfilSistemaService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> PerfilSistemaService </td></tr>
@@ -179,7 +192,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PerfilSistemaService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.PerfilPapelService
-	c2979 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.PerfilPapelService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PerfilPapelService.html">
+	c4723 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.PerfilPapelService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PerfilPapelService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> PerfilPapelService </td></tr>
@@ -193,7 +206,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PerfilPapelService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.PapelSistemaService
-	c2980 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.PapelSistemaService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PapelSistemaService.html">
+	c4724 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.PapelSistemaService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PapelSistemaService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> PapelSistemaService </td></tr>
@@ -210,7 +223,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PapelSistemaService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.PapelOpcaoService
-	c2981 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.PapelOpcaoService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PapelOpcaoService.html">
+	c4725 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.PapelOpcaoService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PapelOpcaoService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> PapelOpcaoService </td></tr>
@@ -224,7 +237,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PapelOpcaoService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.OpcaoAplicacaoService
-	c2982 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.OpcaoAplicacaoService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OpcaoAplicacaoService.html">
+	c4726 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.OpcaoAplicacaoService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OpcaoAplicacaoService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OpcaoAplicacaoService </td></tr>
@@ -239,7 +252,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./OpcaoAplicacaoService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.ModuloSistemaService
-	c2983 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.ModuloSistemaService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ModuloSistemaService.html">
+	c4727 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.ModuloSistemaService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ModuloSistemaService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ModuloSistemaService </td></tr>
@@ -252,14 +265,14 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ModuloSistemaService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.LogNavegacaoService
-	c2984 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.LogNavegacaoService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LogNavegacaoService.html">
+	c4728 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.LogNavegacaoService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LogNavegacaoService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> LogNavegacaoService </td></tr>
 		</table></td></tr>
 		</table>>, URL="./LogNavegacaoService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.ListagemCpfProcuracaoService
-	c2985 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.ListagemCpfProcuracaoService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ListagemCpfProcuracaoService.html">
+	c4729 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.ListagemCpfProcuracaoService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ListagemCpfProcuracaoService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ListagemCpfProcuracaoService </td></tr>
@@ -272,7 +285,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ListagemCpfProcuracaoService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.HistoricoLoginSistemaService
-	c2986 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.HistoricoLoginSistemaService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./HistoricoLoginSistemaService.html">
+	c4730 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.HistoricoLoginSistemaService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./HistoricoLoginSistemaService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> HistoricoLoginSistemaService </td></tr>
@@ -285,14 +298,21 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./HistoricoLoginSistemaService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.CorreioContribuinteService
-	c2987 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.CorreioContribuinteService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CorreioContribuinteService.html">
+	c4731 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.CorreioContribuinteService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CorreioContribuinteService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CorreioContribuinteService </td></tr>
 		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findLastSentEmailsForUser(usuarioSistema : UsuarioSistema) : List&lt;CorreioContribuinte&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + getMessagePreviewLength() : int </font></td></tr>
+		</table></td></tr>
 		</table>>, URL="./CorreioContribuinteService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.CadastroSenhaService
-	c2988 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.CadastroSenhaService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CadastroSenhaService.html">
+	c4732 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.CadastroSenhaService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CadastroSenhaService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CadastroSenhaService </td></tr>
@@ -309,7 +329,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./CadastroSenhaService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.AplicacaoModuloService
-	c2989 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.AplicacaoModuloService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AplicacaoModuloService.html">
+	c4733 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.AplicacaoModuloService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AplicacaoModuloService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> AplicacaoModuloService </td></tr>

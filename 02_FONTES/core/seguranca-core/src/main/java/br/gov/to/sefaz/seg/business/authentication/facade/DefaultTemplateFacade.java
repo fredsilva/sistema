@@ -1,7 +1,10 @@
 package br.gov.to.sefaz.seg.business.authentication.facade;
 
 import br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupKey;
+import br.gov.to.sefaz.seg.persistence.entity.CorreioContribuinte;
 import br.gov.to.sefaz.seg.persistence.entity.ModuloSistema;
+import br.gov.to.sefaz.seg.persistence.entity.SmsContribuinte;
+import br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema;
 
 import java.util.Collection;
 import java.util.List;
@@ -76,6 +79,11 @@ public interface DefaultTemplateFacade {
     List<RoleGroupKey> getProcuradoresSistema();
 
     /**
+     * Retorna o usuário do sistema.
+     */
+    UsuarioSistema getUsuarioSistema();
+
+    /**
      * Ativa as permissões de acesso de um perfil.
      *
      * @param profileId identificação do grupo
@@ -101,4 +109,48 @@ public interface DefaultTemplateFacade {
      * @return true se o usuario está logado por certificado digital.
      */
     boolean isAuthenticatedByCert();
+
+    /**
+     * Busca os últimos emails enviados para o usuário informado. O número de emails retornados está definido em
+     * regra de negócio.
+     *
+     * @param usuarioSistema Usuário logado
+     * @return Lista contendo objetos do tipo {@link CorreioContribuinte}
+     */
+    List<CorreioContribuinte> findLastSentEmailsForUser(UsuarioSistema usuarioSistema);
+
+    /**
+     * Busca os últimos SMSs enviados para o usuário informado. O número de SMSs retornados está definido em regra de
+     * negócio.
+     *
+     * @param usuarioSistema {@link UsuarioSistema}  logado
+     * @return Lista contendo objetos do tipo {@link SmsContribuinte}.
+     */
+    List<SmsContribuinte> findLastSentSMSsForUser(UsuarioSistema usuarioSistema);
+
+    /**
+     * Obtém o tamanho máximo de caracteres a serem exibidos na pré-visualização do conteúdo da mensagem de e-mail
+     * enviada aos contribuintes.
+     *
+     * @return Número de caracteres da mensagem de pré-visualização, conforme definidos na regra de negócio.
+     */
+    int getMessagePreviewLength();
+
+    /**
+     * Busca todas mensagens enviadas para o usuário informado. O número de emails retornados está
+     * definido em regra de negócio.
+     *
+     * @param usuarioSistema {@link UsuarioSistema}  logado
+     * @return Lista contendo objetos do tipo {@link CorreioContribuinte}
+     */
+    Collection<CorreioContribuinte> findAllSentEmailsForLoggedUser(UsuarioSistema usuarioSistema);
+
+    /**
+     * Busca todas as notificações SMSs enviadas para o usuário informado. O número de notificações retornadas está
+     * definido em regra de negócio.
+     *
+     * @param usuarioSistema {@link UsuarioSistema} logado
+     * @return Lista contendo objetos do tipo {@link SmsContribuinte}
+     */
+    Collection<SmsContribuinte> findAllSentSMSsForUser(UsuarioSistema usuarioSistema);
 }

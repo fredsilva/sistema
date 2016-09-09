@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.enums.EnumCodeLabel<T>
-	c786175 [label=<<table title="br.gov.to.sefaz.persistence.enums.EnumCodeLabel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/enums/EnumCodeLabel.html">
+	c843751 [label=<<table title="br.gov.to.sefaz.persistence.enums.EnumCodeLabel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/enums/EnumCodeLabel.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> EnumCodeLabel&lt;T&gt; </td></tr>
@@ -25,7 +25,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../persistence/enums/EnumCodeLabel.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.enums.TipoRecolhimentoStrEnum
-	c786758 [label=<<table title="br.gov.to.sefaz.arr.persistence.enums.TipoRecolhimentoStrEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TipoRecolhimentoStrEnum.html">
+	c844359 [label=<<table title="br.gov.to.sefaz.arr.persistence.enums.TipoRecolhimentoStrEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TipoRecolhimentoStrEnum.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> TipoRecolhimentoStrEnum </td></tr>
@@ -40,6 +40,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoRecolhimentoStrEnum.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.arr.persistence.enums.TipoRecolhimentoStrEnum implements br.gov.to.sefaz.persistence.enums.EnumCodeLabel<T>
-	c786175:p -> c786758:p [dir=back,arrowtail=empty,style=dashed];
+	c843751:p -> c844359:p [dir=back,arrowtail=empty,style=dashed];
 }
 

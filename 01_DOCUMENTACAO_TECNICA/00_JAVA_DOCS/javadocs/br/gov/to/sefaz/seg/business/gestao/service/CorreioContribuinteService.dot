@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.service.CrudService<E, I extends java.io.Serializable>
-	c309337 [label=<<table title="br.gov.to.sefaz.business.service.CrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../business/service/CrudService.html">
+	c339195 [label=<<table title="br.gov.to.sefaz.business.service.CrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../business/service/CrudService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CrudService&lt;E, I extends Serializable&gt; </td></tr>
@@ -30,14 +30,21 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../../business/service/CrudService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.CorreioContribuinteService
-	c309463 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.CorreioContribuinteService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CorreioContribuinteService.html">
+	c339337 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.CorreioContribuinteService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CorreioContribuinteService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CorreioContribuinteService </td></tr>
 		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findLastSentEmailsForUser(usuarioSistema : UsuarioSistema) : List&lt;CorreioContribuinte&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + getMessagePreviewLength() : int </font></td></tr>
+		</table></td></tr>
 		</table>>, URL="./CorreioContribuinteService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.impl.CorreioContribuinteServiceImpl
-	c309497 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.CorreioContribuinteServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/CorreioContribuinteServiceImpl.html">
+	c339372 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.CorreioContribuinteServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/CorreioContribuinteServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CorreioContribuinteServiceImpl </td></tr>
 		</table></td></tr>
@@ -46,11 +53,13 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + CorreioContribuinteServiceImpl(repository : CorreioContribuinteRepository) </td></tr>
+<tr><td align="left" balign="left"> + findLastSentEmailsForUser(usuarioSistema : UsuarioSistema) : List&lt;CorreioContribuinte&gt; </td></tr>
+<tr><td align="left" balign="left"> + getMessagePreviewLength() : int </td></tr>
 		</table></td></tr>
 		</table>>, URL="./impl/CorreioContribuinteServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.business.gestao.service.CorreioContribuinteService implements br.gov.to.sefaz.business.service.CrudService<E, I extends java.io.Serializable>
-	c309337:p -> c309463:p [dir=back,arrowtail=empty,style=dashed];
+	c339195:p -> c339337:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.seg.business.gestao.service.impl.CorreioContribuinteServiceImpl implements br.gov.to.sefaz.seg.business.gestao.service.CorreioContribuinteService
-	c309463:p -> c309497:p [dir=back,arrowtail=empty,style=dashed];
+	c339337:p -> c339372:p [dir=back,arrowtail=empty,style=dashed];
 }
 

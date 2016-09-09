@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.satquery.parser.SatQueryParser
-	c54342 [label=<<table title="br.gov.to.sefaz.persistence.satquery.parser.SatQueryParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SatQueryParser.html">
+	c56198 [label=<<table title="br.gov.to.sefaz.persistence.satquery.parser.SatQueryParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SatQueryParser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SatQueryParser </td></tr>
 		</table></td></tr>
@@ -26,7 +26,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SatQueryParser.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.satquery.parser.QualifySatQueryParser
-	c54343 [label=<<table title="br.gov.to.sefaz.persistence.satquery.parser.QualifySatQueryParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./QualifySatQueryParser.html">
+	c56199 [label=<<table title="br.gov.to.sefaz.persistence.satquery.parser.QualifySatQueryParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./QualifySatQueryParser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> QualifySatQueryParser </font></td></tr>
 		</table></td></tr>

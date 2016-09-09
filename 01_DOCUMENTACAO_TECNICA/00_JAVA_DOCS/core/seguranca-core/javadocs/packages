@@ -8,6 +8,12 @@ br.gov.to.sefaz.seg.business.authentication.service.impl
 br.gov.to.sefaz.seg.business.authentication.service
 br.gov.to.sefaz.seg.business.authentication.service.validator
 br.gov.to.sefaz.seg.business
+br.gov.to.sefaz.seg.business.consulta.facade
+br.gov.to.sefaz.seg.business.consulta.facade.impl
+br.gov.to.sefaz.seg.business.consulta.service
+br.gov.to.sefaz.seg.business.consulta.service.filter
+br.gov.to.sefaz.seg.business.consulta.service.impl
+br.gov.to.sefaz.seg.business.consulta.service.validator
 br.gov.to.sefaz.seg.business.gestao.builder
 br.gov.to.sefaz.seg.business.gestao.converter
 br.gov.to.sefaz.seg.business.gestao.facade

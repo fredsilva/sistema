@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.persistence.entity.HistoricoLoginSistema
-	c13943 [label=<<table title="br.gov.to.sefaz.seg.persistence.entity.HistoricoLoginSistema" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./HistoricoLoginSistema.html">
+	c19724 [label=<<table title="br.gov.to.sefaz.seg.persistence.entity.HistoricoLoginSistema" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./HistoricoLoginSistema.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HistoricoLoginSistema </td></tr>
 		</table></td></tr>
@@ -35,9 +35,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./HistoricoLoginSistema.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.persistence.entity.HistoricoLoginSistema extends br.gov.to.sefaz.persistence.entity.AbstractEntity<java.lang.Long>
-	c13975:p -> c13943:p [dir=back,arrowtail=empty];
+	c19761:p -> c19724:p [dir=back,arrowtail=empty];
 	// br.gov.to.sefaz.persistence.entity.AbstractEntity<I extends java.io.Serializable>
-	c13975 [label=<<table title="br.gov.to.sefaz.persistence.entity.AbstractEntity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/persistence/entity/AbstractEntity.html">
+	c19761 [label=<<table title="br.gov.to.sefaz.persistence.entity.AbstractEntity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/persistence/entity/AbstractEntity.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractEntity&lt;I extends Serializable&gt; </font></td></tr>
 		</table></td></tr>

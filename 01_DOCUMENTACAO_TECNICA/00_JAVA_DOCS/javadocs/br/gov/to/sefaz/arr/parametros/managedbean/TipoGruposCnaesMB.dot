@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c767918 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../presentation/managedbean/impl/DefaultCrudMB.html">
+	c823129 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../presentation/managedbean/impl/DefaultCrudMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultCrudMB&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
 		</table></td></tr>
@@ -30,7 +30,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../presentation/managedbean/impl/DefaultCrudMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.managedbean.TipoGruposCnaesMB
-	c768324 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.TipoGruposCnaesMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TipoGruposCnaesMB.html">
+	c823539 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.TipoGruposCnaesMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TipoGruposCnaesMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoGruposCnaesMB </td></tr>
 		</table></td></tr>
@@ -56,6 +56,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoGruposCnaesMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.arr.parametros.managedbean.TipoGruposCnaesMB extends br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<br.gov.to.sefaz.arr.persistence.entity.TipoGruposCnaes, java.lang.Integer>
-	c767918:p -> c768324:p [dir=back,arrowtail=empty];
+	c823129:p -> c823539:p [dir=back,arrowtail=empty];
 }
 

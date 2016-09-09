@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.service.CrudService<E, I extends java.io.Serializable>
-	c823547 [label=<<table title="br.gov.to.sefaz.business.service.CrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../business/service/CrudService.html">
+	c882399 [label=<<table title="br.gov.to.sefaz.business.service.CrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../business/service/CrudService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CrudService&lt;E, I extends Serializable&gt; </td></tr>
@@ -30,7 +30,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../../business/service/CrudService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.UsuarioPerfilService
-	c823657 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.UsuarioPerfilService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UsuarioPerfilService.html">
+	c882524 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.UsuarioPerfilService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UsuarioPerfilService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> UsuarioPerfilService </td></tr>
@@ -50,7 +50,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./UsuarioPerfilService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioPerfilServiceImpl
-	c823691 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioPerfilServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/UsuarioPerfilServiceImpl.html">
+	c882559 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioPerfilServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/UsuarioPerfilServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UsuarioPerfilServiceImpl </td></tr>
 		</table></td></tr>
@@ -71,8 +71,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./impl/UsuarioPerfilServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.business.gestao.service.UsuarioPerfilService implements br.gov.to.sefaz.business.service.CrudService<E, I extends java.io.Serializable>
-	c823547:p -> c823657:p [dir=back,arrowtail=empty,style=dashed];
+	c882399:p -> c882524:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioPerfilServiceImpl implements br.gov.to.sefaz.seg.business.gestao.service.UsuarioPerfilService
-	c823657:p -> c823691:p [dir=back,arrowtail=empty,style=dashed];
+	c882524:p -> c882559:p [dir=back,arrowtail=empty,style=dashed];
 }
 

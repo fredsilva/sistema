@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:sat="http://sefaz.to.gov.br/composites"
+        xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+
+<ui:composition template="/protected/views/templates/views/default-template.xhtml">
+
+    <ui:param name="pageTitle" value="#{seg_msg['seg.gestao.consultaHistoricoAcesso.titulo']}"/>
+
+    <ui:define name="header">
+        <h:outputScript library="js" name="core/sat.date.js"/>
+        <h:outputScript library="js" name="seg/consulta/consulta-historico-acesso.js"/>
+        <h:outputStylesheet library="css" name="seg/consulta/consulta-historico-acesso.css"/>
+    </ui:define>
+
+    <ui:define name="content">
+        <sat:panel title="#{seg_msg['seg.gestao.consultaHistoricoAcesso.pesquisa.titulo']}">
+            <h:form id="consulta-comunicacoes-contribuinte-filtro">
+                <div class="row">
+
+                    <div class="form-group col-md-2">
+                        <h:outputLabel for="cpfUsuarioFilter">
+                            #{seg_msg['seg.gestao.consultaHistoricoAcesso.pesquisa.cpfUsuario']}
+                        </h:outputLabel>
+
+                        <h:inputText value="#{consultaHistoricoNavegacaoMB.filter.cpfUsuario}"
+                                id="cpfUsuarioFilter"
+                                styleClass="form-control"
+                                maxlength="14"
+                                p:data-mask="999.999.999-99">
+                            <f:converter converterId="cpfFacesConverter"/>
+                        </h:inputText>
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <h:outputLabel for="nomeUsuarioFilter">
+                            #{seg_msg['seg.gestao.consultaHistoricoAcesso.pesquisa.nomeUsuario']}
+                        </h:outputLabel>
+
+                        <h:inputText value="#{consultaHistoricoNavegacaoMB.filter.nomeUsuario}"
+                                id="nomeUsuarioFilter"
+                                styleClass="form-control"
+                                maxlength="40"/>
+                    </div>
+
+                    <div class="form-group col-md-2">
+                        <h:outputLabel for="cpfCnpjProcuradoFilter">
+                            #{seg_msg['seg.gestao.consultaHistoricoAcesso.pesquisa.cpfCnpjProcurado']}
+                        </h:outputLabel>
+
+                        <h:inputText value="#{consultaHistoricoNavegacaoMB.filter.cpfCnpjProcurado}"
+                                id="cpfCnpjProcuradoFilter"
+                                styleClass="form-control"
+                                maxlength="18">
+                            <f:converter converterId="cpfCnpjFacesConverter"/>
+                        </h:inputText>
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <h:outputLabel for="nomeProcuradoFilter">
+                            #{seg_msg['seg.gestao.consultaHistoricoAcesso.pesquisa.nomeProcurado']}
+                        </h:outputLabel>
+
+                        <h:inputText value="#{consultaHistoricoNavegacaoMB.filter.nomeProcurado}"
+                                id="nomeProcuradoFilter"
+                                styleClass="form-control"
+                                maxlength="40"/>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-md-2">
+                        <h:outputLabel for="tipoOperacaoFilter">
+                            #{seg_msg['seg.gestao.consultaHistoricoAcesso.pesquisa.tipoOperacao']}
+                        </h:outputLabel>
+                        <h:selectOneMenu value="#{consultaHistoricoNavegacaoMB.filter.tipoOperacao}"
+                                id="tipoOperacaoFilter"
+                                styleClass="form-control">
+                            <f:selectItem value="#{null}" itemLabel="[Todos]"/>
+                            <f:selectItems value="#{consultaHistoricoNavegacaoMB.allTiposOperacao}"
+                                    var="tipoOperacao"
+                                    itemValue="#{tipoOperacao}"
+                                    itemLabel="#{tipoOperacao.label}"/>
+                        </h:selectOneMenu>
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <h:outputLabel for="dataInicioFilter">
+                            #{seg_msg['seg.gestao.consultaHistoricoAcesso.pesquisa.dataInicio']}
+                        </h:outputLabel>
+
+                        <div class='input-group'>
+                            <h:inputText id='dataInicioFilter'
+                                    value="#{consultaHistoricoNavegacaoMB.filter.dataInicio}"
+                                    styleClass="form-control datepicker">
+                                <f:converter converterId="localDateFacesConverter"/>
+                            </h:inputText>
+                            <h:outputLabel for="dataInicioFilter"
+                                    class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"/>
+                            </h:outputLabel>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <h:outputLabel for="dataFimFilter">
+                            #{seg_msg['seg.gestao.consultaHistoricoAcesso.pesquisa.dataFim']}
+                        </h:outputLabel>
+
+                        <div class='input-group'>
+                            <h:inputText id='dataFimFilter'
+                                    value="#{consultaHistoricoNavegacaoMB.filter.dataFim}"
+                                    styleClass="form-control datepicker">
+                                <f:converter converterId="localDateFacesConverter"/>
+                            </h:inputText>
+                            <h:outputLabel for="dataFimFilter"
+                                    class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"/>
+                            </h:outputLabel>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md-4">
+                        <h:outputLabel for="urlFilter">
+                            #{seg_msg['seg.gestao.consultaHistoricoAcesso.pesquisa.url']}
+                        </h:outputLabel>
+
+                        <h:inputText value="#{consultaHistoricoNavegacaoMB.filter.url}"
+                                id="urlFilter"
+                                styleClass="form-control"
+                                maxlength="100"/>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="form-group col-md-12 text-right">
+                        <h:commandButton type="button"
+                                value="#{seg_msg['seg.gestao.consultaHistoricoAcesso.pesquisa.consultar']}"
+                                styleClass="btn btn-primary"
+                                action="#{consultaHistoricoNavegacaoMB.search()}">
+                            <f:ajax render="consulta-logs-table"
+                                    execute="cpfUsuarioFilter nomeUsuarioFilter cpfCnpjProcuradoFilter nomeProcuradoFilter tipoOperacaoFilter dataInicioFilter dataFimFilter urlFilter"/>
+                        </h:commandButton>
+
+
+                        <sat:opcaoAjudaButton/>
+                    </div>
+                </div>
+                <h:outputScript>
+                    datePicker('.datepicker');
+                </h:outputScript>
+            </h:form>
+
+            <sat:table id="consulta-logs-table"
+                    bundle="seg_msg"
+                    content="#{consultaHistoricoNavegacaoMB.resultList}"
+                    headers="seg.gestao.consultaHistoricoAcesso.tabela.cpfUsuario,
+                             seg.gestao.consultaHistoricoAcesso.tabela.nomeUsuario,
+                             seg.gestao.consultaHistoricoAcesso.tabela.tipoUsuario,
+                             seg.gestao.consultaHistoricoAcesso.tabela.cpjCnpjProcurado,
+                             seg.gestao.consultaHistoricoAcesso.tabela.nomeProcurado,
+                             seg.gestao.consultaHistoricoAcesso.tabela.tipoOperacao,
+                             seg.gestao.consultaHistoricoAcesso.tabela.dataAcesso,
+                             seg.gestao.consultaHistoricoAcesso.tabela.url"
+
+                    hasActions="true"
+                    actionsHeader="seg.gestao.consultaHistoricoAcesso.tabela.acao"
+                    actionEvents="view-access-detail:click:viewLogAccessDetail"
+
+                    fields="cpfUsuario:cpf,
+                            nomeUsuario,
+                            descricaoTipoUsuario,
+                            cpfCnpjProcurado:cpfCnpj,
+                            nomeProcurado,
+                            tipoOperacao:string,
+                            dataOperacao:dateTimeSecs,
+                            urlPath,
+                            detalheNavegacao:hide"
+                    defaulSortColumn="6"
+                    defaulSortDirection="desc"
+                    columnDefs="{'class': 'tipo-operacao-col', 'targets': [5]}"
+                    rowCallback="handleRowAdded"
+                    >
+
+                <f:facet name="actions">
+                    <a href="javascript:void(0);" class="view-access-detail glyphicon glyphicon-eye-open"
+                            data-toggle="tooltip"
+                            title="Ver detalhe do log"/>
+
+                </f:facet>
+            </sat:table>
+
+
+            <div id="access-log-detail-modal" class="modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-lg" id="access-log-detail-modal-dialog">
+                    <div class="modal-content" id="access-log-detail-modal-content">
+                        <div class="modal-header" id="access-log-detail-modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                <span aria-hidden="true">&#xd7;</span>
+                            </button>
+                            <h4 class="modal-title" id="access-log-detail-modal-title">
+                                #{seg_msg['seg.gestao.consultaHistoricoAcesso.modal.titulo']}
+                            </h4>
+                        </div>
+                        <div class="modal-body" id="access-log-detail-modal-body">
+
+                            <div class="row">
+                                <div class="form-group col-md-12">
+                                    <pre id="log-detail-conteiner"></pre>
+                                </div>
+                            </div>
+                            <div class="modal-footer" id="access-log-detail-modalFooter">
+                                <button type="button" class="btn btn-default align-bottom" data-dismiss="modal"
+                                        value="#{seg_msg['seg.gestao.consultaHistoricoAcesso.modal.fechar']}"
+                                        aria-label="#{seg_msg['seg.gestao.consultaHistoricoAcesso.modal.fechar']}">
+                                    <span aria-hidden="false">#{seg_msg['seg.gestao.consultaHistoricoAcesso.modal.fechar']}</span>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </sat:panel>
+    </ui:define>
+</ui:composition>
+</html>

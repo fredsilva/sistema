@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.gestao.facade.ProcuracaoUsuarioFacade
-	c31755 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.ProcuracaoUsuarioFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ProcuracaoUsuarioFacade.html">
+	c40991 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.ProcuracaoUsuarioFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ProcuracaoUsuarioFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ProcuracaoUsuarioFacade </td></tr>
@@ -27,7 +27,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ProcuracaoUsuarioFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.facade.impl.ProcuracaoUsuarioFacadeImpl
-	c31769 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.ProcuracaoUsuarioFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/ProcuracaoUsuarioFacadeImpl.html">
+	c41005 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.ProcuracaoUsuarioFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/ProcuracaoUsuarioFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ProcuracaoUsuarioFacadeImpl </td></tr>
 		</table></td></tr>
@@ -44,11 +44,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./impl/ProcuracaoUsuarioFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.business.gestao.facade.ProcuracaoUsuarioFacade implements br.gov.to.sefaz.business.facade.CrudFacade<E, I extends java.io.Serializable>
-	c31931:p -> c31755:p [dir=back,arrowtail=empty,style=dashed];
+	c41176:p -> c40991:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.seg.business.gestao.facade.impl.ProcuracaoUsuarioFacadeImpl implements br.gov.to.sefaz.seg.business.gestao.facade.ProcuracaoUsuarioFacade
-	c31755:p -> c31769:p [dir=back,arrowtail=empty,style=dashed];
+	c40991:p -> c41005:p [dir=back,arrowtail=empty,style=dashed];
 	// br.gov.to.sefaz.business.facade.CrudFacade<E, I extends java.io.Serializable>
-	c31931 [label=<<table title="br.gov.to.sefaz.business.facade.CrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/facade/CrudFacade.html">
+	c41176 [label=<<table title="br.gov.to.sefaz.business.facade.CrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/facade/CrudFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CrudFacade&lt;E, I extends Serializable&gt; </td></tr>

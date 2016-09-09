@@ -4,8 +4,13 @@ import br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupKey;
 import br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupType;
 import br.gov.to.sefaz.seg.business.authentication.facade.DefaultTemplateFacade;
 import br.gov.to.sefaz.seg.business.authentication.handler.AuthenticatedUserHandler;
+import br.gov.to.sefaz.seg.business.gestao.service.CorreioContribuinteService;
 import br.gov.to.sefaz.seg.business.gestao.service.ModuloSistemaService;
+import br.gov.to.sefaz.seg.business.gestao.service.SmsContribuinteService;
+import br.gov.to.sefaz.seg.persistence.entity.CorreioContribuinte;
 import br.gov.to.sefaz.seg.persistence.entity.ModuloSistema;
+import br.gov.to.sefaz.seg.persistence.entity.SmsContribuinte;
+import br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -23,10 +28,17 @@ import java.util.Optional;
 public class DefaultTemplateFacadeImpl implements DefaultTemplateFacade {
 
     private final ModuloSistemaService moduloSistemaService;
+    private final CorreioContribuinteService correioContribuinteService;
+    private final SmsContribuinteService smsContribuinteService;
 
     @Autowired
-    public DefaultTemplateFacadeImpl(ModuloSistemaService moduloSistemaService) {
+    public DefaultTemplateFacadeImpl(ModuloSistemaService moduloSistemaService,
+                                     CorreioContribuinteService correioContribuinteService,
+                                     SmsContribuinteService smsContribuinteService) {
+
         this.moduloSistemaService = moduloSistemaService;
+        this.correioContribuinteService = correioContribuinteService;
+        this.smsContribuinteService = smsContribuinteService;
     }
 
     @Override
@@ -75,6 +87,11 @@ public class DefaultTemplateFacadeImpl implements DefaultTemplateFacade {
     }
 
     @Override
+    public UsuarioSistema getUsuarioSistema() {
+        return AuthenticatedUserHandler.getUsuarioSistema();
+    }
+
+    @Override
     public void setActiveProfile(Long profileId) {
         AuthenticatedUserHandler.setActiveRoleGroup(RoleGroupType.PERFIL, profileId);
     }
@@ -92,5 +109,32 @@ public class DefaultTemplateFacadeImpl implements DefaultTemplateFacade {
     @Override
     public boolean isAuthenticatedByCert() {
         return AuthenticatedUserHandler.isAuthenticatedByCert();
+    }
+
+    @Override
+    public List<CorreioContribuinte> findLastSentEmailsForUser(UsuarioSistema usuarioSistema) {
+        return correioContribuinteService.findLastSentEmailsForUser(usuarioSistema);
+    }
+
+    @Override
+    public List<SmsContribuinte> findLastSentSMSsForUser(UsuarioSistema usuarioSistema) {
+        return smsContribuinteService.findLastSentSMSsForUser(usuarioSistema);
+    }
+
+    @Override
+    public int getMessagePreviewLength() {
+        return correioContribuinteService.getMessagePreviewLength();
+    }
+
+    @Override
+    public Collection<CorreioContribuinte> findAllSentEmailsForLoggedUser(UsuarioSistema usuarioSistema) {
+        //TODO: Implamentar com o usuário quando for respondido as dúvidas junto com o cliente
+        return correioContribuinteService.findAll();
+    }
+
+    @Override
+    public Collection<SmsContribuinte> findAllSentSMSsForUser(UsuarioSistema usuarioSistema) {
+        //TODO: Implamentar com o usuário quando for respondido as dúvidas junto com o cliente
+        return smsContribuinteService.findAll();
     }
 }

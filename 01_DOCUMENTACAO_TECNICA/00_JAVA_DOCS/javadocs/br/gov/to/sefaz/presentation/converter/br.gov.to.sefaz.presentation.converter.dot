@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.presentation.converter.LocalDateTimeFacesConverter
-	c101203 [label=<<table title="br.gov.to.sefaz.presentation.converter.LocalDateTimeFacesConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LocalDateTimeFacesConverter.html">
+	c109934 [label=<<table title="br.gov.to.sefaz.presentation.converter.LocalDateTimeFacesConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LocalDateTimeFacesConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LocalDateTimeFacesConverter </td></tr>
 		</table></td></tr>
@@ -24,7 +24,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./LocalDateTimeFacesConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.presentation.converter.LocalDateFacesConverter
-	c101204 [label=<<table title="br.gov.to.sefaz.presentation.converter.LocalDateFacesConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LocalDateFacesConverter.html">
+	c109935 [label=<<table title="br.gov.to.sefaz.presentation.converter.LocalDateFacesConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LocalDateFacesConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LocalDateFacesConverter </td></tr>
 		</table></td></tr>
@@ -38,7 +38,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./LocalDateFacesConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.presentation.converter.CpfFacesConverter
-	c101205 [label=<<table title="br.gov.to.sefaz.presentation.converter.CpfFacesConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CpfFacesConverter.html">
+	c109936 [label=<<table title="br.gov.to.sefaz.presentation.converter.CpfFacesConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CpfFacesConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CpfFacesConverter </td></tr>
 		</table></td></tr>
@@ -51,8 +51,22 @@ digraph G {
 <tr><td align="left" balign="left"> + getAsString(context : FacesContext, component : UIComponent, cpf : Object) : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./CpfFacesConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.presentation.converter.CpfCnpjFacesConverter
+	c109937 [label=<<table title="br.gov.to.sefaz.presentation.converter.CpfCnpjFacesConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CpfCnpjFacesConverter.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> CpfCnpjFacesConverter </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + CpfCnpjFacesConverter() </td></tr>
+<tr><td align="left" balign="left"> + getAsObject(context : FacesContext, component : UIComponent, stringValue : String) : Object </td></tr>
+<tr><td align="left" balign="left"> + getAsString(context : FacesContext, component : UIComponent, cpfCnpj : Object) : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./CpfCnpjFacesConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.presentation.converter.CnpjRaizFacesConverter
-	c101206 [label=<<table title="br.gov.to.sefaz.presentation.converter.CnpjRaizFacesConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CnpjRaizFacesConverter.html">
+	c109938 [label=<<table title="br.gov.to.sefaz.presentation.converter.CnpjRaizFacesConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CnpjRaizFacesConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CnpjRaizFacesConverter </td></tr>
 		</table></td></tr>
@@ -66,7 +80,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./CnpjRaizFacesConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.presentation.converter.CnpjFacesConverter
-	c101207 [label=<<table title="br.gov.to.sefaz.presentation.converter.CnpjFacesConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CnpjFacesConverter.html">
+	c109939 [label=<<table title="br.gov.to.sefaz.presentation.converter.CnpjFacesConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CnpjFacesConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CnpjFacesConverter </td></tr>
 		</table></td></tr>
@@ -80,7 +94,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./CnpjFacesConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.presentation.converter.CepFacesConverter
-	c101208 [label=<<table title="br.gov.to.sefaz.presentation.converter.CepFacesConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CepFacesConverter.html">
+	c109940 [label=<<table title="br.gov.to.sefaz.presentation.converter.CepFacesConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CepFacesConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CepFacesConverter </td></tr>
 		</table></td></tr>

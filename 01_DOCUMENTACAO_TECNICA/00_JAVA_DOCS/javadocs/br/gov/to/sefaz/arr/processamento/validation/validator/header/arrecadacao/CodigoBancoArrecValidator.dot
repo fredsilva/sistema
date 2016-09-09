@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.arr.processamento.validation.validator.header.HeaderValidator
-	c261691 [label=<<table title="br.gov.to.sefaz.arr.processamento.validation.validator.header.HeaderValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../HeaderValidator.html">
+	c275904 [label=<<table title="br.gov.to.sefaz.arr.processamento.validation.validator.header.HeaderValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../HeaderValidator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> HeaderValidator </td></tr>
@@ -24,7 +24,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../HeaderValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.validation.validator.header.arrecadacao.CodigoBancoArrecValidator
-	c261702 [label=<<table title="br.gov.to.sefaz.arr.processamento.validation.validator.header.arrecadacao.CodigoBancoArrecValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CodigoBancoArrecValidator.html">
+	c275915 [label=<<table title="br.gov.to.sefaz.arr.processamento.validation.validator.header.arrecadacao.CodigoBancoArrecValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CodigoBancoArrecValidator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CodigoBancoArrecValidator </td></tr>
 		</table></td></tr>
@@ -38,6 +38,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./CodigoBancoArrecValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.arr.processamento.validation.validator.header.arrecadacao.CodigoBancoArrecValidator implements br.gov.to.sefaz.arr.processamento.validation.validator.header.HeaderValidator
-	c261691:p -> c261702:p [dir=back,arrowtail=empty,style=dashed];
+	c275904:p -> c275915:p [dir=back,arrowtail=empty,style=dashed];
 }
 

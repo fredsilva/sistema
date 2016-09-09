@@ -23,11 +23,13 @@ public class DetalheNavegacao {
     private String resource;
     private String timeStamp;
     private long elapsedTime;
+    private String atuacaoNomeDe;
 
     public DetalheNavegacao(String cpfUsuario, String serverName, String userAgent,
             String language, String httpMethod, String country, String pathInfo,
             Map<String, String[]> parameterMap, String localAddr, String remoteAddr,
-            String resource, String timeStamp, long elapsedTime) {
+            String resource, String timeStamp, long elapsedTime, String atuacaoNomeDe) {
+
         this.cpfUsuario = cpfUsuario;
         this.serverName = serverName;
         this.userAgent = userAgent;
@@ -41,6 +43,7 @@ public class DetalheNavegacao {
         this.resource = resource;
         this.timeStamp = timeStamp;
         this.elapsedTime = elapsedTime;
+        this.atuacaoNomeDe = atuacaoNomeDe;
     }
 
     public DetalheNavegacao() {
@@ -151,6 +154,14 @@ public class DetalheNavegacao {
         this.elapsedTime = elapsedTime;
     }
 
+    public String getAtuacaoNomeDe() {
+        return atuacaoNomeDe;
+    }
+
+    public void setAtuacaoNomeDe(String atuacaoNomeDe) {
+        this.atuacaoNomeDe = atuacaoNomeDe;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -172,13 +183,14 @@ public class DetalheNavegacao {
                 && Objects.equals(localAddr, that.localAddr)
                 && Objects.equals(remoteAddr, that.remoteAddr)
                 && Objects.equals(resource, that.resource)
-                && Objects.equals(timeStamp, that.timeStamp);
+                && Objects.equals(timeStamp, that.timeStamp)
+                && Objects.equals(atuacaoNomeDe, that.atuacaoNomeDe);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(cpfUsuario, serverName, userAgent, language, httpMethod, country, pathInfo, parameterMap,
-                localAddr, remoteAddr, resource, timeStamp, elapsedTime);
+                localAddr, remoteAddr, resource, timeStamp, elapsedTime, atuacaoNomeDe);
     }
 
     @Override
@@ -196,7 +208,8 @@ public class DetalheNavegacao {
                 + ", remoteAddr='" + remoteAddr + '\''
                 + ", resource='" + resource + '\''
                 + ", timeStamp='" + timeStamp + '\''
-                + ", elapsedTime=" + elapsedTime
+                + ", elapsedTime=" + elapsedTime + '\''
+                + ", atuacaoNomeDe=" + atuacaoNomeDe
                 + '}';
     }
 }

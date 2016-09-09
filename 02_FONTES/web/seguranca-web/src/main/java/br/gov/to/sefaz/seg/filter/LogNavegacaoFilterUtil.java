@@ -40,29 +40,39 @@ public class LogNavegacaoFilterUtil {
      * @throws JsonProcessingException exceção quando json não consegue processar a informação
      */
     public void saveLogNavegacao(HttpServletRequest request, String cpfUsuario, LocalDateTime localDateTime,
-            TipoOperacaoEnum tipoOperacao, long elapsedTime) throws JsonProcessingException {
-        DetalheNavegacao detalheNavegacao = createDetalheNavegacao(request, cpfUsuario, localDateTime, elapsedTime);
-        LogNavegacao logNavegacao = createLogNavegacao(cpfUsuario, localDateTime, detalheNavegacao, tipoOperacao);
+            TipoOperacaoEnum tipoOperacao, long elapsedTime, String cpfCnpjProcurado,
+                                 String resource) throws JsonProcessingException {
+
+        DetalheNavegacao detalheNavegacao = createDetalheNavegacao(request, cpfUsuario, localDateTime, elapsedTime,
+                cpfCnpjProcurado);
+        LogNavegacao logNavegacao = createLogNavegacao(cpfUsuario, localDateTime, detalheNavegacao, tipoOperacao,
+                cpfCnpjProcurado, resource);
+
         logNavegacaoService.save(logNavegacao);
     }
 
     private LogNavegacao createLogNavegacao(String cpfUsuario, LocalDateTime localDateTime,
-            DetalheNavegacao detalheNavegacao, TipoOperacaoEnum tipoOperacao) throws JsonProcessingException {
+            DetalheNavegacao detalheNavegacao, TipoOperacaoEnum tipoOperacao, String cpfCnpjProcurado,
+                                            String resource) throws JsonProcessingException {
+
         LogNavegacaoBuilder logNavegacaoBuilder = new LogNavegacaoBuilder();
         return logNavegacaoBuilder.withCpfUsuario(cpfUsuario)
                 .withDataOperacao(localDateTime)
                 .withDetalheNavegacao(detalheNavegacao)
                 .withTipoOperacao(tipoOperacao)
+                .withUrlAcesso(resource)
+                .withCpfCnpjProcurado(cpfCnpjProcurado)
                 .build();
     }
 
     private DetalheNavegacao createDetalheNavegacao(HttpServletRequest request, String cpfUsuario,
-            LocalDateTime localDateTime, long elapsedTime) {
+            LocalDateTime localDateTime, long elapsedTime, String cpfCnpjProcurado) {
         DetalheNavegacaoRequestBuilder builder = new DetalheNavegacaoRequestBuilder();
         return builder.withCpfUsuario(cpfUsuario)
                 .withHttpRequest(request)
                 .withDataOperacao(localDateTime)
                 .withElapsedTime(elapsedTime)
+                .withAtuacaoNomeDe(cpfCnpjProcurado)
                 .build();
     }
 }

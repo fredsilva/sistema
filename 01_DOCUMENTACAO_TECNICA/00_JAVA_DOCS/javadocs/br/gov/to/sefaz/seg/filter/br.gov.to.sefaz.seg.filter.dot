@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.filter.NavegacaoFilter
-	c154952 [label=<<table title="br.gov.to.sefaz.seg.filter.NavegacaoFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NavegacaoFilter.html">
+	c165511 [label=<<table title="br.gov.to.sefaz.seg.filter.NavegacaoFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./NavegacaoFilter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> NavegacaoFilter </td></tr>
 		</table></td></tr>
@@ -25,7 +25,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./NavegacaoFilter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.filter.LogNavegacaoFilterUtil
-	c154953 [label=<<table title="br.gov.to.sefaz.seg.filter.LogNavegacaoFilterUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LogNavegacaoFilterUtil.html">
+	c165512 [label=<<table title="br.gov.to.sefaz.seg.filter.LogNavegacaoFilterUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LogNavegacaoFilterUtil.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LogNavegacaoFilterUtil </td></tr>
 		</table></td></tr>
@@ -34,18 +34,18 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + LogNavegacaoFilterUtil() </td></tr>
-<tr><td align="left" balign="left"> + saveLogNavegacao(request : HttpServletRequest, cpfUsuario : String, localDateTime : LocalDateTime, tipoOperacao : TipoOperacaoEnum, elapsedTime : long) </td></tr>
+<tr><td align="left" balign="left"> + saveLogNavegacao(request : HttpServletRequest, cpfUsuario : String, localDateTime : LocalDateTime, tipoOperacao : TipoOperacaoEnum, elapsedTime : long, cpfCnpjProcurado : String, resource : String) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./LogNavegacaoFilterUtil.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.filter.FilterPackageMarker
-	c154954 [label=<<table title="br.gov.to.sefaz.seg.filter.FilterPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FilterPackageMarker.html">
+	c165513 [label=<<table title="br.gov.to.sefaz.seg.filter.FilterPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FilterPackageMarker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> FilterPackageMarker </td></tr>
 		</table></td></tr>
 		</table>>, URL="./FilterPackageMarker.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.filter.DetalheNavegacaoRequestBuilder
-	c154955 [label=<<table title="br.gov.to.sefaz.seg.filter.DetalheNavegacaoRequestBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DetalheNavegacaoRequestBuilder.html">
+	c165514 [label=<<table title="br.gov.to.sefaz.seg.filter.DetalheNavegacaoRequestBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DetalheNavegacaoRequestBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DetalheNavegacaoRequestBuilder </td></tr>
 		</table></td></tr>
@@ -58,11 +58,12 @@ digraph G {
 <tr><td align="left" balign="left"> + withCpfUsuario(cpfUsuario : String) : DetalheNavegacaoRequestBuilder </td></tr>
 <tr><td align="left" balign="left"> + withDataOperacao(localDateTime : LocalDateTime) : DetalheNavegacaoRequestBuilder </td></tr>
 <tr><td align="left" balign="left"> + withElapsedTime(elapsedTime : long) : DetalheNavegacaoRequestBuilder </td></tr>
+<tr><td align="left" balign="left"> + withAtuacaoNomeDe(cpfCnpj : String) : DetalheNavegacaoRequestBuilder </td></tr>
 <tr><td align="left" balign="left"> + build() : DetalheNavegacao </td></tr>
 		</table></td></tr>
 		</table>>, URL="./DetalheNavegacaoRequestBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.filter.CorsFilter
-	c154956 [label=<<table title="br.gov.to.sefaz.seg.filter.CorsFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CorsFilter.html">
+	c165515 [label=<<table title="br.gov.to.sefaz.seg.filter.CorsFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CorsFilter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CorsFilter </td></tr>
 		</table></td></tr>

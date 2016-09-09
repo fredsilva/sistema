@@ -1,6 +1,10 @@
 package br.gov.to.sefaz.seg.filter;
 
+import br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupKey;
+import br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupType;
 import br.gov.to.sefaz.seg.business.authentication.handler.AuthenticatedUserHandler;
+import br.gov.to.sefaz.seg.business.gestao.facade.ProcuracaoUsuarioFacade;
+import br.gov.to.sefaz.seg.persistence.entity.ProcuracaoUsuario;
 import br.gov.to.sefaz.seg.persistence.enums.TipoOperacaoEnum;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -28,6 +32,9 @@ public class NavegacaoFilter implements Filter {
     @Autowired
     private LogNavegacaoFilterUtil navegacaoFilterUtil;
 
+    @Autowired
+    private ProcuracaoUsuarioFacade procuracaoUsuarioFacade;
+
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
         // não é necessário para o filtro.
@@ -45,8 +52,10 @@ public class NavegacaoFilter implements Filter {
             LocalDateTime localDateTime = LocalDateTime.now();
             chain.doFilter(req, res);
             long elapsedTime = System.currentTimeMillis() - startTime;
+            String cpfCnpjProcurador = retrieveCpfCnpjProcurado();
+
             navegacaoFilterUtil.saveLogNavegacao(request, cpfUsuario, localDateTime, TipoOperacaoEnum.NAVEGACAO,
-                    elapsedTime);
+                    elapsedTime, cpfCnpjProcurador, request.getRequestURL().toString());
         } else {
             chain.doFilter(req, res);
         }
@@ -55,5 +64,15 @@ public class NavegacaoFilter implements Filter {
     @Override
     public void destroy() {
         // não é necessário para o filtro.
+    }
+
+    private String retrieveCpfCnpjProcurado() {
+        String cpfCnpjProcurador = null;
+        RoleGroupKey activeGroup = AuthenticatedUserHandler.getActiveGroup().orElse(null);
+        if (activeGroup != null && activeGroup.getType() == RoleGroupType.PROCURACAO) {
+            ProcuracaoUsuario procuracaoUsuario = procuracaoUsuarioFacade.findOne(activeGroup.getId());
+            cpfCnpjProcurador = procuracaoUsuario.getCpfProcurado();
+        }
+        return cpfCnpjProcurador;
     }
 }

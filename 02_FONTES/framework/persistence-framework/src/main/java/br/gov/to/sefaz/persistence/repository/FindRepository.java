@@ -22,7 +22,7 @@ import static br.gov.to.sefaz.persistence.query.builder.QueryBuilder.sqlSelect;
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 15/07/2016 11:00:00
  */
-@SuppressWarnings("PMD.TooManyMethods")
+@SuppressWarnings({"PMD.TooManyMethods", "PMD.GodClass"})
 @Component
 public class FindRepository {
 
@@ -59,6 +59,24 @@ public class FindRepository {
         HqlSelectBuilder hqlSelectBuilder = hqlSelect(entityClass);
         selectConsumer.accept(hqlSelectBuilder);
         return selectEntity(entityClass, hqlSelectBuilder);
+    }
+
+    /**
+     * Executa a operação de pesquisa no repositório para a entidade informada, basedo na consulta informada por
+     * parâmetro e limitando a quantidade de objetos a serem retornadas de acordo com o valor definido no parâmetro
+     * <code>maxResults</code>.
+     *
+     * @param entityClass    Tipo da entidade base a ser consultada
+     * @param selectConsumer Consulta a ser consumida pelo repositório.
+     * @param maxResults     Número máximo de objetos a serem retornados.
+     * @param <E>            Entidade base a ser consultada
+     * @return Lista de objetos que atendam a consulta consumida, limitada ao número máximo de elementos definidos por
+     *          parâmetro.
+     */
+    public <E> List<E> find(Class<E> entityClass, Consumer<HqlSelectBuilder> selectConsumer, int maxResults) {
+        HqlSelectBuilder hqlSelectBuilder = hqlSelect(entityClass);
+        selectConsumer.accept(hqlSelectBuilder);
+        return selectEntity(entityClass, hqlSelectBuilder, maxResults);
     }
 
     public <R> List<R> findColumnNative(String tableName, String alias, String column,
@@ -226,10 +244,26 @@ public class FindRepository {
     }
 
     public <E> List<E> selectEntity(Class<E> entityClass, HqlSelectBuilder hqlSelectBuilder) {
-        ResultQuery resultQuery = parser.parseSelect(hqlSelectBuilder);
+        Query query = createSelectQuery(entityClass, hqlSelectBuilder);
 
-        Query query = entityManager.createQuery(resultQuery.getQuery(), entityClass);
-        setParams(query, resultQuery.getParams());
+        return query.getResultList();
+    }
+
+    /**
+     * Executa uma operação de select no repositório para a entidade informada, basedo na consulta a ser construida
+     * pelo builder informado e limitando quantidade de objetos a serem retornadas de acordo com o valor definido no
+     * parâmetro <code>maxResults</code>.
+     *
+     * @param entityClass      Tipo da entidade base a ser consultada
+     * @param hqlSelectBuilder Builder responsavél por construir o hql de consulta.
+     * @param maxResults       Número máximo de objetos a serem retornados.
+     * @param <E>              Entidade base a ser consultada
+     * @return Lista de objetos que atendam a consulta construída, limitada ao número máximo de elementos definidos por
+     *         parâmetro.
+     */
+    public <E> List<E> selectEntity(Class<E> entityClass, HqlSelectBuilder hqlSelectBuilder, int maxResults) {
+        Query query = createSelectQuery(entityClass, hqlSelectBuilder);
+        query.setMaxResults(maxResults);
 
         return query.getResultList();
     }
@@ -298,5 +332,13 @@ public class FindRepository {
         Query query =  entityManager.createNativeQuery(nativeQuery);
         setParams(query, params.toMap());
         return query.getResultList();
+    }
+
+    private <E> Query createSelectQuery(Class<E> entityClass, HqlSelectBuilder hqlSelectBuilder) {
+        ResultQuery resultQuery = parser.parseSelect(hqlSelectBuilder);
+
+        Query query = entityManager.createQuery(resultQuery.getQuery(), entityClass);
+        setParams(query, resultQuery.getParams());
+        return query;
     }
 }

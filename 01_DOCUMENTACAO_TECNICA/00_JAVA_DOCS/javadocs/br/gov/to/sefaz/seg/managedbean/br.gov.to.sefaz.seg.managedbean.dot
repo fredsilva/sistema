@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.managedbean.UsuarioSistemaMB
-	c155804 [label=<<table title="br.gov.to.sefaz.seg.managedbean.UsuarioSistemaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioSistemaMB.html">
+	c166392 [label=<<table title="br.gov.to.sefaz.seg.managedbean.UsuarioSistemaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioSistemaMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UsuarioSistemaMB </td></tr>
 		</table></td></tr>
@@ -34,7 +34,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./UsuarioSistemaMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.UsuarioPrincipalEmpresaMB
-	c155805 [label=<<table title="br.gov.to.sefaz.seg.managedbean.UsuarioPrincipalEmpresaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioPrincipalEmpresaMB.html">
+	c166393 [label=<<table title="br.gov.to.sefaz.seg.managedbean.UsuarioPrincipalEmpresaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioPrincipalEmpresaMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UsuarioPrincipalEmpresaMB </td></tr>
 		</table></td></tr>
@@ -49,7 +49,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./UsuarioPrincipalEmpresaMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.UnidadeOrganizacionalMB
-	c155806 [label=<<table title="br.gov.to.sefaz.seg.managedbean.UnidadeOrganizacionalMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UnidadeOrganizacionalMB.html">
+	c166394 [label=<<table title="br.gov.to.sefaz.seg.managedbean.UnidadeOrganizacionalMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UnidadeOrganizacionalMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UnidadeOrganizacionalMB </td></tr>
 		</table></td></tr>
@@ -67,7 +67,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./UnidadeOrganizacionalMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.TipoUsuarioMB
-	c155807 [label=<<table title="br.gov.to.sefaz.seg.managedbean.TipoUsuarioMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoUsuarioMB.html">
+	c166395 [label=<<table title="br.gov.to.sefaz.seg.managedbean.TipoUsuarioMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoUsuarioMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoUsuarioMB </td></tr>
 		</table></td></tr>
@@ -86,7 +86,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoUsuarioMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.SegEnumsMB
-	c155808 [label=<<table title="br.gov.to.sefaz.seg.managedbean.SegEnumsMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SegEnumsMB.html">
+	c166396 [label=<<table title="br.gov.to.sefaz.seg.managedbean.SegEnumsMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SegEnumsMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SegEnumsMB </td></tr>
 		</table></td></tr>
@@ -103,7 +103,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SegEnumsMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.ResetPasswordMB
-	c155809 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ResetPasswordMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ResetPasswordMB.html">
+	c166397 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ResetPasswordMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ResetPasswordMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ResetPasswordMB </td></tr>
 		</table></td></tr>
@@ -121,7 +121,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ResetPasswordMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.PostoTrabalhoMB
-	c155810 [label=<<table title="br.gov.to.sefaz.seg.managedbean.PostoTrabalhoMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PostoTrabalhoMB.html">
+	c166398 [label=<<table title="br.gov.to.sefaz.seg.managedbean.PostoTrabalhoMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PostoTrabalhoMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PostoTrabalhoMB </td></tr>
 		</table></td></tr>
@@ -139,7 +139,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PostoTrabalhoMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.PerfilSistemaMB
-	c155811 [label=<<table title="br.gov.to.sefaz.seg.managedbean.PerfilSistemaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PerfilSistemaMB.html">
+	c166399 [label=<<table title="br.gov.to.sefaz.seg.managedbean.PerfilSistemaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PerfilSistemaMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PerfilSistemaMB </td></tr>
 		</table></td></tr>
@@ -172,7 +172,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PerfilSistemaMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.PapelSistemaMB
-	c155812 [label=<<table title="br.gov.to.sefaz.seg.managedbean.PapelSistemaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PapelSistemaMB.html">
+	c166400 [label=<<table title="br.gov.to.sefaz.seg.managedbean.PapelSistemaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PapelSistemaMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PapelSistemaMB </td></tr>
 		</table></td></tr>
@@ -203,7 +203,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PapelSistemaMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.ModuloSistemaMB
-	c155813 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ModuloSistemaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ModuloSistemaMB.html">
+	c166401 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ModuloSistemaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ModuloSistemaMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ModuloSistemaMB </td></tr>
 		</table></td></tr>
@@ -217,7 +217,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ModuloSistemaMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.ManutencaoCadastroFuncionalidadeMB
-	c155814 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ManutencaoCadastroFuncionalidadeMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ManutencaoCadastroFuncionalidadeMB.html">
+	c166402 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ManutencaoCadastroFuncionalidadeMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ManutencaoCadastroFuncionalidadeMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ManutencaoCadastroFuncionalidadeMB </td></tr>
 		</table></td></tr>
@@ -243,7 +243,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ManutencaoCadastroFuncionalidadeMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.ManterUsuarioSistemaMB
-	c155815 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ManterUsuarioSistemaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ManterUsuarioSistemaMB.html">
+	c166403 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ManterUsuarioSistemaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ManterUsuarioSistemaMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ManterUsuarioSistemaMB </td></tr>
 		</table></td></tr>
@@ -273,7 +273,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ManterUsuarioSistemaMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.ManterProcuracaoMB
-	c155816 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ManterProcuracaoMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ManterProcuracaoMB.html">
+	c166404 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ManterProcuracaoMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ManterProcuracaoMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ManterProcuracaoMB </td></tr>
 		</table></td></tr>
@@ -297,14 +297,14 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ManterProcuracaoMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.ManagedBeanPackageMarker
-	c155817 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ManagedBeanPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ManagedBeanPackageMarker.html">
+	c166405 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ManagedBeanPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ManagedBeanPackageMarker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ManagedBeanPackageMarker </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ManagedBeanPackageMarker.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.LoginMB
-	c155818 [label=<<table title="br.gov.to.sefaz.seg.managedbean.LoginMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LoginMB.html">
+	c166406 [label=<<table title="br.gov.to.sefaz.seg.managedbean.LoginMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LoginMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LoginMB </td></tr>
 		</table></td></tr>
@@ -317,8 +317,62 @@ digraph G {
 <tr><td align="left" balign="left"> + getDto() : LoginDto </td></tr>
 		</table></td></tr>
 		</table>>, URL="./LoginMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.managedbean.ConsultaHistoricoNavegacaoMB
+	c166407 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ConsultaHistoricoNavegacaoMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConsultaHistoricoNavegacaoMB.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ConsultaHistoricoNavegacaoMB </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ConsultaHistoricoNavegacaoMB() </td></tr>
+<tr><td align="left" balign="left"> + search() </td></tr>
+<tr><td align="left" balign="left"> + getAllTiposOperacao() : TipoOperacaoEnum[] </td></tr>
+<tr><td align="left" balign="left"> + getResultList() : List&lt;HistoricoNavegacao&gt; </td></tr>
+<tr><td align="left" balign="left"> + getFilter() : HistoricoNavegacaoFilter </td></tr>
+<tr><td align="left" balign="left"> + setFacade(facade : ConsultaHistoricoNavegacaoFacade) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ConsultaHistoricoNavegacaoMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.managedbean.ConsultaComunicacaoSistemaMB
+	c166408 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ConsultaComunicacaoSistemaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConsultaComunicacaoSistemaMB.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ConsultaComunicacaoSistemaMB </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ConsultaComunicacaoSistemaMB() </td></tr>
+<tr><td align="left" balign="left"> + prePopulateCommunications() </td></tr>
+<tr><td align="left" balign="left"> + search() </td></tr>
+<tr><td align="left" balign="left"> + getAllTiposComunicacao() : TipoComunicacaoEnum[] </td></tr>
+<tr><td align="left" balign="left"> + getResultList() : List&lt;ComunicacaoSistemaViewBean&gt; </td></tr>
+<tr><td align="left" balign="left"> + getFilter() : ConsultaComunicacaoSistemaFilter </td></tr>
+<tr><td align="left" balign="left"> + setFacade(facade : ConsultaComunicacaoSistemaFacade) </td></tr>
+<tr><td align="left" balign="left"> + getAllTiposPeriodosFiltro() : TipoPeriodoConsultaComunicacaoEnum[] </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ConsultaComunicacaoSistemaMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.managedbean.ConsultaComunicacaoContribuinteMB
+	c166409 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ConsultaComunicacaoContribuinteMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConsultaComunicacaoContribuinteMB.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ConsultaComunicacaoContribuinteMB </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ConsultaComunicacaoContribuinteMB() </td></tr>
+<tr><td align="left" balign="left"> + search() </td></tr>
+<tr><td align="left" balign="left"> + getAllTiposComunicacao() : TipoComunicacaoEnum[] </td></tr>
+<tr><td align="left" balign="left"> + getResultList() : List&lt;ComunicacaoContribuinte&gt; </td></tr>
+<tr><td align="left" balign="left"> + getFilter() : ComunicacaoContribuinteFilter </td></tr>
+<tr><td align="left" balign="left"> + setFacade(facade : ComunicacaoContribuinteFacade) </td></tr>
+<tr><td align="left" balign="left"> + getFacade() : ComunicacaoContribuinteFacade </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ConsultaComunicacaoContribuinteMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.ChangePasswordMB
-	c155819 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ChangePasswordMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ChangePasswordMB.html">
+	c166410 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ChangePasswordMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ChangePasswordMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ChangePasswordMB </td></tr>
 		</table></td></tr>
@@ -336,7 +390,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ChangePasswordMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.CertificadoDigitalMB
-	c155820 [label=<<table title="br.gov.to.sefaz.seg.managedbean.CertificadoDigitalMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CertificadoDigitalMB.html">
+	c166411 [label=<<table title="br.gov.to.sefaz.seg.managedbean.CertificadoDigitalMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CertificadoDigitalMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CertificadoDigitalMB </td></tr>
 		</table></td></tr>
@@ -350,7 +404,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./CertificadoDigitalMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.CadastroSenhaMB
-	c155821 [label=<<table title="br.gov.to.sefaz.seg.managedbean.CadastroSenhaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CadastroSenhaMB.html">
+	c166412 [label=<<table title="br.gov.to.sefaz.seg.managedbean.CadastroSenhaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CadastroSenhaMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CadastroSenhaMB </td></tr>
 		</table></td></tr>
@@ -370,7 +424,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./CadastroSenhaMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.AtribuirPerfilMB
-	c155822 [label=<<table title="br.gov.to.sefaz.seg.managedbean.AtribuirPerfilMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AtribuirPerfilMB.html">
+	c166413 [label=<<table title="br.gov.to.sefaz.seg.managedbean.AtribuirPerfilMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AtribuirPerfilMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AtribuirPerfilMB </td></tr>
 		</table></td></tr>
@@ -399,7 +453,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./AtribuirPerfilMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.AtivarInativarPerfilMB
-	c155823 [label=<<table title="br.gov.to.sefaz.seg.managedbean.AtivarInativarPerfilMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AtivarInativarPerfilMB.html">
+	c166414 [label=<<table title="br.gov.to.sefaz.seg.managedbean.AtivarInativarPerfilMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AtivarInativarPerfilMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AtivarInativarPerfilMB </td></tr>
 		</table></td></tr>

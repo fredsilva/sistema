@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.service.impl.DefaultCrudService<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c839643 [label=<<table title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/service/impl/DefaultCrudService.html">
+	c899046 [label=<<table title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/service/impl/DefaultCrudService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultCrudService&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
 		</table></td></tr>
@@ -30,14 +30,14 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../../../business/service/impl/DefaultCrudService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.UsuarioPrincipalEmpresaService
-	c839749 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.UsuarioPrincipalEmpresaService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../UsuarioPrincipalEmpresaService.html">
+	c899167 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.UsuarioPrincipalEmpresaService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../UsuarioPrincipalEmpresaService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> UsuarioPrincipalEmpresaService </td></tr>
 		</table></td></tr>
 		</table>>, URL="../UsuarioPrincipalEmpresaService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioPrincipalEmpresaServiceImpl
-	c839783 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioPrincipalEmpresaServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UsuarioPrincipalEmpresaServiceImpl.html">
+	c899202 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioPrincipalEmpresaServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UsuarioPrincipalEmpresaServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UsuarioPrincipalEmpresaServiceImpl </td></tr>
 		</table></td></tr>
@@ -50,8 +50,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./UsuarioPrincipalEmpresaServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioPrincipalEmpresaServiceImpl extends br.gov.to.sefaz.business.service.impl.DefaultCrudService<br.gov.to.sefaz.seg.persistence.entity.UsuarioPrincipalEmpresa, java.lang.Long>
-	c839643:p -> c839783:p [dir=back,arrowtail=empty];
+	c899046:p -> c899202:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioPrincipalEmpresaServiceImpl implements br.gov.to.sefaz.seg.business.gestao.service.UsuarioPrincipalEmpresaService
-	c839749:p -> c839783:p [dir=back,arrowtail=empty,style=dashed];
+	c899167:p -> c899202:p [dir=back,arrowtail=empty,style=dashed];
 }
 

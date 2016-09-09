@@ -24,12 +24,13 @@ $.extend(true, $.fn.dataTable.defaults, {
     "<'row'i<'col-md-12 pagination-panel'p<'page-size'l>>>"
 });
 
-function createDataTable(componentId, hasPaging, columnDefs, hasActions, actionStyleClass, defaulSortColumn, defaulSortDirection) {
+function createDataTable(componentId, hasPaging, columnDefs, hasActions, actionStyleClass, defaulSortColumn, defaulSortDirection, rowCallback) {
     componentId = componentId.replace(":", "\\:");
     var dataTableOpts = {
         "paging": hasPaging,
         "columnDefs": columnDefs,
-        "order": [[ defaulSortColumn, defaulSortDirection ]]
+        "order": [[ defaulSortColumn, defaulSortDirection ]],
+        "rowCallback":rowCallback
     };
 
     if (hasActions) {

@@ -62,6 +62,20 @@ public abstract class BaseRepository<E, I extends Serializable> {
         return findRepository.find(entityClass, selectConsumer);
     }
 
+    /**
+     * Executa a operação de pesquisa no repositório basedo na consulta informada por parâmetro limitando a
+     * quantidade de objetos retornados. A quantidade será de acordo com o valor definido no parâmetro
+     * <code>maxResults</code>.
+     *
+     * @param selectConsumer Consulta a ser consumida pelo repositório.
+     * @param maxResults Número máximo de objetos a serem retornados.
+     * @return Lista de objetos que atendam a consulta consumida, limitada ao número máximo de elementos definidos por
+     *         parâmetro.
+     */
+    public List<E> find(Consumer<HqlSelectBuilder> selectConsumer, int maxResults) {
+        return findRepository.find(entityClass, selectConsumer, maxResults);
+    }
+
     public <R> List<R> findColumnNative(String alias, String column, Consumer<SelectBuilder> selectConsumer) {
         return findRepository.findColumnNative(tableName, alias, column, selectConsumer);
     }

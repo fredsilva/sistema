@@ -1,8 +1,12 @@
 package br.gov.to.sefaz.seg.configuration;
 
+import br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupKey;
+import br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupType;
 import br.gov.to.sefaz.seg.business.authentication.handler.AuthenticatedUserHandler;
+import br.gov.to.sefaz.seg.business.gestao.facade.ProcuracaoUsuarioFacade;
 import br.gov.to.sefaz.seg.filter.LogNavegacaoFilterUtil;
 import br.gov.to.sefaz.seg.persistence.entity.OpcaoAplicacao;
+import br.gov.to.sefaz.seg.persistence.entity.ProcuracaoUsuario;
 import br.gov.to.sefaz.seg.persistence.enums.TipoOperacaoEnum;
 import br.gov.to.sefaz.seg.persistence.repository.OpcaoAplicacaoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,8 +29,12 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 
     @Autowired
     private OpcaoAplicacaoRepository opcaoAplicacaoRepository;
+
     @Autowired
     private LogNavegacaoFilterUtil navegacaoFilterUtil;
+
+    @Autowired
+    private ProcuracaoUsuarioFacade procuracaoUsuarioFacade;
 
     @Override
     @SuppressWarnings("PMD.SignatureDeclareThrowsException")
@@ -49,8 +57,11 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                         String cpfUsuario = AuthenticatedUserHandler.getCpf();
                         LocalDateTime localDateTime = LocalDateTime.now();
                         long elapsedTime = System.currentTimeMillis() - startTime;
+                        String cpfCnpjProcurador = retrieveCpfCnpjProcurado();
+
                         navegacaoFilterUtil.saveLogNavegacao(request, cpfUsuario, localDateTime,
-                                TipoOperacaoEnum.TENTATIVA_NEGADA, elapsedTime);
+                                TipoOperacaoEnum.TENTATIVA_NEGADA, elapsedTime, cpfCnpjProcurador, request
+                                        .getRequestURL().toString());
                     }
                     response.sendRedirect(request.getContextPath() + "/protected/views/home.jsf?acesso-negado");
                 })
@@ -70,4 +81,15 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                     .hasRole(opcaoAplicacao.getId().toString());
         }
     }
+
+    private String retrieveCpfCnpjProcurado() {
+        String cpfCnpjProcurador = null;
+        RoleGroupKey activeGroup = AuthenticatedUserHandler.getActiveGroup().orElse(null);
+        if (activeGroup != null && activeGroup.getType() == RoleGroupType.PROCURACAO) {
+            ProcuracaoUsuario procuracaoUsuario = procuracaoUsuarioFacade.findOne(activeGroup.getId());
+            cpfCnpjProcurador = procuracaoUsuario.getCpfProcurado();
+        }
+        return cpfCnpjProcurador;
+    }
+
 }

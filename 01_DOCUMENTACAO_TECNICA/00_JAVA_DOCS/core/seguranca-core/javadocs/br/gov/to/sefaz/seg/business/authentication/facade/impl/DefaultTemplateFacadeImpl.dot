@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.authentication.facade.DefaultTemplateFacade
-	c12942 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.facade.DefaultTemplateFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../DefaultTemplateFacade.html">
+	c18608 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.facade.DefaultTemplateFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../DefaultTemplateFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> DefaultTemplateFacade </td></tr>
@@ -28,14 +28,20 @@ digraph G {
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + getUserName() : String </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + getPerfisSistema() : List&lt;RoleGroupKey&gt; </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + getProcuradoresSistema() : List&lt;RoleGroupKey&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + getUsuarioSistema() : UsuarioSistema </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + setActiveProfile(profileId : Long) </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + setActiveProcuracao(procuracaoId : Long) </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + invalidateSession() </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + isAuthenticatedByCert() : boolean </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findLastSentEmailsForUser(usuarioSistema : UsuarioSistema) : List&lt;CorreioContribuinte&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findLastSentSMSsForUser(usuarioSistema : UsuarioSistema) : List&lt;SmsContribuinte&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + getMessagePreviewLength() : int </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllSentEmailsForLoggedUser(usuarioSistema : UsuarioSistema) : Collection&lt;CorreioContribuinte&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllSentSMSsForUser(usuarioSistema : UsuarioSistema) : Collection&lt;SmsContribuinte&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../DefaultTemplateFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.authentication.facade.impl.DefaultTemplateFacadeImpl
-	c12944 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.facade.impl.DefaultTemplateFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DefaultTemplateFacadeImpl.html">
+	c18610 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.facade.impl.DefaultTemplateFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DefaultTemplateFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultTemplateFacadeImpl </td></tr>
 		</table></td></tr>
@@ -43,7 +49,7 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + DefaultTemplateFacadeImpl(moduloSistemaService : ModuloSistemaService) </td></tr>
+<tr><td align="left" balign="left"> + DefaultTemplateFacadeImpl(moduloSistemaService : ModuloSistemaService, correioContribuinteService : CorreioContribuinteService, smsContribuinteService : SmsContribuinteService) </td></tr>
 <tr><td align="left" balign="left"> + findAllModuloSistema() : Collection&lt;ModuloSistema&gt; </td></tr>
 <tr><td align="left" balign="left"> + getUserRoles() : Collection&lt;String&gt; </td></tr>
 <tr><td align="left" balign="left"> + getActiveProcurado() : Long </td></tr>
@@ -53,13 +59,19 @@ digraph G {
 <tr><td align="left" balign="left"> + getUserName() : String </td></tr>
 <tr><td align="left" balign="left"> + getPerfisSistema() : List&lt;RoleGroupKey&gt; </td></tr>
 <tr><td align="left" balign="left"> + getProcuradoresSistema() : List&lt;RoleGroupKey&gt; </td></tr>
+<tr><td align="left" balign="left"> + getUsuarioSistema() : UsuarioSistema </td></tr>
 <tr><td align="left" balign="left"> + setActiveProfile(profileId : Long) </td></tr>
 <tr><td align="left" balign="left"> + setActiveProcuracao(procuracaoId : Long) </td></tr>
 <tr><td align="left" balign="left"> + invalidateSession() </td></tr>
 <tr><td align="left" balign="left"> + isAuthenticatedByCert() : boolean </td></tr>
+<tr><td align="left" balign="left"> + findLastSentEmailsForUser(usuarioSistema : UsuarioSistema) : List&lt;CorreioContribuinte&gt; </td></tr>
+<tr><td align="left" balign="left"> + findLastSentSMSsForUser(usuarioSistema : UsuarioSistema) : List&lt;SmsContribuinte&gt; </td></tr>
+<tr><td align="left" balign="left"> + getMessagePreviewLength() : int </td></tr>
+<tr><td align="left" balign="left"> + findAllSentEmailsForLoggedUser(usuarioSistema : UsuarioSistema) : Collection&lt;CorreioContribuinte&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllSentSMSsForUser(usuarioSistema : UsuarioSistema) : Collection&lt;SmsContribuinte&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./DefaultTemplateFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.business.authentication.facade.impl.DefaultTemplateFacadeImpl implements br.gov.to.sefaz.seg.business.authentication.facade.DefaultTemplateFacade
-	c12942:p -> c12944:p [dir=back,arrowtail=empty,style=dashed];
+	c18608:p -> c18610:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Selectable<S, J, G, O, W>
-	c32261 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Selectable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Selectable.html">
+	c33363 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Selectable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Selectable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Selectable&lt;S, J, G, O, W&gt; </td></tr>
@@ -24,7 +24,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Selectable.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Orderable<R>
-	c32262 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Orderable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Orderable.html">
+	c33364 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Orderable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Orderable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Orderable&lt;R&gt; </td></tr>
@@ -38,7 +38,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Orderable.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Joinable<R>
-	c32263 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Joinable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Joinable.html">
+	c33365 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Joinable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Joinable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Joinable&lt;R&gt; </td></tr>
@@ -59,7 +59,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Joinable.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Groupable<R>
-	c32264 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Groupable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Groupable.html">
+	c33366 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Groupable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Groupable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Groupable&lt;R&gt; </td></tr>
@@ -72,7 +72,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Groupable.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Conditionable<R>
-	c32265 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Conditionable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Conditionable.html">
+	c33367 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Conditionable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Conditionable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Conditionable&lt;R&gt; </td></tr>
@@ -85,12 +85,12 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Conditionable.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Selectable<S, J, G, O, W> implements br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Joinable<R>
-	c32263:p -> c32261:p [dir=back,arrowtail=empty,style=dashed];
+	c33365:p -> c33363:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Selectable<S, J, G, O, W> implements br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Groupable<R>
-	c32264:p -> c32261:p [dir=back,arrowtail=empty,style=dashed];
+	c33366:p -> c33363:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Selectable<S, J, G, O, W> implements br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Orderable<R>
-	c32262:p -> c32261:p [dir=back,arrowtail=empty,style=dashed];
+	c33364:p -> c33363:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Selectable<S, J, G, O, W> implements br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Conditionable<R>
-	c32265:p -> c32261:p [dir=back,arrowtail=empty,style=dashed];
+	c33367:p -> c33363:p [dir=back,arrowtail=empty,style=dashed];
 }
 

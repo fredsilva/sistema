@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.util.properties.AppProperties
-	c10188 [label=<<table title="br.gov.to.sefaz.util.properties.AppProperties" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AppProperties.html">
+	c10536 [label=<<table title="br.gov.to.sefaz.util.properties.AppProperties" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AppProperties.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AppProperties </td></tr>
 		</table></td></tr>
@@ -24,7 +24,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./AppProperties.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.util.properties.ApplicationPropertyLoadException
-	c10189 [label=<<table title="br.gov.to.sefaz.util.properties.ApplicationPropertyLoadException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ApplicationPropertyLoadException.html">
+	c10537 [label=<<table title="br.gov.to.sefaz.util.properties.ApplicationPropertyLoadException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ApplicationPropertyLoadException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ApplicationPropertyLoadException </td></tr>
 		</table></td></tr>

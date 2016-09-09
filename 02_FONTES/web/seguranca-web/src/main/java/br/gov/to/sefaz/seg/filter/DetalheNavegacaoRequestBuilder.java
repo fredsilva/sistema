@@ -1,13 +1,11 @@
 package br.gov.to.sefaz.seg.filter;
 
 import br.gov.to.sefaz.seg.business.gestao.builder.DetalheNavegacao;
-
 import org.apache.commons.lang3.StringUtils;
 
 import java.time.LocalDateTime;
 import java.util.Map;
 import java.util.Optional;
-
 import javax.servlet.http.HttpServletRequest;
 
 /**
@@ -91,6 +89,18 @@ public class DetalheNavegacaoRequestBuilder {
      */
     public DetalheNavegacaoRequestBuilder withElapsedTime(long elapsedTime) {
         detalheNavegacao.setElapsedTime(elapsedTime);
+
+        return this;
+    }
+
+    /**
+     * Adiciona o cpf/cnpj do procurado no {@link br.gov.to.sefaz.seg.business.gestao.builder.DetalheNavegacao}.
+     *
+     * @param cpfCnpj cpf ou cnpj do procurado
+     * @return instância da classe
+     */
+    public DetalheNavegacaoRequestBuilder withAtuacaoNomeDe(String cpfCnpj) {
+        detalheNavegacao.setAtuacaoNomeDe(cpfCnpj);
 
         return this;
     }

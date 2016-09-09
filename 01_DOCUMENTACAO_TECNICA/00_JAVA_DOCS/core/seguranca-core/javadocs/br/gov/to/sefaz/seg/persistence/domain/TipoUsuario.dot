@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.persistence.domain.TipoUsuario
-	c38139 [label=<<table title="br.gov.to.sefaz.seg.persistence.domain.TipoUsuario" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TipoUsuario.html">
+	c49496 [label=<<table title="br.gov.to.sefaz.seg.persistence.domain.TipoUsuario" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TipoUsuario.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoUsuario </td></tr>
 		</table></td></tr>
@@ -29,9 +29,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoUsuario.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.persistence.domain.TipoUsuario extends br.gov.to.sefaz.persistence.domain.CodeData<java.lang.Integer, java.lang.String>
-	c38196:p -> c38139:p [dir=back,arrowtail=empty];
+	c49559:p -> c49496:p [dir=back,arrowtail=empty];
 	// br.gov.to.sefaz.persistence.domain.CodeData<C, D>
-	c38196 [label=<<table title="br.gov.to.sefaz.persistence.domain.CodeData" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/persistence/domain/CodeData.html">
+	c49559 [label=<<table title="br.gov.to.sefaz.persistence.domain.CodeData" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/persistence/domain/CodeData.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CodeData&lt;C, D&gt; </td></tr>
 		</table></td></tr>

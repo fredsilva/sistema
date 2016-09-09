@@ -10,14 +10,14 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.template.managedbean.TemplateMBPackageMarker
-	c157524 [label=<<table title="br.gov.to.sefaz.seg.template.managedbean.TemplateMBPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TemplateMBPackageMarker.html">
+	c168174 [label=<<table title="br.gov.to.sefaz.seg.template.managedbean.TemplateMBPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TemplateMBPackageMarker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> TemplateMBPackageMarker </td></tr>
 		</table></td></tr>
 		</table>>, URL="./TemplateMBPackageMarker.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.template.managedbean.DefaultTemplateMB
-	c157525 [label=<<table title="br.gov.to.sefaz.seg.template.managedbean.DefaultTemplateMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DefaultTemplateMB.html">
+	c168175 [label=<<table title="br.gov.to.sefaz.seg.template.managedbean.DefaultTemplateMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DefaultTemplateMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultTemplateMB </td></tr>
 		</table></td></tr>
@@ -41,6 +41,11 @@ digraph G {
 <tr><td align="left" balign="left"> + getThisAjudaContent() : String </td></tr>
 <tr><td align="left" balign="left"> + getThisDescricaoOpcao() : String </td></tr>
 <tr><td align="left" balign="left"> + getActiveOpcao() : Optional&lt;OpcaoAplicacao&gt; </td></tr>
+<tr><td align="left" balign="left"> + getAllSentEmailsForLoggedUser() : Collection&lt;CorreioContribuinte&gt; </td></tr>
+<tr><td align="left" balign="left"> + getAllSentSMSsForLoggedUser() : Collection&lt;SmsContribuinte&gt; </td></tr>
+<tr><td align="left" balign="left"> + getLastSentEmailsForLoggedUser() : List&lt;CorreioContribuinte&gt; </td></tr>
+<tr><td align="left" balign="left"> + getSentEmailContentPreview(correioContribuinte : CorreioContribuinte) : String </td></tr>
+<tr><td align="left" balign="left"> + getLastSentSMSsForLoggedUser() : List&lt;SmsContribuinte&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./DefaultTemplateMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 }
