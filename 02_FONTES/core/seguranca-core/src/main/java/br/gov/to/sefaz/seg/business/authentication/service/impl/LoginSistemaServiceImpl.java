@@ -87,31 +87,32 @@ public class LoginSistemaServiceImpl implements LoginSistemaService {
     }
 
     /**
-     * Realiza o login do ususario e registra o no historico de logins.
+     * Realiza o login do usuário e registra o no histórico de logins.
      *
-     * @param usuarioSistema ususario que sera authenticado na sessão
-     * @param password       senha do usuario
-     * @return o dados do usuario que foram colocados na sessão
+     * @param usuarioSistema usuário que será autenticado na sessão
+     * @param password senha do usuário
+     * @return o dados do usuário que foram colocados na sessão
      * @see HistoricoLoginSistemaService#saveHistoricoLoginSistema(UsuarioSistema)
      */
     private UsuarioSistemaAuthentication authenticateAndRegister(UsuarioSistema usuarioSistema, String password) {
         triesService.clearTries(usuarioSistema.getCpfUsuario());
-        historicoLoginSistemaService.saveHistoricoLoginSistema(usuarioSistema);
-        UsuarioSistemaAuthentication authentication = authenticationFactory.create(password, usuarioSistema);
 
+        UsuarioSistemaAuthentication authentication = authenticationFactory.create(password, usuarioSistema);
         SecurityContextHolder.getContext().setAuthentication(authentication);
+
+        historicoLoginSistemaService.saveHistoricoLoginSistema(usuarioSistema);
 
         return authentication;
     }
 
     /**
-     * Busca o usuario sistema, e realiza todos os tratamentos de permissão de login do ususario.
-     * Se possivel desbloqueia ele em caso de a data e hora de desbloqueio ser menor do que a data e hora atual.
-     * Após retornar o usuuario sistema, executa todas as valodações para realizar o login.
+     * Busca o usuário sistema, e realiza todos os tratamentos de permissão de login do usuário.
+     * Se possível desbloqueia ele em caso de a data e hora de desbloqueio ser menor do que a data e hora atual.
+     * Após retornar o usuuario sistema, executa todas as validações para realizar o login.
      * Antes de retornar realiza as validações de {@link UsuarioSistema} de contexto de login.
      *
-     * @param username cpf do ususario
-     * @return o ususario sistema já atualizado
+     * @param username cpf do usuário
+     * @return o usuário sistema já atualizado
      * @see UsuarioSistemaService#validateLogin(UsuarioSistema)
      */
     private UsuarioSistema getUserToLogin(String username) {
@@ -134,12 +135,12 @@ public class LoginSistemaServiceImpl implements LoginSistemaService {
     }
 
     /**
-     * Registra a falha de authenticação do usuario, a cada {@value WrongPasswordTriesService#MAX_TRIES} bloqueia o
-     * usuario na base de dados.
+     * Registra a falha de autenticação do usuário, a cada {@value WrongPasswordTriesService#MAX_TRIES} bloqueia o
+     * usuário na base de dados.
      *
      * @param e   exceção gerada pela falha de autenticação
-     * @param cpf cpf do usuario que tentou se autenticar
-     * @return Exceção com uma mensagem legivel sobre a tentativa de acesso mal sucedida.
+     * @param cpf cpf do usuário que tentou se autenticar
+     * @return Exceção com uma mensagem legível sobre a tentativa de acesso mal sucedida.
      */
     private BusinessException registerUserFailure(SecurityException e, String cpf) {
         String message;

@@ -24,7 +24,7 @@ public class ResetPasswordDto {
 
     @NotEmpty(message = "#{seg_msg['reset.password.email.obrigatorio']}")
     @Size(max = 50, message = "#{seg_msg['reset.password.email.tamanho']}")
-    @Pattern(regexp = "[A-Za-z0-9\\._-]+@[A-Za-z0-9\\._-]+\\.[A-Za-z]{2,4}+",
+    @Pattern(regexp = "([A-Za-z0-9\\._-]+@[A-Za-z0-9\\._-]+\\.[A-Za-z]{2,4}+)|",
             message = "#{seg_msg['reset.password.email.incorreto']}")
     private String email;
 

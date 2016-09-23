@@ -3,6 +3,10 @@ package br.gov.to.sefaz.presentation.managedbean;
 import br.gov.to.sefaz.seg.business.authentication.handler.AuthenticatedUserHandler;
 import br.gov.to.sefaz.util.message.MessageUtil;
 import br.gov.to.sefaz.util.message.SourceBundle;
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 
@@ -11,7 +15,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
 
 /**
- * ManagedBean da pagina de erro.
+ * ManagedBean da página de erro.
  *
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 21/06/2016 09:42:00
@@ -47,13 +51,13 @@ public class ErrorPageMB {
     public void handleStatusMessage() {
         Integer statusCode = (Integer) getRequestMap().get(STATUS_CODE);
 
-        if (statusCode == 403) {
-            setErrorMessage("geral.acesso.negado");
-        }
-    }
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
-    private void setErrorMessage(String message) {
-        getRequestMap().put(ERROR_MESSAGE, SourceBundle.getMessage(MessageUtil.SEG, message));
+        if (statusCode == 403 && authentication instanceof AnonymousAuthenticationToken) {
+            getRequestMap().put(ERROR_MESSAGE, StringUtils.EMPTY);
+        } else if (statusCode == 403) {
+            getRequestMap().put(ERROR_MESSAGE, SourceBundle.getMessage(MessageUtil.SEG, "geral.acesso.negado"));
+        }
     }
 
     private Map<String, Object> getRequestMap() {
