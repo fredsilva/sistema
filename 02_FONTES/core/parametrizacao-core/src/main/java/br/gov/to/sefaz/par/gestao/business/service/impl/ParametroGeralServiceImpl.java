@@ -133,16 +133,24 @@ public class ParametroGeralServiceImpl extends DefaultCrudService<ParametroGeral
      * @return @return lista de código valor
      */
     private List<CodeData> parseParametroGeral(ParametroGeral parametroGeral, String... params) {
+
+        List<CodeData> list;
+
         switch (parametroGeral.getTipoParametroGeral()) {
             case ESTATICO:
-                List<CodeData> list = this.parseParametroGeralEstatico(parametroGeral.getConteudoValores());
-                parametros.put(parametroGeral.getNomeParametroGeral(), list);
-                return list;
+                list = this.parseParametroGeralEstatico(parametroGeral.getConteudoValores());
+                break;
             case DINAMICO:
-                return this.parseParametroGeralDinamico(parametroGeral.getConteudoValores(), params);
+                list = this.parseParametroGeralDinamico(parametroGeral.getConteudoValores(), params);
+                break;
             default:
-                return Collections.emptyList();
+                list = Collections.emptyList();
+                break;
         }
+
+        parametros.put(parametroGeral.getNomeParametroGeral(), list);
+
+        return list;
     }
 
     /**

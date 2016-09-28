@@ -17,7 +17,7 @@ import javax.persistence.AttributeConverter;
  * @since 06/06/2016 18:11:52
  */
 @Component
-public class TipoUnidadeConverter implements AttributeConverter<TipoUnidade, Character> {
+public class TipoUnidadeConverter implements AttributeConverter<TipoUnidade, String> {
 
     private static UnidadeOrganizacionalService service;
 
@@ -27,16 +27,16 @@ public class TipoUnidadeConverter implements AttributeConverter<TipoUnidade, Cha
     }
 
     @Override
-    public Character convertToDatabaseColumn(TipoUnidade tipoUnidade) {
+    public String convertToDatabaseColumn(TipoUnidade tipoUnidade) {
         return tipoUnidade.getCode();
     }
 
     @Override
-    public TipoUnidade convertToEntityAttribute(Character code) {
+    public TipoUnidade convertToEntityAttribute(String code) {
         if (Objects.isNull(code)) {
             return null;
         }
         List<TipoUnidade> list = service.findTiposUnidades();
-        return list.stream().filter(tipoUsuario -> code.compareTo(tipoUsuario.getCode()) == 0).findAny().get();
+        return list.stream().filter(tipoUnidade -> code.compareTo(tipoUnidade.getCode()) == 0).findAny().get();
     }
 }

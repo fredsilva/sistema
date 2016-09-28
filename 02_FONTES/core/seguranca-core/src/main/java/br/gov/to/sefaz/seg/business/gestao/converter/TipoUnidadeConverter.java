@@ -1,6 +1,5 @@
 package br.gov.to.sefaz.seg.business.gestao.converter;
 
-
 import br.gov.to.sefaz.persistence.domain.CodeData;
 import br.gov.to.sefaz.seg.persistence.domain.TipoUnidade;
 
@@ -19,7 +18,7 @@ public class TipoUnidadeConverter implements Function<List<CodeData>, List<TipoU
 
     @Override
     public List<TipoUnidade> apply(List<CodeData> list) {
-        return list.stream().map(o -> new TipoUnidade(o.getCode().toString().charAt(0), o.getValue()
+        return list.stream().map(o -> new TipoUnidade(o.getCode().toString(), o.getValue()
                 .toString())).collect(Collectors.toList());
     }
 }

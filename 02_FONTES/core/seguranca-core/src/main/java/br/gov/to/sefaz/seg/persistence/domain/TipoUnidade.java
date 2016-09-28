@@ -8,9 +8,9 @@ import br.gov.to.sefaz.persistence.domain.CodeData;
  * @author <a href="mailto:cristiano.luis@ntconsult.com.br">cristiano.luis</a>
  * @since 10/08/2016 10:30:37
  */
-public class TipoUnidade extends CodeData<Character, String> {
+public class TipoUnidade extends CodeData<String, String> {
 
-    public TipoUnidade(Character codigoTipoUnidade, String descricaoTipoUnidade) {
+    public TipoUnidade(String codigoTipoUnidade, String descricaoTipoUnidade) {
         super(codigoTipoUnidade, descricaoTipoUnidade);
     }
 
@@ -18,7 +18,7 @@ public class TipoUnidade extends CodeData<Character, String> {
      * Retorna o valor do atributo code do CodeData.
      * @return  código do Tipo Usuário
      */
-    public Character getCodigoTipoUnidade() {
+    public String getCodigoTipoUnidade() {
         return getCode();
     }
 
@@ -26,7 +26,7 @@ public class TipoUnidade extends CodeData<Character, String> {
      * Seta o valor do atributo code do CodeData.
      * @param codigoTipoUnidade código do Tipo Usuário
      */
-    public void setCodigoTipoUnidade(Character codigoTipoUnidade) {
+    public void setCodigoTipoUnidade(String codigoTipoUnidade) {
         setCode(codigoTipoUnidade);
     }
 
