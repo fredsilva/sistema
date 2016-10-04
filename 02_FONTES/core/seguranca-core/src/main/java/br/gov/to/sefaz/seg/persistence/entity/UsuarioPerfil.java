@@ -10,6 +10,7 @@ import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -52,16 +53,15 @@ public class UsuarioPerfil extends AbstractEntity<Long> {
     @Column(name = "IDENTIFICACAO_PERFIL")
     private Long identificacaoPerfil;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "IDENTIFICACAO_PERFIL", referencedColumnName = "IDENTIFICACAO_PERFIL",
             insertable = false, updatable = false)
     @Fetch(FetchMode.JOIN)
     private PerfilSistema perfisSistema;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "CPF_USUARIO", referencedColumnName = "CPF_USUARIO",
             insertable = false, updatable = false)
-    @Fetch(FetchMode.JOIN)
     private UsuarioSistema usuarioSistema;
 
     public UsuarioPerfil() {

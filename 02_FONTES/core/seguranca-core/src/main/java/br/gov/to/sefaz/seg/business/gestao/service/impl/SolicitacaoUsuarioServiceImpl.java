@@ -26,22 +26,15 @@ public class SolicitacaoUsuarioServiceImpl extends DefaultCrudService<Solicitaca
         super(repository);
     }
 
-
     @Override
     public void save(UsuarioSistema usuarioSistema) {
-
         SolicitacaoUsuario solicitacaoUsuario = usuarioSistema.getSolicitacaoUsuario();
         usuarioSistema.setSolicitacaoUsuario(null);
-
-        if (solicitacaoUsuario.getCnpjNegocio() != null && solicitacaoUsuario.getInscricaoEstadualNegocio() != null) {
-            //Se o Tipo de Usuário for contador, seta a solicitação.
-            solicitacaoUsuario.setSituacaoSolicitacao(SituacaoSolicitacaoEnum.PENDENTE);
-            solicitacaoUsuario.setCpfUsuario(usuarioSistema.getCpfUsuario());
-            validateSolicitacaoUsuario(solicitacaoUsuario);
-            solicitacaoUsuario = super.save(solicitacaoUsuario);
-            usuarioSistema.setSolicitacaoUsuario(solicitacaoUsuario);
-        }
-
+        solicitacaoUsuario.setSituacaoSolicitacao(SituacaoSolicitacaoEnum.PENDENTE);
+        solicitacaoUsuario.setCpfUsuario(usuarioSistema.getCpfUsuario());
+        validateSolicitacaoUsuario(solicitacaoUsuario);
+        solicitacaoUsuario = super.save(solicitacaoUsuario);
+        usuarioSistema.setSolicitacaoUsuario(solicitacaoUsuario);
     }
 
     @SuppressWarnings("PMD.UnusedFormalParameter")

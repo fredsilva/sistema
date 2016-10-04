@@ -7,7 +7,6 @@ import br.gov.to.sefaz.par.gestao.persistence.entity.Municipio;
 import br.gov.to.sefaz.seg.business.authentication.domain.ChangePasswordDto;
 import br.gov.to.sefaz.seg.business.gestao.service.filter.UsuarioSistemaFilter;
 import br.gov.to.sefaz.seg.persistence.domain.TipoUsuario;
-import br.gov.to.sefaz.seg.persistence.entity.UnidadeOrganizacional;
 import br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema;
 
 import java.util.Collection;
@@ -51,19 +50,13 @@ public interface UsuarioSistemaFacade extends CrudFacade<UsuarioSistema, String>
      */
     Collection<Municipio> findMunicipiosByUF(String uf);
 
-    /**
-     * Busca a unidade Organizacional do Usuario Sistema.
-     *
-     * @return {@link UsuarioSistema}
-     */
-    UnidadeOrganizacional findUnidadeOrganizacional();
 
     /**
      * Salva um novo usuário no sistema.
      *
      * @param usuarioSistema a ser adicionado.
      */
-    void saveNewUsuarioSistema(UsuarioSistema usuarioSistema);
+    void saveNewUsuarioSistemaSolicitacaoSenha(UsuarioSistema usuarioSistema);
 
     /**
      * Realiza a alteração da senha do usuário logado no ldap.
@@ -71,13 +64,6 @@ public interface UsuarioSistemaFacade extends CrudFacade<UsuarioSistema, String>
      * @param dto dto de alteração de senha
      */
     void changePassword(ChangePasswordDto dto);
-
-    /**
-     * Busca um único UsuarioSistema através do seu CPF.
-     * @param cpf do usuário
-     * @return {@link UsuarioSistema}
-     */
-    UsuarioSistema findOneUsuarioSistema(String cpf);
 
     /**
      * Lista para o combo de {@link Logradouro}.

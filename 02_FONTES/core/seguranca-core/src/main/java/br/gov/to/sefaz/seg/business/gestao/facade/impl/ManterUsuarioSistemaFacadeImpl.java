@@ -105,18 +105,8 @@ public class ManterUsuarioSistemaFacadeImpl extends DefaultCrudFacade<UsuarioSis
     }
 
     @Override
-    public UsuarioSistema updateUser(UsuarioSistema usuarioSistema) {
-        return getService().updateUsuarioSistema(usuarioSistema);
-    }
-
-    @Override
     public Collection<PostoTrabalho> findAllPostoTrabalhoByUnidadeOrganizacional(Long identificUnidOrganizac) {
         return postoTrabalhoService.findAllByUnidadeOrganizacional(identificUnidOrganizac);
-    }
-
-    @Override
-    public UsuarioSistema saveUsuarioSistema(UsuarioSistema usuarioSistema) {
-        return getService().saveUsuarioSistema(usuarioSistema);
     }
 
     @Override

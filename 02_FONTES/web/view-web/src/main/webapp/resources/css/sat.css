@@ -174,3 +174,7 @@ legend.scheduler-border {
     font-size: 1.4em;
     padding-top: 25px;
 }
+
+.text-red {
+    color: red;
+}

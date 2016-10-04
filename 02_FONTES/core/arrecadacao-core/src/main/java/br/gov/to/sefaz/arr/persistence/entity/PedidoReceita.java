@@ -5,10 +5,10 @@ import br.gov.to.sefaz.persistence.entity.AbstractEntity;
 import br.gov.to.sefaz.persistence.enums.SituacaoEnum;
 
 import java.util.Objects;
-
 import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
@@ -60,18 +60,18 @@ public class PedidoReceita extends AbstractEntity<PedidoReceitaPK> {
     private SituacaoEnum situacao;
 
     @JoinColumn(name = "ID_TIPO_PEDIDO", referencedColumnName = "ID_TIPO_PEDIDO", insertable = false, updatable = false)
-    @ManyToOne(optional = false)
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private PedidoTipos pedidoTipos;
 
     @JoinColumn(name = ID_RECEITA, referencedColumnName = ID_RECEITA, insertable = false, updatable = false)
-    @ManyToOne(optional = false)
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private Receitas receitas;
 
     @JoinColumns({
             @JoinColumn(name = "ID_SUBCODIGO", referencedColumnName = "ID_SUBCODIGO", insertable = false,
                     updatable = false),
             @JoinColumn(name = ID_RECEITA, referencedColumnName = ID_RECEITA, insertable = false, updatable = false) })
-    @ManyToOne(optional = false)
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private ReceitasTaxas receitasTaxas;
 
     @Override

@@ -11,10 +11,13 @@ import br.gov.to.sefaz.seg.persistence.domain.TipoUsuario;
 import br.gov.to.sefaz.seg.persistence.enums.SituacaoSolicitacaoEnum;
 import br.gov.to.sefaz.seg.persistence.enums.SituacaoUsuarioEnum;
 import org.apache.commons.lang3.StringUtils;
+import org.hibernate.annotations.Where;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -75,13 +78,13 @@ public class UsuarioSistema extends AbstractEntity<String> {
     private String endereco;
 
     @NotNull(message = "#{seg_msg['usuarioSistema.numeroEndereco.obrigatorio']}")
-    @Max(value = 99999999, message = "#{seg_msg['usuarioSistema.numeroEndereco.tamanho']}")
-    @Min(value = 1, message = "#{seg_msg['usuarioSistema.numeroEndereco.tamanho']}")
+    @Max(value = 99999999, message = "#{seg_msg['usuarioSistema.numeroEndereco.tamanho.maximo']}")
+    @Min(value = 0, message = "#{seg_msg['usuarioSistema.numeroEndereco.tamanho.minimo']}")
     @Column(name = "NUMERO_ENDERECO")
     private Integer numeroEndereco;
 
-    @Max(value = 99999999, message = "#{seg_msg['usuarioSistema.apartamento.tamanho']}")
-    @Min(value = 1, message = "#{seg_msg['usuarioSistema.apartamento.tamanho']}")
+    @Max(value = 99999999, message = "#{seg_msg['usuarioSistema.apartamento.tamanho.maximo']}")
+    @Min(value = 0, message = "#{seg_msg['usuarioSistema.apartamento.tamanho.minimo']}")
     @Column(name = "APARTAMENTO")
     private Integer apartamento;
 
@@ -165,11 +168,15 @@ public class UsuarioSistema extends AbstractEntity<String> {
     @OneToMany(mappedBy = "usuarioSistema")
     private Set<HistoricoLoginSistema> historicoLoginSistema;
 
-    @OneToOne(mappedBy = "usuarioSistema", fetch = FetchType.LAZY)
+    @OneToOne(mappedBy = "usuarioSistema")
+    @JoinColumn(name = "CPF_USUARIO", referencedColumnName = "CPF", insertable = false, updatable = false)
     private SolicitacaoUsuario solicitacaoUsuario;
 
-    @OneToOne(optional = false, mappedBy = "usuarioSistema", fetch = FetchType.LAZY)
-    private UsuarioPostoTrabalho usuarioPostoTrabalho;
+    @OneToMany(fetch = FetchType.LAZY)
+    @JoinColumn(name = "CPF_USUARIO", referencedColumnName = "CPF_USUARIO",
+            insertable = false, updatable = false)
+    @Where(clause = "REGISTRO_EXCLUIDO = 'N'")
+    private List<UsuarioPostoTrabalho> listUsuarioPostoTrabalho;
 
     @JoinColumn(name = "CODIGO_LOGRADOURO", referencedColumnName = "CODIGO_LOGRADOURO", insertable = false,
             updatable = false)
@@ -487,29 +494,53 @@ public class UsuarioSistema extends AbstractEntity<String> {
 
     /**
      * Retorna a referência de {@link PostoTrabalho} do {@link UsuarioSistema}.
+     * O {@link br.gov.to.sefaz.seg.persistence.entity.UsuarioPostoTrabalho} é uma entidade que reflete uma tabela
+     * associativa na base de dados. A cardinalidade do relacionamento entre o
+     * {@link br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema} e a referida entitidade é '1 para 1'. Contudo,
+     * para atender ao requisito de exclusão lógica da arquitetura do sistema foi necessário o mapeamento da lista,
+     * utilizando o recurso {@link org.hibernate.annotations.Where} para eliminar os registros excluídos logicamente.
+     *
      * @return {@link UsuarioPostoTrabalho}.
      */
     public UsuarioPostoTrabalho getUsuarioPostoTrabalho() {
-        if (usuarioPostoTrabalho == null) {
-            usuarioPostoTrabalho = new UsuarioPostoTrabalho();
+        if (Objects.nonNull(listUsuarioPostoTrabalho) && !listUsuarioPostoTrabalho.isEmpty()) {
+            return listUsuarioPostoTrabalho.get(0);
+        } else {
+            return new UsuarioPostoTrabalho();
         }
-        return usuarioPostoTrabalho;
     }
 
+    public List<UsuarioPostoTrabalho> getListUsuarioPostoTrabalho() {
+        return listUsuarioPostoTrabalho;
+    }
+
+    /**
+     * Inclui o {@link br.gov.to.sefaz.seg.persistence.entity.UsuarioPostoTrabalho} na lista.
+     * O {@link br.gov.to.sefaz.seg.persistence.entity.UsuarioPostoTrabalho} é uma entidade que reflete uma tabela
+     * associativa na base de dados, a cardinalidade do relacionamento entre o
+     * {@link br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema} e a referida entitidade é '1 para 1'. Contudo,
+     * para atender ao requisito de exclusão lógica da arquitetura do sistema foi necessário o mapeamento da lista,
+     * utilizando o recurso {@link org.hibernate.annotations.Where} para eliminar os registros excluídos logicamente.
+     */
     public void setUsuarioPostoTrabalho(UsuarioPostoTrabalho usuarioPostoTrabalho) {
-        this.usuarioPostoTrabalho = usuarioPostoTrabalho;
+        listUsuarioPostoTrabalho = new ArrayList<>();
+        listUsuarioPostoTrabalho.add(usuarioPostoTrabalho);
     }
 
-    public Integer getUsuarioPostoTrabalhoPostoTrabalhoIdentific() {
+    public void setListUsuarioPostoTrabalho(List<UsuarioPostoTrabalho> listUsuarioPostoTrabalho) {
+        this.listUsuarioPostoTrabalho = listUsuarioPostoTrabalho;
+    }
+
+    public Integer getIdentificacaoPostoTrabalho() {
         return getUsuarioPostoTrabalho().getIdentificacaoPostoTrabalho();
     }
 
     /**
      * Altera a identificação do PostoTrabalho.
-     * @param postoTrabalhoPostoTrabalhoIdentific identificação nova.
+     * @param identificacaoPostoTrabalho identificação nova.
      */
-    public void setUsuarioPostoTrabalhoPostoTrabalhoIdentific(Integer postoTrabalhoPostoTrabalhoIdentific) {
-        getUsuarioPostoTrabalho().setIdentificacaoPostoTrabalho(postoTrabalhoPostoTrabalhoIdentific);
+    public void setIdentificacaoPostoTrabalho(Integer identificacaoPostoTrabalho) {
+        getUsuarioPostoTrabalho().setIdentificacaoPostoTrabalho(identificacaoPostoTrabalho);
     }
 
     /**
@@ -529,13 +560,9 @@ public class UsuarioSistema extends AbstractEntity<String> {
      * @param identificacaoPostoTrabalho nova identificação.
      */
     public void setPostoTrabalho(Integer identificacaoPostoTrabalho) {
-        if (Objects.isNull(this.usuarioPostoTrabalho)) {
-            this.usuarioPostoTrabalho = new UsuarioPostoTrabalho();
-            if (Objects.isNull(this.usuarioPostoTrabalho.getPostoTrabalho())) {
-                this.usuarioPostoTrabalho.setPostoTrabalho(new PostoTrabalho());
-            }
-        }
-        this.usuarioPostoTrabalho.getPostoTrabalho().setIdentificacaoPostoTrabalho(identificacaoPostoTrabalho);
+        UsuarioPostoTrabalho usuarioPostoTrabalho = new UsuarioPostoTrabalho();
+        usuarioPostoTrabalho.setIdentificacaoPostoTrabalho(identificacaoPostoTrabalho);
+        setUsuarioPostoTrabalho(usuarioPostoTrabalho);
     }
 
     /**
@@ -580,7 +607,8 @@ public class UsuarioSistema extends AbstractEntity<String> {
      * @return nome do Posto de Trabalho.
      */
     public String getNomePostoDeTrabalho() {
-        if (!Objects.isNull(usuarioPostoTrabalho) && !Objects.isNull(usuarioPostoTrabalho.getPostoTrabalho())) {
+        UsuarioPostoTrabalho usuarioPostoTrabalho = getUsuarioPostoTrabalho();
+        if (Objects.nonNull(usuarioPostoTrabalho) && Objects.nonNull(usuarioPostoTrabalho.getPostoTrabalho())) {
             return usuarioPostoTrabalho.getPostoTrabalho().getNomePostoTrabalho();
         } else {
             return StringUtils.EMPTY;
@@ -592,7 +620,8 @@ public class UsuarioSistema extends AbstractEntity<String> {
      * @param nomePostoDeTrabalho novo nome.
      */
     public void setNomePostoDeTrabalho(String nomePostoDeTrabalho) {
-        if (!Objects.isNull(usuarioPostoTrabalho) && !Objects.isNull(usuarioPostoTrabalho.getPostoTrabalho())) {
+        UsuarioPostoTrabalho usuarioPostoTrabalho = getUsuarioPostoTrabalho();
+        if (Objects.nonNull(usuarioPostoTrabalho) && Objects.nonNull(usuarioPostoTrabalho.getPostoTrabalho())) {
             usuarioPostoTrabalho.getPostoTrabalho().setNomePostoTrabalho(nomePostoDeTrabalho);
         }
     }

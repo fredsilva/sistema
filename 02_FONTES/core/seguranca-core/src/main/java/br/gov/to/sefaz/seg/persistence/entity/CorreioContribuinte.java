@@ -71,7 +71,7 @@ public class CorreioContribuinte extends AbstractEntity<Long> {
 
     @JoinColumn(name = "CPF_DESTINATARIO", referencedColumnName = "CPF_USUARIO",
             insertable = false, updatable = false)
-    @ManyToOne(optional = false)
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private UsuarioSistema destinatario;
 
     public CorreioContribuinte() {

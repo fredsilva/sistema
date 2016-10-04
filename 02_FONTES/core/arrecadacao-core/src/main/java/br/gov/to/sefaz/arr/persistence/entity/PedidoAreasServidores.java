@@ -7,10 +7,10 @@ import br.gov.to.sefaz.persistence.enums.SituacaoEnum;
 import br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema;
 
 import java.util.Objects;
-
 import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
@@ -55,7 +55,7 @@ public class PedidoAreasServidores extends AbstractEntity<PedidoAreasServidoresP
     private Boolean supervisor;
 
     @JoinColumn(name = "ID_SERVIDOR", referencedColumnName = "CPF_USUARIO", insertable = false, updatable = false)
-    @ManyToOne(optional = false)
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private UsuarioSistema usuario;
 
     public PedidoAreasServidores() {

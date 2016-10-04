@@ -5,6 +5,7 @@ import br.gov.to.sefaz.persistence.entity.AbstractEntity;
 import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
@@ -35,7 +36,7 @@ public class PapelOpcao extends AbstractEntity<PapelOpcaoPK> {
     @Column(name = "IDENTIFICACAO_PAPEL")
     private Long identificacaoPapel;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "IDENTIFICACAO_OPCAO_APLICACAO", referencedColumnName = "IDENTIFICACAO_OPCAO_APLICACAO",
             insertable = false, updatable = false)
     private OpcaoAplicacao opcaoAplicacao;

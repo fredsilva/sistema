@@ -15,6 +15,7 @@ import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
@@ -72,7 +73,7 @@ public class ConveniosArrec extends AbstractEntity<Long> {
             insertable = false, updatable = false),
             @JoinColumn(name = "ID_AGENCIA", referencedColumnName = "ID_AGENCIA",
                     insertable = false, updatable = false)})
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private BancoAgencias bancoAgencias;
 
     @NotNull(message = "O campo Código do Banco é obrigatório e deve ser informado!")

@@ -1,16 +1,18 @@
 package br.gov.to.sefaz.seg.persistence.entity;
 
 import br.gov.to.sefaz.persistence.entity.AbstractEntity;
+import org.hibernate.annotations.LazyToOne;
+import org.hibernate.annotations.LazyToOneOption;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
@@ -34,18 +36,24 @@ public class UsuarioPostoTrabalho extends AbstractEntity<UsuarioPostoTrabalhoPK>
     @Column(name = "IDENTIFICACAO_POSTO_TRABALHO")
     private Integer identificacaoPostoTrabalho;
 
-    @JoinColumn(name = "CPF_USUARIO", referencedColumnName = "CPF_USUARIO",
-            insertable = false, updatable = false)
-    @OneToOne(optional = false)
-    private UsuarioSistema usuarioSistema;
-
+    @LazyToOne(LazyToOneOption.NO_PROXY)
     @JoinColumn(name = "IDENTIFICACAO_POSTO_TRABALHO", referencedColumnName = "IDENTIFICACAO_POSTO_TRABALHO",
             insertable = false, updatable = false)
-    @ManyToOne(optional = false)
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private PostoTrabalho postoTrabalho;
+
+    @LazyToOne(LazyToOneOption.NO_PROXY)
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    @JoinColumn(name = "CPF_USUARIO", referencedColumnName = "CPF_USUARIO", insertable = false, updatable = false)
+    private UsuarioSistema usuarioSistema;
 
     public UsuarioPostoTrabalho() {
         this.postoTrabalho = new PostoTrabalho();
+    }
+
+    public UsuarioPostoTrabalho(String cpfUsuario, Integer identificacaoPostoTrabalho) {
+        this.cpfUsuario = cpfUsuario;
+        this.identificacaoPostoTrabalho = identificacaoPostoTrabalho;
     }
 
     @Override
@@ -66,11 +74,6 @@ public class UsuarioPostoTrabalho extends AbstractEntity<UsuarioPostoTrabalhoPK>
     }
 
     public void setIdentificacaoPostoTrabalho(Integer identificacaoPostoTrabalho) {
-        this.identificacaoPostoTrabalho = identificacaoPostoTrabalho;
-    }
-
-    public UsuarioPostoTrabalho(String cpfUsuario, Integer identificacaoPostoTrabalho) {
-        this.cpfUsuario = cpfUsuario;
         this.identificacaoPostoTrabalho = identificacaoPostoTrabalho;
     }
 

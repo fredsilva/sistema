@@ -80,25 +80,11 @@ public interface ManterUsuarioSistemaFacade extends CrudFacade<UsuarioSistema, S
     Collection<TipoUsuario> loadTipoUsuario();
 
     /**
-     * Atualiza o usuário.
-     * @param dto Usuário a ser atualizado.
-     * @return Usuário atualizado.
-     */
-    UsuarioSistema updateUser(UsuarioSistema dto);
-
-    /**
      * Lista para o combo aninhado de {@link PostoTrabalho}.
      * @param identificUnidOrganizac identificação da {@link UnidadeOrganizacional} referente aos postos.
      * @return Lista de Posto Trabalho.
      */
     Collection<PostoTrabalho> findAllPostoTrabalhoByUnidadeOrganizacional(Long identificUnidOrganizac);
-
-    /**
-     * Salva um novo {@link UsuarioSistema}.
-     * @param usuarioSistema Usuário a ser salvo.
-     * @return Usuário salvo.
-     */
-    UsuarioSistema saveUsuarioSistema(UsuarioSistema usuarioSistema);
 
     /**
      * Busca a lista de {@link Logradouro}.

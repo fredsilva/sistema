@@ -82,7 +82,7 @@ public class BancoAgenciasRepository extends BaseRepository<BancoAgencias, Banco
     }
 
     /**
-     * Verifica se existe algum registro com o cnpj informado que seje diferente do id da agencia informado.
+     * Verifica se existe algum registro com o cnpj informado diferente do id da agencia informado.
      *
      * @param idAgencia id da agencia
      * @param cnpj      cnpj da agencia

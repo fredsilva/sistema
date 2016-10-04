@@ -7,6 +7,7 @@ import java.util.Objects;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
@@ -46,7 +47,7 @@ public class DelegaciaAgencias extends AbstractEntity<DelegaciaAgenciasPK> {
     private Collection<PedidoAreas> pedidoAreasCollection;
 
     @JoinColumn(name = "ID_DELEGACIA", referencedColumnName = "ID_DELEGACIA", insertable = false, updatable = false)
-    @ManyToOne(optional = false)
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private Delegacias delegacias;
 
     public DelegaciaAgencias() {

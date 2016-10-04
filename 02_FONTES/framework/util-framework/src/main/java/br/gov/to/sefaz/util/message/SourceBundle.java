@@ -49,7 +49,7 @@ public final class SourceBundle {
     }
 
     /**
-     * Método que retorna a mensagem internacionalizada de um aruivo/bundle default.
+     * Método que retorna a mensagem internacionalizada de um arquivo/bundle default.
      *
      * @param key Chave da mensagem do arquivo de internacionalização
      * @return Mensagem internacionalizada
@@ -59,7 +59,7 @@ public final class SourceBundle {
     }
 
     /**
-     * Método que retorna a mensagem internacionalizada de um aruivo/bundle default substituindo os parâmetros na
+     * Método que retorna a mensagem internacionalizada de um arquivo/bundle default substituindo os parâmetros na
      * mensagem.
      *
      * @param key Chave da mensagem do arquivo de internacionalização
@@ -71,9 +71,9 @@ public final class SourceBundle {
     }
 
     /**
-     * Transforma uma expression language em uma mensagem tratada e cadastrada no(s) resouce(s) bungle(s).
+     * Transforma uma expression language em uma mensagem tratada e cadastrada no(s) resource(s) bundle(s).
      *
-     * @param key Chave do message baundle no formato EL - Expression Language
+     * @param key Chave do message bundle no formato EL - Expression Language
      * @return Mensagem tratada
      */
     public static String getMessageByExpression(String key) {
@@ -83,18 +83,10 @@ public final class SourceBundle {
         String bundle = key.substring(key.indexOf('{') + 1, key.indexOf('['));
         key = key.substring(key.indexOf('\'') + 1, key.lastIndexOf('\''));
         return getMessage(bundle, key);
-        // FacesContext facesContext = FacesContext.getCurrentInstance();
-        // ExpressionFactory elFactory = facesContext.getApplication().getExpressionFactory();
-        // ValueExpression valueExp = elFactory.createValueExpression(facesContext.getELContext(), key, Object.class);
-        // Object value = valueExp.getValue(facesContext.getELContext());
-        //
-        // return value == null ? key : value.toString();
     }
 
     private static ResourceBundle getResourceBundle(String bundle) {
         return ResourceBundle.getBundle(createNameBundle(bundle), new Locale("pt", "BR"));
-        // FacesContext facesContext = FacesContext.getCurrentInstance();
-        // return facesContext.getApplication().getResourceBundle(facesContext, bundle);
     }
 
     private static String createNameBundle(String bundle) {

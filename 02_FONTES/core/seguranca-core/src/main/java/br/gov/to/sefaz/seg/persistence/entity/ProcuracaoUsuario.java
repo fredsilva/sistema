@@ -1,6 +1,8 @@
 package br.gov.to.sefaz.seg.persistence.entity;
 
 import br.gov.to.sefaz.persistence.entity.AbstractEntity;
+import org.hibernate.annotations.LazyToOne;
+import org.hibernate.annotations.LazyToOneOption;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import java.util.ArrayList;
@@ -8,6 +10,7 @@ import java.util.List;
 import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -50,14 +53,16 @@ public class ProcuracaoUsuario extends AbstractEntity<Long> {
     @NotEmpty(message = "#{seg_msg['seg.geral.procuracaoUsuario.cpfProcurado.vazio']}")
     private String cpfProcurado;
 
+    @LazyToOne(LazyToOneOption.NO_PROXY)
     @JoinColumn(name = "CPF_ORIGEM", referencedColumnName = "CPF_CNPJ",
             updatable = false, insertable = false)
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
     private ListagemCpfProcuracao cpfOrigemProcuracao;
 
+    @LazyToOne(LazyToOneOption.NO_PROXY)
     @JoinColumn(name = "CNPJ_ORIGEM", referencedColumnName = "CPF_CNPJ",
             updatable = false, insertable = false)
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
     private ListagemCpfProcuracao cnpjOrigemProcuracao;
 
     @JoinColumn(name = "IDENTIFICACAO_PROCUR_USUARIO", referencedColumnName = "IDENTIFICACAO_PROCUR_USUARIO",

@@ -3,7 +3,6 @@ package br.gov.to.sefaz.seg.business.gestao.service.impl;
 import br.gov.to.sefaz.business.service.impl.DefaultCrudService;
 import br.gov.to.sefaz.persistence.query.structure.select.orderby.Order;
 import br.gov.to.sefaz.seg.business.gestao.service.UsuarioPostoTrabalhoService;
-import br.gov.to.sefaz.seg.persistence.entity.PostoTrabalho;
 import br.gov.to.sefaz.seg.persistence.entity.UsuarioPostoTrabalho;
 import br.gov.to.sefaz.seg.persistence.entity.UsuarioPostoTrabalhoPK;
 import br.gov.to.sefaz.seg.persistence.repository.UsuarioPostoTrabalhoRepository;
@@ -11,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
+import java.util.Objects;
 import java.util.Optional;
 
 /**
@@ -28,12 +28,37 @@ public class UsuarioPostoTrabalhoServiceImpl extends
     }
 
     @Override
+    protected UsuarioPostoTrabalhoRepository getRepository() {
+        return (UsuarioPostoTrabalhoRepository) super.getRepository();
+    }
+
+    @Override
     public Collection<UsuarioPostoTrabalho> findAll() {
         return getRepository().find(select -> select.orderBy("nomeCompletoUsuario", Order.ASC));
     }
 
     @Override
-    public Optional<UsuarioPostoTrabalho> removeUsuarioPostoTrabalho(String cpf, PostoTrabalho postoTrabalho) {
-        return delete(new UsuarioPostoTrabalhoPK(cpf, postoTrabalho.getIdentificacaoPostoTrabalho()));
+    public UsuarioPostoTrabalho saveOrUpdate(String cpf, Integer identificacaoPostoTrabalho) {
+
+        // Um UsuarioSistema só poderá ter um UsuarioPostoTrabalho, pois a cardinalidade desta referência é 1 para 1.
+        UsuarioPostoTrabalho usuarioPostoTrabalho = getRepository().findByCpf(cpf);
+
+        if (Objects.isNull(usuarioPostoTrabalho)) {
+            usuarioPostoTrabalho = new UsuarioPostoTrabalho();
+            usuarioPostoTrabalho.setCpfUsuario(cpf);
+            usuarioPostoTrabalho.setIdentificacaoPostoTrabalho(identificacaoPostoTrabalho);
+            return save(usuarioPostoTrabalho);
+        } else {
+            usuarioPostoTrabalho.setIdentificacaoPostoTrabalho(identificacaoPostoTrabalho);
+            return update(usuarioPostoTrabalho);
+        }
+
     }
+
+    @Override
+    public Optional<UsuarioPostoTrabalho> removeUsuarioPostoTrabalho(String cpf, Integer identificacaoPostoTrabalho) {
+        return delete(new UsuarioPostoTrabalhoPK(cpf, identificacaoPostoTrabalho));
+    }
+
+
 }

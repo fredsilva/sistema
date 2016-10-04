@@ -6,6 +6,7 @@ import java.time.LocalDate;
 import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
@@ -56,7 +57,7 @@ public class RepresentanteLegal extends AbstractEntity<RepresentanteLegalPK> {
     private Character indOrigemInformacao;
 
     @JoinColumn(name = "NUM_BASE_CNPJ", referencedColumnName = "NUM_BASE_CNPJ", insertable = false, updatable = false)
-    @ManyToOne(optional = false)
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private PessoaJuridica pessoaJuridica;
 
     @Override

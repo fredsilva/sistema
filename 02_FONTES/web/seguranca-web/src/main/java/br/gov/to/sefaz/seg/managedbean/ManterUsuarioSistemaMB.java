@@ -178,31 +178,6 @@ public class ManterUsuarioSistemaMB extends DefaultCrudMB<UsuarioSistema, String
     }
 
     /**
-     * Atualiza o usuário.
-     */
-    public void updateUser() {
-
-        UsuarioSistema usuarioToggle = getFacade().updateUser(getDto());
-
-        usuarioToggle = getFacade().findOneUsuarioSistema(usuarioToggle.getCpfUsuario());
-        updateElementResultList(usuarioToggle);
-
-        showUpdateMessage();
-    }
-
-    /**
-     * Cria um novo usuário.
-     */
-    public void createUser() {
-        UsuarioSistema usuarioToggle = getFacade().saveUsuarioSistema(getDto());
-
-        usuarioToggle = getFacade().findOneUsuarioSistema(usuarioToggle.getCpfUsuario());
-        updateElementResultList(usuarioToggle);
-
-        showSaveMessage();
-    }
-
-    /**
      * Retorna a coleção dos estados cadastrados na base de dados. Caso a coleção já tenha sido consultada apenas
      * retorna, caso contrário, consulta os estados na base de dados antes de retornar.
      *

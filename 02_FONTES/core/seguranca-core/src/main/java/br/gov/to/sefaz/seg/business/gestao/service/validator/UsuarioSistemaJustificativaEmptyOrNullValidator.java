@@ -1,8 +1,8 @@
 package br.gov.to.sefaz.seg.business.gestao.service.validator;
 
 import br.gov.to.sefaz.business.service.validation.ServiceValidator;
+import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.violation.CustomViolation;
-import br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioSistemaServiceImpl;
 import br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema;
 import br.gov.to.sefaz.util.message.MessageUtil;
 import br.gov.to.sefaz.util.message.SourceBundle;
@@ -23,8 +23,7 @@ public class UsuarioSistemaJustificativaEmptyOrNullValidator implements ServiceV
 
     @Override
     public boolean support(Class<?> clazz, String context) {
-        return clazz.equals(UsuarioSistema.class)
-                && (UsuarioSistemaServiceImpl.SAVE_USUARIO_JUSTIFICATIVA_CONTEXT.equals(context));
+        return clazz.equals(UsuarioSistema.class) && ValidationContext.SAVE.equals(context);
     }
 
     @Override

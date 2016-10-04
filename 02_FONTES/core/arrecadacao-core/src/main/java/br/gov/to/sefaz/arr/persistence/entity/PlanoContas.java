@@ -12,6 +12,7 @@ import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -85,7 +86,7 @@ public class PlanoContas extends AbstractEntity<Long> {
 
     @NotNull(message = "#{arr_msg['parametros.planoContas.gruposCnae.obrigatorio']}")
     @JoinColumn(name = "ID_GRUPO_CNAE", referencedColumnName = "ID_GRUPO_CNAE")
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private TipoGruposCnaes gruposCnaes;
 
     public PlanoContas() {

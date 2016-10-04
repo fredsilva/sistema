@@ -9,6 +9,7 @@ import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -53,7 +54,7 @@ public class UnidadeOrganizacional extends AbstractEntity<Long> {
     @Column(name = "UNID_ORGANIZAC_PAI")
     private Long unidOrganizacPai;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "UNID_ORGANIZAC_PAI", referencedColumnName = "IDENTIFICACAO_UNID_ORGANIZAC",
             insertable = false, updatable = false)
     private UnidadeOrganizacional unidadeOrganizacionalPai;

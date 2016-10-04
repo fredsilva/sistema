@@ -7,6 +7,7 @@ import java.time.LocalDate;
 import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -74,7 +75,7 @@ public class PessoaJuridica extends AbstractEntity<String> {
     private String numBaseCnpjSucessora;
 
     @JoinColumn(name = "COD_PORTE", referencedColumnName = "COD_PORTE_EMPRESA")
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private PorteEmpresa codPorte;
 
     @Override

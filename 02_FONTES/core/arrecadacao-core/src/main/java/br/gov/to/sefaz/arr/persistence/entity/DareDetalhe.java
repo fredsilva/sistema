@@ -7,6 +7,7 @@ import java.util.Collection;
 import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
@@ -103,7 +104,7 @@ public class DareDetalhe extends AbstractEntity<DareDetalhePK> {
 
     @JoinColumn(name = "ID_NOSSO_NUMERO_DARE", referencedColumnName = "ID_NOSSO_NUMERO_DARE",
             insertable = false, updatable = false)
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Dare dare;
 
     @Transient

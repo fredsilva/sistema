@@ -42,6 +42,9 @@ public class OpcaoAplicacaoRepository extends BaseRepository<OpcaoAplicacao, Lon
      * @return os objetos referentes aos ids
      */
     public List<OpcaoAplicacao> findByIds(Collection<Long> ids) {
-        return find(select -> select.where().in("identificacaoOpcaoAplicacao", ids));
+        return find("oa", select -> select
+                .innerJoinFetch("oa.aplicacaoModulo", "am")
+                .innerJoinFetch("am.moduloSistema", "ms")
+                .where().in("oa.identificacaoOpcaoAplicacao", ids));
     }
 }

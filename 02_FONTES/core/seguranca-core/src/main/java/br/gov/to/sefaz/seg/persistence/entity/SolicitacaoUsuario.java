@@ -15,7 +15,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.Max;
@@ -37,20 +37,16 @@ public class SolicitacaoUsuario extends AbstractEntity<Long> {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_solicitacao_usuario")
     @SequenceGenerator(name = "sq_solicitacao_usuario", schema = "SEFAZ_SEG",
-            sequenceName = "sq_solicitacao_usuario",
-            allocationSize = 1)
-    @Max(value = 9999999999L,
-            message = "#{seg_msg['seg.gestao.solicitacaoUsuario.identificacaoSolicitacao.maximo']}")
+            sequenceName = "sq_solicitacao_usuario", allocationSize = 1)
+    @Max(value = 9999999999L, message = "#{seg_msg['seg.gestao.solicitacaoUsuario.identificacaoSolicitacao.maximo']}")
     @Column(name = "IDENTIFICACAO_SOLICITACAO")
     private Long identificacaoSolicitacao;
 
     @CNPJ(message = "#{seg_msg['seg.gestao.solicitacaoUsuario.identificacaoSolicitacao.cnpj.incorreto']}")
-    @NotEmpty(message = "#{seg_msg['seg.solicitacaoUsuario.cnpj.vazio']}")
     @Size(max = 30, message = "#{seg_msg['seg.solicitacaoUsuario.cnpj.tamanho']}")
     @Column(name = "CNPJ_NEGOCIO")
     private String cnpjNegocio;
 
-    @NotEmpty(message = "#{seg_msg['seg.solicitacaoUsuario.inscricaoEstadual.vazio']}")
     @Size(max = 30, message = "#{seg_msg['seg.solicitacaoUsuario.inscricaoEstadual.tamanho']}")
     @Column(name = "INSCRICAO_ESTADUAL_NEGOCIO")
     private String inscricaoEstadualNegocio;
@@ -66,7 +62,7 @@ public class SolicitacaoUsuario extends AbstractEntity<Long> {
     private String cpfUsuario;
 
     @JoinColumn(name = "CPF", referencedColumnName = "CPF_USUARIO", insertable = false, updatable = false)
-    @OneToOne(optional = false, fetch = FetchType.LAZY)
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private UsuarioSistema usuarioSistema;
 
     public SolicitacaoUsuario() {

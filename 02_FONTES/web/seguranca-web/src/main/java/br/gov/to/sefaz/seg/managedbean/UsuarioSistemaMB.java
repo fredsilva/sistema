@@ -157,7 +157,7 @@ public class UsuarioSistemaMB extends DefaultCrudMB<UsuarioSistema, String> {
      * Busca o Usuário selecionado em tela.
      */
     public void getUsuarioById() {
-        UsuarioSistema usuarioSistema = getFacade().findOneUsuarioSistema(getDto().getCpfUsuario());
+        UsuarioSistema usuarioSistema = getFacade().findOne(getDto().getCpfUsuario());
         setDto(usuarioSistema);
     }
 
@@ -165,7 +165,7 @@ public class UsuarioSistemaMB extends DefaultCrudMB<UsuarioSistema, String> {
      * Salva novo usuário no Sistema.
      */
     public void saveNewUsuarioSistema() {
-        getFacade().saveNewUsuarioSistema(getDto());
+        getFacade().saveNewUsuarioSistemaSolicitacaoSenha(getDto());
         showSaveMessage();
         clearDto();
     }

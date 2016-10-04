@@ -42,4 +42,19 @@ public class ParametroGeralRepository extends BaseRepository<ParametroGeral, Int
         return list.stream().map(o -> new CodeData<>(o[0], o[1])).collect(Collectors.toList());
     }
 
+    /**
+     * Verifica se existe algum registro com
+     * {@link br.gov.to.sefaz.par.gestao.persistence.entity.ParametroGeral#nomeParametroGeral}
+     * informado diferente do {@link br.gov.to.sefaz.par.gestao.persistence.entity.ParametroGeral#idParametroGeral}.
+     *
+     * @param idParametroGeral id do parâmetro
+     * @param nomeParametroGeral nome do parâmetro
+     * @return se existe algum registro
+     */
+    public boolean findExitsNome(Integer idParametroGeral, String nomeParametroGeral) {
+        return exists(select -> select.where()
+                .different("idParametroGeral", idParametroGeral)
+                .and().equal("nomeParametroGeral", nomeParametroGeral));
+    }
+
 }

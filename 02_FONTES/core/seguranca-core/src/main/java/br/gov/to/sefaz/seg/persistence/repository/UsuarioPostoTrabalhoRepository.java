@@ -15,6 +15,15 @@ import org.springframework.stereotype.Repository;
 public class UsuarioPostoTrabalhoRepository extends BaseRepository<UsuarioPostoTrabalho, UsuarioPostoTrabalhoPK> {
 
     /**
+     * Remove referência do {@link br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema} com o
+     * {@link br.gov.to.sefaz.seg.persistence.entity.PostoTrabalho}.
+     * @param cpf do usuário.
+     */
+    public UsuarioPostoTrabalho findByCpf(String cpf) {
+        return findOne(upt -> upt.where().equal("cpfUsuario", cpf));
+    }
+
+    /**
      * Verifica se o {@link br.gov.to.sefaz.seg.persistence.entity.PostoTrabalho} está sendo utilizado por um
      * {@link br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema}.
      *

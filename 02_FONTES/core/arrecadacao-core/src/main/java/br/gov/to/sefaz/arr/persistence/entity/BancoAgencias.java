@@ -6,14 +6,13 @@ import br.gov.to.sefaz.persistence.converter.OneOrNullBooleanConverter;
 import br.gov.to.sefaz.persistence.converter.SituacaoEnumConverter;
 import br.gov.to.sefaz.persistence.entity.AbstractEntity;
 import br.gov.to.sefaz.persistence.enums.SituacaoEnum;
-
 import org.hibernate.validator.constraints.NotEmpty;
 
 import java.util.Objects;
-
 import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
@@ -100,12 +99,12 @@ public class BancoAgencias extends AbstractEntity<BancoAgenciasPK> {
 
     @JoinColumn(name = "ID_BANCO", referencedColumnName = "ID_BANCO",
             nullable = false, insertable = false, updatable = false)
-    @ManyToOne(optional = false)
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private Bancos bancos;
 
     @JoinColumn(name = "ID_MUNICIPIO", referencedColumnName = "CODIGO_IBGE",
             insertable = false, updatable = false)
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Municipio municipio;
 
     public BancoAgencias() {

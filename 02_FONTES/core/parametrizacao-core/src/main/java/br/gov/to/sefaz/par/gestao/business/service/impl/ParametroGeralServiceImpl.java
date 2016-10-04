@@ -9,6 +9,7 @@ import br.gov.to.sefaz.par.gestao.persistence.entity.ParametroGeral;
 import br.gov.to.sefaz.par.gestao.persistence.repository.ParametroGeralRepository;
 import br.gov.to.sefaz.persistence.domain.CodeData;
 import br.gov.to.sefaz.persistence.query.builder.ParamsBuilder;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -141,14 +142,22 @@ public class ParametroGeralServiceImpl extends DefaultCrudService<ParametroGeral
                 list = this.parseParametroGeralEstatico(parametroGeral.getConteudoValores());
                 break;
             case DINAMICO:
-                list = this.parseParametroGeralDinamico(parametroGeral.getConteudoValores(), params);
+                try {
+                    list = this.parseParametroGeralDinamico(parametroGeral.getConteudoValores(), params);
+                } catch (ArrayIndexOutOfBoundsException e) {
+                    list = new ArrayList<>();
+                }
                 break;
             default:
-                list = Collections.emptyList();
+                list = new ArrayList<>();
                 break;
         }
 
-        parametros.put(parametroGeral.getNomeParametroGeral(), list);
+        if (list.isEmpty()) {
+            parametros.remove(parametroGeral.getNomeParametroGeral());
+        } else {
+            parametros.put(parametroGeral.getNomeParametroGeral(), list);
+        }
 
         return list;
     }
@@ -178,7 +187,7 @@ public class ParametroGeralServiceImpl extends DefaultCrudService<ParametroGeral
     private List<CodeData> parseParametroGeralDinamico(String conteudoValores, String... params) {
         // Obejeto de parâmetros bind da consulta dinêmica
         ParamsBuilder paramsBuilder = ParamsBuilder.empty();
-        conteudoValores = conteudoValores.replaceAll(";\\s*\\Z", "");
+        conteudoValores = conteudoValores.replaceAll(";\\s*\\Z", StringUtils.EMPTY);
         // Captura todos os parâmetros bind da consulta dinâmica
         Matcher matcher = Pattern.compile("(:)(\\w+)").matcher(conteudoValores);
         int count = 0;
@@ -189,6 +198,7 @@ public class ParametroGeralServiceImpl extends DefaultCrudService<ParametroGeral
         }
         // Realiza a consulta do parêmetroGeral Dinâmico
         return getRepository().findPArametroGeralDinamico(conteudoValores, paramsBuilder);
+
     }
 
 }

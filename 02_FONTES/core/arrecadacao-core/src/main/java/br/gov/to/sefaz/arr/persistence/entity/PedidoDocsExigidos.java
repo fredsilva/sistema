@@ -6,10 +6,10 @@ import br.gov.to.sefaz.persistence.entity.AbstractEntity;
 import br.gov.to.sefaz.persistence.enums.SituacaoEnum;
 
 import java.util.Objects;
-
 import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
@@ -57,11 +57,11 @@ public class PedidoDocsExigidos extends AbstractEntity<PedidoDocsExigidosPK> {
     private SituacaoEnum situacao;
 
     @JoinColumn(name = "ID_TIPO_DOCS", referencedColumnName = "ID_TIPO_DOCS", insertable = false, updatable = false)
-    @ManyToOne(optional = false)
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private PedidoTipoDocs pedidoTipoDocs;
 
     @JoinColumn(name = "ID_TIPO_PEDIDO", referencedColumnName = "ID_TIPO_PEDIDO", insertable = false, updatable = false)
-    @ManyToOne(optional = false)
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private PedidoTipos pedidoTipos;
 
     @Override

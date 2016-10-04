@@ -10,6 +10,7 @@ import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -87,7 +88,7 @@ public class ReceitasTaxas extends AbstractEntity<ReceitasTaxasPK> {
     private SituacaoEnum situacao;
 
     @JoinColumn(name = "ID_RECEITA", referencedColumnName = "ID_RECEITA", insertable = false, updatable = false)
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Receitas receitas;
 
     @Override

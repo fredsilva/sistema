@@ -11,9 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.HashSet;
-import java.util.Objects;
 import java.util.Set;
-import javax.persistence.NonUniqueResultException;
 
 /**
  * Validação que verifica se o {@link br.gov.to.sefaz.par.gestao.persistence.entity.ParametroGeral} é estático.
@@ -43,16 +41,9 @@ public class ParametroGeralNomeDuplicatedValidator implements ServiceValidator<P
     @Override
     public Set<CustomViolation> validate(ParametroGeral parametroGeral) {
         Set<CustomViolation> customViolations = new HashSet<>();
-
-        try {
-            parametroGeral = repository.findByNome(parametroGeral.getNomeParametroGeral());
-            if (Objects.isNull(parametroGeral)) {
-                this.setViolation(customViolations);
-            }
-        } catch (NonUniqueResultException e) {
+        if (repository.findExitsNome(parametroGeral.getId(), parametroGeral.getNomeParametroGeral())) {
             this.setViolation(customViolations);
         }
-
         return customViolations;
     }
 

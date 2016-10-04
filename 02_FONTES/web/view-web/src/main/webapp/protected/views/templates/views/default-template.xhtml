@@ -287,7 +287,7 @@
     <h:outputScript rendered="#{param['acesso-negado'] != null}">
         setTimeout(function() {
             window.location.href = '#{pathResolverMB.loginPath}';
-        }, 100000000);
+        }, 10000);
         #{defaultTemplateMB.invalidateSession()}
     </h:outputScript>
 </h:body>

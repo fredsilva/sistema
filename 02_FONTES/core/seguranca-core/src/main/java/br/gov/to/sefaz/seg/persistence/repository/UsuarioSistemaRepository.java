@@ -24,13 +24,32 @@ public class UsuarioSistemaRepository extends BaseRepository<UsuarioSistema, Str
 
     private static final String US_SOLICITACAO_USUARIO = "us.solicitacaoUsuario";
     private static final String US_CPF_USUARIO = "us.cpfUsuario";
-    private static final String US_USUARIO_POSTO_TRABALHO = "us.usuarioPostoTrabalho";
+    private static final String US_USUARIO_POSTO_TRABALHO = "us.listUsuarioPostoTrabalho";
     private static final String UPT_POSTO_TRABALHO = "upt.postoTrabalho";
     private static final String US_LOGRADOURO = "us.logradouro";
+    private static final String US_MUNICIPIO = "us.municipio";
+    private static final String MU_ESTADO = "mu.estado";
+    private static final String US_HISTORICO_LOGIN_SISTEMA = "us.historicoLoginSistema";
+    private static final String PT_UNIDADE_ORGANIZACIONAL = "pt.unidadeOrganizacional";
+    private static final String US_CODIGO_TIPO_USUARIO = "us.codigoTipoUsuario";
+    private static final String US_NOME_COMPLETO_USUARIO = "us.nomeCompletoUsuario";
+    private static final String PT_IDENTIFICACAO_UNID_ORGANIZAC = "pt.identificacaoUnidOrganizac";
+    private static final String PT_IDENTIFICACAO_POSTO_TRABALHO = "pt.identificacaoPostoTrabalho";
+    private static final String US_SITUACAO_USUARIO = "us.situacaoUsuario";
+    private static final String US_CODIGO_ESTADO = "us.codigoEstado";
+    private static final String US_CODIGO_MUNICIPIO = "us.codigoMunicipio";
+    private static final String HLS_DATA_HORA_LOGIN = "hls.dataHoraLogin";
+    private static final String US_USUARIO_PERFIL = "us.usuarioPerfil";
+    private static final String UP_IDENTIFICACAO_PERFIL = "up.identificacaoPerfil";
     private static final String LO = "lo";
     private static final String SU = "su";
     private static final String PT = "pt";
     private static final String UPT = "upt";
+    private static final String MU = "mu";
+    private static final String ES = "es";
+    private static final String HLS = "hls";
+    private static final String UO = "uo";
+    private static final String UP = "up";
 
     /**
      * Altera o estado de bloqueado do ususurio, incluindo a data de bloqueio.
@@ -68,18 +87,22 @@ public class UsuarioSistemaRepository extends BaseRepository<UsuarioSistema, Str
     public List<UsuarioSistema> findAllUsuarioSistema(String cpfUsuario, String nomeCompletoUsuario,
             SituacaoUsuarioEnum situacaoUsuario, Integer tipoUsuario, String codigoEstado, Integer codigoMunicipio) {
         return find("us", select -> select
-                .innerJoinFetch("us.municipio", "mu")
-                .innerJoinFetch("mu.estado", "es")
-                .leftJoinFetch("us.historicoLoginSistema", "hls")
+                .innerJoinFetch(US_LOGRADOURO, LO)
+                .innerJoinFetch(US_MUNICIPIO, MU)
+                .innerJoinFetch(MU_ESTADO, ES)
+                .leftJoinFetch(US_HISTORICO_LOGIN_SISTEMA, HLS)
+                .leftJoinFetch(US_USUARIO_POSTO_TRABALHO, UPT)
+                .leftJoinFetch(UPT_POSTO_TRABALHO, PT)
+                .leftJoinFetch(PT_UNIDADE_ORGANIZACIONAL, UO)
                 .where().opt().equal(US_CPF_USUARIO, cpfUsuario)
-                .and().opt().like("us.nomeCompletoUsuario", nomeCompletoUsuario)
-                .and().opt().equal("us.situacaoUsuario", situacaoUsuario)
-                .and().opt().equal("us.codigoTipoUsuario", tipoUsuario)
-                .and().opt().equal("us.codigoEstado", codigoEstado)
-                .and().opt().equal("us.codigoMunicipio", codigoMunicipio)
+                .and().opt().like(US_NOME_COMPLETO_USUARIO, nomeCompletoUsuario)
+                .and().opt().equal(US_SITUACAO_USUARIO, situacaoUsuario)
+                .and().opt().equal(US_CODIGO_TIPO_USUARIO, tipoUsuario)
+                .and().opt().equal(US_CODIGO_ESTADO, codigoEstado)
+                .and().opt().equal(US_CODIGO_MUNICIPIO, codigoMunicipio)
                 .and().condition(where -> where
-                        .isNull("hls.dataHoraLogin")
-                        .or().in("hls.dataHoraLogin", hqlSelect(HistoricoLoginSistema.class, "hls1")
+                        .isNull(HLS_DATA_HORA_LOGIN)
+                        .or().in(HLS_DATA_HORA_LOGIN, hqlSelect(HistoricoLoginSistema.class, "hls1")
                                 .columns("MAX(hls1.dataHoraLogin)")
                                 .where().equalColumns("hls1.usuarioSistema.cpfUsuario", US_CPF_USUARIO)))
         );
@@ -94,16 +117,18 @@ public class UsuarioSistemaRepository extends BaseRepository<UsuarioSistema, Str
             Long codigoUnidadeOrganizacional, Integer codigoPostoTrabalho) {
         return find("us", select -> select
                 .innerJoinFetch(US_LOGRADOURO, LO)
+                .innerJoinFetch(US_MUNICIPIO, MU)
+                .innerJoinFetch(MU_ESTADO, ES)
                 .leftJoinFetch(US_SOLICITACAO_USUARIO, SU)
                 .leftJoinFetch(US_USUARIO_POSTO_TRABALHO, UPT)
                 .leftJoinFetch(UPT_POSTO_TRABALHO, PT)
-                .leftJoinFetch("pt.unidadeOrganizacional", "uo")
+                .leftJoinFetch(PT_UNIDADE_ORGANIZACIONAL, UO)
                 .where()
-                .opt().like("str(us.cpfUsuario)", cpfUsuario)
-                .and().opt().equal(" us.codigoTipoUsuario", 4)
-                .and().opt().like(" us.nomeCompletoUsuario", nomeCompletoUsuario)
-                .and().opt().equal(" pt.identificacaoUnidOrganizac", codigoUnidadeOrganizacional)
-                .and().opt().equal(" pt.identificacaoPostoTrabalho", codigoPostoTrabalho));
+                .opt().like("str(" + US_CPF_USUARIO + ")", cpfUsuario)
+                .and().opt().equal(US_CODIGO_TIPO_USUARIO, 4)
+                .and().opt().like(US_NOME_COMPLETO_USUARIO, nomeCompletoUsuario)
+                .and().opt().equal(PT_IDENTIFICACAO_UNID_ORGANIZAC, codigoUnidadeOrganizacional)
+                .and().opt().equal(PT_IDENTIFICACAO_POSTO_TRABALHO, codigoPostoTrabalho));
     }
 
     /**
@@ -118,8 +143,9 @@ public class UsuarioSistemaRepository extends BaseRepository<UsuarioSistema, Str
                 .leftJoinFetch(US_SOLICITACAO_USUARIO, SU)
                 .leftJoinFetch(US_USUARIO_POSTO_TRABALHO, UPT)
                 .leftJoinFetch(UPT_POSTO_TRABALHO, PT)
-                .leftJoinFetch("pt.unidadeOrganizacional", "uo")
-                .innerJoinFetch("us.municipio", "mu")
+                .leftJoinFetch(PT_UNIDADE_ORGANIZACIONAL, UO)
+                .innerJoinFetch(US_LOGRADOURO, LO)
+                .innerJoinFetch(US_MUNICIPIO, MU)
                 .innerJoinFetch(US_LOGRADOURO, LO)
                 .whereId(cpf));
     }
@@ -146,16 +172,16 @@ public class UsuarioSistemaRepository extends BaseRepository<UsuarioSistema, Str
                 .leftJoinFetch(US_SOLICITACAO_USUARIO, SU)
                 .leftJoinFetch(US_USUARIO_POSTO_TRABALHO, UPT)
                 .leftJoinFetch(UPT_POSTO_TRABALHO, PT)
-                .leftJoinFetch("pt.unidadeOrganizacional", "uo")
-                .leftJoinFetch("us.municipio", "mu")
-                .innerJoinFetch("us.logradouro", "lo")
-                .innerJoinFetch("mu.estado", "es")
+                .leftJoinFetch(PT_UNIDADE_ORGANIZACIONAL, UO)
+                .innerJoinFetch(US_LOGRADOURO, LO)
+                .innerJoinFetch(US_MUNICIPIO, MU)
+                .innerJoinFetch(MU_ESTADO, ES)
                 .where().opt().equal(US_CPF_USUARIO, cpf)
-                .and().opt().like("us.nomeCompletoUsuario", nomeCompletoUsuario)
+                .and().opt().like(US_NOME_COMPLETO_USUARIO, nomeCompletoUsuario)
                 .and().opt().equal("trunc(us.dataInsercao)", dataCriacao)
-                .and().opt().equal("us.situacaoUsuario", situacao)
-                .and().opt().equal("pt.identificacaoUnidOrganizac", identificacaoUnidOrganizac)
-                .and().opt().equal("pt.identificacaoPostoTrabalho", identificacaoPostoTrabalho));
+                .and().opt().equal(US_SITUACAO_USUARIO, situacao)
+                .and().opt().equal(PT_IDENTIFICACAO_UNID_ORGANIZAC, identificacaoUnidOrganizac)
+                .and().opt().equal(PT_IDENTIFICACAO_POSTO_TRABALHO, identificacaoPostoTrabalho));
     }
 
     /**
@@ -182,15 +208,20 @@ public class UsuarioSistemaRepository extends BaseRepository<UsuarioSistema, Str
             Integer codigoTipoUsuario, Long codigoPerfil, Long codigoUnidadeOrganizacional,
             Integer codigoPostoTrabalho) {
         return find("us", select -> select
-                .leftJoinFetch(US_USUARIO_POSTO_TRABALHO, UPT)
                 .leftJoinFetch(US_SOLICITACAO_USUARIO, SU)
+                .leftJoinFetch(US_USUARIO_PERFIL, UP)
+                .leftJoinFetch(US_USUARIO_POSTO_TRABALHO, UPT)
                 .leftJoinFetch(UPT_POSTO_TRABALHO, PT)
-                .leftJoinFetch("us.usuarioPerfil", "up")
+                .leftJoinFetch(PT_UNIDADE_ORGANIZACIONAL, UO)
+                .innerJoinFetch(US_LOGRADOURO, LO)
+                .innerJoinFetch(US_MUNICIPIO, MU)
+                .innerJoinFetch(MU_ESTADO, ES)
                 .where().opt().equal(US_CPF_USUARIO, cpfUsuario)
-                .and().opt().like("lower(us.nomeCompletoUsuario)", nomeCompletoUsuario)
-                .and().opt().equal("us.codigoTipoUsuario", codigoTipoUsuario)
-                .and().opt().equal("up.identificacaoPerfil", codigoPerfil)
-                .and().opt().equal("pt.identificacaoUnidOrganizac", codigoUnidadeOrganizacional)
-                .and().opt().equal("pt.identificacaoPostoTrabalho", codigoPostoTrabalho));
+                .and().opt().like("lower(" + US_NOME_COMPLETO_USUARIO + ")", nomeCompletoUsuario)
+                .and().opt().equal(US_CODIGO_TIPO_USUARIO, codigoTipoUsuario)
+                .and().opt().equal(UP_IDENTIFICACAO_PERFIL, codigoPerfil)
+                .and().opt().equal(PT_IDENTIFICACAO_UNID_ORGANIZAC, codigoUnidadeOrganizacional)
+                .and().opt().equal(PT_IDENTIFICACAO_POSTO_TRABALHO, codigoPostoTrabalho));
     }
+
 }

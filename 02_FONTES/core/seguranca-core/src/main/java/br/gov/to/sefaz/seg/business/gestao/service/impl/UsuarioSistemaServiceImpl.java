@@ -53,18 +53,19 @@ import javax.mail.MessagingException;
  * @author <a href="mailto:cristiano.luis@ntconsult.com.br">cristiano.luis</a>
  * @since 14/05/2016 13:33:38
  */
+@SuppressWarnings("PMD.TooManyMethods")
 @Service
 public class UsuarioSistemaServiceImpl extends DefaultCrudService<UsuarioSistema, String>
         implements UsuarioSistemaService {
 
     public static final String LOGIN_CONTEXT = "LOGIN";
+    public static final String SOLICITACAO_AUTORIZACAO_SENHA_CONTEXT = "SOLICITACAO_AUTORIZACAO_SENHA_CONTEXT";
     public static final String CHANGE_PASSWD_CONTEXT = "CHANGE_PASSWD";
-    public static final String SAVE_USUARIO_JUSTIFICATIVA_CONTEXT = "SAVE_USUARIO_JUSTIFICATIVA_CONTEXT";
     public static final String ATIVAR_INATIVAR_PERFIL_FILTER_CONTEXT = "ATIVAR_INATIVAR_PERFIL_FILTER_CONTEXT";
     public static final String ATRIBUIR_PERFIL_FILTER_CONTEXT = "MANTER_USUARIO_SISTEMA_FILTER_CONTEXT";
     public static final String MANTER_USUARIO_SISTEMA_FILTER_CONTEXT = "MANTER_USUARIO_SISTEMA_FILTER_CONTEXT";
     public static final String ATRIBUIR_PERFIL_USUARIO_CONTEXT = "ATRIBUIR_PERFIL_USUARIO_CONTEXT";
-    private static final String SPACE = "<br />";
+    private static final String HTML_NEW_LINE = "<br />";
     public static final String TERMO_RESPONSABILIDADE_PDF = "termo_de_responsabilidade_de_acesso.pdf";
 
     private final SolicitacaoUsuarioService solicitacaoUsuarioService;
@@ -176,7 +177,8 @@ public class UsuarioSistemaServiceImpl extends DefaultCrudService<UsuarioSistema
     @Transactional
     @Override
     public void saveNewUsuarioSistemaSolicitacaoSenha(
-            @ValidationSuite(context = ValidationContext.SAVE) UsuarioSistema usuarioSistema) {
+            @ValidationSuite(context = SOLICITACAO_AUTORIZACAO_SENHA_CONTEXT) UsuarioSistema
+                    usuarioSistema) {
 
         SolicitacaoUsuario solicitacaoUsuario = usuarioSistema.getSolicitacaoUsuario();
 
@@ -216,7 +218,7 @@ public class UsuarioSistemaServiceImpl extends DefaultCrudService<UsuarioSistema
         try {
             CorreioEletronicoBuilder correioEletronico = new CorreioEletronicoBuilder()
                     .mailTo(usuarioSistema).subject(subject).body(mailBody, true);
-            if (!Objects.isNull(anexo)) {
+            if (Objects.nonNull(anexo)) {
                 correioEletronico.attachments(anexo);
             }
             mailService.sendMail(correioEletronico.build());
@@ -254,7 +256,8 @@ public class UsuarioSistemaServiceImpl extends DefaultCrudService<UsuarioSistema
         params.put("email", usuarioSistema.getCorreioEletronico());
         params.put("celular", usuarioSistema.getTelefoneCelular());
 
-        params.put("cnpj", FormatterUtil.formatCnpj(usuarioSistema.getCnpjNegocio()));
+        params.put("cnpj", StringUtils.isEmpty(usuarioSistema.getCnpjNegocio()) ? StringUtils.EMPTY : FormatterUtil
+                .formatCnpj(usuarioSistema.getCnpjNegocio()));
         params.put("inscricao", usuarioSistema.getInscricaoEstadualNegocio());
 
         return PdfRender.createBytes(url, params);
@@ -262,19 +265,45 @@ public class UsuarioSistemaServiceImpl extends DefaultCrudService<UsuarioSistema
 
     @Override
     public UsuarioSistema save(@ValidationSuite(context = ValidationContext.SAVE) UsuarioSistema entity) {
+
+        SolicitacaoUsuario solicitacaoUsuario = entity.getSolicitacaoUsuario();
         entity.setSolicitacaoUsuario(null);
+
+        UsuarioPostoTrabalho usuarioPostoTrabalho = entity.getUsuarioPostoTrabalho();
         entity.setUsuarioPostoTrabalho(null);
-        entity = super.save(entity);
-        return findOne(entity.getId());
+
+        UsuarioSistema usuarioSistemaSaved = super.save(entity);
+
+        saveSolicitacaoUsuario(solicitacaoUsuario, usuarioSistemaSaved);
+        saveUsuarioPostoTrabalho(usuarioPostoTrabalho, usuarioSistemaSaved);
+
+        return findOne(usuarioSistemaSaved.getId());
+    }
+
+    @Override
+    public UsuarioSistema update(@ValidationSuite(context = ValidationContext.UPDATE) UsuarioSistema entity) {
+
+        SolicitacaoUsuario solicitacaoUsuario = entity.getSolicitacaoUsuario();
+        entity.setSolicitacaoUsuario(null);
+
+        UsuarioPostoTrabalho usuarioPostoTrabalho = entity.getUsuarioPostoTrabalho();
+        entity.setUsuarioPostoTrabalho(null);
+
+        UsuarioSistema usuarioSistemaUpdated = super.update(entity);
+
+        saveSolicitacaoUsuario(solicitacaoUsuario, usuarioSistemaUpdated);
+        saveUsuarioPostoTrabalho(usuarioPostoTrabalho, usuarioSistemaUpdated);
+
+        return findOne(usuarioSistemaUpdated.getId());
     }
 
     private String getMailBodyResetPasswdMessage(UsuarioSistema usuario, String newPassword) {
         StringBuilder emailBody = new StringBuilder();
         emailBody.append(SourceBundle.getMessage(MessageUtil.SEG, "reset.password.email.body.title",
                 usuario.getNomeCompletoUsuario()))
-                .append(SPACE + SPACE)
+                .append(HTML_NEW_LINE + HTML_NEW_LINE)
                 .append(SourceBundle.getMessage(MessageUtil.SEG, "reset.password.email.body.description", newPassword))
-                .append(SPACE)
+                .append(HTML_NEW_LINE)
                 .append(SourceBundle.getMessage(MessageUtil.SEG, "reset.password.email.body.ass"));
         return emailBody.toString();
     }
@@ -283,14 +312,14 @@ public class UsuarioSistemaServiceImpl extends DefaultCrudService<UsuarioSistema
         StringBuilder emailBody = new StringBuilder();
         emailBody.append(SourceBundle.getMessage(MessageUtil.SEG, "seg.gestao.solicitacaoUsuario.form.mail.body.title",
                 usuario.getNomeCompletoUsuario()))
-                .append(SPACE)
+                .append(HTML_NEW_LINE)
                 .append(SourceBundle.getMessage(MessageUtil.SEG,
                         "seg.gestao.solicitacaoUsuario.form.mail.body.description.cadastroCompleto", usuario
                                 .getCpfUsuario(), newPassword))
-                .append(SPACE)
+                .append(HTML_NEW_LINE)
                 .append(SourceBundle.getMessage(MessageUtil.SEG,
                         "seg.gestao.solicitacaoUsuario.form.mail.body.boaNavegacao"))
-                .append(SPACE)
+                .append(HTML_NEW_LINE)
                 .append(SourceBundle.getMessage(MessageUtil.SEG,
                         "seg.gestao.solicitacaoUsuario.form.mail.body.signature"));
         return emailBody.toString();
@@ -300,10 +329,10 @@ public class UsuarioSistemaServiceImpl extends DefaultCrudService<UsuarioSistema
         StringBuilder emailBody = new StringBuilder();
         emailBody.append(SourceBundle.getMessage(MessageUtil.SEG, "seg.gestao.solicitacaoUsuario.form.mail.body.title",
                 usuario.getNomeCompletoUsuario()))
-                .append(SPACE)
+                .append(HTML_NEW_LINE)
                 .append(SourceBundle.getMessage(MessageUtil.SEG,
                         "seg.gestao.solicitacaoUsuario.form.mail.body.description.cadastroIncompleto"))
-                .append(SPACE)
+                .append(HTML_NEW_LINE)
                 .append(SourceBundle.getMessage(MessageUtil.SEG,
                         "seg.gestao.solicitacaoUsuario.form.mail.body.signature"));
         return emailBody.toString();
@@ -340,62 +369,28 @@ public class UsuarioSistemaServiceImpl extends DefaultCrudService<UsuarioSistema
     }
 
     @Override
-    @Transactional
-    public UsuarioSistema updateUsuarioSistema(@ValidationSuite(context = ValidationContext.UPDATE) UsuarioSistema
-            usuarioSistema) {
-        return saveOrUpdate(usuarioSistema);
-    }
-
-    @Override
-    @Transactional
-    public UsuarioSistema saveUsuarioSistema(@ValidationSuite(context = SAVE_USUARIO_JUSTIFICATIVA_CONTEXT)
-            UsuarioSistema usuarioSistema) {
-        usuarioSistema.setMunicipio(null);
-        return saveOrUpdate(usuarioSistema);
-    }
-
-    @Override
     public void enableUser(UsuarioSistema usuarioSistema) {
         ldapProvider.enableUser(usuarioSistema.getCpfUsuario());
     }
 
-    private UsuarioSistema saveOrUpdate(UsuarioSistema usuarioSistema) {
-
-        SolicitacaoUsuario solicitacaoUsuario = usuarioSistema.getSolicitacaoUsuario();
-        UsuarioPostoTrabalho usuarioPostoTrabalho = usuarioSistema.getUsuarioPostoTrabalho();
-
-        if (usuarioSistema.getCodigoTipoUsuario() != 4 && (!Objects.isNull(usuarioPostoTrabalho.getPostoTrabalho())
-                && !Objects.isNull(usuarioPostoTrabalho.getPostoTrabalho().getIdentificacaoPostoTrabalho()))) {
-            usuarioPostoTrabalhoService.removeUsuarioPostoTrabalho(usuarioSistema.getCpfUsuario(),
-                    usuarioPostoTrabalho.getPostoTrabalho());
-        }
-        UsuarioSistema save = save(usuarioSistema);
-
-        saveSolicitacaoUsuario(solicitacaoUsuario, usuarioSistema);
-        saveUsuarioPostoTrabalho(usuarioPostoTrabalho, usuarioSistema);
-
-        return save;
-    }
-
     private UsuarioPostoTrabalho saveUsuarioPostoTrabalho(UsuarioPostoTrabalho usuarioPostoTrabalho,
             UsuarioSistema usuarioSistema) {
-        if (!Objects.isNull(usuarioPostoTrabalho.getIdentificacaoPostoTrabalho())) {
-            usuarioPostoTrabalho.setCpfUsuario(usuarioSistema.getCpfUsuario());
-            usuarioPostoTrabalho.setPostoTrabalho(null);
-            usuarioPostoTrabalho = usuarioPostoTrabalhoService.save(usuarioPostoTrabalho);
-            return usuarioPostoTrabalho;
+        if (Objects.nonNull(usuarioPostoTrabalho)
+                && Objects.nonNull(usuarioPostoTrabalho.getIdentificacaoPostoTrabalho())) {
+            return usuarioPostoTrabalhoService.saveOrUpdate(usuarioSistema.getCpfUsuario(),
+                    usuarioPostoTrabalho.getIdentificacaoPostoTrabalho());
         } else {
+            usuarioPostoTrabalhoService.removeUsuarioPostoTrabalho(usuarioSistema.getCpfUsuario(),
+                    usuarioPostoTrabalho.getIdentificacaoPostoTrabalho());
             return null;
         }
     }
 
     private SolicitacaoUsuario saveSolicitacaoUsuario(SolicitacaoUsuario solicitacaoUsuario,
             UsuarioSistema usuarioSistema) {
-        if (usuarioSistema.getCodigoTipoUsuario() != 4 && (!StringUtils.isEmpty(usuarioSistema.getCnpjNegocio())
-                || !StringUtils.isEmpty(usuarioSistema.getInscricaoEstadualNegocio()))) {
+        if (Objects.nonNull(solicitacaoUsuario)) {
             solicitacaoUsuario.setCpfUsuario(usuarioSistema.getCpfUsuario());
-            solicitacaoUsuario = solicitacaoUsuarioService.save(solicitacaoUsuario);
-            return solicitacaoUsuario;
+            return solicitacaoUsuarioService.save(solicitacaoUsuario);
         } else {
             return null;
         }

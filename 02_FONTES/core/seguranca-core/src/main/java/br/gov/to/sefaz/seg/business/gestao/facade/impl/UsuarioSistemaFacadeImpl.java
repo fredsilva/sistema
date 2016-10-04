@@ -13,7 +13,6 @@ import br.gov.to.sefaz.seg.business.gestao.service.TipoUsuarioService;
 import br.gov.to.sefaz.seg.business.gestao.service.UsuarioSistemaService;
 import br.gov.to.sefaz.seg.business.gestao.service.filter.UsuarioSistemaFilter;
 import br.gov.to.sefaz.seg.persistence.domain.TipoUsuario;
-import br.gov.to.sefaz.seg.persistence.entity.UnidadeOrganizacional;
 import br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -72,18 +71,8 @@ public class UsuarioSistemaFacadeImpl extends DefaultCrudFacade<UsuarioSistema, 
     }
 
     @Override
-    public UnidadeOrganizacional findUnidadeOrganizacional() {
-        return null;
-    }
-
-    @Override
-    public void saveNewUsuarioSistema(UsuarioSistema usuarioSistema) {
+    public void saveNewUsuarioSistemaSolicitacaoSenha(UsuarioSistema usuarioSistema) {
         getService().saveNewUsuarioSistemaSolicitacaoSenha(usuarioSistema);
-    }
-
-    @Override
-    public UsuarioSistema findOneUsuarioSistema(String cpf) {
-        return getService().findOne(cpf);
     }
 
     @Override

@@ -60,7 +60,7 @@
                             <h:inputText value="#{unidadeOrganizacionalMB.filter.nomeUnidOrganizac}"
                                     id="nomeFilter"
                                     styleClass="form-control"
-                                    maxlength="100"/>
+                                    maxlength="30"/>
                         </div>
                     </div>
                     <div class="row">
@@ -95,6 +95,7 @@
                     fields="identificacaoUnidOrganizac, nomeUnidOrganizac,descricaoTipoUnidade,nomeUnidOrganizacPai,
                         endereco,chefeGeral,telefone:hide,unidOrganizacPai:hide,codigoTipoUnidade:hide"
                     hasActions="true"
+                    defaulSortColumn="1"
                     actionsHeader="seg.gestao.unidadesOrgazinacionais.tabela.acoes"
                     actionEvents="select-row:click:selectRow,
                         edit-row:click:editRow,

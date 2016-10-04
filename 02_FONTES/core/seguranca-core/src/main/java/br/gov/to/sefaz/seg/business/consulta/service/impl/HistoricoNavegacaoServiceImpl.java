@@ -29,14 +29,18 @@ public class HistoricoNavegacaoServiceImpl implements HistoricoNavegacaoService 
     public List<HistoricoNavegacao> findNavigationHistory(@ValidationSuite(context = FILTER_VALIDATION_CONTEXT)
                                                                       HistoricoNavegacaoFilter filter) {
 
-        return repository.find(sb -> sb.where()
-                .opt().equal("cpfUsuario", filter.getCpfUsuario())
-                .and().opt().like("usuarioSistema.nomeCompletoUsuario", filter.getNomeUsuario())
-                .and().opt().equal("tipoOperacao", filter.getTipoOperacao())
-                .and().opt().between("dataOperacao", filter.getDataInicialAjustada(), filter.getDataFinalAjustada())
-                .and().opt().like("urlAcesso", filter.getUrl())
-                .and().opt().equal("cpfCnpjProcurado", filter.getCpfCnpjProcurado())
-                .and().opt().like("nomeProcurado", filter.getNomeProcurado())
-                .orderBy("dataOperacao", Order.DESC));
+        return repository.find("hn", sb -> sb.innerJoinFetch("hn.usuarioSistema", "us")
+                .leftJoinFetch("us.usuarioPostoTrabalho", "upt")
+                .leftJoinFetch("upt.postoTrabalho", "pt")
+                .leftJoinFetch("pt.unidadeOrganizacional","uo")
+                .where()
+                .opt().equal("hn.cpfUsuario", filter.getCpfUsuario())
+                .and().opt().like("hn.usuarioSistema.nomeCompletoUsuario", filter.getNomeUsuario())
+                .and().opt().equal("hn.tipoOperacao", filter.getTipoOperacao())
+                .and().opt().between("hn.dataOperacao", filter.getDataInicialAjustada(), filter.getDataFinalAjustada())
+                .and().opt().like("hn.urlAcesso", filter.getUrl())
+                .and().opt().equal("hn.cpfCnpjProcurado", filter.getCpfCnpjProcurado())
+                .and().opt().like("hn.nomeProcurado", filter.getNomeProcurado())
+                .orderBy("hn.dataOperacao", Order.DESC));
     }
 }

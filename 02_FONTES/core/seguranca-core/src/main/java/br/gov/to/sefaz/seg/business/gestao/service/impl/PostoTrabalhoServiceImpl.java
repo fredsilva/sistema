@@ -38,9 +38,11 @@ public class PostoTrabalhoServiceImpl extends DefaultCrudService<PostoTrabalho, 
 
     @Override
     public List<PostoTrabalho> findAll(PostoTrabalhoFilter filter) {
-        return getRepository().find(sb -> sb.where()
-                        .opt().like("nomePostoTrabalho", filter.getNomePostoTrabalho())
-                        .and().opt().equal("identificacaoUnidOrganizac", filter.getIdentificacaoUnidOrganizac()));
+        return getRepository().find("pt", sb -> sb
+                        .innerJoinFetch("pt.unidadeOrganizacional")
+                        .where()
+                        .opt().like("pt.nomePostoTrabalho", filter.getNomePostoTrabalho())
+                        .and().opt().equal("pt.identificacaoUnidOrganizac", filter.getIdentificacaoUnidOrganizac()));
     }
 
     @Override

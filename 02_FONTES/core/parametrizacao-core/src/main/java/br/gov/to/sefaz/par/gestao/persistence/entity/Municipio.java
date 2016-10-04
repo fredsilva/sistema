@@ -4,10 +4,10 @@ import br.gov.to.sefaz.persistence.converter.YesOrNoBooleanConverter;
 import br.gov.to.sefaz.persistence.entity.AbstractEntity;
 
 import java.util.Objects;
-
 import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -65,7 +65,7 @@ public class Municipio extends AbstractEntity<Integer> {
 
     @JoinColumn(name = "UNIDADE_FEDERACAO", referencedColumnName = "UNIDADE_FEDERACAO", insertable = false,
             updatable = false)
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Estado estado;
 
     public Municipio() {

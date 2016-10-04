@@ -97,20 +97,6 @@ public interface UsuarioSistemaService extends CrudService<UsuarioSistema, Strin
     UsuarioSistema updateStatusUsuario(UsuarioSistema usuarioSistema);
 
     /**
-     * Atualiza o {@link UsuarioSistema}.
-     * @param usuarioSistema a ser atualizado.
-     * @return usuário atualizado.
-     */
-    UsuarioSistema updateUsuarioSistema(UsuarioSistema usuarioSistema);
-
-    /**
-     * Salva um novo {@link UsuarioSistema}.
-     * @param usuarioSistema a ser salvo.
-     * @return usuário que foi salvo.
-     */
-    UsuarioSistema saveUsuarioSistema(UsuarioSistema usuarioSistema);
-
-    /**
      * Método para habilitar usuário no Ldap.
      * @param usuarioSistema usuário a ser habilitado.
      */
@@ -146,4 +132,5 @@ public interface UsuarioSistemaService extends CrudService<UsuarioSistema, Strin
      * @param dto {@link br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema} passado em tela.
      */
     void updateAtribuirUsuarioPerfil(UsuarioSistema dto);
+
 }

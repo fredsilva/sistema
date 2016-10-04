@@ -64,6 +64,8 @@
                                 </h:outputLabel>
                             </div>
                         </div>
+                    </div>
+                    <div class="row">
                         <div class="form-group col-md-4">
                             <h:outputLabel
                                     for="situacaoUsuario">#{seg_msg['seg.gestao.manterUsuarioSistema.filter.status']}
@@ -467,9 +469,9 @@
                                                         itemValue=""
                                                         itemLabel="Todas as Unidades"/>
                                                 <f:selectItems value="#{manterUsuarioSistemaMB.allUnidadeOrganizacionais}"
-                                                        var="unidadeOrganizacionalForm"
-                                                        itemValue="#{unidadeOrganizacionalForm.identificacaoUnidOrganizac}"
-                                                        itemLabel="#{unidadeOrganizacionalForm.nomeUnidOrganizac}"/>
+                                                        var="unidadeOrganizacional"
+                                                        itemValue="#{unidadeOrganizacional.identificacaoUnidOrganizac}"
+                                                        itemLabel="#{unidadeOrganizacional.nomeUnidOrganizac}"/>
                                                 <f:ajax render="postoTrabalhoForm"
                                                         listener="#{manterUsuarioSistemaMB.loadPostosTrabalho}"/>
                                             </h:selectOneMenu>
@@ -479,16 +481,16 @@
                                                 #{seg_msg['seg.gestao.manterUsuarioSistema.form.postoTrabalho']}
                                             </h:outputLabel>
                                             <h:selectOneMenu
-                                                    value="#{manterUsuarioSistemaMB.dto.usuarioPostoTrabalhoPostoTrabalhoIdentific}"
+                                                    value="#{manterUsuarioSistemaMB.dto.identificacaoPostoTrabalho}"
                                                     id="postoTrabalhoForm"
                                                     styleClass="form-control">
                                                 <f:selectItem value="#{null}"
                                                         itemValue=""
                                                         itemLabel="Todos os Postos"/>
                                                 <f:selectItems value="#{manterUsuarioSistemaMB.allPostoTrabalho}"
-                                                        var="postoTrabalhoForm"
-                                                        itemValue="#{postoTrabalhoForm.identificacaoPostoTrabalho}"
-                                                        itemLabel="#{postoTrabalhoForm.nomePostoTrabalho}"/>
+                                                        var="postoTrabalho"
+                                                        itemValue="#{postoTrabalho.identificacaoPostoTrabalho}"
+                                                        itemLabel="#{postoTrabalho.nomePostoTrabalho}"/>
                                             </h:selectOneMenu>
                                         </div>
                                         <div class="form-group col-md-6">
@@ -541,15 +543,15 @@
                                                 render="manter-usuario-group-table"
                                                 onEvent="resetOnSuccess"
                                                 execute="cpfUsuarioForm nomeCompletoUsuarioForm cepUsuarioForm
-                                                        logradouroUsuarioForm enderecoUsuarioForm numeroEnderecoUsuarioForm
-                                                        apartamentoUsuarioForm complementoUsuarioForm bairroUsuarioForm
-                                                        estadoUsuarioForm cidadeUsuarioForm enderecoContatoUsuarioForm
-                                                        telefoneResidencialUsuarioForm celularUsuarioForm
-                                                        correioEletronicoUsuarioForm tipoUsuarioForm crcUsuarioForm
-                                                        unidadeOrganizacionalForm postoTrabalhoForm cnpjEmpresaUsuarioForm
-                                                        inscricaoEstadualUsuarioForm justificacaoCriacaoUsuarioForm"
-                                                saveAction="createUser"
-                                                updateAction="updateUser" />
+                                                logradouroUsuarioForm enderecoUsuarioForm numeroEnderecoUsuarioForm
+                                                apartamentoUsuarioForm complementoUsuarioForm bairroUsuarioForm
+                                                estadoUsuarioForm cidadeUsuarioForm enderecoContatoUsuarioForm
+                                                telefoneResidencialUsuarioForm celularUsuarioForm
+                                                correioEletronicoUsuarioForm tipoUsuarioForm crcUsuarioForm
+                                                unidadeOrganizacionalForm postoTrabalhoForm cnpjEmpresaUsuarioForm
+                                                inscricaoEstadualUsuarioForm justificacaoCriacaoUsuarioForm"
+                                                saveAction="save"
+                                                updateAction="update" />
                                     </div>
                                 </h:panelGroup>
                             </h:form>

@@ -72,14 +72,16 @@
                                         p:data-mask="999.999.999-99"
                                         maxlength="14"
                                 />
-                                <h:commandLink styleClass="btn btn-default align-bottom" >
+                                <h:commandLink id="btn-continuar" styleClass="btn btn-default align-bottom" >
                                     #{msg['solicitacaoAutorizacao.form.button.continuar']}
                                     <f:param name="cpf" value="#{usuarioSistemaMB.dto.cpfUsuario}"/>
                                 </h:commandLink>
                             </div>
+                            <div id="cpfInvalido" class="form-group only-text col-md-6 text-red">
+                                <small>#{msg['solicitacaoAutorizacao.form.cpfInvalido']}</small>
+                            </div>
                         </div>
-                        <a4j:jsFunction name="editUser"
-                                render="pagina">
+                        <a4j:jsFunction name="editUser" render="pagina">
                             <a4j:param name="cpfUsuario" assignTo="#{usuarioSistemaMB.dto.cpfUsuario}"/>
                             <a4j:param name="nomeUsuario" assignTo="#{usuarioSistemaMB.dto.nomeCompletoUsuario}"/>
                             <a4j:param name="emailUsuario" assignTo="#{usuarioSistemaMB.dto.correioEletronico}"/>
@@ -354,5 +356,8 @@
     </h:form>
     <ui:include src="/protected/views/templates/modals/core-modals.xhtml"/>
     <ui:include src="/protected/views/templates/modals/success-marker.xhtml"/>
+    <div class="hide">
+        <h:messages/>
+    </div>
 </h:body>
 </html>

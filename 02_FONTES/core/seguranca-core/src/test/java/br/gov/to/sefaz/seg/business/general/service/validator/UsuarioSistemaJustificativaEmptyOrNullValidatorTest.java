@@ -1,5 +1,6 @@
 package br.gov.to.sefaz.seg.business.general.service.validator;
 
+import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.violation.CustomViolation;
 import br.gov.to.sefaz.seg.business.gestao.service.validator.UsuarioSistemaJustificativaEmptyOrNullValidator;
 import br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema;
@@ -43,7 +44,7 @@ public class UsuarioSistemaJustificativaEmptyOrNullValidatorTest {
     @Test
     public void shouldFailSupportWhenClassIsNotUsuarioSistema() {
         // then
-        assertFalse(validator.support(Object.class, "SAVE_USUARIO_JUSTIFICATIVA_CONTEXT"));
+        assertFalse(validator.support(Object.class, ValidationContext.SAVE));
     }
 
     @Test
@@ -55,7 +56,7 @@ public class UsuarioSistemaJustificativaEmptyOrNullValidatorTest {
     @Test
     public void shouldSupportWhenContextIsSaveUsuarioJustificativaContext() {
         // then
-        assertTrue(validator.support(UsuarioSistema.class, "SAVE_USUARIO_JUSTIFICATIVA_CONTEXT"));
+        assertTrue(validator.support(UsuarioSistema.class, ValidationContext.SAVE));
     }
 
     @Test

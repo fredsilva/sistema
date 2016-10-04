@@ -14,6 +14,7 @@ import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
@@ -142,25 +143,25 @@ public class PagosArrec extends AbstractEntity<PagosArrecPK> {
 
     @JoinColumn(name = "ID_DETALHE_ARQUIVO", referencedColumnName = "ID_DETALHE_ARQUIVO", insertable = false,
             updatable = false)
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private ArquivoDetalhePagos arquivoDetalhePagos;
 
     @JoinColumns({
             @JoinColumn(name = "ID_NOSSO_NUMERO_DARE", referencedColumnName = "ID_NOSSO_NUMERO_DARE"),
             @JoinColumn(name = "ID_SEQ_DARE_DETALHE", referencedColumnName = "ID_SEQ_DARE_DETALHE")})
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private DareDetalhe dareDetalhe;
 
     @JoinColumn(name = "ID_BDAR_TPAR", referencedColumnName = "ID_BDAR_TPAR", insertable = false, updatable = false)
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private LotesPagosArrec lotesPagosArrec;
 
     @JoinColumn(name = "ID_RECEITA", referencedColumnName = "ID_RECEITA", insertable = false, updatable = false)
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private Receitas receitas;
 
     @JoinColumn(name = "ID_REPASSE", referencedColumnName = "ID_REPASSE", insertable = false, updatable = false)
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private RtcRepasse rtcRepasse;
 
     public PagosArrec() {

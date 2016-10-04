@@ -3,6 +3,7 @@ package br.gov.to.sefaz.seg.business.gestao.service.validator;
 import br.gov.to.sefaz.business.service.validation.ServiceValidator;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.violation.CustomViolation;
+import br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioSistemaServiceImpl;
 import br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema;
 import br.gov.to.sefaz.util.message.MessageUtil;
 import br.gov.to.sefaz.util.message.SourceBundle;
@@ -24,14 +25,15 @@ public class UsuarioSistemaContadorCrcEmptyOrNullValidator implements ServiceVal
     @Override
     public boolean support(Class<?> clazz, String context) {
         return clazz.equals(UsuarioSistema.class)
-                && ValidationContext.SAVE.equals(context);
+                && (UsuarioSistemaServiceImpl.SOLICITACAO_AUTORIZACAO_SENHA_CONTEXT.equals(context)
+                || ValidationContext.SAVE.equals(context));
     }
 
     @Override
     public Set<CustomViolation> validate(UsuarioSistema usuarioSistema) {
         HashSet<CustomViolation> customViolations = new HashSet<>();
 
-        if (usuarioSistema.getCodigoTipoUsuario() == 3 && StringUtils.isEmpty(usuarioSistema.getCrc())) {
+        if (usuarioSistema.getCodigoTipoUsuario() == 1 && StringUtils.isEmpty(usuarioSistema.getCrc())) {
             String message = SourceBundle.getMessage(MessageUtil.SEG,
                     "seg.gestao.manterUsuarioSistema.form.crc.empty");
             customViolations.add(new CustomViolation(message));

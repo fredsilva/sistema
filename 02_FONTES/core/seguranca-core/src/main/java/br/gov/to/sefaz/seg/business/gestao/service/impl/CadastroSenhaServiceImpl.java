@@ -49,12 +49,16 @@ public class CadastroSenhaServiceImpl extends DefaultCrudService<UsuarioSistema,
 
     @Override
     public Collection<UsuarioSistema> findAll(CadastroSenhaFilter filter) {
-        return getRepository().find(select -> select.where()
-                .opt().like("nomeCompletoUsuario", filter.getNomeCompletoUsuario())
-                .and().opt().equal("cpfUsuario", filter.getCpfUsuario())
-                .and().opt().equal("solicitacaoUsuario.situacaoSolicitacao", filter.getSituacaoSolicitacao())
-                .and().opt().equal("trunc(solicitacaoUsuario.dataInsercao)", filter.getDate())
-                .orderBy("nomeCompletoUsuario", Order.ASC));
+        return getRepository().find("us", select -> select
+                .leftJoinFetch("us.usuarioPostoTrabalho", "upt")
+                .leftJoinFetch("upt.postoTrabalho", "pt")
+                .leftJoinFetch("pt.unidadeOrganizacional","uo")
+                .where().opt()
+                .like("us.nomeCompletoUsuario", filter.getNomeCompletoUsuario())
+                .and().opt().equal("us.cpfUsuario", filter.getCpfUsuario())
+                .and().opt().equal("us.solicitacaoUsuario.situacaoSolicitacao", filter.getSituacaoSolicitacao())
+                .and().opt().equal("trunc(us.solicitacaoUsuario.dataInsercao)", filter.getDate())
+                .orderBy("us.nomeCompletoUsuario", Order.ASC));
     }
 
     @Override

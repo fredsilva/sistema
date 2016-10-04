@@ -6,6 +6,7 @@ import br.gov.to.sefaz.seg.business.gestao.service.validator.UsuarioSistemaConta
 import br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema;
 import br.gov.to.sefaz.util.message.SourceBundle;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.math.NumberUtils;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -53,14 +54,14 @@ public class UsuarioSistemaContadorCrcEmptyOrNullValidatorTest {
         // given
         UsuarioSistema usuarioSistema = getFilterMock();
 
-        assertFalse(validator.support(usuarioSistema.getClass(), ""));
+        assertFalse(validator.support(usuarioSistema.getClass(), StringUtils.EMPTY));
     }
 
     @Test
     public void shouldFailWhenUsuarioSistemaCrcIsEmpty() {
 
         UsuarioSistema usuarioSistema = getFilterMock();
-        when(usuarioSistema.getCodigoTipoUsuario()).thenReturn(3);
+        when(usuarioSistema.getCodigoTipoUsuario()).thenReturn(NumberUtils.INTEGER_ONE);
         when(usuarioSistema.getCrc()).thenReturn(StringUtils.EMPTY);
 
         Set<CustomViolation> violationSet = validator.validate(usuarioSistema);
@@ -72,7 +73,7 @@ public class UsuarioSistemaContadorCrcEmptyOrNullValidatorTest {
     public void shouldFailWhenUsuarioSistemaCrcIsNull() {
 
         UsuarioSistema usuarioSistema = getFilterMock();
-        when(usuarioSistema.getCodigoTipoUsuario()).thenReturn(3);
+        when(usuarioSistema.getCodigoTipoUsuario()).thenReturn(NumberUtils.INTEGER_ONE);
         when(usuarioSistema.getCrc()).thenReturn(null);
 
         Set<CustomViolation> violationSet = validator.validate(usuarioSistema);
@@ -84,7 +85,7 @@ public class UsuarioSistemaContadorCrcEmptyOrNullValidatorTest {
     public void shouldSucceedWhenUsuarioSistemaCrcIsFilled() {
 
         UsuarioSistema usuarioSistema = getFilterMock();
-        when(usuarioSistema.getCodigoTipoUsuario()).thenReturn(3);
+        when(usuarioSistema.getCodigoTipoUsuario()).thenReturn(NumberUtils.INTEGER_ONE);
         when(usuarioSistema.getCrc()).thenReturn("TesteCRC");
 
         Set<CustomViolation> violationSet = validator.validate(usuarioSistema);

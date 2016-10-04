@@ -16,6 +16,7 @@ import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -97,7 +98,7 @@ public class Receitas extends AbstractEntity<Integer> {
 
     @JoinColumn(name = "ID_PLANO_CONTAS", referencedColumnName = "ID_PLANOCONTAS",
             insertable = false, updatable = false)
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private PlanoContas planoContas;
 
     @Transient

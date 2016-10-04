@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -50,7 +51,7 @@ public class SmsContribuinte extends AbstractEntity<Long> {
     private String conteudo;
 
     @JoinColumn(name = "CPF_DESTINATARIO", referencedColumnName = "CPF_USUARIO")
-    @ManyToOne(optional = false)
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private UsuarioSistema destinatario;
 
     public SmsContribuinte() {

@@ -11,6 +11,7 @@ import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
@@ -46,7 +47,7 @@ public class HistoricoNavegacao implements Serializable {
 
     @JoinColumn(name = "CPF_USUARIO", referencedColumnName = "CPF_USUARIO",
             insertable = false, updatable = false)
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private UsuarioSistema usuarioSistema;
 
     @Column(name = "CPF_USUARIO", insertable = false, updatable = false)
