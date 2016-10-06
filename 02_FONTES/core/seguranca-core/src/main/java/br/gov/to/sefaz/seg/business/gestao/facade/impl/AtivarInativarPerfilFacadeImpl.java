@@ -65,11 +65,6 @@ public class AtivarInativarPerfilFacadeImpl extends DefaultCrudFacade<UsuarioPer
     }
 
     @Override
-    public void updatePerfilUsuarioList(Collection<UsuarioPerfil> usuarioPerfilList) {
-        getService().updateUsuarioPerfil(usuarioPerfilList);
-    }
-
-    @Override
     public Collection<PostoTrabalho> findAllPostoTrabalho() {
         return postoTrabalhoService.findAll();
     }

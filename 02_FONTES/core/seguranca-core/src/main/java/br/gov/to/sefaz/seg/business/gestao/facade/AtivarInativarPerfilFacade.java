@@ -51,12 +51,6 @@ public interface AtivarInativarPerfilFacade extends CrudFacade<UsuarioPerfil, Lo
     void buildProfileString(Collection<UsuarioSistema> usuarioSistemas);
 
     /**
-     * Atualiza a lista de perfis, alterando seus status de acordo com as opções que o usuário escolheu em tela.
-     * @param usuarioPerfilList lista de {@link UsuarioPerfil}.
-     */
-    void updatePerfilUsuarioList(Collection<UsuarioPerfil> usuarioPerfilList);
-
-    /**
      * Busca todos os {@link UsuarioSistema} para montar a tabela.
      * @param filter filtro passado em tela.
      * @return lista de {@link UsuarioSistema}.

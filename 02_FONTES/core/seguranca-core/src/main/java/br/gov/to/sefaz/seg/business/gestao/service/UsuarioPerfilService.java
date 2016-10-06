@@ -29,12 +29,6 @@ public interface UsuarioPerfilService extends CrudService<UsuarioPerfil, Long> {
     Collection<UsuarioPerfil> getAllUsuarioPerfilByCpf(String cpfUsuario);
 
     /**
-     * Atualiza a lista de perfis, alterando seus status de acordo com as opções que o usuário escolheu em tela.
-     * @param usuarioPerfilList lista de {@link UsuarioPerfil}.
-     */
-    void updateUsuarioPerfil(Collection<UsuarioPerfil> usuarioPerfilList);
-
-    /**
      * Remove todos os PerfilPapel com o Id do Perfil.
      * @param id identificação do Perfil.
      */

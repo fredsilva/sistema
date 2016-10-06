@@ -55,6 +55,14 @@ public interface CrudFacade<E, I extends Serializable> {
     E update(E entity);
 
     /**
+     * Atualiza uma lista entidades na base de dados.
+     *
+     * @param list lista de entidades
+     * @return lista de entidades
+     */
+    Collection<E> update(Collection<E> list);
+
+    /**
      * Remove um registro da base de dados ou atualiza um registro. Se o retorno for um {@link java.util.Optional#EMPTY}
      * o registro deve ser removido da base, Caso o retorno for a entidade e estiver presente no
      * {@link java.util.Optional}, será realizada a atualização desta entidade.

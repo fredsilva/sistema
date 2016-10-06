@@ -8,7 +8,6 @@ import java.math.BigDecimal;
 import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -40,7 +39,7 @@ public class DetalheStr extends AbstractEntity<Long> {
     private Long idConvenio;
 
     @NotNull
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne()
     @JoinColumn(name = "ID_ARQUIVO_STR", referencedColumnName = "ID_ARQUIVO_STR", nullable = false)
     private ArquivosStr arquivosStr;
 

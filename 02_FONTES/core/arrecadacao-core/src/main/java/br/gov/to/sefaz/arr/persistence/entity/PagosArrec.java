@@ -143,7 +143,7 @@ public class PagosArrec extends AbstractEntity<PagosArrecPK> {
 
     @JoinColumn(name = "ID_DETALHE_ARQUIVO", referencedColumnName = "ID_DETALHE_ARQUIVO", insertable = false,
             updatable = false)
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne()
     private ArquivoDetalhePagos arquivoDetalhePagos;
 
     @JoinColumns({
@@ -153,15 +153,15 @@ public class PagosArrec extends AbstractEntity<PagosArrecPK> {
     private DareDetalhe dareDetalhe;
 
     @JoinColumn(name = "ID_BDAR_TPAR", referencedColumnName = "ID_BDAR_TPAR", insertable = false, updatable = false)
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne()
     private LotesPagosArrec lotesPagosArrec;
 
     @JoinColumn(name = "ID_RECEITA", referencedColumnName = "ID_RECEITA", insertable = false, updatable = false)
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne()
     private Receitas receitas;
 
     @JoinColumn(name = "ID_REPASSE", referencedColumnName = "ID_REPASSE", insertable = false, updatable = false)
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne()
     private RtcRepasse rtcRepasse;
 
     public PagosArrec() {

@@ -33,7 +33,7 @@ public class UnidadeOrganizacionalFacadeImpl extends DefaultCrudFacade<UnidadeOr
 
     @Override
     public List<UnidadeOrganizacional> find(UnidadeOrganizacionalFilter filter) {
-        return getService().findAll(filter);
+        return getService().findByFilter(filter);
     }
 
     @Override

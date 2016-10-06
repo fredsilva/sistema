@@ -16,7 +16,6 @@ import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -108,12 +107,12 @@ public class ArquivoRecepcao extends AbstractEntity<Long> {
     @Column(name = "SEQUENCIAL_NSA")
     private Long sequencialNsa;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne()
     @JoinColumn(name = "ID_BANCO", referencedColumnName = "ID_BANCO", insertable = false, updatable = false)
     private Bancos bancos;
 
     @JoinColumn(name = "ID_CONVENIO", referencedColumnName = "ID_CONVENIO", insertable = false, updatable = false)
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne()
     private ConveniosArrec conveniosArrecadacao;
 
     public ArquivoRecepcao() {

@@ -16,7 +16,6 @@ import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -97,7 +96,7 @@ public class PedidoAreas extends AbstractEntity<Integer> {
 
     @LazyToOne(LazyToOneOption.NO_PROXY)
     @JoinColumn(name = "ID_PEDIDO_AREA", referencedColumnName = "ID_PEDIDO_AREA", insertable = false, updatable = false)
-    @OneToOne(optional = false, fetch = FetchType.LAZY)
+    @OneToOne(optional = false)
     @Fetch(FetchMode.JOIN)
     private PedidoAreasFaixaValor faixaValor;
 
@@ -106,12 +105,12 @@ public class PedidoAreas extends AbstractEntity<Integer> {
                     insertable = false, updatable = false),
             @JoinColumn(name = "ID_DELEGACIA", referencedColumnName = "ID_DELEGACIA",
                     insertable = false, updatable = false) })
-    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    @ManyToOne(optional = false)
     @Fetch(FetchMode.JOIN)
     private DelegaciaAgencias delegaciaAgencias;
 
     @JoinColumn(name = "ID_TIPO_PEDIDO", referencedColumnName = "ID_TIPO_PEDIDO", insertable = false, updatable = false)
-    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    @ManyToOne(optional = false)
     @Fetch(FetchMode.JOIN)
     private PedidoTipos tipoPedido;
 

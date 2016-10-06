@@ -157,7 +157,7 @@ public class AtivarInativarPerfilMB extends DefaultCrudMB<UsuarioPerfil, Long> {
      * Atualiza os status alterados dos {@link UsuarioPerfil} de um {@link UsuarioSistema}.
      */
     public void updatePerfilUsuario() {
-        getFacade().updatePerfilUsuarioList(allPerfisUsuario);
+        getFacade().update(allPerfisUsuario);
         MessageUtil.addMessage(MessageUtil.SEG, "seg.gestao.ativarInativarPerfil.form.sucesso");
     }
 
