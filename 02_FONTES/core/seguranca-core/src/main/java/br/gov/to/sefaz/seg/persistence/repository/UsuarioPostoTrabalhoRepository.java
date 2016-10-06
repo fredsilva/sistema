@@ -33,4 +33,12 @@ public class UsuarioPostoTrabalhoRepository extends BaseRepository<UsuarioPostoT
     public boolean existsLockReferenceFuncionario(Integer idPostoTrabalho) {
         return exists(select -> select.where().equal("identificacaoPostoTrabalho", idPostoTrabalho));
     }
+
+    @Override
+    public UsuarioPostoTrabalho findOne(UsuarioPostoTrabalhoPK usuarioPostoTrabalhoPK) {
+        return findOne("upt", select -> select
+                .innerJoinFetch("upt.postoTrabalho")
+                .innerJoinFetch("upt.usuarioSistema")
+                .whereId(usuarioPostoTrabalhoPK));
+    }
 }

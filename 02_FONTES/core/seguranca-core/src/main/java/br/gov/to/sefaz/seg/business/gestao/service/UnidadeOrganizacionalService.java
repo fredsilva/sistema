@@ -21,7 +21,7 @@ public interface UnidadeOrganizacionalService extends CrudService<UnidadeOrganiz
      * @param filter filtros da busca
      * @return lista de UnidadeOrganizacional ativos
      */
-    List<UnidadeOrganizacional> findAll(UnidadeOrganizacionalFilter filter);
+    List<UnidadeOrganizacional> findByFilter(UnidadeOrganizacionalFilter filter);
 
     /**
      * Consulta os tipos de Unidades Organizacionais.

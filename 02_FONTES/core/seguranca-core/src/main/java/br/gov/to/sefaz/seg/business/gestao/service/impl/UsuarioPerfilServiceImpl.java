@@ -1,8 +1,6 @@
 package br.gov.to.sefaz.seg.business.gestao.service.impl;
 
 import br.gov.to.sefaz.business.service.impl.DefaultCrudService;
-import br.gov.to.sefaz.business.service.validation.ValidationContext;
-import br.gov.to.sefaz.business.service.validation.ValidationSuite;
 import br.gov.to.sefaz.seg.business.gestao.service.UsuarioPerfilService;
 import br.gov.to.sefaz.seg.persistence.entity.UsuarioPerfil;
 import br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema;
@@ -54,20 +52,8 @@ public class UsuarioPerfilServiceImpl extends DefaultCrudService<UsuarioPerfil, 
     }
 
     @Override
-    public Collection<UsuarioPerfil> update(@ValidationSuite(context = ValidationContext.UPDATE)
-            Collection<UsuarioPerfil> list) {
-        return super.update(list);
-    }
-
-    @Override
     public Collection<UsuarioPerfil> getAllUsuarioPerfilByCpf(String cpfUsuario) {
         return getRepository().findAllByUsuarioSistema(cpfUsuario);
-    }
-
-    @Override
-    public void updateUsuarioPerfil(@ValidationSuite(context = ValidationContext.UPDATE)
-            Collection<UsuarioPerfil> usuarioPerfilList) {
-        update(usuarioPerfilList);
     }
 
     @Override

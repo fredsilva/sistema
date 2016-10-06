@@ -50,7 +50,7 @@ public class CadastroSenhaServiceImpl extends DefaultCrudService<UsuarioSistema,
     @Override
     public Collection<UsuarioSistema> findAll(CadastroSenhaFilter filter) {
         return getRepository().find("us", select -> select
-                .leftJoinFetch("us.usuarioPostoTrabalho", "upt")
+                .leftJoinFetch("us.listUsuarioPostoTrabalho", "upt")
                 .leftJoinFetch("upt.postoTrabalho", "pt")
                 .leftJoinFetch("pt.unidadeOrganizacional","uo")
                 .where().opt()

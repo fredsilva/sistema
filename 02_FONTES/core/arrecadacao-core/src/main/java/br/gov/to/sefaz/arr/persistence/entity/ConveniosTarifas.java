@@ -10,7 +10,6 @@ import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -62,7 +61,7 @@ public class ConveniosTarifas extends AbstractEntity<Integer> {
 
     @JoinColumns(@JoinColumn(name = "ID_CONVENIO", referencedColumnName = "ID_CONVENIO", nullable = false,
             insertable = false, updatable = false))
-    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    @ManyToOne(optional = false)
     private ConveniosArrec conveniosArrec;
 
     @NotNull(message = "#{arr_msg['parametros.conveniosTarifa.idConvenio.obrigatorio']}")

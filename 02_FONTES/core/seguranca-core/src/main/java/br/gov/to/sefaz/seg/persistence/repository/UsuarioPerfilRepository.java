@@ -45,7 +45,7 @@ public class UsuarioPerfilRepository extends BaseRepository<UsuarioPerfil, Long>
      */
     public Set<UsuarioPerfil> findAllByUsuarioSistema(String usuarioId) {
         return find("up", select -> select
-                .innerJoin("up.perfisSistema", "pes")
+                .innerJoinFetch("up.perfisSistema", "pes")
                 .where().equal("up.cpfUsuario", usuarioId))
                 .stream().collect(Collectors.toSet());
     }
@@ -58,7 +58,7 @@ public class UsuarioPerfilRepository extends BaseRepository<UsuarioPerfil, Long>
      */
     public Set<UsuarioPerfil> findAllByUsuariosSistema(List<String> usuariosId) {
         return find("up", select -> select
-                .innerJoin("up.perfisSistema", "pes")
+                .innerJoinFetch("up.perfisSistema", "pes")
                 .where().in("up.cpfUsuario", usuariosId))
                 .stream().collect(Collectors.toSet());
     }
@@ -70,7 +70,7 @@ public class UsuarioPerfilRepository extends BaseRepository<UsuarioPerfil, Long>
      */
     public Collection<UsuarioPerfil> findAllUsuariosPerfilByPerfilId(Long identificacaoPerfil) {
         return find("up", select -> select
-                .innerJoin("up.usuarioSistema")
+                .innerJoinFetch("up.usuarioSistema")
                 .where()
                 .equal("up.identificacaoPerfil", identificacaoPerfil));
     }

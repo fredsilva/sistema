@@ -22,6 +22,15 @@ public class PostoTrabalhoRepository extends BaseRepository<PostoTrabalho, Integ
      * @return lista de {@link br.gov.to.sefaz.seg.persistence.entity.PostoTrabalho}.
      */
     public Collection<PostoTrabalho> findAllByUnidadeOrganizacional(Long identificUnidOrganizac) {
-        return find(select -> select.where().equal("identificacaoUnidOrganizac", identificUnidOrganizac));
+        return find("pt", select -> select
+                .innerJoinFetch("pt.unidadeOrganizacional", "uo")
+                .where().equal("pt.identificacaoUnidOrganizac", identificUnidOrganizac));
+    }
+
+    @Override
+    public PostoTrabalho findOne(Integer id) {
+        return findOne("pt", select -> select
+                .innerJoinFetch("pt.unidadeOrganizacional")
+                .whereId(id));
     }
 }

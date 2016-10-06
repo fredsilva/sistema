@@ -1,9 +1,11 @@
 package br.gov.to.sefaz.util.message;
 
+import br.gov.to.sefaz.exception.UnexpectedErrorException;
 import org.apache.commons.lang3.StringUtils;
 
 import java.text.MessageFormat;
 import java.util.Locale;
+import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
 /**
@@ -30,8 +32,12 @@ public final class SourceBundle {
      * @return Mensagem internacionalizada
      */
     public static String getMessage(String bundle, String key) {
-        ResourceBundle resourcebundle = getResourceBundle(bundle);
-        return resourcebundle.getString(key);
+        try {
+            ResourceBundle resourcebundle = getResourceBundle(bundle);
+            return resourcebundle.getString(key);
+        } catch (MissingResourceException e) {
+            throw new UnexpectedErrorException(e);
+        }
     }
 
     /**
@@ -44,8 +50,12 @@ public final class SourceBundle {
      * @return Mensagem internacionalizada
      */
     public static String getMessage(String bundle, String key, Object... params) {
-        ResourceBundle resourcebundle = getResourceBundle(bundle);
-        return MessageFormat.format(resourcebundle.getString(key), params);
+        try {
+            ResourceBundle resourcebundle = getResourceBundle(bundle);
+            return MessageFormat.format(resourcebundle.getString(key), params);
+        } catch (MissingResourceException e) {
+            throw new UnexpectedErrorException(e);
+        }
     }
 
     /**
@@ -77,12 +87,20 @@ public final class SourceBundle {
      * @return Mensagem tratada
      */
     public static String getMessageByExpression(String key) {
+
         if (StringUtils.isEmpty(key)) {
             return getMessage("mensagem.nao.encontrada");
         }
-        String bundle = key.substring(key.indexOf('{') + 1, key.indexOf('['));
-        key = key.substring(key.indexOf('\'') + 1, key.lastIndexOf('\''));
-        return getMessage(bundle, key);
+
+        try {
+            String bundle = key.substring(key.indexOf('{') + 1, key.indexOf('['));
+            key = key.substring(key.indexOf('\'') + 1, key.lastIndexOf('\''));
+            return getMessage(bundle, key);
+        } catch (StringIndexOutOfBoundsException e) {
+            Object param = key;
+            String message = getMessage("mensagem.inconsistente", param);
+            throw new UnexpectedErrorException(message, e);
+        }
     }
 
     private static ResourceBundle getResourceBundle(String bundle) {

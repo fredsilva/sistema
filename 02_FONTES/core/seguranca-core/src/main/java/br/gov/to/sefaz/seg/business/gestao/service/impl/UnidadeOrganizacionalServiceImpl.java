@@ -43,11 +43,12 @@ public class UnidadeOrganizacionalServiceImpl extends DefaultCrudService<Unidade
     }
 
     @Override
-    public List<UnidadeOrganizacional> findAll(UnidadeOrganizacionalFilter filter) {
-        return getRepository().find(sb -> sb.where()
-                .opt().like("nomeUnidOrganizac", filter.getNomeUnidOrganizac())
-                .and().opt().equal("unidOrganizacPai", filter.getUnidOrganizacPai())
-                .and().opt().equal("codigoTipoUnidade", filter.getTipoUnidade()));
+    public List<UnidadeOrganizacional> findByFilter(UnidadeOrganizacionalFilter filter) {
+        return getRepository().find("uo", select -> select
+                .leftJoinFetch("uo.unidadeOrganizacionalPai")
+                .where().opt().like("uo.nomeUnidOrganizac", filter.getNomeUnidOrganizac())
+                .and().opt().equal("uo.unidOrganizacPai", filter.getUnidOrganizacPai())
+                .and().opt().equal("uo.codigoTipoUnidade", filter.getTipoUnidade()));
     }
 
     @Override

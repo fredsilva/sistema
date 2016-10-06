@@ -30,7 +30,7 @@ public class HistoricoNavegacaoServiceImpl implements HistoricoNavegacaoService 
                                                                       HistoricoNavegacaoFilter filter) {
 
         return repository.find("hn", sb -> sb.innerJoinFetch("hn.usuarioSistema", "us")
-                .leftJoinFetch("us.usuarioPostoTrabalho", "upt")
+                .leftJoinFetch("us.listUsuarioPostoTrabalho", "upt")
                 .leftJoinFetch("upt.postoTrabalho", "pt")
                 .leftJoinFetch("pt.unidadeOrganizacional","uo")
                 .where()

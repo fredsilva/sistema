@@ -11,7 +11,6 @@ import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -56,7 +55,7 @@ public class PedidoCamposAcoes extends AbstractEntity<Integer> {
 
     @NotNull(message = "#{arr_msg['parametros.pedidoReceita.idTipoPedido.obrigatorio']}")
     @JoinColumn(name = "ID_ACOES", referencedColumnName = "ID_ACOES", insertable = false, updatable = false)
-    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    @ManyToOne(optional = false)
     private PedidoTipoAcoes pedidoTipoAcoes;
 
     @Override

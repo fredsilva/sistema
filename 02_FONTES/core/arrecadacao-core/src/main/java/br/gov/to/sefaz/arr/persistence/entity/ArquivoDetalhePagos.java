@@ -11,7 +11,6 @@ import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -83,7 +82,7 @@ public class ArquivoDetalhePagos extends AbstractEntity<Long> {
     private BigDecimal valorAutenticado;
 
     @JoinColumn(name = "ID_ARQUIVOS", referencedColumnName = "ID_ARQUIVOS", insertable = false, updatable = false)
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne()
     private ArquivoRecepcao arquivoRecepcao;
 
     public ArquivoDetalhePagos() {

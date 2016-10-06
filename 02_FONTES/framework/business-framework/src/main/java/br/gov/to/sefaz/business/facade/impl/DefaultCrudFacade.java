@@ -73,6 +73,14 @@ public class DefaultCrudFacade<E extends AbstractEntity<I>, I extends Serializab
      * {@inheritDoc}.
      */
     @Override
+    public Collection<E> update(Collection<E> list) {
+        return service.update(list);
+    }
+
+    /**
+     * {@inheritDoc}.
+     */
+    @Override
     public Optional<E> delete(I id) {
         return service.delete(id);
     }

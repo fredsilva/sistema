@@ -5,7 +5,6 @@ import br.gov.to.sefaz.persistence.entity.AbstractEntity;
 import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -48,12 +47,12 @@ public class ArquivoErro extends AbstractEntity<Long> {
 
     @JoinColumn(name = "ID_DETALHE_ARQUIVO", referencedColumnName = "ID_DETALHE_ARQUIVO", insertable = false,
             updatable = false)
-    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    @ManyToOne(optional = false)
     private ArquivoDetalhePagos arquivoDetalhePagos;
 
     @JoinColumn(name = "ID_CODIGO_REJEICAO", referencedColumnName = "ID_CODIGO_REJEICAO", insertable = false,
             updatable = false, nullable = false)
-    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    @ManyToOne(optional = false)
     private TipoRejeicaoArquivos tipoRejeicaoArquivos;
 
     public ArquivoErro() {

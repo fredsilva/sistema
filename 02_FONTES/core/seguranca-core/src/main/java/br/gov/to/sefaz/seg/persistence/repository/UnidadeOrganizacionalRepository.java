@@ -38,4 +38,11 @@ public class UnidadeOrganizacionalRepository extends BaseRepository<UnidadeOrgan
                         .where().equalColumns("pt.identificacaoUnidOrganizac", "uo.identificacaoUnidOrganizac")));
     }
 
+    @Override
+    public UnidadeOrganizacional findOne(Long id) {
+        return findOne("uo", select -> select
+                .leftJoinFetch("uo.unidadeOrganizacionalPai")
+                .whereId(id));
+    }
+
 }

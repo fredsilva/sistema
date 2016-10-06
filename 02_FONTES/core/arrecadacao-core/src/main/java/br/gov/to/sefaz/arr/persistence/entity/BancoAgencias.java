@@ -12,7 +12,6 @@ import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
@@ -99,12 +98,12 @@ public class BancoAgencias extends AbstractEntity<BancoAgenciasPK> {
 
     @JoinColumn(name = "ID_BANCO", referencedColumnName = "ID_BANCO",
             nullable = false, insertable = false, updatable = false)
-    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    @ManyToOne(optional = false)
     private Bancos bancos;
 
     @JoinColumn(name = "ID_MUNICIPIO", referencedColumnName = "CODIGO_IBGE",
             insertable = false, updatable = false)
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne()
     private Municipio municipio;
 
     public BancoAgencias() {

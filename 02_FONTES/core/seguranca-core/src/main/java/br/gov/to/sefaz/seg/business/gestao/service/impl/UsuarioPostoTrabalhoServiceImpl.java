@@ -34,7 +34,10 @@ public class UsuarioPostoTrabalhoServiceImpl extends
 
     @Override
     public Collection<UsuarioPostoTrabalho> findAll() {
-        return getRepository().find(select -> select.orderBy("nomeCompletoUsuario", Order.ASC));
+        return getRepository().find("upt", select -> select
+                .innerJoinFetch("upt.postoTrabalho")
+                .innerJoinFetch("upt.usuarioSistema")
+                .orderBy("upt.nomeCompletoUsuario", Order.ASC));
     }
 
     @Override

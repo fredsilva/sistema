@@ -3,8 +3,6 @@ package br.gov.to.sefaz.seg.persistence.entity;
 import br.gov.to.sefaz.persistence.entity.AbstractEntity;
 import br.gov.to.sefaz.seg.persistence.converter.SituacaoUsuarioEnumConverter;
 import br.gov.to.sefaz.seg.persistence.enums.SituacaoUsuarioEnum;
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
 
 import java.util.Objects;
 import javax.persistence.Column;
@@ -56,7 +54,6 @@ public class UsuarioPerfil extends AbstractEntity<Long> {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "IDENTIFICACAO_PERFIL", referencedColumnName = "IDENTIFICACAO_PERFIL",
             insertable = false, updatable = false)
-    @Fetch(FetchMode.JOIN)
     private PerfilSistema perfisSistema;
 
     @ManyToOne(fetch = FetchType.LAZY)
