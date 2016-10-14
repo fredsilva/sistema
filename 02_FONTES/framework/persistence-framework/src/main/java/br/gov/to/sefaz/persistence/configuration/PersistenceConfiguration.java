@@ -51,7 +51,9 @@ public class PersistenceConfiguration {
     @Bean
     public Properties hibernateProperties() {
         Properties properties = new Properties();
-        properties.put("hibernate.dialect", "br.gov.to.sefaz.persistence.configuration.SatParseDialect");
+        properties.put("hibernate.dialect", "org.hibernate.dialect.Oracle10gDialect");
+        properties.put("hibernate.session_factory.statement_inspector",
+                "br.gov.to.sefaz.persistence.configuration.HibernateSqlInterceptor");
         properties.put("hibernate.hbm2ddl.auto", "none");
         properties.put("hibernate.show_sql", "true");
         properties.put("hibernate.format_sql", "true");

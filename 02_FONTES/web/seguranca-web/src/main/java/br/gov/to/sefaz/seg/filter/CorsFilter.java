@@ -29,7 +29,7 @@ public class CorsFilter implements Filter {
             throws IOException, ServletException {
         HttpServletResponse response = (HttpServletResponse) res;
         String serverName = req.getServerName();
-        String hostPort = AppProperties.getProperty("host.port").orElse("8443");
+        String hostPort = AppProperties.getAppProperty("host.port").orElse("8443");
         String host = "https://" + serverName + ":" + hostPort;
 
         response.setHeader("Access-Control-Allow-Origin", host);

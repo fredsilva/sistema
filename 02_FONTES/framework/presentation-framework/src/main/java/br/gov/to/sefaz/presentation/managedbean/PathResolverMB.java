@@ -94,7 +94,7 @@ public class PathResolverMB {
     public String getCertificadoLoginPath() {
         return "https://"
                 + FacesContext.getCurrentInstance().getExternalContext().getRequestServerName()
-                + ":" + AppProperties.getProperty("certificado.port").orElse("8844")
+                + ":" + AppProperties.getAppProperty("certificado.port").orElse("8844")
                 + FacesContext.getCurrentInstance().getExternalContext().getRequestContextPath()
                 + "/public/certificado.jsf?login";
     }
@@ -102,7 +102,7 @@ public class PathResolverMB {
     public String getCertificadoSolicitacaoPath() {
         return "https://"
                 + FacesContext.getCurrentInstance().getExternalContext().getRequestServerName()
-                + ":" + AppProperties.getProperty("certificado.port").orElse("8844")
+                + ":" + AppProperties.getAppProperty("certificado.port").orElse("8844")
                 + FacesContext.getCurrentInstance().getExternalContext().getRequestContextPath()
                 + "/public/certificado.jsf?solicitacao";
     }
@@ -110,7 +110,7 @@ public class PathResolverMB {
     public String getCertificadoECnpjPath() {
         return "https://"
                 + FacesContext.getCurrentInstance().getExternalContext().getRequestServerName()
-                + ":" + AppProperties.getProperty("certificado.port").orElse("8844")
+                + ":" + AppProperties.getAppProperty("certificado.port").orElse("8844")
                 + FacesContext.getCurrentInstance().getExternalContext().getRequestContextPath()
                 + "/public/certificado.jsf?atuarUsuarioPrincipal";
     }

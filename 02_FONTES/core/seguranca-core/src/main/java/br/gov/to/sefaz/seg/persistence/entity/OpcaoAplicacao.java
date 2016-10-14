@@ -6,6 +6,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -67,7 +68,7 @@ public class OpcaoAplicacao extends AbstractEntity<Long> {
     @Column(name = "IDENTIFICACAO_APLICACAO_MODULO")
     private Long identificacaoAplicacaoModulo;
 
-    @ManyToOne()
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "IDENTIFICACAO_APLICACAO_MODULO", referencedColumnName = "IDENTIFICACAO_APLICACAO_MODULO",
             insertable = false, updatable = false)
     private AplicacaoModulo aplicacaoModulo;

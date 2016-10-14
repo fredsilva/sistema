@@ -1,6 +1,7 @@
 package br.gov.to.sefaz.seg.business.authentication.handler;
 
 import br.gov.to.sefaz.util.properties.AppProperties;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.Random;
 
@@ -22,14 +23,18 @@ public class LdapHandler {
     public static LdapProperties getLdapProperties() {
         // Cria LdapProperties com os respectivos valores do ldap-parameters.properties
         LdapProperties ldapProperties = new LdapProperties();
-        ldapProperties.setUrl(AppProperties.getProperty("ldap.provider.url").orElse(""));
-        ldapProperties.setSecurityUrl(AppProperties.getProperty("ldap.provider.url.ssl").orElse(""));
-        ldapProperties.setDomain(AppProperties.getProperty("ldap.provider.domain").orElse(""));
-        ldapProperties.setBaseDomain(AppProperties.getProperty("ldap.provider.baseDomain").orElse(""));
-        ldapProperties.setBaseFilter(AppProperties.getProperty("ldap.provider.baseFilter").orElse(""));
-        ldapProperties.setTimeout(AppProperties.getProperty("ldap.connect.timeout").orElse(""));
-        ldapProperties.setUserManager(AppProperties.getProperty("ldap.provider.userManager").orElse(""));
-        ldapProperties.setPasswdManager(AppProperties.getProperty("ldap.provider.passwdManager").orElse(""));
+        ldapProperties.setUrl(AppProperties.getAppProperty("ldap.provider.url").orElse(StringUtils.EMPTY));
+        ldapProperties.setSecurityUrl(AppProperties.getAppProperty("ldap.provider.url.ssl").orElse(StringUtils.EMPTY));
+        ldapProperties.setDomain(AppProperties.getAppProperty("ldap.provider.domain").orElse(StringUtils.EMPTY));
+        ldapProperties.setBaseDomain(AppProperties.getAppProperty("ldap.provider.baseDomain")
+                .orElse(StringUtils.EMPTY));
+        ldapProperties.setBaseFilter(AppProperties.getAppProperty("ldap.provider.baseFilter")
+                .orElse(StringUtils.EMPTY));
+        ldapProperties.setTimeout(AppProperties.getAppProperty("ldap.connect.timeout").orElse(StringUtils.EMPTY));
+        ldapProperties.setUserManager(AppProperties.getAppProperty("ldap.provider.userManager")
+                .orElse(StringUtils.EMPTY));
+        ldapProperties.setPasswdManager(AppProperties.getAppProperty("ldap.provider.passwdManager")
+                .orElse(StringUtils.EMPTY));
         return ldapProperties;
     }
 

@@ -1,6 +1,6 @@
 package br.gov.to.sefaz.util.message;
 
-import br.gov.to.sefaz.exception.UnexpectedErrorException;
+import br.gov.to.sefaz.exception.BusinessException;
 import org.apache.commons.lang3.StringUtils;
 
 import java.text.MessageFormat;
@@ -36,7 +36,7 @@ public final class SourceBundle {
             ResourceBundle resourcebundle = getResourceBundle(bundle);
             return resourcebundle.getString(key);
         } catch (MissingResourceException e) {
-            throw new UnexpectedErrorException(e);
+            throw new BusinessException(e.getMessage(), e);
         }
     }
 
@@ -54,7 +54,7 @@ public final class SourceBundle {
             ResourceBundle resourcebundle = getResourceBundle(bundle);
             return MessageFormat.format(resourcebundle.getString(key), params);
         } catch (MissingResourceException e) {
-            throw new UnexpectedErrorException(e);
+            throw new BusinessException(e.getMessage(), e);
         }
     }
 
@@ -99,7 +99,7 @@ public final class SourceBundle {
         } catch (StringIndexOutOfBoundsException e) {
             Object param = key;
             String message = getMessage("mensagem.inconsistente", param);
-            throw new UnexpectedErrorException(message, e);
+            throw new BusinessException(message, e);
         }
     }
 

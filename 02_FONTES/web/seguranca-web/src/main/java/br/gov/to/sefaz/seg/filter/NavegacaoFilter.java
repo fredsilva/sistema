@@ -12,6 +12,7 @@ import org.springframework.web.context.support.SpringBeanAutowiringSupport;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
+import java.util.Objects;
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
 import javax.servlet.FilterConfig;
@@ -71,7 +72,10 @@ public class NavegacaoFilter implements Filter {
         RoleGroupKey activeGroup = AuthenticatedUserHandler.getActiveGroup().orElse(null);
         if (activeGroup != null && activeGroup.getType() == RoleGroupType.PROCURACAO) {
             ProcuracaoUsuario procuracaoUsuario = procuracaoUsuarioFacade.findOne(activeGroup.getId());
-            cpfCnpjProcurador = procuracaoUsuario.getCpfProcurado();
+            cpfCnpjProcurador = procuracaoUsuario.getCpfOrigem();
+            if (Objects.isNull(cpfCnpjProcurador)) {
+                cpfCnpjProcurador = procuracaoUsuario.getCnpjOrigem();
+            }
         }
         return cpfCnpjProcurador;
     }

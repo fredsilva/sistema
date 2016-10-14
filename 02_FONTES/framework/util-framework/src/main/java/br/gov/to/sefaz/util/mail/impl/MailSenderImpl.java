@@ -54,7 +54,7 @@ public class MailSenderImpl implements MailSender {
     private MimeMessageHelper buildMessageHelper(MimeMessage mimeMessage, String subject, String mailBody,
             boolean isHtmlBody, String... mailTo) throws MessagingException {
         MimeMessageHelper helper = new MimeMessageHelper(mimeMessage, true, "UTF-8");
-        helper.setFrom(AppProperties.getProperty("email.username").get());
+        helper.setFrom(AppProperties.getAppProperty("email.username").get());
 
         if (isHtmlBody) {
             helper.setText(mailBody, true);

@@ -1,6 +1,7 @@
 package br.gov.to.sefaz.arr.processamento.reader;
 
 import br.gov.to.sefaz.util.properties.AppProperties;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 
 import java.io.IOException;
@@ -15,7 +16,7 @@ import java.nio.file.Paths;
  */
 public class FileReaderExist {
 
-    private static final String PATH = AppProperties.getProperty("arrec.directory").orElse("");
+    private static final String PATH = AppProperties.getCustomProperty("arrec.directory").orElse(StringUtils.EMPTY);
 
     private final FileReader fileReader;
 

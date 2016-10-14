@@ -65,4 +65,10 @@ public class ConveniosArrecRepository extends BaseRepository<ConveniosArrec, Lon
         update(update -> update.set("situacao", situacao).whereId(id));
     }
 
+    @Override
+    public ConveniosArrec findOne(Long id) {
+        return findOne("ca", select -> select
+                .innerJoinFetch("ca.bancoAgencias", "ba")
+                .where().equal("ca.idConvenio", id));
+    }
 }

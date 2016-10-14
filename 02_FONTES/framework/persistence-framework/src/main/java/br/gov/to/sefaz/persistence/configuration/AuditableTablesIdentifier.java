@@ -3,8 +3,6 @@ package br.gov.to.sefaz.persistence.configuration;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.apache.commons.lang3.StringUtils.EMPTY;
-
 /**
  * Classe responsavel por identificar se uma tabela é auditavel ou não.
  *
@@ -13,7 +11,7 @@ import static org.apache.commons.lang3.StringUtils.EMPTY;
  */
 public class AuditableTablesIdentifier {
 
-    public static final String ENTITY_NAME_PATTERN = "(^.*?[.]\\w+?_)|(_)";
+    public static final String VIEW_NAME_PATTERN = "(?i).+?\\.VW_.+";
     private static NonAuditableTablesHolder nonAuditableTablesHolder = new NonAuditableTablesHolder();
 
     /**
@@ -23,11 +21,13 @@ public class AuditableTablesIdentifier {
      * @return true se a tabela for auditavel
      */
     public static boolean isAuditable(String tableOrEntityName) {
-        return nonAuditableTablesHolder.getNames().stream()
-                .noneMatch(ignorable -> ignorable.equalsIgnoreCase(tableOrEntityName.trim())
-                        || ignorable.replaceAll(ENTITY_NAME_PATTERN, EMPTY).equalsIgnoreCase(tableOrEntityName.trim()));
+        return !isView(tableOrEntityName) && nonAuditableTablesHolder.getNames().stream()
+                .noneMatch(ignorable -> ignorable.equalsIgnoreCase(tableOrEntityName.trim()));
     }
 
+    private static boolean isView(String tableOrEntityName) {
+        return tableOrEntityName.matches(VIEW_NAME_PATTERN);
+    }
 
     /**
      * Classe que contém o nome e schema de todas as tabelas e views não auditáveis do sistema.
@@ -40,10 +40,8 @@ public class AuditableTablesIdentifier {
             names = new ArrayList<>();
 
             // tabelas/views que não possuem colunas de auditoria
+            names.add("DUAL");
             names.add("SEFAZ_PAR.TA_LOGRADOURO");
-            names.add("SEFAZ_SEG.VW_COMUNICACAO_CONTRIBUINTE");
-            names.add("SEFAZ_SEG.VW_HISTORICO_NAVEGACAO");
-            names.add("SEFAZ_SEG.VW_LISTAGEM_CPF_PROCURACAO");
         }
 
         public List<String> getNames() {

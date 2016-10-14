@@ -135,7 +135,7 @@ public class AuthenticationFactory {
     private String getNomeCpfProcurador(ProcuracaoUsuario procuracaoUsuario) {
         String nomeCompletoUsuario;
         nomeCompletoUsuario = SourceBundle.getMessage(MessageUtil.SEG, "seg.geral.procuracaoUsuario.voceMesmo");
-        if (isProcuradorSameAsProcurado(procuracaoUsuario)) {
+        if (!isProcuradorSameAsProcurado(procuracaoUsuario)) {
             nomeCompletoUsuario = procuracaoUsuario.getCpfOrigemProcuracao().getNome();
         }
         return nomeCompletoUsuario;

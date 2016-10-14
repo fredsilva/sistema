@@ -4,7 +4,7 @@ import br.gov.to.sefaz.business.service.impl.DefaultCrudService;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.ValidationSuite;
 import br.gov.to.sefaz.exception.BusinessException;
-import br.gov.to.sefaz.exception.UnexpectedErrorException;
+import br.gov.to.sefaz.exception.UnhandledException;
 import br.gov.to.sefaz.persistence.query.structure.select.orderby.Order;
 import br.gov.to.sefaz.seg.business.authentication.domain.ChangePasswordDto;
 import br.gov.to.sefaz.seg.business.authentication.handler.AuthenticatedUserHandler;
@@ -132,7 +132,7 @@ public class UsuarioSistemaServiceImpl extends DefaultCrudService<UsuarioSistema
             throw new BusinessException(message, e);
         } catch (MessagingException e) {
             String message = SourceBundle.getMessage(MessageUtil.SEG, "reset.password.enviar.email");
-            throw new UnexpectedErrorException(message, e);
+            throw new UnhandledException(message, e);
         }
 
         usuarioSistema.setDataUltimaAlteracaoSenha(LocalDateTime.now());
@@ -224,7 +224,7 @@ public class UsuarioSistemaServiceImpl extends DefaultCrudService<UsuarioSistema
             mailService.sendMail(correioEletronico.build());
         } catch (MessagingException | IOException e) {
             String message = SourceBundle.getMessage(MessageUtil.SEG, "reset.password.enviar.email");
-            throw new UnexpectedErrorException(message, e);
+            throw new UnhandledException(message, e);
         }
     }
 

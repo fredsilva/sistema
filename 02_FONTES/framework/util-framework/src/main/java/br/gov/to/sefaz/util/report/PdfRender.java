@@ -1,6 +1,6 @@
 package br.gov.to.sefaz.util.report;
 
-import br.gov.to.sefaz.exception.UnexpectedErrorException;
+import br.gov.to.sefaz.exception.UnhandledException;
 import br.gov.to.sefaz.util.formatter.FormatterUtil;
 import com.lowagie.text.DocumentException;
 import org.w3c.dom.Document;
@@ -42,7 +42,7 @@ public class PdfRender {
             createOutputStream(url, os, params);
             return os.toByteArray();
         } catch (IOException | DocumentException e) {
-            throw new UnexpectedErrorException(e);
+            throw new UnhandledException(e);
         }
     }
 
@@ -57,7 +57,7 @@ public class PdfRender {
         try (OutputStream os = Files.newOutputStream(outputFile)) {
             createOutputStream(url, os, params);
         } catch (IOException | DocumentException e) {
-            throw new UnexpectedErrorException(e);
+            throw new UnhandledException(e);
         }
     }
 

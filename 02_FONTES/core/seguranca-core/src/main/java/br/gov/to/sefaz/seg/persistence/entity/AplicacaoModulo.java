@@ -6,6 +6,7 @@ import java.util.Objects;
 import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -43,7 +44,7 @@ public class AplicacaoModulo extends AbstractEntity<Long> {
     @OneToMany(mappedBy = "aplicacaoModulo")
     private Set<OpcaoAplicacao> opcoesAplicacao;
 
-    @ManyToOne()
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "IDENTIFICACAO_MODULO_SISTEMA", referencedColumnName = "IDENTIFICACAO_MODULO_SISTEMA",
             insertable = false, updatable = false)
     private ModuloSistema moduloSistema;

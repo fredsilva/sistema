@@ -44,7 +44,7 @@ public class SatExceptionHandler extends ExceptionHandlerWrapper {
     public SatExceptionHandler(
             ExceptionHandler wrapped) {
         this.wrapped = wrapped;
-        logDir = AppProperties.getProperty("exception.log.directory").get();
+        logDir = AppProperties.getAppProperty("exception.log.directory").get();
         if (StringUtils.isEmpty(logDir)) {
             logDir = System.getProperty("jboss.server.log.dir");
         }
@@ -118,14 +118,14 @@ public class SatExceptionHandler extends ExceptionHandlerWrapper {
             Files.createDirectories(Paths.get(logDir));
             Files.write(Paths.get(logDir).resolve(logName), value.getBytes());
         } catch (IOException e) {
-            throw new UnexpectedErrorException("Erro ao gerar log de erro!", e);
+            throw new InterceptedErrorException("Erro ao gerar log de erro!", e);
         }
     }
 
     private void addUnexpectedEvent(String eventId) {
         final FacesContext facesContext = FacesContext.getCurrentInstance();
         String message = SourceBundle.getMessage("satExceptionHandler.unexpectedErrorException");
-        UnexpectedErrorException unexpectedException = new UnexpectedErrorException(String.format(message, eventId));
+        InterceptedErrorException unexpectedException = new InterceptedErrorException(String.format(message, eventId));
         ExceptionQueuedEventContext eventContext = new ExceptionQueuedEventContext(facesContext, unexpectedException);
 
         getUnhandledExceptionQueuedEvents().add(new ExceptionQueuedEvent(eventContext));

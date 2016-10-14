@@ -12,4 +12,12 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public class ArquivoRecepcaoRepository extends BaseRepository<ArquivoRecepcao, Long> {
+    @Override
+    public ArquivoRecepcao findOne(Long id) {
+        return findOne("ar", select -> select
+                .innerJoinFetch("ar.bancos", "ba")
+                .innerJoinFetch("ar.conveniosArrecadacao", "ca")
+                .innerJoinFetch("ca.bancoAgencias", "ba")
+                .where().equal("ar.idArquivos", id));
+    }
 }

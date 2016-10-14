@@ -262,7 +262,7 @@ public class LdapProvider {
             env.put(Context.PROVIDER_URL, ldapProperties.getSecurityUrl() + "/" + ldapProperties.getDomain());
             env.put(Context.SECURITY_PROTOCOL, "ssl");
         } else {
-            env.put(Context.PROVIDER_URL, ldapProperties.getUrl());
+            env.put(Context.PROVIDER_URL, ldapProperties.getUrl() + "/" + ldapProperties.getDomain());
         }
         env.put(Context.SECURITY_AUTHENTICATION, "simple");
         env.put(Context.REFERRAL, "follow");

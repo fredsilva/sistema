@@ -11,13 +11,11 @@ public class BusinessException extends RuntimeException implements HandledSystem
 
     private static final long serialVersionUID = 8043841465872266679L;
 
-    public BusinessException(
-            String message) {
+    public BusinessException(String message) {
         super(message);
     }
 
-    public BusinessException(
-            String message, Throwable cause) {
+    public BusinessException(String message, Throwable cause) {
         super(message, cause);
     }
 

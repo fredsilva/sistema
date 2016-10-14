@@ -86,6 +86,7 @@
     <orderEntry type="library" name="Maven: org.ow2.asm:asm:5.0.3" level="project" />
     <orderEntry type="library" name="Maven: org.apache.ant:ant:1.9.4" level="project" />
     <orderEntry type="library" name="Maven: org.apache.ant:ant-launcher:1.9.4" level="project" />
+    <orderEntry type="library" name="Maven: com.github.jsqlparser:jsqlparser:0.9.6" level="project" />
     <orderEntry type="module" module-name="parametrizacao-core" />
   </component>
 </module>

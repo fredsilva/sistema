@@ -7,7 +7,6 @@ import br.gov.to.sefaz.persistence.query.parser.update.UpdateParser;
 import br.gov.to.sefaz.persistence.query.structure.update.UpdateStructure;
 import br.gov.to.sefaz.persistence.query.structure.where.ConditionsStructure;
 import br.gov.to.sefaz.persistence.satquery.parser.QualifySatQueryParser;
-import br.gov.to.sefaz.persistence.satquery.parser.handler.RegistroExcluidoHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -32,9 +31,6 @@ public class SatUpdateParser extends UpdateParser {
 
     @Override
     public ResultQuery parse(UpdateStructure structure, int indentationLvl, ParamIdGenerator paramId) {
-        RegistroExcluidoHandler
-                .createConditions(structure.getWhere(), structure.getFrom(), structure.getQueryLanguage())
-                .ifPresent(structure::setWhere);
         return super.parse(structure, indentationLvl, paramId);
     }
 }

@@ -29,10 +29,10 @@ public class OpcaoAplicacaoRepository extends BaseRepository<OpcaoAplicacao, Lon
     public List<OpcaoAplicacao> findAllOpcaoAplicacao() {
         return find("oa", select -> select
             .innerJoinFetch("oa.aplicacaoModulo", "am")
-                .innerJoinFetch("am.moduloSistema", "ms")
-                .orderBy("ms.abreviacaoModulo", Order.ASC).andBy("oa.descripcaoOpcao", Order.ASC))
-                .stream().collect(Collectors.toSet())
-                .stream().collect(Collectors.toList());
+            .innerJoinFetch("am.moduloSistema", "ms")
+            .orderBy("ms.abreviacaoModulo", Order.ASC).andBy("oa.descripcaoOpcao", Order.ASC))
+            .stream().collect(Collectors.toSet())
+            .stream().collect(Collectors.toList());
     }
 
     /**
@@ -43,8 +43,8 @@ public class OpcaoAplicacaoRepository extends BaseRepository<OpcaoAplicacao, Lon
      */
     public List<OpcaoAplicacao> findByIds(Collection<Long> ids) {
         return find("oa", select -> select
-                .innerJoinFetch("oa.aplicacaoModulo", "am")
-                .innerJoinFetch("am.moduloSistema", "ms")
-                .where().in("oa.identificacaoOpcaoAplicacao", ids));
+            .innerJoinFetch("oa.aplicacaoModulo", "am")
+            .innerJoinFetch("am.moduloSistema", "ms")
+            .where().in("oa.identificacaoOpcaoAplicacao", ids));
     }
 }
