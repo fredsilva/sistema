@@ -1,0 +1,125 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
+<siteinfo>
+<sitename>SEFAZ-TO Wiki</sitename>
+<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<generator>JAMWiki 1.3.2</generator>
+<case>case-sensitive</case>
+<namespaces>
+<namespace key="-2">Media</namespace>
+<namespace key="-1">Special</namespace>
+<namespace key="0" />
+<namespace key="1">Comments</namespace>
+<namespace key="2">User</namespace>
+<namespace key="3">User comments</namespace>
+<namespace key="4">Project</namespace>
+<namespace key="5">Project comments</namespace>
+<namespace key="6">File</namespace>
+<namespace key="7">File comments</namespace>
+<namespace key="8">JAMWiki</namespace>
+<namespace key="9">JAMWiki comments</namespace>
+<namespace key="10">Template</namespace>
+<namespace key="11">Template comments</namespace>
+<namespace key="12">Help</namespace>
+<namespace key="13">Help comments</namespace>
+<namespace key="14">Category</namespace>
+<namespace key="15">Category comments</namespace>
+</namespaces>
+</siteinfo>
+<page>
+<title>Manuten����o de Usuario</title>
+<ns>0</ns>
+<id>345</id>
+<revision>
+<id>790</id>
+<timestamp>2016-07-19T10:28:38Z</timestamp>
+<contributor>
+<username>admin</username>
+<id>1</id>
+</contributor>
+<comment>/* Ativando Usu��rio */ </comment>
+<text xml:space="preserve" bytes="3667">Acessar o menu &apos;&apos;&apos;Seguran��a do Sistema &gt; Ger��ncia &gt; Manter Usu��rio.&apos;&apos;&apos;
+
+Abrir�� a tela de manuten����o de usu��rios contendo a pesquisa de Usu��rios cadastrados.
+
+
+== Pesquisando Usu��rios ==
+
+Para pesquisar Usu��rios cadastrados, �� necess��rio acessar o menu Seguran��a do Sistema &gt; Ger��ncia &gt; Manter Usu��rio no sistema, informar algum dos filtros dispon��veis (passos 1) e clicar no bot��o Consultar (passo 2).
+
+[[File:1-SEGUC0060.jpg|1-SEGUC0060.jpg]]
+
+&apos;&apos;&apos;Considera����es a respeito dos campos a serem preenchidos pelo usu��rio:&apos;&apos;&apos;
+
+:*Ao menos um Filtro deve ser informado para que a consulta retorne registros.
+:*O filtro Nome de usu��rio somente �� v��lido a partir de cinco caracteres digitados.
+:*A consulta �� ordenada pelo Nome de Usu��rio ascendentemente.
+
+----
+== Criando Usu��rio ==
+
+A tela permite a inclus��o de um novo usu��rio no sistema a partir do bot��o Criar Usu��rio, conforme ilustrado no passo 1 abaixo.
+
+[[File:2-SEGUC0060.jpg|2-SEGUC0060.jpg]]
+
+Ao clicar no bot��o Criar Usu��rio, o sistema exibe a janela Cria����o de Usu��rio, com o formul��rio de cadastro a ser preenchido.
+
+[[File:3-SEGUC0060.jpg|3-SEGUC0060.jpg]]
+
+A inclus��o �� confirmada ao clicar no bot��o Salvar (Passo 2).
+
+&apos;&apos;&apos;Considera����es a respeito dos campos a serem preenchidos pelo usu��rio:&apos;&apos;&apos;
+
+:*Todos os campos da tela com aster��sco (*) s��o de preenchimento obrigat��rio.
+:*As informa����es referentes a Unidade Organizacional e Posto de trabalho somente est��o dispon��veis quando o tipo de usu��rio �� Funcion��rio.
+
+Para cancelar a inclus��o, deve-se clicar no bot��o Fechar (Passo 3), ou clicar fora da janela de inclus��o. Os dados digitados s��o descartados quando a inclus��o �� cancelada.
+
+----
+== Alterando Usu��rio ==
+
+Para alterar o cadastro de um Usu��rio �� necess��rio acessar o menu Seguran��a do Sistema &gt; Ger��ncia &gt; Manter Usu��rio e clicar no ��cone Alterar, na lista de Usu��rios cadastrados, conforme o passo 1 ilustrado abaixo.
+
+[[File:4-SEGUC0060.jpg|4-SEGUC0060.jpg]]
+
+Ao clicar no ��cone Alterar, o sistema exibe a janela de Cria����o de Usu��rio, conforme ilustrado no passo 2 abaixo.
+Os campos referentes ao registro de Usu��rio a ser alterado s��o preenchidos automaticamente pelo sistema.
+
+[[File:5-SEGUC0060.jpg|5-SEGUC0060.jpg]]
+
+Ap��s a execu����o do Passo 2, �� apresentado mensagem de dialogo informando o resultado da opera����o em quest��o.
+
+Para cancelar a altera����o, deve-se clicar no bot��o Fechar, ou clicar fora da janela. Os dados digitados s��o descartados quando a altera����o �� cancelada.
+
+----
+== Criando Senha ==
+
+O sistema permite a cria����o de uma nova senha para um Usu��rio cadastrado. Atrav��s do menu Seguran��a do Sistema &gt; Ger��ncia &gt; Manter Usu��rio, deve-se acessar o ��cone Criar Senha, conforme ilustrado no Passo 1 abaixo.
+
+[[File:6-SEGUC0060.jpg|6-SEGUC0060.jpg]]
+
+Ao clicar no bot��o Criar Senha (passo 1), uma nova senha �� gerada e enviada para o usu��rio. 
+
+A senha enviada �� gerada automaticamente pelo sistema. Quando o usu��rio fizer a sua primeira autentica����o no sistema com a nova senha, o sistema solicitar�� a redefini����o desta para uma senha da prefer��ncia do usu��rio.
+
+----
+== Inativando Usu��rio ==
+
+O sistema permite a Inativa����o de um usu��rio ativo, atrav��s do ��cone Inativar Usu��rio, conforme destacado no Passo 1 abaixo.
+
+[[File:7-SEGUC0060.jpg|7-SEGUC0060.jpg]]
+
+Ap��s a execu����o do Passo 1, �� apresentado mensagem de dialogo informando o resultado da opera����o em quest��o.
+
+----
+== Ativando Usu��rio ==
+
+O sistema permite a Ativa����o de um usu��rio inativo, atrav��s do ��cone Ativar Usu��rio, conforme destacado no Passo 1 abaixo.
+
+[[File:8-SEGUC0060.jpg|8-SEGUC0060.jpg]]
+
+Ap��s a execu����o do Passo 1, �� apresentado mensagem de dialogo informando o resultado da opera����o em quest��o.
+
+</text>
+</revision>
+</page>
+</mediawiki>

@@ -1,0 +1,56 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
+<siteinfo>
+<sitename>SEFAZ-TO Wiki</sitename>
+<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<generator>JAMWiki 1.3.2</generator>
+<case>case-sensitive</case>
+<namespaces>
+<namespace key="-2">Media</namespace>
+<namespace key="-1">Special</namespace>
+<namespace key="0" />
+<namespace key="1">Comments</namespace>
+<namespace key="2">User</namespace>
+<namespace key="3">User comments</namespace>
+<namespace key="4">Project</namespace>
+<namespace key="5">Project comments</namespace>
+<namespace key="6">File</namespace>
+<namespace key="7">File comments</namespace>
+<namespace key="8">JAMWiki</namespace>
+<namespace key="9">JAMWiki comments</namespace>
+<namespace key="10">Template</namespace>
+<namespace key="11">Template comments</namespace>
+<namespace key="12">Help</namespace>
+<namespace key="13">Help comments</namespace>
+<namespace key="14">Category</namespace>
+<namespace key="15">Category comments</namespace>
+</namespaces>
+</siteinfo>
+<page>
+<title>Efetuar Login no Sistema com CPF</title>
+<ns>0</ns>
+<id>299</id>
+<revision>
+<id>1250</id>
+<timestamp>2016-10-13T15:54:07Z</timestamp>
+<contributor>
+<username>admin</username>
+<id>1</id>
+</contributor>
+<comment />
+<text xml:space="preserve" bytes="801">Para efetuar o login �� necess��rio abrir o navegador Chrome, Internet Explorer, Firefox, Opera ou Safari, digitar o endere��o Web do sistema e pressionar a tecla ENTER. 
+Abrir�� a tela de acesso, conforme Figura abaixo:
+
+[[File:Login_tela.jpg|caption]]
+
+O usu��rio dever�� informar o CPF e a senha de acesso e clicar no bot��o ���ENTRAR���.
+O sistema efetuar�� a autentica����o no Sistema Tribut��rio da SEFAZ-TO e exibir�� a estrutura de menus conforme as permiss��es do usu��rio autenticado. Portanto, primeiramente o usu��rio dever�� ter seu cadastro no Sistema para que seja poss��vel sua autentica����o.
+
+&apos;&apos;&apos;�� importante salientar que ap��s cinco (5) tentativas sem exito para obter acesso no sistema, a conta do usu��rio em quest��o, ficar�� bloqueada durante duas (2) horas.&apos;&apos;&apos;
+
+&lt;/br&gt;
+----
+[[Login do Sistema | Voltar]]
+</text>
+</revision>
+</page>
+</mediawiki>

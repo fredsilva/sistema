@@ -1,0 +1,134 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
+<siteinfo>
+<sitename>SEFAZ-TO Wiki</sitename>
+<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<generator>JAMWiki 1.3.2</generator>
+<case>case-sensitive</case>
+<namespaces>
+<namespace key="-2">Media</namespace>
+<namespace key="-1">Special</namespace>
+<namespace key="0" />
+<namespace key="1">Comments</namespace>
+<namespace key="2">User</namespace>
+<namespace key="3">User comments</namespace>
+<namespace key="4">Project</namespace>
+<namespace key="5">Project comments</namespace>
+<namespace key="6">File</namespace>
+<namespace key="7">File comments</namespace>
+<namespace key="8">JAMWiki</namespace>
+<namespace key="9">JAMWiki comments</namespace>
+<namespace key="10">Template</namespace>
+<namespace key="11">Template comments</namespace>
+<namespace key="12">Help</namespace>
+<namespace key="13">Help comments</namespace>
+<namespace key="14">Category</namespace>
+<namespace key="15">Category comments</namespace>
+</namespaces>
+</siteinfo>
+<page>
+<title>Manuten����o dos Par��metros Gerais do Sistema</title>
+<ns>0</ns>
+<id>499</id>
+<revision>
+<id>1155</id>
+<timestamp>2016-10-04T10:48:00Z</timestamp>
+<contributor>
+<username>admin</username>
+<id>1</id>
+</contributor>
+<comment />
+<text xml:space="preserve" bytes="4482">Esta funcionalidade tem por objetivo realizar a manuten����o dos registros de Par��metros Gerais do Sistema tendo como op����es a Consulta, Cria����o, Altera����o e Exclus��o. 
+
+O objetivo �� simplificar o uso de uma tabela de c��digos com valores que podem ser uma listagem de valores est��ticos ou din��micos para o dom��nio do sistema. No caso de conte��do din��mico que �� um script SQL pode suportar o uso de vari��veis bind de Oracle.
+
+Para acessar a Manuten����o dos Par��metros Gerais do Sistema, �� necess��rio acessar o menu &apos;&apos;&apos;Par��metros Gerais &gt; Gest��o &gt; Manuten����o dos Par��metros Gerais do Sistema&apos;&apos;&apos;.
+
+----
+== Consultando Par��metros Gerais do Sistema Cadastrados ==
+
+ Com a funcionalidade de consulta aberta, pode ser consultados as informa����o dos par��metros gerais utilizando o filtro &apos;&apos;&apos;Nome do Par��metro Geral&apos;&apos;&apos; (passos 1) e clicar no bot��o Consultar (passo 2).
+
+
+[[File:1-PARUC0010.jpg|1-PARUC0010]]
+
+
+&apos;&apos;&apos;Considera����es a respeito dos campos a serem preenchidos pelo usu��rio:&apos;&apos;&apos;
+
+:*N��o �� obrigat��rio informa o filtro &apos;&apos;&apos;Nome do Par��metro Geral&apos;&apos;&apos;.
+:*N��o h�� diferen��a entre mai��sculas e min��sculas para o filtro da consulta.
+:*Pode der informado parte do nome do par��metro geral. Neste caso o sistema deve encontrar coincid��ncias.
+
+
+----
+ Ap��s ser confirmada a consulta no passo 2, �� exibido os dados de hist��rico de acesso (passo 3) conforme filtros informados no passo 1.
+
+
+[[File:2-PARUC0010.jpg|2-PARUC0010]]
+
+&apos;&apos;&apos;Considera����es a respeito dos registros retornados pela consulta:&apos;&apos;&apos;
+
+:*O resultado da consulta �� ordenada pelo Nome do Par��metro Geral ascendentemente.
+:*O resultado da consulta poder�� ser ordenado por qualquer uma das colunas de retorno, basta clicar no nome da coluna correspondente.
+
+----
+== Inserindo novo Par��metro Geral do Sistema ==
+
+ Para incluir um novo par��metro geral do sistema ao cadastro, acessar a funcionalidade &apos;&apos;&apos;Par��metros Gerais do Sistema&apos;&apos;&apos; e clicar no bot��o &apos;&apos;&apos;Inserir Par��metro Geral&apos;&apos;&apos; (Passo 1).
+
+
+[[File:3-PARUC0010.jpg|3-PARUC0010]]
+
+
+----
+ Ap��s clicar no bot��o &apos;&apos;&apos;Inserir Par��metro Geral&apos;&apos;&apos; (Passo 1), abrir�� uma nova tela para que sejam informados os dados do novo &apos;&apos;&apos;Par��metro Geral do Sistema&apos;&apos;&apos; (Passo 2).
+
+
+[[File:4-PARUC0010.jpg|4-PARUC0010]]
+
+
+ Ap��s informar os dados do novo par��metro, basta clicar no bot��o &apos;&apos;&apos;Salvar&apos;&apos;&apos; (Passo 3) para que o novo par��metro seja inserido ao cadastro.
+
+&apos;&apos;&apos;Considera����es a respeito do preenchimento de um novo par��metro geral:&apos;&apos;&apos;
+
+:*Para a inclus��o de um novo par��metro, deve ser informado os campos: Nome do Par��metro Geral, Objetivo do Par��metro, Tipo Par��metro [Est��tico ou Din��mico] e Conte��do Valores.
+:*�� obrigat��rio que sejam informados todos os campos do cadastro para inclus��o do novo par��metro.
+
+----
+== Editando um Par��metro Geral do Sistema j�� cadastrado ==
+
+ Para editar um par��metro geral j�� cadastrado no sistema, acessar a funcionalidade &apos;&apos;&apos;Par��metros Gerais do Sistema&apos;&apos;&apos;, consultar o par��metro desejado e clicar no ��cone de a����es &apos;&apos;&apos;Editar&apos;&apos;&apos; (Passo 1).
+
+[[File:5-PARUC0010.jpg|5-PARUC0010]]
+
+----
+
+ Ap��s clicar no ��cone &apos;&apos;&apos;Editar&apos;&apos;&apos; (Passo 1), abrir�� uma nova tela para que sejam editadas as informa����es do &apos;&apos;&apos;Par��metro Geral do Sistema&apos;&apos;&apos; (Passo 2).
+
+[[File:6-PARUC0010.jpg|6-PARUC0010]]
+
+ Ap��s editar as informa����es desejadas do par��metro, basta clicar no bot��o &apos;&apos;&apos;Salvar&apos;&apos;&apos; (Passo 3) para que o par��metro seja atualizado no cadastro.
+
+&apos;&apos;&apos;Considera����es a respeito da edi����o de um par��metro geral j�� cadastrado:&apos;&apos;&apos;
+
+:*Para a edi����o de um par��metro, pode ser editado os campos: Nome do Par��metro Geral, Objetivo do Par��metro, Tipo Par��metro [Est��tico ou Din��mico] e Conte��do Valores.
+:*�� obrigat��rio que sejam informados todos os campos do cadastro para edi����o do par��metro.
+
+----
+== Excluindo um Par��metro Geral do Sistema j�� cadastrado ==
+
+ Para excluir um par��metro geral do sistema j�� cadastro, acessar a funcionalidade &apos;&apos;&apos;Par��metros Gerais do Sistema&apos;&apos;&apos;, consultar o par��metro desejado e clicar no ��cone de a����es &apos;&apos;&apos;Excluir&apos;&apos;&apos; (Passo 1).
+
+[[File:7-PARUC0010.jpg|7-PARUC0010]]
+
+----
+ Ap��s clicar no ��cone &apos;&apos;&apos;Excluir&apos;&apos;&apos; (Passo 1), sistema emite mensagem de confirma����o &apos;&apos;&apos;Excluir o Par��metro Geral?&apos;&apos;&apos;.
+
+[[File:8-PARUC0010.jpg|8-PARUC0010]]
+
+ Para confirmar a exclus��o do par��metro, clicar no bot��o &apos;&apos;&apos;Sim&apos;&apos;&apos; (Passo 2) e o sistema ir�� excluir o par��metro e emitir a mensagem &apos;&apos;&apos;O par��metro geral foi exclu��do!&apos;&apos;&apos;.
+
+ Caso deseje cancelar a opera����o de exclus��o, clicar no bot��o &apos;&apos;&apos;N��o&apos;&apos;&apos; (Passo 2) e o sistema volta para a tela de consulta de par��metros gerais e cancela a exclus��o.
+</text>
+</revision>
+</page>
+</mediawiki>

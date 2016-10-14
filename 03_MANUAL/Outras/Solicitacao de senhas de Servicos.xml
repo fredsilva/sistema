@@ -1,0 +1,83 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
+<siteinfo>
+<sitename>SEFAZ-TO Wiki</sitename>
+<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<generator>JAMWiki 1.3.2</generator>
+<case>case-sensitive</case>
+<namespaces>
+<namespace key="-2">Media</namespace>
+<namespace key="-1">Special</namespace>
+<namespace key="0" />
+<namespace key="1">Comments</namespace>
+<namespace key="2">User</namespace>
+<namespace key="3">User comments</namespace>
+<namespace key="4">Project</namespace>
+<namespace key="5">Project comments</namespace>
+<namespace key="6">File</namespace>
+<namespace key="7">File comments</namespace>
+<namespace key="8">JAMWiki</namespace>
+<namespace key="9">JAMWiki comments</namespace>
+<namespace key="10">Template</namespace>
+<namespace key="11">Template comments</namespace>
+<namespace key="12">Help</namespace>
+<namespace key="13">Help comments</namespace>
+<namespace key="14">Category</namespace>
+<namespace key="15">Category comments</namespace>
+</namespaces>
+</siteinfo>
+<page>
+<title>Solicitacao de senhas de Servicos</title>
+<ns>0</ns>
+<id>342</id>
+<revision>
+<id>692</id>
+<timestamp>2016-06-23T16:59:43Z</timestamp>
+<contributor>
+<username>admin</username>
+<id>1</id>
+</contributor>
+<comment />
+<text xml:space="preserve" bytes="2350">Acessar a op����o &apos;&apos;&apos;Solicita����o para Autoriza����o de Senhas de Servi��os via Internet&apos;&apos;&apos;, no Portal do SEFAZ-TO.
+
+Abrir�� a tela de Identifica����o do Certificado Digital ou CPF.	
+
+== Cadastrando Senha de Servi��os via Certificado Digital ==
+
+Para cadastrar o usu��rio para acesso ao Novo Sistema Tribut��rio da SEFAZ-TO atrav��s do Certificado Digital, deve-se clicar no bot��o Certificado Digital, conforme o passo 1 ilustrado abaixo.
+
+**** COLOCAR IMAGEM DA TELA SEGUC0040PG01, COM DESTAQUE PARA O BOT��O CERTIFICADO DIGITAL
+
+Ser�� exibida a tela para sele����o do CPF a ser cadastrado no sistema. Deve-se selecionar o CPF desejado e clicar em OK (passo 2).
+
+**** COLOCAR IMAGEM DO AUTENTICADOR DO CERTIFICADO DIGITAL, COM DESTAQUE PARA A CONFIRMA����O DO CPF SELECIONADO
+
+Observa����o: O layout da tela pode variar conforme o Navegador de internet utilizado.
+
+Ser�� solicitada a senha do Certificado Digital para o usu��rio, que deve digitar a senha e clicar em ok (passo 3)
+
+****COLOCAR A IMAGEM DA JANELA PARA DIGITA����O DA SENHA DO CERTIFICADO DIGITAL
+
+Ap��s digitar a senha corretamente e confirmar, o usu��rio �� direcionado para a tela com o formul��rio de cadastro.
+
+**** COLOCAR A IMAGEM DA TELA SEGUC0040PG02, COM DESTAQUE PARA O BOT��O CONFIRMAR COM N��MERO 4
+
+No formul��rio de cadastro, todos os campos sinalizados com aster��sco (*) s��o obrigat��rios e devem ser preenchidos.
+Ao clicar no bot��o Confirmar (passo 4), o sistema exibe a mensagem de confirma����o do cadastro e envia um email com as instru����es dos pr��ximos passos para confirma����o do cadastro. 
+
+----
+== Cadastrando Senha de Servi��os via CPF ==
+
+Para cadastrar o usu��rio para acesso ao Novo Sistema Tribut��rio da SEFAZ-TO atrav��s do Certificado Digital, deve-se preencher o campo CPF e clicar no bot��o Continuar, conforme o passo 1 ilustra na imagem abaixo.
+
+**** COLOCAR IMAGEM DA TELA SEGUC0040PG01, COM DESTAQUE PARA O CAMPO CPF com n��mero 1
+
+O usu��rio �� direcionado para a tela com o formul��rio de cadastro.
+
+**** COLOCAR A IMAGEM DA TELA SEGUC0040PG02, COM DESTAQUE PARA O BOT��O CONFIRMAR COM N��MERO 2
+
+No formul��rio de cadastro, todos os campos sinalizados com aster��sco (*) s��o obrigat��rios e devem ser preenchidos.
+Ao clicar no bot��o Confirmar (passo 2), o sistema exibe a mensagem de confirma����o do cadastro e envia um email com as instru����es dos pr��ximos passos para confirma����o do cadastro. 
+</text>
+</revision>
+</page>
+</mediawiki>

@@ -1,0 +1,68 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
+<siteinfo>
+<sitename>SEFAZ-TO Wiki</sitename>
+<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<generator>JAMWiki 1.3.2</generator>
+<case>case-sensitive</case>
+<namespaces>
+<namespace key="-2">Media</namespace>
+<namespace key="-1">Special</namespace>
+<namespace key="0" />
+<namespace key="1">Comments</namespace>
+<namespace key="2">User</namespace>
+<namespace key="3">User comments</namespace>
+<namespace key="4">Project</namespace>
+<namespace key="5">Project comments</namespace>
+<namespace key="6">File</namespace>
+<namespace key="7">File comments</namespace>
+<namespace key="8">JAMWiki</namespace>
+<namespace key="9">JAMWiki comments</namespace>
+<namespace key="10">Template</namespace>
+<namespace key="11">Template comments</namespace>
+<namespace key="12">Help</namespace>
+<namespace key="13">Help comments</namespace>
+<namespace key="14">Category</namespace>
+<namespace key="15">Category comments</namespace>
+</namespaces>
+</siteinfo>
+<page>
+<title>Selecionar Perfil Usuario</title>
+<ns>0</ns>
+<id>293</id>
+<revision>
+<id>534</id>
+<timestamp>2016-06-13T16:22:20Z</timestamp>
+<contributor>
+<username>admin</username>
+<id>1</id>
+</contributor>
+<comment />
+<text xml:space="preserve" bytes="1105">Ao efetuar o login no Sistema Tribut��rio da SEFAZ-TO, �� disponibilizado para que o usu��rio selecione dentre seus perfis cadastrados, qual deseja trabalhar efetivamente no sistema.
+
+&apos;&apos;&apos;&lt;u&gt;COLOCAR IMAGEM PERFIL AO SE LOGAR NO SISTEMA&lt;/u&gt;&apos;&apos;&apos;
+
+O usu��rio clica no perfil desejado exibido na listagem.
+
+
+Ap��s o sistema exibir�� a estrutura de menus conforme as permiss��es do perfil selecionado.
+
+
+Caso o usu��rio opte por alterar o seu perfil ap��s estar logado e operando o sistema, �� necess��rio clicar na op����o &quot;MUDAR PERFIL&quot; dispon��vel no menu principal, conforme imagem abaixo:
+
+
+[[File:mudar_perfil.jpg|caption]]
+
+Ap��s o sistema exibir�� tela para que o usu��rio selecione o perfil que seja trabalhar, dentre os perfis cadastrados para o mesmo. 
+
+&apos;&apos;&apos;&lt;u&gt;COLOCAR IMAGEM PERFIL AO SE LOGAR NO SISTEMA&lt;/u&gt;&apos;&apos;&apos;
+
+O usu��rio clica no perfil desejado exibido na listagem.
+
+
+Ap��s o sistema exibir�� a estrutura de menus conforme as permiss��es do perfil selecionado.
+
+
+&apos;&apos;�� importante salientar que a op����o de sele����o de perfis apenas estar�� dispon��vel caso o usu��rio possua mais de um perfil cadastrado para o seu usu��rio.&apos;&apos;</text>
+</revision>
+</page>
+</mediawiki>

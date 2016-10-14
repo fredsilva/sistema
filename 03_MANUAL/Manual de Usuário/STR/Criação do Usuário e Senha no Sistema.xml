@@ -1,0 +1,99 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
+<siteinfo>
+<sitename>SEFAZ-TO Wiki</sitename>
+<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<generator>JAMWiki 1.3.2</generator>
+<case>case-sensitive</case>
+<namespaces>
+<namespace key="-2">Media</namespace>
+<namespace key="-1">Special</namespace>
+<namespace key="0" />
+<namespace key="1">Comments</namespace>
+<namespace key="2">User</namespace>
+<namespace key="3">User comments</namespace>
+<namespace key="4">Project</namespace>
+<namespace key="5">Project comments</namespace>
+<namespace key="6">File</namespace>
+<namespace key="7">File comments</namespace>
+<namespace key="8">JAMWiki</namespace>
+<namespace key="9">JAMWiki comments</namespace>
+<namespace key="10">Template</namespace>
+<namespace key="11">Template comments</namespace>
+<namespace key="12">Help</namespace>
+<namespace key="13">Help comments</namespace>
+<namespace key="14">Category</namespace>
+<namespace key="15">Category comments</namespace>
+</namespaces>
+</siteinfo>
+<page>
+<title>Cria����o do Usu��rio/Senha no Sistema</title>
+<ns>0</ns>
+<id>344</id>
+<revision>
+<id>1221</id>
+<timestamp>2016-10-13T15:30:49Z</timestamp>
+<contributor>
+<username>admin</username>
+<id>1</id>
+</contributor>
+<comment />
+<text xml:space="preserve" bytes="2824">Acessar o menu &apos;&apos;&apos;Seguran��a do Sistema &gt; Ger��ncia &gt; Cria����o do usu��rio/senha no sistema.&apos;&apos;&apos;
+
+Abrir�� a tela de Cria����o do usu��rio/senha no sistema.
+
+Esta tela tem por objetivo permitir a consulta da solicita����o de usu��rio, a cria����o de usu��rio e a gera����o de nova senha de acesso ao sistema.
+
+== Visualizando todas as Solicita����es de Autoriza����o de Senha ==
+
+Para visualizar todas as Solicita����es de Autoriza����o de Senha, �� necess��rio clicar em &quot;Consultar&quot; (passo 1).
+
+A lista de solicita����es exibida na tela mostra a op����o Criar Usu��rio, para uma solicita����o que esteja pendente de an��lise, e Criar Senha, para solicita����es j�� analisadas e efetivadas.
+
+[[File:2-SEGUC0050.jpg|2-SEGUC0050]]
+
+----
+== Pesquisando Solicita����es de Autoriza����o de Senha ==
+
+Para pesquisar as Solicita����es de Autoriza����o de Senha, �� necess��rio acessar o menu Seguran��a do Sistema &gt; Ger��ncia &gt; Cria����o do usu��rio/senha no sistema e clicar no bot��o Consultar (passo 2). 
+
+Opcionalmente, pode-se preencher os filtros da tela (passo 1) e, ao clicar no bot��o Consultar (passo 2), a tela apresenta somente a lista das Solicita����es de Autoriza����o de Senha filtradas.
+
+[[File:1-SEGUC0050.jpg|1-SEGUC0050]]
+
+----
+== Criando Usu��rio ==
+
+Ap��s carregar a lista de Solicita����es de Autoriza����o de Senha carregada na tela, �� poss��vel validar as informa����es do cadastro do usu��rio e autorizar o acesso ao sistema atrav��s da op����o Criar Usu��rio, conforme ilustrado nos passos abaixo.
+
+[[File:3-SEGUC0050.jpg|3-SEGUC0050]]
+
+Primeiramente, consulta o usu��rio atrav��s dos filtros de acordo com o passo 1 (opcional).
+
+Ap��s clicar no bot��o Criar Usu��rio �� carregada a tela com o formul��rio de cadastro preenchido pelo usu��rio.
+Para finalizar a cria����o do usu��rio, deve-se clicar no bot��o Criar Usu��rio (passo 3).
+
+[[File:4-SEGUC0050.jpg|4-SEGUC0050]]
+
+Ap��s a execu����o do Passo 3, �� apresentada uma mensagem de dialogo informando o resultado da opera����o em quest��o e �� enviado um e-mail com a senha de acesso para o usu��rio. 
+
+A senha enviada �� gerada automaticamente pelo sistema. Quando o usu��rio fizer a sua primeira autentica����o no sistema com a nova senha, o sistema solicitar�� a redefini����o desta para uma senha da prefer��ncia do usu��rio.
+
+----
+== Gerando Senha ==
+
+Clicando no ��cone Gerar Senha (passo 1), na lista de Solicita����es de Autoriza����o de Senha, �� poss��vel gerar uma nova senha para o usu��rio do sistema.
+
+[[File:5-SEGUC0050.jpg|5-SEGUC0050]]
+
+Ao clicar no ��cone Gerar Senha, �� apresentada mensagem de dialogo informando que uma nova senha foi gerada e enviada para o usu��rio por e-mail.
+
+A senha enviada �� gerada automaticamente pelo sistema. Quando o usu��rio fizer a sua primeira autentica����o no sistema com a nova senha, o sistema solicitar�� a redefini����o desta para uma senha da prefer��ncia do usu��rio.
+
+&lt;/br&gt;
+----
+[[Gest��o de Seguran��a | Voltar]]
+
+</text>
+</revision>
+</page>
+</mediawiki>

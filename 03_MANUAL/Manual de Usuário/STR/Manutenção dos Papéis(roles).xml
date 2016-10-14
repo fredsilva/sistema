@@ -1,0 +1,125 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
+<siteinfo>
+<sitename>SEFAZ-TO Wiki</sitename>
+<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<generator>JAMWiki 1.3.2</generator>
+<case>case-sensitive</case>
+<namespaces>
+<namespace key="-2">Media</namespace>
+<namespace key="-1">Special</namespace>
+<namespace key="0" />
+<namespace key="1">Comments</namespace>
+<namespace key="2">User</namespace>
+<namespace key="3">User comments</namespace>
+<namespace key="4">Project</namespace>
+<namespace key="5">Project comments</namespace>
+<namespace key="6">File</namespace>
+<namespace key="7">File comments</namespace>
+<namespace key="8">JAMWiki</namespace>
+<namespace key="9">JAMWiki comments</namespace>
+<namespace key="10">Template</namespace>
+<namespace key="11">Template comments</namespace>
+<namespace key="12">Help</namespace>
+<namespace key="13">Help comments</namespace>
+<namespace key="14">Category</namespace>
+<namespace key="15">Category comments</namespace>
+</namespaces>
+</siteinfo>
+<page>
+<title>Manuten����o dos Pap��is(roles)</title>
+<ns>0</ns>
+<id>446</id>
+<revision>
+<id>1230</id>
+<timestamp>2016-10-13T15:35:11Z</timestamp>
+<contributor>
+<username>admin</username>
+<id>1</id>
+</contributor>
+<comment />
+<text xml:space="preserve" bytes="3075">Acessar o menu &apos;&apos;&apos;Seguran��a do Sistema &gt; Ger��ncia &gt; Manuten����o dos pap��is (roles)&apos;&apos;&apos;
+
+[[File:1 - SEGUC0430.jpg|1 - SEGUC0430]]
+
+Nesta tela pode-se realizar: consulta de papeis (roles), consulta de op����es por papel, inclus��o de papel, altera����o de papel e exclus��o de papel.
+
+----
+== Consultando Papel (role) no Sistema ==
+
+Pode-se utilizar o campo destacado na imagem abaixo &apos;&apos;&apos;(Passo 1)&apos;&apos;&apos; para filtrar pelo nome do papel, clicando no bot��o &apos;&apos;&apos;Consultar (Passo 2)&apos;&apos;&apos;.
+
+[[File:2 - SEGUC0430.jpg|2 - SEGUC0430]]
+
+----
+== Inserindo Papel (role) no Sistema ==
+
+Para inserir um papel deve-se clicar no bot��o &apos;&apos;&apos;Inserir Papel&apos;&apos;&apos; como mostrado no &apos;&apos;&apos;passo 1&apos;&apos;&apos; da imagem a seguir:
+
+[[File:3 - SEGUC0430.jpg|3 - SEGUC0430]]
+
+Ap��s, deve-se preencher o &apos;&apos;&apos;Nome do Papel&apos;&apos;&apos;, &apos;&apos;&apos;Descri����o do Papel&apos;&apos;&apos; e selecionar as &apos;&apos;&apos;Op����es&apos;&apos;&apos;, de acordo com o &apos;&apos;&apos;passo 1 e passo 2&apos;&apos;&apos; da imagem:
+
+[[File:4 - SEGUC0430.jpg|4 - SEGUC0430]]
+
+Ap��s preencher, clica-se no bot��o &apos;&apos;&apos;Salvar (passo 3)&apos;&apos;&apos;.
+
+Para cancelar a inser����o do papel, pode-se clicar no bot��o &apos;&apos;&apos;Fechar (passo 4)&apos;&apos;&apos;.
+
+----
+== Alterando Papel (role) no Sistema ==
+
+Ap��s carregar a lista de Papel (role) do Sistema, �� poss��vel alterar as informa����es de um Papel (role), clicando no bot��o &apos;&apos;&apos;Alterar (passo 1)&apos;&apos;&apos; de acordo com  a imagem:
+
+[[File:5 - SEGUC0430.jpg|5 - SEGUC0430]]
+
+Ap��s clicar, aparecer�� uma tela para alterar o registro.
+
+Opcionalmente, pode-se alterar os campos &apos;&apos;&apos;Nome do Papel&apos;&apos;&apos;, &apos;&apos;&apos;Descri����o do Papel&apos;&apos;&apos; e selecionar as &apos;&apos;&apos;Funcionalidades&apos;&apos;&apos; do papel, de acordo com o &apos;&apos;&apos;passo 1 e passo 2&apos;&apos;&apos; da imagem:
+
+[[File:6 - SEGUC0430.jpg|6 - SEGUC0430]]
+
+Ap��s preencher, clica-se no bot��o &apos;&apos;&apos;Salvar (passo 3)&apos;&apos;&apos;.
+
+Para cancelar a altera����o do papel, pode-se clicar no bot��o &apos;&apos;&apos;Fechar (passo 4)&apos;&apos;&apos;.
+
+----
+== Excluindo Papel (role) no Sistema ==
+
+Para excluir um papel, basta clicar no bot��o &apos;&apos;&apos;Excluir&apos;&apos;&apos; da lista de Pap��is, como mostrado na imagem a seguir no &apos;&apos;&apos;Passo 1&apos;&apos;&apos;.
+
+[[File:7 - SEGUC0430.jpg|7 - SEGUC0430]]
+
+Ao clicar, aparecer�� uma mensagem de confirma����o, para efetivar a exclus��o.
+
+----
+== Consulta de Perfis por Papel (role) ==
+
+Ap��s carregar a lista de Pap��is do Sistema, �� poss��vel visualizar os Perfis que utilizam aquele Papel, clicando no bot��o &apos;&apos;&apos;Ver perfis (passo 1)&apos;&apos;&apos; de acordo com  a imagem:
+
+[[File:8 - SEGUC0430.jpg|8 - SEGUC0430]]
+
+Em seguida, abrir�� uma tela com os perfis que utilizam aquele papel, como mostrado na imagem a seguir:
+
+[[File:9 - SEGUC0430.jpg|9 - SEGUC0430]]
+
+Para fechar a tela, clica-se no bot��o &apos;&apos;&apos;Fechar (passo 1)&apos;&apos;&apos;.
+
+== Consulta de Funcionalidades por Papel (role) ==
+
+Ap��s carregar a lista de Pap��is do Sistema, �� poss��vel visualizar as Funcionalidades que est��o atrelados ��quele Papel, clicando no bot��o &apos;&apos;&apos;Ver funcionalidades (passo 1)&apos;&apos;&apos; de acordo com  a imagem:
+
+[[File:10 - SEGUC0430.jpg|10 - SEGUC0430]]
+
+Em seguida, abrir�� uma tela com as funcionalidades que aquele papel utiliza, como mostrado na imagem a seguir:
+
+[[File:11 - SEGUC0430.jpg|11 - SEGUC0430]]
+
+Para fechar a tela, clica-se no bot��o &apos;&apos;&apos;Fechar (passo 1)&apos;&apos;&apos;.
+
+&lt;/br&gt;
+----
+[[Gest��o de Seguran��a | Voltar]]
+</text>
+</revision>
+</page>
+</mediawiki>

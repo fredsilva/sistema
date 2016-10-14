@@ -1,0 +1,222 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
+<siteinfo>
+<sitename>SEFAZ-TO Wiki</sitename>
+<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<generator>JAMWiki 1.3.2</generator>
+<case>case-sensitive</case>
+<namespaces>
+<namespace key="-2">Media</namespace>
+<namespace key="-1">Special</namespace>
+<namespace key="0" />
+<namespace key="1">Comments</namespace>
+<namespace key="2">User</namespace>
+<namespace key="3">User comments</namespace>
+<namespace key="4">Project</namespace>
+<namespace key="5">Project comments</namespace>
+<namespace key="6">File</namespace>
+<namespace key="7">File comments</namespace>
+<namespace key="8">JAMWiki</namespace>
+<namespace key="9">JAMWiki comments</namespace>
+<namespace key="10">Template</namespace>
+<namespace key="11">Template comments</namespace>
+<namespace key="12">Help</namespace>
+<namespace key="13">Help comments</namespace>
+<namespace key="14">Category</namespace>
+<namespace key="15">Category comments</namespace>
+</namespaces>
+</siteinfo>
+<page>
+<title>OS4757 - Seguran��a B��sico</title>
+<ns>0</ns>
+<id>308</id>
+<revision>
+<id>1275</id>
+<timestamp>2016-10-13T16:35:03Z</timestamp>
+<contributor>
+<username>admin</username>
+<id>1</id>
+</contributor>
+<comment />
+<text xml:space="preserve" bytes="9746">=Aplica����o dos Scripts no Banco de dados=
+
+&apos;&apos;&apos;Para atender as necessidades dos Casos de Uso desenvolvidos na OS4757 �� necess��rio a aplica����o dos scripts de banco de dados:&apos;&apos;&apos;
+
+=== Scripts das OSs anteriores ===
+�� necess��rio que os scripts das OSs anteriores, caso ainda n��o foram, sejam aplicados na base de dados:
+
+:*OS4721 no reposit��rio git -&gt; 01_DOCUMENTACAO_TECNICA/00_DICIONARIO_DADOS/OS4721/
+
+=== Scripts das OS 4757 ===
+
+:*OS4757 no reposit��rio git -&gt; 01_DOCUMENTACAO_TECNICA/00_DICIONARIO_DADOS/OS4757/
+
+
+=Modifica����es Realizadas na Instala����o do Ambiente=
+
+Para atender as necessidades dos Casos de Uso foram realizadas as seguintes altera����es no [[Instala����o do Ambiente do Sistema|Manual de Instala����o do Sistema Windows]] ou [[Instala����o do Ambiente do Sistema Linux|Manual de Instala����o do Sistema Linux]]
+
+== JBoss Wildfly ==
+
+&apos;&apos;&apos;Nesta se����o do manual foram adicionados as seguintes configura����es:&apos;&apos;&apos;
+
+=== Configura����o SSL com Certificado Digital ===
+
+:*�� necess��rio possuir a ferramenta Keytool, que se encontra no JRE do Java instalado.
+:*Com esta ferramenta ser�� gerado a chave do servidor de aplica����o, assim como as chaves confi��veis de acesso a este servidor.
+:*Para gerar a chave do servidor �� necess��rio acessar a pasta que se encontra o JRE do Java instalado. Geralmente se encontra em JAVA_HOME/jre/bin/ onde est�� o execut��vel da ferramenta Keytool, e realizar o seguinte comando:
+
+&apos;&apos;&apos;keytool.exe -genkey -keyalg RSA -keystore [NOME-DO-KEYSTORE].keystore -storepass [SENHA]&apos;&apos;&apos;
+
+:*Lembre-se de alterar os par��metros acima demonstrados em colchetes pelo nome e senha desejados.
+:*Para importar as chaves de permiss��o para acesso ao servidor, atrav��s do truststore, deve-se realizar o comando:
+
+&apos;&apos;&apos;keytool -import -alias [ALIAS] -file [ARQUIVO COM AS CREDENCIAIS] -keystore [NOME-DO-TRUSTSTORE].jks&apos;&apos;&apos;
+
+:*Ser�� solicitada uma senha, basta informar a senha desejada.
+:*Lembre-se de alterar os par��metros acima demonstrados em colchetes.
+
+:*Na pasta em que foram executados os comandos foram criados dois arquivos [NOME-DO-KEYSTORE].keystore e o [NOME-DO-TRUSTSTORE].jks. Copiar os dois arquivos para WILDFLY_HOME/standalone/configuration.
+:*Acesse o arquivo standalone.xml e adicione os seguintes elementos:
+
+[ADICIONE A SEGUINTE TAG ABAIXO DE &lt;security-realms&gt;]
+
+ &lt;security-realm name=&quot;UndertowRealm&quot;&gt;
+    &lt;server-identities&gt;
+        &lt;ssl&gt;
+            &lt;keystore path=&quot;[NOME-DO-KEYSTORE].keystore&quot; relative-to=&quot;jboss.server.config.dir&quot; keystore-password=&quot;[SENHA-DO-KEYSTORE]&quot; key-password=&quot;[SENHA-DO-KEYSTORE]&quot;/&gt;
+        &lt;/ssl&gt;
+    &lt;/server-identities&gt;
+    &lt;authentication&gt;
+         &lt;truststore path=&quot;[NOME-DO-TRUSTSTORE].jks&quot; relative-to=&quot;jboss.server.config.dir&quot; keystore-password=&quot;[SENHA-DO-TRUSTSTORE]&quot;/&gt;
+         &lt;local default-user=&quot;$local&quot; skip-group-loading=&quot;true&quot;/&gt;
+         &lt;properties path=&quot;mgmt-users.properties&quot; relative-to=&quot;jboss.server.config.dir&quot;/&gt;
+    &lt;/authentication&gt;
+ &lt;/security-realm&gt;
+
+
+[LOCALIZE O SUBSYSTEM UNDERTOW E ADICIONE AS TAGS CONFORME EXEMPLO]
+
+ &lt;subsystem xmlns=&quot;urn:jboss:domain:undertow:3.0&quot;&gt;
+     &lt;buffer-cache name=&quot;default&quot;/&gt;
+     &lt;server name=&quot;default-server&quot;&gt;
+            &lt;http-listener name=&quot;default&quot; socket-binding=&quot;http&quot; redirect-socket=&quot;https&quot;/&gt;
+            &lt;https-listener name=&quot;https&quot; security-realm=&quot;UndertowRealm&quot; socket-binding=&quot;https&quot;/&gt;
+            &lt;https-listener name=&quot;https2&quot; verify-client=&quot;REQUIRED&quot; security-realm=&quot;UndertowRealm&quot; socket-binding=&quot;https2&quot;/&gt;
+            &lt;host name=&quot;default-host&quot; alias=&quot;localhost&quot;&gt;
+                &lt;location name=&quot;/&quot; handler=&quot;welcome-content&quot;/&gt;
+                &lt;filter-ref name=&quot;server-header&quot;/&gt;
+                &lt;filter-ref name=&quot;x-powered-by-header&quot;/&gt;
+            &lt;/host&gt;
+      &lt;/server&gt;
+            &lt;servlet-container name=&quot;default&quot; default-encoding=&quot;UTF-8&quot; use-listener-encoding=&quot;true&quot;&gt;
+                &lt;jsp-config/&gt;
+                &lt;websockets/&gt;
+            &lt;/servlet-container&gt;
+            &lt;handlers&gt;
+                &lt;file name=&quot;welcome-content&quot; path=&quot;${jboss.home.dir}/welcome-content&quot;/&gt;
+            &lt;/handlers&gt;
+            &lt;filters&gt;
+                &lt;response-header name=&quot;server-header&quot; header-name=&quot;Server&quot; header-value=&quot;WildFly/10&quot;/&gt;
+                &lt;response-header name=&quot;x-powered-by-header&quot; header-name=&quot;X-Powered-By&quot; header-value=&quot;Undertow/1&quot;/&gt;
+            &lt;/filters&gt;
+ &lt;/subsystem&gt;
+
+[LOCALIZE O socket-binding-group ADICIONE A TAG &lt;socket-binding name=&quot;https2&quot; port=&quot;${jboss.https.port:8844}&quot;/&gt;]
+
+ &lt;socket-binding-group name=&quot;standard-sockets&quot; default-interface=&quot;public&quot; port-offset=&quot;${jboss.socket.binding.port-offset:0}&quot;&gt;
+        &lt;socket-binding name=&quot;management-http&quot; interface=&quot;management&quot; port=&quot;${jboss.management.http.port:9990}&quot;/&gt;
+        &lt;socket-binding name=&quot;management-https&quot; interface=&quot;management&quot; port=&quot;${jboss.management.https.port:9993}&quot;/&gt;
+        &lt;socket-binding name=&quot;ajp&quot; port=&quot;${jboss.ajp.port:8009}&quot;/&gt;
+        &lt;socket-binding name=&quot;http&quot; port=&quot;${jboss.http.port:8080}&quot;/&gt;
+        &lt;socket-binding name=&quot;https&quot; port=&quot;${jboss.https.port:8443}&quot;/&gt;
+        &apos;&apos;&apos;&apos;&apos;&lt;socket-binding name=&quot;https2&quot; port=&quot;${jboss.https.port:8844}&quot;/&gt;&apos;&apos;&apos;&apos;&apos;
+        &lt;socket-binding name=&quot;txn-recovery-environment&quot; port=&quot;4712&quot;/&gt;
+        &lt;socket-binding name=&quot;txn-status-manager&quot; port=&quot;4713&quot;/&gt;
+        &lt;outbound-socket-binding name=&quot;mail-smtp&quot;&gt;
+            &lt;remote-destination host=&quot;localhost&quot; port=&quot;25&quot;/&gt;
+        &lt;/outbound-socket-binding&gt;
+ &lt;/socket-binding-group&gt;
+
+
+=== Adicionar Certificado da ICP Brasil no Wildfly===
+
+:*Para que seja poss��vel se logar no sistema atrav��s do uso do certificado digital, �� necess��rio importar o arquivo .crt ra��z da ICP Brasil. Este e outros arquivos das demais Ag��ncias Certificadoras (ACs) se encontram no site [http://www.iti.gov.br/], o link utilizado para obter todos os certificados foi [http://www.iti.gov.br/noticias/188-atualizacao/4530-ac-raiz]. Como exemplo para configura����o ser�� utilizado a vers��o ICP-Brasilv2.crt. 
+
+:*Para importar o certificado basta realizar o comando de importa����o do Keytool previamente apresentado e colocar no local do [ARQUIVO COM AS CREDENCIAIS] o arquivo ICP-Brasilv2.crt conforme exemplo a seguir:
+
+&apos;&apos;&apos;keytool -import -alias [ALIAS] -file [CAMINHO ATE O ARQUIVO]/ICP-Brasilv2.crt -keystore [NOME-DO-TRUSTSTORE].jks&apos;&apos;&apos;
+
+:*Lembre-se de alterar os par��metros acima demonstrados em colchetes.
+:*O certificado digital testado foi da AC Valid, sendo que para uso de outros certificados de outras ACs deve-se verificar a vers��o ra��z destes certificados e adicion��-los no Truststore da mesma forma apresentada.
+
+=== Configura����o do LDAP no Wildfly ===
+
+:*Para que seja poss��vel se logar no sistema ou alterar a senha no Active Directory via protocolo LDAP �� necess��rio importar o certificado do AD no Java.
+:*Providencie o certificado do AD junto �� equipe de configura����o e manuten����o do Active Directory, o arquivo deve possuir a exten����o &apos;.crt&apos; ou &apos;.cer&apos;.
+:*Copie o certificado no servidor ou computador que est�� instalado o Wildfly.
+:*Entre na pasta de instala����o do Java JDK JAVA_HOME/jre/bin onde se encontra a instala����o do keytool.
+:*Para importar o certificado no Java JDK basta realizar o comando de importa����o do Keytool previamente apresentado conforme exemplo a seguir:
+
+&apos;&apos;&apos;keytool -import -alias [ALIAS] -file [CAMINHO ATE O ARQUIVO]/[NOME_CERTIFICADO_AD] -keystore JAVA_HOME/jre/lib/security/cacerts&apos;&apos;&apos;
+
+:*Altere os par��metros de configura����o no sistema conforme defini����es abaixo. Os par��metros espec��ficos do LDAP s��o os prefixados por &apos;ldap&apos;.
+
+=Configura����o de Propriedades do Sistema=
+
+Para alterar a configura����o das propriedades do sistema, deve-se editar o arquivo &apos;&apos;&apos;&apos;&apos;application.properties&apos;&apos;&apos;&apos;&apos; dispon��vel no caminho
+
+&apos;&apos;&apos;sat/framework/util-framework/src/main/resources/application.properties&apos;&apos;&apos;
+
+o arquivo cont��m os seguintes par��metros:
+
+*&apos;&apos;&apos;exception.log.directory&apos;&apos;&apos; - Caminho para o diret��rio onde ser��o armazenados os Logs das exce����es do sistema. Em caso desta propriedade estar sem informa����o, o sistema armazenar�� os logs na pasta de logs do Wildfly - WILDFLY_HOME/standalone/log.
+
+*&apos;&apos;&apos;email.host&apos;&apos;&apos; - Host do servidor de email.
+*&apos;&apos;&apos;email.port&apos;&apos;&apos; - Porta do servidor de email.
+*&apos;&apos;&apos;email.username&apos;&apos;&apos; - Usu��rio do servidor de email, o qual ser�� respons��vel por enviar as mensagens do sistema.
+*&apos;&apos;&apos;email.password&apos;&apos;&apos; - Senha do usu��rio do servidor de email.
+
+*&apos;&apos;&apos;host.port&apos;&apos;&apos; - Porta do sistema.
+*&apos;&apos;&apos;certificado.port&apos;&apos;&apos; - Porta para autentica����o do certificado digital.
+
+*&apos;&apos;&apos;ldap.provider.url&apos;&apos;&apos; - URL do LDAP.
+*&apos;&apos;&apos;ldap.provider.url.ssl&apos;&apos;&apos; - URL segura do LDAP.
+*&apos;&apos;&apos;ldap.provider.domain&apos;&apos;&apos; - Dom��nio do LDAP.
+*&apos;&apos;&apos;ldap.provider.baseDomain&apos;&apos;&apos; - Dom��nio de pesquisa de usu��rio do LDAP.
+*&apos;&apos;&apos;ldap.provider.userManager&apos;&apos;&apos; - Administrador do LDAP.
+*&apos;&apos;&apos;ldap.provider.passwdManager&apos;&apos;&apos; - Senha do Administrador do LDAP.
+*&apos;&apos;&apos;ldap.connect.timeout&apos;&apos;&apos; - Tempo m��ximo de espera para realizar a conex��o com o LDAP.
+=Casos de Uso=
+
+Os detalhes de cada Classe e M��todo utilizado se encontram no JavaDoc do Sistema e no Diagrama de Classes.
+
+{|cellpadding=&quot;5&quot; cellspacing=&quot;0&quot; border=&quot;1&quot;
+! Caso de Uso
+! Nome do caso de uso
+! URL
+|-
+| SCEUC0001 || Enviar e-mails aos Contribuintes || N/A
+|-
+| MONUC0001 || Interceptar Padr��o de Erros com Mensagem Amig��vel ao Usu��rio || N/A
+|-
+| SEGUC0080 || Login do Sistema                 || /public/login.xhtml &lt;/br&gt; /public/reset-password.xhtml
+|-
+| SEGUC0090 || Selecionar Perfil de Usu��rio     ||  /protected/views/home.xhtml
+|-
+| SEGUC0100 || Visualizar Op����es do Sistema     ||  /protected/views/home.xhtml
+|-
+| SEGUC0110 || Logout do Sistema                || N/A
+|-
+| SEGUC0610 || Manter Hist��rico de Acesso das Funcionalidades Acessadas pelos Usu��rios || N/A
+|-
+| SEGUC0620 || Registrar Tentativas Negadas ao Acesso de uma Funcionalidade            || N/A
+|-
+|}
+
+
+&lt;/br&gt;
+----
+[[Manual para Manuten����o do Sistema | Voltar]]</text>
+</revision>
+</page>
+</mediawiki>

@@ -1,0 +1,80 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
+<siteinfo>
+<sitename>SEFAZ-TO Wiki</sitename>
+<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<generator>JAMWiki 1.3.2</generator>
+<case>case-sensitive</case>
+<namespaces>
+<namespace key="-2">Media</namespace>
+<namespace key="-1">Special</namespace>
+<namespace key="0" />
+<namespace key="1">Comments</namespace>
+<namespace key="2">User</namespace>
+<namespace key="3">User comments</namespace>
+<namespace key="4">Project</namespace>
+<namespace key="5">Project comments</namespace>
+<namespace key="6">File</namespace>
+<namespace key="7">File comments</namespace>
+<namespace key="8">JAMWiki</namespace>
+<namespace key="9">JAMWiki comments</namespace>
+<namespace key="10">Template</namespace>
+<namespace key="11">Template comments</namespace>
+<namespace key="12">Help</namespace>
+<namespace key="13">Help comments</namespace>
+<namespace key="14">Category</namespace>
+<namespace key="15">Category comments</namespace>
+</namespaces>
+</siteinfo>
+<page>
+<title>Ativar/Inativar Perfis dos Funcion��rios SEFAZ</title>
+<ns>0</ns>
+<id>346</id>
+<revision>
+<id>1218</id>
+<timestamp>2016-10-13T15:30:01Z</timestamp>
+<contributor>
+<username>admin</username>
+<id>1</id>
+</contributor>
+<comment />
+<text xml:space="preserve" bytes="1964">Acessar o menu &apos;&apos;&apos;Seguran��a do Sistema &gt; Ger��ncia &gt; Ativar/Inativar perfis dos Funcion��rios SEFAZ.&apos;&apos;&apos;
+
+Abrir�� a tela de manuten����o de usu��rios contendo a pesquisa de Funcion��rios do SEFAZ cadastrados.
+
+A tela tem por objetivo Ativar ou Inativar somente o Perfil de Funcion��rio do SEFAZ-TO, n��o alterando o estado do perfil de Contribuinte nem o cadastro do usu��rio. Essas a����es s��o criadas pelas seguintes raz��es: demiss��o, f��rias, licen��as de sa��de, licen��as de gravidez, suspens��es, etc.
+
+== Pesquisando Funcion��rios do SEFAZ ==
+
+Para pesquisar Funcion��rios cadastrados, �� necess��rio acessar o menu Seguran��a do Sistema &gt; Ger��ncia &gt; Ativar/Inativar perfis dos Funcion��rios SEFAZ no sistema, informar algum dos filtros dispon��veis (passos 1) e clicar no bot��o Consultar (passo 2).
+
+[[File:1-SEGUC0070.jpg|1-SEGUC0070]]
+
+&apos;&apos;&apos;Considera����es a respeito dos campos a serem preenchidos pelo usu��rio:&apos;&apos;&apos;
+
+:*Ao menos um Filtro deve ser informado para que a consulta retorne registros.
+:*A consulta �� ordenada pelo Nome de Usu��rio ascendentemente.
+
+----
+== Ativando/Inativando Perfil de Funcion��rio do SEFAZ ==
+
+O sistema permite a Ativa����o ou Inativa����o dos perfis dos funcion��rios do SEFAZ atrav��s do ��cone Ativar/Inativar Perfis, conforme destacado no Passo 1 abaixo.
+
+[[File:2-SEGUC0070.jpg|2-SEGUC0070]]
+
+Ao clicar no ��cone Ativar/Desativar perfis, destacado no passo 1, �� exibida a janela para sele����o dos perfis a serem Ativados ou Inativados, conforme ilustrado no passo 2 abaixo.
+
+[[File:3-SEGUC0070.jpg|3-SEGUC0070]]
+
+Ap��s marcar os perfis que se deseja ativar, ou desmarcar os perfis que se deseja inativar, o usu��rio grava as altera����es atrav��s do bot��o Salvar (passo 2).
+
+Ap��s a execu����o do Passo 2, �� apresentado mensagem de dialogo informando o resultado da opera����o em quest��o.
+
+Para cancelar as altera����es nos perfis do funcion��rio, deve-se clicar no bot��o Fechar (Passo 3), ou clicar fora da janela de edi����o.
+
+&lt;/br&gt;
+----
+[[Gest��o de Seguran��a | Voltar]]
+</text>
+</revision>
+</page>
+</mediawiki>

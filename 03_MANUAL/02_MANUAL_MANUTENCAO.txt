@@ -1,2 +1,0 @@
-O Manual de Manutenção está disponível no link
-http://177.39.184.50:9080/jamwiki-1.3.2/en/Ambiente_de_Desenvolvimento
