@@ -1,6 +1,5 @@
 package br.gov.to.sefaz.seg.persistence.repository;
 
-import br.gov.to.sefaz.persistence.query.structure.select.orderby.Order;
 import br.gov.to.sefaz.persistence.repository.BaseRepository;
 import br.gov.to.sefaz.seg.persistence.entity.PapelOpcao;
 import br.gov.to.sefaz.seg.persistence.entity.PapelOpcaoPK;
@@ -27,8 +26,7 @@ public class PapelOpcaoRepository extends BaseRepository<PapelOpcao, PapelOpcaoP
                 .innerJoinFetch("po.opcaoAplicacao", "oa")
                 .innerJoinFetch("oa.aplicacaoModulo", "am")
                 .innerJoinFetch("am.moduloSistema", "ms")
-                .where().opt().equal("po.identificacaoPapel", idPapel)
-                .orderBy("ms.abreviacaoModulo", Order.ASC).andBy("oa.descripcaoOpcao", Order.ASC))
+                .where().opt().equal("po.identificacaoPapel", idPapel))
                 .stream()
                 .collect(Collectors.toSet());
     }

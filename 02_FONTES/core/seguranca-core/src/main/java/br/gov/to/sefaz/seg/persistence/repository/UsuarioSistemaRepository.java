@@ -41,6 +41,7 @@ public class UsuarioSistemaRepository extends BaseRepository<UsuarioSistema, Str
     private static final String HLS_DATA_HORA_LOGIN = "hls.dataHoraLogin";
     private static final String US_USUARIO_PERFIL = "us.usuarioPerfil";
     private static final String UP_IDENTIFICACAO_PERFIL = "up.identificacaoPerfil";
+    private static final String UP_PERFIS_SISTEMA = "up.perfisSistema";
     private static final String LO = "lo";
     private static final String SU = "su";
     private static final String PT = "pt";
@@ -50,6 +51,7 @@ public class UsuarioSistemaRepository extends BaseRepository<UsuarioSistema, Str
     private static final String HLS = "hls";
     private static final String UO = "uo";
     private static final String UP = "up";
+    private static final String PS = "ps";
 
     /**
      * Altera o estado de bloqueado do ususurio, incluindo a data de bloqueio.
@@ -210,6 +212,7 @@ public class UsuarioSistemaRepository extends BaseRepository<UsuarioSistema, Str
         return find("us", select -> select
                 .leftJoinFetch(US_SOLICITACAO_USUARIO, SU)
                 .leftJoinFetch(US_USUARIO_PERFIL, UP)
+                .leftJoinFetch(UP_PERFIS_SISTEMA, PS)
                 .leftJoinFetch(US_USUARIO_POSTO_TRABALHO, UPT)
                 .leftJoinFetch(UPT_POSTO_TRABALHO, PT)
                 .leftJoinFetch(PT_UNIDADE_ORGANIZACIONAL, UO)
