@@ -9,16 +9,20 @@ import br.gov.to.sefaz.seg.business.authentication.handler.AuthenticatedUserHand
 import br.gov.to.sefaz.seg.business.gestao.service.OpcaoAplicacaoService;
 import br.gov.to.sefaz.seg.business.gestao.service.filter.OpcaoAplicacaoFilter;
 import br.gov.to.sefaz.seg.persistence.entity.AplicacaoModulo;
+import br.gov.to.sefaz.seg.persistence.entity.ModuloSistema;
 import br.gov.to.sefaz.seg.persistence.entity.OpcaoAplicacao;
+import br.gov.to.sefaz.seg.persistence.repository.AplicacaoModuloRepository;
 import br.gov.to.sefaz.seg.persistence.repository.OpcaoAplicacaoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Collectors;
 
 /**
  * Contrato de serviço da entidade {@link OpcaoAplicacao}.
+ *
  * @author <a href="mailto:fabio.fucks@ntconsult.com.br">fabio.fucks</a>
  * @since 19/07/2016 15:04:00
  */
@@ -26,9 +30,13 @@ import java.util.stream.Collectors;
 public class OpcaoAplicacaoServiceImpl extends DefaultCrudService<OpcaoAplicacao, Long> implements
         OpcaoAplicacaoService {
 
+    private final AplicacaoModuloRepository aplicacaoModuloRepository;
+
     @Autowired
-    public OpcaoAplicacaoServiceImpl(OpcaoAplicacaoRepository repository) {
+    public OpcaoAplicacaoServiceImpl(OpcaoAplicacaoRepository repository,
+            AplicacaoModuloRepository aplicacaoModuloRepository) {
         super(repository);
+        this.aplicacaoModuloRepository = aplicacaoModuloRepository;
     }
 
     @Override
@@ -43,8 +51,8 @@ public class OpcaoAplicacaoServiceImpl extends DefaultCrudService<OpcaoAplicacao
                 .innerJoinFetch("oa.aplicacaoModulo", "am")
                 .innerJoinFetch("am.moduloSistema", "ms")
                 .where()
-                    .opt().equal("am.identificacaoAplicacaoModulo", filter.getIdentificacaoAplicacao())
-                    .and().opt().equal("ms.identificacaoModuloSistema", filter.getIdentificacaoModulo())
+                .opt().equal("am.identificacaoAplicacaoModulo", filter.getIdentificacaoAplicacao())
+                .and().opt().equal("ms.identificacaoModuloSistema", filter.getIdentificacaoModulo())
 
                 .orderBy("ms.abreviacaoModulo", Order.ASC).andBy("oa.descripcaoOpcao", Order.ASC));
     }
@@ -69,17 +77,38 @@ public class OpcaoAplicacaoServiceImpl extends DefaultCrudService<OpcaoAplicacao
     public OpcaoAplicacao save(@ValidationSuite(context = ValidationContext.SAVE) OpcaoAplicacao entity) {
         AplicacaoModulo aplicacaoModulo = entity.getAplicacaoModulo();
         entity.setAplicacaoModulo(null);
+
+        if (Objects.isNull(entity.getIdentificacaoAplicacaoModulo())) {
+            aplicacaoModulo = saveAplicacaoModulo(entity, aplicacaoModulo);
+        }
+
         entity = super.save(entity);
         entity.setAplicacaoModulo(aplicacaoModulo);
         return entity;
     }
 
     @Override
-    public OpcaoAplicacao update(@ValidationSuite(context = ValidationContext.UPDATE) OpcaoAplicacao entity) {
-        AplicacaoModulo aplicacaoModulo = entity.getAplicacaoModulo();
-        entity.setAplicacaoModulo(null);
-        entity = super.update(entity);
-        entity.setAplicacaoModulo(aplicacaoModulo);
-        return entity;
+    public OpcaoAplicacao update(@ValidationSuite(context = ValidationContext.UPDATE) OpcaoAplicacao opcaoAplicacao) {
+        AplicacaoModulo aplicacaoModulo = opcaoAplicacao.getAplicacaoModulo();
+        opcaoAplicacao.setAplicacaoModulo(null);
+
+        if (Objects.isNull(opcaoAplicacao.getIdentificacaoAplicacaoModulo())) {
+            aplicacaoModulo = saveAplicacaoModulo(opcaoAplicacao, aplicacaoModulo);
+        }
+
+        opcaoAplicacao = super.update(opcaoAplicacao);
+        opcaoAplicacao.setAplicacaoModulo(aplicacaoModulo);
+        return opcaoAplicacao;
+    }
+
+    private AplicacaoModulo saveAplicacaoModulo(@ValidationSuite(context = ValidationContext.SAVE)
+            OpcaoAplicacao opcaoAplicacao, AplicacaoModulo aplicacaoModulo) {
+        ModuloSistema moduloSistema = aplicacaoModulo.getModuloSistema();
+        AplicacaoModulo persistedAplicacaoModulo = aplicacaoModuloRepository.save(aplicacaoModulo);
+
+        persistedAplicacaoModulo.setModuloSistema(moduloSistema);
+        opcaoAplicacao.setIdentificacaoAplicacaoModulo(persistedAplicacaoModulo.getIdentificacaoAplicacaoModulo());
+
+        return persistedAplicacaoModulo;
     }
 }

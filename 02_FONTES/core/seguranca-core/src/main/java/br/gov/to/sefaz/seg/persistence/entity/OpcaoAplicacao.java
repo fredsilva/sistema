@@ -1,6 +1,7 @@
 package br.gov.to.sefaz.seg.persistence.entity;
 
 import br.gov.to.sefaz.persistence.entity.AbstractEntity;
+import org.apache.commons.lang3.StringUtils;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import java.util.Objects;
@@ -62,7 +63,6 @@ public class OpcaoAplicacao extends AbstractEntity<Long> {
     @Column(name = "AJUDA_OPCAO")
     private String ajudaOpcao;
 
-    @NotNull(message = "#{seg_msg['seg.gestao.opcaoAplicacao.identificacaoAplicacaoModulo.obrigatorio']}")
     @Max(value = 9999999999L,
             message = "#{seg_msg['seg.gestao.opcaoAplicacao.identificacaoAplicacaoModulo.maximo']}")
     @Column(name = "IDENTIFICACAO_APLICACAO_MODULO")
@@ -152,11 +152,24 @@ public class OpcaoAplicacao extends AbstractEntity<Long> {
     }
 
     public String getDescricaoAplicacao() {
-        return Objects.isNull(aplicacaoModulo) ? "" : aplicacaoModulo.getDescricaoAplicacaoModulo() ;
+        return Objects.isNull(aplicacaoModulo) ? StringUtils.EMPTY : aplicacaoModulo.getDescricaoAplicacaoModulo();
     }
 
     public String getAbreviacaoModulo() {
         return aplicacaoModulo.getAbreviacaoSistema();
+    }
+
+    public String getDescricaoAplicacaoModulo() {
+        return aplicacaoModulo.getDescricaoAplicacaoModulo();
+    }
+
+    /**
+     * Insere a descrição no atributo aplicação módulo {@link #aplicacaoModulo}.
+     *
+     * @param descricaoAplicacaoModulo descrição da aplicação módulo {@link #aplicacaoModulo}.
+     */
+    public void setDescricaoAplicacaoModulo(String descricaoAplicacaoModulo) {
+        this.aplicacaoModulo.setDescricaoAplicacaoModulo(descricaoAplicacaoModulo);
     }
 
     /**

@@ -7,9 +7,13 @@ function openModalInsert() {
     $("#manter-funcionalidade-form\\:labelIdFuncionalidade").hide();
     $("#idFuncionalidadeForm").text("");
     //Alterado para forçar o combo filho a ser setado.
-    loadAplicacoesPorModulo($("#manter-funcionalidade-form\\:moduloForm").val());
+    loadAplicacoesPorModulo($("#manter-funcionalidade-form\\:moduloForm").val(), '', '');
     openModal("modalManterFuncionalidade");
+}
 
+function setModulo(descricao, id) {
+    $("#manter-funcionalidade-form\\:descricaoAplicacaoModuloForm").val(descricao);
+    $("#manter-funcionalidade-form\\:idAplicacaoModuloForm").val(id);
 }
 
 function editOpcao(data) {
@@ -20,7 +24,7 @@ function editOpcao(data) {
 
 
     $("#manter-funcionalidade-form\\:moduloForm").val(data[8]);
-    loadAplicacoesPorModulo(data[8], data[7]);
+    loadAplicacoesPorModulo(data[8], data[7], data[2]);
     $("#manter-funcionalidade-form\\:labelIdFuncionalidade").show();
     $("#manter-funcionalidade-form\\:casoUsoForm").val(data[1]);
     $("#manter-funcionalidade-form\\:descricaoOpcaoForm").val(data[3]);
@@ -29,7 +33,8 @@ function editOpcao(data) {
     $("#idFuncionalidadeForm").text(data[5]);
     var html = $('<p/>').html(data[6]).text();
     $("#manter-funcionalidade-form\\:ajudaOpcaoSaveForm").val(html.length == 0 ? " " : html);
-    $("#manter-funcionalidade-form\\:identificacaoAplicacaoModuloForm").val(data[7]);
+    $("#manter-funcionalidade-form\\:idAplicacaoModuloForm").val(data[7]);
+    $("#manter-funcionalidade-form\\:descricaoAplicacaoModuloForm").val(data[2]);
 
 }
 
@@ -62,7 +67,7 @@ function resetFields() {
     showBtnSave("manter-funcionalidade-form")
 }
 
-function handleSaveAjudaEvent(data){
+function handleSaveAjudaEvent(data) {
     var status = data.status;
     switch (status) {
         case "success":

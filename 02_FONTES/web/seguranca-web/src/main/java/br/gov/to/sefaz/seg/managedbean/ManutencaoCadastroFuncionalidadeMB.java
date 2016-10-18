@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.Optional;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
@@ -146,7 +147,6 @@ public class ManutencaoCadastroFuncionalidadeMB extends DefaultCrudMB<OpcaoAplic
                 .findAplicacoesPorModulo(identificacaoModulo);
     }
 
-
     public Collection<AplicacaoModulo> getAplicacoesPorModulo() {
         return aplicacoesPorModulo;
     }
@@ -173,11 +173,40 @@ public class ManutencaoCadastroFuncionalidadeMB extends DefaultCrudMB<OpcaoAplic
         super.save();
     }
 
+    @Override
+    protected void executeAfterSave(OpcaoAplicacao dto) {
+        loadAllAplicacaoModulo();
+    }
+
+    @Override
+    protected void executeAfterUpdate(OpcaoAplicacao dto) {
+        loadAllAplicacaoModulo();
+    }
+
     private void prepareDto() {
-        getResultList().stream().filter(opcaoAplicacao -> opcaoAplicacao
-                .getAplicacaoModulo().getIdentificacaoModuloSistema()
-                .equals(getDto().getAplicacaoModulo().getIdentificacaoModuloSistema()))
-                .findFirst()
-                .ifPresent(opcaoAplicacao -> getDto().setAplicacaoModulo(opcaoAplicacao.getAplicacaoModulo()));
+        Optional<ModuloSistema> moduloSistema = getAllModuloSistema().stream()
+                .filter(ms -> ms.getIdentificacaoModuloSistema()
+                        .equals(getDto().getAplicacaoModulo().getIdentificacaoModuloSistema()))
+                .findFirst();
+        Optional<AplicacaoModulo> aplicacaoModulo = getAllAplicacaoModulo().stream()
+                .filter(am -> am.getIdentificacaoAplicacaoModulo()
+                        .equals(getDto().getIdentificacaoAplicacaoModulo()))
+                .findFirst();
+
+        if (aplicacaoModulo.isPresent()) {
+            AplicacaoModulo aplicacaoModuloEntity = aplicacaoModulo.get();
+
+            moduloSistema.ifPresent(aplicacaoModuloEntity::setModuloSistema);
+            getDto().setAplicacaoModulo(aplicacaoModuloEntity);
+        } else {
+            AplicacaoModulo aplicacaoModuloEntity = getDto().getAplicacaoModulo();
+
+            allModuloSistema.stream()
+                    .filter(ms -> ms.getIdentificacaoModuloSistema()
+                            .equals(aplicacaoModuloEntity.getIdentificacaoModuloSistema()))
+                    .findFirst()
+                    .ifPresent(aplicacaoModuloEntity::setModuloSistema);
+        }
+
     }
 }

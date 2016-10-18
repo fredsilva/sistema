@@ -7,10 +7,13 @@ import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -28,7 +31,9 @@ public class AplicacaoModulo extends AbstractEntity<Long> {
     private static final long serialVersionUID = 2262759749890737090L;
 
     @Id
-    @NotNull(message = "#{seg_msg['seg.gestao.aplicacaoModulo.identificacaoAplicacaoModulo.obrigatorio']}")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_APLICACAO_MODULO")
+    @SequenceGenerator(name = "SQ_APLICACAO_MODULO", schema = "SEFAZ_SEG", sequenceName = "SQ_APLICACAO_MODULO",
+            allocationSize = 1)
     @Column(name = "IDENTIFICACAO_APLICACAO_MODULO")
     private Long identificacaoAplicacaoModulo;
 

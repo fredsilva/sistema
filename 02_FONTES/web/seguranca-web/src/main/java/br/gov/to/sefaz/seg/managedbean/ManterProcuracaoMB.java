@@ -153,6 +153,11 @@ public class ManterProcuracaoMB extends DefaultCrudMB<ProcuracaoUsuario, Long> {
     }
 
     @Override
+    public void clearDto() {
+        // o dto não deve ser limpo
+    }
+
+    @Override
     public void save() {
         prepareDto();
 

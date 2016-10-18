@@ -38,20 +38,19 @@
 
                     </div>
 
-                    <div class="form-group col-md-6">
+                    <h:panelGroup layout="block" id="identificacaoAplicacaoFiltro" class="form-group col-md-6">
                         <h:outputLabel for="identificacaoAplicacao">
                             #{seg_msg['seg.gestao.manutencaoCadastroFuncionalidade.pesquisa.aplicacao']}
                         </h:outputLabel>
                         <h:selectOneMenu value="#{manutencaoCadastroFuncionalidadeMB.filter.identificacaoAplicacao}"
-                                id="identificacaoAplicacao"
-                                styleClass="form-control">
+                                id="identificacaoAplicacao" styleClass="form-control">
                             <f:selectItem value="#{null}" itemLabel="[Todos]"/>
                             <f:selectItems value="#{manutencaoCadastroFuncionalidadeMB.allAplicacaoModulo}"
                                     var="aplicacao"
                                     itemValue="#{aplicacao.identificacaoAplicacaoModulo}"
                                     itemLabel="#{aplicacao.descricaoAplicacaoModulo}"/>
                         </h:selectOneMenu>
-                    </div>
+                    </h:panelGroup>
 
                     <div class="row">
                         <div class="form-group col-md-12 text-right">
@@ -107,7 +106,8 @@
                             title="Alterar"/>
                     <a href="javascript:void(0);" class="remove-row glyphicon glyphicon-remove" data-toggle="tooltip"
                             title="Excluir"/>
-                    <a href="javascript:void(0);" class="edit-help glyphicon glyphicon-modal-window" data-toggle="tooltip"
+                    <a href="javascript:void(0);" class="edit-help glyphicon glyphicon-modal-window"
+                            data-toggle="tooltip"
                             title="Ajuda"/>
 
                 </f:facet>
@@ -135,7 +135,8 @@
                                         value="#{manutencaoCadastroFuncionalidadeMB.dto.identificacaoOpcaoAplicacao}"/>
 
                                 <h:inputTextarea id="ajudaOpcaoSaveForm"
-                                        value="#{manutencaoCadastroFuncionalidadeMB.dto.ajudaOpcao}" style="display: none"/>
+                                        value="#{manutencaoCadastroFuncionalidadeMB.dto.ajudaOpcao}"
+                                        style="display: none"/>
 
                                 <h:outputLabel id="labelIdFuncionalidade">
                                     #{seg_msg['seg.gestao.manutencaoCadastroFuncionalidade.form.idFuncionalidade']}
@@ -151,28 +152,53 @@
                                                 value="#{manutencaoCadastroFuncionalidadeMB.dto.aplicacaoModulo.identificacaoModuloSistema}"
                                                 id="moduloForm"
                                                 styleClass="form-control">
-                                            <f:selectItems value="#{manutencaoCadastroFuncionalidadeMB.allModuloSistema}"
+                                            <f:selectItems
+                                                    value="#{manutencaoCadastroFuncionalidadeMB.allModuloSistema}"
                                                     var="modulo"
                                                     itemValue="#{modulo.identificacaoModuloSistema}"
                                                     itemLabel="#{modulo.descricaoModuloSistema}"/>
-                                            <f:ajax render="identificacaoAplicacaoModuloForm"
+                                            <f:ajax render="aplicacaoModuloListForm"
                                                     listener="#{manutencaoCadastroFuncionalidadeMB.loadAplicacoesPorModulo}"/>
                                         </h:selectOneMenu>
                                     </div>
+
                                     <div class="form-group col-md-12">
-                                        <h:outputLabel for="identificacaoAplicacaoModuloForm">
+                                        <h:outputLabel>
                                             #{seg_msg['seg.gestao.manutencaoCadastroFuncionalidade.form.aplicacao']}
                                         </h:outputLabel>
-                                        <h:selectOneMenu
-                                                value="#{manutencaoCadastroFuncionalidadeMB.dto.identificacaoAplicacaoModulo}"
-                                                id="identificacaoAplicacaoModuloForm"
-                                                styleClass="form-control">
-                                            <f:selectItems
-                                                    value="#{manutencaoCadastroFuncionalidadeMB.aplicacoesPorModulo}"
-                                                    var="aplicacao"
-                                                    itemValue="#{aplicacao.identificacaoAplicacaoModulo}"
-                                                    itemLabel="#{aplicacao.descricaoAplicacaoModulo}"/>
-                                        </h:selectOneMenu>
+                                        <h:panelGroup styleClass="input-group dropdown" layout="block"
+                                                id="aplicacaoModuloListForm">
+                                            <h:inputText id="descricaoAplicacaoModuloForm"
+                                                    class="form-control dropdown-toggle"
+                                                    value="#{manutencaoCadastroFuncionalidadeMB.dto.descricaoAplicacaoModulo}"/>
+                                            <h:outputScript>
+                                                $('#manter-funcionalidade-form\\:descricaoAplicacaoModuloForm').change(function () {
+                                                    $("#manter-funcionalidade-form\\:idAplicacaoModuloForm").val("");
+                                                });
+                                            </h:outputScript>
+                                            <h:inputHidden id="idAplicacaoModuloForm"
+                                                    value="#{manutencaoCadastroFuncionalidadeMB.dto.identificacaoAplicacaoModulo}"/>
+
+                                            <ul class="dropdown-menu">
+                                                <ui:repeat
+                                                        value="#{manutencaoCadastroFuncionalidadeMB.aplicacoesPorModulo}"
+                                                        var="aplicacao">
+                                                    <li
+                                                            value="#{manutencaoCadastroFuncionalidadeMB.dto.descricaoAplicacaoModulo}">
+                                                        <a href="javascript:void(0);"
+                                                                data-value="#{aplicacao.descricaoAplicacaoModulo}"
+                                                                onclick="setModulo('#{aplicacao.descricaoAplicacaoModulo}', '#{aplicacao.identificacaoAplicacaoModulo}')">
+                                                            #{aplicacao.descricaoAplicacaoModulo}
+                                                        </a>
+                                                    </li>
+                                                </ui:repeat>
+                                            </ul>
+                                            <span role="button" class="input-group-addon dropdown-toggle"
+                                                    data-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false">
+                                                <span class="caret"/>
+                                            </span>
+                                        </h:panelGroup>
                                     </div>
 
                                     <div class="form-group col-md-12">
@@ -192,7 +218,6 @@
                                                 id="descricaoOpcaoForm"
                                                 styleClass="form-control" maxlength="60"/>
                                     </div>
-
 
                                     <div class="form-group col-md-12">
                                         <h:outputLabel for="urlForm">
@@ -215,8 +240,9 @@
                                     <sat:saveUpdateButton
                                             styleClass="align-bottom"
                                             label="#{seg_msg['seg.gestao.manutencaoCadastroFuncionalidade.form.salvar']}"
-                                            render="funcionalidades-sistema-table"
-                                            execute="identificacaoOpcaoAplicacaoForm identificacaoAplicacaoModuloForm casoUsoForm descricaoOpcaoForm urlForm ajudaOpcaoSaveForm"
+                                            render="funcionalidades-sistema-table
+                                                :manutencao-cadastro-funcionalidade-filtro:identificacaoAplicacaoFiltro"
+                                            execute="identificacaoOpcaoAplicacaoForm idAplicacaoModuloForm descricaoAplicacaoModuloForm casoUsoForm descricaoOpcaoForm urlForm ajudaOpcaoSaveForm"
                                             onEvent="resetOnSuccess"
                                             crudMb="#{manutencaoCadastroFuncionalidadeMB}"
                                     />
@@ -232,11 +258,13 @@
 
                                 <a4j:jsFunction name="loadAplicacoesPorModulo"
                                         action="#{manutencaoCadastroFuncionalidadeMB.loadAplicacoesPorModulo}"
-                                        render="identificacaoAplicacaoModuloForm">
+                                        render="aplicacaoModuloListForm">
                                     <a4j:param name="moduloForm"
                                             assignTo="#{manutencaoCadastroFuncionalidadeMB.dto.aplicacaoModulo.identificacaoModuloSistema}"/>
                                     <a4j:param name="aplicacaoForm"
                                             assignTo="#{manutencaoCadastroFuncionalidadeMB.dto.identificacaoAplicacaoModulo}"/>
+                                    <a4j:param name="descAplicacaoForm"
+                                            assignTo="#{manutencaoCadastroFuncionalidadeMB.dto.aplicacaoModulo.descricaoAplicacaoModulo}"/>
                                 </a4j:jsFunction>
 
                             </h:form>
