@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.arr.parametros.business.facade.PlanoContasFacade
-	c26792 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.PlanoContasFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./PlanoContasFacade.html">
+	c99716 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.PlanoContasFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./PlanoContasFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> PlanoContasFacade </td></tr>
@@ -20,10 +20,11 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + find(filter : PlanoContasFilter) : List&lt;PlanoContas&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllActiveTipoGruposCnaes() : Collection&lt;TipoGruposCnaes&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./PlanoContasFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.impl.PlanoContasFacadeImpl
-	c26802 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.PlanoContasFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/PlanoContasFacadeImpl.html">
+	c99726 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.PlanoContasFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/PlanoContasFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PlanoContasFacadeImpl </td></tr>
 		</table></td></tr>
@@ -31,16 +32,17 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + PlanoContasFacadeImpl(service : PlanoContasService) </td></tr>
+<tr><td align="left" balign="left"> + PlanoContasFacadeImpl(service : PlanoContasService, tipoGruposCnaesService : TipoGruposCnaesService) </td></tr>
 <tr><td align="left" balign="left"> + find(filter : PlanoContasFilter) : List&lt;PlanoContas&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllActiveTipoGruposCnaes() : Collection&lt;TipoGruposCnaes&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./impl/PlanoContasFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.arr.parametros.business.facade.PlanoContasFacade implements br.gov.to.sefaz.business.facade.CrudFacade<E, I extends java.io.Serializable>
-	c26976:p -> c26792:p [dir=back,arrowtail=empty,style=dashed];
+	c100059:p -> c99716:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.arr.parametros.business.facade.impl.PlanoContasFacadeImpl implements br.gov.to.sefaz.arr.parametros.business.facade.PlanoContasFacade
-	c26792:p -> c26802:p [dir=back,arrowtail=empty,style=dashed];
+	c99716:p -> c99726:p [dir=back,arrowtail=empty,style=dashed];
 	// br.gov.to.sefaz.business.facade.CrudFacade<E, I extends java.io.Serializable>
-	c26976 [label=<<table title="br.gov.to.sefaz.business.facade.CrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/facade/CrudFacade.html">
+	c100059 [label=<<table title="br.gov.to.sefaz.business.facade.CrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/facade/CrudFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CrudFacade&lt;E, I extends Serializable&gt; </td></tr>
@@ -51,7 +53,6 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findOne(arg0 : I) : E </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAll() : Collection&lt;E&gt; </font></td></tr>
-<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAll(arg0 : Iterable&lt;I&gt;) : Collection&lt;E&gt; </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + save(arg0 : E) : E </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + save(arg0 : Collection&lt;E&gt;) : Collection&lt;E&gt; </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + update(arg0 : E) : E </font></td></tr>

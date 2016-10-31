@@ -5,20 +5,17 @@ import br.gov.to.sefaz.arr.parametros.business.service.PedidoDocsExigidosService
 import br.gov.to.sefaz.arr.parametros.business.service.PedidoReceitaService;
 import br.gov.to.sefaz.arr.parametros.business.service.PedidoTipoAcoesService;
 import br.gov.to.sefaz.arr.parametros.business.service.PedidoTiposService;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoCamposAcoes;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoDocsExigidos;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoReceita;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoTipoAcoes;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoTipos;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.PedidoTiposRepository;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoCamposAcoes;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoDocsExigidos;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoReceita;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoTipoAcoes;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoTipos;
+import br.gov.to.sefaz.arr.persistence.repository.PedidoTiposRepository;
 import br.gov.to.sefaz.business.service.impl.DefaultCrudService;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.ValidationSuite;
 import br.gov.to.sefaz.persistence.enums.SituacaoEnum;
-import br.gov.to.sefaz.util.message.MessageUtil;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -45,7 +42,7 @@ public class PedidoTiposServiceImpl extends DefaultCrudService<PedidoTipos, Inte
             PedidoTiposRepository repository,
             PedidoDocsExigidosService pedidoDocsExigidosService, PedidoCamposAcoesService pedidoCamposAcoesService,
             PedidoTipoAcoesService pedidoTipoAcoesService, PedidoReceitaService pedidoReceitaService) {
-        super(repository, new Sort(new Sort.Order(Sort.Direction.ASC, "idTipoPedido")));
+        super(repository);
         this.pedidoDocsExigidosService = pedidoDocsExigidosService;
         this.pedidoCamposAcoesService = pedidoCamposAcoesService;
         this.pedidoTipoAcoesService = pedidoTipoAcoesService;
@@ -65,7 +62,6 @@ public class PedidoTiposServiceImpl extends DefaultCrudService<PedidoTipos, Inte
         saveAllPedidoCamposAcoes(pedidoTipos);
         saveAllPedidoReceitas(pedidoTipos);
 
-        MessageUtil.addMesage(MessageUtil.ARR, "mensagem.sucesso.operacao");
         return save;
     }
 
@@ -77,7 +73,6 @@ public class PedidoTiposServiceImpl extends DefaultCrudService<PedidoTipos, Inte
         saveAllPedidoCamposAcoes(pedidoTipos);
         saveAllPedidoReceitas(pedidoTipos);
 
-        MessageUtil.addMesage(MessageUtil.ARR, "mensagem.sucesso.operacao");
         return updatedPedidoTipos;
     }
 
@@ -106,7 +101,7 @@ public class PedidoTiposServiceImpl extends DefaultCrudService<PedidoTipos, Inte
     }
 
     @Override
-    public Optional<PedidoTipos> delete(@ValidationSuite Integer id) {
+    public Optional<PedidoTipos> delete(Integer id) {
         Optional<PedidoTipos> pedidoTipos;
 
         if (getRepository().existsLockReference(id)) {

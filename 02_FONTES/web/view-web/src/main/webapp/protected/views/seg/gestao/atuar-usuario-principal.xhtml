@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+        xmlns:sat="http://sefaz.to.gov.br/composites"
+        xmlns:a4j="http://richfaces.org/a4j">
+
+
+<ui:composition template="/protected/views/templates/views/default-template.xhtml">
+
+
+    <ui:param name="pageTitle" value="#{seg_msg['seg.gestao.criaSenha.titulo']}"/>
+
+    <ui:define name="header">
+        <h:outputScript library="js" name="seg/gestao/atuar-usuario-principal.js"/>
+    </ui:define>
+
+    <ui:define name="content">
+        <sat:panel title="#{seg_msg['seg.gestao.atuarUsuarioPrincipal.title']}">
+            <h:form id="atuar-form">
+                <h:panelGroup id="panel-render">
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <h:outputLabel for="cnpjUsuarioForm">
+                                #{seg_msg['seg.gestao.atuarUsuarioPrincipal.form.cnpj']}
+                            </h:outputLabel>
+                            <h:inputText value="#{usuarioPrincipalEmpresaMB.dto.cnpjEmpresa}"
+                                    id="cnpjUsuarioForm"
+                                    styleClass="form-control justInteger"
+                                    converter="cnpjFacesConverter"
+                                    maxlength="19"
+                                    p:data-mask="99.999.999/9999-99" />
+                        </div>
+                        <div class="col-md-6">
+                            <h3 id="nomeEmpresa">
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <h:outputLabel for="cpfUsuarioForm">
+                                #{seg_msg['seg.gestao.atuarUsuarioPrincipal.form.cpf']}
+                            </h:outputLabel>
+                            <h:inputText value="#{usuarioPrincipalEmpresaMB.dto.cpfUsuario}"
+                                    id="cpfUsuarioForm"
+                                    styleClass="form-control justInteger"
+                                    converter="cpfFacesConverter"
+                                    p:data-mask="999.999.999-99"
+                                    maxlength="14" />
+                        </div>
+                        <div class="col-md-6">
+                            <h3 id="nomeUsuario">
+                            </h3>
+                        </div>
+                    </div>
+                </h:panelGroup>
+                <div class="row">
+                    <div class="text-right form-group col-md-12">
+                        <button type="button"
+                                class="btn btn-success"
+                                onclick="validateUserCpfCnpj('#{pathResolverMB.getCertificadoECnpjPath()}',
+                                    '#{certificadoError}')" >
+                            #{seg_msg['seg.gestao.atuarUsuarioPrincipal.form.conferir']}
+                        </button>
+                        <sat:opcaoAjudaButton/>
+                    </div>
+                </div>
+            </h:form>
+        </sat:panel>
+    </ui:define>
+</ui:composition>
+</html>

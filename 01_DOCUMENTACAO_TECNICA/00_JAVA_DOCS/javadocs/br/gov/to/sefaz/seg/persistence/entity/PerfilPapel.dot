@@ -10,12 +10,13 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.entity.AbstractEntity<I extends java.io.Serializable>
-	c151098 [label=<<table title="br.gov.to.sefaz.persistence.entity.AbstractEntity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/entity/AbstractEntity.html">
+	c650988 [label=<<table title="br.gov.to.sefaz.persistence.entity.AbstractEntity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/entity/AbstractEntity.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractEntity&lt;I extends Serializable&gt; </font></td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
+<tr><td align="left" balign="left"> + SIM : String </td></tr>
+<tr><td align="left" balign="left"> + NAO : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + AbstractEntity() </td></tr>
@@ -28,8 +29,8 @@ digraph G {
 <tr><td align="left" balign="left"> + setUsuarioAlteracao(usuarioAlteracao : String) </td></tr>
 <tr><td align="left" balign="left"> + getDataAlteracao() : LocalDateTime </td></tr>
 <tr><td align="left" balign="left"> + setDataAlteracao(dataAlteracao : LocalDateTime) </td></tr>
-<tr><td align="left" balign="left"> + getRegistroExcluido() : Boolean </td></tr>
-<tr><td align="left" balign="left"> + setRegistroExcluido(registroExcluido : Boolean) </td></tr>
+<tr><td align="left" balign="left"> + getRegistroExcluido() : String </td></tr>
+<tr><td align="left" balign="left"> + setRegistroExcluido(registroExcluido : String) </td></tr>
 <tr><td align="left" balign="left"> + getUsuarioExclusao() : String </td></tr>
 <tr><td align="left" balign="left"> + setUsuarioExclusao(usuarioExclusao : String) </td></tr>
 <tr><td align="left" balign="left"> + getDataExclusao() : LocalDateTime </td></tr>
@@ -37,7 +38,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../persistence/entity/AbstractEntity.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.entity.PerfilPapel
-	c151225 [label=<<table title="br.gov.to.sefaz.seg.persistence.entity.PerfilPapel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./PerfilPapel.html">
+	c651328 [label=<<table title="br.gov.to.sefaz.seg.persistence.entity.PerfilPapel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./PerfilPapel.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PerfilPapel </td></tr>
 		</table></td></tr>
@@ -54,12 +55,16 @@ digraph G {
 <tr><td align="left" balign="left"> + setIdentificacaoPapel(identificacaoPapel : Long) </td></tr>
 <tr><td align="left" balign="left"> + getPapelSistema() : PapelSistema </td></tr>
 <tr><td align="left" balign="left"> + setPapelSistema(papelSistema : PapelSistema) </td></tr>
+<tr><td align="left" balign="left"> + getPerfilSistema() : PerfilSistema </td></tr>
+<tr><td align="left" balign="left"> + setPerfilSistema(perfilSistema : PerfilSistema) </td></tr>
+<tr><td align="left" balign="left"> + getNomePapel() : String </td></tr>
+<tr><td align="left" balign="left"> + getDescricaoPapel() : String </td></tr>
 <tr><td align="left" balign="left"> + hashCode() : int </td></tr>
 <tr><td align="left" balign="left"> + equals(obj : Object) : boolean </td></tr>
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./PerfilPapel.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.persistence.entity.PerfilPapel extends br.gov.to.sefaz.persistence.entity.AbstractEntity<br.gov.to.sefaz.seg.persistence.entity.PerfilPapelPK>
-	c151098:p -> c151225:p [dir=back,arrowtail=empty];
+	c650988:p -> c651328:p [dir=back,arrowtail=empty];
 }
 

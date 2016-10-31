@@ -4,18 +4,15 @@ import br.gov.to.sefaz.arr.parametros.business.service.ReceitasRepasseService;
 import br.gov.to.sefaz.arr.parametros.business.service.ReceitasService;
 import br.gov.to.sefaz.arr.parametros.business.service.ReceitasTaxasService;
 import br.gov.to.sefaz.arr.parametros.business.service.filter.ReceitasFilter;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.ReceitasRepasse;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.ReceitasTaxas;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.ReceitasRepository;
+import br.gov.to.sefaz.arr.persistence.entity.Receitas;
+import br.gov.to.sefaz.arr.persistence.entity.ReceitasRepasse;
+import br.gov.to.sefaz.arr.persistence.entity.ReceitasTaxas;
+import br.gov.to.sefaz.arr.persistence.repository.ReceitasRepository;
 import br.gov.to.sefaz.business.service.impl.DefaultCrudService;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.ValidationSuite;
 import br.gov.to.sefaz.persistence.enums.SituacaoEnum;
-import br.gov.to.sefaz.persistence.predicate.AndPredicateBuilder;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -24,7 +21,7 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * Implementação do serviço da entidade {@link br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas}.
+ * Implementação do serviço da entidade {@link br.gov.to.sefaz.arr.persistence.entity.Receitas}.
  *
  * @author <a href="mailto:gabriel.santos@ntconsult.com.br">gabriel.santos</a>
  * @since 19/05/2016 17:18:00
@@ -41,7 +38,7 @@ public class ReceitasServiceImpl extends DefaultCrudService<Receitas, Integer>
     public ReceitasServiceImpl(
             ReceitasRepository repository, ReceitasTaxasService receitasTaxasService,
             ReceitasRepasseService receitasRepasseService) {
-        super(repository, new Sort(new Sort.Order(Sort.Direction.ASC, "idReceita")));
+        super(repository);
         this.receitasTaxasService = receitasTaxasService;
         this.receitasRepasseService = receitasRepasseService;
     }
@@ -53,9 +50,7 @@ public class ReceitasServiceImpl extends DefaultCrudService<Receitas, Integer>
 
     @Override
     public Collection<Receitas> findAllActiveReceitas() {
-        return getRepository().findAll((root, query, cb) -> new AndPredicateBuilder(root, cb)
-                .equalsTo("situacao", SituacaoEnum.ATIVO)
-                .build(), getDefaultSort());
+        return getRepository().find(sb -> sb.where().equal("situacao", SituacaoEnum.ATIVO).orderById());
     }
 
     @Override
@@ -65,13 +60,13 @@ public class ReceitasServiceImpl extends DefaultCrudService<Receitas, Integer>
 
     @Override
     public List<Receitas> find(ReceitasFilter filter) {
-        return getRepository().findAll((root, query, cb) -> new AndPredicateBuilder(root, cb)
-                .like("idReceita", filter.getIdReceita())
-                .like("descricaoReceita", filter.getDescricaoReceita())
-                .equalsTo("classificacaoReceita", filter.getClassificacaoReceita())
-                .equalsTo("tipoReceita", filter.getTipoReceita())
-                .equalsTo("situacao", filter.getSituacao())
-                .build(), getDefaultSort());
+        return getRepository().find(sb -> sb.where()
+                .opt().equal("idReceita", filter.getIdReceita())
+                .and().opt().like("descricaoReceita", filter.getDescricaoReceita())
+                .and().opt().equal("classificacaoReceita", filter.getClassificacaoReceita())
+                .and().opt().equal("tipoReceita", filter.getTipoReceita())
+                .and().opt().equal("situacao", filter.getSituacao())
+                .orderById());
     }
 
     @Override

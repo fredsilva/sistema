@@ -1,0 +1,93 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
+<siteinfo>
+<sitename>SEFAZ-TO Wiki</sitename>
+<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<generator>JAMWiki 1.3.2</generator>
+<case>case-sensitive</case>
+<namespaces>
+<namespace key="-2">Media</namespace>
+<namespace key="-1">Special</namespace>
+<namespace key="0" />
+<namespace key="1">Comments</namespace>
+<namespace key="2">User</namespace>
+<namespace key="3">User comments</namespace>
+<namespace key="4">Project</namespace>
+<namespace key="5">Project comments</namespace>
+<namespace key="6">File</namespace>
+<namespace key="7">File comments</namespace>
+<namespace key="8">JAMWiki</namespace>
+<namespace key="9">JAMWiki comments</namespace>
+<namespace key="10">Template</namespace>
+<namespace key="11">Template comments</namespace>
+<namespace key="12">Help</namespace>
+<namespace key="13">Help comments</namespace>
+<namespace key="14">Category</namespace>
+<namespace key="15">Category comments</namespace>
+</namespaces>
+</siteinfo>
+<page>
+<title>Consultar Hist��rico de Acesso (log)</title>
+<ns>0</ns>
+<id>474</id>
+<revision>
+<id>1238</id>
+<timestamp>2016-10-13T15:37:43Z</timestamp>
+<contributor>
+<username>admin</username>
+<id>1</id>
+</contributor>
+<comment />
+<text xml:space="preserve" bytes="2041">Est�� funcionalidade tem por objetivo a consulta do hist��rico de acesso ao sistema (log) usando diversos filtros, como: usu��rio, procurado, tipo de opera����o, data ou URL.
+
+Para consultar o Hist��rico de Acesso (log) cadastrados, �� necess��rio acessar o menu &apos;&apos;&apos;Seguran��a do Sistema &gt; Consulta &gt; Consultar Hist��rico de Acesso (log)&apos;&apos;&apos;.
+
+----
+== Consultando o Hist��rico de Acesso (log) ==
+
+ Com a funcionalidade de consulta aberta, informar algum dos filtros dispon��veis (passos 1) e clicar no bot��o Consultar (passo 2).
+
+
+[[File:1-SEGUC0630.jpg|1-SEGUC0630]]
+
+
+&apos;&apos;&apos;Considera����es a respeito dos campos a serem preenchidos pelo usu��rio:&apos;&apos;&apos;
+
+:*Usu��rio deve informar obrigatoriamente os filtros CPF Usu��rio, Tipo de Opera����o e Data de In��cio e Fim da consulta.
+:*O per��odo informado deve conter um intervalo m��ximo de 60 dias.
+:*Os filtros Nome de Usu��rio, Nome de Procurado e url podem ser preenchidos somente com alguns caracteres n��o precisando ser exato. Para estes filtros n��o h�� diferen��a entre mai��sculas e min��sculas.
+
+
+----
+ Ap��s ser confirmada a consulta no passo 2, �� exibido os dados de hist��rico de acesso (passo 3) conforme filtros informados no passo 1.
+
+
+[[File:2-SEGUC0630.jpg|2-SEGUC0630]]
+
+&apos;&apos;&apos;Considera����es a respeito dos registros retornados pela consulta:&apos;&apos;&apos;
+
+:*O resultado da consulta �� ordenada pelo Nome de Usu��rio e Data de Acesso ascendentemente.
+
+----
+== Visualizando Detalhes do Hist��rico de Acesso ==
+
+ Se desejar visualizar mais detalhes do hist��rico de acesso, pode-se acessar a tela Detalhe do Log atrav��s do ��cone de mesmo nome, conforme passo 4 abaixo.
+
+[[File:3-SEGUC0630.jpg|3-SEGUC0630]]
+
+
+----
+ Ao clicar no ��cone Detalhe do Log, no passo 4, �� exibida a janela Detalhe do Log, com as informa����es de log.
+
+[[File:4-SEGUC0630.jpg|4-SEGUC0630]]
+
+
+ Essa �� uma tela de visualiza����o somente, na qual as informa����es ficam desabilitados para edi����o.
+
+ Para voltar �� tela de consulta de hist��ricos de acesso, deve-se clicar no bot��o Fechar (passo 5), ou fora da janela de Detalhe do Log.
+
+&lt;/br&gt;
+----
+[[Consulta | Voltar]]</text>
+</revision>
+</page>
+</mediawiki>

@@ -1,7 +1,7 @@
 package br.gov.to.sefaz.arr.parametros.business.service.validator;
 
-import br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.ReceitasRepository;
+import br.gov.to.sefaz.arr.persistence.entity.Receitas;
+import br.gov.to.sefaz.arr.persistence.repository.ReceitasRepository;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.violation.CustomViolation;
 import br.gov.to.sefaz.util.message.SourceBundle;
@@ -13,10 +13,10 @@ import org.mockito.Matchers;
 import org.mockito.Mock;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
-import org.springframework.data.jpa.domain.Specification;
 
 import java.util.ArrayList;
 import java.util.Set;
+import java.util.function.Consumer;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
@@ -65,6 +65,7 @@ public class ReceitasCodigoBarraDuplicatedValidatorTest {
     }
 
     @Test
+    @SuppressWarnings("unchecked")
     public void shouldFailWhenDuplicatedCodBarraReceita() {
         //given
         ArrayList<Receitas> receitasList = new ArrayList<>();
@@ -72,7 +73,7 @@ public class ReceitasCodigoBarraDuplicatedValidatorTest {
 
         //when
         when(receitas.getIdBarra()).thenReturn(1);
-        when(repository.findAll(Matchers.any(Specification.class))).thenReturn(receitasList);
+        when(repository.find(Matchers.any(Consumer.class))).thenReturn(receitasList);
 
         //then
         Set<CustomViolation> violationSet = validator.validate(receitas);

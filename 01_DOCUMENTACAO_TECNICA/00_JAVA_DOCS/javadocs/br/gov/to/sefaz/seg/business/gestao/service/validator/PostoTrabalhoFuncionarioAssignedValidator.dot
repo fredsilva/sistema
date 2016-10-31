@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.service.validation.ServiceValidator<T>
-	c160131 [label=<<table title="br.gov.to.sefaz.business.service.validation.ServiceValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/service/validation/ServiceValidator.html">
+	c685268 [label=<<table title="br.gov.to.sefaz.business.service.validation.ServiceValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/service/validation/ServiceValidator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ServiceValidator&lt;T&gt; </td></tr>
@@ -25,7 +25,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../../../business/service/validation/ServiceValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.validator.PostoTrabalhoFuncionarioAssignedValidator
-	c160205 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.PostoTrabalhoFuncionarioAssignedValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./PostoTrabalhoFuncionarioAssignedValidator.html">
+	c685449 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.PostoTrabalhoFuncionarioAssignedValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./PostoTrabalhoFuncionarioAssignedValidator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PostoTrabalhoFuncionarioAssignedValidator </td></tr>
 		</table></td></tr>
@@ -33,12 +33,12 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + PostoTrabalhoFuncionarioAssignedValidator(postoTrabalhoRepository : PostoTrabalhoRepository) </td></tr>
+<tr><td align="left" balign="left"> + PostoTrabalhoFuncionarioAssignedValidator(usuarioPostoTrabalhoRepository : UsuarioPostoTrabalhoRepository) </td></tr>
 <tr><td align="left" balign="left"> + support(clazz : Class&lt;?&gt;, context : String) : boolean </td></tr>
-<tr><td align="left" balign="left"> + validate(target : Long) : Set&lt;CustomViolation&gt; </td></tr>
+<tr><td align="left" balign="left"> + validate(target : Integer) : Set&lt;CustomViolation&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./PostoTrabalhoFuncionarioAssignedValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.business.gestao.service.validator.PostoTrabalhoFuncionarioAssignedValidator implements br.gov.to.sefaz.business.service.validation.ServiceValidator<T>
-	c160131:p -> c160205:p [dir=back,arrowtail=empty,style=dashed];
+	c685268:p -> c685449:p [dir=back,arrowtail=empty,style=dashed];
 }
 

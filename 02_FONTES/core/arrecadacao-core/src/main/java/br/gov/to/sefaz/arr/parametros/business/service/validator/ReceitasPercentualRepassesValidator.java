@@ -1,7 +1,7 @@
 package br.gov.to.sefaz.arr.parametros.business.service.validator;
 
-import br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.ReceitasRepasse;
+import br.gov.to.sefaz.arr.persistence.entity.Receitas;
+import br.gov.to.sefaz.arr.persistence.entity.ReceitasRepasse;
 import br.gov.to.sefaz.business.service.validation.ServiceValidator;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.violation.CustomViolation;
@@ -18,8 +18,8 @@ import java.util.Set;
 
 /**
  * Validação para somar os valores de
- * {@link br.gov.to.sefaz.arr.parametros.persistence.entity.ReceitasRepasse#percentualRepasse} na lista
- * {@link br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas#receitasRepasseCollection} para verificar se o
+ * {@link br.gov.to.sefaz.arr.persistence.entity.ReceitasRepasse#percentualRepasse} na lista
+ * {@link br.gov.to.sefaz.arr.persistence.entity.Receitas#receitasRepasseCollection} para verificar se o
  * valor somado será 100%.
  *
  * @author <a href="mailto:gabriel.santos@ntconsult.com.br">gabriel.santos</a>

@@ -2,16 +2,13 @@ package br.gov.to.sefaz.arr.parametros.business.service.impl;
 
 import br.gov.to.sefaz.arr.parametros.business.service.PlanoContasService;
 import br.gov.to.sefaz.arr.parametros.business.service.filter.PlanoContasFilter;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PlanoContas;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.PlanoContasRepository;
+import br.gov.to.sefaz.arr.persistence.entity.PlanoContas;
+import br.gov.to.sefaz.arr.persistence.repository.PlanoContasRepository;
 import br.gov.to.sefaz.business.service.impl.DefaultCrudService;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.ValidationSuite;
 import br.gov.to.sefaz.persistence.enums.SituacaoEnum;
-import br.gov.to.sefaz.persistence.predicate.AndPredicateBuilder;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -31,7 +28,7 @@ public class PlanoContasServiceImpl extends DefaultCrudService<PlanoContas, Long
     @Autowired
     public PlanoContasServiceImpl(
             PlanoContasRepository repository) {
-        super(repository, new Sort(new Sort.Order(Sort.Direction.ASC, "codigoPlanoContas")));
+        super(repository);
     }
 
     @Override
@@ -73,20 +70,17 @@ public class PlanoContasServiceImpl extends DefaultCrudService<PlanoContas, Long
 
     @Override
     public List<PlanoContas> find(PlanoContasFilter filter) {
-        return getRepository().findAll((root, query, cb) -> new AndPredicateBuilder(root, cb)
-                .like("codigoPlanoContas", filter.getCodigoPlanoContas())
-                .like("nomeConta", filter.getNomeConta())
-                .like("codigoContabil", filter.getCodigoContabil())
-                .equalsTo("tipoConta", filter.getTipoConta())
-                .fetch("gruposCnaes")
-                .build(), getDefaultSort());
+        return getRepository().find("pc", sb -> sb
+                .innerJoinFetch("pc.gruposCnaes")
+                .where().opt().like("pc.codigoPlanoContas", filter.getCodigoPlanoContas())
+                .and().opt().like("pc.nomeConta", filter.getNomeConta())
+                .and().opt().like("pc.codigoContabil", filter.getCodigoContabil())
+                .and().opt().equal("pc.tipoConta", filter.getTipoConta())
+                .orderById());
     }
 
     @Override
     public Collection<PlanoContas> findAll() {
-
-        return getRepository().findAll((root, query, cb) -> new AndPredicateBuilder(root, cb)
-                .fetch("gruposCnaes")
-                .build(), getDefaultSort());
+        return getRepository().find("pc", sb -> sb.innerJoinFetch("pc.gruposCnaes").orderById());
     }
 }

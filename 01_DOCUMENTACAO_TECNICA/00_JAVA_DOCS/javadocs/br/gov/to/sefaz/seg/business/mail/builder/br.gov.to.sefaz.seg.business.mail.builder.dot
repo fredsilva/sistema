@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.mail.builder.CorreioEletronicoBuilder
-	c19863 [label=<<table title="br.gov.to.sefaz.seg.business.mail.builder.CorreioEletronicoBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CorreioEletronicoBuilder.html">
+	c99337 [label=<<table title="br.gov.to.sefaz.seg.business.mail.builder.CorreioEletronicoBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CorreioEletronicoBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CorreioEletronicoBuilder </td></tr>
 		</table></td></tr>
@@ -27,7 +27,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./CorreioEletronicoBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.mail.builder.CompressAnexo
-	c19864 [label=<<table title="br.gov.to.sefaz.seg.business.mail.builder.CompressAnexo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CompressAnexo.html">
+	c99338 [label=<<table title="br.gov.to.sefaz.seg.business.mail.builder.CompressAnexo" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CompressAnexo.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CompressAnexo </td></tr>
 		</table></td></tr>

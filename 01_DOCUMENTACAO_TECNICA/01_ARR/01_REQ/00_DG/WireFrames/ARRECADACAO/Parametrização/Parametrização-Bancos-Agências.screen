@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" id="226" x="48" y="15" width="705" height="642" text="PARAMETRIZAÇÃO DOS BANCOS e AGÊNCIAS&#xA;http://..." measuredWidth="705" measuredHeight="642">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TabbedPane" id="229" x="58" y="176" width="687" height="441" text="Bancos,Agências" measuredWidth="687" measuredHeight="441" selection="1">
+    <items x="10" y="0" width="63" height="27" text="Bancos"/>
+    <items x="73" y="0" width="73" height="27" text="Agências"/>
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="231" x="74" y="558" width="623" text="Número,Nome,CNPJ,Município,Número CC,E-mail,&#xA;2972-5,Agência da Praça 12,345432560001-71,PALMAS,34701-8,agencia12@bra.gov.br,{trash}&#xA;" measuredWidth="623" measuredHeight="47" alternative="#eeeeee">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="232" x="76" y="537" text="Lista de Agências Adicionadas" measuredWidth="178" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="238" x="73" y="286" text="Banco Selecionado" measuredWidth="119" measuredHeight="23">
+    <font bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="239" x="73" y="307" text="Número" measuredWidth="51" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="240" x="73" y="329" width="63" text="003" measuredWidth="63" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="241" x="175" y="307" text="Nome do Banco" measuredWidth="96" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="242" x="175" y="329" width="217" text="Banco do Bradesco" measuredWidth="217" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:HLine" id="244" x="68" y="373" width="609" measuredWidth="609" measuredHeight="6"/>
+  <widgets xsi:type="model:Label" id="245" x="339" y="354" text="AGÊNCIAS" measuredWidth="70" measuredHeight="23">
+    <font bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="246" x="76" y="381" text="Número *" measuredWidth="61" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="247" x="76" y="403" width="63" text="2972" measuredWidth="63" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="248" x="188" y="381" text="Nome da Agência *" measuredWidth="115" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="249" x="188" y="403" width="217" text="Agência da Praça 12" measuredWidth="217" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="250" x="144" y="381" text="Dígito *" measuredWidth="49" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="251" x="144" y="403" width="35" text="5" measuredWidth="35" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="252" x="416" y="381" text="CNPJ *" measuredWidth="47" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="253" x="416" y="403" width="121" text="345432560001-71" measuredWidth="121" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="254" x="188" y="434" text="Município *" measuredWidth="71" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="255" x="188" y="456" width="329" text="55-PALMAS" measuredWidth="329" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="256" x="545" y="403" width="132" text="ATIVA" measuredWidth="132" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="257" x="545" y="381" text="Situação *" measuredWidth="65" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Note" id="258" x="609" y="377" width="78" height="39" text="Ativa ou Cancelada" measuredWidth="78" measuredHeight="39">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="259" x="528" y="434" text="Número CC *" measuredWidth="81" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="260" x="528" y="456" width="81" text="34701" measuredWidth="81" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="261" x="616" y="434" text="Dígito CC *" measuredWidth="70" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="262" x="616" y="456" width="35" text="8" measuredWidth="35" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="263" x="599" y="505" width="98" height="23" text="Adicionar" measuredWidth="98" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="264" x="76" y="483" text="E-mail *" measuredWidth="52" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="265" x="76" y="505" width="217" text="agencia12@bra.gov.br" measuredWidth="217" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="266" x="638" y="624" width="98" height="23" text="Salvar" measuredWidth="98" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="270" x="60" y="73" text="Lista de Bancos" measuredWidth="96" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="276" x="76" y="434" text="UF *" measuredWidth="32" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="277" x="76" y="456" width="103" text="55-PALMAS" measuredWidth="103" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="278" x="536" y="624" height="23" text="&amp;Nova Agência" measuredWidth="98" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="279" x="68" y="233" width="669" text="Número {neutral},Nome {neutral},CNPJ {neutral},Município {neutral},Número CC {neutral},E-mail {neutral},&#xA;0134-1,Agência da BB,387373640001-71,PALMAS,33556-8,agenciabrasil@bb.gov.br,{unselected}{trash}&#xA;" measuredWidth="669" measuredHeight="48" alternative="#eeeeee">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="280" x="70" y="212" text="Lista de Agências" measuredWidth="106" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Checkbox" id="281" x="300" y="505" text="Agência Centralizadora" measuredWidth="153" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="282" x="58" y="94" width="606" height="67" text="Código {neutral},Nome {neutral},(align:center).CNPJ Raiz {neutral}, Situação {neutral},&#xA;001,Banco do Brasil,11111111,Ativo,{selected} {trash}&#xA;002,Caixa Econômica Federal,22222222,Ativo,{unselected} {trash}&#xA;" measuredWidth="606" measuredHeight="67" selection="1" alternative="#eeeeee">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="297" x="232" y="162" measuredWidth="267" measuredHeight="23">
+    <widgets xsi:type="model:TextField" id="298" x="58" width="17" text="1" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="299" x="79" width="18" text="2" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="300" x="99" width="18" text="3" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="301" x="118" width="17" text="4" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="302" x="137" width="20" text="5" measuredWidth="20" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="303" x="160" text="Próximo" measuredWidth="57" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="304" width="56" text="Anterior" measuredWidth="56" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Spinner" id="305" x="226" text="10" measuredWidth="41" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="306" x="240" y="281" measuredWidth="267" measuredHeight="23">
+    <widgets xsi:type="model:TextField" id="307" x="58" width="17" text="1" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="308" x="79" width="18" text="2" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="309" x="99" width="18" text="3" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="310" x="118" width="17" text="4" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="311" x="137" width="20" text="5" measuredWidth="20" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="312" x="160" text="Próximo" measuredWidth="57" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="313" width="56" text="Anterior" measuredWidth="56" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Spinner" id="314" x="226" text="10" measuredWidth="41" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
- * Implementação da fachada da entidade {@link ModuloSistemaFacade}.
+ * Implementação da fachada da entidade {@link br.gov.to.sefaz.seg.business.gestao.facade.ModuloSistemaFacade}.
  *
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 14/06/2016 09:36:00
@@ -20,5 +20,10 @@ public class ModuloSistemaFacadeImpl extends DefaultCrudFacade<ModuloSistema, Lo
     @Autowired
     public ModuloSistemaFacadeImpl(ModuloSistemaService service) {
         super(service);
+    }
+
+    @Override
+    protected ModuloSistemaService getService() {
+        return (ModuloSistemaService) super.getService();
     }
 }

@@ -6,10 +6,10 @@ import br.gov.to.sefaz.arr.parametros.business.service.ReceitasRepasseService;
 import br.gov.to.sefaz.arr.parametros.business.service.ReceitasService;
 import br.gov.to.sefaz.arr.parametros.business.service.ReceitasTaxasService;
 import br.gov.to.sefaz.arr.parametros.business.service.filter.ReceitasFilter;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PlanoContas;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.ReceitasRepasse;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.ReceitasTaxas;
+import br.gov.to.sefaz.arr.persistence.entity.PlanoContas;
+import br.gov.to.sefaz.arr.persistence.entity.Receitas;
+import br.gov.to.sefaz.arr.persistence.entity.ReceitasRepasse;
+import br.gov.to.sefaz.arr.persistence.entity.ReceitasTaxas;
 import br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +20,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Implementação da fachada da entidade {@link br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas}.
+ * Implementação da fachada da entidade {@link br.gov.to.sefaz.arr.persistence.entity.Receitas}.
  *
  * @author <a href="mailto:gabriel.santos@ntconsult.com.br">gabriel.santos</a>
  * @since 19/05/2016 17:28:00

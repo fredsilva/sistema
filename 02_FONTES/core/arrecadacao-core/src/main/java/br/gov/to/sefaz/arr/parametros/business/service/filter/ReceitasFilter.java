@@ -1,14 +1,14 @@
 package br.gov.to.sefaz.arr.parametros.business.service.filter;
 
-import br.gov.to.sefaz.arr.parametros.persistence.enums.ClassificacaoReceitaEnum;
-import br.gov.to.sefaz.arr.parametros.persistence.enums.TipoReceitaEnum;
+import br.gov.to.sefaz.arr.persistence.enums.ClassificacaoReceitaEnum;
+import br.gov.to.sefaz.arr.persistence.enums.TipoReceitaEnum;
 import br.gov.to.sefaz.persistence.enums.SituacaoEnum;
 
 import java.util.Objects;
 
 /**
  * POJO para representar os campos de filtro para pesquisa de
- * {@link br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas} na base de dados.
+ * {@link br.gov.to.sefaz.arr.persistence.entity.Receitas} na base de dados.
  *
  * @author <a href="mailto:gabriel.santos@ntconsult.com.br">gabriel.santos</a>
  * @since 21/05/2016 12:00:00

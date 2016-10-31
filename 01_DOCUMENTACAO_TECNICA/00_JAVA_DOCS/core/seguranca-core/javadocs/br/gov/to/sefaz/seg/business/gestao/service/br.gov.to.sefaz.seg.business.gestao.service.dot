@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.gestao.service.UsuarioSistemaService
-	c1433 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.UsuarioSistemaService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioSistemaService.html">
+	c4711 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.UsuarioSistemaService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioSistemaService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> UsuarioSistemaService </td></tr>
@@ -20,13 +20,67 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllByCpfAndName(cpf : Long, nome : String) : Collection&lt;UsuarioSistema&gt; </font></td></tr>
-<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + validate(usuarioSistema : UsuarioSistema) </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + validateLogin(usuarioSistema : UsuarioSistema) </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + blockUser(cpf : String) </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + unblockUser(cpf : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllUsuarioSistema(filter : UsuarioSistemaFilter) : List&lt;UsuarioSistema&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + saveNewUsuarioSistemaSolicitacaoSenha(usuarioSistema : UsuarioSistema) </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + resetPassword(usuarioSistema : UsuarioSistema) : UsuarioSistema </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + changePassword(dto : ChangePasswordDto) </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllUsuarioSistemaPerfil(filter : AtivarInativarPerfilFilter) : List&lt;UsuarioSistema&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllUsuarioSistemaManutencao(filter : ManterUsuarioSistemaFilter) : List&lt;UsuarioSistema&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + updateStatusUsuario(usuarioSistema : UsuarioSistema) : UsuarioSistema </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + updateUsuarioSistema(usuarioSistema : UsuarioSistema) : UsuarioSistema </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + saveUsuarioSistema(usuarioSistema : UsuarioSistema) : UsuarioSistema </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + enableUser(usuarioSistema : UsuarioSistema) </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + countByTipoUsuario(tipoUsuario : TipoUsuario) : Long </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllByFilter(filter : AtribuirPerfilFilter) : Collection&lt;UsuarioSistema&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findNomeByCpf(usuarioCpf : String) : String </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + updateAtribuirUsuarioPerfil(dto : UsuarioSistema) </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./UsuarioSistemaService.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.UsuarioPrincipalEmpresaService
+	c4712 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.UsuarioPrincipalEmpresaService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioPrincipalEmpresaService.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> UsuarioPrincipalEmpresaService </td></tr>
+		</table></td></tr>
+		</table>>, URL="./UsuarioPrincipalEmpresaService.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.UsuarioPostoTrabalhoService
+	c4713 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.UsuarioPostoTrabalhoService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioPostoTrabalhoService.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> UsuarioPostoTrabalhoService </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + removeUsuarioPostoTrabalho(cpf : String, postoTrabalho : PostoTrabalho) : Optional&lt;UsuarioPostoTrabalho&gt; </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./UsuarioPostoTrabalhoService.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.UsuarioPerfilService
+	c4714 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.UsuarioPerfilService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioPerfilService.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> UsuarioPerfilService </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + buildProfileString(allUsuarioSistema : Collection&lt;UsuarioSistema&gt;) </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + getAllUsuarioPerfilByCpf(cpfUsuario : String) : Collection&lt;UsuarioPerfil&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + updateUsuarioPerfil(usuarioPerfilList : Collection&lt;UsuarioPerfil&gt;) </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + deleteAllWithPerfilId(id : Long) </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllUsuariosPerfilByPerfilId(identificacaoPerfil : Long) : Collection&lt;UsuarioPerfil&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllPerfilById(cpfUsuario : String) : Set&lt;UsuarioPerfil&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + deleteUsuarioPerfilByUsuario(cpfUsuario : String) </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + updateAtribuirUsuarioPerfil(usuarioPerfil : Set&lt;UsuarioPerfil&gt;, cpfUsuario : String) </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./UsuarioPerfilService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.UnidadeOrganizacionalService
-	c1434 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.UnidadeOrganizacionalService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UnidadeOrganizacionalService.html">
+	c4715 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.UnidadeOrganizacionalService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UnidadeOrganizacionalService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> UnidadeOrganizacionalService </td></tr>
@@ -36,10 +90,11 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAll(filter : UnidadeOrganizacionalFilter) : List&lt;UnidadeOrganizacional&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findTiposUnidades() : List&lt;TipoUnidade&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./UnidadeOrganizacionalService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.TipoUsuarioService
-	c1435 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.TipoUsuarioService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoUsuarioService.html">
+	c4716 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.TipoUsuarioService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoUsuarioService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> TipoUsuarioService </td></tr>
@@ -48,11 +103,66 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllByDescricao(filter : TipoUsuarioFilter) : List&lt;TipoUsuario&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findByFilter(filter : TipoUsuarioFilter) : List&lt;TipoUsuario&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAll() : List&lt;TipoUsuario&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllCountUsers() : List&lt;TipoUsuario&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./TipoUsuarioService.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.SolicitacaoUsuarioService
+	c4717 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.SolicitacaoUsuarioService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SolicitacaoUsuarioService.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> SolicitacaoUsuarioService </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + save(usuarioSistema : UsuarioSistema) </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./SolicitacaoUsuarioService.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.SmsContribuinteService
+	c4718 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.SmsContribuinteService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SmsContribuinteService.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> SmsContribuinteService </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findLastSentSMSsForUser(usuarioSistema : UsuarioSistema) : List&lt;SmsContribuinte&gt; </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./SmsContribuinteService.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.ProcuracaoUsuarioService
+	c4719 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.ProcuracaoUsuarioService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProcuracaoUsuarioService.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> ProcuracaoUsuarioService </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findProcuracaoByCpf(cpfOrigem : String, procuradorCpf : String) : ProcuracaoUsuario </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findProcuracaoByCnpj(cnpjOrigem : String, procuradorCpf : String) : ProcuracaoUsuario </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./ProcuracaoUsuarioService.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.ProcuracaoOpcaoService
+	c4720 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.ProcuracaoOpcaoService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProcuracaoOpcaoService.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> ProcuracaoOpcaoService </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + deleteByProcuracao(identificacaoProcurUsuario : Long) </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./ProcuracaoOpcaoService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.PostoTrabalhoService
-	c1436 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.PostoTrabalhoService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PostoTrabalhoService.html">
+	c4721 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.PostoTrabalhoService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PostoTrabalhoService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> PostoTrabalhoService </td></tr>
@@ -62,24 +172,120 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAll(filter : PostoTrabalhoFilter) : List&lt;PostoTrabalho&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllByUnidadeOrganizacional(identificUnidOrganizac : Long) : Collection&lt;PostoTrabalho&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./PostoTrabalhoService.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.PerfilSistemaService
+	c4722 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.PerfilSistemaService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PerfilSistemaService.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> PerfilSistemaService </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllPerfilSistemaByPapel(idPapel : Long) : List&lt;PerfilSistema&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllPerfilSistema(filter : PerfilSistemaFilter) : Collection&lt;PerfilSistema&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findOneComplete(id : Long) : PerfilSistema </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + saveOrUpdatePerfilSistema(dto : PerfilSistema) : PerfilSistema </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./PerfilSistemaService.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.PerfilPapelService
+	c4723 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.PerfilPapelService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PerfilPapelService.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> PerfilPapelService </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + deleteAllWithPerfilId(id : Long) </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllPerfilPapelByPerfil(id : Long) : Collection&lt;PerfilPapel&gt; </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./PerfilPapelService.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.PapelSistemaService
+	c4724 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.PapelSistemaService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PapelSistemaService.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> PapelSistemaService </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllPerfilPapelOpcao(filter : PapelSistemaFilter) : List&lt;PapelSistema&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + saveOrUpdatePapelSistema(dto : PapelSistema) : PapelSistema </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findOneCounted(id : Long) : PapelSistema </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllPapeisPerfil() : Collection&lt;PapelSistema&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllPapeisByPerfilId(id : Long) : Collection&lt;PapelSistema&gt; </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./PapelSistemaService.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.PapelOpcaoService
+	c4725 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.PapelOpcaoService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PapelOpcaoService.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> PapelOpcaoService </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllPapelOpcao(id : Long) : Set&lt;PapelOpcao&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + removeAllPapelOpcaoByPapelId(id : Long) </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./PapelOpcaoService.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.OpcaoAplicacaoService
+	c4726 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.OpcaoAplicacaoService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OpcaoAplicacaoService.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> OpcaoAplicacaoService </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findByFilter(filter : OpcaoAplicacaoFilter) : List&lt;OpcaoAplicacao&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllOpcoes() : List&lt;OpcaoAplicacao&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllFromPerfilUsuario() : List&lt;OpcaoAplicacao&gt; </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./OpcaoAplicacaoService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.ModuloSistemaService
-	c1437 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.ModuloSistemaService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ModuloSistemaService.html">
+	c4727 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.ModuloSistemaService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ModuloSistemaService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ModuloSistemaService </td></tr>
 		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllSortedByAbreviacao() : List&lt;ModuloSistema&gt; </font></td></tr>
+		</table></td></tr>
 		</table>>, URL="./ModuloSistemaService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.LogNavegacaoService
-	c1438 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.LogNavegacaoService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LogNavegacaoService.html">
+	c4728 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.LogNavegacaoService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LogNavegacaoService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> LogNavegacaoService </td></tr>
 		</table></td></tr>
 		</table>>, URL="./LogNavegacaoService.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.ListagemCpfProcuracaoService
+	c4729 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.ListagemCpfProcuracaoService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ListagemCpfProcuracaoService.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> ListagemCpfProcuracaoService </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findByCpf(cpf : String) : List&lt;ListagemCpfProcuracao&gt; </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./ListagemCpfProcuracaoService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.HistoricoLoginSistemaService
-	c1439 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.HistoricoLoginSistemaService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./HistoricoLoginSistemaService.html">
+	c4730 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.HistoricoLoginSistemaService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./HistoricoLoginSistemaService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> HistoricoLoginSistemaService </td></tr>
@@ -92,11 +298,48 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./HistoricoLoginSistemaService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.CorreioContribuinteService
-	c1440 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.CorreioContribuinteService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CorreioContribuinteService.html">
+	c4731 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.CorreioContribuinteService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CorreioContribuinteService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CorreioContribuinteService </td></tr>
 		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findLastSentEmailsForUser(usuarioSistema : UsuarioSistema) : List&lt;CorreioContribuinte&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + getMessagePreviewLength() : int </font></td></tr>
+		</table></td></tr>
 		</table>>, URL="./CorreioContribuinteService.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.CadastroSenhaService
+	c4732 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.CadastroSenhaService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CadastroSenhaService.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> CadastroSenhaService </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAll(filter : CadastroSenhaFilter) : Collection&lt;UsuarioSistema&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + resetPassword(usuarioSistema : UsuarioSistema) </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + authorizeUser(usuarioSistema : UsuarioSistema) </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findOneUsuarioSistema(cpfUsuario : String) : UsuarioSistema </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllLogradouros() : Collection&lt;Logradouro&gt; </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./CadastroSenhaService.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.AplicacaoModuloService
+	c4733 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.AplicacaoModuloService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AplicacaoModuloService.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> AplicacaoModuloService </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findByModuloSistema(identificacaoModuloSistema : Long) : Collection&lt;AplicacaoModulo&gt; </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./AplicacaoModuloService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 }
 

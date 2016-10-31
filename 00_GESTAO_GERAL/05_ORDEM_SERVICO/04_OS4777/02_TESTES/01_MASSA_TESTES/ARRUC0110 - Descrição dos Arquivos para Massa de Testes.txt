@@ -1,0 +1,22 @@
+Descrição dos arquivos para Massa de Testes.
+
+Na aba Arrecadação 15 min da planilha ARRUC0110 - Massa de Testes contém os os detalhes do layout para construção da massa de teste controlada para o Arquivo Arrecadação 15 min.
+
+O arquivo ARP_CX027_30062016_78.controlado é um arquivo exemplo contendo massa de teste controlada feito pela planilha, para Arquivo Arrecadação 15 min.
+
+O arquivo ARP_CX027_30062016_78 é um Arquivo Arrecadação 15 min completo. Este arquivo não tem massa controlada, é um arquivo recebido pela SEFAZ.
+
+O arquivo ARP_CX174_30062016_76 é um Arquivo Arrecadação 15 min completo. Este arquivo não tem massa controlada, é um arquivo recebido pela SEFAZ.
+
+Na aba Arrecadação consolidado da planilha ARRUC0110 - Massa de Testes contém os os detalhes do layout para construção da massa de teste controlada para o Arquivo Arrecadação Consolidada.
+
+O arquivo BRADES.SFT.COD50027.20160704102037.controlado é um arquivo exemplo contendo massa de teste controlada feito pela planilha, para ICMS.
+
+O arquivo BRADES.SFT.COD50316.20160704102038.controlado é um arquivo exemplo contendo massa de teste controlada feito pela planilha, para GNRE.
+
+Na aba Simples nacional da planilha ARRUC0110 - Massa de Testes contém os detalhes do layout para a construção da massa de teste controlada para o Arquivo Simples Nacional.
+
+O arquivo DAF607.STO.SIMPLESNAC.20160630110041.Controlado é um arquivo exemplo contendo massa de testes controlada feito pela planilha.
+
+O arquivo DAF607.STO.SIMPLESNAC.20160630110041.SEFAZ é um arquivo completo contendo 107 (HEADER / DETALHE / TRAILER) registros. Este arquivo não tem massa controlada, é um arquivo recebido pela SEFAZ.
+

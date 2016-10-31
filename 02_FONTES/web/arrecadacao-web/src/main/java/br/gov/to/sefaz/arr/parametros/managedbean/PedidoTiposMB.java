@@ -1,15 +1,15 @@
 package br.gov.to.sefaz.arr.parametros.managedbean;
 
 import br.gov.to.sefaz.arr.parametros.business.facade.PedidoTiposFacade;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoCamposAcoes;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoDocsExigidos;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoReceita;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoTipoAcoes;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoTipoDocs;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoTipos;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.ReceitasTaxas;
-import br.gov.to.sefaz.arr.parametros.persistence.enums.TipoPedidoCampoEnum;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoCamposAcoes;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoDocsExigidos;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoReceita;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoTipoAcoes;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoTipoDocs;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoTipos;
+import br.gov.to.sefaz.arr.persistence.entity.Receitas;
+import br.gov.to.sefaz.arr.persistence.entity.ReceitasTaxas;
+import br.gov.to.sefaz.arr.persistence.enums.TipoPedidoCampoEnum;
 import br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB;
 
 import org.springframework.beans.BeanUtils;
@@ -25,7 +25,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
 /**
- * ManagedBean da entidade {@link br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoTipos}.
+ * ManagedBean da entidade {@link br.gov.to.sefaz.arr.persistence.entity.PedidoTipos}.
  *
  * @author <a href="mailto:gabriel.santos@ntconsult.com.br">gabriel.santos</a>
  * @since 24/05/2016 16:06:00
@@ -68,7 +68,7 @@ public class PedidoTiposMB extends DefaultCrudMB<PedidoTipos, Integer> {
      */
     public void loadTiposPedidoCampos() {
         tiposPedidoCampos = getFacade().getTipoPedidoCampoEnumValues(getDto().getIdTipoPedido(),
-                pedidoTipoAcoesDto.getTipoAcao());
+            pedidoTipoAcoesDto.getTipoAcao());
     }
 
     @Autowired

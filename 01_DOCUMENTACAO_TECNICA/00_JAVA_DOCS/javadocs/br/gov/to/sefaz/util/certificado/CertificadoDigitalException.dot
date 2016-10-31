@@ -10,14 +10,14 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.exception.HandledSystemException
-	c59664 [label=<<table title="br.gov.to.sefaz.exception.HandledSystemException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../exception/HandledSystemException.html">
+	c261082 [label=<<table title="br.gov.to.sefaz.exception.HandledSystemException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../exception/HandledSystemException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> HandledSystemException </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../exception/HandledSystemException.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.util.certificado.CertificadoDigitalException
-	c59669 [label=<<table title="br.gov.to.sefaz.util.certificado.CertificadoDigitalException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CertificadoDigitalException.html">
+	c261088 [label=<<table title="br.gov.to.sefaz.util.certificado.CertificadoDigitalException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CertificadoDigitalException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CertificadoDigitalException </td></tr>
 		</table></td></tr>
@@ -29,11 +29,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./CertificadoDigitalException.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.util.certificado.CertificadoDigitalException extends java.lang.Exception
-	c60090:p -> c59669:p [dir=back,arrowtail=empty];
+	c261955:p -> c261088:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.util.certificado.CertificadoDigitalException implements br.gov.to.sefaz.exception.HandledSystemException
-	c59664:p -> c59669:p [dir=back,arrowtail=empty,style=dashed];
+	c261082:p -> c261088:p [dir=back,arrowtail=empty,style=dashed];
 	// java.lang.Exception
-	c60090 [label=<<table title="java.lang.Exception" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Exception.html">
+	c261955 [label=<<table title="java.lang.Exception" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/Exception.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Exception </td></tr>
 		</table></td></tr>

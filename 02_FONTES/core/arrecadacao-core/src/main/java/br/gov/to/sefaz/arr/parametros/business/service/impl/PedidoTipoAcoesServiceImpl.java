@@ -1,13 +1,11 @@
 package br.gov.to.sefaz.arr.parametros.business.service.impl;
 
 import br.gov.to.sefaz.arr.parametros.business.service.PedidoTipoAcoesService;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoTipoAcoes;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.PedidoTipoAcoesRepository;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoTipoAcoes;
+import br.gov.to.sefaz.arr.persistence.repository.PedidoTipoAcoesRepository;
 import br.gov.to.sefaz.business.service.impl.DefaultCrudService;
 import br.gov.to.sefaz.persistence.enums.SituacaoEnum;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 /**
@@ -23,7 +21,7 @@ public class PedidoTipoAcoesServiceImpl extends DefaultCrudService<PedidoTipoAco
     @Autowired
     public PedidoTipoAcoesServiceImpl(
             PedidoTipoAcoesRepository repository) {
-        super(repository, new Sort(new Sort.Order(Sort.Direction.ASC, "idAcoes")));
+        super(repository);
     }
 
     @Override
@@ -37,8 +35,8 @@ public class PedidoTipoAcoesServiceImpl extends DefaultCrudService<PedidoTipoAco
     }
 
     @Override
-    public int updateSituacaoByIdTipoPedido(Integer idTipoPedido, SituacaoEnum situacao) {
-        return getRepository().updateSituacaoByIdTipoPedido(idTipoPedido, situacao);
+    public void updateSituacaoByIdTipoPedido(Integer idTipoPedido, SituacaoEnum situacao) {
+        getRepository().updateSituacaoByIdTipoPedido(idTipoPedido, situacao);
     }
 
 }

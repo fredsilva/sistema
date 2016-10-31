@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.authentication.provider.LdapProvider
-	c6126 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.provider.LdapProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./LdapProvider.html">
+	c22336 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.provider.LdapProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./LdapProvider.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LdapProvider </td></tr>
 		</table></td></tr>
@@ -19,10 +19,13 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + LdapProvider() </td></tr>
-<tr><td align="left" balign="left"> + authenticate(username : String, passwdord : String) </td></tr>
-<tr><td align="left" balign="left"> + resetPassword(username : String, newPassword : String) </td></tr>
-<tr><td align="left" balign="left"> + setAttribute(username : String, itens : ModificationItem[]) </td></tr>
-<tr><td align="left" balign="left"> + getAttribute(username : String, att : String) : Object </td></tr>
+<tr><td align="left" balign="left"> + authenticate(userName : String, passwdord : String) </td></tr>
+<tr><td align="left" balign="left"> + createUser(userName : String, password : String) </td></tr>
+<tr><td align="left" balign="left"> + enableUser(userName : String) </td></tr>
+<tr><td align="left" balign="left"> + disableUser(userName : String) </td></tr>
+<tr><td align="left" balign="left"> + resetPassword(userName : String, newPassword : String) </td></tr>
+<tr><td align="left" balign="left"> + setAttribute(userName : String, itens : ModificationItem[]) </td></tr>
+<tr><td align="left" balign="left"> + getAttribute(userName : String, att : String) : Object </td></tr>
 		</table></td></tr>
 		</table>>, URL="./LdapProvider.html", fontname="arial", fontcolor="black", fontsize=10.0];
 }

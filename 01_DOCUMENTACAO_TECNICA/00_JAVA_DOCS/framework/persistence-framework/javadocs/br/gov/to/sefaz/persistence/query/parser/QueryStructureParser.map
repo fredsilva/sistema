@@ -1,0 +1,16 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./delete/DeleteParser.html" title="br.gov.to.sefaz.persistence.query.parser.delete.DeleteParser" alt="" coords="16,197,608,308"/>
+<area shape="rect" id="node1" href="./delete/DeleteParser.html" title="&lt;TABLE&gt;" alt="" coords="5,192,619,313"/>
+<area shape="rect" id="node2_1" href="./insert/InsertParser.html" title="br.gov.to.sefaz.persistence.query.parser.insert.InsertParser" alt="" coords="653,197,1240,308"/>
+<area shape="rect" id="node2" href="./insert/InsertParser.html" title="&lt;TABLE&gt;" alt="" coords="643,192,1251,313"/>
+<area shape="rect" id="node3_2" href="./QueryStructureParser.html" title="br.gov.to.sefaz.persistence.query.parser.QueryStructureParser" alt="" coords="1629,11,2173,139"/>
+<area shape="rect" id="node3" href="./QueryStructureParser.html" title="&lt;TABLE&gt;" alt="" coords="1619,5,2184,144"/>
+<area shape="rect" id="node4_3" href="./select/SelectParser.html" title="br.gov.to.sefaz.persistence.query.parser.select.SelectParser" alt="" coords="1285,197,1877,308"/>
+<area shape="rect" id="node4" href="./select/SelectParser.html" title="&lt;TABLE&gt;" alt="" coords="1275,192,1888,313"/>
+<area shape="rect" id="node5_4" href="./update/UpdateParser.html" title="br.gov.to.sefaz.persistence.query.parser.update.UpdateParser" alt="" coords="1923,197,2519,308"/>
+<area shape="rect" id="node5" href="./update/UpdateParser.html" title="&lt;TABLE&gt;" alt="" coords="1913,192,2530,313"/>
+<area shape="rect" id="node6_5" href="./where/conditions/AbstractConditionParser.html" title="br.gov.to.sefaz.persistence.query.parser.where.conditions.AbstractConditionParser" alt="" coords="2565,197,3341,308"/>
+<area shape="rect" id="node6" href="./where/conditions/AbstractConditionParser.html" title="&lt;TABLE&gt;" alt="" coords="2555,192,3352,313"/>
+<area shape="rect" id="node7_6" href="./where/ConditionsParser.html" title="br.gov.to.sefaz.persistence.query.parser.where.ConditionsParser" alt="" coords="3387,197,3946,308"/>
+<area shape="rect" id="node7" href="./where/ConditionsParser.html" title="&lt;TABLE&gt;" alt="" coords="3377,192,3957,313"/>
+</map>

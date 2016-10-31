@@ -9,23 +9,8 @@ digraph G {
 	node [fontname="arial",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// br.gov.to.sefaz.seg.business.authentication.facade.impl.LoginSistemaFacadeImpl
-	c6943 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.facade.impl.LoginSistemaFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/LoginSistemaFacadeImpl.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> LoginSistemaFacadeImpl </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + LoginSistemaFacadeImpl(loginSistemaService : LoginSistemaService) </td></tr>
-<tr><td align="left" balign="left"> + ldapAuthenticate(dto : LoginDto) : UsuarioSistemaAuthentication </td></tr>
-<tr><td align="left" balign="left"> + ldapResetPassword(dto : ResetPasswordDto) </td></tr>
-<tr><td align="left" balign="left"> + certAuthenticate(username : String) : UsuarioSistemaAuthentication </td></tr>
-		</table></td></tr>
-		</table>>, URL="./impl/LoginSistemaFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.authentication.facade.LoginSistemaFacade
-	c6944 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.facade.LoginSistemaFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./LoginSistemaFacade.html">
+	c24886 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.facade.LoginSistemaFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./LoginSistemaFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> LoginSistemaFacade </td></tr>
@@ -39,7 +24,22 @@ digraph G {
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + certAuthenticate(username : String) : UsuarioSistemaAuthentication </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./LoginSistemaFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.authentication.facade.impl.LoginSistemaFacadeImpl
+	c24888 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.facade.impl.LoginSistemaFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/LoginSistemaFacadeImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> LoginSistemaFacadeImpl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + LoginSistemaFacadeImpl(loginSistemaService : LoginSistemaService) </td></tr>
+<tr><td align="left" balign="left"> + ldapAuthenticate(dto : LoginDto) : UsuarioSistemaAuthentication </td></tr>
+<tr><td align="left" balign="left"> + ldapResetPassword(dto : ResetPasswordDto) </td></tr>
+<tr><td align="left" balign="left"> + certAuthenticate(username : String) : UsuarioSistemaAuthentication </td></tr>
+		</table></td></tr>
+		</table>>, URL="./impl/LoginSistemaFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.business.authentication.facade.impl.LoginSistemaFacadeImpl implements br.gov.to.sefaz.seg.business.authentication.facade.LoginSistemaFacade
-	c6944:p -> c6943:p [dir=back,arrowtail=empty,style=dashed];
+	c24886:p -> c24888:p [dir=back,arrowtail=empty,style=dashed];
 }
 

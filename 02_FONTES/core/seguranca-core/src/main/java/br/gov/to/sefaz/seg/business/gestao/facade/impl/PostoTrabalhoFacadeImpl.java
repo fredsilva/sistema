@@ -20,7 +20,7 @@ import java.util.List;
  * @since 13/06/2016 11:33:00
  */
 @Component
-public class PostoTrabalhoFacadeImpl extends DefaultCrudFacade<PostoTrabalho, Long>
+public class PostoTrabalhoFacadeImpl extends DefaultCrudFacade<PostoTrabalho, Integer>
         implements PostoTrabalhoFacade {
 
 

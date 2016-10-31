@@ -1,15 +1,13 @@
 package br.gov.to.sefaz.arr.parametros.business.service.impl;
 
 import br.gov.to.sefaz.arr.parametros.business.service.TipoRejeicaoArquivosService;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.TipoRejeicaoArquivos;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.TipoRejeicaoArquivosRepository;
+import br.gov.to.sefaz.arr.persistence.entity.TipoRejeicaoArquivos;
+import br.gov.to.sefaz.arr.persistence.repository.TipoRejeicaoArquivosRepository;
 import br.gov.to.sefaz.business.service.impl.DefaultCrudService;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.ValidationSuite;
 import br.gov.to.sefaz.persistence.enums.SituacaoEnum;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -27,7 +25,7 @@ public class TipoRejeicaoArquivosServiceImpl extends DefaultCrudService<TipoReje
 
     @Autowired
     public TipoRejeicaoArquivosServiceImpl(TipoRejeicaoArquivosRepository repository) {
-        super(repository, new Sort(new Sort.Order(Sort.Direction.ASC, "idCodigoRejeicao")));
+        super(repository);
     }
 
     @Override

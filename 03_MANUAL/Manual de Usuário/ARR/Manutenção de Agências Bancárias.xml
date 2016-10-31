@@ -1,0 +1,109 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
+<siteinfo>
+<sitename>SEFAZ-TO Wiki</sitename>
+<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<generator>JAMWiki 1.3.2</generator>
+<case>case-sensitive</case>
+<namespaces>
+<namespace key="-2">Media</namespace>
+<namespace key="-1">Special</namespace>
+<namespace key="0" />
+<namespace key="1">Comments</namespace>
+<namespace key="2">User</namespace>
+<namespace key="3">User comments</namespace>
+<namespace key="4">Project</namespace>
+<namespace key="5">Project comments</namespace>
+<namespace key="6">File</namespace>
+<namespace key="7">File comments</namespace>
+<namespace key="8">JAMWiki</namespace>
+<namespace key="9">JAMWiki comments</namespace>
+<namespace key="10">Template</namespace>
+<namespace key="11">Template comments</namespace>
+<namespace key="12">Help</namespace>
+<namespace key="13">Help comments</namespace>
+<namespace key="14">Category</namespace>
+<namespace key="15">Category comments</namespace>
+</namespaces>
+</siteinfo>
+<page>
+<title>Manuten����o de Ag��ncias Banc��rias</title>
+<ns>0</ns>
+<id>20</id>
+<revision>
+<id>1255</id>
+<timestamp>2016-10-13T15:57:26Z</timestamp>
+<contributor>
+<username>admin</username>
+<id>1</id>
+</contributor>
+<comment />
+<text xml:space="preserve" bytes="3404">�� necess��rio acessar &apos;&apos;&apos;Par��metros �� Ag��ncias Banc��rias.&apos;&apos;&apos;
+
+Abrir�� a tela de localiza����o contendo a lista de bancos cadastrados deve-se, em seguida, selecionar um banco. Ap��s isso, ao selecionar a aba ���Ag��ncias���, aparecer�� a lista de ag��ncias vinculadas ��quele banco.
+
+----
+
+== Visualizar todas as Ag��ncias Cadastradas ==
+
+[[File:manutencao_agencias_1.png|Manutencao Agencias 1]]
+
+----
+
+== Incluindo Ag��ncia ==
+
+Para incluir uma nova Ag��ncia �� necess��rio acessar o menu &apos;&apos;&apos;Par��metros &gt; Agentes Banc��rios &gt; Aba Ag��ncia&apos;&apos;&apos; e clicar no bot��o ���NOVA AG��NCIA��� (passo 1), na tela de localiza����o.
+
+Os campos abaixo da listagem s��o Limpos e disponibilizados para serem informados pelo Usu��rio, conforme ilustrado abaixo:
+
+[[File:manutencao_agencias_2.png|Manutencao Agencias 2]]
+
+Deve-se preencher todos os campos obrigat��rios assinalados com asterisco (Passo 2) e clicar no bot��o ���ADICIONAR��� (Passo 2).
+
+&apos;&apos;&apos;*�� importante salientar que n��o ser�� poss��vel cadastrar ag��ncias contendo o mesmo valor para &quot;N��mero de Ag��ncia&quot; e que este possui o limite m��ximo de seis (6) d��gitos e CNPJ .&apos;&apos;&apos;
+
+A nova Ag��ncia ser�� listada na ���Lista de Ag��ncia Adicionadas���, limpando os campos do cadastro de Ag��ncia, permitindo adicionar mais Ag��ncias na sequ��ncia.
+
+&apos;&apos;&apos;Para as altera����es surtirem efeito, deve-se ser pressionado o bot��o ���SALVAR��� como apresentado na figura abaixo:&apos;&apos;&apos;
+
+[[File:manutencao_agencias_3.png|Manutencao Agencias 3]]
+
+----
+
+== Incluindo Ag��ncia ==
+
+Para alterar as informa����es de um registro de Ag��ncia pertencente ao cadastro de agentes banc��rios, �� necess��rio acessar o menu &apos;&apos;&apos;Par��metros &gt; Agentes Banc��rios &gt; Aba Ag��ncias&apos;&apos;&apos; e selecionar um registro na listagem por meio de marca����o do controle localizado ao final da linha (Passo 1), conforme ilustrado na imagem abaixo:
+
+[[File:manutencao_agencias_4.png|Manutencao Agencias 4]]
+
+As informa����es espec��ficas do registro selecionado s��o apresentadas abaixo da listagem e est��o dispon��veis para altera����o com exce����o do campo ���N��mero���.
+
+[[File:manutencao_agencias_5.png|Manutencao Agencias 5]]
+
+O usu��rio poder�� alterar os campos dispon��veis desejados (Passo 2) e ap��s clicar no bot��o &quot;ADICIONAR&quot; (Passo 3). Ap��s estes passos, a Ag��ncia editada, ir�� para a ���Lista de Ag��ncias Adicionadas��� como demonstrado na figura abaixo.
+
+[[File:manutencao_agencias_6.png|Manutencao Agencias 6]]
+
+&apos;&apos;&apos;*�� importante salientar que registros em situa����o &quot;Cancelado&quot;, n��o podem ser utilizados em outras partes do sistema que fazem uso deste cadastro de Agentes Banc��rios em quest��o.&apos;&apos;&apos;
+
+----
+
+== Excluindo Ag��ncia ==
+
+Para excluir uma ag��ncia do cadastro de agentes banc��rios, �� necess��rio clicar no bot��o representado por uma ���lixeira���, localizado na mesma linha do registro desejado (passo 1), conforme ilustra����o:
+
+[[File:manutencao_agencias_7.png|Manutencao Agencias 7]]
+
+Ap��s a execu����o do Passo 1, �� apresentado mensagem de dialogo informando o resultado da opera����o em quest��o.
+
+&apos;&apos;&apos;*�� importante salientar que n��o ser�� poss��vel a realiza����o de uma exclus��o f��sica quando a Ag��ncia selecionada para ser exclu��da possuir refer��ncias com pagamentos e recep����o de pagamentos. Entretanto, nestes casos, ser�� realizado uma exclus��o l��gica, alterando a situa����o da Ag��ncia para &quot;Cancelado&quot;.
+Somente ocorrer�� exclus��o f��sica caso o registro de ag��ncia em quest��o, n��o possua nem um v��nculo com outros cadastros do sistema.&apos;&apos;&apos;
+
+
+[[#Top|Topo]]
+
+&lt;/br&gt;
+----
+[[Par��metros | Voltar]]</text>
+</revision>
+</page>
+</mediawiki>

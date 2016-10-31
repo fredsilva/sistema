@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.presentation.managedbean.composites.DataTableMB
-	c12080 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.composites.DataTableMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DataTableMB.html">
+	c111700 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.composites.DataTableMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DataTableMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DataTableMB </td></tr>
 		</table></td></tr>
@@ -24,66 +24,10 @@ digraph G {
 <tr><td align="left" balign="left"> + formatToPrint(fieldValue : Object, printType : DataTableFieldPrint) : Object </td></tr>
 <tr><td align="left" balign="left"> + getFromBundle(messageKey : String, bundle : String) : String </td></tr>
 <tr><td align="left" balign="left"> + parseActionEvents(actionEvents : String) : List&lt;DataTableActionEvents&gt; </td></tr>
+<tr><td align="left" balign="left"> + parseActionVisible(actionEvents : String) : List&lt;DataTableActionVisible&gt; </td></tr>
 <tr><td align="left" balign="left"> + parseColumnDefs(columnsDefs : String, fields : List&lt;DataTableField&gt;) : String </td></tr>
-<tr><td align="left" balign="left"> + buildJsCall(action : DataTableActionEvents, paramName : String) : String </td></tr>
+<tr><td align="left" balign="left"> + buildJsCall(action : JsFunctionSignature, paramName : String) : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./DataTableMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	// br.gov.to.sefaz.presentation.managedbean.composites.DataTableFieldPrint
-	c12081 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.composites.DataTableFieldPrint" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DataTableFieldPrint.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
-<tr><td align="center" balign="center"> DataTableFieldPrint </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> NONE </td></tr>
-<tr><td align="left" balign="left"> STRING </td></tr>
-<tr><td align="left" balign="left"> NUMBER </td></tr>
-<tr><td align="left" balign="left"> DATE </td></tr>
-<tr><td align="left" balign="left"> DATE_TIME </td></tr>
-<tr><td align="left" balign="left"> CPF </td></tr>
-<tr><td align="left" balign="left"> CNPJ </td></tr>
-<tr><td align="left" balign="left"> CNPJ_RAIZ </td></tr>
-<tr><td align="left" balign="left"> BOOLEAN </td></tr>
-		</table></td></tr>
-		</table>>, URL="./DataTableFieldPrint.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	// br.gov.to.sefaz.presentation.managedbean.composites.DataTableField
-	c12082 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.composites.DataTableField" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DataTableField.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> DataTableField </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + DataTableField(name : String, hide : Boolean, printType : DataTableFieldPrint) </td></tr>
-<tr><td align="left" balign="left"> + getName() : String </td></tr>
-<tr><td align="left" balign="left"> + getHide() : Boolean </td></tr>
-<tr><td align="left" balign="left"> + getPrintType() : DataTableFieldPrint </td></tr>
-		</table></td></tr>
-		</table>>, URL="./DataTableField.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	// br.gov.to.sefaz.presentation.managedbean.composites.DataTableActionEvents
-	c12083 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.composites.DataTableActionEvents" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DataTableActionEvents.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> DataTableActionEvents </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + DataTableActionEvents(elementClass : String, bindType : String, function : String, params : List&lt;String&gt;, eventType : String, complement : String) </td></tr>
-<tr><td align="left" balign="left"> + getElementClass() : String </td></tr>
-<tr><td align="left" balign="left"> + getBindType() : String </td></tr>
-<tr><td align="left" balign="left"> + getFunction() : String </td></tr>
-<tr><td align="left" balign="left"> + getParams() : List&lt;String&gt; </td></tr>
-<tr><td align="left" balign="left"> + getEventType() : String </td></tr>
-<tr><td align="left" balign="left"> + getComplement() : String </td></tr>
-<tr><td align="left" balign="left"> + equals(obj : Object) : boolean </td></tr>
-<tr><td align="left" balign="left"> + hashCode() : int </td></tr>
-<tr><td align="left" balign="left"> + toString() : String </td></tr>
-		</table></td></tr>
-		</table>>, URL="./DataTableActionEvents.html", fontname="arial", fontcolor="black", fontsize=10.0];
 }
 

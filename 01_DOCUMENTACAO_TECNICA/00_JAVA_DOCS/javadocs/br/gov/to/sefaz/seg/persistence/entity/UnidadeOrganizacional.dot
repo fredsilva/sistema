@@ -10,12 +10,13 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.entity.AbstractEntity<I extends java.io.Serializable>
-	c205607 [label=<<table title="br.gov.to.sefaz.persistence.entity.AbstractEntity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/entity/AbstractEntity.html">
+	c867407 [label=<<table title="br.gov.to.sefaz.persistence.entity.AbstractEntity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/entity/AbstractEntity.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractEntity&lt;I extends Serializable&gt; </font></td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
+<tr><td align="left" balign="left"> + SIM : String </td></tr>
+<tr><td align="left" balign="left"> + NAO : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + AbstractEntity() </td></tr>
@@ -28,8 +29,8 @@ digraph G {
 <tr><td align="left" balign="left"> + setUsuarioAlteracao(usuarioAlteracao : String) </td></tr>
 <tr><td align="left" balign="left"> + getDataAlteracao() : LocalDateTime </td></tr>
 <tr><td align="left" balign="left"> + setDataAlteracao(dataAlteracao : LocalDateTime) </td></tr>
-<tr><td align="left" balign="left"> + getRegistroExcluido() : Boolean </td></tr>
-<tr><td align="left" balign="left"> + setRegistroExcluido(registroExcluido : Boolean) </td></tr>
+<tr><td align="left" balign="left"> + getRegistroExcluido() : String </td></tr>
+<tr><td align="left" balign="left"> + setRegistroExcluido(registroExcluido : String) </td></tr>
 <tr><td align="left" balign="left"> + getUsuarioExclusao() : String </td></tr>
 <tr><td align="left" balign="left"> + setUsuarioExclusao(usuarioExclusao : String) </td></tr>
 <tr><td align="left" balign="left"> + getDataExclusao() : LocalDateTime </td></tr>
@@ -37,7 +38,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../persistence/entity/AbstractEntity.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.entity.UnidadeOrganizacional
-	c205724 [label=<<table title="br.gov.to.sefaz.seg.persistence.entity.UnidadeOrganizacional" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UnidadeOrganizacional.html">
+	c867738 [label=<<table title="br.gov.to.sefaz.seg.persistence.entity.UnidadeOrganizacional" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UnidadeOrganizacional.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UnidadeOrganizacional </td></tr>
 		</table></td></tr>
@@ -63,12 +64,17 @@ digraph G {
 <tr><td align="left" balign="left"> + setChefeGeral(chefeGeral : String) </td></tr>
 <tr><td align="left" balign="left"> + getUnidadeOrganizacionalPai() : UnidadeOrganizacional </td></tr>
 <tr><td align="left" balign="left"> + setUnidadeOrganizacionalPai(unidadeOrganizacionalPai : UnidadeOrganizacional) </td></tr>
-<tr><td align="left" balign="left"> + hashCode() : int </td></tr>
-<tr><td align="left" balign="left"> + equals(obj : Object) : boolean </td></tr>
+<tr><td align="left" balign="left"> + getCodigoTipoUnidade() : Character </td></tr>
+<tr><td align="left" balign="left"> + setCodigoTipoUnidade(codigoTipoUnidade : Character) </td></tr>
+<tr><td align="left" balign="left"> + getTipoUnidade() : TipoUnidade </td></tr>
+<tr><td align="left" balign="left"> + setTipoUnidade(tipoUnidade : TipoUnidade) </td></tr>
+<tr><td align="left" balign="left"> + getDescricaoTipoUnidade() : String </td></tr>
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
+<tr><td align="left" balign="left"> + equals(o : Object) : boolean </td></tr>
+<tr><td align="left" balign="left"> + hashCode() : int </td></tr>
 		</table></td></tr>
 		</table>>, URL="./UnidadeOrganizacional.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.persistence.entity.UnidadeOrganizacional extends br.gov.to.sefaz.persistence.entity.AbstractEntity<java.lang.Long>
-	c205607:p -> c205724:p [dir=back,arrowtail=empty];
+	c867407:p -> c867738:p [dir=back,arrowtail=empty];
 }
 

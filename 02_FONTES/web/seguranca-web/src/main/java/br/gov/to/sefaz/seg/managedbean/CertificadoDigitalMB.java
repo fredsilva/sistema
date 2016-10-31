@@ -1,11 +1,13 @@
 package br.gov.to.sefaz.seg.managedbean;
 
 import br.gov.to.sefaz.seg.business.authentication.facade.LoginSistemaFacade;
+import br.gov.to.sefaz.seg.managedbean.viewbean.UsuarioCertificadoViewBean;
 import br.gov.to.sefaz.util.certificado.CertificadoDigitalException;
 import br.gov.to.sefaz.util.certificado.CertificadoDigitalUtil;
+import br.gov.to.sefaz.util.json.JsonMapperUtils;
 import br.gov.to.sefaz.util.message.MessageUtil;
 import br.gov.to.sefaz.util.message.SourceBundle;
-
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -13,7 +15,6 @@ import java.security.cert.CertificateParsingException;
 import java.security.cert.X509Certificate;
 import java.util.Map;
 import java.util.Optional;
-
 import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
 
@@ -39,7 +40,7 @@ public class CertificadoDigitalMB {
      * @throws CertificateParsingException exceção ao processar o certificado digital
      * @throws CertificadoDigitalException exceção ao acessar por certificado digital
      */
-    public String getCpf() throws CertificateParsingException, CertificadoDigitalException {
+    public String authenticate() throws CertificateParsingException, CertificadoDigitalException {
         Map<String, Object> requestMap = FacesContext.getCurrentInstance().getExternalContext().getRequestMap();
         X509Certificate[] certChain = (X509Certificate[]) requestMap.get("javax.servlet.request.X509Certificate");
         Optional<String> optionalCpf = certificadoDigitalUtil.getCpf(certChain);
@@ -54,4 +55,21 @@ public class CertificadoDigitalMB {
                 SourceBundle.getMessage(MessageUtil.SEG, "login.certificadoDigital.cpf.invalido"));
     }
 
+    /**
+     * Retorna o CPF, nomeCompleto e EMail do usuário, através do certificado digital.
+     *
+     * @return Lista de dados que será utilizada em tela.
+     * @throws CertificateParsingException exceção ao processar o certificado digital
+     * @throws CertificadoDigitalException exceção ao acessar por certificado digital
+     */
+    public String requestUser() throws CertificateParsingException, CertificadoDigitalException {
+        Map<String, Object> requestMap = FacesContext.getCurrentInstance().getExternalContext().getRequestMap();
+        X509Certificate[] certChain = (X509Certificate[]) requestMap.get("javax.servlet.request.X509Certificate");
+
+        UsuarioCertificadoViewBean retorno = new UsuarioCertificadoViewBean(certificadoDigitalUtil.getCpf(certChain)
+                .orElse(StringUtils.EMPTY),certificadoDigitalUtil.getNomeCompleto(certChain),
+                certificadoDigitalUtil.getMail(certChain));
+
+        return JsonMapperUtils.objectToJson(retorno);
+    }
 }

@@ -1,10 +1,10 @@
 package br.gov.to.sefaz.arr.parametros.business.facade;
 
-import br.gov.to.sefaz.arr.parametros.persistence.entity.DelegaciaAgencias;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.Delegacias;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreas;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreasServidores;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoTipos;
+import br.gov.to.sefaz.arr.persistence.entity.DelegaciaAgencias;
+import br.gov.to.sefaz.arr.persistence.entity.Delegacias;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoAreas;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoAreasServidores;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoTipos;
 import br.gov.to.sefaz.business.facade.CrudFacade;
 import br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema;
 

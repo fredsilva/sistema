@@ -3,12 +3,12 @@ package br.gov.to.sefaz.seg.persistence.entity;
 import br.gov.to.sefaz.persistence.entity.AbstractEntity;
 
 import java.util.Objects;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
@@ -25,27 +25,28 @@ public class ProcuracaoOpcao extends AbstractEntity<Long> {
     private static final long serialVersionUID = 5199782231950473498L;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_PROCURACAO_OPCAO")
+    @SequenceGenerator(name = "SQ_PROCURACAO_OPCAO", schema = "SEFAZ_SEG",
+            sequenceName = "SQ_PROCURACAO_OPCAO", allocationSize = 1)
     @NotNull
     @Column(name = "IDENTIFICACAO_PROCURADO_OPCAO")
     private Long identificacaoProcuradoOpcao;
 
-    @JoinColumn(name = "IDENTIFICACAO_OPCAO_APLICACAO", referencedColumnName = "IDENTIFICACAO_OPCAO_APLICACAO")
-    @ManyToOne(optional = false)
-    private OpcaoAplicacao opcaoAplicacao;
+    @NotNull
+    @Column(name = "IDENTIFICACAO_PROCUR_USUARIO")
+    private Long identificacaoProcurUsuario;
 
-    @JoinColumn(name = "IDENTIFICACAO_PROCUR_USUARIO", referencedColumnName = "IDENTIFICACAO_PROCUR_USUARIO")
-    @ManyToOne(optional = false)
-    private ProcuracaoUsuario procuracaoUsuario;
+    @NotNull
+    @Column(name = "IDENTIFICACAO_OPCAO_APLICACAO")
+    private Long identificacaoOpcaoAplicacao;
 
     public ProcuracaoOpcao() {
         // Construtor para inicialização por reflexão.
     }
 
-    public ProcuracaoOpcao(Long identificacaoProcuradoOpcao, OpcaoAplicacao opcaoAplicacao,
-            ProcuracaoUsuario procuracaoUsuario) {
+    public ProcuracaoOpcao(Long identificacaoProcuradoOpcao, Long identificacaoOpcaoAplicacao) {
         this.identificacaoProcuradoOpcao = identificacaoProcuradoOpcao;
-        this.opcaoAplicacao = opcaoAplicacao;
-        this.procuracaoUsuario = procuracaoUsuario;
+        this.identificacaoOpcaoAplicacao = identificacaoOpcaoAplicacao;
     }
 
     @Override
@@ -61,45 +62,47 @@ public class ProcuracaoOpcao extends AbstractEntity<Long> {
         this.identificacaoProcuradoOpcao = identificacaoProcuradoOpcao;
     }
 
-    public OpcaoAplicacao getOpcaoAplicacao() {
-        return opcaoAplicacao;
+    public Long getIdentificacaoOpcaoAplicacao() {
+        return identificacaoOpcaoAplicacao;
     }
 
-    public void setOpcaoAplicacao(OpcaoAplicacao opcaoAplicacao) {
-        this.opcaoAplicacao = opcaoAplicacao;
+    public void setIdentificacaoOpcaoAplicacao(Long identificacaoOpcaoAplicacao) {
+        this.identificacaoOpcaoAplicacao = identificacaoOpcaoAplicacao;
     }
 
-    public ProcuracaoUsuario getProcuracaoUsuario() {
-        return procuracaoUsuario;
+    public Long getIdentificacaoProcurUsuario() {
+        return identificacaoProcurUsuario;
     }
 
-    public void setProcuracaoUsuario(ProcuracaoUsuario procuracaoUsuario) {
-        this.procuracaoUsuario = procuracaoUsuario;
+    public void setIdentificacaoProcurUsuario(Long identificacaoProcurUsuario) {
+        this.identificacaoProcurUsuario = identificacaoProcurUsuario;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        ProcuracaoOpcao that = (ProcuracaoOpcao) o;
+        return Objects.equals(identificacaoProcuradoOpcao, that.identificacaoProcuradoOpcao)
+                && Objects.equals(identificacaoProcurUsuario, that.identificacaoProcurUsuario)
+                && Objects.equals(identificacaoOpcaoAplicacao, that.identificacaoOpcaoAplicacao);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(identificacaoProcuradoOpcao, opcaoAplicacao, procuracaoUsuario);
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null || getClass() != obj.getClass()) {
-            return false;
-        }
-        ProcuracaoOpcao that = (ProcuracaoOpcao) obj;
-        return Objects.equals(this.identificacaoProcuradoOpcao, that.identificacaoProcuradoOpcao)
-                && Objects.equals(this.opcaoAplicacao, that.opcaoAplicacao)
-                && Objects.equals(this.procuracaoUsuario, that.procuracaoUsuario);
+        return Objects.hash(identificacaoProcuradoOpcao, identificacaoProcurUsuario, identificacaoOpcaoAplicacao);
     }
 
     @Override
     public String toString() {
-        return "ProcuracaoOpcao [identificacaoProcuradoOpcao=" + identificacaoProcuradoOpcao + ", opcaoAplicacao="
-                + opcaoAplicacao + ", procuracaoUsuario=" + procuracaoUsuario + "]";
+        return "ProcuracaoOpcao{"
+                + "identificacaoProcuradoOpcao=" + identificacaoProcuradoOpcao
+                + ", identificacaoProcurUsuario=" + identificacaoProcurUsuario
+                + ", identificacaoOpcaoAplicacao=" + identificacaoOpcaoAplicacao
+                + '}';
     }
-
 }

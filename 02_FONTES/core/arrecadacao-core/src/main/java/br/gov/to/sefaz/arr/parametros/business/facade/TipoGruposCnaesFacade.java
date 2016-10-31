@@ -1,10 +1,10 @@
 package br.gov.to.sefaz.arr.parametros.business.facade;
 
 import br.gov.to.sefaz.arr.parametros.business.service.filter.TipoGruposCnaesFilter;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.GruposCnae;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.TipoGruposCnaes;
+import br.gov.to.sefaz.arr.persistence.entity.GruposCnae;
+import br.gov.to.sefaz.arr.persistence.entity.TipoGruposCnaes;
 import br.gov.to.sefaz.business.facade.CrudFacade;
-import br.gov.to.sefaz.cat.persistence.entity.AtividadeEconomica;
+import br.gov.to.sefaz.par.gestao.persistence.entity.AtividadeEconomica;
 
 import java.util.Collection;
 import java.util.List;

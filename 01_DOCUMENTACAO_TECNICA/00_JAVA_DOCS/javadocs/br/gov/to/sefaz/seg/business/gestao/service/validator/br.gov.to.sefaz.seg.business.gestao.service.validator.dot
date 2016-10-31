@@ -9,8 +9,22 @@ digraph G {
 	node [fontname="arial",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// br.gov.to.sefaz.seg.business.gestao.service.validator.UsuarioSistemaJustificativaEmptyOrNullValidator
+	c98435 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.UsuarioSistemaJustificativaEmptyOrNullValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioSistemaJustificativaEmptyOrNullValidator.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> UsuarioSistemaJustificativaEmptyOrNullValidator </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + UsuarioSistemaJustificativaEmptyOrNullValidator() </td></tr>
+<tr><td align="left" balign="left"> + support(clazz : Class&lt;?&gt;, context : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + validate(usuarioSistema : UsuarioSistema) : Set&lt;CustomViolation&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./UsuarioSistemaJustificativaEmptyOrNullValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.validator.UsuarioSistemaCpfInativoValidator
-	c19427 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.UsuarioSistemaCpfInativoValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioSistemaCpfInativoValidator.html">
+	c98436 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.UsuarioSistemaCpfInativoValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioSistemaCpfInativoValidator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UsuarioSistemaCpfInativoValidator </td></tr>
 		</table></td></tr>
@@ -23,8 +37,22 @@ digraph G {
 <tr><td align="left" balign="left"> + validate(usuarioSistema : UsuarioSistema) : Set&lt;CustomViolation&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./UsuarioSistemaCpfInativoValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.validator.UsuarioSistemaCpfExistsValidator
+	c98437 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.UsuarioSistemaCpfExistsValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioSistemaCpfExistsValidator.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> UsuarioSistemaCpfExistsValidator </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + UsuarioSistemaCpfExistsValidator(usuarioSistemaRepository : UsuarioSistemaRepository) </td></tr>
+<tr><td align="left" balign="left"> + support(clazz : Class&lt;?&gt;, context : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + validate(target : UsuarioSistema) : Set&lt;CustomViolation&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./UsuarioSistemaCpfExistsValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.validator.UsuarioSistemaCpfCadastradoValidator
-	c19428 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.UsuarioSistemaCpfCadastradoValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioSistemaCpfCadastradoValidator.html">
+	c98438 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.UsuarioSistemaCpfCadastradoValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioSistemaCpfCadastradoValidator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UsuarioSistemaCpfCadastradoValidator </td></tr>
 		</table></td></tr>
@@ -38,7 +66,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./UsuarioSistemaCpfCadastradoValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.validator.UsuarioSistemaCpfBloqueadoValidator
-	c19429 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.UsuarioSistemaCpfBloqueadoValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioSistemaCpfBloqueadoValidator.html">
+	c98439 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.UsuarioSistemaCpfBloqueadoValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioSistemaCpfBloqueadoValidator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UsuarioSistemaCpfBloqueadoValidator </td></tr>
 		</table></td></tr>
@@ -51,8 +79,120 @@ digraph G {
 <tr><td align="left" balign="left"> + validate(usuarioSistema : UsuarioSistema) : Set&lt;CustomViolation&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./UsuarioSistemaCpfBloqueadoValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.validator.UsuarioSistemaContadorCrcEmptyOrNullValidator
+	c98440 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.UsuarioSistemaContadorCrcEmptyOrNullValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioSistemaContadorCrcEmptyOrNullValidator.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> UsuarioSistemaContadorCrcEmptyOrNullValidator </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + UsuarioSistemaContadorCrcEmptyOrNullValidator() </td></tr>
+<tr><td align="left" balign="left"> + support(clazz : Class&lt;?&gt;, context : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + validate(usuarioSistema : UsuarioSistema) : Set&lt;CustomViolation&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./UsuarioSistemaContadorCrcEmptyOrNullValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.validator.UsuarioSistemaCannotHaveEmptyUsuarioPerfilListValidator
+	c98441 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.UsuarioSistemaCannotHaveEmptyUsuarioPerfilListValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioSistemaCannotHaveEmptyUsuarioPerfilListValidator.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> UsuarioSistemaCannotHaveEmptyUsuarioPerfilListValidator </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + UsuarioSistemaCannotHaveEmptyUsuarioPerfilListValidator() </td></tr>
+<tr><td align="left" balign="left"> + support(clazz : Class&lt;?&gt;, context : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + validate(usuarioSistema : UsuarioSistema) : Set&lt;CustomViolation&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./UsuarioSistemaCannotHaveEmptyUsuarioPerfilListValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.validator.UsuarioPrincipalEmpresaLoggedUserMandateStillValidValidator
+	c98442 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.UsuarioPrincipalEmpresaLoggedUserMandateStillValidValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioPrincipalEmpresaLoggedUserMandateStillValidValidator.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> UsuarioPrincipalEmpresaLoggedUserMandateStillValidValidator </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + UsuarioPrincipalEmpresaLoggedUserMandateStillValidValidator(usuarioPrincipalEmpresaRepository : UsuarioPrincipalEmpresaRepository) </td></tr>
+<tr><td align="left" balign="left"> + support(clazz : Class&lt;?&gt;, context : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + validate(target : UsuarioPrincipalEmpresa) : Set&lt;CustomViolation&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./UsuarioPrincipalEmpresaLoggedUserMandateStillValidValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.validator.UsuarioPrincipalEmpresaLoggedUserIsLegalRepresentativeValidator
+	c98443 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.UsuarioPrincipalEmpresaLoggedUserIsLegalRepresentativeValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioPrincipalEmpresaLoggedUserIsLegalRepresentativeValidator.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> UsuarioPrincipalEmpresaLoggedUserIsLegalRepresentativeValidator </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + UsuarioPrincipalEmpresaLoggedUserIsLegalRepresentativeValidator(usuarioPrincipalEmpresaRepository : UsuarioPrincipalEmpresaRepository) </td></tr>
+<tr><td align="left" balign="left"> + support(clazz : Class&lt;?&gt;, context : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + validate(target : UsuarioPrincipalEmpresa) : Set&lt;CustomViolation&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./UsuarioPrincipalEmpresaLoggedUserIsLegalRepresentativeValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.validator.UsuarioPrincipalEmpresaElectronicCnpjNotEqualsToEntityCnpjValidator
+	c98444 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.UsuarioPrincipalEmpresaElectronicCnpjNotEqualsToEntityCnpjValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioPrincipalEmpresaElectronicCnpjNotEqualsToEntityCnpjValidator.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> UsuarioPrincipalEmpresaElectronicCnpjNotEqualsToEntityCnpjValidator </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + UsuarioPrincipalEmpresaElectronicCnpjNotEqualsToEntityCnpjValidator() </td></tr>
+<tr><td align="left" balign="left"> + support(clazz : Class&lt;?&gt;, context : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + validate(target : UsuarioPrincipalEmpresa) : Set&lt;CustomViolation&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./UsuarioPrincipalEmpresaElectronicCnpjNotEqualsToEntityCnpjValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.validator.UsuarioPrincipalEmpresaCpfExistsValidator
+	c98445 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.UsuarioPrincipalEmpresaCpfExistsValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioPrincipalEmpresaCpfExistsValidator.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> UsuarioPrincipalEmpresaCpfExistsValidator </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + UsuarioPrincipalEmpresaCpfExistsValidator(usuarioSistemaRepository : UsuarioSistemaRepository) </td></tr>
+<tr><td align="left" balign="left"> + support(clazz : Class&lt;?&gt;, context : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + validate(target : UsuarioPrincipalEmpresa) : Set&lt;CustomViolation&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./UsuarioPrincipalEmpresaCpfExistsValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.validator.UsuarioPrincipalEmpresaCnpjExistsValidator
+	c98446 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.UsuarioPrincipalEmpresaCnpjExistsValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioPrincipalEmpresaCnpjExistsValidator.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> UsuarioPrincipalEmpresaCnpjExistsValidator </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + UsuarioPrincipalEmpresaCnpjExistsValidator(usuarioPrincipalEmpresaRepository : UsuarioPrincipalEmpresaRepository) </td></tr>
+<tr><td align="left" balign="left"> + support(clazz : Class&lt;?&gt;, context : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + validate(target : UsuarioPrincipalEmpresa) : Set&lt;CustomViolation&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./UsuarioPrincipalEmpresaCnpjExistsValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.validator.UsuarioPerfilContribuinteCantBeInativoValidator
+	c98447 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.UsuarioPerfilContribuinteCantBeInativoValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioPerfilContribuinteCantBeInativoValidator.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> UsuarioPerfilContribuinteCantBeInativoValidator </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + UsuarioPerfilContribuinteCantBeInativoValidator() </td></tr>
+<tr><td align="left" balign="left"> + support(clazz : Class&lt;?&gt;, context : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + validate(usuarioPerfil : UsuarioPerfil) : Set&lt;CustomViolation&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./UsuarioPerfilContribuinteCantBeInativoValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.validator.UnidadeOrganizacionalUnidadePostoTrabalhoAssignedValidator
-	c19430 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.UnidadeOrganizacionalUnidadePostoTrabalhoAssignedValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UnidadeOrganizacionalUnidadePostoTrabalhoAssignedValidator.html">
+	c98448 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.UnidadeOrganizacionalUnidadePostoTrabalhoAssignedValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UnidadeOrganizacionalUnidadePostoTrabalhoAssignedValidator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UnidadeOrganizacionalUnidadePostoTrabalhoAssignedValidator </td></tr>
 		</table></td></tr>
@@ -66,7 +206,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./UnidadeOrganizacionalUnidadePostoTrabalhoAssignedValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.validator.UnidadeOrganizacionalUnidadePaiValidator
-	c19431 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.UnidadeOrganizacionalUnidadePaiValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UnidadeOrganizacionalUnidadePaiValidator.html">
+	c98449 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.UnidadeOrganizacionalUnidadePaiValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UnidadeOrganizacionalUnidadePaiValidator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UnidadeOrganizacionalUnidadePaiValidator </td></tr>
 		</table></td></tr>
@@ -79,22 +219,22 @@ digraph G {
 <tr><td align="left" balign="left"> + validate(target : Long) : Set&lt;CustomViolation&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./UnidadeOrganizacionalUnidadePaiValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	// br.gov.to.sefaz.seg.business.gestao.service.validator.TipoUsuarioUsuarioSistemaAssignedValidator
-	c19432 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.TipoUsuarioUsuarioSistemaAssignedValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoUsuarioUsuarioSistemaAssignedValidator.html">
+	// br.gov.to.sefaz.seg.business.gestao.service.validator.SolicitacaoUsuarioCannotHaveCnpjInscricaoNullWhenContadorValidator
+	c98450 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.SolicitacaoUsuarioCannotHaveCnpjInscricaoNullWhenContadorValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SolicitacaoUsuarioCannotHaveCnpjInscricaoNullWhenContadorValidator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> TipoUsuarioUsuarioSistemaAssignedValidator </td></tr>
+<tr><td align="center" balign="center"> SolicitacaoUsuarioCannotHaveCnpjInscricaoNullWhenContadorValidator </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + TipoUsuarioUsuarioSistemaAssignedValidator(tipoUsuarioRepository : TipoUsuarioRepository) </td></tr>
+<tr><td align="left" balign="left"> + SolicitacaoUsuarioCannotHaveCnpjInscricaoNullWhenContadorValidator() </td></tr>
 <tr><td align="left" balign="left"> + support(clazz : Class&lt;?&gt;, context : String) : boolean </td></tr>
-<tr><td align="left" balign="left"> + validate(target : Integer) : Set&lt;CustomViolation&gt; </td></tr>
+<tr><td align="left" balign="left"> + validate(solicitacaoUsuario : SolicitacaoUsuario) : Set&lt;CustomViolation&gt; </td></tr>
 		</table></td></tr>
-		</table>>, URL="./TipoUsuarioUsuarioSistemaAssignedValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./SolicitacaoUsuarioCannotHaveCnpjInscricaoNullWhenContadorValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.validator.PostoTrabalhoFuncionarioAssignedValidator
-	c19433 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.PostoTrabalhoFuncionarioAssignedValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PostoTrabalhoFuncionarioAssignedValidator.html">
+	c98451 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.PostoTrabalhoFuncionarioAssignedValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PostoTrabalhoFuncionarioAssignedValidator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PostoTrabalhoFuncionarioAssignedValidator </td></tr>
 		</table></td></tr>
@@ -102,10 +242,136 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + PostoTrabalhoFuncionarioAssignedValidator(postoTrabalhoRepository : PostoTrabalhoRepository) </td></tr>
+<tr><td align="left" balign="left"> + PostoTrabalhoFuncionarioAssignedValidator(usuarioPostoTrabalhoRepository : UsuarioPostoTrabalhoRepository) </td></tr>
 <tr><td align="left" balign="left"> + support(clazz : Class&lt;?&gt;, context : String) : boolean </td></tr>
-<tr><td align="left" balign="left"> + validate(target : Long) : Set&lt;CustomViolation&gt; </td></tr>
+<tr><td align="left" balign="left"> + validate(target : Integer) : Set&lt;CustomViolation&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./PostoTrabalhoFuncionarioAssignedValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.validator.PostoTrabalhoFilterCantHaveNullAttributesValidator
+	c98452 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.PostoTrabalhoFilterCantHaveNullAttributesValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PostoTrabalhoFilterCantHaveNullAttributesValidator.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> PostoTrabalhoFilterCantHaveNullAttributesValidator </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + PostoTrabalhoFilterCantHaveNullAttributesValidator() </td></tr>
+<tr><td align="left" balign="left"> + support(clazz : Class&lt;?&gt;, context : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + validate(postoTrabalhoFilter : PostoTrabalhoFilter) : Set&lt;CustomViolation&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./PostoTrabalhoFilterCantHaveNullAttributesValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.validator.PerfilSistemaCannotHaveUsuarioGrantedValidator
+	c98453 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.PerfilSistemaCannotHaveUsuarioGrantedValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PerfilSistemaCannotHaveUsuarioGrantedValidator.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> PerfilSistemaCannotHaveUsuarioGrantedValidator </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + PerfilSistemaCannotHaveUsuarioGrantedValidator(perfilSistemaRepository : PerfilSistemaRepository) </td></tr>
+<tr><td align="left" balign="left"> + support(clazz : Class&lt;?&gt;, context : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + validate(id : Long) : Set&lt;CustomViolation&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./PerfilSistemaCannotHaveUsuarioGrantedValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.validator.PerfilSistemaCannotHaveEmptyRoleListValidator
+	c98454 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.PerfilSistemaCannotHaveEmptyRoleListValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PerfilSistemaCannotHaveEmptyRoleListValidator.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> PerfilSistemaCannotHaveEmptyRoleListValidator </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + PerfilSistemaCannotHaveEmptyRoleListValidator() </td></tr>
+<tr><td align="left" balign="left"> + support(clazz : Class&lt;?&gt;, context : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + validate(perfilSistema : PerfilSistema) : Set&lt;CustomViolation&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./PerfilSistemaCannotHaveEmptyRoleListValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.validator.PapelSistemaCannotHavePerfilGrantedValidator
+	c98455 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.PapelSistemaCannotHavePerfilGrantedValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PapelSistemaCannotHavePerfilGrantedValidator.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> PapelSistemaCannotHavePerfilGrantedValidator </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + PapelSistemaCannotHavePerfilGrantedValidator(papelSistemaRepository : PapelSistemaRepository) </td></tr>
+<tr><td align="left" balign="left"> + support(clazz : Class&lt;?&gt;, context : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + validate(id : Long) : Set&lt;CustomViolation&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./PapelSistemaCannotHavePerfilGrantedValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.validator.PapelSistemaCannotHaveEmptyOptionListValidator
+	c98456 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.PapelSistemaCannotHaveEmptyOptionListValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PapelSistemaCannotHaveEmptyOptionListValidator.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> PapelSistemaCannotHaveEmptyOptionListValidator </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + PapelSistemaCannotHaveEmptyOptionListValidator() </td></tr>
+<tr><td align="left" balign="left"> + support(clazz : Class&lt;?&gt;, context : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + validate(papelSistema : PapelSistema) : Set&lt;CustomViolation&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./PapelSistemaCannotHaveEmptyOptionListValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.validator.ManterUsuarioSistemaFilterCantHaveNullAttributesValidator
+	c98457 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.ManterUsuarioSistemaFilterCantHaveNullAttributesValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ManterUsuarioSistemaFilterCantHaveNullAttributesValidator.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ManterUsuarioSistemaFilterCantHaveNullAttributesValidator </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ManterUsuarioSistemaFilterCantHaveNullAttributesValidator() </td></tr>
+<tr><td align="left" balign="left"> + support(clazz : Class&lt;?&gt;, context : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + validate(manterUsuarioSistemaFilter : ManterUsuarioSistemaFilter) : Set&lt;CustomViolation&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ManterUsuarioSistemaFilterCantHaveNullAttributesValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.validator.ChangePasswordNovaSenhaValidator
+	c98458 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.ChangePasswordNovaSenhaValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ChangePasswordNovaSenhaValidator.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ChangePasswordNovaSenhaValidator </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ChangePasswordNovaSenhaValidator() </td></tr>
+<tr><td align="left" balign="left"> + support(clazz : Class&lt;?&gt;, context : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + validate(target : ChangePasswordDto) : Set&lt;CustomViolation&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ChangePasswordNovaSenhaValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.validator.AtribuirPerfilFilterCantHaveNullAttributesValidator
+	c98459 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.AtribuirPerfilFilterCantHaveNullAttributesValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AtribuirPerfilFilterCantHaveNullAttributesValidator.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> AtribuirPerfilFilterCantHaveNullAttributesValidator </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + AtribuirPerfilFilterCantHaveNullAttributesValidator() </td></tr>
+<tr><td align="left" balign="left"> + support(clazz : Class&lt;?&gt;, context : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + validate(atribuirPerfilFilter : AtribuirPerfilFilter) : Set&lt;CustomViolation&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./AtribuirPerfilFilterCantHaveNullAttributesValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.validator.AtivarInativarPerfilFilterCantHaveNullAttributesValidator
+	c98460 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.AtivarInativarPerfilFilterCantHaveNullAttributesValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AtivarInativarPerfilFilterCantHaveNullAttributesValidator.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> AtivarInativarPerfilFilterCantHaveNullAttributesValidator </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + AtivarInativarPerfilFilterCantHaveNullAttributesValidator() </td></tr>
+<tr><td align="left" balign="left"> + support(clazz : Class&lt;?&gt;, context : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + validate(ativarInativarPerfilFilter : AtivarInativarPerfilFilter) : Set&lt;CustomViolation&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./AtivarInativarPerfilFilterCantHaveNullAttributesValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
 }
 

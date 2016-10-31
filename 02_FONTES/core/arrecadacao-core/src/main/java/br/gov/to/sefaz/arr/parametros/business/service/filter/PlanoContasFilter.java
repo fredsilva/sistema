@@ -1,6 +1,6 @@
 package br.gov.to.sefaz.arr.parametros.business.service.filter;
 
-import br.gov.to.sefaz.arr.parametros.persistence.enums.TipoContaEnum;
+import br.gov.to.sefaz.arr.persistence.enums.TipoContaEnum;
 
 /**
  * Objeto para envio de dados para filtros de busca para o Managed Bean de Plano de contas.

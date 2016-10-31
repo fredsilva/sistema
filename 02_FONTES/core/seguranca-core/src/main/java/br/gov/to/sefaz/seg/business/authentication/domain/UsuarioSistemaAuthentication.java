@@ -3,8 +3,10 @@ package br.gov.to.sefaz.seg.business.authentication.domain;
 import br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 import java.util.Collection;
+import java.util.stream.Collectors;
 
 /**
  * POJO com informações referentes a um usuário sistema authenticado.
@@ -21,6 +23,7 @@ public class UsuarioSistemaAuthentication implements Authentication {
     private final RoleGroupManager roleGroupManager;
     private final UsuarioSistema usuarioSistema;
     private boolean authenticated;
+    private boolean authenticatedByCert;
 
     public UsuarioSistemaAuthentication(String password, String ip, RoleGroupManager roleGroupManager,
             UsuarioSistema usuarioSistema) {
@@ -28,12 +31,20 @@ public class UsuarioSistemaAuthentication implements Authentication {
         this.ip = ip;
         this.usuarioSistema = usuarioSistema;
         this.authenticated = true;
+        this.authenticatedByCert = false;
         this.roleGroupManager = roleGroupManager;
     }
 
+    /**
+     * {@inheritDoc}
+     * Retorna as roles de acesso do usuario, com o prefixo "ROLE_". Para pegar sem o prefixo pegue direto
+     * do {@link #getRoleGroupManager()}.
+     */
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return roleGroupManager.getRoles();
+        return roleGroupManager.getRoles().stream()
+                .map(role -> new SimpleGrantedAuthority("ROLE_" + role))
+                .collect(Collectors.toSet());
     }
 
     public RoleGroupManager getRoleGroupManager() {
@@ -68,5 +79,13 @@ public class UsuarioSistemaAuthentication implements Authentication {
     @Override
     public String getName() {
         return getPrincipal().getCpfUsuario();
+    }
+
+    public boolean isAuthenticatedByCert() {
+        return authenticatedByCert;
+    }
+
+    public void setAuthenticatedByCert(boolean authenticatedByCert) {
+        this.authenticatedByCert = authenticatedByCert;
     }
 }

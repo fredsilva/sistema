@@ -1,17 +1,17 @@
 package br.gov.to.sefaz.seg.managedbean;
 
-import br.gov.to.sefaz.business.facade.CrudFacade;
-import br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB;
+import br.gov.to.sefaz.presentation.managedbean.BeanFactoryMB;
 import br.gov.to.sefaz.seg.business.gestao.facade.TipoUsuarioFacade;
 import br.gov.to.sefaz.seg.business.gestao.service.filter.TipoUsuarioFilter;
-import br.gov.to.sefaz.seg.persistence.entity.TipoUsuario;
+import br.gov.to.sefaz.seg.persistence.domain.TipoUsuario;
 import br.gov.to.sefaz.util.message.MessageUtil;
-
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Collection;
-
+import java.util.List;
+import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.ViewScoped;
 
 /**
@@ -22,33 +22,45 @@ import javax.faces.bean.ViewScoped;
  */
 @ManagedBean(name = "tipoUsuarioMB")
 @ViewScoped
-public class TipoUsuarioMB extends DefaultCrudMB<TipoUsuario, Integer> {
+public class TipoUsuarioMB {
+
+    @ManagedProperty("#{springBeanFactoryMB}")
+    private BeanFactoryMB beanFactoryMB;
+
+    private TipoUsuarioFacade facade;
 
     private final TipoUsuarioFilter filter;
 
-    public TipoUsuarioMB() {
+    private List<TipoUsuario> resultList;
 
-        super(TipoUsuario::new);
+    public TipoUsuarioMB() {
         filter = new TipoUsuarioFilter();
+    }
+
+    @PostConstruct
+    protected void injectDependencies() {
+        beanFactoryMB.injectBeans(this);
+    }
+
+    public BeanFactoryMB getBeanFactoryMB() {
+        return beanFactoryMB;
+    }
+
+    public void setBeanFactoryMB(BeanFactoryMB beanFactoryMB) {
+        this.beanFactoryMB = beanFactoryMB;
+    }
+
+    @Autowired
+    public void setFacade(TipoUsuarioFacade facade) {
+        this.facade = facade;
+    }
+
+    protected TipoUsuarioFacade getFacade() {
+        return facade;
     }
 
     public TipoUsuarioFilter getFilter() {
         return filter;
-    }
-
-    /**
-     * {@link DefaultCrudMB#setFacade(CrudFacade)}.
-     *
-     * @param facade fachado de TipoUsuario
-     */
-    @Autowired
-    public void setFacade(TipoUsuarioFacade facade) {
-        super.setFacade(facade);
-    }
-
-    @Override
-    protected TipoUsuarioFacade getFacade() {
-        return (TipoUsuarioFacade) super.getFacade();
     }
 
     /**
@@ -57,16 +69,15 @@ public class TipoUsuarioMB extends DefaultCrudMB<TipoUsuario, Integer> {
     public void search() {
         resultList = getFacade().find(filter);
         if (resultList.isEmpty()) {
-            MessageUtil.addMesage(MessageUtil.SEG, "geral.pesquisa.vazia");
+            MessageUtil.addMessage(MessageUtil.SEG, "geral.pesquisa.vazia");
         }
     }
 
     /**
      * Carrega todos os Tipo Usuarios existentes no Banco de Dados. - Utilizada para recarregar tabela.
-     * 
+     *
      * @return Lista das unidades.
      */
-    @Override
     public Collection<TipoUsuario> getResultList() {
         return resultList;
     }
@@ -75,6 +86,7 @@ public class TipoUsuarioMB extends DefaultCrudMB<TipoUsuario, Integer> {
      * Carrega todos os Tipo Usuarios existentes no Banco de Dados.
      */
     public void loadAllTipoUsuarios() {
-        resultList = getFacade().find(null);
+        resultList = getFacade().findAllTipoUsuario();
     }
+
 }

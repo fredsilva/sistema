@@ -10,19 +10,76 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.persistence.repository.OperacaoAuditadaRepository
-	c9043 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.OperacaoAuditadaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OperacaoAuditadaRepository.html">
+	c30914 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.OperacaoAuditadaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OperacaoAuditadaRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OperacaoAuditadaRepository </td></tr>
 		</table></td></tr>
-		</table>>, URL="./OperacaoAuditadaRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	//br.gov.to.sefaz.seg.persistence.repository.OperacaoAuditadaRepository implements br.gov.to.sefaz.persistence.repository.BaseRepository<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c9051:p -> c9043:p [dir=back,arrowtail=empty,style=dashed];
-	// br.gov.to.sefaz.persistence.repository.BaseRepository<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c9051 [label=<<table title="br.gov.to.sefaz.persistence.repository.BaseRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/persistence/repository/BaseRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> BaseRepository&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + OperacaoAuditadaRepository() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OperacaoAuditadaRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	//br.gov.to.sefaz.seg.persistence.repository.OperacaoAuditadaRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.seg.persistence.entity.OperacaoAuditada, java.lang.Long>
+	c30926:p -> c30914:p [dir=back,arrowtail=empty];
+	// br.gov.to.sefaz.persistence.repository.BaseRepository<E, I extends java.io.Serializable>
+	c30926 [label=<<table title="br.gov.to.sefaz.persistence.repository.BaseRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/persistence/repository/BaseRepository.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="arial italic"> BaseRepository&lt;E, I extends Serializable&gt; </font></td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + BaseRepository() </td></tr>
+<tr><td align="left" balign="left"> + findAll() : List&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> + findNative(arg0 : String, arg1 : Consumer&lt;SelectBuilder&gt;) : List&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> + findNative(arg0 : Consumer&lt;SelectBuilder&gt;) : List&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> + find(arg0 : String, arg1 : Consumer&lt;HqlSelectBuilder&gt;) : List&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> + find(arg0 : Consumer&lt;HqlSelectBuilder&gt;) : List&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> + find(arg0 : Consumer&lt;HqlSelectBuilder&gt;, arg1 : int) : List&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> + findColumnNative(arg0 : String, arg1 : String, arg2 : Consumer&lt;SelectBuilder&gt;) : List&lt;R&gt; </td></tr>
+<tr><td align="left" balign="left"> + findColumnNative(arg0 : String, arg1 : Consumer&lt;SelectBuilder&gt;) : List&lt;R&gt; </td></tr>
+<tr><td align="left" balign="left"> + findColumn(arg0 : String, arg1 : String, arg2 : Consumer&lt;HqlSelectBuilder&gt;) : List&lt;R&gt; </td></tr>
+<tr><td align="left" balign="left"> + findColumn(arg0 : String, arg1 : Consumer&lt;HqlSelectBuilder&gt;) : List&lt;R&gt; </td></tr>
+<tr><td align="left" balign="left"> + findColumn(arg0 : String, arg1 : I) : List&lt;R&gt; </td></tr>
+<tr><td align="left" balign="left"> + findOneColumnNative(arg0 : String, arg1 : String, arg2 : String, arg3 : Consumer&lt;SelectBuilder&gt;) : R </td></tr>
+<tr><td align="left" balign="left"> + findOneColumnNative(arg0 : String, arg1 : String, arg2 : Consumer&lt;SelectBuilder&gt;) : R </td></tr>
+<tr><td align="left" balign="left"> + findOneColumnNative(arg0 : String, arg1 : Consumer&lt;SelectBuilder&gt;) : R </td></tr>
+<tr><td align="left" balign="left"> + findOneColumn(arg0 : String, arg1 : String, arg2 : Consumer&lt;HqlSelectBuilder&gt;) : R </td></tr>
+<tr><td align="left" balign="left"> + findOneColumn(arg0 : String, arg1 : Consumer&lt;HqlSelectBuilder&gt;) : R </td></tr>
+<tr><td align="left" balign="left"> + findOneNative(arg0 : String, arg1 : Consumer&lt;SelectBuilder&gt;) : E </td></tr>
+<tr><td align="left" balign="left"> + findOneNative(arg0 : Consumer&lt;SelectBuilder&gt;) : E </td></tr>
+<tr><td align="left" balign="left"> + findOne(arg0 : String, arg1 : Consumer&lt;HqlSelectBuilder&gt;) : E </td></tr>
+<tr><td align="left" balign="left"> + findOne(arg0 : Consumer&lt;HqlSelectBuilder&gt;) : E </td></tr>
+<tr><td align="left" balign="left"> + findOne(arg0 : I) : E </td></tr>
+<tr><td align="left" balign="left"> + findOneColumn(arg0 : String, arg1 : I) : R </td></tr>
+<tr><td align="left" balign="left"> + countNative(arg0 : String, arg1 : Consumer&lt;SelectBuilder&gt;) : Long </td></tr>
+<tr><td align="left" balign="left"> + countNative(arg0 : Consumer&lt;SelectBuilder&gt;) : Long </td></tr>
+<tr><td align="left" balign="left"> + count(arg0 : String, arg1 : Consumer&lt;HqlSelectBuilder&gt;) : Long </td></tr>
+<tr><td align="left" balign="left"> + count(arg0 : Consumer&lt;HqlSelectBuilder&gt;) : Long </td></tr>
+<tr><td align="left" balign="left"> + count(arg0 : I) : Long </td></tr>
+<tr><td align="left" balign="left"> + existsNative(arg0 : String, arg1 : String, arg2 : Consumer&lt;SelectBuilder&gt;) : boolean </td></tr>
+<tr><td align="left" balign="left"> + existsNative(arg0 : String, arg1 : Consumer&lt;SelectBuilder&gt;) : boolean </td></tr>
+<tr><td align="left" balign="left"> + existsNative(arg0 : Consumer&lt;SelectBuilder&gt;) : boolean </td></tr>
+<tr><td align="left" balign="left"> + exists(arg0 : String, arg1 : Consumer&lt;HqlSelectBuilder&gt;) : boolean </td></tr>
+<tr><td align="left" balign="left"> + exists(arg0 : Consumer&lt;HqlSelectBuilder&gt;) : boolean </td></tr>
+<tr><td align="left" balign="left"> + exists(arg0 : I) : boolean </td></tr>
+<tr><td align="left" balign="left"> + save(arg0 : E) : E </td></tr>
+<tr><td align="left" balign="left"> + save(arg0 : Collection&lt;E&gt;) : Collection&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> + updateNative(arg0 : String, arg1 : Consumer&lt;UpdateBuilder&gt;) </td></tr>
+<tr><td align="left" balign="left"> + updateNative(arg0 : Consumer&lt;UpdateBuilder&gt;) </td></tr>
+<tr><td align="left" balign="left"> + update(arg0 : String, arg1 : Consumer&lt;HqlUpdateBuilder&gt;) </td></tr>
+<tr><td align="left" balign="left"> + update(arg0 : Consumer&lt;HqlUpdateBuilder&gt;) </td></tr>
+<tr><td align="left" balign="left"> + deleteNative(arg0 : String, arg1 : Consumer&lt;DeleteBuilder&gt;) </td></tr>
+<tr><td align="left" balign="left"> + deleteNative(arg0 : Consumer&lt;DeleteBuilder&gt;) </td></tr>
+<tr><td align="left" balign="left"> + delete(arg0 : String, arg1 : Consumer&lt;HqlDeleteBuilder&gt;) </td></tr>
+<tr><td align="left" balign="left"> + delete(arg0 : Consumer&lt;HqlDeleteBuilder&gt;) </td></tr>
+<tr><td align="left" balign="left"> + delete(arg0 : I) </td></tr>
+<tr><td align="left" balign="left"> + delete(arg0 : Iterable&lt;I&gt;) </td></tr>
+<tr><td align="left" balign="left"> + extractEntityCLassFromGenerics() : Class&lt;E&gt; </td></tr>
+<tr><td align="left" balign="left"> + flush() </td></tr>
 		</table></td></tr>
 		</table>>, URL="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/persistence/repository/BaseRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 }

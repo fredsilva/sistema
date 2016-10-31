@@ -5,12 +5,12 @@ import br.gov.to.sefaz.seg.persistence.converter.TipoOperacaoEnumConverter;
 import br.gov.to.sefaz.seg.persistence.enums.TipoOperacaoEnum;
 import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters.LocalDateTimeConverter;
 
-import java.sql.Clob;
 import java.time.LocalDateTime;
 import java.util.Objects;
 import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -53,23 +53,29 @@ public class LogNavegacao extends AbstractEntity<Long> {
     @NotNull
     @Lob
     @Column(name = "DETALHE_NAVEGACAO")
-    private Clob detalheNavegacao;
+    private String detalheNavegacao;
 
     @JoinColumn(name = "CPF_USUARIO", referencedColumnName = "CPF_USUARIO",
             insertable = false, updatable = false)
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     private UsuarioSistema usuarioSistema;
 
     @NotNull
     @Column(name = "CPF_USUARIO")
     private String cpfUsuario;
 
+    @Column(name = "CPF_CNPJ_PROCURADO")
+    private String cpfCnpjProcurado;
+
+    @Column(name = "URL_ACESSO")
+    private String urlAcesso;
+
     public LogNavegacao() {
         // Construtor para inicialização por reflexão.
     }
 
     public LogNavegacao(LocalDateTime dataOperacao, TipoOperacaoEnum tipoOperacao,
-            Clob detalheNavegacao, String cpfUsuario) {
+            String detalheNavegacao, String cpfUsuario) {
         this.dataOperacao = dataOperacao;
         this.tipoOperacao = tipoOperacao;
         this.detalheNavegacao = detalheNavegacao;
@@ -105,11 +111,11 @@ public class LogNavegacao extends AbstractEntity<Long> {
         this.tipoOperacao = tipoOperacao;
     }
 
-    public Clob getDetalheNavegacao() {
+    public String getDetalheNavegacao() {
         return detalheNavegacao;
     }
 
-    public void setDetalheNavegacao(Clob detalheNavegacao) {
+    public void setDetalheNavegacao(String detalheNavegacao) {
         this.detalheNavegacao = detalheNavegacao;
     }
 
@@ -129,6 +135,30 @@ public class LogNavegacao extends AbstractEntity<Long> {
         this.cpfUsuario = cpfUsuario;
     }
 
+    public String getNomeUsuarioSistema() {
+        return getUsuarioSistema().getNomeCompletoUsuario();
+    }
+
+    public String getDescricaoTipoUsuario() {
+        return getUsuarioSistema().getDescricaoTipoUsuario();
+    }
+
+    public String getCpfCnpjProcurado() {
+        return cpfCnpjProcurado;
+    }
+
+    public void setCpfCnpjProcurado(String cpfCnpjProcurado) {
+        this.cpfCnpjProcurado = cpfCnpjProcurado;
+    }
+
+    public String getUrlAcesso() {
+        return urlAcesso;
+    }
+
+    public void setUrlAcesso(String urlAcesso) {
+        this.urlAcesso = urlAcesso;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) {
@@ -138,18 +168,20 @@ public class LogNavegacao extends AbstractEntity<Long> {
             return false;
         }
         LogNavegacao that = (LogNavegacao) o;
-        return Objects.equals(identificacaoNavegacao, that.identificacaoNavegacao)
-                && Objects.equals(dataOperacao, that.dataOperacao)
-                && Objects.equals(tipoOperacao, that.tipoOperacao)
-                && Objects.equals(detalheNavegacao, that.detalheNavegacao)
-                && Objects.equals(usuarioSistema, that.usuarioSistema)
-                && Objects.equals(cpfUsuario, that.cpfUsuario);
+        return Objects.equals(getIdentificacaoNavegacao(), that.getIdentificacaoNavegacao())
+                && Objects.equals(getDataOperacao(), that.getDataOperacao())
+                && getTipoOperacao() == that.getTipoOperacao()
+                && Objects.equals(getDetalheNavegacao(), that.getDetalheNavegacao())
+                && Objects.equals(getUsuarioSistema(), that.getUsuarioSistema())
+                && Objects.equals(getCpfUsuario(), that.getCpfUsuario())
+                && Objects.equals(getCpfCnpjProcurado(), that.getCpfCnpjProcurado())
+                && Objects.equals(getUrlAcesso(), that.getUrlAcesso());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(identificacaoNavegacao, dataOperacao, tipoOperacao,
-                detalheNavegacao, usuarioSistema, cpfUsuario);
+        return Objects.hash(getIdentificacaoNavegacao(), getDataOperacao(), getTipoOperacao(), getDetalheNavegacao(),
+                getUsuarioSistema(), getCpfUsuario(), getCpfCnpjProcurado(), getUrlAcesso());
     }
 
     @Override
@@ -158,9 +190,11 @@ public class LogNavegacao extends AbstractEntity<Long> {
                 + "identificacaoNavegacao=" + identificacaoNavegacao
                 + ", dataOperacao=" + dataOperacao
                 + ", tipoOperacao=" + tipoOperacao
-                + ", detalheNavegacao=" + detalheNavegacao
+                + ", detalheNavegacao='" + detalheNavegacao + '\''
                 + ", usuarioSistema=" + usuarioSistema
                 + ", cpfUsuario='" + cpfUsuario + '\''
+                + ", cpfCnpjUsuario='" + cpfCnpjProcurado + '\''
+                + ", urlAcesso='" + urlAcesso + '\''
                 + '}';
     }
 }

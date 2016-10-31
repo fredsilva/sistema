@@ -10,204 +10,364 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.persistence.repository.UsuarioSistemaRepository
-	c24625 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.UsuarioSistemaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioSistemaRepository.html">
+	c107275 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.UsuarioSistemaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioSistemaRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> UsuarioSistemaRepository </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + updateEstaBloqueado(bloqueado : boolean, dataDesbloqueio : LocalDateTime, cpf : String) </font></td></tr>
+<tr><td align="left" balign="left"> + UsuarioSistemaRepository() </td></tr>
+<tr><td align="left" balign="left"> + updateEstaBloqueado(bloqueado : boolean, dataDesbloqueio : LocalDateTime, cpf : String) </td></tr>
+<tr><td align="left" balign="left"> + existsByCpfAndEmail(cpf : String, email : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + findAllUsuarioSistema(cpfUsuario : String, nomeCompletoUsuario : String, situacaoUsuario : SituacaoUsuarioEnum, tipoUsuario : Integer, codigoEstado : String, codigoMunicipio : Integer) : List&lt;UsuarioSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllUsuarioSistemaPerfil(cpfUsuario : String, nomeCompletoUsuario : String, codigoUnidadeOrganizacional : Long, codigoPostoTrabalho : Integer) : List&lt;UsuarioSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findOne(cpf : String) : UsuarioSistema </td></tr>
+<tr><td align="left" balign="left"> + updateDataUltimaAlteracaoSenha(dataUltimaAlteracaoSenha : LocalDateTime, cpf : String) </td></tr>
+<tr><td align="left" balign="left"> + findAllUsuarioSistemaManutencao(nomeCompletoUsuario : String, cpf : String, dataCriacao : LocalDateTime, situacao : SituacaoUsuarioEnum, identificacaoUnidOrganizac : Long, identificacaoPostoTrabalho : Integer) : List&lt;UsuarioSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + countByTipoUsuario(tipoUsuario : TipoUsuario) : Long </td></tr>
+<tr><td align="left" balign="left"> + findAllByFilterParameters(cpfUsuario : String, nomeCompletoUsuario : String, codigoTipoUsuario : Integer, codigoPerfil : Long, codigoUnidadeOrganizacional : Long, codigoPostoTrabalho : Integer) : Collection&lt;UsuarioSistema&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./UsuarioSistemaRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.UsuarioPrincipalEmpresaRepository
-	c24626 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.UsuarioPrincipalEmpresaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioPrincipalEmpresaRepository.html">
+	c107276 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.UsuarioPrincipalEmpresaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioPrincipalEmpresaRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> UsuarioPrincipalEmpresaRepository </td></tr>
 		</table></td></tr>
-		</table>>, URL="./UsuarioPrincipalEmpresaRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	// br.gov.to.sefaz.seg.persistence.repository.UsuarioPerfilRepository
-	c24627 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.UsuarioPerfilRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioPerfilRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + UsuarioPrincipalEmpresaRepository() </td></tr>
+<tr><td align="left" balign="left"> + cnpjEmpresaExists(cnpjEmpresa : String) : Boolean </td></tr>
+<tr><td align="left" balign="left"> + isLegalRepresentative(cnpjRaiz : String, cpf : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + isMandatoStillValid(cpf : String, cnpj : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + findCompanyName(cnpjRaiz : String) : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./UsuarioPrincipalEmpresaRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.persistence.repository.UsuarioPostoTrabalhoRepository
+	c107277 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.UsuarioPostoTrabalhoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioPostoTrabalhoRepository.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> UsuarioPostoTrabalhoRepository </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + UsuarioPostoTrabalhoRepository() </td></tr>
+<tr><td align="left" balign="left"> + existsLockReferenceFuncionario(idPostoTrabalho : Integer) : boolean </td></tr>
+		</table></td></tr>
+		</table>>, URL="./UsuarioPostoTrabalhoRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.persistence.repository.UsuarioPerfilRepository
+	c107278 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.UsuarioPerfilRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioPerfilRepository.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UsuarioPerfilRepository </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + SELECT_BY_USUARIO : String </td></tr>
+<tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllByUsuarioSistema(usuarioId : String) : Set&lt;UsuarioPerfil&gt; </font></td></tr>
+<tr><td align="left" balign="left"> + UsuarioPerfilRepository() </td></tr>
+<tr><td align="left" balign="left"> + findAllByUsuarioSistema(usuarioId : String, situacao : SituacaoUsuarioEnum) : Set&lt;UsuarioPerfil&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllByUsuarioSistema(usuarioId : String) : Set&lt;UsuarioPerfil&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllByUsuariosSistema(usuariosId : List&lt;String&gt;) : Set&lt;UsuarioPerfil&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllUsuariosPerfilByPerfilId(identificacaoPerfil : Long) : Collection&lt;UsuarioPerfil&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllPerfilByUsuario(cpfUsuario : String) : Set&lt;UsuarioPerfil&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./UsuarioPerfilRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.UnidadeOrganizacionalRepository
-	c24628 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.UnidadeOrganizacionalRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UnidadeOrganizacionalRepository.html">
+	c107279 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.UnidadeOrganizacionalRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UnidadeOrganizacionalRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> UnidadeOrganizacionalRepository </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + EXISTS_LOCK_REFERENCE_PAI : String </td></tr>
-<tr><td align="left" balign="left"> + EXISTS_LOCK_REFERENCE_POSTO_TRABALHO : String </td></tr>
+<tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + existsLockReferencePai(id : Long) : Boolean </font></td></tr>
-<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + existsLockReferencePostoTrabalho(id : Long) : Boolean </font></td></tr>
+<tr><td align="left" balign="left"> + UnidadeOrganizacionalRepository() </td></tr>
+<tr><td align="left" balign="left"> + existsLockReferencePai(id : Long) : boolean </td></tr>
+<tr><td align="left" balign="left"> + existsLockReferencePostoTrabalho(id : Long) : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="./UnidadeOrganizacionalRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	// br.gov.to.sefaz.seg.persistence.repository.TipoUsuarioRepository
-	c24629 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.TipoUsuarioRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoUsuarioRepository.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
-<tr><td align="center" balign="center"> TipoUsuarioRepository </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ALL_PROFILES_COUNTED : String </td></tr>
-<tr><td align="left" balign="left"> + EXISTS_LOCK_REFERENCE_USUARIO : String </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + existsLockReferenceUsuario(id : Integer) : Boolean </font></td></tr>
-<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + allProfilesCounted(situacaoUsuario : SituacaoUsuarioEnum, descricaoTipoUsuario : String) : List&lt;TipoUsuario&gt; </font></td></tr>
-		</table></td></tr>
-		</table>>, URL="./TipoUsuarioRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.SolicitacaoUsuarioRepository
-	c24630 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.SolicitacaoUsuarioRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SolicitacaoUsuarioRepository.html">
+	c107280 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.SolicitacaoUsuarioRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SolicitacaoUsuarioRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SolicitacaoUsuarioRepository </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + SolicitacaoUsuarioRepository() </td></tr>
+<tr><td align="left" balign="left"> + findOneByCpf(cpfUsuario : String) : SolicitacaoUsuario </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SolicitacaoUsuarioRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.SmsContribuinteRepository
-	c24631 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.SmsContribuinteRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SmsContribuinteRepository.html">
+	c107281 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.SmsContribuinteRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SmsContribuinteRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> SmsContribuinteRepository </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + SmsContribuinteRepository() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SmsContribuinteRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.RepositoryPackageMarker
-	c24632 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.RepositoryPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RepositoryPackageMarker.html">
+	c107282 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.RepositoryPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RepositoryPackageMarker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> RepositoryPackageMarker </td></tr>
 		</table></td></tr>
 		</table>>, URL="./RepositoryPackageMarker.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.ProcuracaoUsuarioRepository
-	c24633 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.ProcuracaoUsuarioRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProcuracaoUsuarioRepository.html">
+	c107283 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.ProcuracaoUsuarioRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProcuracaoUsuarioRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ProcuracaoUsuarioRepository </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ProcuracaoUsuarioRepository() </td></tr>
+<tr><td align="left" balign="left"> + findByCpf(cpfOrigem : String, procuradorCpf : String) : ProcuracaoUsuario </td></tr>
+<tr><td align="left" balign="left"> + findByCnpj(cnpjOrigem : String, procuradorCpf : String) : ProcuracaoUsuario </td></tr>
+<tr><td align="left" balign="left"> + findAllByCpfProcurado(cpfUsuario : String) : Set&lt;ProcuracaoUsuario&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ProcuracaoUsuarioRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.ProcuracaoOpcaoRepository
-	c24634 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.ProcuracaoOpcaoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProcuracaoOpcaoRepository.html">
+	c107284 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.ProcuracaoOpcaoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProcuracaoOpcaoRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ProcuracaoOpcaoRepository </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ProcuracaoOpcaoRepository() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ProcuracaoOpcaoRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.PostoTrabalhoRepository
-	c24635 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.PostoTrabalhoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PostoTrabalhoRepository.html">
+	c107285 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.PostoTrabalhoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PostoTrabalhoRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> PostoTrabalhoRepository </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + EXISTS_LOCK_REFERENCE_FUNCIONARIO : String </td></tr>
+<tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + existsLockReferenceFuncionario(id : Long) : Boolean </font></td></tr>
+<tr><td align="left" balign="left"> + PostoTrabalhoRepository() </td></tr>
+<tr><td align="left" balign="left"> + findAllByUnidadeOrganizacional(identificUnidOrganizac : Long) : Collection&lt;PostoTrabalho&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./PostoTrabalhoRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.PerfilSistemaRepository
-	c24636 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.PerfilSistemaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PerfilSistemaRepository.html">
+	c107286 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.PerfilSistemaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PerfilSistemaRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> PerfilSistemaRepository </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + PerfilSistemaRepository() </td></tr>
+<tr><td align="left" balign="left"> + findAllPerfilSistemaByPapel(idPapel : Long) : List&lt;PerfilSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllPerfilSistema(nomePerfil : String) : List&lt;PerfilSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findOneComplete(id : Long) : PerfilSistema </td></tr>
+<tr><td align="left" balign="left"> + existsUsuarioByPerfil(id : Long) : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="./PerfilSistemaRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.PerfilPapelRepository
-	c24637 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.PerfilPapelRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PerfilPapelRepository.html">
+	c107287 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.PerfilPapelRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PerfilPapelRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> PerfilPapelRepository </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + PerfilPapelRepository() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./PerfilPapelRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.PapelSistemaRepository
-	c24638 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.PapelSistemaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PapelSistemaRepository.html">
+	c107288 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.PapelSistemaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PapelSistemaRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> PapelSistemaRepository </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + PapelSistemaRepository() </td></tr>
+<tr><td align="left" balign="left"> + findAllCounted(nomePapel : String) : List&lt;PapelSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findOneCounted(id : Long) : PapelSistema </td></tr>
+<tr><td align="left" balign="left"> + existsPerfilByPapel(id : Long) : boolean </td></tr>
+<tr><td align="left" balign="left"> + findAllWithPapeis() : List&lt;PapelSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllByPerfilId(id : Long) : Collection&lt;PapelSistema&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./PapelSistemaRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.PapelOpcaoRepository
-	c24639 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.PapelOpcaoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PapelOpcaoRepository.html">
+	c107289 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.PapelOpcaoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PapelOpcaoRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> PapelOpcaoRepository </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + PapelOpcaoRepository() </td></tr>
+<tr><td align="left" balign="left"> + findAllWithDescription(idPapel : Long) : Set&lt;PapelOpcao&gt; </td></tr>
+<tr><td align="left" balign="left"> + deleteAllPapelOpcaoByPapelId(id : Long) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./PapelOpcaoRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.OperacaoAuditadaRepository
-	c24640 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.OperacaoAuditadaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OperacaoAuditadaRepository.html">
+	c107290 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.OperacaoAuditadaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OperacaoAuditadaRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OperacaoAuditadaRepository </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + OperacaoAuditadaRepository() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OperacaoAuditadaRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.OpcaoAplicacaoRepository
-	c24641 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.OpcaoAplicacaoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OpcaoAplicacaoRepository.html">
+	c107291 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.OpcaoAplicacaoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OpcaoAplicacaoRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> OpcaoAplicacaoRepository </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + OpcaoAplicacaoRepository() </td></tr>
+<tr><td align="left" balign="left"> + findAllOpcaoAplicacao() : List&lt;OpcaoAplicacao&gt; </td></tr>
+<tr><td align="left" balign="left"> + findByIds(ids : Collection&lt;Long&gt;) : List&lt;OpcaoAplicacao&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OpcaoAplicacaoRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.ModuloSistemaRepository
-	c24642 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.ModuloSistemaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ModuloSistemaRepository.html">
+	c107292 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.ModuloSistemaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ModuloSistemaRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ModuloSistemaRepository </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + FIND_ALL : String </td></tr>
+<tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllFetched() : Set&lt;ModuloSistema&gt; </font></td></tr>
+<tr><td align="left" balign="left"> + ModuloSistemaRepository() </td></tr>
+<tr><td align="left" balign="left"> + findAllFetched() : Set&lt;ModuloSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllSortedByAbreviacao() : List&lt;ModuloSistema&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ModuloSistemaRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.LogNavegacaoRepository
-	c24643 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.LogNavegacaoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LogNavegacaoRepository.html">
+	c107293 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.LogNavegacaoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LogNavegacaoRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> LogNavegacaoRepository </td></tr>
 		</table></td></tr>
-		</table>>, URL="./LogNavegacaoRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	// br.gov.to.sefaz.seg.persistence.repository.HistoricoLoginSistemaRepository
-	c24644 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.HistoricoLoginSistemaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./HistoricoLoginSistemaRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + LogNavegacaoRepository() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./LogNavegacaoRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.persistence.repository.ListagemCpfProcuracaoRepository
+	c107294 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.ListagemCpfProcuracaoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ListagemCpfProcuracaoRepository.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ListagemCpfProcuracaoRepository </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ListagemCpfProcuracaoRepository() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ListagemCpfProcuracaoRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.persistence.repository.HistoricoNavegacaoRepository
+	c107295 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.HistoricoNavegacaoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./HistoricoNavegacaoRepository.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> HistoricoNavegacaoRepository </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + HistoricoNavegacaoRepository() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./HistoricoNavegacaoRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.persistence.repository.HistoricoLoginSistemaRepository
+	c107296 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.HistoricoLoginSistemaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./HistoricoLoginSistemaRepository.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HistoricoLoginSistemaRepository </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + HistoricoLoginSistemaRepository() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./HistoricoLoginSistemaRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.ErroProcessoAuditoriaRepository
-	c24645 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.ErroProcessoAuditoriaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ErroProcessoAuditoriaRepository.html">
+	c107297 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.ErroProcessoAuditoriaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ErroProcessoAuditoriaRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ErroProcessoAuditoriaRepository </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ErroProcessoAuditoriaRepository() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ErroProcessoAuditoriaRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.CorreioContribuinteRepository
-	c24646 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.CorreioContribuinteRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CorreioContribuinteRepository.html">
+	c107298 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.CorreioContribuinteRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CorreioContribuinteRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CorreioContribuinteRepository </td></tr>
 		</table></td></tr>
-		</table>>, URL="./CorreioContribuinteRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	// br.gov.to.sefaz.seg.persistence.repository.AplicacaoModuloRepository
-	c24647 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.AplicacaoModuloRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AplicacaoModuloRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + CorreioContribuinteRepository() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./CorreioContribuinteRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.persistence.repository.ComunicacaoContribuinteRepository
+	c107299 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.ComunicacaoContribuinteRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ComunicacaoContribuinteRepository.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ComunicacaoContribuinteRepository </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ComunicacaoContribuinteRepository() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ComunicacaoContribuinteRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.persistence.repository.AtribuirPerfilRepository
+	c107300 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.AtribuirPerfilRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AtribuirPerfilRepository.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> AtribuirPerfilRepository </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + AtribuirPerfilRepository() </td></tr>
+<tr><td align="left" balign="left"> + findAllByFilterParameters(cpfUsuario : String, nomeCompletoUsuario : String, codigoTipoUsuario : Integer, codigoPerfil : Long, codigoUnidadeOrganizacional : Long, codigoPostoTrabalho : Integer) : Collection&lt;UsuarioSistema&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./AtribuirPerfilRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.persistence.repository.AplicacaoModuloRepository
+	c107301 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.AplicacaoModuloRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AplicacaoModuloRepository.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AplicacaoModuloRepository </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + AplicacaoModuloRepository() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./AplicacaoModuloRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 }

@@ -4,17 +4,16 @@ import br.gov.to.sefaz.arr.parametros.business.service.ConveniosArrecService;
 import br.gov.to.sefaz.arr.parametros.business.service.ConveniosReceitasService;
 import br.gov.to.sefaz.arr.parametros.business.service.ConveniosTarifasService;
 import br.gov.to.sefaz.arr.parametros.business.service.filter.ConveniosArrecFilter;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.ConveniosArrec;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.ConveniosReceitas;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.ConveniosArrecRepository;
+import br.gov.to.sefaz.arr.persistence.entity.BancoAgencias;
+import br.gov.to.sefaz.arr.persistence.entity.ConveniosArrec;
+import br.gov.to.sefaz.arr.persistence.entity.ConveniosReceitas;
+import br.gov.to.sefaz.arr.persistence.enums.TipoConvenioEnum;
+import br.gov.to.sefaz.arr.persistence.repository.ConveniosArrecRepository;
 import br.gov.to.sefaz.business.service.impl.DefaultCrudService;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.ValidationSuite;
 import br.gov.to.sefaz.persistence.enums.SituacaoEnum;
-import br.gov.to.sefaz.persistence.predicate.AndPredicateBuilder;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -24,7 +23,7 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * Implementação do serviço da entidade {@link br.gov.to.sefaz.arr.parametros.persistence.entity.ConveniosArrec}.
+ * Implementação do serviço da entidade {@link br.gov.to.sefaz.arr.persistence.entity.ConveniosArrec}.
  *
  * @author <a href="mailto:gabriel.santos@ntconsult.com.br">gabriel.santos</a>
  * @since 05/05/2016 18:17:29
@@ -41,7 +40,7 @@ public class ConveniosArrecServiceImpl extends DefaultCrudService<ConveniosArrec
     public ConveniosArrecServiceImpl(
             ConveniosArrecRepository repository,
             ConveniosTarifasService conveniosTarifasService, ConveniosReceitasService receitasService) {
-        super(repository, new Sort(new Sort.Order(Sort.Direction.ASC, "idConvenio")));
+        super(repository);
         this.conveniosTarifasService = conveniosTarifasService;
         this.receitasService = receitasService;
     }
@@ -94,17 +93,41 @@ public class ConveniosArrecServiceImpl extends DefaultCrudService<ConveniosArrec
 
     @Override
     public List<ConveniosArrec> find(ConveniosArrecFilter filter) {
-        return getRepository().findAll((root, query, cb) -> new AndPredicateBuilder(root, cb)
-                .like("idConvenio", filter.getIdConvenio())
-                .like("descricaoConvenio", filter.getDescricaoConvenio())
-                .equalsTo("idBanco", filter.getIdBanco())
-                .equalsTo("tipoConvenio", filter.getTipoConvenio())
-                .equalsTo("tipoBarra", filter.getTipoBarra())
-                .build(), getDefaultSort());
+        return getRepository().find(sb -> sb.where()
+                .opt().equal("idConvenio", filter.getIdConvenio())
+                .and().opt().like("descricaoConvenio", filter.getDescricaoConvenio())
+                .and().opt().equal("idBanco", filter.getIdBanco())
+                .and().opt().equal("tipoConvenio", filter.getTipoConvenio())
+                .and().opt().equal("tipoBarra", filter.getTipoBarra()));
+    }
+
+    @Override
+    public ConveniosArrec findByBancoAgencias(BancoAgencias bancoAgencias) {
+        return getRepository().findOne(select -> select
+                .where()
+                .equal("idAgencia", bancoAgencias.getIdAgencia()));
+    }
+
+    @Override
+    public List<ConveniosArrec> findByBancoCnpjAndTipoConvenio(Integer cnpjRaiz, TipoConvenioEnum tipoConvenio) {
+        return getRepository().find("ca", sb -> sb
+                .innerJoinFetch("ca.bancoAgencias", "ba")
+                .innerJoinFetch("ba.bancos", "b")
+                .where()
+                .equal("b.cnpjRaiz", cnpjRaiz)
+                .and().equal("ca.tipoConvenio", tipoConvenio));
+    }
+
+    @Override
+    public ConveniosArrec findByBancoAndTipoConvenio(Integer bancoId, TipoConvenioEnum tipoConvenioEnum) {
+        return getRepository().findOne(sb -> sb
+                .where()
+                .equal("idBanco", bancoId)
+                .and().equal("tipoConvenio", tipoConvenioEnum));
     }
 
     private void saveAllConveniosTarifas(ConveniosArrec entity) {
-        entity.getConveniosTarifas().stream()
+        entity.getConveniosTarifas()
                 .forEach(conveniosTarifas -> conveniosTarifas.setIdConveniosArrec(entity.getIdConvenio()));
 
         conveniosTarifasService.deleteAllByIdConvenio(entity.getIdConvenio());
@@ -113,7 +136,7 @@ public class ConveniosArrecServiceImpl extends DefaultCrudService<ConveniosArrec
 
     private void saveAllConveniosReceitas(ConveniosArrec entity) {
         Collection<ConveniosReceitas> conveniosReceitas = new ArrayList<>();
-        entity.getReceitas().stream().forEach(receitas -> conveniosReceitas
+        entity.getReceitas().forEach(receitas -> conveniosReceitas
                 .add(new ConveniosReceitas(receitas.getIdReceita(), entity.getIdConvenio())));
 
         receitasService.deleteAllByIdConvenio(entity.getIdConvenio());

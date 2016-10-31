@@ -1,20 +1,19 @@
 package br.gov.to.sefaz.arr.parametros.business.service.impl;
 
 import br.gov.to.sefaz.arr.parametros.business.service.BancoAgenciasService;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgencias;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgenciasPK;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.BancoAgenciasRepository;
+import br.gov.to.sefaz.arr.persistence.entity.BancoAgencias;
+import br.gov.to.sefaz.arr.persistence.entity.BancoAgenciasPK;
+import br.gov.to.sefaz.arr.persistence.repository.BancoAgenciasRepository;
 import br.gov.to.sefaz.business.service.impl.DefaultCrudService;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.ValidationSuite;
 import br.gov.to.sefaz.persistence.enums.SituacaoEnum;
-import br.gov.to.sefaz.persistence.predicate.AndPredicateBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -30,8 +29,7 @@ public class BancoAgenciasServiceImpl extends DefaultCrudService<BancoAgencias, 
     @Autowired
     public BancoAgenciasServiceImpl(
             BancoAgenciasRepository repository) {
-        super(repository, new Sort(new Sort.Order(Sort.Direction.ASC, "idBanco"),
-                new Sort.Order(Sort.Direction.ASC, "idAgencia")));
+        super(repository);
     }
 
     @Override
@@ -41,10 +39,18 @@ public class BancoAgenciasServiceImpl extends DefaultCrudService<BancoAgencias, 
 
     @Override
     public Collection<BancoAgencias> findByIdBanco(Integer idBanco) {
-        return getRepository().findAll((root, query, cb) -> new AndPredicateBuilder(root, cb)
-                .equalsTo("idBanco", idBanco)
-                .fetch("bancos")
-                .build());
+        return getRepository().find("ba", sb -> sb.innerJoinFetch("ba.bancos").where().equal("ba.idBanco", idBanco));
+    }
+
+    @Override
+    public List<BancoAgencias> findByCtaBanco(Integer cnpjAgenteBancarioCreditado, Integer agencia) {
+        return getRepository().find("ba", sb -> sb
+                .innerJoinFetch("ba.bancos", "b")
+                .where()
+                .equal("b.cnpjRaiz", cnpjAgenteBancarioCreditado)
+                .and().equal("ba.idAgencia", agencia)
+                .and().equal("b.situacao", SituacaoEnum.ATIVO)
+                .and().equal("ba.situacao", SituacaoEnum.ATIVO));
     }
 
     @Override
@@ -69,7 +75,7 @@ public class BancoAgenciasServiceImpl extends DefaultCrudService<BancoAgencias, 
 
     @Override
     @Transactional
-    public Optional<BancoAgencias> delete(@ValidationSuite BancoAgenciasPK id) {
+    public Optional<BancoAgencias> delete(BancoAgenciasPK id) {
         Optional<BancoAgencias> bancoAgencias;
 
         if (getRepository().existsLockReference(id.getIdBanco(), id.getIdAgencia())) {
@@ -85,10 +91,9 @@ public class BancoAgenciasServiceImpl extends DefaultCrudService<BancoAgencias, 
 
     @Override
     public Collection<BancoAgencias> getAllActiveBancoAgenciasFromIdBanco(Integer idBanco) {
-        return getRepository().findAll((root, query, cb) -> new AndPredicateBuilder(root, cb)
-                .equalsTo("situacao", SituacaoEnum.ATIVO)
-                .equalsTo("idBanco", idBanco)
-                .build(), getDefaultSort());
+        return getRepository().find(sb -> sb.where()
+                .equal("situacao", SituacaoEnum.ATIVO)
+                .and().equal("idBanco", idBanco));
     }
 
 }

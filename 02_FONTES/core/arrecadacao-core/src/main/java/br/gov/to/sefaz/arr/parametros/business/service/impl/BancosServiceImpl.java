@@ -1,20 +1,19 @@
 package br.gov.to.sefaz.arr.parametros.business.service.impl;
 
 import br.gov.to.sefaz.arr.parametros.business.service.BancosService;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.Bancos;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.BancosRepository;
+import br.gov.to.sefaz.arr.persistence.entity.Bancos;
+import br.gov.to.sefaz.arr.persistence.repository.BancoAgenciasRepository;
+import br.gov.to.sefaz.arr.persistence.repository.BancosRepository;
 import br.gov.to.sefaz.business.service.impl.DefaultCrudService;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.ValidationSuite;
 import br.gov.to.sefaz.persistence.enums.SituacaoEnum;
-import br.gov.to.sefaz.persistence.predicate.AndPredicateBuilder;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
 
 /**
@@ -26,10 +25,12 @@ import java.util.Optional;
 @Service
 public class BancosServiceImpl extends DefaultCrudService<Bancos, Integer> implements BancosService {
 
+    private final BancoAgenciasRepository agenciasRepository;
+
     @Autowired
-    public BancosServiceImpl(
-            BancosRepository repository) {
-        super(repository, new Sort(new Sort.Order(Sort.Direction.ASC, "idBanco")));
+    public BancosServiceImpl(BancosRepository repository, BancoAgenciasRepository agenciasRepository) {
+        super(repository);
+        this.agenciasRepository = agenciasRepository;
     }
 
     @Override
@@ -49,11 +50,11 @@ public class BancosServiceImpl extends DefaultCrudService<Bancos, Integer> imple
 
     @Override
     @Transactional
-    public Optional<Bancos> delete(@ValidationSuite Integer id) {
+    public Optional<Bancos> delete(Integer id) {
         Optional<Bancos> banco;
 
         if (getRepository().existsLockReference(id)) {
-            getRepository().updateSituacaoAgencias(id, SituacaoEnum.CANCELADO);
+            agenciasRepository.updateSituacaoByBanco(id, SituacaoEnum.CANCELADO);
             getRepository().updateSituacao(id, SituacaoEnum.CANCELADO);
             banco = Optional.of(getRepository().findOne(id));
         } else {
@@ -66,8 +67,13 @@ public class BancosServiceImpl extends DefaultCrudService<Bancos, Integer> imple
 
     @Override
     public Collection<Bancos> findAllActiveBancos() {
-        return getRepository().findAll((root, query, cb) -> new AndPredicateBuilder(root, cb)
-                .equalsTo("situacao", SituacaoEnum.ATIVO)
-                .build(), getDefaultSort());
+        return getRepository().find(sb -> sb.where().equal("situacao", SituacaoEnum.ATIVO).orderById());
+    }
+
+    @Override
+    public List<Bancos> findByCpjRaiz(Integer cnpjAgenteBancarioDebidato) {
+        return getRepository().find(sb -> sb
+                .where().equal("situacao", SituacaoEnum.ATIVO)
+                .and().equal("cnpjRaiz", cnpjAgenteBancarioDebidato));
     }
 }

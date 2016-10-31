@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.gestao.service.validator.PostoTrabalhoFuncionarioAssignedValidator
-	c10876 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.PostoTrabalhoFuncionarioAssignedValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./PostoTrabalhoFuncionarioAssignedValidator.html">
+	c38992 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.validator.PostoTrabalhoFuncionarioAssignedValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./PostoTrabalhoFuncionarioAssignedValidator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PostoTrabalhoFuncionarioAssignedValidator </td></tr>
 		</table></td></tr>
@@ -18,15 +18,15 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + PostoTrabalhoFuncionarioAssignedValidator(postoTrabalhoRepository : PostoTrabalhoRepository) </td></tr>
+<tr><td align="left" balign="left"> + PostoTrabalhoFuncionarioAssignedValidator(usuarioPostoTrabalhoRepository : UsuarioPostoTrabalhoRepository) </td></tr>
 <tr><td align="left" balign="left"> + support(clazz : Class&lt;?&gt;, context : String) : boolean </td></tr>
-<tr><td align="left" balign="left"> + validate(target : Long) : Set&lt;CustomViolation&gt; </td></tr>
+<tr><td align="left" balign="left"> + validate(target : Integer) : Set&lt;CustomViolation&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./PostoTrabalhoFuncionarioAssignedValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.business.gestao.service.validator.PostoTrabalhoFuncionarioAssignedValidator implements br.gov.to.sefaz.business.service.validation.ServiceValidator<T>
-	c10939:p -> c10876:p [dir=back,arrowtail=empty,style=dashed];
+	c39079:p -> c38992:p [dir=back,arrowtail=empty,style=dashed];
 	// br.gov.to.sefaz.business.service.validation.ServiceValidator<T>
-	c10939 [label=<<table title="br.gov.to.sefaz.business.service.validation.ServiceValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/service/validation/ServiceValidator.html">
+	c39079 [label=<<table title="br.gov.to.sefaz.business.service.validation.ServiceValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/service/validation/ServiceValidator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ServiceValidator&lt;T&gt; </td></tr>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" id="1" x="48" y="24" width="657" height="529" text="PARAMETRIZAÇÃO DOS GRUPOS DE CNAE's&#xA;http://..." measuredWidth="657" measuredHeight="529">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="32" x="142" y="82" text="Descrição do Grupo" measuredWidth="119" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="33" x="142" y="104" width="178" measuredWidth="178" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="34" x="328" y="104" width="236" measuredWidth="236" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="35" x="328" y="82" text="CNAE's" measuredWidth="49" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="40" x="58" y="82" text="Código" measuredWidth="47" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="41" x="58" y="104" width="79" measuredWidth="79" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="42" x="583" y="104" width="103" height="23" text="&amp;Pesquisar" measuredWidth="103" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="43" x="58" y="154" width="591" height="85" text="Código {neutral},Descrição Grupo CNAE {neutral},Situação {neutral}, &#xA;1,Agricultura,ATIVO,{selected} {trash}&#xA;2,Pecuária,ATIVO,{unselected}{trash}&#xA;&#xA;&#xA;" measuredWidth="591" measuredHeight="85" verticalScrollbar="true" alternative="#eeeeee">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="46" x="58" y="132" text="Lista de Gupos" measuredWidth="91" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="47" x="58" y="271" width="628" height="72" text="Código {neutral},Descrição CNAE {neutral},&#xA;1311-1,PREPARAÇÃO E FIAÇÃO DE FIBRAS DE ALGODÃO,{trash}&#xA;2833-0,FABRICAÇÃO DE MÁQUINAS E EQUIPAMENTOS PARA A AGRICULTURA E PECUÁRIA,{trash}&#xA;&#xA;&#xA;" measuredWidth="628" measuredHeight="72" verticalScrollbar="true" alternative="#eeeeee">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="48" x="58" y="249" text="Lista de CNAE's do Grupo Selecionado" measuredWidth="225" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="49" x="142" y="370" text="Descrição do Grupo *" measuredWidth="129" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="50" x="142" y="392" width="299" measuredWidth="299" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="51" x="58" y="438" width="236" text="2829-1 Máquinas Automáticas" measuredWidth="236" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="52" x="58" y="416" text="CNAE's *" measuredWidth="58" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="53" x="58" y="370" text="Código *" measuredWidth="56" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="54" x="58" y="392" width="79" measuredWidth="79" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="55" x="313" y="438" width="103" height="23" text="&amp;Adicionar" measuredWidth="103" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="56" x="58" y="470" width="358" height="73" text="Código,Descrição CNAE,Excluir&#xA;2829-1,Máquinas Automáticas,{trash}&#xA;&#xA;" measuredWidth="358" measuredHeight="73" verticalScrollbar="true" alternative="#eeeeee">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="57" x="583" y="520" width="103" height="23" text="&amp;Salvar" measuredWidth="103" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="58" x="472" y="520" width="103" height="23" text="&amp;Novo Grupo" measuredWidth="103" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="59" x="450" y="392" width="236" text="1 - ATIVO" measuredWidth="236" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="60" x="450" y="370" text="Situação do Grupo *" measuredWidth="121" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="77" x="304" y="240" measuredWidth="267" measuredHeight="23">
+    <widgets xsi:type="model:TextField" id="62" x="58" width="17" text="1" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="63" x="79" width="18" text="2" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="64" x="99" width="18" text="3" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="65" x="118" width="17" text="4" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="66" x="137" width="20" text="5" measuredWidth="20" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="67" x="160" text="Próximo" measuredWidth="57" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="75" width="56" text="Anterior" measuredWidth="56" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Spinner" id="76" x="226" text="10" measuredWidth="41" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="78" x="304" y="342" measuredWidth="267" measuredHeight="23">
+    <widgets xsi:type="model:TextField" id="79" x="58" width="17" text="1" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="80" x="79" width="18" text="2" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="81" x="99" width="18" text="3" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="82" x="118" width="17" text="4" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="83" x="137" width="20" text="5" measuredWidth="20" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="84" x="160" text="Próximo" measuredWidth="57" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="85" width="56" text="Anterior" measuredWidth="56" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Spinner" id="86" x="226" text="10" measuredWidth="41" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

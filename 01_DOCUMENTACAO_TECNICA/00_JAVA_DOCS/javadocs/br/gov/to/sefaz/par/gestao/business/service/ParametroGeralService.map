@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../../../business/service/CrudService.html" title="br.gov.to.sefaz.business.service.CrudService" alt="" coords="235,11,519,225"/>
+<area shape="rect" id="node1" href="../../../../business/service/CrudService.html" title="&lt;TABLE&gt;" alt="" coords="224,5,529,231"/>
+<area shape="rect" id="node2_1" href="./ParametroGeralService.html" title="br.gov.to.sefaz.par.gestao.business.service.ParametroGeralService" alt="" coords="16,284,737,429"/>
+<area shape="rect" id="node2" href="./ParametroGeralService.html" title="&lt;TABLE&gt;" alt="" coords="5,279,748,435"/>
+<area shape="rect" id="node3_2" href="./impl/ParametroGeralServiceImpl.html" title="br.gov.to.sefaz.par.gestao.business.service.impl.ParametroGeralServiceImpl" alt="" coords="17,488,737,755"/>
+<area shape="rect" id="node3" href="./impl/ParametroGeralServiceImpl.html" title="&lt;TABLE&gt;" alt="" coords="6,483,747,760"/>
+</map>

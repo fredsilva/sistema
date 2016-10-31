@@ -10,14 +10,14 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.exception.HandledSystemException
-	c83273 [label=<<table title="br.gov.to.sefaz.exception.HandledSystemException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../exception/HandledSystemException.html">
+	c351326 [label=<<table title="br.gov.to.sefaz.exception.HandledSystemException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../exception/HandledSystemException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> HandledSystemException </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../exception/HandledSystemException.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.business.service.validation.CustomValidationException
-	c83324 [label=<<table title="br.gov.to.sefaz.business.service.validation.CustomValidationException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CustomValidationException.html">
+	c351481 [label=<<table title="br.gov.to.sefaz.business.service.validation.CustomValidationException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CustomValidationException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CustomValidationException </td></tr>
 		</table></td></tr>
@@ -30,11 +30,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./CustomValidationException.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.business.service.validation.CustomValidationException extends javax.validation.ValidationException
-	c83698:p -> c83324:p [dir=back,arrowtail=empty];
+	c352198:p -> c351481:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.business.service.validation.CustomValidationException implements br.gov.to.sefaz.exception.HandledSystemException
-	c83273:p -> c83324:p [dir=back,arrowtail=empty,style=dashed];
+	c351326:p -> c351481:p [dir=back,arrowtail=empty,style=dashed];
 	// javax.validation.ValidationException
-	c83698 [label=<<table title="javax.validation.ValidationException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/javax/validation/ValidationException.html">
+	c352198 [label=<<table title="javax.validation.ValidationException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/javax/validation/ValidationException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ValidationException </td></tr>
 		</table></td></tr>

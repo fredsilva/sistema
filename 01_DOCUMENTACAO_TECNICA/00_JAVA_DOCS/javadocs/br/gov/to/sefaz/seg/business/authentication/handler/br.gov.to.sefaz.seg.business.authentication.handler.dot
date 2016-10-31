@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.authentication.handler.LdapHandler
-	c14670 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.handler.LdapHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LdapHandler.html">
+	c81675 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.handler.LdapHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LdapHandler.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LdapHandler </td></tr>
 		</table></td></tr>
@@ -24,7 +24,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./LdapHandler.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.authentication.handler.LdapHandler.LdapProperties
-	c14671 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.handler.LdapHandler.LdapProperties" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LdapHandler.LdapProperties.html">
+	c81676 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.handler.LdapHandler.LdapProperties" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LdapHandler.LdapProperties.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LdapProperties </td></tr>
 		</table></td></tr>
@@ -41,6 +41,8 @@ digraph G {
 <tr><td align="left" balign="left"> + setDomain(domain : String) </td></tr>
 <tr><td align="left" balign="left"> + getBaseDomain() : String </td></tr>
 <tr><td align="left" balign="left"> + setBaseDomain(baseDomain : String) </td></tr>
+<tr><td align="left" balign="left"> + getBaseFilter() : String </td></tr>
+<tr><td align="left" balign="left"> + setBaseFilter(baseFilter : String) </td></tr>
 <tr><td align="left" balign="left"> + getUserManager() : String </td></tr>
 <tr><td align="left" balign="left"> + setUserManager(userManager : String) </td></tr>
 <tr><td align="left" balign="left"> + getPasswdManager() : String </td></tr>
@@ -50,7 +52,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./LdapHandler.LdapProperties.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.authentication.handler.AuthenticatedUserHandler
-	c14672 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.handler.AuthenticatedUserHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AuthenticatedUserHandler.html">
+	c81677 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.handler.AuthenticatedUserHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AuthenticatedUserHandler.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AuthenticatedUserHandler </td></tr>
 		</table></td></tr>
@@ -60,13 +62,16 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + AuthenticatedUserHandler() </td></tr>
 <tr><td align="left" balign="left"> + isAuthenticated() : boolean </td></tr>
+<tr><td align="left" balign="left"> + isAuthenticatedByCert() : boolean </td></tr>
 <tr><td align="left" balign="left"> + getUsuarioSistema() : UsuarioSistema </td></tr>
 <tr><td align="left" balign="left"> + getCpf() : String </td></tr>
 <tr><td align="left" balign="left"> + getNome() : String </td></tr>
-<tr><td align="left" balign="left"> + getAuthorities() : Collection&lt;?&gt; </td></tr>
+<tr><td align="left" balign="left"> + getUserRoles() : Collection&lt;String&gt; </td></tr>
 <tr><td align="left" balign="left"> + setActiveRoleGroup(type : RoleGroupType, id : Long) </td></tr>
 <tr><td align="left" balign="left"> + getGroupsByType(type : RoleGroupType) : List&lt;RoleGroupKey&gt; </td></tr>
 <tr><td align="left" balign="left"> + getActiveGroup() : Optional&lt;RoleGroupKey&gt; </td></tr>
+<tr><td align="left" balign="left"> + invalidateSession() </td></tr>
+<tr><td align="left" balign="left"> + getRolesByType(type : RoleGroupType) : Set&lt;String&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./AuthenticatedUserHandler.html", fontname="arial", fontcolor="black", fontsize=10.0];
 }

@@ -1,6 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="../../../../business/service/CrudService.html" title="br.gov.to.sefaz.business.service.CrudService" alt="" coords="62,11,334,225"/>
-<area shape="rect" id="node1" href="../../../../business/service/CrudService.html" title="&lt;TABLE&gt;" alt="" coords="51,5,345,231"/>
+<area shape="rect" id="node1_0" href="../../../../business/service/CrudService.html" title="br.gov.to.sefaz.business.service.CrudService" alt="" coords="56,11,340,225"/>
+<area shape="rect" id="node1" href="../../../../business/service/CrudService.html" title="&lt;TABLE&gt;" alt="" coords="45,5,351,231"/>
 <area shape="rect" id="node2_1" href="./DelegaciasService.html" title="br.gov.to.sefaz.arr.parametros.business.service.DelegaciasService" alt="" coords="135,284,261,327"/>
 <area shape="rect" id="node2" href="./DelegaciasService.html" title="&lt;TABLE&gt;" alt="" coords="125,279,271,332"/>
 <area shape="rect" id="node3_2" href="./impl/DelegaciasServiceImpl.html" title="br.gov.to.sefaz.arr.parametros.business.service.impl.DelegaciasServiceImpl" alt="" coords="16,385,380,461"/>

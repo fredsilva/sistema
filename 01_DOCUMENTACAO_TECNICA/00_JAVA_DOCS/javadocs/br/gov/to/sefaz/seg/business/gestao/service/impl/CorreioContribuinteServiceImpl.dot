@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.service.impl.DefaultCrudService<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c78157 [label=<<table title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/service/impl/DefaultCrudService.html">
+	c340073 [label=<<table title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/service/impl/DefaultCrudService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultCrudService&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
 		</table></td></tr>
@@ -18,27 +18,33 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + DefaultCrudService(repository : BaseRepository&lt;E, I&gt;, sort : Sort) </td></tr>
+<tr><td align="left" balign="left"> + DefaultCrudService(repository : BaseRepository&lt;E, I&gt;) </td></tr>
 <tr><td align="left" balign="left"> + findOne(id : I) : E </td></tr>
 <tr><td align="left" balign="left"> + findAll() : Collection&lt;E&gt; </td></tr>
-<tr><td align="left" balign="left"> + findAll(list : Iterable&lt;I&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + save(entity : E) : E </td></tr>
 <tr><td align="left" balign="left"> + save(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + update(entity : E) : E </td></tr>
+<tr><td align="left" balign="left"> + update(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + delete(id : I) : Optional&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + delete(ids : Iterable&lt;I&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getDefaultSort() : Sort </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../../../business/service/impl/DefaultCrudService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.CorreioContribuinteService
-	c78226 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.CorreioContribuinteService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../CorreioContribuinteService.html">
+	c340213 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.CorreioContribuinteService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../CorreioContribuinteService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CorreioContribuinteService </td></tr>
 		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findLastSentEmailsForUser(usuarioSistema : UsuarioSistema) : List&lt;CorreioContribuinte&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + getMessagePreviewLength() : int </font></td></tr>
+		</table></td></tr>
 		</table>>, URL="../CorreioContribuinteService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.impl.CorreioContribuinteServiceImpl
-	c78237 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.CorreioContribuinteServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CorreioContribuinteServiceImpl.html">
+	c340248 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.CorreioContribuinteServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CorreioContribuinteServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CorreioContribuinteServiceImpl </td></tr>
 		</table></td></tr>
@@ -47,11 +53,13 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + CorreioContribuinteServiceImpl(repository : CorreioContribuinteRepository) </td></tr>
+<tr><td align="left" balign="left"> + findLastSentEmailsForUser(usuarioSistema : UsuarioSistema) : List&lt;CorreioContribuinte&gt; </td></tr>
+<tr><td align="left" balign="left"> + getMessagePreviewLength() : int </td></tr>
 		</table></td></tr>
 		</table>>, URL="./CorreioContribuinteServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.business.gestao.service.impl.CorreioContribuinteServiceImpl extends br.gov.to.sefaz.business.service.impl.DefaultCrudService<br.gov.to.sefaz.seg.persistence.entity.CorreioContribuinte, java.lang.Long>
-	c78157:p -> c78237:p [dir=back,arrowtail=empty];
+	c340073:p -> c340248:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.business.gestao.service.impl.CorreioContribuinteServiceImpl implements br.gov.to.sefaz.seg.business.gestao.service.CorreioContribuinteService
-	c78226:p -> c78237:p [dir=back,arrowtail=empty,style=dashed];
+	c340213:p -> c340248:p [dir=back,arrowtail=empty,style=dashed];
 }
 

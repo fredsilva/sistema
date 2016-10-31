@@ -1,7 +1,7 @@
 package br.gov.to.sefaz.arr.parametros.business.service.validator;
 
-import br.gov.to.sefaz.arr.parametros.persistence.entity.TipoGruposCnaes;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.TipoGruposCnaesRepository;
+import br.gov.to.sefaz.arr.persistence.entity.TipoGruposCnaes;
+import br.gov.to.sefaz.arr.persistence.repository.TipoGruposCnaesRepository;
 import br.gov.to.sefaz.business.service.validation.ServiceValidator;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.violation.CustomViolation;

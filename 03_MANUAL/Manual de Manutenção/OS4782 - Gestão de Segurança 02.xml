@@ -1,0 +1,91 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
+<siteinfo>
+<sitename>SEFAZ-TO Wiki</sitename>
+<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<generator>JAMWiki 1.3.2</generator>
+<case>case-sensitive</case>
+<namespaces>
+<namespace key="-2">Media</namespace>
+<namespace key="-1">Special</namespace>
+<namespace key="0" />
+<namespace key="1">Comments</namespace>
+<namespace key="2">User</namespace>
+<namespace key="3">User comments</namespace>
+<namespace key="4">Project</namespace>
+<namespace key="5">Project comments</namespace>
+<namespace key="6">File</namespace>
+<namespace key="7">File comments</namespace>
+<namespace key="8">JAMWiki</namespace>
+<namespace key="9">JAMWiki comments</namespace>
+<namespace key="10">Template</namespace>
+<namespace key="11">Template comments</namespace>
+<namespace key="12">Help</namespace>
+<namespace key="13">Help comments</namespace>
+<namespace key="14">Category</namespace>
+<namespace key="15">Category comments</namespace>
+</namespaces>
+</siteinfo>
+<page>
+<title>OS4782 - Gest��o de Seguran��a 02</title>
+<ns>0</ns>
+<id>495</id>
+<revision>
+<id>1278</id>
+<timestamp>2016-10-13T16:35:35Z</timestamp>
+<contributor>
+<username>admin</username>
+<id>1</id>
+</contributor>
+<comment />
+<text xml:space="preserve" bytes="2186">=Aplica����o dos Scripts no Banco de dados=
+
+&apos;&apos;&apos;Para atender as necessidades dos Casos de Uso desenvolvidos na OS4782 �� necess��rio a aplica����o dos scripts de banco de dados:&apos;&apos;&apos;
+
+=== Scripts das OSs anteriores ===
+�� necess��rio que os scripts das OSs anteriores, caso ainda n��o foram, sejam aplicados na base de dados:
+:*OS4721 no reposit��rio git -&gt; 01_DOCUMENTACAO_TECNICA/00_DICIONARIO_DADOS/OS4721/
+:*OS4757 no reposit��rio git -&gt; 01_DOCUMENTACAO_TECNICA/00_DICIONARIO_DADOS/OS4757/
+:*OS4776 no reposit��rio git -&gt; 01_DOCUMENTACAO_TECNICA/00_DICIONARIO_DADOS/OS4776/
+:*OS4777 no reposit��rio git -&gt; 01_DOCUMENTACAO_TECNICA/00_DICIONARIO_DADOS/OS4777/
+
+=== Scripts das OS 4782 ===
+:*OS4782 no reposit��rio git -&gt; 01_DOCUMENTACAO_TECNICA/00_DICIONARIO_DADOS/OS4782/
+
+
+= Modifica����es Realizadas na Instala����o do Ambiente =
+
+N��o foram realizadas modifica����es no [[Instala����o do Ambiente do Sistema|Manual de Instala����o do Sistema Windows]] ou [[Instala����o do Ambiente do Sistema Linux|Manual de Instala����o do Sistema Linux]]
+
+= Casos de uso =
+
+Os detalhes de cada Classe e M��todo utilizado se encontram no JavaDoc do Sistema e no Diagrama de Classes.
+
+{|cellpadding=&quot;5&quot; cellspacing=&quot;0&quot; border=&quot;1&quot;
+! Caso de Uso
+! Nome do caso de uso
+! URL
+|-
+| SEGUC0410 || Manter Cadastro de Sistemas || /protected/views/seg/gestao/manutencao-cadastro-sistema.xhtml
+|-
+| SEGUC0420 || Manter Cadastro de Funcionalidades de um Sistema || /protected/views/seg/gestao/manutencao-cadastro-funcionalidade.xhtml
+|-
+| SEGUC0430 || Manter Papeis de um Sistema || /protected/views/seg/gestao/manter-papel-sistema.xhtml
+|-
+| SEGUC0440 || Manter Cadastro de Perfis de um Sistema || /protected/views/seg/gestao/manter-perfil-sistema.xhtml
+|-
+| SEGUC0450 || Atribuir Perfis a Usu��rios || /protected/views/seg/gestao/atribuir-perfil-usuario.xhtml
+|-
+| SEGUC0460 || Manter Procura����o e Retirar Op����es do Sistema || /protected/views/seg/gestao/manter-procuracao.xhtml
+|-
+| SEGUC0470 || Selecionar Contribuinte Procurador || N/A
+|-
+| SEGUC0480 || Solicitar para Atuar como Usu��rio Principal de uma Empresa || /protected/views/seg/gestao/atuar-usuario-principal.xhtml
+|}
+
+
+&lt;/br&gt;
+----
+[[Manual para Manuten����o do Sistema | Voltar]]</text>
+</revision>
+</page>
+</mediawiki>

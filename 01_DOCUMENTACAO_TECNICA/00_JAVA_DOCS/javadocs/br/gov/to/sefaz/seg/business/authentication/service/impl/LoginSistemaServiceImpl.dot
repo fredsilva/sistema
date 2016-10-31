@@ -10,22 +10,22 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.authentication.service.impl.LoginSistemaServiceImpl
-	c111251 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.service.impl.LoginSistemaServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./LoginSistemaServiceImpl.html">
+	c503098 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.service.impl.LoginSistemaServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./LoginSistemaServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LoginSistemaServiceImpl </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
+<tr><td align="left" balign="left"> + RESET_PASSWORD_CONTEXT : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + LoginSistemaServiceImpl(usuarioSistemaService : UsuarioSistemaService, ldapProvider : LdapProvider, mailSenderService : MailSenderService, triesService : WrongPasswordTriesService, historicoLoginSistemaService : HistoricoLoginSistemaService, authenticationFactory : AuthenticationFactory) </td></tr>
+<tr><td align="left" balign="left"> + LoginSistemaServiceImpl(usuarioSistemaService : UsuarioSistemaService, ldapProvider : LdapProvider, triesService : WrongPasswordTriesService, historicoLoginSistemaService : HistoricoLoginSistemaService, authenticationFactory : AuthenticationFactory) </td></tr>
 <tr><td align="left" balign="left"> + authenticate(dto : LoginDto) : UsuarioSistemaAuthentication </td></tr>
 <tr><td align="left" balign="left"> + certAuthenticate(username : String) : UsuarioSistemaAuthentication </td></tr>
 <tr><td align="left" balign="left"> + resetPassword(dto : ResetPasswordDto) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./LoginSistemaServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.authentication.service.LoginSistemaService
-	c111254 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.service.LoginSistemaService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../LoginSistemaService.html">
+	c503102 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.service.LoginSistemaService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../LoginSistemaService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> LoginSistemaService </td></tr>
@@ -40,6 +40,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../LoginSistemaService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.business.authentication.service.impl.LoginSistemaServiceImpl implements br.gov.to.sefaz.seg.business.authentication.service.LoginSistemaService
-	c111254:p -> c111251:p [dir=back,arrowtail=empty,style=dashed];
+	c503102:p -> c503098:p [dir=back,arrowtail=empty,style=dashed];
 }
 

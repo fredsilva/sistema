@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.filter.DetalheNavegacaoRequestBuilder
-	c194 [label=<<table title="br.gov.to.sefaz.seg.filter.DetalheNavegacaoRequestBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DetalheNavegacaoRequestBuilder.html">
+	c777 [label=<<table title="br.gov.to.sefaz.seg.filter.DetalheNavegacaoRequestBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DetalheNavegacaoRequestBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DetalheNavegacaoRequestBuilder </td></tr>
 		</table></td></tr>
@@ -23,6 +23,7 @@ digraph G {
 <tr><td align="left" balign="left"> + withCpfUsuario(cpfUsuario : String) : DetalheNavegacaoRequestBuilder </td></tr>
 <tr><td align="left" balign="left"> + withDataOperacao(localDateTime : LocalDateTime) : DetalheNavegacaoRequestBuilder </td></tr>
 <tr><td align="left" balign="left"> + withElapsedTime(elapsedTime : long) : DetalheNavegacaoRequestBuilder </td></tr>
+<tr><td align="left" balign="left"> + withAtuacaoNomeDe(cpfCnpj : String) : DetalheNavegacaoRequestBuilder </td></tr>
 <tr><td align="left" balign="left"> + build() : DetalheNavegacao </td></tr>
 		</table></td></tr>
 		</table>>, URL="./DetalheNavegacaoRequestBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];

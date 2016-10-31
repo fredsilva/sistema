@@ -2,10 +2,10 @@ package br.gov.to.sefaz.seg.business.gestao.service.validator;
 
 import br.gov.to.sefaz.business.service.validation.ServiceValidator;
 import br.gov.to.sefaz.business.service.validation.violation.CustomViolation;
+import br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioSistemaServiceImpl;
 import br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema;
 import br.gov.to.sefaz.util.message.MessageUtil;
 import br.gov.to.sefaz.util.message.SourceBundle;
-
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
@@ -25,7 +25,7 @@ public class UsuarioSistemaCpfBloqueadoValidator implements ServiceValidator<Usu
 
     @Override
     public boolean support(Class<?> clazz, String context) {
-        return clazz.equals(UsuarioSistema.class) && ("LOGIN".equals(context));
+        return clazz.equals(UsuarioSistema.class) && (UsuarioSistemaServiceImpl.LOGIN_CONTEXT.equals(context));
     }
 
     @Override

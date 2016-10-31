@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:sat="http://sefaz.to.gov.br/composites">
+
+<ui:composition template="/protected/views/templates/views/default-template.xhtml">
+
+    <ui:param name="pageTitle" value="#{seg_msg['seg.consulta.consultaComunicacaoSistema.titulo']}"/>
+
+    <ui:define name="header">
+        <h:outputScript library="js" name="core/sat.date.js"/>
+        <h:outputScript library="js" name="seg/consulta/consulta-comunicacao-sistema.js"/>
+    </ui:define>
+
+    <ui:define name="content">
+        <sat:panel title="#{seg_msg['seg.consulta.consultaComunicacaoSistema.pesquisa.titulo']}">
+            <div class="col-md-12">
+                <h:form id="consulta-comunicacoes-sistema-filtro">
+                    <div class="form-group col-md-2">
+                        <h:outputLabel for="tipoMensagemFilter">
+                            #{seg_msg['seg.consulta.consultaComunicacaoSistema.pesquisa.tipoMensagem']}
+                        </h:outputLabel>
+                        <h:selectOneMenu value="#{consultaComunicacaoSistemaMB.filter.tipoComunicacao}"
+                                id="tipoMensagemFilter"
+                                styleClass="form-control">
+                            <f:selectItem value="#{null}" itemLabel="[Todos]"/>
+                            <f:selectItems value="#{consultaComunicacaoSistemaMB.allTiposComunicacao}"
+                                    var="tipoComunicacao"
+                                    itemValue="#{tipoComunicacao}"
+                                    itemLabel="#{tipoComunicacao.label}"/>
+                        </h:selectOneMenu>
+                    </div>
+
+                    <div class="form-group col-md-2">
+                        <h:outputLabel for="tipoPeriodoFilter">
+                            #{seg_msg['seg.consulta.consultaComunicacaoSistema.pesquisa.tipoPeriodo']}
+                        </h:outputLabel>
+                        <h:selectOneMenu value="#{consultaComunicacaoSistemaMB.filter.tipoPeriodo}"
+                                id="tipoPeriodoFilter"
+                                styleClass="form-control">
+                            <f:selectItems value="#{consultaComunicacaoSistemaMB.allTiposPeriodosFiltro}"
+                                    var="tipoPeriodo"
+                                    itemValue="#{tipoPeriodo}"
+                                    itemLabel="#{tipoPeriodo.label}"/>
+                        </h:selectOneMenu>
+                    </div>
+
+
+                    <div class="form-group col-md-3">
+                        <h:outputLabel for="dataInicialFilter">
+                            #{seg_msg['seg.consulta.consultaComunicacaoSistema.pesquisa.dataInicial']}
+                        </h:outputLabel>
+
+                        <div class='input-group'>
+                            <h:inputText id='dataInicialFilter'
+                                    value="#{consultaComunicacaoSistemaMB.filter.dataInicial}"
+                                    styleClass="form-control datepicker">
+                                <f:converter converterId="localDateFacesConverter"/>
+                            </h:inputText>
+                            <h:outputLabel for="dataInicialFilter"
+                                    class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"/>
+                            </h:outputLabel>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-md-3">
+                        <h:outputLabel for="dataFinalFilter">
+                            #{seg_msg['seg.consulta.consultaComunicacaoSistema.pesquisa.dataFinal']}
+                        </h:outputLabel>
+
+                        <div class='input-group'>
+                            <h:inputText id='dataFinalFilter'
+                                    value="#{consultaComunicacaoSistemaMB.filter.dataFinal}"
+                                    styleClass="form-control datepicker">
+                                <f:converter converterId="localDateFacesConverter"/>
+                            </h:inputText>
+                            <h:outputLabel for="dataFinalFilter"
+                                    class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"/>
+                            </h:outputLabel>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="form-group col-md-12 text-right">
+                            <h:commandButton type="button"
+                                    value="#{seg_msg['seg.consulta.consultaComunicacaoSistema.pesquisa.consultar']}"
+                                    styleClass="btn btn-primary"
+                                    action="#{consultaComunicacaoSistemaMB.search()}">
+                                <f:ajax render="consulta-comunicacoes-table" onevent="onSearchEvent"
+                                        execute="tipoMensagemFilter tipoPeriodoFilter dataInicialFilter dataFinalFilter"/>
+                            </h:commandButton>
+
+                            <sat:opcaoAjudaButton/>
+                        </div>
+                    </div>
+                    <h:outputScript>
+                        datePicker('.datepicker');
+                    </h:outputScript>
+                </h:form>
+            </div>
+
+            <sat:table id="consulta-comunicacoes-table"
+                    bundle="seg_msg"
+                    content="#{consultaComunicacaoSistemaMB.resultList}"
+                    actionsHeader="seg.consulta.consultaComunicacaoSistema.tabela.acoes"
+                    headers="seg.consulta.consultaComunicacaoSistema.tabela.tipoComunicacao,
+                             seg.consulta.consultaComunicacaoSistema.tabela.dataComunicacao,
+                             seg.consulta.consultaComunicacaoSistema.tabela.assunto,
+                             seg.consulta.consultaComunicacaoSistema.tabela.mensagem"
+
+                    fields="tipoComunicacao:string,
+                            dataHoraComunicacao:dateTimeSecs,
+                            assunto,
+                            conteudoAbreviado,
+                            conteudo:hide"
+                    hasActions="true"
+                    actionEvents="view-message:click:viewMessageDetail()"
+                    defaulSortColumn="1">
+
+                <f:facet name="actions">
+                    <a href="javascript:void(0);" class="view-message glyphicon glyphicon-eye-open"
+                            data-toggle="tooltip"
+                            title="Ver detalhe"/>
+                </f:facet>
+            </sat:table>
+
+
+            <div id="show-message-detail-modal" class="modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog modal-lg" >
+                    <div class="modal-content">
+                        <h:panelGroup id="show-message-detail-panel">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                    <span aria-hidden="true">&#xd7;</span>
+                                </button>
+                                <h4 class="modal-title" id="show-message-detail-modal-title">
+
+                                </h4>
+                            </div>
+                            <div class="modal-body" id="show-message-detail-modal-content">
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                    #{seg_msg['seg.consulta.consultaComunicacaoSistema.modal.fechar']}
+                                </button>
+                            </div>
+                        </h:panelGroup>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </sat:panel>
+    </ui:define>
+</ui:composition>
+</html>

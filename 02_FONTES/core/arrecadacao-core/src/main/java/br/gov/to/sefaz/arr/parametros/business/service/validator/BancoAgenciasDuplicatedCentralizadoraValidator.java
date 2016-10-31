@@ -1,8 +1,8 @@
 package br.gov.to.sefaz.arr.parametros.business.service.validator;
 
-import br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgencias;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.Bancos;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.BancoAgenciasRepository;
+import br.gov.to.sefaz.arr.persistence.entity.BancoAgencias;
+import br.gov.to.sefaz.arr.persistence.entity.Bancos;
+import br.gov.to.sefaz.arr.persistence.repository.BancoAgenciasRepository;
 import br.gov.to.sefaz.business.service.validation.ServiceValidator;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.violation.CustomViolation;
@@ -46,7 +46,8 @@ public class BancoAgenciasDuplicatedCentralizadoraValidator implements ServiceVa
         HashSet<CustomViolation> customViolations = new HashSet<>();
 
         if (target.getCentralizadora()
-                && repository.findExitsCentralizadoraAndIdBanco(target.getIdBanco(), Boolean.TRUE)) {
+                && repository.findExitsCentralizadoraAndIdBanco(target.getIdBanco(),
+                target.getIdAgencia(), Boolean.TRUE)) {
             String message = SourceBundle.getMessage(MessageUtil.ARR,
                     "parametros.bancoAgencias.centralizadora.ja.existe");
             customViolations.add(new CustomViolation(message));

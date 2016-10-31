@@ -1,10 +1,10 @@
 package br.gov.to.sefaz.arr.parametros.business.facade;
 
-import br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgencias;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgenciasPK;
+import br.gov.to.sefaz.arr.persistence.entity.BancoAgencias;
+import br.gov.to.sefaz.arr.persistence.entity.BancoAgenciasPK;
 import br.gov.to.sefaz.business.facade.CrudFacade;
-import br.gov.to.sefaz.cat.persistence.entity.Estado;
-import br.gov.to.sefaz.cat.persistence.entity.Municipio;
+import br.gov.to.sefaz.par.gestao.persistence.entity.Estado;
+import br.gov.to.sefaz.par.gestao.persistence.entity.Municipio;
 
 import java.util.Collection;
 
@@ -17,8 +17,8 @@ import java.util.Collection;
 public interface BancoAgenciasFacade extends CrudFacade<BancoAgencias, BancoAgenciasPK> {
 
     /**
-     * Retorna uma lista de {@link br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgencias} de um determinado
-     * {@link br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgencias#idBanco}.
+     * Retorna uma lista de {@link br.gov.to.sefaz.arr.persistence.entity.BancoAgencias} de um determinado
+     * {@link br.gov.to.sefaz.arr.persistence.entity.BancoAgencias#idBanco}.
      *
      * @param idBanco codigo do banco para realizar a consulta
      * @return uma lista com todas as agências que pertencem ao banco

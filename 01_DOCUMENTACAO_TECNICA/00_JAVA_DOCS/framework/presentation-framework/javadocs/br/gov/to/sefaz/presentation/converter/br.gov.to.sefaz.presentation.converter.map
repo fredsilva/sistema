@@ -1,10 +1,16 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./LocalDateFacesConverter.html" title="br.gov.to.sefaz.presentation.converter.LocalDateFacesConverter" alt="" coords="16,11,612,121"/>
-<area shape="rect" id="node1" href="./LocalDateFacesConverter.html" title="&lt;TABLE&gt;" alt="" coords="5,5,623,127"/>
-<area shape="rect" id="node2_1" href="./CpfFacesConverter.html" title="br.gov.to.sefaz.presentation.converter.CpfFacesConverter" alt="" coords="658,11,1237,121"/>
-<area shape="rect" id="node2" href="./CpfFacesConverter.html" title="&lt;TABLE&gt;" alt="" coords="647,5,1247,127"/>
-<area shape="rect" id="node3_2" href="./CnpjRaizFacesConverter.html" title="br.gov.to.sefaz.presentation.converter.CnpjRaizFacesConverter" alt="" coords="1282,11,1861,121"/>
-<area shape="rect" id="node3" href="./CnpjRaizFacesConverter.html" title="&lt;TABLE&gt;" alt="" coords="1271,5,1871,127"/>
-<area shape="rect" id="node4_3" href="./CnpjFacesConverter.html" title="br.gov.to.sefaz.presentation.converter.CnpjFacesConverter" alt="" coords="1906,11,2485,121"/>
-<area shape="rect" id="node4" href="./CnpjFacesConverter.html" title="&lt;TABLE&gt;" alt="" coords="1895,5,2495,127"/>
+<area shape="rect" id="node1_0" href="./LocalDateTimeFacesConverter.html" title="br.gov.to.sefaz.presentation.converter.LocalDateTimeFacesConverter" alt="" coords="16,11,612,121"/>
+<area shape="rect" id="node1" href="./LocalDateTimeFacesConverter.html" title="&lt;TABLE&gt;" alt="" coords="5,5,623,127"/>
+<area shape="rect" id="node2_1" href="./LocalDateFacesConverter.html" title="br.gov.to.sefaz.presentation.converter.LocalDateFacesConverter" alt="" coords="657,11,1253,121"/>
+<area shape="rect" id="node2" href="./LocalDateFacesConverter.html" title="&lt;TABLE&gt;" alt="" coords="647,5,1264,127"/>
+<area shape="rect" id="node3_2" href="./CpfFacesConverter.html" title="br.gov.to.sefaz.presentation.converter.CpfFacesConverter" alt="" coords="1299,11,1878,121"/>
+<area shape="rect" id="node3" href="./CpfFacesConverter.html" title="&lt;TABLE&gt;" alt="" coords="1289,5,1889,127"/>
+<area shape="rect" id="node4_3" href="./CpfCnpjFacesConverter.html" title="br.gov.to.sefaz.presentation.converter.CpfCnpjFacesConverter" alt="" coords="1923,11,2502,121"/>
+<area shape="rect" id="node4" href="./CpfCnpjFacesConverter.html" title="&lt;TABLE&gt;" alt="" coords="1913,5,2513,127"/>
+<area shape="rect" id="node5_4" href="./CnpjRaizFacesConverter.html" title="br.gov.to.sefaz.presentation.converter.CnpjRaizFacesConverter" alt="" coords="2547,11,3126,121"/>
+<area shape="rect" id="node5" href="./CnpjRaizFacesConverter.html" title="&lt;TABLE&gt;" alt="" coords="2537,5,3137,127"/>
+<area shape="rect" id="node6_5" href="./CnpjFacesConverter.html" title="br.gov.to.sefaz.presentation.converter.CnpjFacesConverter" alt="" coords="3171,11,3750,121"/>
+<area shape="rect" id="node6" href="./CnpjFacesConverter.html" title="&lt;TABLE&gt;" alt="" coords="3161,5,3761,127"/>
+<area shape="rect" id="node7_6" href="./CepFacesConverter.html" title="br.gov.to.sefaz.presentation.converter.CepFacesConverter" alt="" coords="3795,11,4374,121"/>
+<area shape="rect" id="node7" href="./CepFacesConverter.html" title="&lt;TABLE&gt;" alt="" coords="3785,5,4385,127"/>
 </map>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+        xmlns:sat="http://sefaz.to.gov.br/composites"
+        xmlns:a4j="http://richfaces.org/a4j">
+
+<ui:composition template="/protected/views/templates/views/default-template.xhtml">
+
+    <ui:param name="pageTitle" value="#{seg_msg['seg.gestao.atribuirPerfil.titulo']}"/>
+
+    <ui:define name="header">
+        <h:outputScript library="js" name="seg/gestao/atribuir-perfil.js"/>
+    </ui:define>
+
+    <ui:define name="content">
+        <sat:panel title="#{seg_msg['seg.gestao.atribuirPerfil.titulo']}">
+            <div class="col-md-12">
+                <h:form id="atribuir-perfil-sistema-filtro">
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <h:outputLabel for="cpfUsuarioFilter">
+                                #{seg_msg['seg.gestao.atribuirPerfil.filter.cpfUsuario']}
+                            </h:outputLabel>
+                            <h:inputText value="#{atribuirPerfilMB.filter.cpfUsuario}"
+                                    id="cpfUsuarioFilter"
+                                    styleClass="form-control"
+                                    maxlength="14"
+                                    p:data-mask="999.999.999-99">
+                                <f:converter converterId="cpfFacesConverter"/>
+                            </h:inputText>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h:outputLabel for="nomeUsuarioFilter">
+                                #{seg_msg['seg.gestao.atribuirPerfil.filter.nomeCompletoUsuario']}
+                            </h:outputLabel>
+                            <h:inputText value="#{atribuirPerfilMB.filter.nomeCompletoUsuario}"
+                                    id="nomeUsuarioFilter"
+                                    styleClass="form-control"
+                                    maxlength="30">
+                            </h:inputText>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h:outputLabel
+                                    for="tipoUsuarioFilter">
+                                #{seg_msg['seg.gestao.atribuirPerfil.filter.tipoUsuario']}
+                            </h:outputLabel>
+                            <h:selectOneMenu value="#{atribuirPerfilMB.filter.codigoTipoUsuario}"
+                                    id="tipoUsuarioFilter"
+                                    styleClass="form-control">
+                                <f:selectItem value="#{null}"
+                                        itemValue=""
+                                        itemLabel="Todos"/>
+                                <f:selectItems value="#{atribuirPerfilMB.tipoUsuarios}"
+                                        var="tipoUsuario"
+                                        itemValue="#{tipoUsuario.codigoTipoUsuario}"
+                                        itemLabel="#{tipoUsuario.descricaoTipoUsuario}"/>
+                            </h:selectOneMenu>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <h:outputLabel
+                                    for="perfilSistemaFilter">
+                                    #{seg_msg['seg.gestao.atribuirPerfil.filter.perfis']}
+                            </h:outputLabel>
+                            <h:selectOneMenu value="#{atribuirPerfilMB.filter.codigoPerfil}"
+                                    id="perfilSistemaFilter"
+                                    styleClass="form-control">
+                                <f:selectItem value="#{null}"
+                                        itemValue=""
+                                        itemLabel="Todos"/>
+                                <f:selectItems value="#{atribuirPerfilMB.allPerfilSistema}"
+                                        var="perfilSistema"
+                                        itemValue="#{perfilSistema.identificacaoPerfil}"
+                                        itemLabel="#{perfilSistema.descricaoPerfil}"/>
+                            </h:selectOneMenu>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h:outputLabel for="unidadeOrganizacionalFilter">
+                                #{seg_msg['seg.gestao.atribuirPerfil.filter.unidadeOrganizacional']}
+                            </h:outputLabel>
+                            <h:selectOneMenu value="#{atribuirPerfilMB.filter.codigoUnidadeOrganizacional}"
+                                    id="unidadeOrganizacionalFilter"
+                                    styleClass="form-control">
+                                <f:selectItem value="#{null}"
+                                        itemValue=""
+                                        itemLabel="Todas as Unidades"/>
+                                <f:selectItems value="#{atribuirPerfilMB.allUnidadeOrganizacionais}"
+                                        var="unidadeOrganizacional"
+                                        itemValue="#{unidadeOrganizacional.identificacaoUnidOrganizac}"
+                                        itemLabel="#{unidadeOrganizacional.nomeUnidOrganizac}"/>
+                            </h:selectOneMenu>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h:outputLabel for="postoTrabalhoFilter">
+                                #{seg_msg['seg.gestao.atribuirPerfil.filter.postoTrabalho']}
+                            </h:outputLabel>
+                            <h:selectOneMenu value="#{atribuirPerfilMB.filter.codigoPostoTrabalho}"
+                                    id="postoTrabalhoFilter"
+                                    styleClass="form-control">
+                                <f:selectItem value="#{null}"
+                                        itemValue=""
+                                        itemLabel="Todos os Postos"/>
+                                <f:selectItems value="#{atribuirPerfilMB.allPostoTrabalho}"
+                                        var="postoTrabalho"
+                                        itemValue="#{postoTrabalho.identificacaoPostoTrabalho}"
+                                        itemLabel="#{postoTrabalho.nomePostoTrabalho}"/>
+                            </h:selectOneMenu>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-12 text-right">
+                        <h:commandButton type="button"
+                                value="#{seg_msg['seg.gestao.atribuirPerfil.filter.consultar']}"
+                                styleClass="btn btn-primary align-bottom"
+                                action="#{atribuirPerfilMB.search}">
+                            <f:ajax render="atribuir-perfil-table"
+                                    execute="cpfUsuarioFilter
+                                             nomeUsuarioFilter
+                                             tipoUsuarioFilter
+                                             perfilSistemaFilter
+                                             unidadeOrganizacionalFilter
+                                             postoTrabalhoFilter"/>
+                        </h:commandButton>
+                        <sat:opcaoAjudaButton styleClass="align-bottom" />
+                    </div>
+                </h:form>
+            </div>
+            <sat:table id="atribuir-perfil-table"
+                    bundle="seg_msg"
+                    content="#{atribuirPerfilMB.resultList}"
+                    headers="seg.gestao.atribuirPerfil.table.cpfUsuario,
+                             seg.gestao.atribuirPerfil.table.nomeCompletoUsuario,
+                             seg.gestao.atribuirPerfil.table.unidadeOrganizacional,
+                             seg.gestao.atribuirPerfil.table.postoTrabalho,
+                             seg.gestao.atribuirPerfil.table.perfis"
+                    fields="cpfUsuario:cpf, nomeCompletoUsuario, nomeUnidOrganizac, nomePostoDeTrabalho,
+                    listPerfisCommaSeparated, cpfUsuario:hide"
+                    actionsHeader="seg.gestao.atribuirPerfil.table.acoes"
+                    hasActions="true"
+                    columnDefs="{'class': 'tbody-nowrap', 'targets': [0]}"
+                    defaulSortColumn="1"
+                    actionEvents="select-row:click:editUser(5)">
+                <f:facet name="actions">
+                    <a href="javascript:void(0);" class="select-row glyphicon glyphicon-pencil" data-toggle="tooltip"
+                            title="Outorgar Perfil"/>
+                </f:facet>
+            </sat:table>
+            <h:form>
+                <a4j:jsFunction name="editUser"
+                        action="#{atribuirPerfilMB.findOneUsuarioById}"
+                        oncomplete="openModal()"
+                        render="modal-render">
+                    <a4j:param name="cpf" assignTo="#{atribuirPerfilMB.dto.cpfUsuario}"/>
+                </a4j:jsFunction>
+                <a4j:jsFunction name="toggleConceder"
+                        action="#{atribuirPerfilMB.toggleConcederPerfil}"
+                        render="modal-render">
+                    <a4j:param name="idPerfil" assignTo="#{atribuirPerfilMB.identificacaoPerfilSistema}"/>
+                </a4j:jsFunction>
+                <a4j:jsFunction name="clearDto"
+                        action="#{atribuirPerfilMB.clearDto}">
+                </a4j:jsFunction>
+                <a4j:jsFunction name="atribuirUsuarioPerfil"
+                        action="#{atribuirPerfilMB.atribuirUsuarioPerfil}"
+                        oncomplete="closeModal()"
+                        render="atribuir-perfil-table">
+                </a4j:jsFunction>
+            </h:form>
+            <div id="atribuirPerfilModal" class="modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" >
+                    <div class="modal-content" >
+                        <div class="modal-header" >
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"
+                                    onclick="resetFields()">
+                                <span aria-hidden="true">&#xd7;</span>
+                            </button>
+                            <h4 class="modal-title"
+                                    id="atribuirPerfilModalTitle">#{seg_msg['seg.gestao.atribuirPerfil.form.titulo']}</h4>
+                        </div>
+                        <div class="modal-body" id="atribuirPerfilModalBody">
+                            <h:panelGroup id="modal-render">
+                                <h:form id="atribuir-perfil-perfis">
+                                    <h:outputLabel value="#{seg_msg['seg.gestao.atribuirPerfil.form.usuario']}"/>
+                                    <h3>
+                                        <h:outputLabel styleClass="label label-default"
+                                                value="#{atribuirPerfilMB.dto.nomeCompletoUsuario}"
+                                                rendered="true"
+                                                id="nomeUsuarioModal"/>
+                                    </h3>
+                                    <div>
+                                        <sat:table id="usuario-sistema-table-modal"
+                                                bundle="seg_msg"
+                                                content="#{atribuirPerfilMB.usuarioPerfilViewBeanCollection}"
+                                                headers="seg.gestao.atribuirPerfil.form.table.numero,
+                                                         seg.gestao.atribuirPerfil.form.table.descricaoPerfil"
+                                                fields="identificacaoPerfil,
+                                                        descricaoPerfil,
+                                                        using:hide"
+                                                actionsHeader="seg.gestao.atribuirPerfil.form.table.conceder"
+                                                hasActions="true"
+                                                actionEvents="check-row:load:setChecked(2),
+                                                              check-row:click:toggleConceder(0;2)"
+                                                actionStyleClass="tbody-center"
+                                                paging="false">
+                                            <f:facet name="actions">
+                                                <input type="checkbox" class="check-row" value="true"/>
+                                            </f:facet>
+                                        </sat:table>
+                                    </div>
+                                    <div class="modal-footer" id="atribuirPerfilModalFooter">
+                                        <div class="col-md-12" >
+                                            <button type="button" class="btn btn-default" data-dismiss="modal"
+                                                    value="#{seg_msg['seg.gestao.atribuirPerfil.form.fechar']}"
+                                                    aria-label="#{seg_msg['seg.gestao.ativarInativarPerfil.form.fechar']}"
+                                                    onclick="resetFields()">
+                                                <span aria-hidden="false">#{seg_msg['seg.gestao.ativarInativarPerfil.form.fechar']}</span>
+                                            </button>
+                                            <h:commandButton type="button"
+                                                    value="#{seg_msg['seg.gestao.atribuirPerfil.form.salvar']}"
+                                                    styleClass="btn btn-primary fa-align-right"
+                                                    onclick="atribuirUsuarioPerfil()">
+                                            </h:commandButton>
+                                        </div>
+                                    </div>
+                                </h:form>
+                            </h:panelGroup>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </sat:panel>
+    </ui:define>
+</ui:composition>
+</html>

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.persistence.entity.ProcuracaoUsuario
-	c11605 [label=<<table title="br.gov.to.sefaz.seg.persistence.entity.ProcuracaoUsuario" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ProcuracaoUsuario.html">
+	c40891 [label=<<table title="br.gov.to.sefaz.seg.persistence.entity.ProcuracaoUsuario" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ProcuracaoUsuario.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ProcuracaoUsuario </td></tr>
 		</table></td></tr>
@@ -29,20 +29,27 @@ digraph G {
 <tr><td align="left" balign="left"> + setCnpjOrigem(cnpjOrigem : String) </td></tr>
 <tr><td align="left" balign="left"> + getCpfProcurado() : String </td></tr>
 <tr><td align="left" balign="left"> + setCpfProcurado(cpfProcurado : String) </td></tr>
+<tr><td align="left" balign="left"> + getProcuracaoOpcoes() : List&lt;ProcuracaoOpcao&gt; </td></tr>
+<tr><td align="left" balign="left"> + setProcuracaoOpcoes(procuracaoOpcoes : List&lt;ProcuracaoOpcao&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getCpfOrigemProcuracao() : ListagemCpfProcuracao </td></tr>
+<tr><td align="left" balign="left"> + setCpfOrigemProcuracao(cpfOrigemProcuracao : ListagemCpfProcuracao) </td></tr>
+<tr><td align="left" balign="left"> + getCnpjOrigemProcuracao() : ListagemCpfProcuracao </td></tr>
+<tr><td align="left" balign="left"> + setCnpjOrigemProcuracao(cnpjOrigemProcuracao : ListagemCpfProcuracao) </td></tr>
 <tr><td align="left" balign="left"> + hashCode() : int </td></tr>
 <tr><td align="left" balign="left"> + equals(obj : Object) : boolean </td></tr>
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ProcuracaoUsuario.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.persistence.entity.ProcuracaoUsuario extends br.gov.to.sefaz.persistence.entity.AbstractEntity<java.lang.Long>
-	c11647:p -> c11605:p [dir=back,arrowtail=empty];
+	c40943:p -> c40891:p [dir=back,arrowtail=empty];
 	// br.gov.to.sefaz.persistence.entity.AbstractEntity<I extends java.io.Serializable>
-	c11647 [label=<<table title="br.gov.to.sefaz.persistence.entity.AbstractEntity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/persistence/entity/AbstractEntity.html">
+	c40943 [label=<<table title="br.gov.to.sefaz.persistence.entity.AbstractEntity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/persistence/entity/AbstractEntity.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractEntity&lt;I extends Serializable&gt; </font></td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
+<tr><td align="left" balign="left"> + SIM : String </td></tr>
+<tr><td align="left" balign="left"> + NAO : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + AbstractEntity() </td></tr>
@@ -55,8 +62,8 @@ digraph G {
 <tr><td align="left" balign="left"> + setUsuarioAlteracao(arg0 : String) </td></tr>
 <tr><td align="left" balign="left"> + getDataAlteracao() : LocalDateTime </td></tr>
 <tr><td align="left" balign="left"> + setDataAlteracao(arg0 : LocalDateTime) </td></tr>
-<tr><td align="left" balign="left"> + getRegistroExcluido() : Boolean </td></tr>
-<tr><td align="left" balign="left"> + setRegistroExcluido(arg0 : Boolean) </td></tr>
+<tr><td align="left" balign="left"> + getRegistroExcluido() : String </td></tr>
+<tr><td align="left" balign="left"> + setRegistroExcluido(arg0 : String) </td></tr>
 <tr><td align="left" balign="left"> + getUsuarioExclusao() : String </td></tr>
 <tr><td align="left" balign="left"> + setUsuarioExclusao(arg0 : String) </td></tr>
 <tr><td align="left" balign="left"> + getDataExclusao() : LocalDateTime </td></tr>

@@ -10,9 +10,7 @@ public class UnidadeOrganizacionalFilter {
     private Long identificacaoUnidOrganizac;
     private String nomeUnidOrganizac;
     private Long unidOrganizacPai;
-    private String telefone;
-    private String endereco;
-    private String chefeGeral;
+    private Character tipoUnidade;
 
     public Long getIdentificacaoUnidOrganizac() {
         return identificacaoUnidOrganizac;
@@ -38,27 +36,11 @@ public class UnidadeOrganizacionalFilter {
         this.unidOrganizacPai = unidOrganizacPai;
     }
 
-    public String getTelefone() {
-        return telefone;
+    public Character getTipoUnidade() {
+        return tipoUnidade;
     }
 
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
-
-    public String getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
-    }
-
-    public String getChefeGeral() {
-        return chefeGeral;
-    }
-
-    public void setChefeGeral(String chefeGeral) {
-        this.chefeGeral = chefeGeral;
+    public void setTipoUnidade(Character tipoUnidade) {
+        this.tipoUnidade = tipoUnidade;
     }
 }

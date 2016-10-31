@@ -5,13 +5,14 @@ import br.gov.to.sefaz.seg.business.gestao.service.ModuloSistemaService;
 import br.gov.to.sefaz.seg.persistence.entity.ModuloSistema;
 import br.gov.to.sefaz.seg.persistence.repository.ModuloSistemaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
- * Implementação do serviço da entidade {@link ModuloSistemaService}.
+ * Implementação do serviço da entidade {@link br.gov.to.sefaz.seg.business.gestao.service.ModuloSistemaService}.
  *
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 13/06/2016 20:19:00
@@ -22,7 +23,7 @@ public class ModuloSistemaServiceImpl extends DefaultCrudService<ModuloSistema, 
 
     @Autowired
     public ModuloSistemaServiceImpl(ModuloSistemaRepository repository) {
-        super(repository, new Sort(new Sort.Order(Sort.Direction.ASC, "descricaoModuloSistema")));
+        super(repository);
     }
 
     @Override
@@ -32,6 +33,11 @@ public class ModuloSistemaServiceImpl extends DefaultCrudService<ModuloSistema, 
 
     @Override
     public Collection<ModuloSistema> findAll() {
-        return getRepository().findAllFetched();
+        return getRepository().findAllFetched().stream().collect(Collectors.toList());
+    }
+
+    @Override
+    public List<ModuloSistema> findAllSortedByAbreviacao() {
+        return getRepository().findAllSortedByAbreviacao();
     }
 }

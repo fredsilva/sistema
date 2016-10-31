@@ -1,9 +1,11 @@
 package br.gov.to.sefaz.util.message;
 
+import br.gov.to.sefaz.exception.BusinessException;
 import org.apache.commons.lang3.StringUtils;
 
 import java.text.MessageFormat;
 import java.util.Locale;
+import java.util.MissingResourceException;
 import java.util.ResourceBundle;
 
 /**
@@ -30,8 +32,12 @@ public final class SourceBundle {
      * @return Mensagem internacionalizada
      */
     public static String getMessage(String bundle, String key) {
-        ResourceBundle resourcebundle = getResourceBundle(bundle);
-        return resourcebundle.getString(key);
+        try {
+            ResourceBundle resourcebundle = getResourceBundle(bundle);
+            return resourcebundle.getString(key);
+        } catch (MissingResourceException e) {
+            throw new BusinessException(e.getMessage(), e);
+        }
     }
 
     /**
@@ -44,12 +50,16 @@ public final class SourceBundle {
      * @return Mensagem internacionalizada
      */
     public static String getMessage(String bundle, String key, Object... params) {
-        ResourceBundle resourcebundle = getResourceBundle(bundle);
-        return MessageFormat.format(resourcebundle.getString(key), params);
+        try {
+            ResourceBundle resourcebundle = getResourceBundle(bundle);
+            return MessageFormat.format(resourcebundle.getString(key), params);
+        } catch (MissingResourceException e) {
+            throw new BusinessException(e.getMessage(), e);
+        }
     }
 
     /**
-     * Método que retorna a mensagem internacionalizada de um aruivo/bundle default.
+     * Método que retorna a mensagem internacionalizada de um arquivo/bundle default.
      *
      * @param key Chave da mensagem do arquivo de internacionalização
      * @return Mensagem internacionalizada
@@ -59,7 +69,7 @@ public final class SourceBundle {
     }
 
     /**
-     * Método que retorna a mensagem internacionalizada de um aruivo/bundle default substituindo os parâmetros na
+     * Método que retorna a mensagem internacionalizada de um arquivo/bundle default substituindo os parâmetros na
      * mensagem.
      *
      * @param key Chave da mensagem do arquivo de internacionalização
@@ -71,30 +81,30 @@ public final class SourceBundle {
     }
 
     /**
-     * Transforma uma expression language em uma mensagem tratada e cadastrada no(s) resouce(s) bungle(s).
+     * Transforma uma expression language em uma mensagem tratada e cadastrada no(s) resource(s) bundle(s).
      *
-     * @param key Chave do message baundle no formato EL - Expression Language
+     * @param key Chave do message bundle no formato EL - Expression Language
      * @return Mensagem tratada
      */
     public static String getMessageByExpression(String key) {
+
         if (StringUtils.isEmpty(key)) {
             return getMessage("mensagem.nao.encontrada");
         }
-        String bundle = key.substring(key.indexOf('{') + 1, key.indexOf('['));
-        key = key.substring(key.indexOf('\'') + 1, key.lastIndexOf('\''));
-        return getMessage(bundle, key);
-        // FacesContext facesContext = FacesContext.getCurrentInstance();
-        // ExpressionFactory elFactory = facesContext.getApplication().getExpressionFactory();
-        // ValueExpression valueExp = elFactory.createValueExpression(facesContext.getELContext(), key, Object.class);
-        // Object value = valueExp.getValue(facesContext.getELContext());
-        //
-        // return value == null ? key : value.toString();
+
+        try {
+            String bundle = key.substring(key.indexOf('{') + 1, key.indexOf('['));
+            key = key.substring(key.indexOf('\'') + 1, key.lastIndexOf('\''));
+            return getMessage(bundle, key);
+        } catch (StringIndexOutOfBoundsException e) {
+            Object param = key;
+            String message = getMessage("mensagem.inconsistente", param);
+            throw new BusinessException(message, e);
+        }
     }
 
     private static ResourceBundle getResourceBundle(String bundle) {
         return ResourceBundle.getBundle(createNameBundle(bundle), new Locale("pt", "BR"));
-        // FacesContext facesContext = FacesContext.getCurrentInstance();
-        // return facesContext.getApplication().getResourceBundle(facesContext, bundle);
     }
 
     private static String createNameBundle(String bundle) {

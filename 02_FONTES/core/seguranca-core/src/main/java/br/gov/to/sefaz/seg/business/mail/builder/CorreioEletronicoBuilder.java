@@ -12,7 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * Builder para facilitar a criação de um {@link CorreioEletronico}.
+ * Builder para facilitar a criação de um {@link br.gov.to.sefaz.seg.business.mail.domain.CorreioEletronico}.
  *
  * @author <a href="mailto:gabriel.santos@ntconsult.com.br">gabriel.santos</a>
  * @since 03/06/2016 14:28:00

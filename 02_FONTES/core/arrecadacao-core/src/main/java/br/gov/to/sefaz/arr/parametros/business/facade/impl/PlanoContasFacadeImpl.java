@@ -2,12 +2,15 @@ package br.gov.to.sefaz.arr.parametros.business.facade.impl;
 
 import br.gov.to.sefaz.arr.parametros.business.facade.PlanoContasFacade;
 import br.gov.to.sefaz.arr.parametros.business.service.PlanoContasService;
+import br.gov.to.sefaz.arr.parametros.business.service.TipoGruposCnaesService;
 import br.gov.to.sefaz.arr.parametros.business.service.filter.PlanoContasFilter;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PlanoContas;
+import br.gov.to.sefaz.arr.persistence.entity.PlanoContas;
+import br.gov.to.sefaz.arr.persistence.entity.TipoGruposCnaes;
 import br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -19,9 +22,12 @@ import java.util.List;
 @Component
 public class PlanoContasFacadeImpl extends DefaultCrudFacade<PlanoContas, Long> implements PlanoContasFacade {
 
+    private final TipoGruposCnaesService tipoGruposCnaesService;
+
     @Autowired
-    public PlanoContasFacadeImpl(PlanoContasService service) {
+    public PlanoContasFacadeImpl(PlanoContasService service, TipoGruposCnaesService tipoGruposCnaesService) {
         super(service);
+        this.tipoGruposCnaesService = tipoGruposCnaesService;
     }
 
     @Override
@@ -36,6 +42,11 @@ public class PlanoContasFacadeImpl extends DefaultCrudFacade<PlanoContas, Long> 
      */
     public List<PlanoContas> find(PlanoContasFilter filter) {
         return getService().find(filter);
+    }
+
+    @Override
+    public Collection<TipoGruposCnaes> findAllActiveTipoGruposCnaes() {
+        return tipoGruposCnaesService.findAllActive();
     }
 
 }

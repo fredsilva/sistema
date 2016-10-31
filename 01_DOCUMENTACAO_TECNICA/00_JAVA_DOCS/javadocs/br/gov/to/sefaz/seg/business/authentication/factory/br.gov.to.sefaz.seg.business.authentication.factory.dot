@@ -10,15 +10,15 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.authentication.factory.AuthenticationFactory
-	c14240 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.factory.AuthenticationFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AuthenticationFactory.html">
+	c80798 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.factory.AuthenticationFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AuthenticationFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AuthenticationFactory </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
+<tr><td align="left" balign="left"> + PROCURACAO_PATTERN : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + AuthenticationFactory(usuarioPerfilRepository : UsuarioPerfilRepository) </td></tr>
+<tr><td align="left" balign="left"> + AuthenticationFactory(usuarioPerfilRepository : UsuarioPerfilRepository, procuracaoUsuarioRepository : ProcuracaoUsuarioRepository) </td></tr>
 <tr><td align="left" balign="left"> + create(password : String, usuarioSistema : UsuarioSistema) : UsuarioSistemaAuthentication </td></tr>
 		</table></td></tr>
 		</table>>, URL="./AuthenticationFactory.html", fontname="arial", fontcolor="black", fontsize=10.0];

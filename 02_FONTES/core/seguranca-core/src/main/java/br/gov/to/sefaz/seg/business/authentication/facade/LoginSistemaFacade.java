@@ -3,7 +3,7 @@ package br.gov.to.sefaz.seg.business.authentication.facade;
 import br.gov.to.sefaz.seg.business.authentication.domain.LoginDto;
 import br.gov.to.sefaz.seg.business.authentication.domain.ResetPasswordDto;
 import br.gov.to.sefaz.seg.business.authentication.domain.UsuarioSistemaAuthentication;
-import br.gov.to.sefaz.seg.exception.SecurityException;
+import br.gov.to.sefaz.seg.business.authentication.service.SecurityException;
 
 /**
  * Contrato de acesso da fachada de Histórico de Logins do Sistema.

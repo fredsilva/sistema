@@ -35,7 +35,7 @@ digraph G {
 <tr><td align="left" balign="left"> + update() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./TipoGruposCnaesMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	//br.gov.to.sefaz.arr.parametros.managedbean.TipoGruposCnaesMB extends br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<br.gov.to.sefaz.arr.parametros.persistence.entity.TipoGruposCnaes, java.lang.Integer>
+	//br.gov.to.sefaz.arr.parametros.managedbean.TipoGruposCnaesMB extends br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<br.gov.to.sefaz.arr.persistence.entity.TipoGruposCnaes, java.lang.Integer>
 	c220:p -> c209:p [dir=back,arrowtail=empty];
 	// br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
 	c220 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/presentation/managedbean/impl/DefaultCrudMB.html">

@@ -2,8 +2,7 @@ package br.gov.to.sefaz.seg.configuration;
 
 import br.gov.to.sefaz.seg.filter.FilterPackageMarker;
 import br.gov.to.sefaz.seg.managedbean.ManagedBeanPackageMarker;
-import br.gov.to.sefaz.seg.provider.LdapAuthenticationProvider;
-import br.gov.to.sefaz.seg.template.managedbean.DefaultTemplateMB;
+import br.gov.to.sefaz.seg.template.managedbean.TemplateMBPackageMarker;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
@@ -15,6 +14,6 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @ComponentScan(basePackageClasses = {ManagedBeanPackageMarker.class,
-        LdapAuthenticationProvider.class, DefaultTemplateMB.class, FilterPackageMarker.class})
+        TemplateMBPackageMarker.class, FilterPackageMarker.class})
 public class SegWebConfiguration {
 }

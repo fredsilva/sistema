@@ -10,15 +10,15 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.authentication.service.impl.LoginSistemaServiceImpl
-	c15532 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.service.impl.LoginSistemaServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LoginSistemaServiceImpl.html">
+	c83431 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.service.impl.LoginSistemaServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LoginSistemaServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LoginSistemaServiceImpl </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
+<tr><td align="left" balign="left"> + RESET_PASSWORD_CONTEXT : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + LoginSistemaServiceImpl(usuarioSistemaService : UsuarioSistemaService, ldapProvider : LdapProvider, mailSenderService : MailSenderService, triesService : WrongPasswordTriesService, historicoLoginSistemaService : HistoricoLoginSistemaService, authenticationFactory : AuthenticationFactory) </td></tr>
+<tr><td align="left" balign="left"> + LoginSistemaServiceImpl(usuarioSistemaService : UsuarioSistemaService, ldapProvider : LdapProvider, triesService : WrongPasswordTriesService, historicoLoginSistemaService : HistoricoLoginSistemaService, authenticationFactory : AuthenticationFactory) </td></tr>
 <tr><td align="left" balign="left"> + authenticate(dto : LoginDto) : UsuarioSistemaAuthentication </td></tr>
 <tr><td align="left" balign="left"> + certAuthenticate(username : String) : UsuarioSistemaAuthentication </td></tr>
 <tr><td align="left" balign="left"> + resetPassword(dto : ResetPasswordDto) </td></tr>

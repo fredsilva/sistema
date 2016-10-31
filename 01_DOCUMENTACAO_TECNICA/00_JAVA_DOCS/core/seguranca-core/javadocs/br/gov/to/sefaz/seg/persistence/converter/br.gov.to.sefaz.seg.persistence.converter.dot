@@ -9,8 +9,38 @@ digraph G {
 	node [fontname="arial",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// br.gov.to.sefaz.seg.persistence.converter.TipoUsuarioConverter
+	c6890 [label=<<table title="br.gov.to.sefaz.seg.persistence.converter.TipoUsuarioConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoUsuarioConverter.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> TipoUsuarioConverter </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + TipoUsuarioConverter() </td></tr>
+<tr><td align="left" balign="left"> + setService(service : TipoUsuarioService) </td></tr>
+<tr><td align="left" balign="left"> + convertToDatabaseColumn(tipoUsuario : TipoUsuario) : Integer </td></tr>
+<tr><td align="left" balign="left"> + convertToEntityAttribute(code : Integer) : TipoUsuario </td></tr>
+		</table></td></tr>
+		</table>>, URL="./TipoUsuarioConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.persistence.converter.TipoUnidadeConverter
+	c6891 [label=<<table title="br.gov.to.sefaz.seg.persistence.converter.TipoUnidadeConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoUnidadeConverter.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> TipoUnidadeConverter </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + TipoUnidadeConverter() </td></tr>
+<tr><td align="left" balign="left"> + setService(service : UnidadeOrganizacionalService) </td></tr>
+<tr><td align="left" balign="left"> + convertToDatabaseColumn(tipoUnidade : TipoUnidade) : Character </td></tr>
+<tr><td align="left" balign="left"> + convertToEntityAttribute(code : Character) : TipoUnidade </td></tr>
+		</table></td></tr>
+		</table>>, URL="./TipoUnidadeConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.converter.TipoOperacaoEnumConverter
-	c2873 [label=<<table title="br.gov.to.sefaz.seg.persistence.converter.TipoOperacaoEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoOperacaoEnumConverter.html">
+	c6892 [label=<<table title="br.gov.to.sefaz.seg.persistence.converter.TipoOperacaoEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoOperacaoEnumConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoOperacaoEnumConverter </td></tr>
 		</table></td></tr>
@@ -23,8 +53,22 @@ digraph G {
 <tr><td align="left" balign="left"> + convertToEntityAttribute(character : Character) : TipoOperacaoEnum </td></tr>
 		</table></td></tr>
 		</table>>, URL="./TipoOperacaoEnumConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.persistence.converter.TipoComunicacaoEnumConverter
+	c6893 [label=<<table title="br.gov.to.sefaz.seg.persistence.converter.TipoComunicacaoEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoComunicacaoEnumConverter.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> TipoComunicacaoEnumConverter </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + TipoComunicacaoEnumConverter() </td></tr>
+<tr><td align="left" balign="left"> + convertToDatabaseColumn(tipoComunicacaoEnum : TipoComunicacaoEnum) : String </td></tr>
+<tr><td align="left" balign="left"> + convertToEntityAttribute(value : String) : TipoComunicacaoEnum </td></tr>
+		</table></td></tr>
+		</table>>, URL="./TipoComunicacaoEnumConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.converter.SituacaoUsuarioEnumConverter
-	c2874 [label=<<table title="br.gov.to.sefaz.seg.persistence.converter.SituacaoUsuarioEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SituacaoUsuarioEnumConverter.html">
+	c6894 [label=<<table title="br.gov.to.sefaz.seg.persistence.converter.SituacaoUsuarioEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SituacaoUsuarioEnumConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SituacaoUsuarioEnumConverter </td></tr>
 		</table></td></tr>
@@ -37,5 +81,26 @@ digraph G {
 <tr><td align="left" balign="left"> + convertToEntityAttribute(code : Character) : SituacaoUsuarioEnum </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SituacaoUsuarioEnumConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.persistence.converter.SituacaoSolicitacaoEnumConverter
+	c6895 [label=<<table title="br.gov.to.sefaz.seg.persistence.converter.SituacaoSolicitacaoEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SituacaoSolicitacaoEnumConverter.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> SituacaoSolicitacaoEnumConverter </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + SituacaoSolicitacaoEnumConverter() </td></tr>
+<tr><td align="left" balign="left"> + convertToDatabaseColumn(situacaoSolicitacaoEnum : SituacaoSolicitacaoEnum) : Character </td></tr>
+<tr><td align="left" balign="left"> + convertToEntityAttribute(code : Character) : SituacaoSolicitacaoEnum </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SituacaoSolicitacaoEnumConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.persistence.converter.ConverterPackageMarker
+	c6896 [label=<<table title="br.gov.to.sefaz.seg.persistence.converter.ConverterPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConverterPackageMarker.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> ConverterPackageMarker </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ConverterPackageMarker.html", fontname="arial", fontcolor="black", fontsize=10.0];
 }
 

@@ -1,16 +1,23 @@
 package br.gov.to.sefaz.seg.template.managedbean;
 
+import br.gov.to.sefaz.presentation.managedbean.PathResolverMB;
 import br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupKey;
 import br.gov.to.sefaz.seg.business.authentication.domain.RoleGroupType;
+import br.gov.to.sefaz.seg.business.authentication.facade.DefaultTemplateFacade;
 import br.gov.to.sefaz.seg.business.authentication.handler.AuthenticatedUserHandler;
-import br.gov.to.sefaz.seg.business.gestao.facade.ModuloSistemaFacade;
+import br.gov.to.sefaz.seg.persistence.entity.AplicacaoModulo;
+import br.gov.to.sefaz.seg.persistence.entity.CorreioContribuinte;
 import br.gov.to.sefaz.seg.persistence.entity.ModuloSistema;
+import br.gov.to.sefaz.seg.persistence.entity.OpcaoAplicacao;
+import br.gov.to.sefaz.seg.persistence.entity.SmsContribuinte;
 import br.gov.to.sefaz.seg.template.managedbean.viewbean.MenuViewBean;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Component;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -30,12 +37,17 @@ import javax.faces.bean.ManagedBean;
 @ManagedBean(name = "defaultTemplateMB")
 public class DefaultTemplateMB {
 
-    private final ModuloSistemaFacade moduloSistemaFacade;
+    private static final String REGEX_REPLACE_HTML_TAGS = "\\<.*?>";
+    private static final String BLANK_STRING = " ";
+
+    private final DefaultTemplateFacade facade;
+    private final PathResolverMB pathResolver;
     private Collection<ModuloSistema> allModulos;
 
     @Autowired
-    public DefaultTemplateMB(ModuloSistemaFacade moduloSistemaFacade) {
-        this.moduloSistemaFacade = moduloSistemaFacade;
+    public DefaultTemplateMB(PathResolverMB pathResolver, DefaultTemplateFacade facade) {
+        this.pathResolver = pathResolver;
+        this.facade = facade;
     }
 
     /**
@@ -44,24 +56,22 @@ public class DefaultTemplateMB {
      * @return menus do sistema que o usuario tem permissões de acessar
      */
     public Collection<MenuViewBean> getModulosMenu() {
-        if (allModulos == null) {
-            allModulos = this.moduloSistemaFacade.findAll();
-        }
+        Collection<ModuloSistema> allModulos = getAllModulos();
 
+        Collection<String> userRoles = facade.getUserRoles();
         List<MenuViewBean> modulosMenu = new ArrayList<>();
+
         for (ModuloSistema sysModulo : allModulos) {
-            MenuViewBean sysModuloMenu = new MenuViewBean(sysModulo.getDescricaoModuloSistema(), sysModulo.getId());
+            MenuViewBean sysModuloMenu = createMenuViewBean(sysModulo);
 
             sysModulo.getAplicacaoModulos().forEach(appModulo -> {
                 List<MenuViewBean> opsAplicacao = appModulo.getOpcoesAplicacao().stream()
-                        .filter(oa -> AuthenticatedUserHandler.getAuthorities().stream()
-                                .anyMatch(o -> o.getAuthority().equals("ROLE_" + oa.getId())))
-                        .map(oa -> new MenuViewBean(oa.getDescripcaoOpcao(), oa.getId(), oa.getOpcaoUrl()))
+                        .filter(oa -> userRoles.stream().anyMatch(s -> s.equals(oa.getId().toString())))
+                        .map(this::createMenuViewBean)
                         .collect(Collectors.toList());
 
                 if (!opsAplicacao.isEmpty()) {
-                    sysModuloMenu.addChild(
-                            new MenuViewBean(appModulo.getDescricaoAplicacaoModulo(), appModulo.getId(), opsAplicacao));
+                    sysModuloMenu.addChild(createMenuViewBean(appModulo, opsAplicacao));
                 }
             });
 
@@ -81,7 +91,7 @@ public class DefaultTemplateMB {
      * @return true se o usuario possui apenas um perfil
      */
     public boolean hasOnlyOneProfile() {
-        return AuthenticatedUserHandler.getGroupsByType(RoleGroupType.PERFIL).size() == 1;
+        return facade.hasOnlyOneProfile();
     }
 
     /**
@@ -90,7 +100,16 @@ public class DefaultTemplateMB {
      * @return true se o usuario possui algum perfil ativo na sessão
      */
     public boolean hasActiveProfile() {
-        return AuthenticatedUserHandler.getActiveGroup().isPresent();
+        return facade.hasActiveProfile();
+    }
+
+    /**
+     * Verifica se o usuario se logou via Certificado Digital.
+     *
+     * @return true se o usuario está logado por certificado digital.
+     */
+    public boolean isAuthenticatedByCert() {
+        return facade.isAuthenticatedByCert();
     }
 
     /**
@@ -99,25 +118,159 @@ public class DefaultTemplateMB {
      * @return formato: nome (perfil)
      */
     public String getUserName() {
-        Optional<RoleGroupKey> activeGroup = AuthenticatedUserHandler.getActiveGroup();
-        if (activeGroup.isPresent()) {
-            return AuthenticatedUserHandler.getNome() + " (" + activeGroup.get().getDescription() + ")";
+        Optional<RoleGroupKey> activeGroup = facade.getActiveGroup();
+        if (activeGroup.map(gk -> gk.getType() == RoleGroupType.PERFIL).orElse(false)) {
+            return facade.getUserName() + " (" + activeGroup.get().getDescription() + ")";
         }
 
-        return AuthenticatedUserHandler.getNome();
+        return facade.getUserName();
+    }
+
+    /**
+     * Retorna o nome e o procurado ativo do usuario.
+     *
+     * @return formato: nome procurado (cpf)
+     */
+    public String getProcuracaoUserName() {
+        Optional<RoleGroupKey> activeGroup = facade.getActiveGroup();
+        if (activeGroup.map(gk -> gk.getType() == RoleGroupType.PROCURACAO).orElse(false)) {
+            return activeGroup.filter(roleGroupKey -> roleGroupKey.getId().equals(facade.getActiveProcurado())
+                    && roleGroupKey.getType().equals(RoleGroupType.PROCURACAO))
+                    .map(RoleGroupKey::getDescription).get();
+        }
+
+        return StringUtils.EMPTY;
+    }
+
+    public boolean isProcuracao() {
+        return AuthenticatedUserHandler.getActiveGroup()
+                .map(rgk -> rgk.getType() == RoleGroupType.PROCURACAO)
+                .orElse(Boolean.FALSE);
     }
 
     public List<RoleGroupKey> getPerfisSistema() {
-        return AuthenticatedUserHandler.getGroupsByType(RoleGroupType.PERFIL);
+        return facade.getPerfisSistema();
+    }
+
+    public List<RoleGroupKey> getProcuradoresSistema() {
+        return facade.getProcuradoresSistema();
     }
 
     /**
      * Ativa as permissões de acesso de um perfil.
      *
-     * @see AuthenticatedUserHandler#setActiveRoleGroup(RoleGroupType, Long)
      * @param id identificação do grupo
+     * @see AuthenticatedUserHandler#setActiveRoleGroup(RoleGroupType, Long)
      */
-    public void setActiveProfile(Long id) {
-        AuthenticatedUserHandler.setActiveRoleGroup(RoleGroupType.PERFIL, id);
+    public void setActiveProfile(Long id) throws IOException {
+        facade.setActiveProfile(id);
+        pathResolver.redirectToHome();
+    }
+
+    /**
+     * Ativa as permissões de acesso de um procurador.
+     *
+     * @param id identificação do grupo
+     * @see AuthenticatedUserHandler#setActiveRoleGroup(RoleGroupType, Long)
+     */
+    public void setActiveProcurador(Long id) throws IOException {
+        facade.setActiveProcuracao(id);
+        pathResolver.redirectToHome();
+    }
+
+    /**
+     * Invalida a sessão atual.
+     */
+    public void invalidateSession() {
+        facade.invalidateSession();
+    }
+
+    public String getThisAjudaContent() {
+        return getActiveOpcao().map(OpcaoAplicacao::getAjudaOpcao).orElse(StringUtils.EMPTY);
+    }
+
+    public String getThisDescricaoOpcao() {
+        return getActiveOpcao().map(OpcaoAplicacao::getDescripcaoOpcao).orElse(StringUtils.EMPTY);
+    }
+
+    public Optional<OpcaoAplicacao> getActiveOpcao() {
+        return getAllModulos().stream()
+                .map(ModuloSistema::getAplicacaoModulos).flatMap(Collection::stream)
+                .map(AplicacaoModulo::getOpcoesAplicacao).flatMap(Collection::stream)
+                .filter(opcao -> pathResolver.isActualProtectedView(opcao.getOpcaoUrl()))
+                .findFirst();
+    }
+
+    private Collection<ModuloSistema> getAllModulos() {
+        if (allModulos == null) {
+            allModulos = facade.findAllModuloSistema();
+        }
+        return allModulos;
+    }
+
+    /**
+     * Busca todos emails enviados para usuário logado.
+     *
+     * @return @return Lista contendo objetos do tipo
+     * {@link br.gov.to.sefaz.seg.persistence.entity.CorreioContribuinte}.
+     */
+    public Collection<CorreioContribuinte> getAllSentEmailsForLoggedUser() {
+        return facade.findAllSentEmailsForLoggedUser(facade.getUsuarioSistema());
+    }
+
+    /**
+     * Busca todos SMSs enviados para usuário logado.
+     *
+     * @return Lista contendo objetos do tipo {@link br.gov.to.sefaz.seg.persistence.entity.SmsContribuinte}.
+     */
+    public Collection<SmsContribuinte> getAllSentSMSsForLoggedUser() {
+        return facade.findAllSentSMSsForUser(facade.getUsuarioSistema());
+    }
+
+    /**
+     * Busca últimos emails enviados para usuário logado. O número de emails retornados está definido em regra de
+     * negócio.
+     *
+     * @return @return Lista contendo objetos do tipo
+     * {@link br.gov.to.sefaz.seg.persistence.entity.CorreioContribuinte}
+     */
+    public List<CorreioContribuinte> getLastSentEmailsForLoggedUser() {
+        return facade.findLastSentEmailsForUser(facade.getUsuarioSistema());
+    }
+
+    /**
+     * Obtém o preview do conteúdo do e-mail enviado para o usuário logado. O preview do conteúdo terá um número
+     * máximo de caracteres, conforme definido em regra de negócio. Além disso, as tags html serão removidas do
+     * conteúdo.
+     *
+     * @param correioContribuinte Item de correio enviado para o contribuinte.
+     * @return Texto plano, sem formatação html e limitado ao número de caracteres definidos na regra de negócio.
+     */
+    public String getSentEmailContentPreview(CorreioContribuinte correioContribuinte) {
+        String conteudo = StringUtils.trimToEmpty(correioContribuinte.getConteudo());
+        return StringUtils.abbreviate(conteudo.replaceAll(REGEX_REPLACE_HTML_TAGS, BLANK_STRING),
+                facade.getMessagePreviewLength());
+    }
+
+    /**
+     * Busca últimos SMSs enviados para usuário logado. O número de SMSs retornados está definido em regra de negócio.
+     *
+     * @return Lista contendo objetos do tipo {@link br.gov.to.sefaz.seg.persistence.entity.SmsContribuinte}
+     */
+    public List<SmsContribuinte> getLastSentSMSsForLoggedUser() {
+        return facade.findLastSentSMSsForUser(facade.getUsuarioSistema());
+    }
+
+    private MenuViewBean createMenuViewBean(ModuloSistema sysModulo) {
+        return new MenuViewBean(sysModulo.getDescricaoModuloSistema(), sysModulo.getId());
+    }
+
+    private MenuViewBean createMenuViewBean(AplicacaoModulo appModulo, List<MenuViewBean> opsAplicacao) {
+        return new MenuViewBean(appModulo.getDescricaoAplicacaoModulo(), appModulo.getId(), opsAplicacao);
+    }
+
+    private MenuViewBean createMenuViewBean(OpcaoAplicacao opcaoAplicacao) {
+        return new MenuViewBean(opcaoAplicacao.getDescripcaoOpcao(), opcaoAplicacao.getId(),
+                opcaoAplicacao.getOpcaoUrl());
     }
 }

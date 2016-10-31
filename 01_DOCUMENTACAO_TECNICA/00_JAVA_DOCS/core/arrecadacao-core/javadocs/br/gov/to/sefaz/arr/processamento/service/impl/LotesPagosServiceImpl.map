@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../LotesPagosService.html" title="br.gov.to.sefaz.arr.processamento.service.LotesPagosService" alt="" coords="16,97,147,139"/>
+<area shape="rect" id="node1" href="../LotesPagosService.html" title="&lt;TABLE&gt;" alt="" coords="5,91,157,145"/>
+<area shape="rect" id="node2_1" href="./LotesPagosServiceImpl.html" title="br.gov.to.sefaz.arr.processamento.service.impl.LotesPagosServiceImpl" alt="" coords="59,284,434,360"/>
+<area shape="rect" id="node2" href="./LotesPagosServiceImpl.html" title="&lt;TABLE&gt;" alt="" coords="49,279,445,365"/>
+<area shape="rect" id="node3_2" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/service/impl/DefaultCrudService.html" title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" alt="" coords="193,11,634,225"/>
+<area shape="rect" id="node3" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/service/impl/DefaultCrudService.html" title="&lt;TABLE&gt;" alt="" coords="182,5,645,231"/>
+</map>

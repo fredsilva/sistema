@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.presentation.managedbean.AutowiredMB
-	c47281 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.AutowiredMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AutowiredMB.html">
+	c227357 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.AutowiredMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AutowiredMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AutowiredMB </td></tr>
 		</table></td></tr>
@@ -23,7 +23,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./AutowiredMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c47287 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/DefaultCrudMB.html">
+	c227365 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/DefaultCrudMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultCrudMB&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
 		</table></td></tr>
@@ -42,7 +42,83 @@ digraph G {
 <tr><td align="left" balign="left"> + clearDto() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./impl/DefaultCrudMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.managedbean.LoginMB
+	c227752 [label=<<table title="br.gov.to.sefaz.seg.managedbean.LoginMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/managedbean/LoginMB.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> LoginMB </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + LoginMB() </td></tr>
+<tr><td align="left" balign="left"> + doLogin() </td></tr>
+<tr><td align="left" balign="left"> + getDto() : LoginDto </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../seg/managedbean/LoginMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.managedbean.ConsultaHistoricoNavegacaoMB
+	c227753 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ConsultaHistoricoNavegacaoMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/managedbean/ConsultaHistoricoNavegacaoMB.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ConsultaHistoricoNavegacaoMB </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ConsultaHistoricoNavegacaoMB() </td></tr>
+<tr><td align="left" balign="left"> + search() </td></tr>
+<tr><td align="left" balign="left"> + getAllTiposOperacao() : TipoOperacaoEnum[] </td></tr>
+<tr><td align="left" balign="left"> + getResultList() : List&lt;HistoricoNavegacao&gt; </td></tr>
+<tr><td align="left" balign="left"> + getFilter() : HistoricoNavegacaoFilter </td></tr>
+<tr><td align="left" balign="left"> + setFacade(facade : ConsultaHistoricoNavegacaoFacade) </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../seg/managedbean/ConsultaHistoricoNavegacaoMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.managedbean.ConsultaComunicacaoSistemaMB
+	c227754 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ConsultaComunicacaoSistemaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/managedbean/ConsultaComunicacaoSistemaMB.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ConsultaComunicacaoSistemaMB </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ConsultaComunicacaoSistemaMB() </td></tr>
+<tr><td align="left" balign="left"> + prePopulateCommunications() </td></tr>
+<tr><td align="left" balign="left"> + search() </td></tr>
+<tr><td align="left" balign="left"> + getAllTiposComunicacao() : TipoComunicacaoEnum[] </td></tr>
+<tr><td align="left" balign="left"> + getResultList() : List&lt;ComunicacaoSistemaViewBean&gt; </td></tr>
+<tr><td align="left" balign="left"> + getFilter() : ConsultaComunicacaoSistemaFilter </td></tr>
+<tr><td align="left" balign="left"> + setFacade(facade : ConsultaComunicacaoSistemaFacade) </td></tr>
+<tr><td align="left" balign="left"> + getAllTiposPeriodosFiltro() : TipoPeriodoConsultaComunicacaoEnum[] </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../seg/managedbean/ConsultaComunicacaoSistemaMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.managedbean.ConsultaComunicacaoContribuinteMB
+	c227755 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ConsultaComunicacaoContribuinteMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/managedbean/ConsultaComunicacaoContribuinteMB.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ConsultaComunicacaoContribuinteMB </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ConsultaComunicacaoContribuinteMB() </td></tr>
+<tr><td align="left" balign="left"> + search() </td></tr>
+<tr><td align="left" balign="left"> + getAllTiposComunicacao() : TipoComunicacaoEnum[] </td></tr>
+<tr><td align="left" balign="left"> + getResultList() : List&lt;ComunicacaoContribuinte&gt; </td></tr>
+<tr><td align="left" balign="left"> + getFilter() : ComunicacaoContribuinteFilter </td></tr>
+<tr><td align="left" balign="left"> + setFacade(facade : ComunicacaoContribuinteFacade) </td></tr>
+<tr><td align="left" balign="left"> + getFacade() : ComunicacaoContribuinteFacade </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../seg/managedbean/ConsultaComunicacaoContribuinteMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable> extends br.gov.to.sefaz.presentation.managedbean.AutowiredMB
-	c47281:p -> c47287:p [dir=back,arrowtail=empty];
+	c227357:p -> c227365:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.seg.managedbean.LoginMB extends br.gov.to.sefaz.presentation.managedbean.AutowiredMB
+	c227357:p -> c227752:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.seg.managedbean.ConsultaHistoricoNavegacaoMB extends br.gov.to.sefaz.presentation.managedbean.AutowiredMB
+	c227357:p -> c227753:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.seg.managedbean.ConsultaComunicacaoSistemaMB extends br.gov.to.sefaz.presentation.managedbean.AutowiredMB
+	c227357:p -> c227754:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.seg.managedbean.ConsultaComunicacaoContribuinteMB extends br.gov.to.sefaz.presentation.managedbean.AutowiredMB
+	c227357:p -> c227755:p [dir=back,arrowtail=empty];
 }
 

@@ -1,0 +1,120 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
+<siteinfo>
+<sitename>SEFAZ-TO Wiki</sitename>
+<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<generator>JAMWiki 1.3.2</generator>
+<case>case-sensitive</case>
+<namespaces>
+<namespace key="-2">Media</namespace>
+<namespace key="-1">Special</namespace>
+<namespace key="0" />
+<namespace key="1">Comments</namespace>
+<namespace key="2">User</namespace>
+<namespace key="3">User comments</namespace>
+<namespace key="4">Project</namespace>
+<namespace key="5">Project comments</namespace>
+<namespace key="6">File</namespace>
+<namespace key="7">File comments</namespace>
+<namespace key="8">JAMWiki</namespace>
+<namespace key="9">JAMWiki comments</namespace>
+<namespace key="10">Template</namespace>
+<namespace key="11">Template comments</namespace>
+<namespace key="12">Help</namespace>
+<namespace key="13">Help comments</namespace>
+<namespace key="14">Category</namespace>
+<namespace key="15">Category comments</namespace>
+</namespaces>
+</siteinfo>
+<page>
+<title>Manuten����o do Cadastro de Perfil</title>
+<ns>0</ns>
+<id>435</id>
+<revision>
+<id>1229</id>
+<timestamp>2016-10-13T15:35:00Z</timestamp>
+<contributor>
+<username>admin</username>
+<id>1</id>
+</contributor>
+<comment />
+<text xml:space="preserve" bytes="2960">Acessar o menu &apos;&apos;&apos;Seguran��a do Sistema &gt; Ger��ncia &gt; Manuten����o de cadastro de perfis&apos;&apos;&apos;
+
+Nesta tela pode-se realizar: consulta de perfil, consulta de usu��rios atribu��dos ao perfil, consulta de pap��is por perfil, inclus��o de perfil, altera����o de perfil e exclus��o de perfil.
+
+Pode-se utilizar o campo destacado na imagem abaixo &apos;&apos;&apos;(Passo 1)&apos;&apos;&apos; para filtrar pelo nome do perfil, clicando no bot��o &apos;&apos;&apos;Consultar (Passo 2)&apos;&apos;&apos;.
+
+[[File:1 - SEGUC0440.jpg|1 - SEGUC0440]]
+
+----
+== Inserindo Perfil do Sistema ==
+
+Para inserir um perfil deve-se clicar no bot��o &apos;&apos;&apos;Inserir Perfil&apos;&apos;&apos; como mostrado no &apos;&apos;&apos;passo 1&apos;&apos;&apos; da imagem a seguir:
+
+[[File:2 - SEGUC0440.jpg|2 - SEGUC0440]]
+
+Ap��s, deve-se preencher o &apos;&apos;&apos;Nome do Perfil&apos;&apos;&apos;, &apos;&apos;&apos;Descri����o do Perfil&apos;&apos;&apos; e selecionar os &apos;&apos;&apos;Pap��is&apos;&apos;&apos;, de acordo com o &apos;&apos;&apos;passo 1 e passo 2&apos;&apos;&apos; da imagem:
+
+[[File:3 - SEGUC0440.jpg|3 - SEGUC0440]]
+
+Ap��s preencher, clica-se no bot��o &apos;&apos;&apos;Salvar (passo 3)&apos;&apos;&apos;.
+
+Para cancelar a inser����o do perfil, pode-se clicar no bot��o &apos;&apos;&apos;Fechar (passo 4)&apos;&apos;&apos;.
+
+----
+== Alterando Perfil do Sistema ==
+
+Ap��s carregar a lista de Perfis do Sistema, �� poss��vel alterar as informa����es de um Perfil, clicando no bot��o &apos;&apos;&apos;Alterar (passo 1)&apos;&apos;&apos; de acordo com  a imagem:
+
+[[File:4 - SEGUC0440.jpg|4 - SEGUC0440]]
+
+Ap��s clicar, aparecer�� uma tela para alterar o registro.
+
+Opcionalmente, pode-se alterar os campos &apos;&apos;&apos;Nome do Perfil&apos;&apos;&apos;, &apos;&apos;&apos;Descri����o do Perfil&apos;&apos;&apos; e selecionar os &apos;&apos;&apos;Pap��is&apos;&apos;&apos; do perfil, de acordo com o &apos;&apos;&apos;passo 1 e passo 2&apos;&apos;&apos; da imagem:
+
+[[File:5 - SEGUC0440.jpg|5 - SEGUC0440]]
+
+Ap��s preencher, clica-se no bot��o &apos;&apos;&apos;Salvar (passo 3)&apos;&apos;&apos;.
+
+Para cancelar a altera����o do perfil, pode-se clicar no bot��o &apos;&apos;&apos;Fechar (passo 4)&apos;&apos;&apos;.
+
+----
+== Excluindo Perfil do Sistema ==
+
+Para excluir um perfil, basta clicar no bot��o &apos;&apos;&apos;Excluir&apos;&apos;&apos; da lista de Perfis como mostrado na imagem a seguir no &apos;&apos;&apos;Passo 1&apos;&apos;&apos;.
+
+[[File:6 - SEGUC0440.jpg|6 - SEGUC0440]]
+
+Ao clicar, aparecer�� uma mensagem de confirma����o, para efetivar a exclus��o.
+
+----
+== Consulta de Usu��rios por Perfil ==
+
+Ap��s carregar a lista de Perfis do Sistema, �� poss��vel visualizar os Usu��rios que utilizam aquele Perfil, clicando no bot��o &apos;&apos;&apos;Ver usu��rios (passo 1)&apos;&apos;&apos; de acordo com  a imagem:
+
+[[File:7 - SEGUC0440.jpg|7 - SEGUC0440]]
+
+Em seguida, abrir�� uma tela com os usu��rios que utilizam aquele perfil, como mostrado na imagem a seguir:
+
+[[File:8 - SEGUC0440.jpg|8 - SEGUC0440]]
+
+Para fechar a tela, clica-se no bot��o &apos;&apos;&apos;Fechar (passo 1)&apos;&apos;&apos;.
+
+== Consulta de Pap��is por Perfil ==
+
+Ap��s carregar a lista de Perfis do Sistema, �� poss��vel visualizar os Pap��is que est��o atrelados ��quele Perfil, clicando no bot��o &apos;&apos;&apos;Ver pap��is (passo 1)&apos;&apos;&apos; de acordo com  a imagem:
+
+[[File:9 - SEGUC0440.jpg|9 - SEGUC0440]]
+
+Em seguida, abrir�� uma tela com os pap��is que aquele perfil utiliza, como mostrado na imagem a seguir:
+
+[[File:10 - SEGUC0440.jpg|10 - SEGUC0440]]
+
+Para fechar a tela, clica-se no bot��o &apos;&apos;&apos;Fechar (passo 1)&apos;&apos;&apos;.
+
+&lt;/br&gt;
+----
+[[Gest��o de Seguran��a | Voltar]]
+</text>
+</revision>
+</page>
+</mediawiki>

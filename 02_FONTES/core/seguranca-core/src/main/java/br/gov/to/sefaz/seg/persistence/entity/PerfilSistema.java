@@ -1,18 +1,21 @@
 package br.gov.to.sefaz.seg.persistence.entity;
 
 import br.gov.to.sefaz.persistence.entity.AbstractEntity;
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
+import org.hibernate.validator.constraints.NotEmpty;
 
+import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
+import javax.persistence.Transient;
 import javax.validation.constraints.Size;
 
 /**
@@ -28,33 +31,53 @@ public class PerfilSistema extends AbstractEntity<Long> {
     private static final long serialVersionUID = 5477245168795013108L;
 
     @Id
-    @NotNull
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sq_perfil_sistema")
+    @SequenceGenerator(name = "sq_perfil_sistema", schema = "SEFAZ_SEG",
+            sequenceName = "sq_perfil_sistema",
+            allocationSize = 1)
     @Column(name = "IDENTIFICACAO_PERFIL")
     private Long identificacaoPerfil;
 
-    @NotNull
-    @Size(min = 1, max = 30)
+    @NotEmpty(message = "#{seg_msg['seg.gestao.perfilSistema.nomePerfilSistema.vazio']}")
+    @Size(max = 30, message = "#{seg_msg['seg.gestao.perfilSistema.nomePerfilSistema.maximo']}")
     @Column(name = "NOME_PERFIL")
     private String nomePerfil;
 
-    @NotNull
-    @Size(min = 1, max = 120)
+    @NotEmpty(message = "#{seg_msg['seg.gestao.perfilSistema.descricaoPerfilSistema.vazio']}")
+    @Size(max = 120, message = "#{seg_msg['seg.gestao.perfilSistema.descricaoPerfilSistema.maximo']}")
     @Column(name = "DESCRICAO_PERFIL")
     private String descricaoPerfil;
 
-    @OneToMany
-    @JoinColumn(name = "IDENTIFICACAO_PERFIL", insertable = false, updatable = false)
-    @Fetch(FetchMode.JOIN)
+    @OneToMany(mappedBy = "perfilSistema", fetch = FetchType.LAZY)
     private Set<PerfilPapel> perfilPapel;
+
+    @OneToMany(mappedBy = "perfisSistema", fetch = FetchType.LAZY)
+    private Set<UsuarioPerfil> usuarioPerfil;
+
+    @Transient
+    private Long totalUsuarios;
+
+    @Transient
+    private Long totalPapeis;
 
     public PerfilSistema() {
         // Construtor para inicialização por reflexão.
+        perfilPapel = new HashSet<>();
     }
 
     public PerfilSistema(Long identificacaoPerfil, String nomePerfil, String descricaoPerfil) {
         this.identificacaoPerfil = identificacaoPerfil;
         this.nomePerfil = nomePerfil;
         this.descricaoPerfil = descricaoPerfil;
+    }
+
+    public PerfilSistema(Long identificacaoPerfil, String nomePerfil, String descricaoPerfil, Long totalUsuarios,
+            Long totalPapeis) {
+        this.identificacaoPerfil = identificacaoPerfil;
+        this.nomePerfil = nomePerfil;
+        this.descricaoPerfil = descricaoPerfil;
+        this.totalUsuarios = totalUsuarios;
+        this.totalPapeis = totalPapeis;
     }
 
     @Override
@@ -92,6 +115,30 @@ public class PerfilSistema extends AbstractEntity<Long> {
 
     public void setPerfilPapel(Set<PerfilPapel> perfilPapel) {
         this.perfilPapel = perfilPapel;
+    }
+
+    public Set<UsuarioPerfil> getUsuarioPerfil() {
+        return usuarioPerfil;
+    }
+
+    public void setUsuarioPerfil(Set<UsuarioPerfil> usuarioPerfil) {
+        this.usuarioPerfil = usuarioPerfil;
+    }
+
+    public Long getTotalUsuarios() {
+        return totalUsuarios;
+    }
+
+    public void setTotalUsuarios(Long totalUsuarios) {
+        this.totalUsuarios = totalUsuarios;
+    }
+
+    public Long getTotalPapeis() {
+        return totalPapeis;
+    }
+
+    public void setTotalPapeis(Long totalPapeis) {
+        this.totalPapeis = totalPapeis;
     }
 
     @Override

@@ -1,9 +1,9 @@
 package br.gov.to.sefaz.arr.parametros.business.service.validator;
 
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreas;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoTipos;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.PedidoAreasRepository;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.PedidoTiposRepository;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoAreas;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoTipos;
+import br.gov.to.sefaz.arr.persistence.repository.PedidoAreasRepository;
+import br.gov.to.sefaz.arr.persistence.repository.PedidoTiposRepository;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.violation.CustomViolation;
 import br.gov.to.sefaz.util.message.SourceBundle;
@@ -68,7 +68,7 @@ public class PedidoAreasQtdDiasByTipoValidatorTest {
         PedidoAreas pedidoAreas = createPedidoAreasMock();
         PedidoTipos pedidoTipos = createPedidoTiposMock();
 
-        when(repository.getTotalQtdDiasAnaliseByTipoAndNotId(1, 2)).thenReturn(5);
+        when(repository.getTotalQtdDiasAnaliseByTipoAndNotId(1, 2)).thenReturn(5L);
         when(pedidoAreas.getQuantidadeDiasAnalise()).thenReturn(2);
         when(pedidoTipos.getQuantidadeDiasAnalise()).thenReturn(1);
         when(tiposRepository.findOne(pedidoAreas.getIdTipoPedido())).thenReturn(pedidoTipos);

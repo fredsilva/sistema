@@ -10,14 +10,14 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.arr.parametros.business.service.TipoRejeicaoArquivosService
-	c37635 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.TipoRejeicaoArquivosService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TipoRejeicaoArquivosService.html">
+	c135302 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.TipoRejeicaoArquivosService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TipoRejeicaoArquivosService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> TipoRejeicaoArquivosService </td></tr>
 		</table></td></tr>
 		</table>>, URL="./TipoRejeicaoArquivosService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.impl.TipoRejeicaoArquivosServiceImpl
-	c37662 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.TipoRejeicaoArquivosServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/TipoRejeicaoArquivosServiceImpl.html">
+	c135329 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.TipoRejeicaoArquivosServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/TipoRejeicaoArquivosServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoRejeicaoArquivosServiceImpl </td></tr>
 		</table></td></tr>
@@ -32,11 +32,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./impl/TipoRejeicaoArquivosServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.arr.parametros.business.service.TipoRejeicaoArquivosService implements br.gov.to.sefaz.business.service.CrudService<E, I extends java.io.Serializable>
-	c37802:p -> c37635:p [dir=back,arrowtail=empty,style=dashed];
+	c135628:p -> c135302:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.arr.parametros.business.service.impl.TipoRejeicaoArquivosServiceImpl implements br.gov.to.sefaz.arr.parametros.business.service.TipoRejeicaoArquivosService
-	c37635:p -> c37662:p [dir=back,arrowtail=empty,style=dashed];
+	c135302:p -> c135329:p [dir=back,arrowtail=empty,style=dashed];
 	// br.gov.to.sefaz.business.service.CrudService<E, I extends java.io.Serializable>
-	c37802 [label=<<table title="br.gov.to.sefaz.business.service.CrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/service/CrudService.html">
+	c135628 [label=<<table title="br.gov.to.sefaz.business.service.CrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/service/CrudService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CrudService&lt;E, I extends Serializable&gt; </td></tr>
@@ -47,10 +47,10 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findOne(arg0 : I) : E </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAll() : Collection&lt;E&gt; </font></td></tr>
-<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAll(arg0 : Iterable&lt;I&gt;) : Collection&lt;E&gt; </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + save(arg0 : E) : E </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + save(arg0 : Collection&lt;E&gt;) : Collection&lt;E&gt; </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + update(arg0 : E) : E </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + update(arg0 : Collection&lt;E&gt;) : Collection&lt;E&gt; </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + delete(arg0 : I) : Optional&lt;E&gt; </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + delete(arg0 : Iterable&lt;I&gt;) </font></td></tr>
 		</table></td></tr>

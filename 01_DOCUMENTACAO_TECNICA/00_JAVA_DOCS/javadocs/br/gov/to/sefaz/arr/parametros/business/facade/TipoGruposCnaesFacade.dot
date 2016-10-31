@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.facade.CrudFacade<E, I extends java.io.Serializable>
-	c190163 [label=<<table title="br.gov.to.sefaz.business.facade.CrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../business/facade/CrudFacade.html">
+	c820187 [label=<<table title="br.gov.to.sefaz.business.facade.CrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../business/facade/CrudFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CrudFacade&lt;E, I extends Serializable&gt; </td></tr>
@@ -21,7 +21,6 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findOne(id : I) : E </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAll() : Collection&lt;E&gt; </font></td></tr>
-<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAll(list : Iterable&lt;I&gt;) : Collection&lt;E&gt; </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + save(entity : E) : E </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + save(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + update(entity : E) : E </font></td></tr>
@@ -30,7 +29,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../../business/facade/CrudFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.TipoGruposCnaesFacade
-	c190343 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.TipoGruposCnaesFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TipoGruposCnaesFacade.html">
+	c820523 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.TipoGruposCnaesFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TipoGruposCnaesFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> TipoGruposCnaesFacade </td></tr>
@@ -47,7 +46,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoGruposCnaesFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoGruposCnaesFacadeImpl
-	c190353 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoGruposCnaesFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/TipoGruposCnaesFacadeImpl.html">
+	c820533 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoGruposCnaesFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/TipoGruposCnaesFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoGruposCnaesFacadeImpl </td></tr>
 		</table></td></tr>
@@ -64,8 +63,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./impl/TipoGruposCnaesFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.arr.parametros.business.facade.TipoGruposCnaesFacade implements br.gov.to.sefaz.business.facade.CrudFacade<E, I extends java.io.Serializable>
-	c190163:p -> c190343:p [dir=back,arrowtail=empty,style=dashed];
+	c820187:p -> c820523:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoGruposCnaesFacadeImpl implements br.gov.to.sefaz.arr.parametros.business.facade.TipoGruposCnaesFacade
-	c190343:p -> c190353:p [dir=back,arrowtail=empty,style=dashed];
+	c820523:p -> c820533:p [dir=back,arrowtail=empty,style=dashed];
 }
 

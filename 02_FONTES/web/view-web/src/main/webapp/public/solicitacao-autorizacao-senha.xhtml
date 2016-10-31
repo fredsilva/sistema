@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:sat="http://sefaz.to.gov.br/composites"
+        xmlns:ui="http://java.sun.com/jsf/facelets"
+        xmlns:c="http://java.sun.com/jsp/jstl/core"
+        xmlns:a4j="http://richfaces.org/a4j">
+
+<h:head>
+    <title>#{msg['solicitacaoAutorizacao.titulo']}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <link href="#{pathResolverMB.cssPath('sat.css')}" rel="stylesheet" type="text/css"/>
+    <link href="#{pathResolverMB.cssPath('bootstrap.css')}" rel="stylesheet" type="text/css"/>
+    <h:outputScript library="javax.faces" name="jsf.js"/>
+    <h:outputScript library="org.richfaces" name="jquery.js"/>
+    <h:outputScript library="org.richfaces" name="richfaces.js"/>
+    <h:outputScript library="org.richfaces" name="richfaces-queue.js"/>
+    <h:outputScript library="js" name="lib/bootstrap.min.js"/>
+    <h:outputScript library="js" name="lib/jasny-bootstrap.min.js"/>
+    <h:outputScript library="js" name="lib/jquery.dataTables.js"/>
+    <h:outputScript library="js" name="lib/dataTables.bootstrap4.js"/>
+    <h:outputScript library="js" name="lib/natural.js"/>
+    <h:outputScript library="js" name="lib/jquery-ui.js"/>
+    <h:outputScript library="js" name="lib/jquery.maskMoney.min.js"/>
+    <h:outputScript library="js" name="lib/jquery.mask.js"/>
+    <h:outputScript library="js" name="core/sat.modals.js"/>
+    <h:outputScript library="js" name="core/sat.jsf.js"/>
+    <h:outputScript library="js" name="core/sat.forms.js"/>
+    <h:outputScript library="js" name="core/sat.dataTable.js"/>
+    <h:outputScript library="js" name="core/sat.defaultTemplate.js"/>
+    <h:outputScript library="js" name="seg/solicitacao-autorizacao-senha.js"/>
+</h:head>
+
+<h:body>
+    <h:form id="solicita-autorizacao-form">
+    <h:panelGroup id="pagina">
+        <c:if test="#{empty usuarioSistemaMB.dto.cpfUsuario}">
+            <div class="container">
+                <div class="jumbotron">
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <h:outputLabel>
+                                    #{msg['solicitacaoAutorizacao.identificacao.cadastro']}
+                                </h:outputLabel>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <h:outputLabel>
+                                    #{msg['solicitacaoAutorizacao.identificacao.texto']}
+                                </h:outputLabel>
+                            </div>
+                            <div class="form-group col-md-12">
+                                <button type="button"
+                                        class="btn btn-success align-bottom"
+                                        onclick="authUserCertificate('#{pathResolverMB.getCertificadoSolicitacaoPath()}',
+                                        '#{certificadoError}')" >
+                                    #{msg['solicitacaoAutorizacao.form.button.certificado']}
+                                </button>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <h:outputLabel
+                                        for="cpfUsuarioForm">
+                                    #{msg['solicitacaoAutorizacao.form.cpfUsuario']}
+                                </h:outputLabel>
+                                <h:inputText value="#{usuarioSistemaMB.dto.cpfUsuario}"
+                                        id="cpfUsuarioCadastroForm"
+                                        styleClass="form-control justInteger"
+                                        converter="cpfFacesConverter"
+                                        p:data-mask="999.999.999-99"
+                                        maxlength="14"
+                                />
+                                <h:commandLink id="btn-continuar" styleClass="btn btn-default align-bottom" >
+                                    #{msg['solicitacaoAutorizacao.form.button.continuar']}
+                                    <f:param name="cpf" value="#{usuarioSistemaMB.dto.cpfUsuario}"/>
+                                </h:commandLink>
+                            </div>
+                            <div id="cpfInvalido" class="form-group only-text col-md-6 text-red">
+                                <small>#{msg['solicitacaoAutorizacao.form.cpfInvalido']}</small>
+                            </div>
+                        </div>
+                        <a4j:jsFunction name="editUser" render="pagina">
+                            <a4j:param name="cpfUsuario" assignTo="#{usuarioSistemaMB.dto.cpfUsuario}"/>
+                            <a4j:param name="nomeUsuario" assignTo="#{usuarioSistemaMB.dto.nomeCompletoUsuario}"/>
+                            <a4j:param name="emailUsuario" assignTo="#{usuarioSistemaMB.dto.correioEletronico}"/>
+                        </a4j:jsFunction>
+                </div>
+            </div>
+        </c:if>
+        <c:if test="#{!empty usuarioSistemaMB.dto.cpfUsuario}">
+            <sat:panel title="#{msg['solicitacaoAutorizacao.titulo']}">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <h:outputLabel
+                                    for="cpfUsuarioForm">
+                                #{msg['solicitacaoAutorizacao.form.cpfUsuario']}
+                            </h:outputLabel>
+                            <h:inputText value="#{usuarioSistemaMB.dto.cpfUsuario}"
+                                    id="cpfUsuarioForm"
+                                    styleClass="form-control justInteger"
+                                    converter="cpfFacesConverter"
+                                    p:data-mask="999.999.999-99"
+                                    maxlength="14"
+                                    readonly="true"
+                            />
+                        </div>
+                        <div class="form-group col-md-6">
+                            <h:outputLabel
+                                    for="nomeCompletoUsuarioForm">
+                                #{msg['solicitacaoAutorizacao.form.nomeCompleto']}
+                            </h:outputLabel>
+                            <h:inputText value="#{usuarioSistemaMB.dto.nomeCompletoUsuario}"
+                                    id="nomeCompletoUsuarioForm"
+                                    styleClass="form-control"
+                                    maxlength="120"
+                            />
+                        </div>
+                        <div class="form-group col-md-3">
+                            <h:outputLabel
+                                    for="cepUsuarioForm">
+                                #{msg['solicitacaoAutorizacao.form.cep']}
+                            </h:outputLabel>
+                            <h:inputText value="#{usuarioSistemaMB.dto.cep}"
+                                    id="cepUsuarioForm"
+                                    styleClass="form-control"
+                                    p:data-mask="99999-999"
+                                    converter="cepFacesConverter"
+                                    maxlength="9"
+                            />
+                        </div>
+                        <div class="form-group col-md-3">
+                            <h:outputLabel
+                                    for="logradouroUsuarioForm">
+                                #{msg['solicitacaoAutorizacao.form.logradouro']}
+                            </h:outputLabel>
+                            <h:selectOneMenu value="#{usuarioSistemaMB.dto.codigoLogradouro}"
+                                    id="logradouroUsuarioForm"
+                                    styleClass="form-control">
+                                <f:selectItem value="#{null}"
+                                        itemValue=""
+                                        itemLabel="Selecione"/>
+                                <f:selectItems value="#{usuarioSistemaMB.logradouros}"
+                                        var="logradouroUsuarioForm"
+                                        itemValue="#{logradouroUsuarioForm.codigoLogradouro}"
+                                        itemLabel="#{logradouroUsuarioForm.descricaoLogradouro}"/>
+                            </h:selectOneMenu>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <h:outputLabel
+                                    for="enderecoUsuarioForm">
+                                #{msg['solicitacaoAutorizacao.form.endereco']}
+                            </h:outputLabel>
+                            <h:inputText value="#{usuarioSistemaMB.dto.endereco}"
+                                    id="enderecoUsuarioForm"
+                                    styleClass="form-control"
+                                    maxlength="100"
+                            />
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h:outputLabel
+                                    for="numeroEnderecoUsuarioForm">
+                                #{msg['solicitacaoAutorizacao.form.numeroEndereco']}
+                            </h:outputLabel>
+                            <h:inputText value="#{usuarioSistemaMB.dto.numeroEndereco}"
+                                    id="numeroEnderecoUsuarioForm"
+                                    styleClass="form-control justInteger"
+                                    maxlength="8"
+                            />
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h:outputLabel
+                                    for="apartamentoUsuarioForm">
+                                #{msg['solicitacaoAutorizacao.form.apartamento']}
+                            </h:outputLabel>
+                            <h:inputText value="#{usuarioSistemaMB.dto.apartamento}"
+                                    id="apartamentoUsuarioForm"
+                                    styleClass="form-control justInteger"
+                                    maxlength="8"
+                            />
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h:outputLabel
+                                    for="complementoUsuarioForm">
+                                #{msg['solicitacaoAutorizacao.form.complemento']}
+                            </h:outputLabel>
+                            <h:inputText value="#{usuarioSistemaMB.dto.complemento}"
+                                    id="complementoUsuarioForm"
+                                    styleClass="form-control"
+                                    maxlength="30"
+                            />
+                        </div>
+                        <div class="form-group col-md-12">
+                            <h:outputLabel
+                                    for="bairroUsuarioForm">
+                                #{msg['solicitacaoAutorizacao.form.bairro']}
+                            </h:outputLabel>
+                            <h:inputText value="#{usuarioSistemaMB.dto.bairro}"
+                                    id="bairroUsuarioForm"
+                                    styleClass="form-control"
+                                    maxlength="100"
+                            />
+                        </div>
+                        <div class="form-group col-md-5">
+                            <h:outputLabel
+                                    for="estadoUsuarioForm">
+                                #{msg['solicitacaoAutorizacao.form.estado']}
+                            </h:outputLabel>
+                            <h:selectOneMenu value="#{usuarioSistemaMB.dto.codigoEstado}"
+                                    id="estadoUsuarioForm"
+                                    styleClass="form-control" >
+                                <f:selectItems value="#{usuarioSistemaMB.estados}"
+                                        var="estadoUsuarioForm"
+                                        itemValue="#{estadoUsuarioForm.unidadeFederacao}"
+                                        itemLabel="#{estadoUsuarioForm.nomeEstado}"/>
+                                <f:ajax render="cidadeUsuarioForm" listener="#{usuarioSistemaMB.loadMunicipios()}"/>
+                            </h:selectOneMenu>
+                        </div>
+                        <div class="form-group col-md-5">
+                            <h:outputLabel
+                                    for="cidadeUsuarioForm">
+                                #{msg['solicitacaoAutorizacao.form.cidade']}
+                            </h:outputLabel>
+                            <h:selectOneMenu value="#{usuarioSistemaMB.dto.codigoMunicipio}" id="cidadeUsuarioForm"
+                                    styleClass="form-control" >
+                                <f:selectItems value="#{usuarioSistemaMB.municipios}"
+                                        var="cidadeUsuarioForm"
+                                        itemValue="#{cidadeUsuarioForm.codigoIbge}"
+                                        itemLabel="#{cidadeUsuarioForm.nomeMunicipio}"/>
+                            </h:selectOneMenu>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <h:outputLabel
+                                    for="telefoneResidencialUsuarioForm">
+                                #{msg['solicitacaoAutorizacao.form.telefoneResidencial']}
+                            </h:outputLabel>
+                            <h:inputText value="#{usuarioSistemaMB.dto.telefoneResidencial}"
+                                    id="telefoneResidencialUsuarioForm"
+                                    styleClass="form-control"
+                                    maxlength="20"/>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <h:outputLabel
+                                    for="enderecoContatoUsuarioForm">
+                                #{msg['solicitacaoAutorizacao.form.enderecoContato']}
+                            </h:outputLabel>
+                            <h:inputTextarea value="#{usuarioSistemaMB.dto.outroEnderecoContato}"
+                                    id="enderecoContatoUsuarioForm"
+                                    styleClass="form-control"
+                                    p:maxlength="300"
+                            />
+                        </div>
+                        <div class="form-group col-md-6">
+                            <h:outputLabel
+                                    for="correioEletronicoUsuarioForm">
+                                #{msg['solicitacaoAutorizacao.form.correioEletronico']}
+                            </h:outputLabel>
+                            <h:inputText value="#{usuarioSistemaMB.dto.correioEletronico}"
+                                    id="correioEletronicoUsuarioForm"
+                                    styleClass="form-control"
+                                    maxlength="50"
+                            />
+                        </div>
+                        <div class="form-group col-md-6">
+                            <h:outputLabel
+                                    for="celularUsuarioForm">
+                                #{msg['solicitacaoAutorizacao.form.telefoneCelular']}
+                            </h:outputLabel>
+                            <h:inputText value="#{usuarioSistemaMB.dto.telefoneCelular}"
+                                    id="celularUsuarioForm"
+                                    styleClass="form-control"
+                                    maxlength="10"
+                            />
+                        </div>
+                        <div class="form-group col-md-8">
+                            <h:outputLabel
+                                    for="tipoUsuarioUsuarioForm">
+                                #{msg['solicitacaoAutorizacao.form.tipoUsuario']}
+                            </h:outputLabel>
+                            <h:selectOneRadio id="tipoUsuarioUsuarioForm" styleClass="jsf-radio"
+                                    value="#{usuarioSistemaMB.dto.codigoTipoUsuario}">
+                                <f:selectItem itemValue="2"
+                                        itemLabel="#{msg['solicitacaoAutorizacao.form.contribuinte']}"/>
+                                <f:selectItem itemValue="3"
+                                        itemLabel="#{msg['solicitacaoAutorizacao.form.contribuinteOutroEstado']}"/>
+                                <f:selectItem itemValue="1" itemLabel="#{msg['solicitacaoAutorizacao.form.contador']}"/>
+                            </h:selectOneRadio>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <h:outputLabel
+                                    for="crcUsuarioForm">
+                                #{msg['solicitacaoAutorizacao.form.crc']}
+                            </h:outputLabel>
+                            <h:inputText value="#{usuarioSistemaMB.dto.crc}"
+                                    id="crcUsuarioForm"
+                                    styleClass="form-control"
+                                    maxlength="9"
+                            />
+                        </div>
+                        <div class="form-group col-md-6">
+                            <h:outputLabel>
+                                #{msg['solicitacaoAutorizacao.form.crc.observacao']}
+                            </h:outputLabel>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <h:outputLabel>
+                                #{msg['solicitacaoAutorizacao.form.cnpjEmpresa.observacao']}
+                            </h:outputLabel>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h:outputLabel
+                                    for="cnpjEmpresaUsuarioForm">
+                                #{msg['solicitacaoAutorizacao.form.cnpjEmpresa']}
+                            </h:outputLabel>
+                            <h:inputText value="#{usuarioSistemaMB.dto.cnpjNegocio}"
+                                    id="cnpjEmpresaUsuarioForm"
+                                    styleClass="form-control"
+                                    maxlength="18"
+                                    converter="cnpjFacesConverter"
+                                    p:data-mask="99.999.999/9999-99"
+                            />
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h:outputLabel
+                                    for="inscricaoEstadualUsuarioForm">
+                                #{msg['solicitacaoAutorizacao.form.inscricaoEstadual']}
+                            </h:outputLabel>
+                            <h:inputText value="#{usuarioSistemaMB.dto.inscricaoEstadualNegocio}"
+                                    id="inscricaoEstadualUsuarioForm"
+                                    styleClass="form-control"
+                                    maxlength="30"
+                            />
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h:outputLabel>
+                                #{msg['solicitacaoAutorizacao.form.inscricaoEstadual.observacao']}
+                            </h:outputLabel>
+                        </div>
+                        <div class="form-group col-md-12">
+                            <h:commandButton type="button" value="#{msg['solicitacaoAutorizacao.form.button.confirmar']}"
+                                    styleClass="btn btn-primary align-bottom" action="#{usuarioSistemaMB.saveNewUsuarioSistema}">
+                                <f:ajax execute="cpfUsuarioForm nomeCompletoUsuarioForm cepUsuarioForm logradouroUsuarioForm
+                                            enderecoUsuarioForm numeroEnderecoUsuarioForm apartamentoUsuarioForm
+                                            complementoUsuarioForm bairroUsuarioForm estadoUsuarioForm cidadeUsuarioForm
+                                            telefoneResidencialUsuarioForm enderecoContatoUsuarioForm correioEletronicoUsuarioForm
+                                            celularUsuarioForm crcUsuarioForm tipoUsuarioUsuarioForm cnpjEmpresaUsuarioForm
+                                            inscricaoEstadualUsuarioForm"
+                                            render="solicita-autorizacao-form" resetValues="true"/>
+                            </h:commandButton>
+                        </div>
+                    </div>
+            </sat:panel>
+        </c:if>
+    </h:panelGroup>
+    </h:form>
+    <ui:include src="/protected/views/templates/modals/core-modals.xhtml"/>
+    <ui:include src="/protected/views/templates/modals/success-marker.xhtml"/>
+    <div class="hide">
+        <h:messages/>
+    </div>
+</h:body>
+</html>

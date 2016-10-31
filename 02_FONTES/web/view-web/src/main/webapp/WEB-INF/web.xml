@@ -3,15 +3,15 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd ">
 
-    <security-constraint>
-        <web-resource-collection>
-            <web-resource-name>SAT</web-resource-name>
-            <url-pattern>/*</url-pattern>
-        </web-resource-collection>
-        <user-data-constraint>
-            <transport-guarantee>CONFIDENTIAL</transport-guarantee>
-        </user-data-constraint>
-    </security-constraint>
+     <security-constraint>
+         <web-resource-collection>
+             <web-resource-name>SAT</web-resource-name>
+             <url-pattern>/*</url-pattern>
+         </web-resource-collection>
+         <user-data-constraint>
+             <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+         </user-data-constraint>
+     </security-constraint>
 
     <context-param>
         <param-name>javax.faces.PROJECT_STAGE</param-name>
@@ -20,14 +20,6 @@
 
     <error-page>
         <location>/public/error-page.jsf</location>
-    </error-page>
-    <error-page>
-        <exception-type>br.gov.to.sefaz.exception.UnexpectedErrorException</exception-type>
-        <location>/protected/views/home.jsf</location>
-    </error-page>
-    <error-page>
-        <exception-type>javax.faces.application.ViewExpiredException</exception-type>
-        <location>/public/login.jsf</location>
     </error-page>
 
     <context-param>
@@ -61,7 +53,7 @@
     </servlet-mapping>
 
     <session-config>
-        <session-timeout>5</session-timeout>
+        <session-timeout>30</session-timeout>
     </session-config>
 
     <!-- Spring basic configurations -->

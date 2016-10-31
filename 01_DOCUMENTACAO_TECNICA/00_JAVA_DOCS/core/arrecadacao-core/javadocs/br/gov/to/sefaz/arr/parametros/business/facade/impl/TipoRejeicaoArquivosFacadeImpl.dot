@@ -10,14 +10,14 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.arr.parametros.business.facade.TipoRejeicaoArquivosFacade
-	c37045 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.TipoRejeicaoArquivosFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../TipoRejeicaoArquivosFacade.html">
+	c134235 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.TipoRejeicaoArquivosFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../TipoRejeicaoArquivosFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> TipoRejeicaoArquivosFacade </td></tr>
 		</table></td></tr>
 		</table>>, URL="../TipoRejeicaoArquivosFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoRejeicaoArquivosFacadeImpl
-	c37055 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoRejeicaoArquivosFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TipoRejeicaoArquivosFacadeImpl.html">
+	c134245 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoRejeicaoArquivosFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TipoRejeicaoArquivosFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoRejeicaoArquivosFacadeImpl </td></tr>
 		</table></td></tr>
@@ -28,12 +28,12 @@ digraph G {
 <tr><td align="left" balign="left"> + TipoRejeicaoArquivosFacadeImpl(service : TipoRejeicaoArquivosService) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./TipoRejeicaoArquivosFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	//br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoRejeicaoArquivosFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.arr.parametros.persistence.entity.TipoRejeicaoArquivos, java.lang.Integer>
-	c37232:p -> c37055:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoRejeicaoArquivosFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.arr.persistence.entity.TipoRejeicaoArquivos, java.lang.Integer>
+	c134581:p -> c134245:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoRejeicaoArquivosFacadeImpl implements br.gov.to.sefaz.arr.parametros.business.facade.TipoRejeicaoArquivosFacade
-	c37045:p -> c37055:p [dir=back,arrowtail=empty,style=dashed];
+	c134235:p -> c134245:p [dir=back,arrowtail=empty,style=dashed];
 	// br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c37232 [label=<<table title="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/facade/impl/DefaultCrudFacade.html">
+	c134581 [label=<<table title="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/facade/impl/DefaultCrudFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultCrudFacade&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
 		</table></td></tr>
@@ -44,7 +44,6 @@ digraph G {
 <tr><td align="left" balign="left"> + DefaultCrudFacade(arg0 : CrudService&lt;E, I&gt;) </td></tr>
 <tr><td align="left" balign="left"> + findOne(arg0 : I) : E </td></tr>
 <tr><td align="left" balign="left"> + findAll() : Collection&lt;E&gt; </td></tr>
-<tr><td align="left" balign="left"> + findAll(arg0 : Iterable&lt;I&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + save(arg0 : E) : E </td></tr>
 <tr><td align="left" balign="left"> + save(arg0 : Collection&lt;E&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + update(arg0 : E) : E </td></tr>

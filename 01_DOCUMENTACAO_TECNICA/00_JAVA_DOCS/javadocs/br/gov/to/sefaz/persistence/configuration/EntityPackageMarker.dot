@@ -10,14 +10,26 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.configuration.EntityPackageMarker
-	c92733 [label=<<table title="br.gov.to.sefaz.persistence.configuration.EntityPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./EntityPackageMarker.html">
+	c395160 [label=<<table title="br.gov.to.sefaz.persistence.configuration.EntityPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./EntityPackageMarker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> EntityPackageMarker </td></tr>
 		</table></td></tr>
 		</table>>, URL="./EntityPackageMarker.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.par.gestao.persistence.entity.CatEntityPackageMarker
+	c395312 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.entity.CatEntityPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../par/gestao/persistence/entity/CatEntityPackageMarker.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> CatEntityPackageMarker </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + CatEntityPackageMarker() </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../par/gestao/persistence/entity/CatEntityPackageMarker.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.entity.SegEntityPackageMarker
-	c92862 [label=<<table title="br.gov.to.sefaz.seg.persistence.entity.SegEntityPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/entity/SegEntityPackageMarker.html">
+	c395504 [label=<<table title="br.gov.to.sefaz.seg.persistence.entity.SegEntityPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/entity/SegEntityPackageMarker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SegEntityPackageMarker </td></tr>
 		</table></td></tr>
@@ -28,20 +40,20 @@ digraph G {
 <tr><td align="left" balign="left"> + SegEntityPackageMarker() </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../seg/persistence/entity/SegEntityPackageMarker.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	// br.gov.to.sefaz.cat.persistence.entity.CatEntityPackageMarker
-	c92917 [label=<<table title="br.gov.to.sefaz.cat.persistence.entity.CatEntityPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../cat/persistence/entity/CatEntityPackageMarker.html">
+	// br.gov.to.sefaz.cci.persistence.entity.CciEntityPackageMarker
+	c395596 [label=<<table title="br.gov.to.sefaz.cci.persistence.entity.CciEntityPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../cci/persistence/entity/CciEntityPackageMarker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> CatEntityPackageMarker </td></tr>
+<tr><td align="center" balign="center"> CciEntityPackageMarker </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + CatEntityPackageMarker() </td></tr>
+<tr><td align="left" balign="left"> + CciEntityPackageMarker() </td></tr>
 		</table></td></tr>
-		</table>>, URL="../../cat/persistence/entity/CatEntityPackageMarker.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	// br.gov.to.sefaz.arr.parametros.persistence.entity.ArrEntityPackageMarker
-	c93072 [label=<<table title="br.gov.to.sefaz.arr.parametros.persistence.entity.ArrEntityPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/parametros/persistence/entity/ArrEntityPackageMarker.html">
+		</table>>, URL="../../cci/persistence/entity/CciEntityPackageMarker.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.arr.persistence.entity.ArrEntityPackageMarker
+	c395772 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ArrEntityPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/entity/ArrEntityPackageMarker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArrEntityPackageMarker </td></tr>
 		</table></td></tr>
@@ -51,12 +63,14 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + ArrEntityPackageMarker() </td></tr>
 		</table></td></tr>
-		</table>>, URL="../../arr/parametros/persistence/entity/ArrEntityPackageMarker.html", fontname="arial", fontcolor="black", fontsize=10.0];
+		</table>>, URL="../../arr/persistence/entity/ArrEntityPackageMarker.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	//br.gov.to.sefaz.par.gestao.persistence.entity.CatEntityPackageMarker implements br.gov.to.sefaz.persistence.configuration.EntityPackageMarker
+	c395160:p -> c395312:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.seg.persistence.entity.SegEntityPackageMarker implements br.gov.to.sefaz.persistence.configuration.EntityPackageMarker
-	c92733:p -> c92862:p [dir=back,arrowtail=empty,style=dashed];
-	//br.gov.to.sefaz.cat.persistence.entity.CatEntityPackageMarker implements br.gov.to.sefaz.persistence.configuration.EntityPackageMarker
-	c92733:p -> c92917:p [dir=back,arrowtail=empty,style=dashed];
-	//br.gov.to.sefaz.arr.parametros.persistence.entity.ArrEntityPackageMarker implements br.gov.to.sefaz.persistence.configuration.EntityPackageMarker
-	c92733:p -> c93072:p [dir=back,arrowtail=empty,style=dashed];
+	c395160:p -> c395504:p [dir=back,arrowtail=empty,style=dashed];
+	//br.gov.to.sefaz.cci.persistence.entity.CciEntityPackageMarker implements br.gov.to.sefaz.persistence.configuration.EntityPackageMarker
+	c395160:p -> c395596:p [dir=back,arrowtail=empty,style=dashed];
+	//br.gov.to.sefaz.arr.persistence.entity.ArrEntityPackageMarker implements br.gov.to.sefaz.persistence.configuration.EntityPackageMarker
+	c395160:p -> c395772:p [dir=back,arrowtail=empty,style=dashed];
 }
 

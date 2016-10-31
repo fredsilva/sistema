@@ -3,9 +3,9 @@ package br.gov.to.sefaz.seg.persistence.entity;
 import br.gov.to.sefaz.persistence.entity.AbstractEntity;
 
 import java.util.Objects;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
@@ -38,8 +38,13 @@ public class PerfilPapel extends AbstractEntity<PerfilPapelPK> {
 
     @JoinColumn(name = "IDENTIFICACAO_PAPEL", referencedColumnName = "IDENTIFICACAO_PAPEL",
             insertable = false, updatable = false)
-    @ManyToOne(optional = false)
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
     private PapelSistema papelSistema;
+
+    @JoinColumn(name = "IDENTIFICACAO_PERFIL", referencedColumnName = "IDENTIFICACAO_PERFIL",
+            insertable = false, updatable = false)
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    private PerfilSistema perfilSistema;
 
     public PerfilPapel() {
         // Construtor para inicialização por reflexão.
@@ -77,6 +82,22 @@ public class PerfilPapel extends AbstractEntity<PerfilPapelPK> {
 
     public void setPapelSistema(PapelSistema papelSistema) {
         this.papelSistema = papelSistema;
+    }
+
+    public PerfilSistema getPerfilSistema() {
+        return perfilSistema;
+    }
+
+    public void setPerfilSistema(PerfilSistema perfilSistema) {
+        this.perfilSistema = perfilSistema;
+    }
+
+    public String getNomePapel() {
+        return Objects.isNull(papelSistema) ? "" : papelSistema.getNomePapel();
+    }
+
+    public String getDescricaoPapel() {
+        return Objects.isNull(papelSistema) ? "" : papelSistema.getDescricaoPapel();
     }
 
     @Override

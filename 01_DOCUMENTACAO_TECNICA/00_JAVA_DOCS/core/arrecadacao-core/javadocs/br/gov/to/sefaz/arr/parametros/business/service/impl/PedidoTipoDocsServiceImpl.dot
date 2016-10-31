@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.arr.parametros.business.service.PedidoTipoDocsService
-	c24726 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.PedidoTipoDocsService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../PedidoTipoDocsService.html">
+	c95901 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.PedidoTipoDocsService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../PedidoTipoDocsService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> PedidoTipoDocsService </td></tr>
@@ -23,7 +23,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../PedidoTipoDocsService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoTipoDocsServiceImpl
-	c24753 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoTipoDocsServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./PedidoTipoDocsServiceImpl.html">
+	c95928 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoTipoDocsServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./PedidoTipoDocsServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoTipoDocsServiceImpl </td></tr>
 		</table></td></tr>
@@ -35,12 +35,12 @@ digraph G {
 <tr><td align="left" balign="left"> + getTipoPedidoCampoEnumValues(idTipoPedido : Integer, tipoPedido : TipoPedidoAcoesEnum) : List&lt;TipoPedidoCampoEnum&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./PedidoTipoDocsServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	//br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoTipoDocsServiceImpl extends br.gov.to.sefaz.business.service.impl.DefaultCrudService<br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoTipoDocs, java.lang.Integer>
-	c24886:p -> c24753:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoTipoDocsServiceImpl extends br.gov.to.sefaz.business.service.impl.DefaultCrudService<br.gov.to.sefaz.arr.persistence.entity.PedidoTipoDocs, java.lang.Integer>
+	c96220:p -> c95928:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoTipoDocsServiceImpl implements br.gov.to.sefaz.arr.parametros.business.service.PedidoTipoDocsService
-	c24726:p -> c24753:p [dir=back,arrowtail=empty,style=dashed];
+	c95901:p -> c95928:p [dir=back,arrowtail=empty,style=dashed];
 	// br.gov.to.sefaz.business.service.impl.DefaultCrudService<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c24886 [label=<<table title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/service/impl/DefaultCrudService.html">
+	c96220 [label=<<table title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/service/impl/DefaultCrudService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultCrudService&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
 		</table></td></tr>
@@ -48,16 +48,15 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + DefaultCrudService(arg0 : BaseRepository&lt;E, I&gt;, arg1 : Sort) </td></tr>
+<tr><td align="left" balign="left"> + DefaultCrudService(arg0 : BaseRepository&lt;E, I&gt;) </td></tr>
 <tr><td align="left" balign="left"> + findOne(arg0 : I) : E </td></tr>
 <tr><td align="left" balign="left"> + findAll() : Collection&lt;E&gt; </td></tr>
-<tr><td align="left" balign="left"> + findAll(arg0 : Iterable&lt;I&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + save(arg0 : E) : E </td></tr>
 <tr><td align="left" balign="left"> + save(arg0 : Collection&lt;E&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + update(arg0 : E) : E </td></tr>
+<tr><td align="left" balign="left"> + update(arg0 : Collection&lt;E&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + delete(arg0 : I) : Optional&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + delete(arg0 : Iterable&lt;I&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getDefaultSort() : Sort </td></tr>
 		</table></td></tr>
 		</table>>, URL="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/service/impl/DefaultCrudService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 }

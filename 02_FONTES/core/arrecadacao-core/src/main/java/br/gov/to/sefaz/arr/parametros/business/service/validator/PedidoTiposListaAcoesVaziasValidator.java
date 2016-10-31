@@ -1,8 +1,8 @@
 package br.gov.to.sefaz.arr.parametros.business.service.validator;
 
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoTipos;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.TipoRejeicaoArquivos;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.PedidoTiposRepository;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoTipos;
+import br.gov.to.sefaz.arr.persistence.entity.TipoRejeicaoArquivos;
+import br.gov.to.sefaz.arr.persistence.repository.PedidoTiposRepository;
 import br.gov.to.sefaz.business.service.validation.ServiceValidator;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.violation.CustomViolation;

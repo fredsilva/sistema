@@ -9,7 +9,6 @@ function editRow(data) {
 function resetFields() {
     closeModal();
     clearFields("tipo-usuario-form");
-    clearFields("tipos-usuarios-table");
 }
 
 function resetOnSuccess(data) {

@@ -4,7 +4,6 @@ import br.gov.to.sefaz.presentation.managedbean.BeanFactoryMB;
 import br.gov.to.sefaz.seg.business.authentication.domain.ResetPasswordDto;
 import br.gov.to.sefaz.seg.business.authentication.facade.LoginSistemaFacade;
 import br.gov.to.sefaz.util.message.MessageUtil;
-
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.annotation.PostConstruct;
@@ -64,7 +63,7 @@ public class ResetPasswordMB {
      */
     public void resetPassword() {
         loginSistemaFacade.ldapResetPassword(dto);
-        MessageUtil.addMesage(MessageUtil.SEG, "reset.password.message.sucesso");
+        MessageUtil.addMessage(MessageUtil.SEG, "reset.password.message.sucesso");
     }
 
 }

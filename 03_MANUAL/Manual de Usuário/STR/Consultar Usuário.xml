@@ -1,0 +1,76 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
+<siteinfo>
+<sitename>SEFAZ-TO Wiki</sitename>
+<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<generator>JAMWiki 1.3.2</generator>
+<case>case-sensitive</case>
+<namespaces>
+<namespace key="-2">Media</namespace>
+<namespace key="-1">Special</namespace>
+<namespace key="0" />
+<namespace key="1">Comments</namespace>
+<namespace key="2">User</namespace>
+<namespace key="3">User comments</namespace>
+<namespace key="4">Project</namespace>
+<namespace key="5">Project comments</namespace>
+<namespace key="6">File</namespace>
+<namespace key="7">File comments</namespace>
+<namespace key="8">JAMWiki</namespace>
+<namespace key="9">JAMWiki comments</namespace>
+<namespace key="10">Template</namespace>
+<namespace key="11">Template comments</namespace>
+<namespace key="12">Help</namespace>
+<namespace key="13">Help comments</namespace>
+<namespace key="14">Category</namespace>
+<namespace key="15">Category comments</namespace>
+</namespaces>
+</siteinfo>
+<page>
+<title>Consultar Usu��rio</title>
+<ns>0</ns>
+<id>351</id>
+<revision>
+<id>1220</id>
+<timestamp>2016-10-13T15:30:30Z</timestamp>
+<contributor>
+<username>admin</username>
+<id>1</id>
+</contributor>
+<comment />
+<text xml:space="preserve" bytes="1452">Acessar o menu &apos;&apos;&apos;Seguran��a do Sistema &gt; Consulta &gt; Consulta de Usu��rio.&apos;&apos;&apos;
+
+Abrir�� a tela de manuten����o de usu��rios contendo a pesquisa de Consulta de Usu��rios cadastrados.
+
+== Pesquisando Usu��rios ==
+
+Para pesquisar Usu��rios cadastrados, �� necess��rio acessar o menu Seguran��a do Sistema &gt; Consulta&gt; Consulta de Usu��rio no sistema, informar algum dos filtros dispon��veis (passos 1) e clicar no bot��o Consultar (passo 2).
+
+[[File:consulta_de_usuario_01.png|Consulta de Usu��rio 01]]
+
+&apos;&apos;&apos;Considera����es a respeito dos campos a serem preenchidos pelo usu��rio:&apos;&apos;&apos;
+
+:*Ao menos um Filtro deve ser informado para que a consulta retorne registros.
+:*A consulta �� ordenada pelo Nome de Usu��rio ascendentemente.
+
+----
+== Visualizando Detalhes do Cadastro do Usu��rio ==
+
+Se desejar visualizar mais detalhes do cadastro de um usu��rio, pode-se acessar a tela Detalhes de Usu��rio atrav��s do ��cone de mesmo nome, conforme passo 1 abaixo.
+
+[[File:consulta_de_usuario_02.png|Consulta de Usu��rio 02]]
+
+Ao clicar no ��cone Detalhes do Usu��rio, no passo 1, �� exibida a janela Detalhes do Usu��rio, com as informa����es de cadastro do usu��rio. 
+
+[[File:consulta_de_usuario_03.png|Consulta de Usu��rio 03]]
+
+Essa �� uma tela de visualiza����o somente, na qual todos os campos ficam desabilitados para edi����o.
+
+Para voltar �� tela de pesquisa de usu��rios, deve-se clicar no bot��o Fechar (passo 2), ou fora da janela de Detalhes do Usu��rio.
+
+&lt;/br&gt;
+----
+[[Gest��o de Seguran��a | Voltar]]
+</text>
+</revision>
+</page>
+</mediawiki>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" id="1" x="48" y="25" width="721" height="336" text="PARAMETRIZAÇÃO DO PLANO DE CONTAS&#xA;http://..." measuredWidth="721" measuredHeight="336">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="19" x="549" y="326" width="103" height="23" text="&amp;Novo Plano" measuredWidth="103" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="22" x="657" y="326" width="98" height="23" text="Salvar" measuredWidth="98" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="93" x="163" y="248" text="Descrição do Plano *" measuredWidth="125" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="94" x="163" y="270" width="270" measuredWidth="270" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="95" x="304" y="326" width="120" text="1-Agricultura" measuredWidth="120" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="96" x="304" y="304" text="Grupo de CNAE" measuredWidth="95" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="117" x="440" y="270" width="105" measuredWidth="105" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="118" x="440" y="248" text="Conta Hierárquica" measuredWidth="108" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="119" x="549" y="270" width="96" measuredWidth="96" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="120" x="549" y="248" text="Código Contábil *" measuredWidth="107" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="121" x="652" y="270" width="110" text="1-Sintética" measuredWidth="110" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="122" x="652" y="248" text="Tipo de Conta *" measuredWidth="96" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Note" id="123" x="609" y="292" text="1-Sintética; 2-Analítica" measuredWidth="149" measuredHeight="29">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Checkbox" id="124" x="61" y="326" text="Permite Rateio?" measuredWidth="110" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="125" x="57" y="270" width="96" measuredWidth="96" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="126" x="57" y="248" text="Código do Plano *" measuredWidth="109" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="132" x="159" y="82" text="Descrição do Plano" measuredWidth="116" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="133" x="159" y="104" width="261" measuredWidth="261" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="136" x="423" y="104" width="96" measuredWidth="96" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="137" x="423" y="82" text="Código Contábil" measuredWidth="97" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="138" x="57" y="104" width="96" measuredWidth="96" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="139" x="57" y="82" text="Código do Plano" measuredWidth="99" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="140" x="527" y="104" width="94" text="1-Sintética" measuredWidth="94" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="141" x="527" y="82" text="Tipo de Conta" measuredWidth="86" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="142" x="657" y="104" width="101" height="23" text="&amp;Pesquisar" measuredWidth="101" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="143" x="57" y="136" width="704" height="83" text="Código do Plano {neutral},Descrição {neutral}, Código Contábil {neutral}, Tipo de Conta {neutral}, Conta Hierárquica {neutral},Situação {neutral},&#xA;,,,,,,{selected} {trash}" measuredWidth="704" measuredHeight="83" alternative="#eeeeee">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="144" x="176" y="326" width="121" text="1-ATIVO" measuredWidth="121" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="145" x="176" y="304" text="Situação *" measuredWidth="65" measuredHeight="23">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:WidgetGroup" id="153" x="281" y="220" measuredWidth="267" measuredHeight="23">
+    <widgets xsi:type="model:TextField" id="154" x="58" width="17" text="1" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="155" x="79" width="18" text="2" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="156" x="99" width="18" text="3" measuredWidth="18" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="157" x="118" width="17" text="4" measuredWidth="17" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="158" x="137" width="20" text="5" measuredWidth="20" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="159" x="160" text="Próximo" measuredWidth="57" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:TextField" id="160" width="56" text="Anterior" measuredWidth="56" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+    <widgets xsi:type="model:Spinner" id="161" x="226" text="10" measuredWidth="41" measuredHeight="23" borderColor="#0000ff">
+      <font/>
+    </widgets>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

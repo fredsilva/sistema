@@ -28,12 +28,12 @@
                             <h:inputText value="#{postoTrabalhoMB.filter.nomePostoTrabalho}"
                                     id="nomeFilter"
                                     styleClass="form-control"
-                                    maxlength="100"/>
+                                    maxlength="40"/>
                         </div>
                         <div class="form-group col-md-6">
                             <h:outputLabel
                                     for="unidOrganizacFilter">
-                                #{seg_msg['seg.gestao.unidadesOrgazinacionais.pesquisa.unidOrganizacPai']}
+                                #{seg_msg['seg.gestao.PostoTrabalho.pesquisa.unidOrganizac']}
                             </h:outputLabel>
                             <h:selectOneMenu value="#{postoTrabalhoMB.filter.identificacaoUnidOrganizac}"
                                     id="unidOrganizacFilter"
@@ -61,11 +61,8 @@
                                     id="insertPostoTrabalhoBtn"
                                     onclick="openModalInsert()">
                             </h:commandButton>
-                            <h:commandButton type="button"
-                                    value="#{seg_msg['seg.gestao.PostoTrabalho.pesquisa.ajuda']}"
-                                    styleClass="btn btn-primary"
-                            >
-                            </h:commandButton>
+
+                            <sat:opcaoAjudaButton />
                         </div>
                     </div>
                 </h:form>
@@ -98,7 +95,13 @@
                                 <span aria-hidden="true">&#xd7;</span>
                             </button>
                             <h4 class="modal-title"
-                                    id="postoTrabalhoModalTitle">#{seg_msg['seg.gestao.PostoTrabalho.form.titulo']}</h4>
+                                    id="postoTrabalhoModalTitleInsert">
+                                    #{seg_msg['seg.gestao.PostoTrabalho.form.titulo.insert']}
+                            </h4>
+                            <h4 class="modal-title"
+                                    id="postoTrabalhoModalTitleEdit">
+                                    #{seg_msg['seg.gestao.PostoTrabalho.form.titulo.edit']}
+                            </h4>
                         </div>
                         <div class="modal-body" id="postoTrabalhoModalBody">
                             <h:form id="posto-trabalho-form">
@@ -110,7 +113,7 @@
                                                 for="identificacaoUnidOrganizacForm">#{seg_msg['seg.gestao.PostoTrabalho.form.nomeUnidOrganizac']}
                                         </h:outputLabel>
                                         <h:selectOneMenu
-                                                value="#{postoTrabalhoMB.unidOrganizac}"
+                                                value="#{postoTrabalhoMB.dto.identificacaoUnidOrganizac}"
                                                 id="identificacaoUnidOrganizacForm"
                                                 styleClass="form-control">
                                             <f:selectItem value="#{null}" itemLabel=""/>
@@ -127,7 +130,7 @@
                                         <h:inputText
                                                 value="#{postoTrabalhoMB.dto.nomePostoTrabalho}"
                                                 id="nomePostoTrabalhoForm"
-                                                styleClass="form-control" maxlength="100"/>
+                                                styleClass="form-control" maxlength="60"/>
                                     </div>
                                 </div>
                                 <div class="modal-footer" id="postoTrabalhoModalFooter">

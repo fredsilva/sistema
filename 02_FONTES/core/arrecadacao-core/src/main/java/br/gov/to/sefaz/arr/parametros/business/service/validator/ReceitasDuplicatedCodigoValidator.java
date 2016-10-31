@@ -1,7 +1,7 @@
 package br.gov.to.sefaz.arr.parametros.business.service.validator;
 
-import br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.ReceitasRepository;
+import br.gov.to.sefaz.arr.persistence.entity.Receitas;
+import br.gov.to.sefaz.arr.persistence.repository.ReceitasRepository;
 import br.gov.to.sefaz.business.service.validation.ServiceValidator;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.violation.CustomViolation;
@@ -15,8 +15,8 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * Validação para duplicação de {@link br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas} no banco de dados,
- * através do {@link br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas#idReceita}.
+ * Validação para duplicação de {@link br.gov.to.sefaz.arr.persistence.entity.Receitas} no banco de dados,
+ * através do {@link br.gov.to.sefaz.arr.persistence.entity.Receitas#idReceita}.
  *
  * @author <a href="mailto:gabriel.santos@ntconsult.com.br">gabriel.santos</a>
  * @since 23/05/2016 14:53:00

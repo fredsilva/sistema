@@ -2,7 +2,6 @@ package br.gov.to.sefaz.business.service.validation;
 
 import br.gov.to.sefaz.business.service.validation.violation.CustomViolation;
 import br.gov.to.sefaz.util.message.SourceBundle;
-
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -21,7 +20,6 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
-
 import javax.validation.ConstraintViolation;
 import javax.validation.Validator;
 
@@ -56,7 +54,7 @@ public class ValidationSuiteAspect {
      * @param joinPoint contém as informações do parâmetro o qual será validado.
      * @throws NoSuchMethodException quando não encontra o método o qual o joinPoint referencia.
      */
-    @Before("execution(* *(@br.gov.to.sefaz.business.service.validation.ValidationSuite (*)))")
+    @Before("execution(* *(.., @br.gov.to.sefaz.business.service.validation.ValidationSuite (*), ..))")
     public void valid(JoinPoint joinPoint) throws NoSuchMethodException {
         // Lista de violações
         Set<CustomViolation> customViolations = new HashSet<>();
@@ -76,12 +74,13 @@ public class ValidationSuiteAspect {
                     String context = validationSuite.context();
                     Object arg = joinPoint.getArgs()[0];
                     Class clazz = validationSuite.clazz();
+                    boolean onlyCustom = validationSuite.onlyCustom();
 
                     if (clazz.equals(ValidationSuite.class) && !Objects.isNull(arg)) {
                         clazz = getArgClass(arg);
                     }
 
-                    customViolations.addAll(validate(arg, context, clazz));
+                    customViolations.addAll(validate(arg, context, clazz, onlyCustom));
                 }
             }
         }
@@ -99,14 +98,17 @@ public class ValidationSuiteAspect {
      *
      * @param arg objeto a ser validado
      * @param context contexto para execução das validações
+     * @param onlyCustom se deve rodar apenas os validadores custons
      * @return lista de {@link CustomViolation} contendo as violações encontradas através do {@link Validator} e
      *         {@link ServiceValidator}.
      */
     @SuppressWarnings({ "rawtypes", "unchecked" })
-    private Set<CustomViolation> validate(Object arg, String context, Class clazz) {
+    private Set<CustomViolation> validate(Object arg, String context, Class clazz, boolean onlyCustom) {
         Set<CustomViolation> customViolations = new HashSet<>();
 
-        customViolations.addAll(createCustomViolationsByContraints(arg));
+        if (!onlyCustom) {
+            customViolations.addAll(createCustomViolationsByContraints(arg));
+        }
 
         List<ServiceValidator> filteredServiceValidators = serviceValidators.stream()
                 .filter(validatorEntry -> validatorEntry.support(clazz, context)).collect(Collectors.toList());

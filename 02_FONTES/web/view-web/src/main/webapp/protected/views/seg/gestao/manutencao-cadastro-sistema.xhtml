@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:sat="http://sefaz.to.gov.br/composites"
+        xmlns:a4j="http://richfaces.org/a4j">
+
+<ui:composition template="/protected/views/templates/views/default-template.xhtml">
+
+    <ui:param name="pageTitle" value="#{seg_msg['seg.gestao.manutencaoCadastroSistema.titulo']}"/>
+
+    <ui:define name="header">
+        <h:outputScript library="js" name="seg/gestao/manutencao-cadastro-sistema.js"/>
+    </ui:define>
+
+    <ui:define name="content">
+        <sat:panel title="#{seg_msg['seg.gestao.manutencaoCadastroSistema.tabela.titulo']}">
+            <div class="col-md-12">
+                <h:form id="manutencao-cadastro-sistema-filtro">
+                    <div class="row">
+                        <div class="form-group col-md-offset-8 col-lg-4 text-right">
+                            <h:commandButton id="insertModuloSistemaBtn"
+                                    type="button"
+                                    value="#{seg_msg['seg.gestao.manutencaoCadastroSistema.pesquisa.inserirModulo']}"
+                                    class="btn btn-primary"
+                                    onclick="openModalInsert();">
+                            </h:commandButton>
+                            <sat:opcaoAjudaButton />
+                        </div>
+                    </div>
+                </h:form>
+            </div>
+
+            <sat:table id="manutencao-cadastro-sistema-table"
+                    bundle="seg_msg"
+                    content="#{moduloSistemaMB.resultList}"
+                    headers="seg.gestao.manutencaoCadastroSistema.tabela.numero,
+                             seg.gestao.manutencaoCadastroSistema.tabela.abreviacao,
+                             seg.gestao.manutencaoCadastroSistema.tabela.descricao,
+                             seg.gestao.manutencaoCadastroSistema.tabela.dataInclusao"
+                    fields="identificacaoModuloSistema,abreviacaoModulo,descricaoModuloSistema,dataInsercao:date"
+                    defaulSortColumn="1"
+                    hasActions="true"
+                    actionsHeader="seg.gestao.manutencaoCadastroSistema.tabela.acoes"
+                    actionEvents="edit-row:click:editRow,
+                                  delete-row:click:deleteModuloSistema(0):confirm:seg.gestao.manutencaoCadastroSistema.tabela.excluir.confirmacao">
+                <f:facet name="actions">
+                    <i class="edit-row glyphicon glyphicon-pencil" aria-hidden="true" data-toggle="tooltip"
+                            title="Alterar"
+                            role="button"/>
+                    <i class="delete-row glyphicon glyphicon-remove" aria-hidden="true" data-toggle="tooltip"
+                            title="Excluir"
+                            role="button"/>
+                </f:facet>
+            </sat:table>
+            <h:form>
+                <a4j:jsFunction name="deleteModuloSistema"
+                        action="#{moduloSistemaMB.delete()}"
+                        render="manutencao-cadastro-sistema-table"
+                        oncomplete="resetOnSuccess(event)">
+                    <a4j:param name="id" assignTo="#{moduloSistemaMB.dto.identificacaoModuloSistema}"/>
+                </a4j:jsFunction>
+            </h:form>
+
+            <div id="manutencaoCadastroSistemaModal" class="modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" id="manutencaoCadastroSistemaModalDialog">
+                    <div class="modal-content" id="manutencaoCadastroSistemaModalContent">
+                        <div class="modal-header" id="manutencaoCadastroSistemaModalHeader">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                <span aria-hidden="true">&#xd7;</span>
+                            </button>
+                            <h4 class="modal-title"
+                                    id="manutencaoCadastroSistemaModalTitleInsert">
+                                    #{seg_msg['seg.gestao.manutencaoCadastroSistema.form.titulo.insert']}
+                            </h4>
+                            <h4 class="modal-title"
+                                    id="manutencaoCadastroSistemaModalTitleEdit">
+                                    #{seg_msg['seg.gestao.manutencaoCadastroSistema.form.titulo.edit']}
+                            </h4>
+                        </div>
+                        <div class="modal-body" id="manutencaoCadastroSistemaModalBody">
+                            <h:form id="manutencao-cadastro-sistema-form">
+                                <div class="row">
+                                    <div class="form-group col-md-12">
+                                        <h:inputHidden id="identificacaoModuloSistemaForm"
+                                                value="#{moduloSistemaMB.dto.identificacaoModuloSistema}"/>
+                                        <h:outputLabel
+                                                for="abreviacaoForm">#{seg_msg['seg.gestao.manutencaoCadastroSistema.form.abreviacao']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{moduloSistemaMB.dto.abreviacaoModulo}"
+                                                id="abreviacaoForm"
+                                                styleClass="form-control" maxlength="3"/>
+                                    </div>
+
+                                    <div class="form-group col-md-12">
+                                        <h:outputLabel
+                                                for="descricaoForm">#{seg_msg['seg.gestao.manutencaoCadastroSistema.form.descricao']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{moduloSistemaMB.dto.descricaoModuloSistema}"
+                                                id="descricaoForm"
+                                                styleClass="form-control" maxlength="60"/>
+                                    </div>
+                                </div>
+                                <div class="modal-footer" id="manutencaoCadastroSistemaModalFooter">
+                                    <button type="button" class="btn btn-default align-bottom" data-dismiss="modal"
+                                            value="#{seg_msg['seg.gestao.manutencaoCadastroSistema.form.fechar']}"
+                                            aria-label="#{seg_msg['seg.gestao.manutencaoCadastroSistema.form.fechar']}">
+                                        <span aria-hidden="false">#{seg_msg['seg.gestao.manutencaoCadastroSistema.form.fechar']}</span>
+                                    </button>
+                                    <sat:saveUpdateButton
+                                            label="#{seg_msg['seg.gestao.manutencaoCadastroSistema.form.salvar']}"
+                                            render="manutencao-cadastro-sistema-table"
+                                            execute="identificacaoModuloSistemaForm abreviacaoForm descricaoForm"
+                                            onEvent="resetOnSuccess" styleClass="align-bottom"
+                                            crudMb="#{moduloSistemaMB}"/>
+                                </div>
+                            </h:form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </sat:panel>
+    </ui:define>
+
+</ui:composition>
+</html>

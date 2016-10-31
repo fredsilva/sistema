@@ -1,9 +1,9 @@
 package br.gov.to.sefaz.arr.parametros.business.service.validator;
 
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreas;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoTipos;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.PedidoAreasRepository;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.PedidoTiposRepository;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoAreas;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoTipos;
+import br.gov.to.sefaz.arr.persistence.repository.PedidoAreasRepository;
+import br.gov.to.sefaz.arr.persistence.repository.PedidoTiposRepository;
 import br.gov.to.sefaz.business.service.validation.ServiceValidator;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.violation.CustomViolation;
@@ -48,7 +48,7 @@ public class PedidoAreasQtdDiasByTipoValidator implements ServiceValidator<Pedid
 
         PedidoTipos tipo = tiposRepository.findOne(target.getIdTipoPedido());
 
-        Integer totalDias;
+        Long totalDias;
         if (Objects.isNull(target.getIdPedidoArea())) {
             totalDias = repository.getTotalQtdDiasAnaliseByTipo(target.getIdTipoPedido());
         } else {

@@ -5,7 +5,7 @@ import br.gov.to.sefaz.seg.business.authentication.domain.ResetPasswordDto;
 import br.gov.to.sefaz.seg.business.authentication.domain.UsuarioSistemaAuthentication;
 import br.gov.to.sefaz.seg.business.authentication.facade.LoginSistemaFacade;
 import br.gov.to.sefaz.seg.business.authentication.service.LoginSistemaService;
-import br.gov.to.sefaz.seg.exception.SecurityException;
+import br.gov.to.sefaz.seg.business.authentication.service.SecurityException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

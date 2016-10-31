@@ -1,11 +1,13 @@
 package br.gov.to.sefaz.exception;
 
-import br.gov.to.sefaz.seg.business.authentication.handler.AuthenticatedUserHandler;
+import br.gov.to.sefaz.util.application.ApplicationUtil;
 import br.gov.to.sefaz.util.exception.ExceptionUtils;
 import br.gov.to.sefaz.util.json.JsonMapperUtils;
 import br.gov.to.sefaz.util.message.SourceBundle;
 import br.gov.to.sefaz.util.properties.AppProperties;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.web.context.request.RequestContextHolder;
+import org.springframework.web.context.request.ServletRequestAttributes;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -18,11 +20,13 @@ import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 import javax.faces.FacesException;
+import javax.faces.application.ViewExpiredException;
 import javax.faces.context.ExceptionHandler;
 import javax.faces.context.ExceptionHandlerWrapper;
 import javax.faces.context.FacesContext;
 import javax.faces.event.ExceptionQueuedEvent;
 import javax.faces.event.ExceptionQueuedEventContext;
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * Tratador de exceções do sistema, intercepta todas as exceções que não são subclasses de
@@ -40,7 +44,7 @@ public class SatExceptionHandler extends ExceptionHandlerWrapper {
     public SatExceptionHandler(
             ExceptionHandler wrapped) {
         this.wrapped = wrapped;
-        logDir = AppProperties.getProperty("exception.log.directory").get();
+        logDir = AppProperties.getAppProperty("exception.log.directory").get();
         if (StringUtils.isEmpty(logDir)) {
             logDir = System.getProperty("jboss.server.log.dir");
         }
@@ -63,12 +67,27 @@ public class SatExceptionHandler extends ExceptionHandlerWrapper {
         List<String> eventIds = new ArrayList<>();
         while (i.hasNext()) {
             ExceptionQueuedEvent event = i.next();
-            ExceptionQueuedEventContext context = (ExceptionQueuedEventContext) event.getSource();
+            ExceptionQueuedEventContext eventContext = (ExceptionQueuedEventContext) event.getSource();
 
-            if (ExceptionUtils.isCausedByUnknownException(context.getException())) {
+            if (eventContext.getException() instanceof ViewExpiredException) {
+                try {
+                    HttpServletRequest request =
+                            ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+
+                    FacesContext.getCurrentInstance().getExternalContext()
+                            .redirect(request.getContextPath() + "/public/login.jsf");
+                } catch (IOException e) {
+                    String eventId = UUID.randomUUID().toString();
+
+                    logUnknownException(eventContext, eventId);
+                    eventIds.add(eventId);
+                }
+
+                i.remove();
+            } else if (ExceptionUtils.isCausedByUnknownException(eventContext.getException())) {
                 String eventId = UUID.randomUUID().toString();
 
-                logUnknownException(context, eventId);
+                logUnknownException(eventContext, eventId);
                 eventIds.add(eventId);
                 i.remove();
             }
@@ -80,11 +99,7 @@ public class SatExceptionHandler extends ExceptionHandlerWrapper {
     }
 
     private void logUnknownException(ExceptionQueuedEventContext context, String eventId) {
-        String cpf = "00000000000";
-        if (AuthenticatedUserHandler.isAuthenticated()) {
-            cpf = AuthenticatedUserHandler.getCpf();
-        }
-
+        String cpf = ApplicationUtil.getSafeNameAuthenticatedUser();
         LocalDateTime dateTime = LocalDateTime.now();
         Throwable exception = context.getException();
 
@@ -103,14 +118,14 @@ public class SatExceptionHandler extends ExceptionHandlerWrapper {
             Files.createDirectories(Paths.get(logDir));
             Files.write(Paths.get(logDir).resolve(logName), value.getBytes());
         } catch (IOException e) {
-            throw new UnexpectedErrorException("Erro ao gerar log de erro!", e);
+            throw new InterceptedErrorException("Erro ao gerar log de erro!", e);
         }
     }
 
     private void addUnexpectedEvent(String eventId) {
         final FacesContext facesContext = FacesContext.getCurrentInstance();
         String message = SourceBundle.getMessage("satExceptionHandler.unexpectedErrorException");
-        UnexpectedErrorException unexpectedException = new UnexpectedErrorException(String.format(message, eventId));
+        InterceptedErrorException unexpectedException = new InterceptedErrorException(String.format(message, eventId));
         ExceptionQueuedEventContext eventContext = new ExceptionQueuedEventContext(facesContext, unexpectedException);
 
         getUnhandledExceptionQueuedEvents().add(new ExceptionQueuedEvent(eventContext));

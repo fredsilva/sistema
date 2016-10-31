@@ -9,8 +9,21 @@ digraph G {
 	node [fontname="arial",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// br.gov.to.sefaz.persistence.configuration.SatParseDialect
+	c0 [label=<<table title="br.gov.to.sefaz.persistence.configuration.SatParseDialect" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SatParseDialect.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> SatParseDialect </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + JOIN_PATTERN : String </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + SatParseDialect() </td></tr>
+<tr><td align="left" balign="left"> + createOuterJoinFragment() : JoinFragment </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SatParseDialect.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.configuration.PersistenceConfiguration
-	c0 [label=<<table title="br.gov.to.sefaz.persistence.configuration.PersistenceConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PersistenceConfiguration.html">
+	c1 [label=<<table title="br.gov.to.sefaz.persistence.configuration.PersistenceConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PersistenceConfiguration.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PersistenceConfiguration </td></tr>
 		</table></td></tr>
@@ -26,11 +39,24 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PersistenceConfiguration.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.configuration.EntityPackageMarker
-	c1 [label=<<table title="br.gov.to.sefaz.persistence.configuration.EntityPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EntityPackageMarker.html">
+	c2 [label=<<table title="br.gov.to.sefaz.persistence.configuration.EntityPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EntityPackageMarker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> EntityPackageMarker </td></tr>
 		</table></td></tr>
 		</table>>, URL="./EntityPackageMarker.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.persistence.configuration.AuditableTablesIdentifier
+	c3 [label=<<table title="br.gov.to.sefaz.persistence.configuration.AuditableTablesIdentifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AuditableTablesIdentifier.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> AuditableTablesIdentifier </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ENTITY_NAME_PATTERN : String </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + AuditableTablesIdentifier() </td></tr>
+<tr><td align="left" balign="left"> + isAuditable(tableOrEntityName : String) : boolean </td></tr>
+		</table></td></tr>
+		</table>>, URL="./AuditableTablesIdentifier.html", fontname="arial", fontcolor="black", fontsize=10.0];
 }
 

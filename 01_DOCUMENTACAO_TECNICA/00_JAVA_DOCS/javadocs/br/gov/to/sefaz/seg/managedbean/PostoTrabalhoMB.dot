@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c160579 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../presentation/managedbean/impl/DefaultCrudMB.html">
+	c686441 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../presentation/managedbean/impl/DefaultCrudMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultCrudMB&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
 		</table></td></tr>
@@ -30,7 +30,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../presentation/managedbean/impl/DefaultCrudMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.PostoTrabalhoMB
-	c160917 [label=<<table title="br.gov.to.sefaz.seg.managedbean.PostoTrabalhoMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./PostoTrabalhoMB.html">
+	c686820 [label=<<table title="br.gov.to.sefaz.seg.managedbean.PostoTrabalhoMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./PostoTrabalhoMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PostoTrabalhoMB </td></tr>
 		</table></td></tr>
@@ -42,16 +42,12 @@ digraph G {
 <tr><td align="left" balign="left"> + getFilter() : PostoTrabalhoFilter </td></tr>
 <tr><td align="left" balign="left"> + setFacade(facade : PostoTrabalhoFacade) </td></tr>
 <tr><td align="left" balign="left"> + search() </td></tr>
-<tr><td align="left" balign="left"> + getUnidOrganizac() : Long </td></tr>
-<tr><td align="left" balign="left"> + setUnidOrganizac(unidOrganizac : Long) </td></tr>
 <tr><td align="left" balign="left"> + getAllUnidadeOrganizacionais() : Collection&lt;UnidadeOrganizacional&gt; </td></tr>
 <tr><td align="left" balign="left"> + loadAllUnidadeOrganizacionais() </td></tr>
-<tr><td align="left" balign="left"> + delete() </td></tr>
 <tr><td align="left" balign="left"> + getResultList() : Collection&lt;PostoTrabalho&gt; </td></tr>
-<tr><td align="left" balign="left"> + showDeleteMessage() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./PostoTrabalhoMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	//br.gov.to.sefaz.seg.managedbean.PostoTrabalhoMB extends br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<br.gov.to.sefaz.seg.persistence.entity.PostoTrabalho, java.lang.Long>
-	c160579:p -> c160917:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.seg.managedbean.PostoTrabalhoMB extends br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<br.gov.to.sefaz.seg.persistence.entity.PostoTrabalho, java.lang.Integer>
+	c686441:p -> c686820:p [dir=back,arrowtail=empty];
 }
 

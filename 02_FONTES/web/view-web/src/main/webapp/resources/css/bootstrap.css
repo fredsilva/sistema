@@ -6008,6 +6008,7 @@ button.close {
   line-height: 1.42857143;
 }
 .modal-body {
+  overflow-y: auto;
   position: relative;
   padding: 15px;
 }

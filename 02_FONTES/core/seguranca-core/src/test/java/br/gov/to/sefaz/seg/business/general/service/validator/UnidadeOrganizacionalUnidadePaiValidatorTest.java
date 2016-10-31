@@ -6,6 +6,7 @@ import br.gov.to.sefaz.seg.business.gestao.service.validator.UnidadeOrganizacion
 import br.gov.to.sefaz.seg.persistence.entity.UnidadeOrganizacional;
 import br.gov.to.sefaz.seg.persistence.repository.UnidadeOrganizacionalRepository;
 import br.gov.to.sefaz.util.message.SourceBundle;
+import org.apache.commons.lang3.StringUtils;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -55,7 +56,7 @@ public class UnidadeOrganizacionalUnidadePaiValidatorTest {
         // given
         UnidadeOrganizacional unidadeOrganizacional = createUnidadeOrganizacionalMocked();
 
-        assertFalse(validator.support(unidadeOrganizacional.getClass(), ""));
+        assertFalse(validator.support(unidadeOrganizacional.getClass(), StringUtils.EMPTY));
     }
 
     @Test

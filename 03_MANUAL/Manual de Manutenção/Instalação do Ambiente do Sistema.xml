@@ -1,0 +1,457 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
+<siteinfo>
+<sitename>SEFAZ-TO Wiki</sitename>
+<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<generator>JAMWiki 1.3.2</generator>
+<case>case-sensitive</case>
+<namespaces>
+<namespace key="-2">Media</namespace>
+<namespace key="-1">Special</namespace>
+<namespace key="0" />
+<namespace key="1">Comments</namespace>
+<namespace key="2">User</namespace>
+<namespace key="3">User comments</namespace>
+<namespace key="4">Project</namespace>
+<namespace key="5">Project comments</namespace>
+<namespace key="6">File</namespace>
+<namespace key="7">File comments</namespace>
+<namespace key="8">JAMWiki</namespace>
+<namespace key="9">JAMWiki comments</namespace>
+<namespace key="10">Template</namespace>
+<namespace key="11">Template comments</namespace>
+<namespace key="12">Help</namespace>
+<namespace key="13">Help comments</namespace>
+<namespace key="14">Category</namespace>
+<namespace key="15">Category comments</namespace>
+</namespaces>
+</siteinfo>
+<page>
+<title>Instala����o do Ambiente do Sistema</title>
+<ns>0</ns>
+<id>224</id>
+<revision>
+<id>1287</id>
+<timestamp>2016-10-14T09:16:45Z</timestamp>
+<contributor>
+<username>admin</username>
+<id>1</id>
+</contributor>
+<comment />
+<text xml:space="preserve" bytes="16813">=Instala����o do Ambiente do Sistema=
+
+Aqui ser��o apresentados os requisitos necess��rios para utilizar a ��ltima vers��o do sistema.
+
+Caso esteja utilizando uma vers��o anterior e n��o deseja configurar conforme a ��ltima vers��o, ent��o deve-se seguir os passos descritos em cada OS do [[Manual para Manuten����o do Sistema]].
+
+=&apos;&apos;&apos;Pr�� requisitos:&apos;&apos;&apos; =
+
+JDK 8, Wildfly, Maven, Git
+
+== Java Development Kit 8 (JDK8) ==
+
+=== Instala����o ===
+
+:*Acessar JDK8[http://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html] e baixar a jdk 8 mais recente para o seu sistema operacional.
+
+
+[[File:instalacao_jdk8_1.png|Instalacao JDK8 1]]
+
+:*Executar o arquivo baixado.
+
+:*Pressionar Next
+
+[[File:instalacao_jdk8_2.png|Instalacao JDK8 2]]
+
+:*Pressionar Next
+
+[[File:instalacao_jdk8_3.png|Instalacao JDK8 3]]
+
+:*Clicar Pr��ximo
+
+&apos;&apos;&apos;Observa����o:&apos;&apos;&apos; observe o caminho que ser�� automaticamente adicionado (o padr��o �� C:\Arquivos de Programas\Java) por��m, este caminho pode variar dependendo da linguagem do sistema, vers��o do Windows ou arquitetura do mesmo (32 ou 64bits). Pode-se alterar este caminho clicando em &quot;Alterar&quot; (guarde bem o caminho, voc�� ir�� precisar dele mais tarde).
+
+[[File:instalacao_jdk8_4.png|Instalacao JDK8 4]]
+
+:*Clicar close
+
+[[File:instalacao_jdk8_5.png|Instalacao JDK8 5]]
+
+=== Configura����o da vari��vel de ambiente JAVA ===
+
+:*Abrir o Windows explorer, clicar com o bot��o direito em Meu Computador e selecionar Propriedades
+
+[[File:variavel_ambiente_1.png|Variavel Ambiente 1]]
+
+:*Clicar em Configura����es Avan��adas do Sistema
+
+[[File:variavel_ambiente_2.png|Variavel Ambiente 2]]
+
+:*Selecionar ���Vari��veis de Ambiente...���
+
+[[File:variavel_ambiente_3.png|Variavel Ambiente 3]]
+
+:*Selecionar ���Novo...��� em vari��veis do sistema
+
+[[File:variavel_ambiente_4.png|Variavel Ambiente 4]]
+
+:*Inserir ���JAVA_HOME��� como nome da vari��vel e o caminho para a pasta de instala����o da JDK. O lugar padr��o de instala����o �� ���C:\Program Files\Java\jdk1.8.0_77\���.
+
+&apos;&apos;&apos;Observa����o:&apos;&apos;&apos; o caminho pode mudar dependendo da vers��o do JAVA instalado, da vers��o do Windows, ou da arquitetura do sistema (32 ou 64bits).
+
+[[File:variavel_ambiente_5.png|Variavel Ambiente 5]]
+
+:*Selecionar a vari��vel ���Path��� e clicar ���Editar...���
+
+[[File:variavel_ambiente_6.png|Variavel Ambiente 6]]
+
+:*Inserir ���%JAVA_HOME%bin;��� no in��cio do campo valor da vari��vel de sistema
+
+[[File:variavel_ambiente_7.png|Variavel Ambiente 7]]
+
+=== Teste da vari��vel de ambiente JAVA ===
+
+:*Abrir um prompt de comando
+
+Para abrir um prompt de comando, pode-se pesquisar no menu &apos;&apos;&apos;Iniciar&apos;&apos;&apos; por CMD e execut��-lo.
+
+:*Digitar ���echo %JAVA_HOME%��� (sem as aspas) e pressionar enter. Verificar se o caminho apresentado corresponde ao caminho da JDK instalada.
+
+[[File:teste_variavel_ambiente_1.png|Variavel Ambiente 1]]
+
+:*Digitar ���java ���version��� e pressionar enter. Verificar se a vers��o apresentada corresponde �� da JDK baixada.
+
+[[File:teste_variavel_ambiente_2.png|Variavel Ambiente 2]]
+
+== JBoss Wildfly ==
+
+=== Instala����o ===
+
+:*Baixe o JBoss Wildfly vers��o 10.0.0 final em http://wildfly.org/downloads/
+:*Descompacte o arquivo baixado no local aonde se deseja instalar o servidor
+
+=== Configura����o e teste da vari��vel de ambiente ===
+
+:*Adicionar a vari��vel de ambiente WILDFLY_HOME apontando para o local da instala����o do Wildfly conforme [[#Configura����o da vari��vel de ambiente JAVA|Configura����o da vari��vel de ambiente]]
+:*Abrir um prompt de comando, digitar o comando ���echo %WILDFLY_HOME%��� e pressionar enter
+:*Verificar se o caminho �� o mesmo da pasta de instala����o do Wildfly
+
+=== Teste da instala����o do Wildfly ===
+
+:*Execute o arquivo &apos;&apos;&apos;standalone.bat na pasta bin&apos;&apos;&apos; do Wildfly
+
+[[File:wildfly_1.png|Wildfly 1]]
+
+:*Acesse a url http://localhost:8080/ 
+:*Se for apresentada a imagem abaixo, a instala����o foi um sucesso.
+
+[[File:teste_wildfly_1.png|Teste Wildfly 1]]
+
+=== Adicionar Usu��rio ===
+
+:*Execute o arquivo add-user.bat na pasta bin do Wildfly
+
+[[File:wildfly_2.png|Wildfly 2]]
+
+:*Escolha a op����o Management User.
+
+[[File:wildfly_3.png|Wildfly 3]]
+
+:*Digite o usu��rio e senha desejados.
+
+[[File:wildfly_4.png|Wildfly 4]]
+
+:*Quando for questionado sobre os grupos do usu��rio, pressione enter
+
+[[File:wildfly_5.png|Wildfly 5]]
+
+=== Configura����o Datasource Wildfly para o Projeto ===
+
+:*Acessar  e baixar o driver ojdbc7.jar no caminho [[http://www.oracle.com/technetwork/database/features/jdbc/jdbc-drivers-12c-download-1958347.html]].
+
+[[File:wildfly_6.png|Wildfly 6]]
+
+:*Executar o arquivo ���.standalone.bat��� da pasta ���bin��� do Wildfly.
+
+:*Acessar o caminho http://localhost:8080, acessar  e logar com o login e senha criados, conforme configurado no passo [[#Adicionar Usu��rio]]
+
+[[File:wildfly_7.png|Wildfly 7]]
+
+:*Em Deployments clique em Add. Selecione ���upload a new deployment���, clique Next.
+
+[[File:wildfly_8.png|Wildfly 8]]
+
+:*Escolha o driver ojdbc7.jar baixado e clique Next, depois clique finish.
+
+[[File:wildfly_9.png|Wildfly 9]]
+
+:*Na aba Servers do eclipse, clique com o bot��o direito no Wildfly e selecione Restart.
+
+[[File:wildfly_10.png|Wildfly 10]]
+
+:*Acesse novamente e fa��a o login com o usu��rio criado.
+
+:*Em Configuration-&gt;Subsystems-&gt;Datasources-&gt;Non-XA clique em Add.
+
+[[File:wildfly_11.png|Wildfly 11]]
+
+:*Escolha Oracle Datasource e clique Next
+
+[[File:wildfly_12.png|Wildfly 12]]
+
+:*Clique Next
+
+[[File:wildfly_13.png|Wildfly 13]]
+
+:*Em Detected Driver selecione ojdbc7.jar e clique Next
+
+[[File:wildfly_14.png|Wildfly 14]]
+
+&apos;&apos;&apos;Preencha os campos com as configura����es das base de dados.&apos;&apos;&apos;
+
+:*Clicar em Test Connection para verificar as configura����es. Depois clicar em OK e Finish.
+
+[[File:wildfly_15.png|Wildfly 15]]
+
+:*Clicar em Reload the server
+
+[[File:wildfly_16.png|Wildfly 16]]
+
+=== Configura����o SSL com Certificado Digital ===
+
+:*�� necess��rio possuir a ferramenta Keytool, que se encontra no JRE do Java instalado.
+:*Com esta ferramenta ser�� gerado a chave do servidor de aplica����o, assim como as chaves confi��veis de acesso a este servidor.
+:*Para gerar a chave do servidor �� necess��rio acessar a pasta que se encontra o JRE do Java instalado. Geralmente se encontra em JAVA_HOME/jre/bin/ onde est�� o execut��vel da ferramenta Keytool, e realizar o seguinte comando:
+
+&apos;&apos;&apos;keytool.exe -genkey -keyalg RSA -keystore [NOME-DO-KEYSTORE].keystore -storepass [SENHA]&apos;&apos;&apos;
+
+:*Lembre-se de alterar os par��metros acima demonstrados em colchetes pelo nome e senha desejados.
+:*Para importar as chaves de permiss��o para acesso ao servidor, atrav��s do truststore, deve-se realizar o comando:
+
+&apos;&apos;&apos;keytool -import -alias [ALIAS] -file [ARQUIVO COM AS CREDENCIAIS] -keystore [NOME-DO-TRUSTSTORE].jks&apos;&apos;&apos;
+
+:*Ser�� solicitada uma senha, basta informar a senha desejada.
+:*Lembre-se de alterar os par��metros acima demonstrados em colchetes.
+
+:*Na pasta em que foram executados os comandos foram criados dois arquivos [NOME-DO-KEYSTORE].keystore e o [NOME-DO-TRUSTSTORE].jks. Copiar os dois arquivos para WILDFLY_HOME\standalone\configuration.
+:*Acesse o arquivo standalone.xml e adicione os seguintes elementos:
+
+[ADICIONE A SEGUINTE TAG ABAIXO DE &lt;security-realms&gt;]
+
+ &lt;security-realm name=&quot;UndertowRealm&quot;&gt;
+    &lt;server-identities&gt;
+        &lt;ssl&gt;
+            &lt;keystore path=&quot;[NOME-DO-KEYSTORE].keystore&quot; relative-to=&quot;jboss.server.config.dir&quot; keystore-password=&quot;[SENHA-DO-KEYSTORE]&quot; key-password=&quot;[SENHA-DO-KEYSTORE]&quot;/&gt;
+        &lt;/ssl&gt;
+    &lt;/server-identities&gt;
+    &lt;authentication&gt;
+         &lt;truststore path=&quot;[NOME-DO-TRUSTSTORE].jks&quot; relative-to=&quot;jboss.server.config.dir&quot; keystore-password=&quot;[SENHA-DO-TRUSTSTORE]&quot;/&gt;
+         &lt;local default-user=&quot;$local&quot; skip-group-loading=&quot;true&quot;/&gt;
+         &lt;properties path=&quot;mgmt-users.properties&quot; relative-to=&quot;jboss.server.config.dir&quot;/&gt;
+    &lt;/authentication&gt;
+ &lt;/security-realm&gt;
+
+
+[LOCALIZE O SUBSYSTEM UNDERTOW E ADICIONE AS TAGS CONFORME EXEMPLO]
+
+ &lt;subsystem xmlns=&quot;urn:jboss:domain:undertow:3.0&quot;&gt;
+     &lt;buffer-cache name=&quot;default&quot;/&gt;
+     &lt;server name=&quot;default-server&quot;&gt;
+            &apos;&apos;&apos;&lt;http-listener name=&quot;default&quot; socket-binding=&quot;http&quot; redirect-socket=&quot;https&quot;/&gt;&apos;&apos;&apos;
+            &apos;&apos;&apos;&lt;https-listener name=&quot;https&quot; security-realm=&quot;UndertowRealm&quot; socket-binding=&quot;https&quot;/&gt;&apos;&apos;&apos;
+            &apos;&apos;&apos;&lt;https-listener name=&quot;https2&quot; verify-client=&quot;REQUIRED&quot; security-realm=&quot;UndertowRealm&quot; socket-binding=&quot;https2&quot;/&gt;&apos;&apos;&apos;
+            &lt;host name=&quot;default-host&quot; alias=&quot;localhost&quot;&gt;
+                &lt;location name=&quot;/&quot; handler=&quot;welcome-content&quot;/&gt;
+                &lt;filter-ref name=&quot;server-header&quot;/&gt;
+                &lt;filter-ref name=&quot;x-powered-by-header&quot;/&gt;
+            &lt;/host&gt;
+      &lt;/server&gt;
+            &lt;servlet-container name=&quot;default&quot; default-encoding=&quot;UTF-8&quot; use-listener-encoding=&quot;true&quot;&gt;
+                &lt;jsp-config/&gt;
+                &lt;websockets/&gt;
+            &lt;/servlet-container&gt;
+            &lt;handlers&gt;
+                &lt;file name=&quot;welcome-content&quot; path=&quot;${jboss.home.dir}/welcome-content&quot;/&gt;
+            &lt;/handlers&gt;
+            &lt;filters&gt;
+                &lt;response-header name=&quot;server-header&quot; header-name=&quot;Server&quot; header-value=&quot;WildFly/10&quot;/&gt;
+                &lt;response-header name=&quot;x-powered-by-header&quot; header-name=&quot;X-Powered-By&quot; header-value=&quot;Undertow/1&quot;/&gt;
+            &lt;/filters&gt;
+ &lt;/subsystem&gt;
+
+[LOCALIZE O socket-binding-group ADICIONE A TAG &lt;socket-binding name=&quot;https2&quot; port=&quot;${jboss.https.port:8844}&quot;/&gt;]
+
+ &lt;socket-binding-group name=&quot;standard-sockets&quot; default-interface=&quot;public&quot; port-offset=&quot;${jboss.socket.binding.port-offset:0}&quot;&gt;
+        &lt;socket-binding name=&quot;management-http&quot; interface=&quot;management&quot; port=&quot;${jboss.management.http.port:9990}&quot;/&gt;
+        &lt;socket-binding name=&quot;management-https&quot; interface=&quot;management&quot; port=&quot;${jboss.management.https.port:9993}&quot;/&gt;
+        &lt;socket-binding name=&quot;ajp&quot; port=&quot;${jboss.ajp.port:8009}&quot;/&gt;
+        &lt;socket-binding name=&quot;http&quot; port=&quot;${jboss.http.port:8080}&quot;/&gt;
+        &lt;socket-binding name=&quot;https&quot; port=&quot;${jboss.https.port:8443}&quot;/&gt;
+        &apos;&apos;&apos;&apos;&apos;&lt;socket-binding name=&quot;https2&quot; port=&quot;${jboss.https.port:8844}&quot;/&gt;&apos;&apos;&apos;&apos;&apos;
+        &lt;socket-binding name=&quot;txn-recovery-environment&quot; port=&quot;4712&quot;/&gt;
+        &lt;socket-binding name=&quot;txn-status-manager&quot; port=&quot;4713&quot;/&gt;
+        &lt;outbound-socket-binding name=&quot;mail-smtp&quot;&gt;
+            &lt;remote-destination host=&quot;localhost&quot; port=&quot;25&quot;/&gt;
+        &lt;/outbound-socket-binding&gt;
+ &lt;/socket-binding-group&gt;
+
+=== Adicionar Certificado da ICP Brasil no Wildfly===
+
+:*Para que seja poss��vel se logar no sistema atrav��s do uso do certificado digital, �� necess��rio importar o arquivo .crt ra��z da ICP Brasil. Este e outros arquivos das demais Ag��ncias Certificadoras (ACs) se encontram no site [http://www.iti.gov.br/], o link utilizado para obter todos os certificados foi [http://www.iti.gov.br/noticias/188-atualizacao/4530-ac-raiz]. Como exemplo para configura����o ser�� utilizado a vers��o ICP-Brasilv2.crt. 
+
+:*Para importar o certificado basta realizar o comando de importa����o do Keytool previamente apresentado e colocar no local do [ARQUIVO COM AS CREDENCIAIS] o arquivo ICP-Brasilv2.crt conforme exemplo a seguir:
+
+&apos;&apos;&apos;keytool -import -alias [ALIAS] -file [CAMINHO ATE O ARQUIVO]\ICP-Brasilv2.crt -keystore [NOME-DO-TRUSTSTORE].jks&apos;&apos;&apos;
+
+:*Lembre-se de alterar os par��metros acima demonstrados em colchetes.
+:*O certificado digital testado foi da AC Valid, sendo que para uso de outros certificados de outras ACs deve-se verificar a vers��o ra��z destes certificados e adicion��-los no Truststore da mesma forma apresentada.
+=== Configura����o do LDAP no Wildfly ===
+
+:*Para que seja poss��vel se logar no sistema ou alterar a senha no Active Directory via protocolo LDAP �� necess��rio importar o certificado do AD no Java.
+:*Providencie o certificado do AD junto �� equipe de configura����o e manuten����o do Active Directory, o arquivo deve possuir a exten����o &apos;.crt&apos; ou &apos;.cer&apos;.
+:*Copie o certificado no servidor ou computador que est�� instalado o Wildfly.
+:*Entre na pasta de instala����o do Java JDK JAVA_HOME/jre/bin onde se encontra a instala����o do keytool.
+:*Para importar o certificado no Java JDK basta realizar o comando de importa����o do Keytool previamente apresentado conforme exemplo a seguir:
+
+&apos;&apos;&apos;keytool -import -alias [ALIAS] -file [CAMINHO ATE O ARQUIVO]/[NOME_CERTIFICADO_AD] -keystore JAVA_HOME/jre/lib/security/cacerts&apos;&apos;&apos;
+
+:*Altere os par��metros de configura����o no sistema conforme defini����es abaixo. Os par��metros espec��ficos do LDAP s��o os prefixados por &apos;ldap&apos;.
+== Maven ==
+
+=== Instala����o ===
+
+:*Acessar Maven[https://maven.apache.org/download.cgi] e baixar a ��ltima vers��o domesmo.
+
+[[File:maven_1.png|Maven 1]]
+
+:*Descompacte o arquivo baixado no local aonde se deseja instalar o Maven
+
+=== Configura����o da vari��vel de ambiente ===
+
+:*Adicionar a vari��vel de ambiente MAVEN_HOME apontando para o local da instala����o do maven conforme [[#Configura����o da vari��vel de ambiente JAVA|Configura����o da vari��vel de ambiente]]
+
+:*Adicionar no in��cio do campo Valor da vari��vel Path ���%MAVEN_HOME%\bin;���
+
+=== Teste da vari��vel de ambiente e da instala����o do Maven ===
+
+:*Abrir um prompt de comando, digitar ���echo %MAVEN_HOME%��� (sem as aspas) e pressionar enter
+
+:*Verificar se o caminho corresponde ao local de instala����o do maven
+
+:*Abrir um prompt de comando, digitar ���mvn ���version��� (sem as aspas) e pressionar enter. Verificar que a vers��o instalada �� a mesma que foi baixada
+
+== Git ==
+
+=== Instala����o ===
+
+:*Acessar GIT[[https://git-scm.com/downloads]] e baixar o instalador para a ��ltima vers��o do Git.
+
+:*Executar o instalador
+:*Clicar Next
+
+[[File:git_1.png|git 1]]
+
+:*Clicar Next
+
+[[File:git_2.png|git 2]]
+
+:*Clicar Next
+
+[[File:git_3.png|git 3]]
+
+:*Clicar Next
+
+[[File:git_4.png|git 4]]
+
+:*Clicar Next
+
+[[File:git_5.png|git 5]]
+
+:*Clicar Next
+
+[[File:git_6.png|git 6]]
+
+:*Clicar Next
+
+[[File:git_7.png|git 7]]
+
+:*Clicar Install
+
+[[File:git_8.png|git 8]]
+
+:*Clicar Finish
+
+[[File:git_9.png|git 9]]
+
+=== Clonar o Projeto com Git BASH ===
+
+==== Projeto Sistema ====
+
+:*Criar um workspace (pasta) onde ficar�� o projeto.
+:*Entre na pasta criada e atrav��s do Git BASH realizar o comando: ���git clone [servidor]:[local.git] sat��� (sem as aspas) Obs: O servidor:local.git �� o caminho do projeto no respectivo servidor.
+:*Ir�� solicitar a senha.
+
+
+=Configura����es do Sistema=
+
+==Configura����o das Propriedades Gerais do Sistema==
+
+Para alterar a configura����o das propriedades do sistema, deve-se editar o arquivo &apos;&apos;&apos;&apos;&apos;application.properties&apos;&apos;&apos;&apos;&apos; dispon��vel no caminho &apos;&apos;&apos;&apos;&apos;(WILDFLY_HOME/standalone/configuration/application.properties)&apos;&apos;&apos;&apos;&apos;, onde WILDFLY_HOME compreende �� pasta onde o servidor de aplica����o est�� instalado.
+
+o arquivo cont��m os seguintes par��metros:
+
+*&apos;&apos;&apos;exception.log.directory&apos;&apos;&apos; - Caminho para o diret��rio onde ser��o armazenados os Logs das exce����es do sistema. Se n��o for informado valor para esta propriedade as exce����es ser��o armazenadas na pasta de log do servidor de aplica����o &apos;&apos;&apos;&apos;&apos;(WILDFLY_HOME/standalone/log)&apos;&apos;&apos;&apos;&apos;.
+
+*&apos;&apos;&apos;email.host&apos;&apos;&apos; - Host do servidor de email.
+*&apos;&apos;&apos;email.port&apos;&apos;&apos; - Porta do servidor de email.
+*&apos;&apos;&apos;email.username&apos;&apos;&apos; - Usu��rio do servidor de email, o qual ser�� respons��vel por enviar as mensagens do sistema.
+*&apos;&apos;&apos;email.password&apos;&apos;&apos; - Senha do usu��rio do servidor de email.
+
+*&apos;&apos;&apos;host.port&apos;&apos;&apos; - Porta do sistema.
+*&apos;&apos;&apos;certificado.port&apos;&apos;&apos; - Porta para autentica����o do certificado digital.
+
+*&apos;&apos;&apos;ldap.provider.url&apos;&apos;&apos; - URL do LDAP.
+*&apos;&apos;&apos;ldap.provider.url.ssl&apos;&apos;&apos; - URL segura do LDAP.
+*&apos;&apos;&apos;ldap.provider.domain&apos;&apos;&apos; - Dom��nio do LDAP.
+*&apos;&apos;&apos;ldap.provider.baseDomain&apos;&apos;&apos; - Dom��nio de pesquisa de usu��rio do LDAP.
+*&apos;&apos;&apos;ldap.provider.userManager&apos;&apos;&apos; - Administrador do LDAP.
+*&apos;&apos;&apos;ldap.provider.passwdManager&apos;&apos;&apos; - Senha do Administrador do LDAP.
+*&apos;&apos;&apos;ldap.connect.timeout&apos;&apos;&apos; - Tempo m��ximo de espera para realizar a conex��o com o LDAP.
+
+*&apos;&apos;&apos;arrec.directory&apos;&apos;&apos; - Diret��rio que realiza a recep����o dos arquivos de arrecada����o.
+
+= Deploy do Sistema =
+
+:*Ap��s clonar o projeto atrav��s do Git, entre na pasta &quot;sistema&quot; e procure pela pasta &quot;02_FONTES&quot;, onde ficam os arquivos fonte do sistema.
+:*Entre na pasta &quot;02_FONTES&quot; e realize o comando: &quot;mvn clean deploy&quot;.
+:*Ao finalizar o comando o .ear estar�� dispon��vel para o servidor Wildfly.
+:*Acesse o painel administrador do Wildfly (URL:http://localhost:9990).
+:*Acesse a op����o &quot;Deployments&quot;&apos;&apos;&apos;
+
+[[File:deploy_sistema_1.png|Deploy 1]]
+
+:*Pressione &quot;Add&quot; e selecione a op����o &quot;Upload a new deployment&quot; e pressione &quot;Next&quot;
+
+[[File:deploy_sistema_2.png|Deploy 2]]
+
+:*Selecione o arquivo .ear que est�� localizado dentro da pasta &quot;sistema\02_FONTES\ear\target&quot;
+
+[[File:deploy_sistema_3.png|Deploy 3]]
+
+:*Pressione &quot;Finish&quot; e aguarde o deploy do sistema
+
+[[File:deploy_sistema_4.png|Deploy 4]]
+
+:*Ao finalizar o arquivo .ear estar�� na lista de Deployments
+
+[[File:deploy_sistema_5.png|Deploy 5]]
+
+:*A URL para acessar a aplica����o ��: &quot;http://localhost:8080/sat/public/login.jsf&quot;. &apos;&apos;&apos;OBS:&apos;&apos;&apos; O nome do &apos;&apos;Deploy&apos;&apos; �� o nome que ser�� atribu��do ap��s o &quot;localhost:8080/&quot;, ficando &quot;http://localhost:8080/[nome do deploy]/public/login.jsf&quot;
+
+[[File:deploy_sistema_6.png|Deploy 6]]
+
+----
+[[Manual de Manuten����o | Voltar]]
+</text>
+</revision>
+</page>
+</mediawiki>

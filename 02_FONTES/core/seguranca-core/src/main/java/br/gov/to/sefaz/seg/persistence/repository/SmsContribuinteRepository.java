@@ -12,6 +12,5 @@ import org.springframework.stereotype.Repository;
  * @since 13/05/2016 17:41:56
  */
 @Repository
-public interface SmsContribuinteRepository extends BaseRepository<SmsContribuinte, Long> {
-
+public class SmsContribuinteRepository extends BaseRepository<SmsContribuinte, Long> {
 }

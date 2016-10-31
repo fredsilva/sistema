@@ -1,6 +1,6 @@
 package br.gov.to.sefaz.arr.parametros.business.service;
 
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoTipos;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoTipos;
 import br.gov.to.sefaz.business.service.CrudService;
 
 /**

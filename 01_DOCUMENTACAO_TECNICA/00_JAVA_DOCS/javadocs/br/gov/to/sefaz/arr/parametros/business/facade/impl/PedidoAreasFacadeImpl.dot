@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c128794 [label=<<table title="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/facade/impl/DefaultCrudFacade.html">
+	c605532 [label=<<table title="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/facade/impl/DefaultCrudFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultCrudFacade&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
 		</table></td></tr>
@@ -21,7 +21,6 @@ digraph G {
 <tr><td align="left" balign="left"> + DefaultCrudFacade(service : CrudService&lt;E, I&gt;) </td></tr>
 <tr><td align="left" balign="left"> + findOne(id : I) : E </td></tr>
 <tr><td align="left" balign="left"> + findAll() : Collection&lt;E&gt; </td></tr>
-<tr><td align="left" balign="left"> + findAll(list : Iterable&lt;I&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + save(entity : E) : E </td></tr>
 <tr><td align="left" balign="left"> + save(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + update(entity : E) : E </td></tr>
@@ -30,7 +29,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../../../business/facade/impl/DefaultCrudFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.PedidoAreasFacade
-	c128977 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.PedidoAreasFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../PedidoAreasFacade.html">
+	c605871 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.PedidoAreasFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../PedidoAreasFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> PedidoAreasFacade </td></tr>
@@ -51,7 +50,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../PedidoAreasFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoAreasFacadeImpl
-	c128987 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoAreasFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./PedidoAreasFacadeImpl.html">
+	c605881 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoAreasFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./PedidoAreasFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoAreasFacadeImpl </td></tr>
 		</table></td></tr>
@@ -71,9 +70,9 @@ digraph G {
 <tr><td align="left" balign="left"> + validateServidorChefe(servidores : List&lt;PedidoAreasServidores&gt;) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./PedidoAreasFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	//br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoAreasFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreas, java.lang.Integer>
-	c128794:p -> c128987:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoAreasFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.arr.persistence.entity.PedidoAreas, java.lang.Integer>
+	c605532:p -> c605881:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoAreasFacadeImpl implements br.gov.to.sefaz.arr.parametros.business.facade.PedidoAreasFacade
-	c128977:p -> c128987:p [dir=back,arrowtail=empty,style=dashed];
+	c605871:p -> c605881:p [dir=back,arrowtail=empty,style=dashed];
 }
 

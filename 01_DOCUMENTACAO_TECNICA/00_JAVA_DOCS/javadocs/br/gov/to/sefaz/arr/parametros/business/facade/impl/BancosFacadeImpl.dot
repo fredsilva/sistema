@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c53689 [label=<<table title="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/facade/impl/DefaultCrudFacade.html">
+	c240194 [label=<<table title="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/facade/impl/DefaultCrudFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultCrudFacade&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
 		</table></td></tr>
@@ -21,7 +21,6 @@ digraph G {
 <tr><td align="left" balign="left"> + DefaultCrudFacade(service : CrudService&lt;E, I&gt;) </td></tr>
 <tr><td align="left" balign="left"> + findOne(id : I) : E </td></tr>
 <tr><td align="left" balign="left"> + findAll() : Collection&lt;E&gt; </td></tr>
-<tr><td align="left" balign="left"> + findAll(list : Iterable&lt;I&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + save(entity : E) : E </td></tr>
 <tr><td align="left" balign="left"> + save(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + update(entity : E) : E </td></tr>
@@ -30,14 +29,14 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../../../business/facade/impl/DefaultCrudFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.BancosFacade
-	c53875 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.BancosFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../BancosFacade.html">
+	c240536 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.BancosFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../BancosFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> BancosFacade </td></tr>
 		</table></td></tr>
 		</table>>, URL="../BancosFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.impl.BancosFacadeImpl
-	c53885 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.BancosFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./BancosFacadeImpl.html">
+	c240546 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.BancosFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./BancosFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BancosFacadeImpl </td></tr>
 		</table></td></tr>
@@ -48,9 +47,9 @@ digraph G {
 <tr><td align="left" balign="left"> + BancosFacadeImpl(service : BancosService) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./BancosFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	//br.gov.to.sefaz.arr.parametros.business.facade.impl.BancosFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.arr.parametros.persistence.entity.Bancos, java.lang.Integer>
-	c53689:p -> c53885:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.arr.parametros.business.facade.impl.BancosFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.arr.persistence.entity.Bancos, java.lang.Integer>
+	c240194:p -> c240546:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.parametros.business.facade.impl.BancosFacadeImpl implements br.gov.to.sefaz.arr.parametros.business.facade.BancosFacade
-	c53875:p -> c53885:p [dir=back,arrowtail=empty,style=dashed];
+	c240536:p -> c240546:p [dir=back,arrowtail=empty,style=dashed];
 }
 

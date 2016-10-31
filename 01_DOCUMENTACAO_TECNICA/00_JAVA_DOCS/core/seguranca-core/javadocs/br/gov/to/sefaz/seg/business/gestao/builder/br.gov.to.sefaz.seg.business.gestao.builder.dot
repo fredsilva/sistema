@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.gestao.builder.LogNavegacaoBuilder
-	c1072 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.builder.LogNavegacaoBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LogNavegacaoBuilder.html">
+	c3751 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.builder.LogNavegacaoBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LogNavegacaoBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LogNavegacaoBuilder </td></tr>
 		</table></td></tr>
@@ -23,11 +23,13 @@ digraph G {
 <tr><td align="left" balign="left"> + withDataOperacao(dateTime : LocalDateTime) : LogNavegacaoBuilder </td></tr>
 <tr><td align="left" balign="left"> + withDetalheNavegacao(detalheNavegacao : DetalheNavegacao) : LogNavegacaoBuilder </td></tr>
 <tr><td align="left" balign="left"> + withTipoOperacao(tipoOperacao : TipoOperacaoEnum) : LogNavegacaoBuilder </td></tr>
+<tr><td align="left" balign="left"> + withCpfCnpjProcurado(cpfCnpj : String) : LogNavegacaoBuilder </td></tr>
+<tr><td align="left" balign="left"> + withUrlAcesso(resource : String) : LogNavegacaoBuilder </td></tr>
 <tr><td align="left" balign="left"> + build() : LogNavegacao </td></tr>
 		</table></td></tr>
 		</table>>, URL="./LogNavegacaoBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.builder.DetalheNavegacao
-	c1073 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.builder.DetalheNavegacao" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DetalheNavegacao.html">
+	c3752 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.builder.DetalheNavegacao" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DetalheNavegacao.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DetalheNavegacao </td></tr>
 		</table></td></tr>
@@ -35,7 +37,7 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + DetalheNavegacao(cpfUsuario : String, serverName : String, userAgent : String, language : String, httpMethod : String, country : String, pathInfo : String, parameterMap : Map&lt;String, String&gt;, localAddr : String, remoteAddr : String, resource : String, timeStamp : String, elapsedTime : long) </td></tr>
+<tr><td align="left" balign="left"> + DetalheNavegacao(cpfUsuario : String, serverName : String, userAgent : String, language : String, httpMethod : String, country : String, pathInfo : String, parameterMap : Map&lt;String, String&gt;, localAddr : String, remoteAddr : String, resource : String, timeStamp : String, elapsedTime : long, atuacaoNomeDe : String) </td></tr>
 <tr><td align="left" balign="left"> + DetalheNavegacao() </td></tr>
 <tr><td align="left" balign="left"> + getCpfUsuario() : String </td></tr>
 <tr><td align="left" balign="left"> + setCpfUsuario(cpfUsuario : String) </td></tr>
@@ -63,6 +65,8 @@ digraph G {
 <tr><td align="left" balign="left"> + setTimeStamp(timeStamp : String) </td></tr>
 <tr><td align="left" balign="left"> + getElapsedTime() : long </td></tr>
 <tr><td align="left" balign="left"> + setElapsedTime(elapsedTime : long) </td></tr>
+<tr><td align="left" balign="left"> + getAtuacaoNomeDe() : String </td></tr>
+<tr><td align="left" balign="left"> + setAtuacaoNomeDe(atuacaoNomeDe : String) </td></tr>
 <tr><td align="left" balign="left"> + equals(o : Object) : boolean </td></tr>
 <tr><td align="left" balign="left"> + hashCode() : int </td></tr>
 <tr><td align="left" balign="left"> + toString() : String </td></tr>

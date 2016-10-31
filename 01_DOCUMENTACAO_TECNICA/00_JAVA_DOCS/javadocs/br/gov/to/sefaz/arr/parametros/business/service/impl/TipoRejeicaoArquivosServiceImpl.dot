@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.service.impl.DefaultCrudService<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c199609 [label=<<table title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/service/impl/DefaultCrudService.html">
+	c851736 [label=<<table title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/service/impl/DefaultCrudService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultCrudService&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
 		</table></td></tr>
@@ -18,27 +18,26 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + DefaultCrudService(repository : BaseRepository&lt;E, I&gt;, sort : Sort) </td></tr>
+<tr><td align="left" balign="left"> + DefaultCrudService(repository : BaseRepository&lt;E, I&gt;) </td></tr>
 <tr><td align="left" balign="left"> + findOne(id : I) : E </td></tr>
 <tr><td align="left" balign="left"> + findAll() : Collection&lt;E&gt; </td></tr>
-<tr><td align="left" balign="left"> + findAll(list : Iterable&lt;I&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + save(entity : E) : E </td></tr>
 <tr><td align="left" balign="left"> + save(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + update(entity : E) : E </td></tr>
+<tr><td align="left" balign="left"> + update(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + delete(id : I) : Optional&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + delete(ids : Iterable&lt;I&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getDefaultSort() : Sort </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../../../business/service/impl/DefaultCrudService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.TipoRejeicaoArquivosService
-	c199804 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.TipoRejeicaoArquivosService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../TipoRejeicaoArquivosService.html">
+	c852087 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.TipoRejeicaoArquivosService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../TipoRejeicaoArquivosService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> TipoRejeicaoArquivosService </td></tr>
 		</table></td></tr>
 		</table>>, URL="../TipoRejeicaoArquivosService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.impl.TipoRejeicaoArquivosServiceImpl
-	c199831 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.TipoRejeicaoArquivosServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TipoRejeicaoArquivosServiceImpl.html">
+	c852114 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.TipoRejeicaoArquivosServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TipoRejeicaoArquivosServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoRejeicaoArquivosServiceImpl </td></tr>
 		</table></td></tr>
@@ -52,9 +51,9 @@ digraph G {
 <tr><td align="left" balign="left"> + delete(id : Integer) : Optional&lt;TipoRejeicaoArquivos&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./TipoRejeicaoArquivosServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	//br.gov.to.sefaz.arr.parametros.business.service.impl.TipoRejeicaoArquivosServiceImpl extends br.gov.to.sefaz.business.service.impl.DefaultCrudService<br.gov.to.sefaz.arr.parametros.persistence.entity.TipoRejeicaoArquivos, java.lang.Integer>
-	c199609:p -> c199831:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.arr.parametros.business.service.impl.TipoRejeicaoArquivosServiceImpl extends br.gov.to.sefaz.business.service.impl.DefaultCrudService<br.gov.to.sefaz.arr.persistence.entity.TipoRejeicaoArquivos, java.lang.Integer>
+	c851736:p -> c852114:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.parametros.business.service.impl.TipoRejeicaoArquivosServiceImpl implements br.gov.to.sefaz.arr.parametros.business.service.TipoRejeicaoArquivosService
-	c199804:p -> c199831:p [dir=back,arrowtail=empty,style=dashed];
+	c852087:p -> c852114:p [dir=back,arrowtail=empty,style=dashed];
 }
 

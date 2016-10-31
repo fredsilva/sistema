@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.gestao.service.filter.UnidadeOrganizacionalFilter
-	c206974 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.filter.UnidadeOrganizacionalFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UnidadeOrganizacionalFilter.html">
+	c870281 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.filter.UnidadeOrganizacionalFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UnidadeOrganizacionalFilter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UnidadeOrganizacionalFilter </td></tr>
 		</table></td></tr>
@@ -25,12 +25,8 @@ digraph G {
 <tr><td align="left" balign="left"> + setNomeUnidOrganizac(nomeUnidOrganizac : String) </td></tr>
 <tr><td align="left" balign="left"> + getUnidOrganizacPai() : Long </td></tr>
 <tr><td align="left" balign="left"> + setUnidOrganizacPai(unidOrganizacPai : Long) </td></tr>
-<tr><td align="left" balign="left"> + getTelefone() : String </td></tr>
-<tr><td align="left" balign="left"> + setTelefone(telefone : String) </td></tr>
-<tr><td align="left" balign="left"> + getEndereco() : String </td></tr>
-<tr><td align="left" balign="left"> + setEndereco(endereco : String) </td></tr>
-<tr><td align="left" balign="left"> + getChefeGeral() : String </td></tr>
-<tr><td align="left" balign="left"> + setChefeGeral(chefeGeral : String) </td></tr>
+<tr><td align="left" balign="left"> + getTipoUnidade() : Character </td></tr>
+<tr><td align="left" balign="left"> + setTipoUnidade(tipoUnidade : Character) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./UnidadeOrganizacionalFilter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 }

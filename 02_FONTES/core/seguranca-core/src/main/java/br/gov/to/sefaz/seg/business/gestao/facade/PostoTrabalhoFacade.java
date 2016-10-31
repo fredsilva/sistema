@@ -14,7 +14,7 @@ import java.util.List;
  * @author <a href="mailto:thiago.luz@ntconsult.com.br">thiago.luz</a>
  * @since 13/06/2016 11:33:00
  */
-public interface PostoTrabalhoFacade extends CrudFacade<PostoTrabalho, Long> {
+public interface PostoTrabalhoFacade extends CrudFacade<PostoTrabalho, Integer> {
 
     /**
      * Filtro da tela de PostoTrabalho.

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c50719 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../presentation/managedbean/impl/DefaultCrudMB.html">
+	c234373 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../presentation/managedbean/impl/DefaultCrudMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultCrudMB&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
 		</table></td></tr>
@@ -30,7 +30,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../presentation/managedbean/impl/DefaultCrudMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.managedbean.BancoAgenciasMB
-	c51073 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.BancoAgenciasMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./BancoAgenciasMB.html">
+	c234791 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.BancoAgenciasMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./BancoAgenciasMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BancoAgenciasMB </td></tr>
 		</table></td></tr>
@@ -53,12 +53,12 @@ digraph G {
 <tr><td align="left" balign="left"> + clearDto() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./BancoAgenciasMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	//br.gov.to.sefaz.arr.parametros.managedbean.BancoAgenciasMB extends br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgencias, br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgenciasPK>
-	c50719:p -> c51073:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.arr.parametros.managedbean.BancoAgenciasMB extends br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<br.gov.to.sefaz.arr.persistence.entity.BancoAgencias, br.gov.to.sefaz.arr.persistence.entity.BancoAgenciasPK>
+	c234373:p -> c234791:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.parametros.managedbean.BancoAgenciasMB implements java.io.Serializable
-	c51075:p -> c51073:p [dir=back,arrowtail=empty,style=dashed];
+	c234794:p -> c234791:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
-	c51075 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/io/Serializable.html">
+	c234794 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Serializable </td></tr>

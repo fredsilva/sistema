@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./RepresentanteLegalPK.html" title="br.gov.to.sefaz.cci.persistence.entity.RepresentanteLegalPK" alt="" coords="16,271,680,520"/>
+<area shape="rect" id="node1" href="./RepresentanteLegalPK.html" title="&lt;TABLE&gt;" alt="" coords="5,265,691,525"/>
+<area shape="rect" id="node2_1" href="./RepresentanteLegal.html" title="br.gov.to.sefaz.cci.persistence.entity.RepresentanteLegal" alt="" coords="726,201,1146,589"/>
+<area shape="rect" id="node2" href="./RepresentanteLegal.html" title="&lt;TABLE&gt;" alt="" coords="715,196,1157,595"/>
+<area shape="rect" id="node3_2" href="./PorteEmpresa.html" title="br.gov.to.sefaz.cci.persistence.entity.PorteEmpresa" alt="" coords="1191,271,1710,520"/>
+<area shape="rect" id="node3" href="./PorteEmpresa.html" title="&lt;TABLE&gt;" alt="" coords="1181,265,1721,525"/>
+<area shape="rect" id="node4_3" href="./PessoaJuridica.html" title="br.gov.to.sefaz.cci.persistence.entity.PessoaJuridica" alt="" coords="1755,115,2173,676"/>
+<area shape="rect" id="node4" href="./PessoaJuridica.html" title="&lt;TABLE&gt;" alt="" coords="1745,109,2183,681"/>
+<area shape="rect" id="node5_4" href="./ContribuinteIcms.html" title="br.gov.to.sefaz.cci.persistence.entity.ContribuinteIcms" alt="" coords="2218,11,2622,780"/>
+<area shape="rect" id="node5" href="./ContribuinteIcms.html" title="&lt;TABLE&gt;" alt="" coords="2207,5,2633,785"/>
+<area shape="rect" id="node6_5" href="./CciEntityPackageMarker.html" title="br.gov.to.sefaz.cci.persistence.entity.CciEntityPackageMarker" alt="" coords="2668,357,2852,433"/>
+<area shape="rect" id="node6" href="./CciEntityPackageMarker.html" title="&lt;TABLE&gt;" alt="" coords="2657,352,2863,439"/>
+</map>

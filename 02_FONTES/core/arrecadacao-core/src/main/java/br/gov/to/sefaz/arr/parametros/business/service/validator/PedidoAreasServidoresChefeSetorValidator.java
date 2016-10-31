@@ -1,8 +1,8 @@
 package br.gov.to.sefaz.arr.parametros.business.service.validator;
 
 import br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoAreasServidoresServiceImpl;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreasServidores;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.PedidoAreasServidoresRepository;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoAreasServidores;
+import br.gov.to.sefaz.arr.persistence.repository.PedidoAreasServidoresRepository;
 import br.gov.to.sefaz.business.service.validation.ServiceValidator;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.violation.CustomViolation;

@@ -1,9 +1,10 @@
 package br.gov.to.sefaz.arr.parametros.business.service;
 
 import br.gov.to.sefaz.arr.parametros.business.service.filter.TipoGruposCnaesFilter;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.TipoGruposCnaes;
+import br.gov.to.sefaz.arr.persistence.entity.TipoGruposCnaes;
 import br.gov.to.sefaz.business.service.CrudService;
 
+import java.util.Collection;
 import java.util.List;
 
 /**
@@ -21,4 +22,11 @@ public interface TipoGruposCnaesService extends CrudService<TipoGruposCnaes, Int
      * @return lista de grupos cnaes que batem com o filtro passado
      */
     List<TipoGruposCnaes> findAll(TipoGruposCnaesFilter filter);
+
+    /**
+     * Busca lista de {@link br.gov.to.sefaz.arr.persistence.entity.TipoGruposCnaes} com o status
+     * {@link br.gov.to.sefaz.persistence.enums.SituacaoEnum#ATIVO}.
+     * @return Lista de {@link TipoGruposCnaes}.
+     */
+    Collection<TipoGruposCnaes> findAllActive();
 }

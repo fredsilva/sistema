@@ -1,0 +1,36 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./hql/delete/HqlDeleteBuilder.html" title="br.gov.to.sefaz.persistence.query.builder.hql.delete.HqlDeleteBuilder" alt="" coords="16,388,473,568"/>
+<area shape="rect" id="node1" href="./hql/delete/HqlDeleteBuilder.html" title="&lt;TABLE&gt;" alt="" coords="5,383,484,573"/>
+<area shape="rect" id="node2_1" href="./hql/insert/HqlInsertBuilder.html" title="br.gov.to.sefaz.persistence.query.builder.hql.insert.HqlInsertBuilder" alt="" coords="519,397,859,559"/>
+<area shape="rect" id="node2" href="./hql/insert/HqlInsertBuilder.html" title="&lt;TABLE&gt;" alt="" coords="508,391,869,565"/>
+<area shape="rect" id="node3_2" href="./hql/select/groupby/HqlGroupByBuilder.html" title="br.gov.to.sefaz.persistence.query.builder.hql.select.groupby.HqlGroupByBuilder" alt="" coords="904,397,1295,559"/>
+<area shape="rect" id="node3" href="./hql/select/groupby/HqlGroupByBuilder.html" title="&lt;TABLE&gt;" alt="" coords="893,391,1305,565"/>
+<area shape="rect" id="node4_3" href="./hql/select/HqlSelectBuilder.html" title="br.gov.to.sefaz.persistence.query.builder.hql.select.HqlSelectBuilder" alt="" coords="1341,180,1741,776"/>
+<area shape="rect" id="node4" href="./hql/select/HqlSelectBuilder.html" title="&lt;TABLE&gt;" alt="" coords="1330,175,1751,781"/>
+<area shape="rect" id="node5_4" href="./hql/select/join/HqlJoinBuilder.html" title="br.gov.to.sefaz.persistence.query.builder.hql.select.join.HqlJoinBuilder" alt="" coords="1786,206,2274,750"/>
+<area shape="rect" id="node5" href="./hql/select/join/HqlJoinBuilder.html" title="&lt;TABLE&gt;" alt="" coords="1775,201,2285,755"/>
+<area shape="rect" id="node6_5" href="./hql/select/orderby/HqlOrderByBuilder.html" title="br.gov.to.sefaz.persistence.query.builder.hql.select.orderby.HqlOrderByBuilder" alt="" coords="2320,405,2943,551"/>
+<area shape="rect" id="node6" href="./hql/select/orderby/HqlOrderByBuilder.html" title="&lt;TABLE&gt;" alt="" coords="2309,400,2953,556"/>
+<area shape="rect" id="node7_6" href="./hql/update/HqlUpdateBuilder.html" title="br.gov.to.sefaz.persistence.query.builder.hql.update.HqlUpdateBuilder" alt="" coords="2989,362,3450,594"/>
+<area shape="rect" id="node7" href="./hql/update/HqlUpdateBuilder.html" title="&lt;TABLE&gt;" alt="" coords="2978,357,3461,599"/>
+<area shape="rect" id="node8_7" href="./QueryStructureBuilder.html" title="br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder" alt="" coords="3829,11,4017,121"/>
+<area shape="rect" id="node8" href="./QueryStructureBuilder.html" title="&lt;TABLE&gt;" alt="" coords="3819,5,4028,127"/>
+<area shape="rect" id="node9_8" href="./sql/delete/DeleteBuilder.html" title="br.gov.to.sefaz.persistence.query.builder.sql.delete.DeleteBuilder" alt="" coords="3496,397,3935,559"/>
+<area shape="rect" id="node9" href="./sql/delete/DeleteBuilder.html" title="&lt;TABLE&gt;" alt="" coords="3485,391,3945,565"/>
+<area shape="rect" id="node10_9" href="./sql/insert/InsertBuilder.html" title="br.gov.to.sefaz.persistence.query.builder.sql.insert.InsertBuilder" alt="" coords="3981,397,4282,559"/>
+<area shape="rect" id="node10" href="./sql/insert/InsertBuilder.html" title="&lt;TABLE&gt;" alt="" coords="3970,391,4293,565"/>
+<area shape="rect" id="node11_10" href="./sql/select/groupby/GroupByBuilder.html" title="br.gov.to.sefaz.persistence.query.builder.sql.select.groupby.GroupByBuilder" alt="" coords="4328,397,4700,559"/>
+<area shape="rect" id="node11" href="./sql/select/groupby/GroupByBuilder.html" title="&lt;TABLE&gt;" alt="" coords="4317,391,4711,565"/>
+<area shape="rect" id="node12_11" href="./sql/select/join/JoinBuilder.html" title="br.gov.to.sefaz.persistence.query.builder.sql.select.join.JoinBuilder" alt="" coords="4746,397,5197,559"/>
+<area shape="rect" id="node12" href="./sql/select/join/JoinBuilder.html" title="&lt;TABLE&gt;" alt="" coords="4735,391,5207,565"/>
+<area shape="rect" id="node13_12" href="./sql/select/orderby/OrderByBuilder.html" title="br.gov.to.sefaz.persistence.query.builder.sql.select.orderby.OrderByBuilder" alt="" coords="5242,397,5826,559"/>
+<area shape="rect" id="node13" href="./sql/select/orderby/OrderByBuilder.html" title="&lt;TABLE&gt;" alt="" coords="5231,391,5837,565"/>
+<area shape="rect" id="node14_13" href="./sql/select/SelectBuilder.html" title="br.gov.to.sefaz.persistence.query.builder.sql.select.SelectBuilder" alt="" coords="5871,258,6351,698"/>
+<area shape="rect" id="node14" href="./sql/select/SelectBuilder.html" title="&lt;TABLE&gt;" alt="" coords="5861,253,6362,703"/>
+<area shape="rect" id="node15_14" href="./sql/update/UpdateBuilder.html" title="br.gov.to.sefaz.persistence.query.builder.sql.update.UpdateBuilder" alt="" coords="6397,371,6839,585"/>
+<area shape="rect" id="node15" href="./sql/update/UpdateBuilder.html" title="&lt;TABLE&gt;" alt="" coords="6386,365,6850,591"/>
+<area shape="rect" id="node16_15" href="./sql/where/AbstractWhereBuilder.html" title="br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractWhereBuilder" alt="" coords="6885,197,7570,759"/>
+<area shape="rect" id="node16" href="./sql/where/AbstractWhereBuilder.html" title="&lt;TABLE&gt;" alt="" coords="6874,192,7581,764"/>
+<area shape="rect" id="node17_16" href="./sql/where/AbstractJunctionBuilder.html" title="br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractJunctionBuilder" alt="" coords="7616,405,8055,551"/>
+<area shape="rect" id="node17" href="./sql/where/AbstractJunctionBuilder.html" title="&lt;TABLE&gt;" alt="" coords="7605,400,8065,556"/>
+</map>

@@ -9,8 +9,32 @@ digraph G {
 	node [fontname="arial",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// br.gov.to.sefaz.seg.business.gestao.service.filter.UsuarioSistemaFilter
+	c96648 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.filter.UsuarioSistemaFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioSistemaFilter.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> UsuarioSistemaFilter </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + UsuarioSistemaFilter() </td></tr>
+<tr><td align="left" balign="left"> + getCpfUsuario() : String </td></tr>
+<tr><td align="left" balign="left"> + setCpfUsuario(cpfUsuario : String) </td></tr>
+<tr><td align="left" balign="left"> + getNomeCompletoUsuario() : String </td></tr>
+<tr><td align="left" balign="left"> + setNomeCompletoUsuario(nomeCompletoUsuario : String) </td></tr>
+<tr><td align="left" balign="left"> + getSituacaoUsuario() : SituacaoUsuarioEnum </td></tr>
+<tr><td align="left" balign="left"> + setSituacaoUsuario(situacaoUsuario : SituacaoUsuarioEnum) </td></tr>
+<tr><td align="left" balign="left"> + getTipoUsuario() : Integer </td></tr>
+<tr><td align="left" balign="left"> + setTipoUsuario(tipoUsuario : Integer) </td></tr>
+<tr><td align="left" balign="left"> + getCodigoEstado() : String </td></tr>
+<tr><td align="left" balign="left"> + setCodigoEstado(codigoEstado : String) </td></tr>
+<tr><td align="left" balign="left"> + getCodigoMunicipio() : Integer </td></tr>
+<tr><td align="left" balign="left"> + setCodigoMunicipio(codigoMunicipio : Integer) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./UsuarioSistemaFilter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.filter.UnidadeOrganizacionalFilter
-	c18558 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.filter.UnidadeOrganizacionalFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UnidadeOrganizacionalFilter.html">
+	c96649 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.filter.UnidadeOrganizacionalFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UnidadeOrganizacionalFilter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UnidadeOrganizacionalFilter </td></tr>
 		</table></td></tr>
@@ -25,16 +49,12 @@ digraph G {
 <tr><td align="left" balign="left"> + setNomeUnidOrganizac(nomeUnidOrganizac : String) </td></tr>
 <tr><td align="left" balign="left"> + getUnidOrganizacPai() : Long </td></tr>
 <tr><td align="left" balign="left"> + setUnidOrganizacPai(unidOrganizacPai : Long) </td></tr>
-<tr><td align="left" balign="left"> + getTelefone() : String </td></tr>
-<tr><td align="left" balign="left"> + setTelefone(telefone : String) </td></tr>
-<tr><td align="left" balign="left"> + getEndereco() : String </td></tr>
-<tr><td align="left" balign="left"> + setEndereco(endereco : String) </td></tr>
-<tr><td align="left" balign="left"> + getChefeGeral() : String </td></tr>
-<tr><td align="left" balign="left"> + setChefeGeral(chefeGeral : String) </td></tr>
+<tr><td align="left" balign="left"> + getTipoUnidade() : Character </td></tr>
+<tr><td align="left" balign="left"> + setTipoUnidade(tipoUnidade : Character) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./UnidadeOrganizacionalFilter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.filter.TipoUsuarioFilter
-	c18559 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.filter.TipoUsuarioFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoUsuarioFilter.html">
+	c96650 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.filter.TipoUsuarioFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoUsuarioFilter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoUsuarioFilter </td></tr>
 		</table></td></tr>
@@ -48,7 +68,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoUsuarioFilter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.filter.PostoTrabalhoFilter
-	c18560 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.filter.PostoTrabalhoFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PostoTrabalhoFilter.html">
+	c96651 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.filter.PostoTrabalhoFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PostoTrabalhoFilter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PostoTrabalhoFilter </td></tr>
 		</table></td></tr>
@@ -65,5 +85,165 @@ digraph G {
 <tr><td align="left" balign="left"> + setIdentificacaoUnidOrganizac(identificacaoUnidOrganizac : Long) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./PostoTrabalhoFilter.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.filter.PerfilSistemaFilter
+	c96652 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.filter.PerfilSistemaFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PerfilSistemaFilter.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> PerfilSistemaFilter </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + PerfilSistemaFilter() </td></tr>
+<tr><td align="left" balign="left"> + PerfilSistemaFilter(nomePerfil : String) </td></tr>
+<tr><td align="left" balign="left"> + getNomePerfil() : String </td></tr>
+<tr><td align="left" balign="left"> + setNomePerfil(nomePerfil : String) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./PerfilSistemaFilter.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.filter.PapelSistemaFilter
+	c96653 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.filter.PapelSistemaFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PapelSistemaFilter.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> PapelSistemaFilter </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + PapelSistemaFilter(nomePapel : String) </td></tr>
+<tr><td align="left" balign="left"> + PapelSistemaFilter() </td></tr>
+<tr><td align="left" balign="left"> + getNomePapel() : String </td></tr>
+<tr><td align="left" balign="left"> + setNomePapel(nomePapel : String) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./PapelSistemaFilter.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.filter.OpcaoAplicacaoFilter
+	c96654 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.filter.OpcaoAplicacaoFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OpcaoAplicacaoFilter.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OpcaoAplicacaoFilter </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + OpcaoAplicacaoFilter() </td></tr>
+<tr><td align="left" balign="left"> + getIdentificacaoModulo() : Long </td></tr>
+<tr><td align="left" balign="left"> + setIdentificacaoModulo(identificacaoModulo : Long) </td></tr>
+<tr><td align="left" balign="left"> + getIdentificacaoAplicacao() : Long </td></tr>
+<tr><td align="left" balign="left"> + setIdentificacaoAplicacao(identificacaoAplicacao : Long) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OpcaoAplicacaoFilter.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.filter.ModuloSistemaFilter
+	c96655 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.filter.ModuloSistemaFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ModuloSistemaFilter.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ModuloSistemaFilter </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ModuloSistemaFilter() </td></tr>
+<tr><td align="left" balign="left"> + getIdentificacaoModuloSistema() : Long </td></tr>
+<tr><td align="left" balign="left"> + setIdentificacaoModuloSistema(identificacaoModuloSistema : Long) </td></tr>
+<tr><td align="left" balign="left"> + getAbreviacaoModulo() : String </td></tr>
+<tr><td align="left" balign="left"> + setAbreviacaoModulo(abreviacaoModulo : String) </td></tr>
+<tr><td align="left" balign="left"> + getDescricaoModuloSistema() : String </td></tr>
+<tr><td align="left" balign="left"> + setDescricaoModuloSistema(descricaoModuloSistema : String) </td></tr>
+<tr><td align="left" balign="left"> + getUsuarioInclusao() : String </td></tr>
+<tr><td align="left" balign="left"> + setUsuarioInclusao(usuarioInclusao : String) </td></tr>
+<tr><td align="left" balign="left"> + getDataInclusao() : LocalDateTime </td></tr>
+<tr><td align="left" balign="left"> + setDataInclusao(dataInclusao : LocalDateTime) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ModuloSistemaFilter.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.filter.ManterUsuarioSistemaFilter
+	c96656 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.filter.ManterUsuarioSistemaFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ManterUsuarioSistemaFilter.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ManterUsuarioSistemaFilter </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ManterUsuarioSistemaFilter() </td></tr>
+<tr><td align="left" balign="left"> + getCpfUsuario() : String </td></tr>
+<tr><td align="left" balign="left"> + setCpfUsuario(cpfUsuario : String) </td></tr>
+<tr><td align="left" balign="left"> + getNomeCompletoUsuario() : String </td></tr>
+<tr><td align="left" balign="left"> + setNomeCompletoUsuario(nomeCompletoUsuario : String) </td></tr>
+<tr><td align="left" balign="left"> + getCodigoUnidadeOrganizacional() : Long </td></tr>
+<tr><td align="left" balign="left"> + setCodigoUnidadeOrganizacional(codigoUnidadeOrganizacional : Long) </td></tr>
+<tr><td align="left" balign="left"> + getCodigoPostoTrabalho() : Integer </td></tr>
+<tr><td align="left" balign="left"> + setCodigoPostoTrabalho(codigoPostoTrabalho : Integer) </td></tr>
+<tr><td align="left" balign="left"> + getDataCriacao() : LocalDate </td></tr>
+<tr><td align="left" balign="left"> + getLocalDataCriacao() : LocalDateTime </td></tr>
+<tr><td align="left" balign="left"> + setDataCriacao(dataCriacao : LocalDate) </td></tr>
+<tr><td align="left" balign="left"> + getSituacaoUsuario() : SituacaoUsuarioEnum </td></tr>
+<tr><td align="left" balign="left"> + setSituacaoUsuario(situacaoUsuario : SituacaoUsuarioEnum) </td></tr>
+<tr><td align="left" balign="left"> + getCodigoTipoUsuario() : Integer </td></tr>
+<tr><td align="left" balign="left"> + setCodigoTipoUsuario(codigoTipoUsuario : Integer) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ManterUsuarioSistemaFilter.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.filter.CadastroSenhaFilter
+	c96657 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.filter.CadastroSenhaFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CadastroSenhaFilter.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> CadastroSenhaFilter </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + CadastroSenhaFilter() </td></tr>
+<tr><td align="left" balign="left"> + getCpfUsuario() : String </td></tr>
+<tr><td align="left" balign="left"> + setCpfUsuario(cpfUsuario : String) </td></tr>
+<tr><td align="left" balign="left"> + getNomeCompletoUsuario() : String </td></tr>
+<tr><td align="left" balign="left"> + setNomeCompletoUsuario(nomeCompletoUsuario : String) </td></tr>
+<tr><td align="left" balign="left"> + getSituacaoSolicitacao() : SituacaoSolicitacaoEnum </td></tr>
+<tr><td align="left" balign="left"> + setSituacaoSolicitacao(situacaoSolicitacao : SituacaoSolicitacaoEnum) </td></tr>
+<tr><td align="left" balign="left"> + getDataSolicitacao() : LocalDate </td></tr>
+<tr><td align="left" balign="left"> + getDate() : LocalDateTime </td></tr>
+<tr><td align="left" balign="left"> + setDataSolicitacao(dataSolicitacao : LocalDate) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./CadastroSenhaFilter.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.filter.AtribuirPerfilFilter
+	c96658 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.filter.AtribuirPerfilFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AtribuirPerfilFilter.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> AtribuirPerfilFilter </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + AtribuirPerfilFilter() </td></tr>
+<tr><td align="left" balign="left"> + getCpfUsuario() : String </td></tr>
+<tr><td align="left" balign="left"> + setCpfUsuario(cpfUsuario : String) </td></tr>
+<tr><td align="left" balign="left"> + getNomeCompletoUsuario() : String </td></tr>
+<tr><td align="left" balign="left"> + setNomeCompletoUsuario(nomeCompletoUsuario : String) </td></tr>
+<tr><td align="left" balign="left"> + getCodigoTipoUsuario() : Integer </td></tr>
+<tr><td align="left" balign="left"> + setCodigoTipoUsuario(codigoTipoUsuario : Integer) </td></tr>
+<tr><td align="left" balign="left"> + getCodigoPerfil() : Long </td></tr>
+<tr><td align="left" balign="left"> + setCodigoPerfil(codigoPerfil : Long) </td></tr>
+<tr><td align="left" balign="left"> + getCodigoUnidadeOrganizacional() : Long </td></tr>
+<tr><td align="left" balign="left"> + setCodigoUnidadeOrganizacional(codigoUnidadeOrganizacional : Long) </td></tr>
+<tr><td align="left" balign="left"> + getCodigoPostoTrabalho() : Integer </td></tr>
+<tr><td align="left" balign="left"> + setCodigoPostoTrabalho(codigoPostoTrabalho : Integer) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./AtribuirPerfilFilter.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.service.filter.AtivarInativarPerfilFilter
+	c96659 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.filter.AtivarInativarPerfilFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AtivarInativarPerfilFilter.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> AtivarInativarPerfilFilter </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + AtivarInativarPerfilFilter() </td></tr>
+<tr><td align="left" balign="left"> + getCpfUsuario() : String </td></tr>
+<tr><td align="left" balign="left"> + setCpfUsuario(cpfUsuario : String) </td></tr>
+<tr><td align="left" balign="left"> + getNomeCompletoUsuario() : String </td></tr>
+<tr><td align="left" balign="left"> + setNomeCompletoUsuario(nomeCompletoUsuario : String) </td></tr>
+<tr><td align="left" balign="left"> + getCodigoUnidadeOrganizacional() : Long </td></tr>
+<tr><td align="left" balign="left"> + setCodigoUnidadeOrganizacional(codigoUnidadeOrganizacional : Long) </td></tr>
+<tr><td align="left" balign="left"> + getCodigoPostoTrabalho() : Integer </td></tr>
+<tr><td align="left" balign="left"> + setCodigoPostoTrabalho(codigoPostoTrabalho : Integer) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./AtivarInativarPerfilFilter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 }
 

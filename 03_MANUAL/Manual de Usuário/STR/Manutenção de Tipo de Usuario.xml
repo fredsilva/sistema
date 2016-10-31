@@ -1,0 +1,121 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
+<siteinfo>
+<sitename>SEFAZ-TO Wiki</sitename>
+<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<generator>JAMWiki 1.3.2</generator>
+<case>case-sensitive</case>
+<namespaces>
+<namespace key="-2">Media</namespace>
+<namespace key="-1">Special</namespace>
+<namespace key="0" />
+<namespace key="1">Comments</namespace>
+<namespace key="2">User</namespace>
+<namespace key="3">User comments</namespace>
+<namespace key="4">Project</namespace>
+<namespace key="5">Project comments</namespace>
+<namespace key="6">File</namespace>
+<namespace key="7">File comments</namespace>
+<namespace key="8">JAMWiki</namespace>
+<namespace key="9">JAMWiki comments</namespace>
+<namespace key="10">Template</namespace>
+<namespace key="11">Template comments</namespace>
+<namespace key="12">Help</namespace>
+<namespace key="13">Help comments</namespace>
+<namespace key="14">Category</namespace>
+<namespace key="15">Category comments</namespace>
+</namespaces>
+</siteinfo>
+<page>
+<title>Manuten����o de Tipo de Usuario</title>
+<ns>0</ns>
+<id>341</id>
+<revision>
+<id>1224</id>
+<timestamp>2016-10-13T15:31:48Z</timestamp>
+<contributor>
+<username>admin</username>
+<id>1</id>
+</contributor>
+<comment />
+<text xml:space="preserve" bytes="3710">Acessar o menu &apos;&apos;&apos;Seguran��a do Sistema &gt; Ger��ncia &gt; Tipos de Usu��rio.&apos;&apos;&apos;
+
+Abrir�� a tela de localiza����o contendo a lista de Tipos de Usu��rio cadastrados.
+
+Os Tipos de Usu��rio s��o utilizados para classificar os usu��rios que acessam o Sistema Tribut��rio do SEFAZ-TO.
+
+== Visualizando todos os Tipos de Usu��rio cadastrados ==
+
+Para visualizar todos os Tipos de Usu��rio cadastrados, �� necess��rio clicar em &quot;Consultar&quot; (passo 1).
+
+[[File:manutencao_tipos_usuario_01.png|Manutencao Tipo Usu��rio 01]]
+
+----
+== Pesquisando Tipos de Usu��rio ==
+
+Para pesquisar os Tipos de Usu��rio cadastrados, �� necess��rio acessar o menu Seguran��a do Sistema &gt; Ger��ncia &gt; Manter Tipos de Usu��rio e clicar no bot��o Consultar (passo 2). 
+
+Opcionalmente, pode-se preencher o filtro da tela (passo 1) e, ao clicar no bot��o Consultar (passo 2), a tela apresenta somente a lista dos Tipos de Usu��rio filtrados.
+
+[[File:manutencao_tipos_usuario_02.png|Manutencao Tipo Usu��rio 02]]
+
+----
+== Incluindo Tipos de Usu��rio ==
+
+Para incluir Tipos de Usu��rio, �� necess��rio acessar o menu Seguran��a do Sistema &gt; Ger��ncia &gt; Manter Tipos de Usu��rio e clicar no bot��o Inserir Tipo de Usu��rio, conforme o passo 1 ilustrado abaixo.
+
+[[File:manutencao_tipos_usuario_03.png|Manuten����o Tipo Usu��rio 03]]
+
+Ao clicar no bot��o Inserir Tipo de Usu��rio, o sistema exibe a janela Inserir Tipo de Usu��rio. 
+O campo referente ao novo registro de Tipo de Usu��rio a ser incluso �� limpo e disponibilizado para ser preenchido pelo Usu��rio.
+
+[[File:manutencao_tipos_usuario_04.png|Manuten����o Tipo Usu��rio 04]]
+
+Ap��s a execu����o do Passo 2, �� apresentado mensagem de dialogo informando o resultado da opera����o em quest��o.
+
+&apos;&apos;&apos;Considera����es a respeito do campo a ser preenchido pelo usu��rio:&apos;&apos;&apos;
+
+:*Descri����o do Tipo de Usu��rio: Campo de preenchimento obrigat��rio.
+
+Para cancelar a inclus��o, deve-se clicar no bot��o Fechar (Passo 3), ou clicar fora da janela de inclus��o. Os dados digitados s��o descartados quando a inclus��o �� cancelada.
+
+[[File:manutencao_tipos_usuario_05.png|Manuten����o Tipo Usu��rio 05]]
+
+----
+== Alterando Tipos de Usu��rio ==
+
+
+Para alterar Tipos de Usu��rio, �� necess��rio acessar o menu Seguran��a do Sistema &gt; Ger��ncia &gt; Manter Tipos de Usu��rio e clicar no ��cone Alterar, na lista de Tipos de Usu��rio cadastrados, conforme o passo 1 ilustrado abaixo.
+
+[[File:manutencao_tipos_usuario_06.png|Manuten����o Tipo Usu��rio 06]]
+
+Ao clicar no ��cone Alterar, o sistema exibe a janela Inserir Tipo de Usu��rio, conforme ilustrado no passo 2 abaixo. 
+Os campos referentes ao registro de Tipo de Usu��rio a ser alterado s��o preenchidos automaticamente pelo sistema.
+
+[[File:manutencao_tipos_usuario_04.png|Manuten����o Tipo Usu��rio 04]]
+
+Ap��s a execu����o do Passo 2, �� apresentado mensagem de dialogo informando o resultado da opera����o em quest��o.
+
+Para cancelar a altera����o, deve-se clicar no bot��o Fechar, ou clicar fora da janela. Os dados digitados s��o descartados quando a altera����o �� cancelada.
+
+----
+== Excluindo Tipos de Usu��rio ==
+
+Para excluir Tipos de Usu��rio, �� necess��rio acessar o menu Seguran��a do Sistema &gt; Ger��ncia &gt; Manter Tipos de Usu��rio e clicar no ��cone Excluir, na lista de Tipos de Usu��rio cadastrados, conforme o passo 1 ilustrado abaixo.
+
+[[File:manutencao_tipos_usuario_07.png|Manuten����o Tipo Usu��rio 07]]
+
+Ao clicar no ��cone Excluir, o sistema exibe a mensagem para confirmar a exclus��o, conforme ilustrado no passo 2 abaixo. 
+
+[[File:manutencao_tipos_usuario_08.png|Manuten����o Tipo Usu��rio 08]]
+
+Ap��s a execu����o do Passo 2, �� apresentado mensagem de dialogo informando o resultado da opera����o em quest��o.
+
+Para cancelar a exclus��o, deve-se clicar no bot��o N��o, ou clicar fora da janela de confirma����o.
+
+&lt;/br&gt;
+----
+[[Gest��o de Seguran��a | Voltar]]
+</text>
+</revision>
+</page>
+</mediawiki>

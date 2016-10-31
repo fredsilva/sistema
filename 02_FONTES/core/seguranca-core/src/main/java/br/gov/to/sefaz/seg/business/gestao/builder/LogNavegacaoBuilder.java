@@ -3,12 +3,8 @@ package br.gov.to.sefaz.seg.business.gestao.builder;
 import br.gov.to.sefaz.seg.persistence.entity.LogNavegacao;
 import br.gov.to.sefaz.seg.persistence.enums.TipoOperacaoEnum;
 import br.gov.to.sefaz.util.json.JsonMapperUtils;
-
 import com.fasterxml.jackson.core.JsonProcessingException;
 
-import org.hibernate.engine.jdbc.ClobProxy;
-
-import java.sql.Clob;
 import java.time.LocalDateTime;
 
 /**
@@ -51,8 +47,7 @@ public class LogNavegacaoBuilder {
     }
 
     /**
-     * Adiciona o {@link DetalheNavegacao} através da conversão do objeto em um JSON e transformado em um
-     * {@link java.sql.Clob}.
+     * Adiciona o {@link DetalheNavegacao} através da conversão do objeto em um JSON.
      *
      * @param detalheNavegacao informações necessárias para os detalhes da navegação
      * @return instância da classe
@@ -60,9 +55,7 @@ public class LogNavegacaoBuilder {
      */
     public LogNavegacaoBuilder withDetalheNavegacao(DetalheNavegacao detalheNavegacao) throws JsonProcessingException {
         String json = JsonMapperUtils.objectToJson(detalheNavegacao);
-        Clob detalhe = ClobProxy.generateProxy(json);
-
-        logNavegacao.setDetalheNavegacao(detalhe);
+        logNavegacao.setDetalheNavegacao(json);
 
         return this;
     }
@@ -76,6 +69,30 @@ public class LogNavegacaoBuilder {
      */
     public LogNavegacaoBuilder withTipoOperacao(TipoOperacaoEnum tipoOperacao) {
         logNavegacao.setTipoOperacao(tipoOperacao);
+
+        return this;
+    }
+
+    /**
+     * Adiciona o cpf/cnpj do procurado no {@link br.gov.to.sefaz.seg.persistence.entity.LogNavegacao}.
+     *
+     * @param cpfCnpj cpf ou cnpj do procurado
+     * @return instância da classe
+     */
+    public LogNavegacaoBuilder withCpfCnpjProcurado(String cpfCnpj) {
+        logNavegacao.setCpfCnpjProcurado(cpfCnpj);
+
+        return this;
+    }
+
+    /**
+     * Adiciona o recurso(url) acessado no {@link br.gov.to.sefaz.seg.persistence.entity.LogNavegacao}.
+     *
+     * @param resource o recurso(url) acessado
+     * @return instância da classe
+     */
+    public LogNavegacaoBuilder withUrlAcesso(String resource) {
+        logNavegacao.setUrlAcesso(resource);
 
         return this;
     }

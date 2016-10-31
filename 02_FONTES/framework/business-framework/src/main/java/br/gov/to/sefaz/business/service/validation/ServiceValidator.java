@@ -37,6 +37,7 @@ public interface ServiceValidator<T> {
 
     /**
      * Valida o {@link java.util.Collection} de {@link java.lang.Object} conforme critérios customizados.
+     * Nunca entrará neste método se a lista for {@link java.util.Collection#isEmpty()}.
      *
      * @param target {@link Object} o qual será utilizado para a validação customizada.
      * @return lista com as violações da validação, se as verificações realizadas no método passarem, retorna uma

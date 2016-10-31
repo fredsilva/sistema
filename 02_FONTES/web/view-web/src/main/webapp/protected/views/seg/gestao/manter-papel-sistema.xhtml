@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+        xmlns:sat="http://sefaz.to.gov.br/composites"
+        xmlns:a4j="http://richfaces.org/a4j">
+
+<ui:composition template="/protected/views/templates/views/default-template.xhtml">
+
+    <ui:param name="pageTitle" value="#{seg_msg['seg.gestao.manterPapelSistema.titulo']}"/>
+
+    <ui:define name="header">
+        <h:outputScript library="js" name="seg/gestao/manter-papel-sistema.js"/>
+        <h:outputScript library="js" name="core/sat.date.js"/>
+    </ui:define>
+
+    <ui:define name="content">
+        <sat:panel title="#{seg_msg['seg.gestao.manterPapelSistema.titulo']}">
+            <div class="col-md-12">
+                <h:form id="manter-papel-sistema-filtro">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <h:outputLabel for="nomePapel">
+                                #{seg_msg['seg.gestao.manterPapelSistema.filter.nomeDoPapel']}
+                            </h:outputLabel>
+                            <h:inputText value="#{papelSistemaMB.filter.nomePapel}"
+                                    id="nomePapel"
+                                    styleClass="form-control"
+                                    maxlength="30">
+                            </h:inputText>
+                        </div>
+                        <div class="form-group col-lg-12 text-right">
+                            <h:commandButton type="button"
+                                    value="#{seg_msg['seg.gestao.manterPapelSistema.table.button.consultar']}"
+                                    styleClass="btn btn-primary align-bottom"
+                                    action="#{papelSistemaMB.search}">
+                                <f:ajax render="manter-papel-sistema-table"
+                                        execute="nomePapel"/>
+                            </h:commandButton>
+                            <h:commandButton type="button"
+                                    value="#{seg_msg['seg.gestao.manterPapelSistema.table.button.inserirPapel']}"
+                                    styleClass="btn btn-primary align-bottom"
+                                    onclick="insertPapel(0)">
+                            </h:commandButton>
+                            <h:commandButton type="button"
+                                    value="#{seg_msg['seg.gestao.manterPapelSistema.table.button.ajuda']}"
+                                    styleClass="btn btn-primary align-bottom">
+                            </h:commandButton>
+                        </div>
+                    </div>
+                </h:form>
+            </div>
+            <sat:table id="manter-papel-sistema-table"
+                    bundle="seg_msg"
+                    content="#{papelSistemaMB.resultList}"
+                    headers="seg.gestao.manterPapelSistema.table.numero,
+                             seg.gestao.manterPapelSistema.table.nomePapel,
+                             seg.gestao.manterPapelSistema.table.descricao,
+                             seg.gestao.manterPapelSistema.table.totalOpcoes,
+                             seg.gestao.manterPapelSistema.table.vezesAtr"
+                    fields="identificacaoPapel,
+                            nomePapel,
+                            descricaoPapel,
+                            totalOpcoes,
+                            vezesAtribuido"
+                    actionsHeader="seg.gestao.manterPapelSistema.table.acoes"
+                    columnDefs="{'class': 'tbody-left', 'targets': [0,1,2,3,4,5]}, {'type': 'natural', 'targets': 0}"
+                    actionEvents="view-profile:click:viewProfile(0;1),
+                                  view-functionalities:click:viewFunctionalities(0;1),
+                                  edit-row:click:editPapel(0),
+                                  remove-row:click:removePapel(0):confirm:seg.gestao.papel.tabela.excluir.confirmacao"
+                    hasActions="true">
+                <f:facet name="actions">
+                    <a href="javascript:void(0);" class="view-profile glyphicon glyphicon-eye-open"
+                            data-toggle="tooltip"
+                            title="Ver Perfis"/>
+                    <a href="javascript:void(0);" class="view-functionalities glyphicon glyphicon-list-alt"
+                            data-toggle="tooltip"
+                            title="Ver funcionalidades"/>
+                    <a href="javascript:void(0);" class="edit-row glyphicon glyphicon-pencil" data-toggle="tooltip"
+                            title="Alterar"/>
+                    <a href="javascript:void(0);" class="remove-row glyphicon glyphicon-remove" data-toggle="tooltip"
+                            title="Excluir"/>
+                </f:facet>
+            </sat:table>
+            <h:form>
+                <a4j:jsFunction name="insertPapel"
+                        action="#{papelSistemaMB.loadAllPapelOpcao}"
+                        render="panel-render"
+                        oncomplete="openModalInsert()">
+                </a4j:jsFunction>
+                <a4j:jsFunction name="editPapel"
+                        action="#{papelSistemaMB.findOnePapelSistemaById}"
+                        render="panel-render"
+                        oncomplete="openModalEdit()">
+                    <a4j:param name="id" assignTo="#{papelSistemaMB.dto.identificacaoPapel}"/>
+                </a4j:jsFunction>
+                <a4j:jsFunction name="viewProfile"
+                        action="#{papelSistemaMB.loadAllPerfisByPapel}"
+                        render="panel-render-perfis"
+                        oncomplete="openModalPerfis()">
+                    <a4j:param name="id" assignTo="#{papelSistemaMB.dto.identificacaoPapel}"/>
+                    <a4j:param name="name" assignTo="#{papelSistemaMB.dto.nomePapel}"/>
+                </a4j:jsFunction>
+                <a4j:jsFunction name="viewFunctionalities"
+                        action="#{papelSistemaMB.loadAllOpcoesByPapel}"
+                        render="panel-render-funcionalidades"
+                        oncomplete="openModalFunctionalities()">
+                    <a4j:param name="id" assignTo="#{papelSistemaMB.dto.identificacaoPapel}"/>
+                    <a4j:param name="name" assignTo="#{papelSistemaMB.dto.nomePapel}"/>
+                </a4j:jsFunction>
+                <a4j:jsFunction name="addOptionToList"
+                        action="#{papelSistemaMB.addOptionToList}"
+                        render="panel-render-contador">
+                    <a4j:param name="identificacaoOpcao"
+                            assignTo="#{papelSistemaMB.identificacaoOpcaoAplicacao}"/>
+                </a4j:jsFunction>
+                <a4j:jsFunction name="removeOptionFromList"
+                        action="#{papelSistemaMB.removeOptionFromList}"
+                        render="panel-render-contador">
+                    <a4j:param name="identificacaoOpcao"
+                            assignTo="#{papelSistemaMB.identificacaoOpcaoAplicacao}"/>
+                </a4j:jsFunction>
+                <a4j:jsFunction name="removePapel"
+                        action="#{papelSistemaMB.delete}"
+                        render="manter-papel-sistema-table"
+                        oncomplete="resetOnSuccess()">
+                    <a4j:param name="id"
+                            assignTo="#{papelSistemaMB.dto.identificacaoPapel}"/>
+                </a4j:jsFunction>
+                <a4j:jsFunction name="clearDto"
+                        action="#{papelSistemaMB.clearDto}">
+                </a4j:jsFunction>
+            </h:form>
+            <div id="manterPapelSistemaModalInsert" class="modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" >
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h:outputLabel styleClass="modal-title"
+                                    value="#{seg_msg['seg.gestao.manterPapelSistema.form.insert.titulo.criar']}"/>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"
+                                    onclick="resetFields()">
+                                <span aria-hidden="true">&#xd7;</span>
+                            </button>
+                        </div>
+                            <div class="modal-body" id="usuarioSistemaModalBody">
+                                <h:form id="manter-papel-form-insert">
+                                    <h:panelGroup id="panel-render">
+                                            <h:inputHidden id="identificacaoOpcaoAplicacaoInsertForm"
+                                                    value="#{papelSistemaMB.dto.identificacaoPapel}"/>
+                                            <div class="form-group col-md-12">
+                                                <h:outputLabel
+                                                        for="nomePapelSistemaInsertForm"
+                                                        id="nomePapelSistemaInsertLabel">
+                                                    #{seg_msg['seg.gestao.manterPapelSistema.form.insert.nomeDoPapel']}
+                                                </h:outputLabel>
+                                                <h:inputText
+                                                        id="nomePapelSistemaInsertForm"
+                                                        styleClass="form-control"
+                                                        maxlength="30"
+                                                        value="#{papelSistemaMB.dto.nomePapel}">
+                                                </h:inputText>
+                                            </div>
+                                            <div class="form-group col-md-12">
+                                                <h:outputLabel
+                                                        for="descricaPapelSistemaInsertForm" >
+                                                    #{seg_msg['seg.gestao.manterPapelSistema.form.insert.descricaoPapel']}
+                                                </h:outputLabel>
+                                                <h:inputText
+                                                        id="descricaPapelSistemaInsertForm"
+                                                        styleClass="form-control"
+                                                        maxlength="120"
+                                                        value="#{papelSistemaMB.dto.descricaoPapel}">
+                                                </h:inputText>
+                                            </div>
+
+                                        <sat:table id="manter-papel-sistema-table-insert"
+                                                    bundle="seg_msg"
+                                                    content="#{papelSistemaMB.opcaoFromPapel}"
+                                                    headers="seg.gestao.manterPapelSistema.table.opcoes.modulo,
+                                                             seg.gestao.manterPapelSistema.table.opcoes.aplicacao,
+                                                             seg.gestao.manterPapelSistema.table.opcoes.opcao"
+                                                    fields="abreviacaoModulo,
+                                                            descricaoAplicacao,
+                                                            descripcaoOpcao,
+                                                            identificacaoOpcaoAplicacao:hide,
+                                                            isUsed:hide"
+                                                    actionsHeader="seg.gestao.manterPapelSistema.table.opcoes.acoes"
+                                                    columnDefs="{'class': 'tbody-left', 'targets': [5]},
+                                                                {'targets': [0] , 'orderData': [ 0, 1, 2]}"
+                                                    actionEvents="toggle-inactive:click:removeOption(3),
+                                                                    toggle-active:click:addOption(3)"
+                                                    actionVisible="toggle-inactive:show:setToggle(4),toggle-active:hide:setToggle(4)"
+                                                    hasActions="true">
+                                            <f:facet name="actions">
+                                                <a href="javascript:void(0);"
+                                                        class="toggle-list toggle-active glyphicon glyphicon-ok"
+                                                        data-toggle="tooltip"
+                                                        title="Adicionar"/>
+                                                <a href="javascript:void(0);"
+                                                        class="toggle-list toggle-inactive glyphicon glyphicon-remove"
+                                                        data-toggle="tooltip"
+                                                        title="Remover"/>
+                                            </f:facet>
+                                        </sat:table>
+                                        <div class="modal-footer">
+                                            <h:panelGroup id="panel-render-contador">
+                                                <div class="form-group col-lg-6 text-left">
+                                                    <strong>
+                                                        #{seg_msg['seg.gestao.manterPapelSistema.table.opcoes.total']}
+                                                        #{papelSistemaMB.opcaoAplicacaos.size()}
+                                                        #{seg_msg['seg.gestao.manterPapelSistema.table.opcoes.selecionadas']}
+                                                        <span id="incrementPerfil">
+                                                            #{papelSistemaMB.getPapelOpcaoListSize()}
+                                                        </span>
+                                                    </strong>
+                                                </div>
+                                            </h:panelGroup>
+                                            <div class="form-group col-lg-6 text-right" >
+                                                <button type="button" class="btn btn-default" data-dismiss="modal"
+                                                        value="#{seg_msg['seg.gestao.usuarioSistema.form.fechar']}"
+                                                        aria-label="#{seg_msg['seg.gestao.manterPapelSistema.form.insert.fechar']}"
+                                                        onclick="resetFields()">
+                                                    <span aria-hidden="false">#{seg_msg['seg.gestao.manterPapelSistema.form.insert.fechar']}</span>
+                                                </button>
+                                                <h:commandButton type="button"
+                                                        value="#{seg_msg['seg.gestao.manterPapelSistema.form.insert.salvar']}"
+                                                        styleClass="btn btn-primary"
+                                                        onclick="savePapelSistema()">
+                                                </h:commandButton>
+                                            </div>
+                                        </div>
+                                    </h:panelGroup>
+                                    <a4j:jsFunction name="savePapelSistema"
+                                            action="#{papelSistemaMB.saveOrUpdatePapelSistema}"
+                                            render="manter-papel-sistema-table"
+                                            execute="identificacaoOpcaoAplicacaoInsertForm nomePapelSistemaInsertForm descricaPapelSistemaInsertForm"
+                                            oncomplete="resetOnSuccess(event)">
+                                    </a4j:jsFunction>
+                                </h:form>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div id="manterPapelSistemaModalPerfis" class="modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" >
+                    <div class="modal-content">
+                        <h:panelGroup id="panel-render-perfis">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                    <span aria-hidden="true">&#xd7;</span>
+                                </button>
+                                <h4 class="modal-title">
+                                    #{seg_msg['seg.gestao.manterPapelSistema.form.perfis.titulo']}
+                                    #{papelSistemaMB.dto.nomePapel}
+                                </h4>
+                            </div>
+                            <div class="modal-body well well-lg" id="usuarioSistemaModalPerfisBody">
+                                <ul class="list-unmarked">
+                                    <ui:repeat value="#{papelSistemaMB.allPerfilSistema}" var="perfilSistema">
+                                        <li>#{perfilSistema.nomePerfil}</li>
+                                    </ui:repeat>
+                                </ul>
+                            </div>
+                            <div class="modal-footer text-right">
+                                <div class="right-button col-md-12 ">
+                                    <button type="button" class="btn btn-default align-bottom right-button" data-dismiss="modal"
+                                            value="#{seg_msg['seg.gestao.usuarioSistema.form.fechar']}"
+                                            aria-label="#{seg_msg['seg.gestao.manterPapelSistema.form.insert.fechar']}">
+                                        <span aria-hidden="false">#{seg_msg['seg.gestao.manterPapelSistema.form.insert.fechar']}</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </h:panelGroup>
+                    </div>
+                </div>
+            </div>
+            <div id="manterPapelSistemaModalFuncionalidades" class="modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" >
+                    <div class="modal-content">
+                        <h:panelGroup id="panel-render-funcionalidades">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                    <span aria-hidden="true">&#xd7;</span>
+                                </button>
+                                <h4 class="modal-title">
+                                    #{seg_msg['seg.gestao.manterPapelSistema.form.funcionalidades.titulo']}
+                                    #{papelSistemaMB.dto.nomePapel}
+                                </h4>
+                            </div>
+                            <div class="modal-body" id="usuarioSistemaModalFuncionalidadesBody">
+                                <sat:table id="manter-papel-sistema-table-funcionalidades"
+                                        bundle="seg_msg"
+                                        content="#{papelSistemaMB.papelOpcaos}"
+                                        headers="seg.gestao.manterPapelSistema.table.opcoes.modulo,
+                                                             seg.gestao.manterPapelSistema.table.opcoes.aplicacao,
+                                                             seg.gestao.manterPapelSistema.table.opcoes.opcao"
+                                        fields="abreviacaoModulo,
+                                                descricaoAplicacao,
+                                                descricaoOpcao"
+                                        columnDefs="{'class': 'tbody-left', 'targets': [0,1,2]}">
+                                </sat:table>
+                            </div>
+                            <div class="modal-footer text-right">
+                                <div class="right-button col-md-12 ">
+                                    <button type="button" class="btn btn-default align-bottom right-button" data-dismiss="modal"
+                                            value="#{seg_msg['seg.gestao.usuarioSistema.form.fechar']}"
+                                            aria-label="#{seg_msg['seg.gestao.manterPapelSistema.form.insert.fechar']}">
+                                        <span aria-hidden="false">#{seg_msg['seg.gestao.manterPapelSistema.form.insert.fechar']}</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </h:panelGroup>
+                    </div>
+                </div>
+            </div>
+        </sat:panel>
+    </ui:define>
+</ui:composition>
+</html>

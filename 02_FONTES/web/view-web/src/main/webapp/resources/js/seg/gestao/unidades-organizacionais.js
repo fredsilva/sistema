@@ -1,45 +1,40 @@
 function selectRow(data) {
     openModal();
     showBtnSave("unidade-organizacional-form");
-
+    $('#unidadeOrganizacionalModalTitleInserir').show();
+    $('#unidadeOrganizacionalModalTitleEditar').hide();
     $("#unidade-organizacional-form\\:identificacaoUnidOrganizacForm").val(null);
     $("#unidade-organizacional-form\\:nomeUnidOrganizacForm").val(data[1]);
-    $("#unidade-organizacional-form\\:nomeUnidOrganizacPaiForm").val(data[6]);
-    $("#unidade-organizacional-form\\:enderecoForm").val(data[3]);
-    $("#unidade-organizacional-form\\:chefeGeralForm").val(data[4]);
-    $("#unidade-organizacional-form\\:telefoneForm").val(data[5]);
+    $("#unidade-organizacional-form\\:enderecoForm").val(data[4]);
+    $("#unidade-organizacional-form\\:chefeGeralForm").val(data[5]);
+    $("#unidade-organizacional-form\\:telefoneForm").val(data[6]);
+    $("#unidade-organizacional-form\\:nomeUnidOrganizacPaiForm").val(data[7]);
+    $("#unidade-organizacional-form\\:tipoUnidadeForm").val(data[8]);
 }
+
 function editRow(data) {
     openModal();
-
     showBtnUpdate("unidade-organizacional-form");
+    $('#unidadeOrganizacionalModalTitleInserir').hide();
+    $('#unidadeOrganizacionalModalTitleEditar').show();
     $("#unidade-organizacional-form\\:identificacaoUnidOrganizacForm").val(data[0]);
     $("#unidade-organizacional-form\\:nomeUnidOrganizacForm").val(data[1]);
-    $("#unidade-organizacional-form\\:nomeUnidOrganizacPaiForm").val(data[6]);
-    $("#unidade-organizacional-form\\:enderecoForm").val(data[3]);
-    $("#unidade-organizacional-form\\:chefeGeralForm").val(data[4]);
-    $("#unidade-organizacional-form\\:telefoneForm").val(data[5]);
-
+    $("#unidade-organizacional-form\\:enderecoForm").val(data[4]);
+    $("#unidade-organizacional-form\\:chefeGeralForm").val(data[5]);
+    $("#unidade-organizacional-form\\:telefoneForm").val(data[6]);
+    $("#unidade-organizacional-form\\:nomeUnidOrganizacPaiForm").val(data[7]);
+    $("#unidade-organizacional-form\\:tipoUnidadeForm").val(data[8]);
 }
 
 function resetFields() {
     closeModal();
+    showBtnSave("unidade-organizacional-form");
     clearFields('unidade-organizacional-form');
     clearFields('unidades-organizacionais-table');
 }
 
 function resetOnSuccess(data) {
-    loadAllUnidadeOrganizacional();
     onSuccess(data, resetFields);
-}
-
-function phoneMask() {
-    $("#unidade-organizacional-form\\:telefoneForm").mask('(00) 00000-0009');
-    if ($("#unidade-organizacional-form\\:telefoneForm").val().length == 15) { // Celular com 9 dígitos + 2 dígitos DDD e 4 da máscara
-        $("#unidade-organizacional-form\\:telefoneForm").mask('(00) 00000-0009');
-    } else {
-        $("#unidade-organizacional-form\\:telefoneForm").mask('(00) 0000-00009');
-    }
 }
 
 function openModal() {
@@ -49,6 +44,8 @@ function openModal() {
 }
 function openModalInsert() {
     showBtnSave("unidade-organizacional-form");
+    $('#unidadeOrganizacionalModalTitleInserir').show();
+    $('#unidadeOrganizacionalModalTitleEditar').hide();
     openModal();
 }
 

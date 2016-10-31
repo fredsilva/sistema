@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.exception.UnexpectedErrorException
-	c101725 [label=<<table title="br.gov.to.sefaz.exception.UnexpectedErrorException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UnexpectedErrorException.html">
+	c442441 [label=<<table title="br.gov.to.sefaz.exception.UnexpectedErrorException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UnexpectedErrorException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UnexpectedErrorException </td></tr>
 		</table></td></tr>
@@ -24,14 +24,14 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./UnexpectedErrorException.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.exception.HandledSystemException
-	c101726 [label=<<table title="br.gov.to.sefaz.exception.HandledSystemException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./HandledSystemException.html">
+	c442442 [label=<<table title="br.gov.to.sefaz.exception.HandledSystemException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./HandledSystemException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> HandledSystemException </td></tr>
 		</table></td></tr>
 		</table>>, URL="./HandledSystemException.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.exception.BusinessException
-	c101727 [label=<<table title="br.gov.to.sefaz.exception.BusinessException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BusinessException.html">
+	c442443 [label=<<table title="br.gov.to.sefaz.exception.BusinessException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BusinessException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BusinessException </td></tr>
 		</table></td></tr>
@@ -44,7 +44,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./BusinessException.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.util.certificado.CertificadoDigitalException
-	c101731 [label=<<table title="br.gov.to.sefaz.util.certificado.CertificadoDigitalException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../util/certificado/CertificadoDigitalException.html">
+	c442448 [label=<<table title="br.gov.to.sefaz.util.certificado.CertificadoDigitalException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../util/certificado/CertificadoDigitalException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CertificadoDigitalException </td></tr>
 		</table></td></tr>
@@ -56,7 +56,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../util/certificado/CertificadoDigitalException.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.business.service.validation.CustomValidationException
-	c101777 [label=<<table title="br.gov.to.sefaz.business.service.validation.CustomValidationException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../business/service/validation/CustomValidationException.html">
+	c442597 [label=<<table title="br.gov.to.sefaz.business.service.validation.CustomValidationException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../business/service/validation/CustomValidationException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CustomValidationException </td></tr>
 		</table></td></tr>
@@ -69,12 +69,12 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../business/service/validation/CustomValidationException.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.exception.UnexpectedErrorException implements br.gov.to.sefaz.exception.HandledSystemException
-	c101726:p -> c101725:p [dir=back,arrowtail=empty,style=dashed];
+	c442442:p -> c442441:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.exception.BusinessException implements br.gov.to.sefaz.exception.HandledSystemException
-	c101726:p -> c101727:p [dir=back,arrowtail=empty,style=dashed];
+	c442442:p -> c442443:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.util.certificado.CertificadoDigitalException implements br.gov.to.sefaz.exception.HandledSystemException
-	c101726:p -> c101731:p [dir=back,arrowtail=empty,style=dashed];
+	c442442:p -> c442448:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.business.service.validation.CustomValidationException implements br.gov.to.sefaz.exception.HandledSystemException
-	c101726:p -> c101777:p [dir=back,arrowtail=empty,style=dashed];
+	c442442:p -> c442597:p [dir=back,arrowtail=empty,style=dashed];
 }
 

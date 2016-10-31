@@ -1,7 +1,7 @@
 package br.gov.to.sefaz.arr.parametros.business.service.validator;
 
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PlanoContas;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.PlanoContasRepository;
+import br.gov.to.sefaz.arr.persistence.entity.PlanoContas;
+import br.gov.to.sefaz.arr.persistence.repository.PlanoContasRepository;
 import br.gov.to.sefaz.business.service.validation.ServiceValidator;
 import br.gov.to.sefaz.business.service.validation.ValidationContext;
 import br.gov.to.sefaz.business.service.validation.violation.CustomViolation;
@@ -17,7 +17,7 @@ import java.util.Set;
 
 /**
  * <p>{@link br.gov.to.sefaz.business.service.validation.ServiceValidator} que valida se o
- * {@link br.gov.to.sefaz.arr.parametros.persistence.entity.PlanoContas#getContaHierarquica()} existe no banco.
+ * {@link br.gov.to.sefaz.arr.persistence.entity.PlanoContas#getContaHierarquica()} existe no banco.
  * Se o plano de contas hierarquico for preenchido ele deve referenciar um plano de contas previamente cadastrado.</p>
  *
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>

@@ -10,12 +10,13 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.entity.AbstractEntity<I extends java.io.Serializable>
-	c125783 [label=<<table title="br.gov.to.sefaz.persistence.entity.AbstractEntity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/entity/AbstractEntity.html">
+	c579152 [label=<<table title="br.gov.to.sefaz.persistence.entity.AbstractEntity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/entity/AbstractEntity.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractEntity&lt;I extends Serializable&gt; </font></td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
+<tr><td align="left" balign="left"> + SIM : String </td></tr>
+<tr><td align="left" balign="left"> + NAO : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + AbstractEntity() </td></tr>
@@ -28,8 +29,8 @@ digraph G {
 <tr><td align="left" balign="left"> + setUsuarioAlteracao(usuarioAlteracao : String) </td></tr>
 <tr><td align="left" balign="left"> + getDataAlteracao() : LocalDateTime </td></tr>
 <tr><td align="left" balign="left"> + setDataAlteracao(dataAlteracao : LocalDateTime) </td></tr>
-<tr><td align="left" balign="left"> + getRegistroExcluido() : Boolean </td></tr>
-<tr><td align="left" balign="left"> + setRegistroExcluido(registroExcluido : Boolean) </td></tr>
+<tr><td align="left" balign="left"> + getRegistroExcluido() : String </td></tr>
+<tr><td align="left" balign="left"> + setRegistroExcluido(registroExcluido : String) </td></tr>
 <tr><td align="left" balign="left"> + getUsuarioExclusao() : String </td></tr>
 <tr><td align="left" balign="left"> + setUsuarioExclusao(usuarioExclusao : String) </td></tr>
 <tr><td align="left" balign="left"> + getDataExclusao() : LocalDateTime </td></tr>
@@ -37,7 +38,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../persistence/entity/AbstractEntity.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.entity.PapelSistema
-	c125911 [label=<<table title="br.gov.to.sefaz.seg.persistence.entity.PapelSistema" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./PapelSistema.html">
+	c579493 [label=<<table title="br.gov.to.sefaz.seg.persistence.entity.PapelSistema" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./PapelSistema.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PapelSistema </td></tr>
 		</table></td></tr>
@@ -46,7 +47,8 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + PapelSistema() </td></tr>
-<tr><td align="left" balign="left"> + PapelSistema(identificacaoPapel : Long, nomePapel : String, descricaoPapel : String) </td></tr>
+<tr><td align="left" balign="left"> + PapelSistema(identificacaoPapel : Long) </td></tr>
+<tr><td align="left" balign="left"> + PapelSistema(identificacaoPapel : Long, nomePapel : String, descricaoPapel : String, totalOpcoes : Long, vezesAtribuido : Long) </td></tr>
 <tr><td align="left" balign="left"> + getId() : Long </td></tr>
 <tr><td align="left" balign="left"> + getIdentificacaoPapel() : Long </td></tr>
 <tr><td align="left" balign="left"> + setIdentificacaoPapel(identificacaoPapel : Long) </td></tr>
@@ -56,12 +58,19 @@ digraph G {
 <tr><td align="left" balign="left"> + setDescricaoPapel(descricaoPapel : String) </td></tr>
 <tr><td align="left" balign="left"> + getPapelOpcao() : Set&lt;PapelOpcao&gt; </td></tr>
 <tr><td align="left" balign="left"> + setPapelOpcao(papelOpcao : Set&lt;PapelOpcao&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getTotalOpcoes() : Long </td></tr>
+<tr><td align="left" balign="left"> + setTotalOpcoes(totalOpcoes : Long) </td></tr>
+<tr><td align="left" balign="left"> + getVezesAtribuido() : Long </td></tr>
+<tr><td align="left" balign="left"> + setVezesAtribuido(vezesAtribuido : Long) </td></tr>
+<tr><td align="left" balign="left"> + getPerfilPapel() : Set&lt;PerfilPapel&gt; </td></tr>
+<tr><td align="left" balign="left"> + setPerfilPapel(perfilPapel : Set&lt;PerfilPapel&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getListPerfis() : String </td></tr>
 <tr><td align="left" balign="left"> + equals(o : Object) : boolean </td></tr>
 <tr><td align="left" balign="left"> + hashCode() : int </td></tr>
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./PapelSistema.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.persistence.entity.PapelSistema extends br.gov.to.sefaz.persistence.entity.AbstractEntity<java.lang.Long>
-	c125783:p -> c125911:p [dir=back,arrowtail=empty];
+	c579152:p -> c579493:p [dir=back,arrowtail=empty];
 }
 

@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../../../hql/select/signature/HqlJoinable.html" title="br.gov.to.sefaz.persistence.query.builder.hql.select.signature.HqlJoinable" alt="" coords="16,301,344,533"/>
+<area shape="rect" id="node1" href="../../../hql/select/signature/HqlJoinable.html" title="&lt;TABLE&gt;" alt="" coords="5,296,355,539"/>
+<area shape="rect" id="node2_1" href="./Selectable.html" title="br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Selectable" alt="" coords="389,362,643,473"/>
+<area shape="rect" id="node2" href="./Selectable.html" title="&lt;TABLE&gt;" alt="" coords="379,357,653,478"/>
+<area shape="rect" id="node3_2" href="./Joinable.html" title="br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Joinable" alt="" coords="201,11,495,243"/>
+<area shape="rect" id="node3" href="./Joinable.html" title="&lt;TABLE&gt;" alt="" coords="190,5,506,248"/>
+</map>

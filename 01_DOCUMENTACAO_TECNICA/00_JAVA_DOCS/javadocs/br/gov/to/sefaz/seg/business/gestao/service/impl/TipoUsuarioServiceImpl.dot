@@ -9,29 +9,8 @@ digraph G {
 	node [fontname="arial",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// br.gov.to.sefaz.business.service.impl.DefaultCrudService<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c203900 [label=<<table title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/service/impl/DefaultCrudService.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> DefaultCrudService&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + DefaultCrudService(repository : BaseRepository&lt;E, I&gt;, sort : Sort) </td></tr>
-<tr><td align="left" balign="left"> + findOne(id : I) : E </td></tr>
-<tr><td align="left" balign="left"> + findAll() : Collection&lt;E&gt; </td></tr>
-<tr><td align="left" balign="left"> + findAll(list : Iterable&lt;I&gt;) : Collection&lt;E&gt; </td></tr>
-<tr><td align="left" balign="left"> + save(entity : E) : E </td></tr>
-<tr><td align="left" balign="left"> + save(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </td></tr>
-<tr><td align="left" balign="left"> + update(entity : E) : E </td></tr>
-<tr><td align="left" balign="left"> + delete(id : I) : Optional&lt;E&gt; </td></tr>
-<tr><td align="left" balign="left"> + delete(ids : Iterable&lt;I&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getDefaultSort() : Sort </td></tr>
-		</table></td></tr>
-		</table>>, URL="../../../../../business/service/impl/DefaultCrudService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.TipoUsuarioService
-	c203964 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.TipoUsuarioService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../TipoUsuarioService.html">
+	c863252 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.TipoUsuarioService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../TipoUsuarioService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> TipoUsuarioService </td></tr>
@@ -40,11 +19,13 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllByDescricao(filter : TipoUsuarioFilter) : List&lt;TipoUsuario&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findByFilter(filter : TipoUsuarioFilter) : List&lt;TipoUsuario&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAll() : List&lt;TipoUsuario&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllCountUsers() : List&lt;TipoUsuario&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../TipoUsuarioService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.impl.TipoUsuarioServiceImpl
-	c203975 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.TipoUsuarioServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TipoUsuarioServiceImpl.html">
+	c863287 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.TipoUsuarioServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TipoUsuarioServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoUsuarioServiceImpl </td></tr>
 		</table></td></tr>
@@ -52,14 +33,13 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + TipoUsuarioServiceImpl(repository : TipoUsuarioRepository) </td></tr>
-<tr><td align="left" balign="left"> + findAllByDescricao(filter : TipoUsuarioFilter) : List&lt;TipoUsuario&gt; </td></tr>
-<tr><td align="left" balign="left"> + delete(id : Integer) : Optional&lt;TipoUsuario&gt; </td></tr>
+<tr><td align="left" balign="left"> + TipoUsuarioServiceImpl(parametroGeralService : ParametroGeralService, usuarioSistemaService : UsuarioSistemaService) </td></tr>
+<tr><td align="left" balign="left"> + findByFilter(filter : TipoUsuarioFilter) : List&lt;TipoUsuario&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAll() : List&lt;TipoUsuario&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllCountUsers() : List&lt;TipoUsuario&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./TipoUsuarioServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	//br.gov.to.sefaz.seg.business.gestao.service.impl.TipoUsuarioServiceImpl extends br.gov.to.sefaz.business.service.impl.DefaultCrudService<br.gov.to.sefaz.seg.persistence.entity.TipoUsuario, java.lang.Integer>
-	c203900:p -> c203975:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.business.gestao.service.impl.TipoUsuarioServiceImpl implements br.gov.to.sefaz.seg.business.gestao.service.TipoUsuarioService
-	c203964:p -> c203975:p [dir=back,arrowtail=empty,style=dashed];
+	c863252:p -> c863287:p [dir=back,arrowtail=empty,style=dashed];
 }
 

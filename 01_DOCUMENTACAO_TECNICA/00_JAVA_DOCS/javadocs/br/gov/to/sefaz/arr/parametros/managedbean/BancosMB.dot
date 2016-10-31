@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c54153 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../presentation/managedbean/impl/DefaultCrudMB.html">
+	c241383 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../presentation/managedbean/impl/DefaultCrudMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultCrudMB&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
 		</table></td></tr>
@@ -30,7 +30,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../presentation/managedbean/impl/DefaultCrudMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.managedbean.BancosMB
-	c54506 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.BancosMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./BancosMB.html">
+	c241800 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.BancosMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./BancosMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BancosMB </td></tr>
 		</table></td></tr>
@@ -42,7 +42,7 @@ digraph G {
 <tr><td align="left" balign="left"> + setFacade(facade : BancosFacade) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./BancosMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	//br.gov.to.sefaz.arr.parametros.managedbean.BancosMB extends br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<br.gov.to.sefaz.arr.parametros.persistence.entity.Bancos, java.lang.Integer>
-	c54153:p -> c54506:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.arr.parametros.managedbean.BancosMB extends br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<br.gov.to.sefaz.arr.persistence.entity.Bancos, java.lang.Integer>
+	c241383:p -> c241800:p [dir=back,arrowtail=empty];
 }
 

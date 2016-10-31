@@ -5,7 +5,6 @@ import br.gov.to.sefaz.seg.business.gestao.service.LogNavegacaoService;
 import br.gov.to.sefaz.seg.persistence.entity.LogNavegacao;
 import br.gov.to.sefaz.seg.persistence.repository.LogNavegacaoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 /**
@@ -20,6 +19,6 @@ public class LogNavegacaoServiceImpl extends DefaultCrudService<LogNavegacao, Lo
 
     @Autowired
     public LogNavegacaoServiceImpl(LogNavegacaoRepository repository) {
-        super(repository, new Sort(new Sort.Order(Sort.Direction.ASC, "identificacaoNavegacao")));
+        super(repository);
     }
 }

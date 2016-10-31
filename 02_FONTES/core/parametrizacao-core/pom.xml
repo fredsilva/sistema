@@ -8,11 +8,12 @@
     <parent>
         <groupId>br.gov.to.sefaz</groupId>
         <artifactId>core</artifactId>
-        <version>0.2.0-SNAPSHOT</version>
+        <version>1.6.4</version>
     </parent>
 
     <groupId>br.gov.to.sefaz.core</groupId>
     <artifactId>parametrizacao-core</artifactId>
+
     <name>parametrizacao-core</name>
     <description>Módulo core de parametrização do Sistema, onde é desenvolvido toda a lógica de negócio e de persistência do referido módulo. O módulo de parametrização, corresponde às entidades de uso comum entre os módulo do sistema, como por exemplo: paises, estados, orgãos, penalidades, cnae, cfop, natureza jurídica, entre outros. O resultado ddo presente módulo é um jar.</description>
 

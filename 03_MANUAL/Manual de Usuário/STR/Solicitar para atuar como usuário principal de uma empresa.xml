@@ -1,0 +1,61 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
+<siteinfo>
+<sitename>SEFAZ-TO Wiki</sitename>
+<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<generator>JAMWiki 1.3.2</generator>
+<case>case-sensitive</case>
+<namespaces>
+<namespace key="-2">Media</namespace>
+<namespace key="-1">Special</namespace>
+<namespace key="0" />
+<namespace key="1">Comments</namespace>
+<namespace key="2">User</namespace>
+<namespace key="3">User comments</namespace>
+<namespace key="4">Project</namespace>
+<namespace key="5">Project comments</namespace>
+<namespace key="6">File</namespace>
+<namespace key="7">File comments</namespace>
+<namespace key="8">JAMWiki</namespace>
+<namespace key="9">JAMWiki comments</namespace>
+<namespace key="10">Template</namespace>
+<namespace key="11">Template comments</namespace>
+<namespace key="12">Help</namespace>
+<namespace key="13">Help comments</namespace>
+<namespace key="14">Category</namespace>
+<namespace key="15">Category comments</namespace>
+</namespaces>
+</siteinfo>
+<page>
+<title>Solicitar para atuar como usu��rio principal de uma empresa</title>
+<ns>0</ns>
+<id>467</id>
+<revision>
+<id>1234</id>
+<timestamp>2016-10-13T15:36:19Z</timestamp>
+<contributor>
+<username>admin</username>
+<id>1</id>
+</contributor>
+<comment />
+<text xml:space="preserve" bytes="879">Acessar o menu &apos;&apos;&apos;Seguran��a do Sistema &gt; Ger��ncia &gt; Solicitar para atuar como usu��rio principal de uma empresa&apos;&apos;&apos;
+
+[[File:1 - SEGUC0480.jpg|1 - SEGUC0480]]
+
+Nesta tela pode-se selecionar o usu��rio principal da empresa. O usu��rio principal da empresa no sistema sempre ser�� o Representante Legal de uma empresa (Informa����o do Cadastro de Contribuinte), mas muitas vezes procuram-se as fun����es para outras pessoas.
+
+----
+== Solicitar para atuar como usu��rio principal ==
+
+Para solicitar que um usu��rio atue como usu��rio principal de uma empresa, basta preencher os campos da tela &apos;&apos;&apos;(Passo 1)&apos;&apos;&apos; como a imagem a seguir e, em seguida, clicar no bot��o &apos;&apos;&apos;Conferir com e-CNPJ (Passo 2)&apos;&apos;&apos;.
+
+[[File:2 - SEGUC0480.jpg|2 - SEGUC0480]]
+
+&apos;&apos;&apos;Observa����o: &apos;&apos;&apos; deve-se utilizar o Certificado Digital de Pessoa Jur��dica para fazer esta confer��ncia.
+
+&lt;/br&gt;
+----
+[[Gest��o de Seguran��a | Voltar]]
+</text>
+</revision>
+</page>
+</mediawiki>

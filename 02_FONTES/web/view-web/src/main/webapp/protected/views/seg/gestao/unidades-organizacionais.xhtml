@@ -5,7 +5,6 @@
         xmlns:h="http://xmlns.jcp.org/jsf/html"
         xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
         xmlns:f="http://java.sun.com/jsf/core"
-        xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
         xmlns:sat="http://sefaz.to.gov.br/composites"
         xmlns:a4j="http://richfaces.org/a4j">
 
@@ -18,20 +17,11 @@
     </ui:define>
 
     <ui:define name="content">
-        <sat:panel title="#{seg_msg['seg.gestao.unidadesOrgazinacionais.tabela.titulo']}">
-            <div class="col-md-12">
-                <h:form id="unidades-organizacionais-filtro">
+        <h:form id="unidade-organizacional-form">
+            <sat:panel title="#{seg_msg['seg.gestao.unidadesOrgazinacionais.tabela.titulo']}">
+                <div class="col-md-12">
                     <div class="row">
-                        <div class="form-group col-md-6">
-                            <h:outputLabel for="nomeFilter">
-                                #{seg_msg['seg.gestao.unidadesOrgazinacionais.pesquisa.nomeUnidOrganizac']}
-                            </h:outputLabel>
-                            <h:inputText value="#{unidadeOrganizacionalMB.filter.nomeUnidOrganizac}"
-                                    id="nomeFilter"
-                                    styleClass="form-control"
-                                    maxlength="100"/>
-                        </div>
-                        <div class="form-group col-md-6">
+                        <div class="form-group col-md-4">
                             <h:outputLabel
                                     for="unidOrganizacPaiFilter">
                                 #{seg_msg['seg.gestao.unidadesOrgazinacionais.pesquisa.unidOrganizacPai']}
@@ -39,22 +29,48 @@
                             <h:selectOneMenu value="#{unidadeOrganizacionalMB.filter.unidOrganizacPai}"
                                     id="unidOrganizacPaiFilter"
                                     styleClass="form-control">
-                                <f:selectItem value="#{null}" itemLabel=""/>
+                                <f:selectItem value="#{null}"
+                                        itemLabel="#{seg_msg['seg.gestao.unidadesOrgazinacionais.pesquisa.unidOrganizacPai.todos']}"/>
                                 <f:selectItems value="#{unidadeOrganizacionalMB.allUnidadeOrganizacionais}"
                                         var="unidOrganizacPaiFilter"
                                         itemValue="#{unidOrganizacPaiFilter.identificacaoUnidOrganizac}"
                                         itemLabel="#{unidOrganizacPaiFilter.nomeUnidOrganizac}"/>
                             </h:selectOneMenu>
                         </div>
+                        <div class="form-group col-md-4">
+                            <h:outputLabel
+                                    for="tipoUnidadeFilter">
+                                #{seg_msg['seg.gestao.unidadesOrgazinacionais.pesquisa.tipoUnidade']}
+                            </h:outputLabel>
+                            <h:selectOneMenu value="#{unidadeOrganizacionalMB.filter.tipoUnidade}"
+                                    id="tipoUnidadeFilter"
+                                    styleClass="form-control">
+                                <f:selectItem value="#{null}"
+                                        itemLabel="#{seg_msg['seg.gestao.unidadesOrgazinacionais.pesquisa.tipoUnidade.todos']}"/>
+                                <f:selectItems value="#{unidadeOrganizacionalMB.allTiposUnidades}"
+                                        var="tipoUnidadeFilter"
+                                        itemValue="#{tipoUnidadeFilter.codigoTipoUnidade}"
+                                        itemLabel="#{tipoUnidadeFilter.descricaoTipoUnidade}"/>
+                            </h:selectOneMenu>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <h:outputLabel for="nomeFilter">
+                                #{seg_msg['seg.gestao.unidadesOrgazinacionais.pesquisa.nomeUnidOrganizac']}
+                            </h:outputLabel>
+                            <h:inputText value="#{unidadeOrganizacionalMB.filter.nomeUnidOrganizac}"
+                                    id="nomeFilter"
+                                    styleClass="form-control"
+                                    maxlength="30"/>
+                        </div>
                     </div>
                     <div class="row">
-                        <div class="form-group col-md-offset-8 col-lg-4 text-right">
+                        <div class="form-group col-md-12 text-right">
                             <h:commandButton type="button"
                                     value="#{seg_msg['seg.gestao.unidadesOrgazinacionais.pesquisa.consultar']}"
                                     styleClass="btn btn-primary"
                                     action="#{unidadeOrganizacionalMB.search()}">
                                 <f:ajax render="unidades-organizacionais-table unidades-organizacionais-form"
-                                        execute="nomeFilter unidOrganizacPaiFilter"/>
+                                        execute="nomeFilter unidOrganizacPaiFilter tipoUnidadeFilter"/>
                             </h:commandButton>
                             <h:commandButton type="button"
                                     value="#{seg_msg['seg.gestao.unidadesOrgazinacionais.pesquisa.inserirUnidade']}"
@@ -62,29 +78,28 @@
                                     id="insertUnidadeOrganizacionalBtn"
                                     onclick="openModalInsert();">
                             </h:commandButton>
-                            <h:commandButton type="button"
-                                    value="#{seg_msg['seg.gestao.unidadesOrgazinacionais.pesquisa.ajuda']}"
-                                    styleClass="btn btn-primary"
-                            >
-                            </h:commandButton>
+
+                            <sat:opcaoAjudaButton />
                         </div>
                     </div>
-                </h:form>
             </div>
             <sat:table id="unidades-organizacionais-table"
                     bundle="seg_msg"
                     content="#{unidadeOrganizacionalMB.resultList}"
                     headers="seg.gestao.unidadesOrgazinacionais.tabela.numero,
-                                               seg.gestao.unidadesOrgazinacionais.tabela.nomeUnidOrganizac,
-                                               seg.gestao.unidadesOrgazinacionais.tabela.unidOrganizacPai,
-                                               seg.gestao.unidadesOrgazinacionais.tabela.endereco,
-                                               seg.gestao.unidadesOrgazinacionais.tabela.chefeGeral"
-                    fields="identificacaoUnidOrganizac,nomeUnidOrganizac,nomeUnidOrganizacPai,endereco,chefeGeral, telefone:hide, unidOrganizacPai:hide"
+                        seg.gestao.unidadesOrgazinacionais.tabela.nomeUnidOrganizac,
+                        seg.gestao.unidadesOrgazinacionais.tabela.tipoUnidade,
+                        seg.gestao.unidadesOrgazinacionais.tabela.unidOrganizacPai,
+                        seg.gestao.unidadesOrgazinacionais.tabela.endereco,
+                        seg.gestao.unidadesOrgazinacionais.tabela.chefeGeral"
+                    fields="identificacaoUnidOrganizac, nomeUnidOrganizac,descricaoTipoUnidade,nomeUnidOrganizacPai,
+                        endereco,chefeGeral,telefone:hide,unidOrganizacPai:hide,codigoTipoUnidade:hide"
                     hasActions="true"
+                    defaulSortColumn="1"
                     actionsHeader="seg.gestao.unidadesOrgazinacionais.tabela.acoes"
                     actionEvents="select-row:click:selectRow,
-                                                edit-row:click:editRow,
-                                               delete-row:click:deleteUnidadeOrganizacional(0):confirm:seg.gestao.unidadesOrgazinacionais.tabela.excluir.confirmacao">
+                        edit-row:click:editRow,
+                        delete-row:click:deleteUnidadeOrganizacional(0):confirm:seg.gestao.unidadesOrgazinacionais.tabela.excluir.confirmacao">
                 <f:facet name="actions">
                     <i class="select-row glyphicon glyphicon-copy" aria-hidden="true" data-toggle="tooltip"
                             title="Criar usando essa unidade"
@@ -105,11 +120,47 @@
                                 <span aria-hidden="true">&#xd7;</span>
                             </button>
                             <h4 class="modal-title"
-                                    id="unidadeOrganizacionalModalTitle">#{seg_msg['seg.gestao.unidadesOrgazinacionais.form.titulo']}</h4>
+                                    id="unidadeOrganizacionalModalTitleInserir">
+                                    #{seg_msg['seg.gestao.unidadesOrgazinacionais.form.titulo.insert']}
+                            </h4>
+                            <h4 class="modal-title"
+                                    id="unidadeOrganizacionalModalTitleEditar">
+                                    #{seg_msg['seg.gestao.unidadesOrgazinacionais.form.titulo.edit']}
+                            </h4>
                         </div>
                         <div class="modal-body" id="unidadeOrganizacionalModalBody">
-                            <h:form id="unidade-organizacional-form">
+
                                 <div class="row">
+                                    <div class="form-group col-md-12">
+                                        <h:outputLabel for="nomeUnidOrganizacPaiForm">
+                                                #{seg_msg['seg.gestao.unidadesOrgazinacionais.form.unidOrganizacPai']}
+                                        </h:outputLabel>
+                                        <h:selectOneMenu value="#{unidadeOrganizacionalMB.dto.unidOrganizacPai}"
+                                                id="nomeUnidOrganizacPaiForm"
+                                                styleClass="form-control">
+                                            <f:selectItem value="#{null}"
+                                                    itemLabel="#{seg_msg['seg.gestao.unidadesOrgazinacionais.form.unidOrganizacPai.todos']}"/>
+                                            <f:selectItems value="#{unidadeOrganizacionalMB.allUnidadeOrganizacionais}"
+                                                    var="nomeUnidOrganizacPaiForm"
+                                                    itemValue="#{nomeUnidOrganizacPaiForm.identificacaoUnidOrganizac}"
+                                                    itemLabel="#{nomeUnidOrganizacPaiForm.nomeUnidOrganizac}"/>
+                                        </h:selectOneMenu>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <h:outputLabel for="tipoUnidadeForm">
+                                            #{seg_msg['seg.gestao.unidadesOrgazinacionais.form.tipoUnidade']}
+                                        </h:outputLabel>
+                                        <h:selectOneMenu value="#{unidadeOrganizacionalMB.dto.codigoTipoUnidade}"
+                                                id="tipoUnidadeForm"
+                                                styleClass="form-control">
+                                            <f:selectItem value="#{null}"
+                                                    itemLabel="#{seg_msg['seg.gestao.unidadesOrgazinacionais.form.tipoUnidade.todos']}"/>
+                                            <f:selectItems value="#{unidadeOrganizacionalMB.allTiposUnidades}"
+                                                    var="tipoUnidadeForm"
+                                                    itemValue="#{tipoUnidadeForm.codigoTipoUnidade}"
+                                                    itemLabel="#{tipoUnidadeForm.descricaoTipoUnidade}"/>
+                                        </h:selectOneMenu>
+                                    </div>
                                     <div class="form-group col-md-12">
                                         <h:inputHidden id="identificacaoUnidOrganizacForm"
                                                 value="#{unidadeOrganizacionalMB.dto.identificacaoUnidOrganizac}"/>
@@ -118,21 +169,7 @@
                                         </h:outputLabel>
                                         <h:inputText value="#{unidadeOrganizacionalMB.dto.nomeUnidOrganizac}"
                                                 id="nomeUnidOrganizacForm"
-                                                styleClass="form-control" maxlength="100"/>
-                                    </div>
-                                    <div class="form-group col-md-12">
-                                        <h:outputLabel
-                                            for="nomeUnidOrganizacPaiForm">#{seg_msg['seg.gestao.unidadesOrgazinacionais.form.unidOrganizacPai']}
-                                        </h:outputLabel>
-                                        <h:selectOneMenu value="#{unidadeOrganizacionalMB.unidOrganizacPai}"
-                                                id="nomeUnidOrganizacPaiForm"
-                                                styleClass="form-control">
-                                            <f:selectItem value="#{null}" itemLabel=""/>
-                                            <f:selectItems value="#{unidadeOrganizacionalMB.allUnidadeOrganizacionais}"
-                                                    var="nomeUnidOrganizacPaiForm"
-                                                    itemValue="#{nomeUnidOrganizacPaiForm.identificacaoUnidOrganizac}"
-                                                    itemLabel="#{nomeUnidOrganizacPaiForm.nomeUnidOrganizac}"/>
-                                        </h:selectOneMenu>
+                                                styleClass="form-control" maxlength="30"/>
                                     </div>
                                     <div class="form-group col-md-12">
                                         <h:outputLabel
@@ -149,7 +186,7 @@
                                         </h:outputLabel>
                                         <h:inputText value="#{unidadeOrganizacionalMB.dto.endereco}" id="enderecoForm"
                                                 styleClass="form-control"
-                                                maxlength="100"/>
+                                                maxlength="120"/>
                                     </div>
                                     <div class="form-group col-md-12">
                                         <h:outputLabel
@@ -169,8 +206,8 @@
                                     </button>
                                     <sat:saveUpdateButton
                                             label="#{seg_msg['seg.gestao.unidadesOrgazinacionais.form.salvar']}"
-                                            render="unidades-organizacionais-table"
-                                            execute="identificacaoUnidOrganizacForm nomeUnidOrganizacForm nomeUnidOrganizacPaiForm telefoneForm enderecoForm chefeGeralForm"
+                                            render="unidades-organizacionais-table unidOrganizacPaiFilter nomeUnidOrganizacPaiForm"
+                                            execute="identificacaoUnidOrganizacForm nomeUnidOrganizacForm nomeUnidOrganizacPaiForm tipoUnidadeForm telefoneForm enderecoForm chefeGeralForm"
                                             onEvent="resetOnSuccess" styleClass="align-bottom"
                                             crudMb="#{unidadeOrganizacionalMB}"/>
                                 </div>
@@ -181,16 +218,12 @@
                                     <a4j:param name="identificacaoUnidOrganizac"
                                             assignTo="#{unidadeOrganizacionalMB.dto.identificacaoUnidOrganizac}"/>
                                 </a4j:jsFunction>
-                                <a4j:jsFunction name="loadAllUnidadeOrganizacional"
-                                        action="#{unidadeOrganizacionalMB.loadAllUnidadeOrganizacionais}"
-                                        render="unidOrganizacPaiFilter nomeUnidOrganizacPaiForm" >
-                                </a4j:jsFunction>
-                            </h:form>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </sat:panel>
+            </sat:panel>
+        </h:form>
     </ui:define>
 </ui:composition>
 </html>

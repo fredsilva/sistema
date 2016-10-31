@@ -1,7 +1,7 @@
 package br.gov.to.sefaz.arr.parametros.managedbean;
 
 import br.gov.to.sefaz.arr.parametros.business.facade.TipoRejeicaoArquivosFacade;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.TipoRejeicaoArquivos;
+import br.gov.to.sefaz.arr.persistence.entity.TipoRejeicaoArquivos;
 import br.gov.to.sefaz.business.facade.CrudFacade;
 import br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB;
 

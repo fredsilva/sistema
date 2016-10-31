@@ -1,14 +1,13 @@
 package br.gov.to.sefaz.arr.parametros.managedbean;
 
 import br.gov.to.sefaz.arr.parametros.business.facade.BancoAgenciasFacade;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgencias;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgenciasPK;
+import br.gov.to.sefaz.arr.persistence.entity.BancoAgencias;
+import br.gov.to.sefaz.arr.persistence.entity.BancoAgenciasPK;
 import br.gov.to.sefaz.business.facade.CrudFacade;
-import br.gov.to.sefaz.cat.persistence.entity.Estado;
-import br.gov.to.sefaz.cat.persistence.entity.Municipio;
+import br.gov.to.sefaz.par.gestao.persistence.entity.Estado;
+import br.gov.to.sefaz.par.gestao.persistence.entity.Municipio;
 import br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB;
 import br.gov.to.sefaz.util.message.MessageUtil;
-
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.Serializable;
@@ -18,7 +17,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
@@ -101,7 +99,7 @@ public class BancoAgenciasMB extends DefaultCrudMB<BancoAgencias, BancoAgenciasP
         loadBancoAgencias();
         agenciasAdicionadas = new ArrayList<>();
         clearDto();
-        MessageUtil.addMesage(MessageUtil.ARR, "mensagem.sucesso.operacao");
+        MessageUtil.addMessage("mensagem.sucesso.operacao");
     }
 
     /**
@@ -169,11 +167,16 @@ public class BancoAgenciasMB extends DefaultCrudMB<BancoAgencias, BancoAgenciasP
         Optional<String> uf = Optional.ofNullable(getDto().getUnidadeFederacao());
 
         if (!uf.isPresent()) {
-            uf = getEstados().stream().findFirst().map(e -> e.getUnidadeFederacao());
+            uf = getEstados().stream().findFirst().map(Estado::getUnidadeFederacao);
         }
 
         if (uf.isPresent()) {
             municipios = getFacade().findMunicipiosByUF(uf.get());
+            if (municipios.stream().noneMatch(mu -> mu.getCodigoIbge()
+                    .equals(getDto().getIdMunicipio()))) {
+                municipios.stream().findFirst().ifPresent(ud -> getDto()
+                        .setIdMunicipio(ud.getId()));
+            }
         }
 
     }

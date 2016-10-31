@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.arr.parametros.business.service.impl.TipoRejeicaoArquivosServiceImpl
-	c1183 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.TipoRejeicaoArquivosServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoRejeicaoArquivosServiceImpl.html">
+	c2137 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.TipoRejeicaoArquivosServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoRejeicaoArquivosServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoRejeicaoArquivosServiceImpl </td></tr>
 		</table></td></tr>
@@ -25,7 +25,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoRejeicaoArquivosServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.impl.TipoGruposCnaesServiceImpl
-	c1184 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.TipoGruposCnaesServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoGruposCnaesServiceImpl.html">
+	c2138 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.TipoGruposCnaesServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoGruposCnaesServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoGruposCnaesServiceImpl </td></tr>
 		</table></td></tr>
@@ -37,11 +37,12 @@ digraph G {
 <tr><td align="left" balign="left"> + save(entity : TipoGruposCnaes) : TipoGruposCnaes </td></tr>
 <tr><td align="left" balign="left"> + update(entity : TipoGruposCnaes) : TipoGruposCnaes </td></tr>
 <tr><td align="left" balign="left"> + findAll(filter : TipoGruposCnaesFilter) : List&lt;TipoGruposCnaes&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllActive() : Collection&lt;TipoGruposCnaes&gt; </td></tr>
 <tr><td align="left" balign="left"> + delete(id : Integer) : Optional&lt;TipoGruposCnaes&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./TipoGruposCnaesServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.impl.ReceitasTaxasServiceImpl
-	c1185 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.ReceitasTaxasServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ReceitasTaxasServiceImpl.html">
+	c2139 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.ReceitasTaxasServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ReceitasTaxasServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ReceitasTaxasServiceImpl </td></tr>
 		</table></td></tr>
@@ -56,7 +57,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ReceitasTaxasServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.impl.ReceitasServiceImpl
-	c1186 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.ReceitasServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ReceitasServiceImpl.html">
+	c2140 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.ReceitasServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ReceitasServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ReceitasServiceImpl </td></tr>
 		</table></td></tr>
@@ -74,7 +75,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ReceitasServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.impl.ReceitasRepasseServiceImpl
-	c1187 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.ReceitasRepasseServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ReceitasRepasseServiceImpl.html">
+	c2141 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.ReceitasRepasseServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ReceitasRepasseServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ReceitasRepasseServiceImpl </td></tr>
 		</table></td></tr>
@@ -89,7 +90,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ReceitasRepasseServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.impl.PlanoContasServiceImpl
-	c1188 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.PlanoContasServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PlanoContasServiceImpl.html">
+	c2142 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.PlanoContasServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PlanoContasServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PlanoContasServiceImpl </td></tr>
 		</table></td></tr>
@@ -106,7 +107,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PlanoContasServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoTiposServiceImpl
-	c1189 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoTiposServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoTiposServiceImpl.html">
+	c2143 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoTiposServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoTiposServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoTiposServiceImpl </td></tr>
 		</table></td></tr>
@@ -121,7 +122,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PedidoTiposServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoTipoDocsServiceImpl
-	c1190 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoTipoDocsServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoTipoDocsServiceImpl.html">
+	c2144 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoTipoDocsServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoTipoDocsServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoTipoDocsServiceImpl </td></tr>
 		</table></td></tr>
@@ -134,7 +135,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PedidoTipoDocsServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoTipoAcoesServiceImpl
-	c1191 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoTipoAcoesServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoTipoAcoesServiceImpl.html">
+	c2145 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoTipoAcoesServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoTipoAcoesServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoTipoAcoesServiceImpl </td></tr>
 		</table></td></tr>
@@ -144,11 +145,11 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + PedidoTipoAcoesServiceImpl(repository : PedidoTipoAcoesRepository) </td></tr>
 <tr><td align="left" balign="left"> + deleteAllTipoAcoesByIdTipoPedido(idTipoPedido : Integer) </td></tr>
-<tr><td align="left" balign="left"> + updateSituacaoByIdTipoPedido(idTipoPedido : Integer, situacao : SituacaoEnum) : int </td></tr>
+<tr><td align="left" balign="left"> + updateSituacaoByIdTipoPedido(idTipoPedido : Integer, situacao : SituacaoEnum) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./PedidoTipoAcoesServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoReceitaServiceImpl
-	c1192 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoReceitaServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoReceitaServiceImpl.html">
+	c2146 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoReceitaServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoReceitaServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoReceitaServiceImpl </td></tr>
 		</table></td></tr>
@@ -159,11 +160,11 @@ digraph G {
 <tr><td align="left" balign="left"> + PedidoReceitaServiceImpl(repository : PedidoReceitaRepository) </td></tr>
 <tr><td align="left" balign="left"> + deleteAllPedidoReceitaByIdTipoPedido(idTipoPedido : Integer) </td></tr>
 <tr><td align="left" balign="left"> + getPedidoReceitaByIdTipoPedido(idTipoPedido : Integer) : Collection&lt;PedidoReceita&gt; </td></tr>
-<tr><td align="left" balign="left"> + updateSituacaoByIdTipoPedido(idTipoPedido : Integer, situacao : SituacaoEnum) : int </td></tr>
+<tr><td align="left" balign="left"> + updateSituacaoByIdTipoPedido(idTipoPedido : Integer, situacao : SituacaoEnum) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./PedidoReceitaServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoDocsExigidosServiceImpl
-	c1193 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoDocsExigidosServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoDocsExigidosServiceImpl.html">
+	c2147 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoDocsExigidosServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoDocsExigidosServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoDocsExigidosServiceImpl </td></tr>
 		</table></td></tr>
@@ -174,11 +175,11 @@ digraph G {
 <tr><td align="left" balign="left"> + PedidoDocsExigidosServiceImpl(repository : PedidoDocsExigidosRepository) </td></tr>
 <tr><td align="left" balign="left"> + getPedidoDocsExigidosByIdTipoPedido(idTipoPedido : Integer) : Collection&lt;PedidoDocsExigidos&gt; </td></tr>
 <tr><td align="left" balign="left"> + deleteAllDocsExigidosByIdTipoPedido(idTipoPedido : Integer) </td></tr>
-<tr><td align="left" balign="left"> + updateSituacaoByIdTipoPedido(idTipoPedido : Integer, situacao : SituacaoEnum) : int </td></tr>
+<tr><td align="left" balign="left"> + updateSituacaoByIdTipoPedido(idTipoPedido : Integer, situacao : SituacaoEnum) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./PedidoDocsExigidosServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoCamposAcoesServiceImpl
-	c1194 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoCamposAcoesServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoCamposAcoesServiceImpl.html">
+	c2148 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoCamposAcoesServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoCamposAcoesServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoCamposAcoesServiceImpl </td></tr>
 		</table></td></tr>
@@ -192,7 +193,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PedidoCamposAcoesServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoAreasServidoresServiceImpl
-	c1195 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoAreasServidoresServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoAreasServidoresServiceImpl.html">
+	c2149 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoAreasServidoresServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoAreasServidoresServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoAreasServidoresServiceImpl </td></tr>
 		</table></td></tr>
@@ -211,7 +212,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PedidoAreasServidoresServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoAreasServiceImpl
-	c1196 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoAreasServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoAreasServiceImpl.html">
+	c2150 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoAreasServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoAreasServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoAreasServiceImpl </td></tr>
 		</table></td></tr>
@@ -227,7 +228,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PedidoAreasServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoAreasFaixaValorServiceImpl
-	c1197 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoAreasFaixaValorServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoAreasFaixaValorServiceImpl.html">
+	c2151 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoAreasFaixaValorServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoAreasFaixaValorServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoAreasFaixaValorServiceImpl </td></tr>
 		</table></td></tr>
@@ -239,7 +240,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PedidoAreasFaixaValorServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.impl.GruposCnaeServiceImpl
-	c1198 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.GruposCnaeServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./GruposCnaeServiceImpl.html">
+	c2152 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.GruposCnaeServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./GruposCnaeServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> GruposCnaeServiceImpl </td></tr>
 		</table></td></tr>
@@ -254,7 +255,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./GruposCnaeServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.impl.DelegaciasServiceImpl
-	c1199 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.DelegaciasServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DelegaciasServiceImpl.html">
+	c2153 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.DelegaciasServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DelegaciasServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DelegaciasServiceImpl </td></tr>
 		</table></td></tr>
@@ -266,7 +267,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./DelegaciasServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.impl.DelegaciaAgenciasServiceImpl
-	c1200 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.DelegaciaAgenciasServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DelegaciaAgenciasServiceImpl.html">
+	c2154 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.DelegaciaAgenciasServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DelegaciaAgenciasServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DelegaciaAgenciasServiceImpl </td></tr>
 		</table></td></tr>
@@ -279,7 +280,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./DelegaciaAgenciasServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.impl.ConveniosTarifasServiceImpl
-	c1201 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.ConveniosTarifasServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConveniosTarifasServiceImpl.html">
+	c2155 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.ConveniosTarifasServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConveniosTarifasServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ConveniosTarifasServiceImpl </td></tr>
 		</table></td></tr>
@@ -292,11 +293,12 @@ digraph G {
 <tr><td align="left" balign="left"> + deleteAllByIdConvenio(idConvenio : Long) </td></tr>
 <tr><td align="left" balign="left"> + validateDuplicatedTarifa(conveniosArrec : ConveniosArrec, conveniosTarifas : ConveniosTarifas) </td></tr>
 <tr><td align="left" balign="left"> + validateDataFimTarifa(conveniosTarifas : ConveniosTarifas) </td></tr>
+<tr><td align="left" balign="left"> + getValorTarifaBy(codigoConvenio : Long, formaPagamento : FormaPagamentoEnum, dataArrecadacao : LocalDate) : BigDecimal </td></tr>
 <tr><td align="left" balign="left"> + save(list : Collection&lt;ConveniosTarifas&gt;) : Collection&lt;ConveniosTarifas&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ConveniosTarifasServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.impl.ConveniosReceitasServiceImpl
-	c1202 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.ConveniosReceitasServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConveniosReceitasServiceImpl.html">
+	c2156 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.ConveniosReceitasServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConveniosReceitasServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ConveniosReceitasServiceImpl </td></tr>
 		</table></td></tr>
@@ -310,7 +312,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ConveniosReceitasServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.impl.ConveniosArrecServiceImpl
-	c1203 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.ConveniosArrecServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConveniosArrecServiceImpl.html">
+	c2157 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.ConveniosArrecServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConveniosArrecServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ConveniosArrecServiceImpl </td></tr>
 		</table></td></tr>
@@ -324,10 +326,13 @@ digraph G {
 <tr><td align="left" balign="left"> + update(entity : ConveniosArrec) : ConveniosArrec </td></tr>
 <tr><td align="left" balign="left"> + delete(id : Long) : Optional&lt;ConveniosArrec&gt; </td></tr>
 <tr><td align="left" balign="left"> + find(filter : ConveniosArrecFilter) : List&lt;ConveniosArrec&gt; </td></tr>
+<tr><td align="left" balign="left"> + findByBancoAgencias(bancoAgencias : BancoAgencias) : ConveniosArrec </td></tr>
+<tr><td align="left" balign="left"> + findByBancoCnpjAndTipoConvenio(cnpjRaiz : Integer, tipoConvenio : TipoConvenioEnum) : List&lt;ConveniosArrec&gt; </td></tr>
+<tr><td align="left" balign="left"> + findByBancoAndTipoConvenio(bancoId : Integer, tipoConvenioEnum : TipoConvenioEnum) : ConveniosArrec </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ConveniosArrecServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.impl.BancosServiceImpl
-	c1204 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.BancosServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BancosServiceImpl.html">
+	c2158 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.BancosServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BancosServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BancosServiceImpl </td></tr>
 		</table></td></tr>
@@ -335,15 +340,16 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + BancosServiceImpl(repository : BancosRepository) </td></tr>
+<tr><td align="left" balign="left"> + BancosServiceImpl(repository : BancosRepository, agenciasRepository : BancoAgenciasRepository) </td></tr>
 <tr><td align="left" balign="left"> + save(entity : Bancos) : Bancos </td></tr>
 <tr><td align="left" balign="left"> + update(entity : Bancos) : Bancos </td></tr>
 <tr><td align="left" balign="left"> + delete(id : Integer) : Optional&lt;Bancos&gt; </td></tr>
 <tr><td align="left" balign="left"> + findAllActiveBancos() : Collection&lt;Bancos&gt; </td></tr>
+<tr><td align="left" balign="left"> + findByCpjRaiz(cnpjAgenteBancarioDebidato : Integer) : List&lt;Bancos&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./BancosServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.impl.BancoAgenciasServiceImpl
-	c1205 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.BancoAgenciasServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BancoAgenciasServiceImpl.html">
+	c2159 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.BancoAgenciasServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BancoAgenciasServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BancoAgenciasServiceImpl </td></tr>
 		</table></td></tr>
@@ -353,6 +359,7 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + BancoAgenciasServiceImpl(repository : BancoAgenciasRepository) </td></tr>
 <tr><td align="left" balign="left"> + findByIdBanco(idBanco : Integer) : Collection&lt;BancoAgencias&gt; </td></tr>
+<tr><td align="left" balign="left"> + findByCtaBanco(cnpjAgenteBancarioCreditado : Integer, agencia : Integer) : List&lt;BancoAgencias&gt; </td></tr>
 <tr><td align="left" balign="left"> + validateSave(agencia : BancoAgencias) </td></tr>
 <tr><td align="left" balign="left"> + validateSave(list : Collection&lt;BancoAgencias&gt;) </td></tr>
 <tr><td align="left" balign="left"> + validateUpdate(agencia : BancoAgencias) </td></tr>

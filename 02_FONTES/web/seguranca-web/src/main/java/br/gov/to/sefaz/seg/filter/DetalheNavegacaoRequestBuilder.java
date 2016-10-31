@@ -1,13 +1,12 @@
 package br.gov.to.sefaz.seg.filter;
 
 import br.gov.to.sefaz.seg.business.gestao.builder.DetalheNavegacao;
-
 import org.apache.commons.lang3.StringUtils;
 
 import java.time.LocalDateTime;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Optional;
-
 import javax.servlet.http.HttpServletRequest;
 
 /**
@@ -38,9 +37,9 @@ public class DetalheNavegacaoRequestBuilder {
         String httpMethod = request.getMethod();
         String country = request.getLocale().getDisplayCountry();
         String pathInfo = Optional.ofNullable(request.getPathInfo()).orElse(StringUtils.EMPTY);
-        Map<String, String[]> parameterMap = request.getParameterMap();
-        String localAddr = request.getLocalAddr();
-        String remoteAddr = request.getRemoteAddr();
+        Map<String, String[]> requestParameters = request.getParameterMap();
+        String localAddress = request.getLocalAddr();
+        String remoteAddress = request.getRemoteAddr();
         String resource = request.getRequestURL().toString();
 
         detalheNavegacao.setServerName(serverName);
@@ -49,9 +48,9 @@ public class DetalheNavegacaoRequestBuilder {
         detalheNavegacao.setHttpMethod(httpMethod);
         detalheNavegacao.setCountry(country);
         detalheNavegacao.setPathInfo(pathInfo);
-        detalheNavegacao.setParameterMap(parameterMap);
-        detalheNavegacao.setLocalAddr(localAddr);
-        detalheNavegacao.setRemoteAddr(remoteAddr);
+        detalheNavegacao.setRequestParameters(requestParameters);
+        detalheNavegacao.setLocalAddress(localAddress);
+        detalheNavegacao.setRemoteAddress(remoteAddress);
         detalheNavegacao.setResource(resource);
 
         return this;
@@ -64,7 +63,7 @@ public class DetalheNavegacaoRequestBuilder {
      * @return instância da classe
      */
     public DetalheNavegacaoRequestBuilder withCpfUsuario(String cpfUsuario) {
-        detalheNavegacao.setCpfUsuario(cpfUsuario);
+        detalheNavegacao.setNomeUsuario(cpfUsuario);
 
         return this;
     }
@@ -86,17 +85,29 @@ public class DetalheNavegacaoRequestBuilder {
     /**
      * Adiciona o tempo de operação em {@link br.gov.to.sefaz.seg.business.gestao.builder.DetalheNavegacao}.
      *
-     * @param elapsedTime tempo em milisegundos para o tempo da operação.
+     * @param timeEllapsed tempo em milisegundos para o tempo da operação.
      * @return instância da classe
      */
-    public DetalheNavegacaoRequestBuilder withElapsedTime(long elapsedTime) {
-        detalheNavegacao.setElapsedTime(elapsedTime);
+    public DetalheNavegacaoRequestBuilder withElapsedTime(long timeEllapsed) {
+        detalheNavegacao.setTimeEllapsed(timeEllapsed);
 
         return this;
     }
 
     /**
-     * Constroi o {@link br.gov.to.sefaz.seg.business.gestao.builder.DetalheNavegacao} conforme a construção desejada.
+     * Adiciona o cpf/cnpj do procurado no {@link br.gov.to.sefaz.seg.business.gestao.builder.DetalheNavegacao}.
+     *
+     * @param cpfCnpj cpf ou cnpj do procurado
+     * @return instância da classe
+     */
+    public DetalheNavegacaoRequestBuilder withAtuacaoNomeDe(String cpfCnpj) {
+        detalheNavegacao.setAtuacaoNomeDe(Objects.isNull(cpfCnpj) ? StringUtils.EMPTY : cpfCnpj);
+
+        return this;
+    }
+
+    /**
+     * Constrói o {@link br.gov.to.sefaz.seg.business.gestao.builder.DetalheNavegacao} conforme a construção desejada.
      *
      * @return {@link br.gov.to.sefaz.seg.business.gestao.builder.DetalheNavegacao} construido através dos métodos de
      *         construção da classe

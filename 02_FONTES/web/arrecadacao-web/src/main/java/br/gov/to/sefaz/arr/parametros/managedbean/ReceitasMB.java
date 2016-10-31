@@ -2,10 +2,10 @@ package br.gov.to.sefaz.arr.parametros.managedbean;
 
 import br.gov.to.sefaz.arr.parametros.business.facade.ReceitasFacade;
 import br.gov.to.sefaz.arr.parametros.business.service.filter.ReceitasFilter;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PlanoContas;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.ReceitasRepasse;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.ReceitasTaxas;
+import br.gov.to.sefaz.arr.persistence.entity.PlanoContas;
+import br.gov.to.sefaz.arr.persistence.entity.Receitas;
+import br.gov.to.sefaz.arr.persistence.entity.ReceitasRepasse;
+import br.gov.to.sefaz.arr.persistence.entity.ReceitasTaxas;
 import br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB;
 import br.gov.to.sefaz.util.message.MessageUtil;
 
@@ -21,7 +21,7 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
 /**
- * ManagedBean da entidade {@link br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas}.
+ * ManagedBean da entidade {@link br.gov.to.sefaz.arr.persistence.entity.Receitas}.
  *
  * @author <a href="mailto:gabriel.santos@ntconsult.com.br">gabriel.santos</a>
  * @since 19/05/2016 17:33:00
@@ -84,7 +84,7 @@ public class ReceitasMB extends DefaultCrudMB<Receitas, Integer> {
         List<Receitas> resultList = getFacade().find(filter);
 
         if (resultList.isEmpty()) {
-            MessageUtil.addMesage(MessageUtil.ARR, "parametros.pesquisa.vazia");
+            MessageUtil.addMessage("mensagem.pesquisa.vazia");
         }
 
         setResultList(resultList);

@@ -1,6 +1,12 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./TipoOperacaoEnum.html" title="br.gov.to.sefaz.seg.persistence.enums.TipoOperacaoEnum" alt="" coords="16,11,167,121"/>
-<area shape="rect" id="node1" href="./TipoOperacaoEnum.html" title="&lt;TABLE&gt;" alt="" coords="5,5,177,127"/>
-<area shape="rect" id="node2_1" href="./SituacaoUsuarioEnum.html" title="br.gov.to.sefaz.seg.persistence.enums.SituacaoUsuarioEnum" alt="" coords="212,11,360,121"/>
-<area shape="rect" id="node2" href="./SituacaoUsuarioEnum.html" title="&lt;TABLE&gt;" alt="" coords="201,5,371,127"/>
+<area shape="rect" id="node1_0" href="./TipoPeriodoConsultaComunicacaoEnum.html" title="br.gov.to.sefaz.seg.persistence.enums.TipoPeriodoConsultaComunicacaoEnum" alt="" coords="16,11,268,225"/>
+<area shape="rect" id="node1" href="./TipoPeriodoConsultaComunicacaoEnum.html" title="&lt;TABLE&gt;" alt="" coords="5,5,279,231"/>
+<area shape="rect" id="node2_1" href="./TipoOperacaoEnum.html" title="br.gov.to.sefaz.seg.persistence.enums.TipoOperacaoEnum" alt="" coords="313,63,464,173"/>
+<area shape="rect" id="node2" href="./TipoOperacaoEnum.html" title="&lt;TABLE&gt;" alt="" coords="303,57,475,179"/>
+<area shape="rect" id="node3_2" href="./TipoComunicacaoEnum.html" title="br.gov.to.sefaz.seg.persistence.enums.TipoComunicacaoEnum" alt="" coords="509,63,665,173"/>
+<area shape="rect" id="node3" href="./TipoComunicacaoEnum.html" title="&lt;TABLE&gt;" alt="" coords="499,57,676,179"/>
+<area shape="rect" id="node4_3" href="./SituacaoUsuarioEnum.html" title="br.gov.to.sefaz.seg.persistence.enums.SituacaoUsuarioEnum" alt="" coords="711,63,859,173"/>
+<area shape="rect" id="node4" href="./SituacaoUsuarioEnum.html" title="&lt;TABLE&gt;" alt="" coords="700,57,869,179"/>
+<area shape="rect" id="node5_4" href="./SituacaoSolicitacaoEnum.html" title="br.gov.to.sefaz.seg.persistence.enums.SituacaoSolicitacaoEnum" alt="" coords="905,63,1073,173"/>
+<area shape="rect" id="node5" href="./SituacaoSolicitacaoEnum.html" title="&lt;TABLE&gt;" alt="" coords="894,57,1083,179"/>
 </map>

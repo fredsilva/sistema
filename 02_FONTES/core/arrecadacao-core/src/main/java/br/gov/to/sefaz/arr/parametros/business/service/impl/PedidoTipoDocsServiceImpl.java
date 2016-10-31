@@ -1,14 +1,12 @@
 package br.gov.to.sefaz.arr.parametros.business.service.impl;
 
 import br.gov.to.sefaz.arr.parametros.business.service.PedidoTipoDocsService;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoTipoDocs;
-import br.gov.to.sefaz.arr.parametros.persistence.enums.TipoPedidoAcoesEnum;
-import br.gov.to.sefaz.arr.parametros.persistence.enums.TipoPedidoCampoEnum;
-import br.gov.to.sefaz.arr.parametros.persistence.repository.PedidoTipoDocsRepository;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoTipoDocs;
+import br.gov.to.sefaz.arr.persistence.enums.TipoPedidoAcoesEnum;
+import br.gov.to.sefaz.arr.persistence.enums.TipoPedidoCampoEnum;
+import br.gov.to.sefaz.arr.persistence.repository.PedidoTipoDocsRepository;
 import br.gov.to.sefaz.business.service.impl.DefaultCrudService;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -28,7 +26,7 @@ public class PedidoTipoDocsServiceImpl extends DefaultCrudService<PedidoTipoDocs
     @Autowired
     public PedidoTipoDocsServiceImpl(
             PedidoTipoDocsRepository repository) {
-        super(repository, new Sort(new Sort.Order(Sort.Direction.ASC, "idTipoDocs")));
+        super(repository);
     }
 
     @Override

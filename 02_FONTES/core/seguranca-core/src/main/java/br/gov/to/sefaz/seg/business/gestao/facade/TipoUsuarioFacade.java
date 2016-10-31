@@ -1,8 +1,7 @@
 package br.gov.to.sefaz.seg.business.gestao.facade;
 
-import br.gov.to.sefaz.business.facade.CrudFacade;
 import br.gov.to.sefaz.seg.business.gestao.service.filter.TipoUsuarioFilter;
-import br.gov.to.sefaz.seg.persistence.entity.TipoUsuario;
+import br.gov.to.sefaz.seg.persistence.domain.TipoUsuario;
 
 import java.util.List;
 
@@ -12,7 +11,7 @@ import java.util.List;
  * @author <a href="mailto:thiago.luz@ntconsult.com.br">thiago.luz</a>
  * @since 13/06/2016 11:33:00
  */
-public interface TipoUsuarioFacade extends CrudFacade<TipoUsuario, Integer> {
+public interface TipoUsuarioFacade {
 
     /**
      * Filtro da tela de TipoUsuarios.
@@ -20,5 +19,11 @@ public interface TipoUsuarioFacade extends CrudFacade<TipoUsuario, Integer> {
      * @return a lista que foi encontrada através do filtro.
      */
     List<TipoUsuario> find(TipoUsuarioFilter filter);
+
+    /**
+     * Filtro da tela de TipoUsuarios.
+     * @return a lista que foi encontrada através do filtro.
+     */
+    List<TipoUsuario> findAllTipoUsuario();
 }
 

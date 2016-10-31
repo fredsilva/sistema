@@ -10,49 +10,52 @@ import java.util.Objects;
  * @since 16/06/2016 14:21:00
  */
 public class DetalheNavegacao {
-    private String cpfUsuario;
+    private String nomeUsuario;
+    private String atuacaoNomeDe;
     private String serverName;
     private String userAgent;
     private String language;
-    private String httpMethod;
     private String country;
+    private String httpMethod;
     private String pathInfo;
-    private Map<String, String[]> parameterMap;
-    private String localAddr;
-    private String remoteAddr;
+    private Map<String, String[]> requestParameters;
+    private String localAddress;
+    private String remoteAddress;
     private String resource;
     private String timeStamp;
-    private long elapsedTime;
+    private long timeEllapsed;
 
-    public DetalheNavegacao(String cpfUsuario, String serverName, String userAgent,
-            String language, String httpMethod, String country, String pathInfo,
-            Map<String, String[]> parameterMap, String localAddr, String remoteAddr,
-            String resource, String timeStamp, long elapsedTime) {
-        this.cpfUsuario = cpfUsuario;
+    public DetalheNavegacao(String nomeUsuario, String atuacaoNomeDe, String serverName,
+            String userAgent, String language, String country, String httpMethod,
+            String pathInfo, Map<String, String[]> requestParameters, String localAddress,
+            String remoteAddress, String resource, String timeStamp, long timeEllapsed) {
+
+        this.nomeUsuario = nomeUsuario;
         this.serverName = serverName;
         this.userAgent = userAgent;
         this.language = language;
         this.httpMethod = httpMethod;
         this.country = country;
         this.pathInfo = pathInfo;
-        this.parameterMap = parameterMap;
-        this.localAddr = localAddr;
-        this.remoteAddr = remoteAddr;
+        this.requestParameters = requestParameters;
+        this.localAddress = localAddress;
+        this.remoteAddress = remoteAddress;
         this.resource = resource;
         this.timeStamp = timeStamp;
-        this.elapsedTime = elapsedTime;
+        this.timeEllapsed = timeEllapsed;
+        this.atuacaoNomeDe = atuacaoNomeDe;
     }
 
     public DetalheNavegacao() {
         // Construtor Vazio.
     }
 
-    public String getCpfUsuario() {
-        return cpfUsuario;
+    public String getNomeUsuario() {
+        return nomeUsuario;
     }
 
-    public void setCpfUsuario(String cpfUsuario) {
-        this.cpfUsuario = cpfUsuario;
+    public void setNomeUsuario(String nomeUsuario) {
+        this.nomeUsuario = nomeUsuario;
     }
 
     public String getServerName() {
@@ -103,28 +106,28 @@ public class DetalheNavegacao {
         this.pathInfo = pathInfo;
     }
 
-    public Map<String, String[]> getParameterMap() {
-        return parameterMap;
+    public Map<String, String[]> getRequestParameters() {
+        return requestParameters;
     }
 
-    public void setParameterMap(Map<String, String[]> parameterMap) {
-        this.parameterMap = parameterMap;
+    public void setRequestParameters(Map<String, String[]> requestParameters) {
+        this.requestParameters = requestParameters;
     }
 
-    public String getLocalAddr() {
-        return localAddr;
+    public String getLocalAddress() {
+        return localAddress;
     }
 
-    public void setLocalAddr(String localAddr) {
-        this.localAddr = localAddr;
+    public void setLocalAddress(String localAddress) {
+        this.localAddress = localAddress;
     }
 
-    public String getRemoteAddr() {
-        return remoteAddr;
+    public String getRemoteAddress() {
+        return remoteAddress;
     }
 
-    public void setRemoteAddr(String remoteAddr) {
-        this.remoteAddr = remoteAddr;
+    public void setRemoteAddress(String remoteAddress) {
+        this.remoteAddress = remoteAddress;
     }
 
     public String getResource() {
@@ -143,12 +146,20 @@ public class DetalheNavegacao {
         this.timeStamp = timeStamp;
     }
 
-    public long getElapsedTime() {
-        return elapsedTime;
+    public long getTimeEllapsed() {
+        return timeEllapsed;
     }
 
-    public void setElapsedTime(long elapsedTime) {
-        this.elapsedTime = elapsedTime;
+    public void setTimeEllapsed(long timeEllapsed) {
+        this.timeEllapsed = timeEllapsed;
+    }
+
+    public String getAtuacaoNomeDe() {
+        return atuacaoNomeDe;
+    }
+
+    public void setAtuacaoNomeDe(String atuacaoNomeDe) {
+        this.atuacaoNomeDe = atuacaoNomeDe;
     }
 
     @Override
@@ -160,43 +171,45 @@ public class DetalheNavegacao {
             return false;
         }
         DetalheNavegacao that = (DetalheNavegacao) o;
-        return elapsedTime == that.elapsedTime
-                && Objects.equals(cpfUsuario, that.cpfUsuario)
+        return timeEllapsed == that.timeEllapsed
+                && Objects.equals(nomeUsuario, that.nomeUsuario)
                 && Objects.equals(serverName, that.serverName)
                 && Objects.equals(userAgent, that.userAgent)
                 && Objects.equals(language, that.language)
                 && Objects.equals(httpMethod, that.httpMethod)
                 && Objects.equals(country, that.country)
                 && Objects.equals(pathInfo, that.pathInfo)
-                && Objects.equals(parameterMap, that.parameterMap)
-                && Objects.equals(localAddr, that.localAddr)
-                && Objects.equals(remoteAddr, that.remoteAddr)
+                && Objects.equals(requestParameters, that.requestParameters)
+                && Objects.equals(localAddress, that.localAddress)
+                && Objects.equals(remoteAddress, that.remoteAddress)
                 && Objects.equals(resource, that.resource)
-                && Objects.equals(timeStamp, that.timeStamp);
+                && Objects.equals(timeStamp, that.timeStamp)
+                && Objects.equals(atuacaoNomeDe, that.atuacaoNomeDe);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(cpfUsuario, serverName, userAgent, language, httpMethod, country, pathInfo, parameterMap,
-                localAddr, remoteAddr, resource, timeStamp, elapsedTime);
+        return Objects.hash(nomeUsuario, serverName, userAgent, language, httpMethod, country, pathInfo,
+                requestParameters, localAddress, remoteAddress, resource, timeStamp, timeEllapsed, atuacaoNomeDe);
     }
 
     @Override
     public String toString() {
         return "DetalheNavegacao{"
-                + "cpfUsuario='" + cpfUsuario + '\''
+                + "nomeUsuario='" + nomeUsuario + '\''
                 + ", serverName='" + serverName + '\''
                 + ", userAgent='" + userAgent + '\''
                 + ", language='" + language + '\''
-                + ", httpMethod='" + httpMethod + '\''
                 + ", country='" + country + '\''
+                + ", httpMethod='" + httpMethod + '\''
                 + ", pathInfo='" + pathInfo + '\''
-                + ", parameterMap=" + parameterMap
-                + ", localAddr='" + localAddr + '\''
-                + ", remoteAddr='" + remoteAddr + '\''
+                + ", requestParameters=" + requestParameters
+                + ", localAddress='" + localAddress + '\''
+                + ", remoteAddress='" + remoteAddress + '\''
                 + ", resource='" + resource + '\''
                 + ", timeStamp='" + timeStamp + '\''
-                + ", elapsedTime=" + elapsedTime
+                + ", timeEllapsed=" + timeEllapsed + '\''
+                + ", atuacaoNomeDe=" + atuacaoNomeDe
                 + '}';
     }
 }

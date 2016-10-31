@@ -1,0 +1,96 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
+<siteinfo>
+<sitename>SEFAZ-TO Wiki</sitename>
+<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<generator>JAMWiki 1.3.2</generator>
+<case>case-sensitive</case>
+<namespaces>
+<namespace key="-2">Media</namespace>
+<namespace key="-1">Special</namespace>
+<namespace key="0" />
+<namespace key="1">Comments</namespace>
+<namespace key="2">User</namespace>
+<namespace key="3">User comments</namespace>
+<namespace key="4">Project</namespace>
+<namespace key="5">Project comments</namespace>
+<namespace key="6">File</namespace>
+<namespace key="7">File comments</namespace>
+<namespace key="8">JAMWiki</namespace>
+<namespace key="9">JAMWiki comments</namespace>
+<namespace key="10">Template</namespace>
+<namespace key="11">Template comments</namespace>
+<namespace key="12">Help</namespace>
+<namespace key="13">Help comments</namespace>
+<namespace key="14">Category</namespace>
+<namespace key="15">Category comments</namespace>
+</namespaces>
+</siteinfo>
+<page>
+<title>P��gina Inicial</title>
+<ns>0</ns>
+<id>1</id>
+<revision>
+<id>1286</id>
+<timestamp>2016-10-14T09:16:05Z</timestamp>
+<contributor>
+<username>admin</username>
+<id>1</id>
+</contributor>
+<comment />
+<text xml:space="preserve" bytes="3412">* [[Manual de Usu��rio]]
+** [[Acessando_o_Sistema|Acessando o Sistema]] 
+***[[Login_do_Sistema|Login do Sistema]]
+**** [[Efetuar_Login_no_Sistema_com_CPF|Efetuar Login no Sistema com CPF]]
+**** [[Efetuar_Login_no_Sistema_com_Certificado_Digital|Efetuar Login no Sistema com Certificado Digital]]
+**** [[Lembrar_Senha|Lembrar Senha]]
+***[[Selecionar_Perfil_de_Usu��rio|Selecionar Perfil de Usu��rio]]
+***[[Visualizar_Opc��es_do_Sistema|Visualizar Op����es do Sistema]]
+***[[Logout_do_Sistema|Logout do Sistema]]
+***[[Consulta_de_comunica����es_do_sistema_via_E-mail|Consulta de comunica����es do sistema via E-mail]]
+***[[Consulta_de_comunica����es_do_sistema_via_SMS|Consulta de comunica����es do sistema via SMS]]
+** [[M��dulo de Arrecada����o]]
+*** [[Par��metros]]
+**** [[Manuten����o_de_Bancos|Manuten����o de Bancos]] 
+***** [[Manuten����o_de_Ag��ncias_Banc��rias|Manuten����o de Ag��ncias Banc��rias]]
+**** [[Manuten����o_de_Conv��nios_da_Arrecada����o|Manuten����o de Conv��nios da Arrecada����o]]
+**** [[Manuten����o_de_Grupos_de_CNAEs|Manuten����o de Grupos de CNAE&apos;s]]
+**** [[Manuten����o_de_Plano_de_Contas|Manuten����o de Plano de Contas]]
+**** [[Manuten����o_de_Receitas_e_Transfer��ncias|Manuten����o de Receitas e Transfer��ncias]]
+**** [[Manuten����o_de_Tipos_de_Rejei����o_dos_Arquivos|Manuten����o de Tipos de Rejei����es dos Arquivos]]
+**** [[Manuten����o_de_Tipos_de_Pedidos_de_��reas|Manuten����o de Tipos de Pedidos de ��reas]]
+**** [[Tipo_de_Pedidos_de_Documentos_e_A����es|Tipo de Pedidos de Documentos e A����es]]
+** [[M��dulo de Par��metros Gerais]]
+*** [[Gest��o]]
+**** [[Manuten����o_dos_Par��metros_Gerais_do_Sistema|Manuten����o dos Par��metros Gerais do Sistema]]
+** [[M��dulo de Seguran��a]]
+*** [[Consulta]]
+**** [[Consulta_de_Comunica����es_com_os_Contribuintes|Consulta de Comunica����es com os Contribuintes]]
+**** [[Consultar_Hist��rico_de_Acesso_(log)|Consultar Hist��rico de Acesso (log)]]
+*** [[Gest��o de Seguran��a]]
+**** [[Altera����o_de_Senha|Altera����o de Senha]]
+**** [[Ativar/Inativar_Perfis_dos_Funcion��rios_SEFAZ|Ativar/Inativar perfis dos Funcion��rios SEFAZ]]
+**** [[Atribui����o_de_Perfis_aos_Usu��rios|Atribui����o de perfis aos usu��rios]]
+**** [[Consultar_Usu��rio|Consultar Usu��rio]]
+**** [[Cria����o_do_Usu��rio/Senha_no_Sistema|Cria����o do Usu��rio/Senha no Sistema]]
+**** [[Manter_Cadastro_de_Sistemas|Manter Cadastro de Sistemas]]
+**** [[Manuten����o_de_Postos_de_Trabalho|Manter Postos de Trabalho]]
+**** [[Manuten����o_de_Tipo_de_Usuario|Manter Tipos de Usu��rio]]
+**** [[Manuten����o_de_Unidades_Organizacionais|Manuten����o de Unidades Organizacionais]]
+**** [[Manuten����o_de_Usuario|Manter Usu��rio]]
+**** [[Manuten����o_de_Cadastro_de_Funcionalidades|Manuten����o do cadastro de funcionalidades]]
+**** [[Manuten����o_do_Cadastro_de_Perfil|Manuten����o do cadastro de perfil]]
+**** [[Manuten����o_dos_Pap��is(roles)|Manuten����o dos pap��is(roles)]]
+**** [[Procura����o/Retirada_das_Op����es_do_Sistema|Procura����o/Retirada das op����es do sistema]]
+***** [[Selecionar_Contribuinte_Procurado|Selecionar Contribuinte Procurado]]
+**** [[Solicita����o_de_senhas_de_Servicos|Solicitar Autoriza����o de Senhas de Servi��os]]
+**** [[Solicitar_para_atuar_como_usu��rio_principal_de_uma_empresa|Solicitar para atuar como usu��rio principal de uma empresa]]
+
+*[[Manual de Manuten����o]]
+**[[Instala����o do Ambiente do Sistema|Instala����o do Ambiente do Sistema Windows]]
+**[[Instala����o do Ambiente do Sistema Linux]]
+** [[Instala����o do Ambiente de Desenvolvimento]]
+** [[Manual para Manuten����o do Sistema]]
+</text>
+</revision>
+</page>
+</mediawiki>

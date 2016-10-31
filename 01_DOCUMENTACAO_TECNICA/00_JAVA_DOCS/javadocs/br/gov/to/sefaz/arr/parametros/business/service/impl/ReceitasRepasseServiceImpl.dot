@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.service.impl.DefaultCrudService<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c170844 [label=<<table title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/service/impl/DefaultCrudService.html">
+	c736943 [label=<<table title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/service/impl/DefaultCrudService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultCrudService&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
 		</table></td></tr>
@@ -18,20 +18,19 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + DefaultCrudService(repository : BaseRepository&lt;E, I&gt;, sort : Sort) </td></tr>
+<tr><td align="left" balign="left"> + DefaultCrudService(repository : BaseRepository&lt;E, I&gt;) </td></tr>
 <tr><td align="left" balign="left"> + findOne(id : I) : E </td></tr>
 <tr><td align="left" balign="left"> + findAll() : Collection&lt;E&gt; </td></tr>
-<tr><td align="left" balign="left"> + findAll(list : Iterable&lt;I&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + save(entity : E) : E </td></tr>
 <tr><td align="left" balign="left"> + save(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + update(entity : E) : E </td></tr>
+<tr><td align="left" balign="left"> + update(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + delete(id : I) : Optional&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + delete(ids : Iterable&lt;I&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getDefaultSort() : Sort </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../../../business/service/impl/DefaultCrudService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.ReceitasRepasseService
-	c171043 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.ReceitasRepasseService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ReceitasRepasseService.html">
+	c737298 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.ReceitasRepasseService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ReceitasRepasseService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ReceitasRepasseService </td></tr>
@@ -46,7 +45,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../ReceitasRepasseService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.impl.ReceitasRepasseServiceImpl
-	c171070 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.ReceitasRepasseServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ReceitasRepasseServiceImpl.html">
+	c737325 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.ReceitasRepasseServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ReceitasRepasseServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ReceitasRepasseServiceImpl </td></tr>
 		</table></td></tr>
@@ -60,9 +59,9 @@ digraph G {
 <tr><td align="left" balign="left"> + validateReceitasRepasse(receitasRepasse : ReceitasRepasse) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ReceitasRepasseServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	//br.gov.to.sefaz.arr.parametros.business.service.impl.ReceitasRepasseServiceImpl extends br.gov.to.sefaz.business.service.impl.DefaultCrudService<br.gov.to.sefaz.arr.parametros.persistence.entity.ReceitasRepasse, br.gov.to.sefaz.arr.parametros.persistence.entity.ReceitasRepassePK>
-	c170844:p -> c171070:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.arr.parametros.business.service.impl.ReceitasRepasseServiceImpl extends br.gov.to.sefaz.business.service.impl.DefaultCrudService<br.gov.to.sefaz.arr.persistence.entity.ReceitasRepasse, br.gov.to.sefaz.arr.persistence.entity.ReceitasRepassePK>
+	c736943:p -> c737325:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.parametros.business.service.impl.ReceitasRepasseServiceImpl implements br.gov.to.sefaz.arr.parametros.business.service.ReceitasRepasseService
-	c171043:p -> c171070:p [dir=back,arrowtail=empty,style=dashed];
+	c737298:p -> c737325:p [dir=back,arrowtail=empty,style=dashed];
 }
 

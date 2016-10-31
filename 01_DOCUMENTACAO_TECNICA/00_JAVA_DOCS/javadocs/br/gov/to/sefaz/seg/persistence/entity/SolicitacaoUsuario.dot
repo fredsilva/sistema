@@ -10,12 +10,13 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.entity.AbstractEntity<I extends java.io.Serializable>
-	c184574 [label=<<table title="br.gov.to.sefaz.persistence.entity.AbstractEntity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/entity/AbstractEntity.html">
+	c801685 [label=<<table title="br.gov.to.sefaz.persistence.entity.AbstractEntity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/entity/AbstractEntity.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractEntity&lt;I extends Serializable&gt; </font></td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
+<tr><td align="left" balign="left"> + SIM : String </td></tr>
+<tr><td align="left" balign="left"> + NAO : String </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + AbstractEntity() </td></tr>
@@ -28,8 +29,8 @@ digraph G {
 <tr><td align="left" balign="left"> + setUsuarioAlteracao(usuarioAlteracao : String) </td></tr>
 <tr><td align="left" balign="left"> + getDataAlteracao() : LocalDateTime </td></tr>
 <tr><td align="left" balign="left"> + setDataAlteracao(dataAlteracao : LocalDateTime) </td></tr>
-<tr><td align="left" balign="left"> + getRegistroExcluido() : Boolean </td></tr>
-<tr><td align="left" balign="left"> + setRegistroExcluido(registroExcluido : Boolean) </td></tr>
+<tr><td align="left" balign="left"> + getRegistroExcluido() : String </td></tr>
+<tr><td align="left" balign="left"> + setRegistroExcluido(registroExcluido : String) </td></tr>
 <tr><td align="left" balign="left"> + getUsuarioExclusao() : String </td></tr>
 <tr><td align="left" balign="left"> + setUsuarioExclusao(usuarioExclusao : String) </td></tr>
 <tr><td align="left" balign="left"> + getDataExclusao() : LocalDateTime </td></tr>
@@ -37,7 +38,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../persistence/entity/AbstractEntity.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.entity.SolicitacaoUsuario
-	c184693 [label=<<table title="br.gov.to.sefaz.seg.persistence.entity.SolicitacaoUsuario" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SolicitacaoUsuario.html">
+	c802017 [label=<<table title="br.gov.to.sefaz.seg.persistence.entity.SolicitacaoUsuario" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SolicitacaoUsuario.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SolicitacaoUsuario </td></tr>
 		</table></td></tr>
@@ -46,7 +47,7 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + SolicitacaoUsuario() </td></tr>
-<tr><td align="left" balign="left"> + SolicitacaoUsuario(identificacaoSolicitacao : Long, cnpjNegocio : String, inscricaoEstadualNegocio : String, situacaoSolicitacao : Character, usuarioSistema : UsuarioSistema) </td></tr>
+<tr><td align="left" balign="left"> + SolicitacaoUsuario(identificacaoSolicitacao : Long, cnpjNegocio : String, inscricaoEstadualNegocio : String, situacaoSolicitacao : SituacaoSolicitacaoEnum, usuarioSistema : UsuarioSistema) </td></tr>
 <tr><td align="left" balign="left"> + getId() : Long </td></tr>
 <tr><td align="left" balign="left"> + getIdentificacaoSolicitacao() : Long </td></tr>
 <tr><td align="left" balign="left"> + setIdentificacaoSolicitacao(identificacaoSolicitacao : Long) </td></tr>
@@ -54,16 +55,18 @@ digraph G {
 <tr><td align="left" balign="left"> + setCnpjNegocio(cnpjNegocio : String) </td></tr>
 <tr><td align="left" balign="left"> + getInscricaoEstadualNegocio() : String </td></tr>
 <tr><td align="left" balign="left"> + setInscricaoEstadualNegocio(inscricaoEstadualNegocio : String) </td></tr>
-<tr><td align="left" balign="left"> + getSituacaoSolicitacao() : Character </td></tr>
-<tr><td align="left" balign="left"> + setSituacaoSolicitacao(situacaoSolicitacao : Character) </td></tr>
+<tr><td align="left" balign="left"> + getSituacaoSolicitacao() : SituacaoSolicitacaoEnum </td></tr>
+<tr><td align="left" balign="left"> + setSituacaoSolicitacao(situacaoSolicitacao : SituacaoSolicitacaoEnum) </td></tr>
 <tr><td align="left" balign="left"> + getUsuarioSistema() : UsuarioSistema </td></tr>
 <tr><td align="left" balign="left"> + setUsuarioSistema(usuarioSistema : UsuarioSistema) </td></tr>
 <tr><td align="left" balign="left"> + hashCode() : int </td></tr>
 <tr><td align="left" balign="left"> + equals(obj : Object) : boolean </td></tr>
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
+<tr><td align="left" balign="left"> + getCpfUsuario() : String </td></tr>
+<tr><td align="left" balign="left"> + setCpfUsuario(cpfUsuario : String) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SolicitacaoUsuario.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.persistence.entity.SolicitacaoUsuario extends br.gov.to.sefaz.persistence.entity.AbstractEntity<java.lang.Long>
-	c184574:p -> c184693:p [dir=back,arrowtail=empty];
+	c801685:p -> c802017:p [dir=back,arrowtail=empty];
 }
 

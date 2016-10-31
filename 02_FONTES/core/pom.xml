@@ -7,7 +7,7 @@
     <parent>
         <groupId>br.gov.to.sefaz</groupId>
         <artifactId>sat</artifactId>
-        <version>0.2.0-SNAPSHOT</version>
+        <version>1.6.4</version>
     </parent>
 
     <artifactId>core</artifactId>
@@ -21,12 +21,13 @@
 
     <modules>
         <module>parametrizacao-core</module>
+        <module>contribuinte-core</module>
+        <module>seguranca-core</module>
         <module>arrecadacao-core</module>
+        <module>ecf-core</module>
         <!-- <module>sat-core-ccc</module> --> <!-- Conta Corrente -->
-        <!-- <module>sat-core-cci</module> --> <!-- Cadastro de Contribuinte -->
         <!-- <module>sat-core-cob</module> --> <!-- Cobrança -->
         <!-- <module>sat-core-com</module> --> <!-- Consulta -->
-        <!-- <module>sat-core-ecf</module> --> <!-- Equipamento Emissor de Cupom Fiscal -->
         <!-- <module>sat-core-fie</module> --> <!-- Fiscalização Estabelecimento -->
         <!-- <module>sat-core-ftr</module> --> <!-- Fiscalização de Trânsito de Mercadorias -->
         <!-- <module>sat-core-ged</module> --> <!-- Gerenciamento Eletrônico de Documentos -->
@@ -36,6 +37,5 @@
         <!-- <module>sat-core-ree</module> --> <!-- Regimes Especiais -->
         <!-- <module>sat-core-res</module> --> <!-- Restituições -->
         <!-- <module>sat-core-wrk</module> --> <!-- Gestão de Fluxo de Trabalho -->
-        <module>seguranca-core</module>
     </modules>
 </project>

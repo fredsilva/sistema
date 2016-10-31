@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+        xmlns:sat="http://sefaz.to.gov.br/composites"
+        xmlns:a4j="http://richfaces.org/a4j">
+
+<ui:composition template="/protected/views/templates/views/default-template.xhtml">
+
+    <ui:param name="pageTitle" value="#{seg_msg['seg.gestao.usuarioSistema.titulo']}"/>
+
+    <ui:define name="header">
+        <h:outputScript library="js" name="seg/gestao/consulta-usuario-sistema.js"/>
+    </ui:define>
+
+    <ui:define name="content">
+        <sat:panel title="#{seg_msg['seg.gestao.usuarioSistema.titulo']}">
+            <div class="col-md-12">
+                <h:form id="usuario-sistema-filtro">
+                        <div class="row">
+                            <div class="form-group col-md-4">
+                                <h:outputLabel for="cpfUsuarioSistema">
+                                    #{seg_msg['seg.gestao.usuarioSistema.filter.cpf']}
+                                </h:outputLabel>
+                                <h:inputText value="#{usuarioSistemaMB.filter.cpfUsuario}"
+                                        id="cpfUsuarioSistema"
+                                        styleClass="form-control"
+                                        maxlength="14"
+                                        p:data-mask="999.999.999-99">
+                                    <f:converter converterId="cpfFacesConverter"/>
+                                </h:inputText>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <h:outputLabel for="nomeUsuarioSistema">
+                                    #{seg_msg['seg.gestao.usuarioSistema.filter.nomeCompletoUsuario']}
+                                </h:outputLabel>
+                                <h:inputText value="#{usuarioSistemaMB.filter.nomeCompletoUsuario}"
+                                        id="nomeUsuarioSistema"
+                                        styleClass="form-control"
+                                        maxlength="40">
+                                </h:inputText>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <h:outputLabel
+                                        for="situacaoUsuario">#{seg_msg['parametros.usuarioSistema.filter.status']}
+                                </h:outputLabel>
+                                <h:selectOneMenu value="#{usuarioSistemaMB.filter.situacaoUsuario}" id="situacaoUsuario"
+                                        styleClass="form-control">
+                                    <f:selectItem value="#{null}"
+                                            itemLabel="[Todos]" />
+                                    <f:selectItems value="#{segEnumsMB.situacoes}"
+                                            var="situacaoUsuario"
+                                            itemValue="#{situacaoUsuario}"
+                                            itemLabel="#{segEnumsMB.getSituacaoLabel(situacaoUsuario)}"/>
+                                </h:selectOneMenu>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-4">
+                                <h:outputLabel
+                                        for="tipoUsuarioForm">#{seg_msg['parametros.usuarioSistema.filter.tipoUsuario']}
+                                </h:outputLabel>
+                                <h:selectOneMenu value="#{usuarioSistemaMB.filter.tipoUsuario}"
+                                        id="tipoUsuarioForm"
+                                        styleClass="form-control">
+                                    <f:selectItem value="#{null}"
+                                        itemLabel="[Todos]" />
+                                    <f:selectItems value="#{usuarioSistemaMB.allTipoUsuario}"
+                                            var="tipoUsuarioForm"
+                                            itemValue="#{tipoUsuarioForm.codigoTipoUsuario}"
+                                            itemLabel="#{tipoUsuarioForm.descricaoTipoUsuario}"/>
+                                </h:selectOneMenu>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <h:outputLabel
+                                        for="codigoEstadoForm">#{seg_msg['parametros.usuarioSistema.filter.codigoEstado']}
+                                </h:outputLabel>
+                                <h:selectOneMenu value="#{usuarioSistemaMB.filter.codigoEstado}" id="codigoEstadoForm"
+                                        styleClass="form-control">
+                                    <f:selectItem value="#{null}"
+                                            itemLabel="[Todos]" />
+                                    <f:selectItems value="#{usuarioSistemaMB.estados}"
+                                            var="codigoEstadoForm"
+                                            itemValue="#{codigoEstadoForm.unidadeFederacao}"
+                                            itemLabel="#{codigoEstadoForm.nomeEstado}"/>
+                                    <f:ajax render="municipio" listener="#{usuarioSistemaMB.loadMunicipiosFilter()}"/>
+                                </h:selectOneMenu>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <h:outputLabel
+                                        for="municipio">#{seg_msg['parametros.usuarioSistema.filter.codigoMunicipio']}
+                                </h:outputLabel>
+                                <h:selectOneMenu value="#{usuarioSistemaMB.filter.codigoMunicipio}" id="municipio"
+                                        styleClass="form-control">
+                                    <f:selectItem value="#{null}"
+                                            itemLabel="[Todas]" />
+                                    <f:selectItems value="#{usuarioSistemaMB.municipios}"
+                                            var="municipio"
+                                            itemValue="#{municipio.codigoIbge}"
+                                            itemLabel="#{municipio.nomeMunicipio}"/>
+                                </h:selectOneMenu>
+                            </div>
+                        </div>
+                        <div class="form-group col-lg-12 text-right">
+                            <h:commandButton type="button"
+                                    value="#{seg_msg['seg.gestao.usuarioSistema.table.button.consultar']}"
+                                    styleClass="btn btn-primary align-bottom"
+                                    action="#{usuarioSistemaMB.search()}">
+                                <f:ajax render="usuario-sistema-table"
+                                        execute="cpfUsuarioSistema nomeUsuarioSistema situacaoUsuario
+                                        tipoUsuarioForm codigoEstadoForm municipio"/>
+                            </h:commandButton>
+
+                            <sat:opcaoAjudaButton styleClass="align-bottom" />
+                        </div>
+                </h:form>
+            </div>
+            <sat:table id="usuario-sistema-table"
+                    bundle="seg_msg"
+                    content="#{usuarioSistemaMB.resultList}"
+                    headers="seg.gestao.usuarioSistema.table.nomeCompletoUsuario,
+                             seg.gestao.usuarioSistema.table.cpfUsuario,
+                                seg.gestao.usuarioSistema.table.descricaoTipoUsuario,
+                                seg.gestao.usuarioSistema.table.status,
+                                seg.gestao.usuarioSistema.table.nomeMunicipio,
+                                seg.gestao.usuarioSistema.table.dataInsercao,
+                                seg.gestao.usuarioSistema.table.usuarioInsercao,
+                                seg.gestao.usuarioSistema.table.dataInsercaoAlterar,
+                                seg.gestao.usuarioSistema.table.dataUltimoAcesso"
+                    fields="nomeCompletoUsuario, cpfUsuario:cpf, descricaoTipoUsuario, situacaoUsuario, nomeMunicipio,
+                            dataInsercao:dateTime, usuarioInsercao, dataInsercao:dateTime, historicoLoginSistema:dateTime, cpfUsuario:hide"
+                    actionsHeader="seg.gestao.usuarioSistema.table.acoes"
+                    hasActions="true" actionEvents="select-row:click:viewUser(9)"
+                    columnDefs="{'class': 'tbody-nowrap', 'targets': [1, 5, 7, 8]}">
+                <f:facet name="actions">
+                    <i class="select-row glyphicon glyphicon-eye-open" role="button" />
+                </f:facet>
+            </sat:table>
+            <h:form>
+                <a4j:jsFunction name="viewUser"
+                        action="#{usuarioSistemaMB.getUsuarioById}"
+                        render="consulta-usuario-form"
+                        oncomplete="openModal()">
+                    <a4j:param name="cpf" assignTo="#{usuarioSistemaMB.dto.cpfUsuario}"/>
+                </a4j:jsFunction>
+            </h:form>
+            <div id="usuarioSistemaModal" class="modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" id="usuarioSistemaModalDialog">
+                    <div class="modal-content" id="usuarioSistemaModalContent">
+                        <div class="modal-header" id="usuarioSistemaModalHeader">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"
+                                    onclick="resetFields()">
+                                <span aria-hidden="true">&#xd7;</span>
+                            </button>
+                            <h4 class="modal-title"
+                                    id="usuarioSistemaModalTitle">#{seg_msg['seg.gestao.usuarioSistema.form.titulo']}</h4>
+                        </div>
+                        <div class="modal-body" id="usuarioSistemaModalBody">
+                            <h:form id="consulta-usuario-form">
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <h:outputLabel
+                                                for="numeroSolicitaoUsuarioForm">
+                                            #{seg_msg['seg.gestao.usuarioSistema.form.numeroSolicitacao']}
+                                        </h:outputLabel>
+                                        <h:inputText
+                                                id="numeroSolicitaoUsuarioForm"
+                                                styleClass="form-control"
+                                                maxlength="40"
+                                                readonly="true"
+                                                value="#{usuarioSistemaMB.dto.solicitacaoUsuario.id}">
+                                                </h:inputText>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <h:outputLabel
+                                                for="dataSolicitacaoUsuarioForm">
+                                            #{seg_msg['seg.gestao.usuarioSistema.form.dataSolicitacao']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{usuarioSistemaMB.dto.solicitacaoUsuario.dataInsercao}"
+                                                id="dataSolicitacaoUsuarioForm"
+                                                styleClass="form-control"
+                                                maxlength="19"
+                                                converter="localDateTimeFacesConverter"
+                                                readonly="true"/>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <h:outputLabel
+                                                for="cpfUsuarioForm">
+                                            #{seg_msg['seg.gestao.usuarioSistema.form.cpfUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{usuarioSistemaMB.dto.cpfUsuario}"
+                                                id="cpfUsuarioForm"
+                                                styleClass="form-control"
+                                                maxlength="14"
+                                                converter="cpfFacesConverter"
+                                                readonly="true"/>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <h:outputLabel
+                                                for="nomeCompletoUsuarioForm">
+                                            #{seg_msg['seg.gestao.usuarioSistema.form.nomeCompletoUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{usuarioSistemaMB.dto.nomeCompletoUsuario}"
+                                                id="nomeCompletoUsuarioForm"
+                                                styleClass="form-control"
+                                                maxlength="40"
+                                                readonly="true"/>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <h:outputLabel
+                                                for="cepUsuarioForm">
+                                            #{seg_msg['seg.gestao.usuarioSistema.form.cepUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{usuarioSistemaMB.dto.cep}"
+                                                id="cepUsuarioForm"
+                                                styleClass="form-control"
+                                                converter="cepFacesConverter"
+                                                maxlength="9"
+                                                readonly="true"/>
+                                    </div>
+                                    <div class="form-group col-md-3">
+                                        <h:outputLabel
+                                                for="logradouroUsuarioForm">
+                                            #{seg_msg['seg.gestao.usuarioSistema.form.logradouroUsuario']}
+                                        </h:outputLabel>
+                                        <h:selectOneMenu value="#{usuarioSistemaMB.dto.codigoLogradouro}"
+                                                id="logradouroUsuarioForm"
+                                                styleClass="form-control"
+                                                disabled="true">
+                                            <f:selectItems value="#{usuarioSistemaMB.logradouros}"
+                                                    var="logradouroUsuarioForm"
+                                                    itemValue="#{logradouroUsuarioForm.codigoLogradouro}"
+                                                    itemLabel="#{logradouroUsuarioForm.descricaoLogradouro}"/>
+                                        </h:selectOneMenu>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <h:outputLabel
+                                                for="enderecoUsuarioForm">
+                                            #{seg_msg['seg.gestao.usuarioSistema.form.enderecoUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{usuarioSistemaMB.dto.endereco}"
+                                                id="enderecoUsuarioForm"
+                                                styleClass="form-control"
+                                                maxlength="100"
+                                                readonly="true"/>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <h:outputLabel
+                                                for="numeroEnderecoUsuarioForm">
+                                            #{seg_msg['seg.gestao.usuarioSistema.form.numeroEnderecoUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{usuarioSistemaMB.dto.numeroEndereco}"
+                                                id="numeroEnderecoUsuarioForm"
+                                                styleClass="form-control"
+                                                maxlength="8"
+                                                readonly="true"/>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <h:outputLabel
+                                                for="apartamentoUsuarioForm">
+                                            #{seg_msg['seg.gestao.usuarioSistema.form.apartamentoUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{usuarioSistemaMB.dto.apartamento}"
+                                                id="apartamentoUsuarioForm"
+                                                styleClass="form-control"
+                                                maxlength="8"
+                                                readonly="true"/>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <h:outputLabel
+                                                for="complementoUsuarioForm">
+                                            #{seg_msg['seg.gestao.usuarioSistema.form.complementoEnderecoUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{usuarioSistemaMB.dto.complemento}"
+                                                id="complementoUsuarioForm"
+                                                styleClass="form-control"
+                                                maxlength="30"
+                                                readonly="true"/>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <h:outputLabel
+                                                for="bairroUsuarioForm">
+                                            #{seg_msg['seg.gestao.usuarioSistema.form.bairroUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{usuarioSistemaMB.dto.bairro}"
+                                                id="bairroUsuarioForm"
+                                                styleClass="form-control"
+                                                maxlength="100"
+                                                readonly="true"/>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <h:outputLabel
+                                                for="estadoUsuarioForm">
+                                            #{seg_msg['seg.gestao.usuarioSistema.form.estadoUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{usuarioSistemaMB.dto.nomeEstado}"
+                                                id="estadoUsuarioForm"
+                                                styleClass="form-control"
+                                                readonly="true"/>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <h:outputLabel
+                                                for="cidadeUsuarioForm">
+                                            #{seg_msg['seg.gestao.usuarioSistema.form.cidadeUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{usuarioSistemaMB.dto.nomeCidade}"
+                                                id="cidadeUsuarioForm"
+                                                styleClass="form-control"
+                                                readonly="true"/>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <h:outputLabel
+                                                for="enderecoContatoUsuarioForm">
+                                            #{seg_msg['seg.gestao.usuarioSistema.form.enderecoContatoUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputTextarea value="#{usuarioSistemaMB.dto.outroEnderecoContato}"
+                                                id="enderecoContatoUsuarioForm"
+                                                styleClass="form-control"
+                                                p:maxlength="300"
+                                                readonly="true"/>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <h:outputLabel
+                                                for="telefoneResidencialUsuarioForm">
+                                            #{seg_msg['seg.gestao.usuarioSistema.form.telefoneUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{usuarioSistemaMB.dto.telefoneResidencial}"
+                                                id="telefoneResidencialUsuarioForm"
+                                                styleClass="form-control"
+                                                maxlength="20"
+                                                readonly="true"/>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <h:outputLabel
+                                                for="celularUsuarioForm">
+                                            #{seg_msg['seg.gestao.usuarioSistema.form.celularUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{usuarioSistemaMB.dto.telefoneCelular}"
+                                                id="celularUsuarioForm"
+                                                styleClass="form-control"
+                                                maxlength="10"
+                                                readonly="true"/>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <h:outputLabel
+                                                for="correioEletronicoUsuarioForm">
+                                            #{seg_msg['seg.gestao.usuarioSistema.form.correioEletronicoUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{usuarioSistemaMB.dto.correioEletronico}"
+                                                id="correioEletronicoUsuarioForm"
+                                                styleClass="form-control"
+                                                maxlength="50"
+                                                readonly="true"/>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <h:outputLabel
+                                                for="tipoUsuarioUsuarioForm">
+                                            #{seg_msg['seg.gestao.usuarioSistema.form.tipoUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{usuarioSistemaMB.dto.descricaoTipoUsuario}"
+                                                id="tipoUsuarioUsuarioForm"
+                                                styleClass="form-control"
+                                                readonly="true"/>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <h:outputLabel
+                                                for="crcUsuarioForm">
+                                            #{seg_msg['seg.gestao.usuarioSistema.form.crcUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{usuarioSistemaMB.dto.crc}"
+                                                id="crcUsuarioForm"
+                                                styleClass="form-control"
+                                                maxlength="9"
+                                                readonly="true"/>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <h:outputLabel
+                                                for="unidadeOrganizacionalUsuarioForm">
+                                            #{seg_msg['seg.gestao.usuarioSistema.form.unidadeOrganizacionalUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{usuarioSistemaMB.dto.nomeUnidOrganizac}"
+                                                id="unidadeOrganizacionalUsuarioForm"
+                                                styleClass="form-control"
+                                                readonly="true"/>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <h:outputLabel
+                                                for="postoTrabalhoUsuarioForm">
+                                            #{seg_msg['seg.gestao.usuarioSistema.form.postoTrabalhoUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{usuarioSistemaMB.dto.nomePostoDeTrabalho}"
+                                                id="postoTrabalhoUsuarioForm"
+                                                styleClass="form-control"
+                                                readonly="true"/>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <h:outputLabel
+                                                for="cnpjEmpresaUsuarioForm">
+                                            #{seg_msg['seg.gestao.usuarioSistema.form.cnpjEmpresaUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{usuarioSistemaMB.dto.solicitacaoUsuario.cnpjNegocio}"
+                                                id="cnpjEmpresaUsuarioForm"
+                                                styleClass="form-control"
+                                                converter="cnpjFacesConverter"
+                                                readonly="true"/>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <h:outputLabel
+                                                for="inscricaoEstadualUsuarioForm">
+                                            #{seg_msg['seg.gestao.usuarioSistema.form.inscricaoEstadualUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputText value="#{usuarioSistemaMB.dto.solicitacaoUsuario.inscricaoEstadualNegocio}"
+                                                id="inscricaoEstadualUsuarioForm"
+                                                styleClass="form-control"
+                                                readonly="true"/>
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <h:outputLabel
+                                                for="justificacaoUsuarioUsuarioForm">
+                                            #{seg_msg['seg.gestao.usuarioSistema.form.justificacaoUsuario']}
+                                        </h:outputLabel>
+                                        <h:inputTextarea value="#{usuarioSistemaMB.dto.justificacaoCriacao}"
+                                                id="justificacaoUsuarioUsuarioForm"
+                                                styleClass="form-control"
+                                                readonly="true"/>
+                                    </div>
+                                </div>
+                                <div class="modal-footer" id="usuarioSistemaModalFooter">
+                                    <button type="button" class="btn btn-default align-bottom" data-dismiss="modal"
+                                            value="#{seg_msg['seg.gestao.usuarioSistema.form.fechar']}"
+                                            aria-label="#{seg_msg['seg.gestao.usuarioSistema.form.fechar']}"
+                                            onclick="resetFields()">
+                                        <span aria-hidden="false">#{seg_msg['seg.gestao.usuarioSistema.form.fechar']}</span>
+                                    </button>
+                                </div>
+                            </h:form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </sat:panel>
+    </ui:define>
+</ui:composition>
+</html>

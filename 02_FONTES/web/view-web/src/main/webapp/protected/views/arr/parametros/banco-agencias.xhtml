@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
-    xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
-    xmlns:f="http://java.sun.com/jsf/core" xmlns:sat="http://sefaz.to.gov.br/composites"
-    xmlns:a4j="http://richfaces.org/a4j">
-    
+<html   xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:sat="http://sefaz.to.gov.br/composites"
+        xmlns:a4j="http://richfaces.org/a4j">
+
 <sat:panel title="#{arr_msg['parametros.bancoAgencias.tabela.titulo']}">
     <sat:table id="banco-agencias-table" bundle="arr_msg" content="#{bancoAgenciasMB.getResultList()}"
         headers="parametros.bancoAgencias.tabela.numero,
@@ -58,25 +60,25 @@
         <div class="row">
             <div class="form-group col-md-2">
                 <h:outputLabel
-                    for="codigo">#{arr_msg['parametros.bancoAgencias.form.idAgencia']}*</h:outputLabel>
+                    for="idAgencia">#{arr_msg['parametros.bancoAgencias.form.idAgencia']}*</h:outputLabel>
                 <h:inputText value="#{bancoAgenciasMB.dto.idAgencia}" id="idAgencia"
                              styleClass="form-control justInteger" maxlength="6"/>
             </div>
             <div class="form-group col-md-1">
                 <h:outputLabel
-                    for="nome">#{arr_msg['parametros.bancoAgencias.form.digitoAgencia']}*</h:outputLabel>
+                    for="digitoAgencia">#{arr_msg['parametros.bancoAgencias.form.digitoAgencia']}*</h:outputLabel>
                 <h:inputText value="#{bancoAgenciasMB.dto.digitoAgencia}" id="digitoAgencia"
                              styleClass="form-control" maxlength="2"/>
             </div>
             <div class="form-group col-md-5">
                 <h:outputLabel
-                    for="nome">#{arr_msg['parametros.bancoAgencias.form.nomeAgencia']}*</h:outputLabel>
+                    for="nomeAgencia">#{arr_msg['parametros.bancoAgencias.form.nomeAgencia']}*</h:outputLabel>
                 <h:inputText value="#{bancoAgenciasMB.dto.nomeAgencia}" id="nomeAgencia"
                              styleClass="form-control" maxlength="150"/>
             </div>
             <div class="form-group col-md-2">
                 <h:outputLabel
-                    for="cnpj">#{arr_msg['parametros.bancoAgencias.form.cnpjAgencia']}*</h:outputLabel>
+                    for="cnpjAgencia">#{arr_msg['parametros.bancoAgencias.form.cnpjAgencia']}*</h:outputLabel>
                 <h:inputText value="#{bancoAgenciasMB.dto.cnpjAgencia}" id="cnpjAgencia"
                              styleClass="form-control" maxlength="19" p:data-mask="99.999.999/9999-99">
                     <f:converter converterId="cnpjFacesConverter"/>
@@ -86,10 +88,10 @@
                 <h:outputLabel for="situacaoAgencia">#{arr_msg['parametros.bancoAgencias.form.situacao']}*</h:outputLabel>
                 <h:selectOneMenu value="#{bancoAgenciasMB.dto.situacao}" id="situacaoAgencia"
                                  styleClass="form-control">
-                    <f:selectItems value="#{enumsMB.situacoes}"
-                                   var="situacao"
-                                   itemValue="#{situacao}"
-                                   itemLabel="#{situacao.label}"/>
+                    <f:selectItems value="#{arrEnumsMB.situacoes}"
+                                   var="tipoUsuario"
+                                   itemValue="#{tipoUsuario}"
+                                   itemLabel="#{tipoUsuario.label}"/>
                 </h:selectOneMenu>
             </div>
         </div>
@@ -106,6 +108,11 @@
                             itemLabel="#{estado.unidadeFederacao}"/>
                     <f:ajax render="municipio" listener="#{bancoAgenciasMB.loadMunicipios()}"/>
                 </h:selectOneMenu>
+                <a4j:jsFunction name="loadMunicipios"
+                        action="#{bancoAgenciasMB.loadMunicipios()}"
+                        render="municipio" execute="estado">
+                    <a4j:param name="municipio" assignTo="#{bancoAgenciasMB.dto.idMunicipio}"/>
+                </a4j:jsFunction>
             </div>
             <div class="form-group col-md-6">
                 <h:outputLabel for="municipio">
@@ -119,22 +126,22 @@
                             itemLabel="#{municipio.nomeMunicipio}"/>
                 </h:selectOneMenu>
             </div>
-            
+
             <div class="form-group col-md-2">
-                <h:outputLabel for="codigo">#{arr_msg['parametros.bancoAgencias.form.numeroCC']}*</h:outputLabel>
+                <h:outputLabel for="numeroContaCorrente">#{arr_msg['parametros.bancoAgencias.form.numeroCC']}*</h:outputLabel>
                 <h:inputText value="#{bancoAgenciasMB.dto.numeroContaCorrente}" id="numeroContaCorrente"
                              styleClass="form-control justInteger" maxlength="8"/>
             </div>
             <div class="form-group col-md-2">
-                <h:outputLabel for="nome">#{arr_msg['parametros.bancoAgencias.form.digitoCC']}*</h:outputLabel>
+                <h:outputLabel for="digitoContaCorrente">#{arr_msg['parametros.bancoAgencias.form.digitoCC']}*</h:outputLabel>
                 <h:inputText value="#{bancoAgenciasMB.dto.digitoContaCorrente}" id="digitoContaCorrente"
                              styleClass="form-control" maxlength="2"/>
             </div>
-        
+
         </div>
         <div class="row cols-bottom">
             <div class="form-group col-md-6">
-                <h:outputLabel for="nome">#{arr_msg['parametros.bancoAgencias.form.email']}*</h:outputLabel>
+                <h:outputLabel for="email">#{arr_msg['parametros.bancoAgencias.form.email']}*</h:outputLabel>
                 <h:inputText value="#{bancoAgenciasMB.dto.email}" id="email"
                              styleClass="form-control" maxlength="150"/>
             </div>
@@ -143,9 +150,9 @@
                 <h:outputLabel for="centralizadora">#{arr_msg['parametros.bancoAgencias.form.centralizadora']}</h:outputLabel>
             </div>
             <div class="form-group col-md-2 text-right">
-                <sat:saveUpdateButton label="#{arr_msg['parametros.bancoAgencias.botao.adicionar']}" onEvent="resetOnSuccessAgencias" 
-                                      crudMb="#{bancoAgenciasMB}" render="banco-agencias-adicionadas-table" styleclass="button-align-bottom" 
-                                      execute="idBanco idAgencia digitoAgencia nomeAgencia cnpjAgencia situacaoAgencia centralizadora 
+                <sat:saveUpdateButton label="#{arr_msg['parametros.bancoAgencias.botao.adicionar']}" onEvent="resetOnSuccessAgencias"
+                                      crudMb="#{bancoAgenciasMB}" render="banco-agencias-adicionadas-table" styleclass="button-align-bottom"
+                                      execute="idBanco idAgencia digitoAgencia nomeAgencia cnpjAgencia situacaoAgencia centralizadora
                                                numeroContaCorrente digitoContaCorrente estado municipio email" />
             </div>
         </div>
@@ -160,7 +167,7 @@
                              parametros.bancoAgencias.tabela.municipio,
                              parametros.bancoAgencias.tabela.numero.cc,
                              parametros.bancoAgencias.tabela.email"
-        fields="numeroAgencia,nomeAgencia,cnpjAgencia:cnpj,nomeMunicipio,numeroCC,email,idBanco:hide,idAgencia:hide" 
+        fields="numeroAgencia,nomeAgencia,cnpjAgencia:cnpj,nomeMunicipio,numeroCC,email,idBanco:hide,idAgencia:hide"
         hasActions="true" actionEvents="delete:click:deleteBancoAgenciasAdicionadas(7;6)">
         <f:facet name="actions">
             <i class="delete glyphicon glyphicon-trash" role="button" />

@@ -1,6 +1,6 @@
 package br.gov.to.sefaz.arr.parametros.business.facade;
 
-import br.gov.to.sefaz.arr.parametros.persistence.entity.ConveniosTarifas;
+import br.gov.to.sefaz.arr.persistence.entity.ConveniosTarifas;
 import br.gov.to.sefaz.business.facade.CrudFacade;
 
 /**

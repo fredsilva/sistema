@@ -1,20 +1,18 @@
 package br.gov.to.sefaz.seg.business.gestao.service.impl;
 
-import br.gov.to.sefaz.business.service.impl.DefaultCrudService;
-import br.gov.to.sefaz.business.service.validation.ValidationContext;
-import br.gov.to.sefaz.business.service.validation.ValidationSuite;
+import br.gov.to.sefaz.par.gestao.business.service.ParametroGeralService;
+import br.gov.to.sefaz.seg.business.gestao.converter.TipoUsuarioConverter;
 import br.gov.to.sefaz.seg.business.gestao.service.TipoUsuarioService;
+import br.gov.to.sefaz.seg.business.gestao.service.UsuarioSistemaService;
 import br.gov.to.sefaz.seg.business.gestao.service.filter.TipoUsuarioFilter;
-import br.gov.to.sefaz.seg.persistence.entity.TipoUsuario;
-import br.gov.to.sefaz.seg.persistence.enums.SituacaoUsuarioEnum;
-import br.gov.to.sefaz.seg.persistence.repository.TipoUsuarioRepository;
+import br.gov.to.sefaz.seg.persistence.domain.TipoUsuario;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
+import java.util.stream.Collectors;
 
 /**
  * Implementação do serviço da entidade TipoUsuario.
@@ -23,42 +21,44 @@ import java.util.Optional;
  * @since 09/06/2016 09:22:00
  */
 @Service
-public class TipoUsuarioServiceImpl extends DefaultCrudService<TipoUsuario, Integer> implements
-        TipoUsuarioService {
+public class TipoUsuarioServiceImpl implements TipoUsuarioService {
+
+    private static final String LISTAGEM_TIPO_USUARIO = "LISTAGEM_TIPO_USUARIO";
+
+    private final ParametroGeralService parametroGeralService;
+
+    private final UsuarioSistemaService usuarioSistemaService;
 
     @Autowired
-    public TipoUsuarioServiceImpl(TipoUsuarioRepository repository) {
-        super(repository, new Sort(new Sort.Order(Sort.Direction.ASC, "codigoTipoUsuario")));
+    public TipoUsuarioServiceImpl(ParametroGeralService parametroGeralService, UsuarioSistemaService
+            usuarioSistemaService) {
+        this.parametroGeralService = parametroGeralService;
+        this.usuarioSistemaService = usuarioSistemaService;
     }
 
     @Override
-    protected TipoUsuarioRepository getRepository() {
-        return (TipoUsuarioRepository) super.getRepository();
+    public List<TipoUsuario> findByFilter(TipoUsuarioFilter filter) {
+        List<TipoUsuario> list = findAll();
+        list.forEach( tipoUsuario -> tipoUsuario.setQuantidadeUsuarios(usuarioSistemaService.countByTipoUsuario(
+                tipoUsuario)));
+        if (Objects.isNull(filter) || StringUtils.isEmpty(filter.getDescricaoTipoUsuario()) ) {
+            return list;
+        }
+        return list.stream().filter(tipoUsuario -> tipoUsuario.getDescricaoTipoUsuario().toLowerCase()
+                .contains(filter.getDescricaoTipoUsuario().toLowerCase())).collect(Collectors.toList());
     }
 
     @Override
-    public List<TipoUsuario> findAllByDescricao(TipoUsuarioFilter filter) {
-        String descricaoTipoUsuario = Objects.isNull(filter) ? "%" : "%" + filter.getDescricaoTipoUsuario() + "%";
-        return getRepository()
-                .allProfilesCounted(SituacaoUsuarioEnum.ATIVO, descricaoTipoUsuario);
+    public List<TipoUsuario> findAll() {
+        return parametroGeralService.findCodeData(new TipoUsuarioConverter(), LISTAGEM_TIPO_USUARIO);
     }
 
     @Override
-    public Optional<TipoUsuario> delete(
-            @ValidationSuite(context = ValidationContext.DELETE, clazz = TipoUsuario.class) Integer id) {
-        TipoUsuario tipoUsuario = findOne(id);
-        validateDelete(tipoUsuario);
-        return super.delete(id);
-    }
-
-    /**
-     * Classe para deleção de TipoUsuario.
-     * @param tipoUsuario tipo usuário para remover pelo ID.
-     */
-    @SuppressWarnings("PMD")
-    private void validateDelete(@ValidationSuite(context = ValidationContext.DELETE) TipoUsuario
-            tipoUsuario){
-        //Método que serve pra validar TipoUsuario tipoUsuario.
+    public List<TipoUsuario> findAllCountUsers() {
+        List<TipoUsuario> list = findAll();
+        list.forEach( tipoUsuario -> tipoUsuario.setQuantidadeUsuarios(usuarioSistemaService.countByTipoUsuario(
+                tipoUsuario)));
+        return list;
     }
 
 }

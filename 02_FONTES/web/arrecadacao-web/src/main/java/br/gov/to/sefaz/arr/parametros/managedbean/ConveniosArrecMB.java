@@ -2,11 +2,11 @@ package br.gov.to.sefaz.arr.parametros.managedbean;
 
 import br.gov.to.sefaz.arr.parametros.business.facade.ConveniosArrecFacade;
 import br.gov.to.sefaz.arr.parametros.business.service.filter.ConveniosArrecFilter;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgencias;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.Bancos;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.ConveniosArrec;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.ConveniosTarifas;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.Receitas;
+import br.gov.to.sefaz.arr.persistence.entity.BancoAgencias;
+import br.gov.to.sefaz.arr.persistence.entity.Bancos;
+import br.gov.to.sefaz.arr.persistence.entity.ConveniosArrec;
+import br.gov.to.sefaz.arr.persistence.entity.ConveniosTarifas;
+import br.gov.to.sefaz.arr.persistence.entity.Receitas;
 import br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB;
 import br.gov.to.sefaz.util.message.MessageUtil;
 
@@ -85,10 +85,10 @@ public class ConveniosArrecMB extends DefaultCrudMB<ConveniosArrec, Long> {
     /**
      * <p>Retorna uma coleção de {@link BancoAgencias} baseado em um ID de banco.</p>
      * <ol>
-     *     <li>Se tiver um id banco setado no {@link #getDto()} as agencias serão carregadas a partir dele.</li>
-     *     <li>Se não, se tiver ao menos um banco na lista de bancos {@link #getBancos()} carrega baseado no primeiro
-     *         da banco da lista</li>
-     *     <li>Se não retorna uma lista vazia</li>
+     * <li>Se tiver um id banco setado no {@link #getDto()} as agencias serão carregadas a partir dele.</li>
+     * <li>Se não, se tiver ao menos um banco na lista de bancos {@link #getBancos()} carrega baseado no primeiro
+     * da banco da lista</li>
+     * <li>Se não retorna uma lista vazia</li>
      * </ol>
      *
      * @return uma lista de agencias de um banco
@@ -216,7 +216,7 @@ public class ConveniosArrecMB extends DefaultCrudMB<ConveniosArrec, Long> {
         List<ConveniosArrec> resultList = getFacade().find(filter);
 
         if (resultList.isEmpty()) {
-            MessageUtil.addMesage(MessageUtil.ARR, "parametros.pesquisa.vazia");
+            MessageUtil.addMessage("mensagem.pesquisa.vazia");
         }
 
         setResultList(resultList);

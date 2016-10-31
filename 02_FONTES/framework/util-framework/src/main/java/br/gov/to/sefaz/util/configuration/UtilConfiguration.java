@@ -1,8 +1,12 @@
 package br.gov.to.sefaz.util.configuration;
 
 import br.gov.to.sefaz.util.certificado.CertificadoPackageMarker;
+import br.gov.to.sefaz.util.file.FilePackageMarker;
 import br.gov.to.sefaz.util.mail.MailPackageMarker;
 import br.gov.to.sefaz.util.properties.AppProperties;
+import br.gov.to.sefaz.util.properties.PropertiesPackageMarker;
+import br.gov.to.sefaz.util.xml.XmlPackageMarker;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -18,7 +22,8 @@ import java.util.Properties;
  * @since 14/04/2016 18:30:00
  */
 @Configuration
-@ComponentScan(basePackageClasses = {MailPackageMarker.class, CertificadoPackageMarker.class})
+@ComponentScan(basePackageClasses = {MailPackageMarker.class, PropertiesPackageMarker.class,
+        CertificadoPackageMarker.class, XmlPackageMarker.class, FilePackageMarker.class})
 public class UtilConfiguration {
 
     /**
@@ -26,14 +31,14 @@ public class UtilConfiguration {
      * (email.host, email.port, email.username, email.password).
      *
      * @return enviador de email configurado
-     * @see AppProperties#getProperty(String)
+     * @see AppProperties#getAppProperty(String)
      */
     @Bean
     public JavaMailSender javaMailSender() {
-        String host = AppProperties.getProperty("email.host").orElse("");
-        String port = AppProperties.getProperty("email.port").orElse("");
-        String username = AppProperties.getProperty("email.username").orElse("");
-        String password = AppProperties.getProperty("email.password").orElse("");
+        String host = AppProperties.getAppProperty("email.host").orElse(StringUtils.EMPTY);
+        String port = AppProperties.getAppProperty("email.port").orElse(StringUtils.EMPTY);
+        String username = AppProperties.getAppProperty("email.username").orElse(StringUtils.EMPTY);
+        String password = AppProperties.getAppProperty("email.password").orElse(StringUtils.EMPTY);
 
         JavaMailSenderImpl javaMailSender = new JavaMailSenderImpl();
         javaMailSender.setHost(host);
@@ -46,4 +51,5 @@ public class UtilConfiguration {
 
         return javaMailSender;
     }
+
 }

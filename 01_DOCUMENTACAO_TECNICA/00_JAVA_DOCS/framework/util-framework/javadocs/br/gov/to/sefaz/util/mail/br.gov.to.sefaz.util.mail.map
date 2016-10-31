@@ -1,6 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./MailSenderService.html" title="br.gov.to.sefaz.util.mail.MailSenderService" alt="" coords="16,11,660,121"/>
-<area shape="rect" id="node1" href="./MailSenderService.html" title="&lt;TABLE&gt;" alt="" coords="5,5,671,127"/>
+<area shape="rect" id="node1_0" href="./MailSender.html" title="br.gov.to.sefaz.util.mail.MailSender" alt="" coords="16,11,660,121"/>
+<area shape="rect" id="node1" href="./MailSender.html" title="&lt;TABLE&gt;" alt="" coords="5,5,671,127"/>
 <area shape="rect" id="node2_1" href="./MailPackageMarker.html" title="br.gov.to.sefaz.util.mail.MailPackageMarker" alt="" coords="705,45,840,87"/>
 <area shape="rect" id="node2" href="./MailPackageMarker.html" title="&lt;TABLE&gt;" alt="" coords="695,39,851,93"/>
 </map>

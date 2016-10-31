@@ -1,8 +1,4 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./BaseRepository.html" title="br.gov.to.sefaz.persistence.repository.BaseRepository" alt="" coords="183,232,607,275"/>
-<area shape="rect" id="node1" href="./BaseRepository.html" title="&lt;TABLE&gt;" alt="" coords="172,227,617,280"/>
-<area shape="rect" id="node2_1" href="http://java.sun.com/j2se/1.4.2/docs/api/org/springframework/data/repository/PagingAndSortingRepository.html" title="org.springframework.data.repository.PagingAndSortingRepository" alt="" coords="16,37,365,147"/>
-<area shape="rect" id="node2" href="http://java.sun.com/j2se/1.4.2/docs/api/org/springframework/data/repository/PagingAndSortingRepository.html" title="&lt;TABLE&gt;" alt="" coords="5,31,376,153"/>
-<area shape="rect" id="node3_2" href="http://java.sun.com/j2se/1.4.2/docs/api/org/springframework/data/jpa/repository/JpaSpecificationExecutor.html" title="org.springframework.data.jpa.repository.JpaSpecificationExecutor" alt="" coords="411,11,789,173"/>
-<area shape="rect" id="node3" href="http://java.sun.com/j2se/1.4.2/docs/api/org/springframework/data/jpa/repository/JpaSpecificationExecutor.html" title="&lt;TABLE&gt;" alt="" coords="401,5,799,179"/>
+<area shape="rect" id="node1_0" href="./BaseRepository.html" title="br.gov.to.sefaz.persistence.repository.BaseRepository" alt="" coords="16,11,751,901"/>
+<area shape="rect" id="node1" href="./BaseRepository.html" title="&lt;TABLE&gt;" alt="" coords="5,5,761,907"/>
 </map>

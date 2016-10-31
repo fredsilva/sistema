@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./ProcessPagamentoLinhaArrec.html" title="br.gov.to.sefaz.arr.processamento.process.content.arrecadacao.ProcessPagamentoLinhaArrec" alt="" coords="16,11,1029,104"/>
+<area shape="rect" id="node1" href="./ProcessPagamentoLinhaArrec.html" title="&lt;TABLE&gt;" alt="" coords="5,5,1040,109"/>
+<area shape="rect" id="node2_1" href="./ProcessFileTraillerArrec.html" title="br.gov.to.sefaz.arr.processamento.process.content.arrecadacao.ProcessFileTraillerArrec" alt="" coords="1075,11,2005,104"/>
+<area shape="rect" id="node2" href="./ProcessFileTraillerArrec.html" title="&lt;TABLE&gt;" alt="" coords="1064,5,2016,109"/>
+<area shape="rect" id="node3_2" href="./ProcessFileContentArrec.html" title="br.gov.to.sefaz.arr.processamento.process.content.arrecadacao.ProcessFileContentArrec" alt="" coords="2051,11,4256,104"/>
+<area shape="rect" id="node3" href="./ProcessFileContentArrec.html" title="&lt;TABLE&gt;" alt="" coords="2040,5,4267,109"/>
+<area shape="rect" id="node4_3" href="./PagosArrecManager.html" title="br.gov.to.sefaz.arr.processamento.process.content.arrecadacao.PagosArrecManager" alt="" coords="4301,11,6152,104"/>
+<area shape="rect" id="node4" href="./PagosArrecManager.html" title="&lt;TABLE&gt;" alt="" coords="4291,5,6163,109"/>
+</map>

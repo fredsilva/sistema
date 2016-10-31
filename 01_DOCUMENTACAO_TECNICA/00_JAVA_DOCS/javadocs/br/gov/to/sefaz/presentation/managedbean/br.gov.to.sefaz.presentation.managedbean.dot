@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.presentation.managedbean.PathResolverMB
-	c11645 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.PathResolverMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PathResolverMB.html">
+	c110817 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.PathResolverMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PathResolverMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PathResolverMB </td></tr>
 		</table></td></tr>
@@ -20,15 +20,22 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + PathResolverMB() </td></tr>
 <tr><td align="left" balign="left"> + protectedViewPath(route : String) : String </td></tr>
+<tr><td align="left" balign="left"> + isActualProtectedView(url : String) : boolean </td></tr>
+<tr><td align="left" balign="left"> + publicViewPath(route : String) : String </td></tr>
 <tr><td align="left" balign="left"> + cssPath(route : String) : String </td></tr>
 <tr><td align="left" balign="left"> + getLogoutPath() : String </td></tr>
 <tr><td align="left" balign="left"> + getContextPath() : String </td></tr>
 <tr><td align="left" balign="left"> + getHomePath() : String </td></tr>
-<tr><td align="left" balign="left"> + getCertificadoPath() : String </td></tr>
+<tr><td align="left" balign="left"> + getLoginPath() : String </td></tr>
+<tr><td align="left" balign="left"> + redirect(url : String) </td></tr>
+<tr><td align="left" balign="left"> + redirectToHome() </td></tr>
+<tr><td align="left" balign="left"> + getCertificadoLoginPath() : String </td></tr>
+<tr><td align="left" balign="left"> + getCertificadoSolicitacaoPath() : String </td></tr>
+<tr><td align="left" balign="left"> + getCertificadoECnpjPath() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./PathResolverMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.presentation.managedbean.MessagesMB
-	c11646 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.MessagesMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MessagesMB.html">
+	c110818 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.MessagesMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MessagesMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MessagesMB </td></tr>
 		</table></td></tr>
@@ -43,14 +50,31 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./MessagesMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.presentation.managedbean.ManagedBeanPackageMarker
-	c11647 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.ManagedBeanPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ManagedBeanPackageMarker.html">
+	c110819 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.ManagedBeanPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ManagedBeanPackageMarker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ManagedBeanPackageMarker </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ManagedBeanPackageMarker.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.presentation.managedbean.ErrorPageMB
+	c110820 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.ErrorPageMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ErrorPageMB.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ErrorPageMB </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ERROR_MESSAGE : String </td></tr>
+<tr><td align="left" balign="left"> + STATUS_CODE : String </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ErrorPageMB() </td></tr>
+<tr><td align="left" balign="left"> + isAuthenticated() : boolean </td></tr>
+<tr><td align="left" balign="left"> + isJquery() : boolean </td></tr>
+<tr><td align="left" balign="left"> + getErrorMessage() : String </td></tr>
+<tr><td align="left" balign="left"> + handleStatusMessage() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ErrorPageMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.presentation.managedbean.CrudMB<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c11648 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.CrudMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CrudMB.html">
+	c110821 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.CrudMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CrudMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CrudMB&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
@@ -69,7 +93,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./CrudMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.presentation.managedbean.BeanFactoryMB
-	c11649 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.BeanFactoryMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BeanFactoryMB.html">
+	c110822 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.BeanFactoryMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BeanFactoryMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> BeanFactoryMB </td></tr>
@@ -84,7 +108,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./BeanFactoryMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.presentation.managedbean.AutowiredMB
-	c11650 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.AutowiredMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AutowiredMB.html">
+	c110823 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.AutowiredMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AutowiredMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AutowiredMB </td></tr>
 		</table></td></tr>

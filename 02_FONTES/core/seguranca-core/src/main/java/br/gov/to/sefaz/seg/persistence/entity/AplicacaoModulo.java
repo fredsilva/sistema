@@ -6,9 +6,14 @@ import java.util.Objects;
 import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -26,7 +31,9 @@ public class AplicacaoModulo extends AbstractEntity<Long> {
     private static final long serialVersionUID = 2262759749890737090L;
 
     @Id
-    @NotNull
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SQ_APLICACAO_MODULO")
+    @SequenceGenerator(name = "SQ_APLICACAO_MODULO", schema = "SEFAZ_SEG", sequenceName = "SQ_APLICACAO_MODULO",
+            allocationSize = 1)
     @Column(name = "IDENTIFICACAO_APLICACAO_MODULO")
     private Long identificacaoAplicacaoModulo;
 
@@ -39,16 +46,22 @@ public class AplicacaoModulo extends AbstractEntity<Long> {
     @Column(name = "IDENTIFICACAO_MODULO_SISTEMA")
     private Long identificacaoModuloSistema;
 
-    @OneToMany
-    @JoinColumn(name = "IDENTIFICACAO_APLICACAO_MODULO", referencedColumnName = "IDENTIFICACAO_APLICACAO_MODULO")
+    @OneToMany(mappedBy = "aplicacaoModulo")
     private Set<OpcaoAplicacao> opcoesAplicacao;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "IDENTIFICACAO_MODULO_SISTEMA", referencedColumnName = "IDENTIFICACAO_MODULO_SISTEMA",
+            insertable = false, updatable = false)
+    private ModuloSistema moduloSistema;
 
     public AplicacaoModulo() {
         // Construtor para inicialização por reflexão.
+        moduloSistema = new ModuloSistema();
     }
 
     public AplicacaoModulo(Long identificacaoAplicacaoModulo, String descricaoAplicacaoModulo,
             Long identificacaoModuloSistema) {
+        this();
         this.identificacaoAplicacaoModulo = identificacaoAplicacaoModulo;
         this.descricaoAplicacaoModulo = descricaoAplicacaoModulo;
         this.identificacaoModuloSistema = identificacaoModuloSistema;
@@ -89,6 +102,18 @@ public class AplicacaoModulo extends AbstractEntity<Long> {
 
     public void setOpcoesAplicacao(Set<OpcaoAplicacao> opcoesAplicacao) {
         this.opcoesAplicacao = opcoesAplicacao;
+    }
+
+    public ModuloSistema getModuloSistema() {
+        return moduloSistema;
+    }
+
+    public void setModuloSistema(ModuloSistema moduloSistema) {
+        this.moduloSistema = moduloSistema;
+    }
+
+    public String getAbreviacaoSistema() {
+        return Objects.isNull(moduloSistema) ? "" : moduloSistema.getAbreviacaoModulo();
     }
 
     @Override

@@ -8,7 +8,7 @@
     <parent>
         <groupId>br.gov.to.sefaz</groupId>
         <artifactId>framework</artifactId>
-        <version>0.2.0-SNAPSHOT</version>
+        <version>1.6.4</version>
     </parent>
 
     <groupId>br.gov.to.sefaz.framework</groupId>
@@ -61,6 +61,10 @@
         <dependency>
             <groupId>br.gov.to.sefaz.framework</groupId>
             <artifactId>util-framework</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>br.gov.to.sefaz.core</groupId>
+            <artifactId>seguranca-core</artifactId>
         </dependency>
 
     </dependencies>

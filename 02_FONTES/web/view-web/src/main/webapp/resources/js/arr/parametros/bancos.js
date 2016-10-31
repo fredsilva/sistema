@@ -6,7 +6,8 @@ function selectRow(data) {
 	
 	// Aba de agências
 	$("#agencias").removeClass("hidden");
-	clearFields('banco-selecionado-form');
+	$("#banco-selecionado-form\\:idBanco").val(data[0]);
+	$("#banco-selecionado-form\\:nomeBanco").val(data[1]);
 	loadBancoAgenciasFromSelected(data[0]);
 
 	showBtnUpdate('banco-form');
@@ -19,7 +20,7 @@ function resetFields() {
 	$("#banco-form\\:codigo").attr('readonly', false);
 
 	// Aba de agências
-	resetFieldsAgencias();
+	clearFields('bancoAgencias-form');
 	$("#agencias").addClass("hidden");
 
 	showBtnSave('banco-form');

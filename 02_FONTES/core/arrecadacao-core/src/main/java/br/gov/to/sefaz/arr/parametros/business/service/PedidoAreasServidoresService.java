@@ -1,7 +1,7 @@
 package br.gov.to.sefaz.arr.parametros.business.service;
 
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreasServidores;
-import br.gov.to.sefaz.arr.parametros.persistence.entity.PedidoAreasServidoresPK;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoAreasServidores;
+import br.gov.to.sefaz.arr.persistence.entity.PedidoAreasServidoresPK;
 import br.gov.to.sefaz.business.service.CrudService;
 
 import java.util.Collection;

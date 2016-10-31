@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.service.impl.DefaultCrudService<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c52405 [label=<<table title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/service/impl/DefaultCrudService.html">
+	c237569 [label=<<table title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/service/impl/DefaultCrudService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultCrudService&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
 		</table></td></tr>
@@ -18,20 +18,19 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + DefaultCrudService(repository : BaseRepository&lt;E, I&gt;, sort : Sort) </td></tr>
+<tr><td align="left" balign="left"> + DefaultCrudService(repository : BaseRepository&lt;E, I&gt;) </td></tr>
 <tr><td align="left" balign="left"> + findOne(id : I) : E </td></tr>
 <tr><td align="left" balign="left"> + findAll() : Collection&lt;E&gt; </td></tr>
-<tr><td align="left" balign="left"> + findAll(list : Iterable&lt;I&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + save(entity : E) : E </td></tr>
 <tr><td align="left" balign="left"> + save(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + update(entity : E) : E </td></tr>
+<tr><td align="left" balign="left"> + update(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + delete(id : I) : Optional&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + delete(ids : Iterable&lt;I&gt;) </td></tr>
-<tr><td align="left" balign="left"> + getDefaultSort() : Sort </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../../../business/service/impl/DefaultCrudService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.BancoAgenciasService
-	c52622 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.BancoAgenciasService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../BancoAgenciasService.html">
+	c237942 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.BancoAgenciasService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../BancoAgenciasService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> BancoAgenciasService </td></tr>
@@ -46,10 +45,11 @@ digraph G {
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + validateUpdate(agencia : BancoAgencias) </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + validateUpdate(list : Collection&lt;BancoAgencias&gt;) </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findByIdBanco(idBanco : Integer) : Collection&lt;BancoAgencias&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findByCtaBanco(cnpjAgenteBancarioCreditado : Integer, agencia : Integer) : List&lt;BancoAgencias&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../BancoAgenciasService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.impl.BancoAgenciasServiceImpl
-	c52649 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.BancoAgenciasServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./BancoAgenciasServiceImpl.html">
+	c237969 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.BancoAgenciasServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./BancoAgenciasServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BancoAgenciasServiceImpl </td></tr>
 		</table></td></tr>
@@ -59,6 +59,7 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + BancoAgenciasServiceImpl(repository : BancoAgenciasRepository) </td></tr>
 <tr><td align="left" balign="left"> + findByIdBanco(idBanco : Integer) : Collection&lt;BancoAgencias&gt; </td></tr>
+<tr><td align="left" balign="left"> + findByCtaBanco(cnpjAgenteBancarioCreditado : Integer, agencia : Integer) : List&lt;BancoAgencias&gt; </td></tr>
 <tr><td align="left" balign="left"> + validateSave(agencia : BancoAgencias) </td></tr>
 <tr><td align="left" balign="left"> + validateSave(list : Collection&lt;BancoAgencias&gt;) </td></tr>
 <tr><td align="left" balign="left"> + validateUpdate(agencia : BancoAgencias) </td></tr>
@@ -67,9 +68,9 @@ digraph G {
 <tr><td align="left" balign="left"> + getAllActiveBancoAgenciasFromIdBanco(idBanco : Integer) : Collection&lt;BancoAgencias&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./BancoAgenciasServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	//br.gov.to.sefaz.arr.parametros.business.service.impl.BancoAgenciasServiceImpl extends br.gov.to.sefaz.business.service.impl.DefaultCrudService<br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgencias, br.gov.to.sefaz.arr.parametros.persistence.entity.BancoAgenciasPK>
-	c52405:p -> c52649:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.arr.parametros.business.service.impl.BancoAgenciasServiceImpl extends br.gov.to.sefaz.business.service.impl.DefaultCrudService<br.gov.to.sefaz.arr.persistence.entity.BancoAgencias, br.gov.to.sefaz.arr.persistence.entity.BancoAgenciasPK>
+	c237569:p -> c237969:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.parametros.business.service.impl.BancoAgenciasServiceImpl implements br.gov.to.sefaz.arr.parametros.business.service.BancoAgenciasService
-	c52622:p -> c52649:p [dir=back,arrowtail=empty,style=dashed];
+	c237942:p -> c237969:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -10,7 +10,6 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.css" rel="stylesheet">
-	<link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -46,14 +45,7 @@
 	<div class="container">
 		<div class="row">
 		
-			<div class="col-md-6">
-				<div class="form-group">
-					<label for="txtNomeUnidadeOrganizacional">Nome da Unidade Organizacional:</label>
-					<input type="text" class="form-control" name="txtNomeUnidadeOrganizacional" id="txtNomeUnidadeOrganizacional"/>
-				</div>
-			</div>
-			
-			<div class="col-md-6">
+			<div class="col-md-4">
 				<div class="form-group">
 					<label for="dropdownMenu1">Nome da Unidade Pai:</label>
 				
@@ -66,6 +58,33 @@
 					</select>
 				</div>
 			</div>
+			
+			<div class="col-md-4">
+				<div class="form-group">
+					<label for="dropdownMenu1">Tipo de Unidade:</label>
+				
+					<select type="text" class="form-control" name="sltTipoUnidade" id="sltTipoUnidade">
+						<option>[Todas os tipos de unidades]</option>
+						<option>Coletoria</option>
+						<option>Delegacia</option>
+						<option>Órgãos Externos</option>
+						<option>Posto</option>
+						<option>Posto Vistoria</option>
+						<option>Regional</option>
+						<option>Unidade</option>
+					</select>
+				</div>
+			</div>
+		
+		
+			<div class="col-md-4">
+				<div class="form-group">
+					<label for="txtNomeUnidadeOrganizacional">Nome da Unidade Organizacional:</label>
+					<input type="text" class="form-control" name="txtNomeUnidadeOrganizacional" id="txtNomeUnidadeOrganizacional"/>
+				</div>
+			</div>
+			
+			
 			
 			
 		</div>
@@ -94,13 +113,6 @@
 					
 						<div class="col-md-9">
 							<div class="form-group">
-								<label for="sltidOpção">Nome do unidade organizacional:</label>
-								<input type="text" class="form-control" name="sltidNomeUnidade" id="sltidNomeUnidade" value="Diretoria de Regimes Especiais" />
-							</div>
-						</div>
-						
-						<div class="col-md-9">
-							<div class="form-group">
 								<label for="txtNomeUnidadePai">Nome da Unidade Pai:</label>
 		
 								<select type="text" class="form-control" name="sltUnidadeOrganizacional1" id="sltUnidadeOrganizacional1">
@@ -113,6 +125,32 @@
 							
 							</div>
 						</div>
+						
+						<div class="col-md-9">
+							<div class="form-group">
+								<label for="txtTipoUnidade">Tipo de Unidade:</label>
+							
+								<select type="text" class="form-control" name="sltTipoUnidade1" id="sltTipoUnidade1">
+									<option>[Todas os tipos de unidades]</option>
+									<option>Coletoria</option>
+									<option>Delegacia</option>
+									<option>Órgãos Externos</option>
+									<option>Posto</option>
+									<option>Posto Vistoria</option>
+									<option>Regional</option>
+									<option>Unidade</option>
+								</select>
+							</div>
+						</div>
+					
+						<div class="col-md-9">
+							<div class="form-group">
+								<label for="sltidOpção">Nome do unidade organizacional:</label>
+								<input type="text" class="form-control" name="sltidNomeUnidade" id="sltidNomeUnidade" value="Diretoria de Regimes Especiais" />
+							</div>
+						</div>
+						
+						
 						
 						<div class="col-md-9">
 							<div class="form-group">
@@ -185,8 +223,8 @@
     <table data-toggle="table" class="table table-hover" id="table-data" data-pagination="true">
 	<thead>
       <tr> 
-        <th>#</th>
         <th>Nome do Unidade</th>
+		<th>Tipo de Unidade</th>
 		<th>Nome Unidade Pai</th>
         <th>Endereço</th>
 		<th>Chefe Geral</th>
@@ -195,9 +233,9 @@
 	 </thead>
 	 <tbody>
       <tr> 
-        <td>1</td>
 		<td>Diretoria de Tributação</td>
-        <td>&nbsp;</td>
+        <td>Unidade</td>
+		<td>&nbsp;</td>
         <td>Praça os Girassóis CEP 77.001-908</td>
 		<td></td>
 		<td style="text-align:right;">
@@ -207,9 +245,9 @@
       </tr>
 	  
 	  <tr> 
-        <td>2</td>
 		<td>Diretoria de Regimes Especias</td>
-        <td>&nbsp;</td>
+        <td>Unidade</td>
+		<td>&nbsp;</td>
         <td>Praça os Girassóis CEP 77.001-908</td>
 		<td></td>
 		<td style="text-align:right;">
@@ -220,9 +258,9 @@
       
 	  
 	  <tr> 
-        <td>3</td>
 		<td>Coordenadoria de Fiscalização</td>
-        <td></td>
+        <td>Unidade</td>
+		<td>&nbsp;</td>
         <td>Praça os Girassóis CEP 77.001-908</td>
 		<td></td>
 		<td style="text-align:right;">
@@ -232,9 +270,9 @@
       </tr>
 	  
 	   <tr> 
-        <td>4</td>
 		<td>Chefia do Núcleo Setorial de Controle Interno</td>
-        <td></td>
+        <td>Unidade</td>
+		<td>&nbsp;</td>
         <td>Praça os Girassóis CEP 77.001-908</td>
 		<td></td>
 		<td style="text-align:right;">

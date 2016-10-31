@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../QueryStructureParser.html" title="br.gov.to.sefaz.persistence.query.parser.QueryStructureParser" alt="" coords="40,11,584,139"/>
+<area shape="rect" id="node1" href="../QueryStructureParser.html" title="&lt;TABLE&gt;" alt="" coords="29,5,595,144"/>
+<area shape="rect" id="node2_1" href="./SelectParser.html" title="br.gov.to.sefaz.persistence.query.parser.select.SelectParser" alt="" coords="16,197,608,308"/>
+<area shape="rect" id="node2" href="./SelectParser.html" title="&lt;TABLE&gt;" alt="" coords="5,192,619,313"/>
+<area shape="rect" id="node3_2" href="../../../satquery/parser/select/SatSelectParser.html" title="br.gov.to.sefaz.persistence.satquery.parser.select.SatSelectParser" alt="" coords="16,367,608,477"/>
+<area shape="rect" id="node3" href="../../../satquery/parser/select/SatSelectParser.html" title="&lt;TABLE&gt;" alt="" coords="5,361,619,483"/>
+</map>

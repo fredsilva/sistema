@@ -10,4 +10,5 @@ import br.gov.to.sefaz.seg.persistence.entity.ModuloSistema;
  * @since 13/06/2016 20:18:00
  */
 public interface ModuloSistemaFacade extends CrudFacade<ModuloSistema, Long> {
+
 }

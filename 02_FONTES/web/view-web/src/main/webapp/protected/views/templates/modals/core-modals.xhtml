@@ -5,7 +5,7 @@
         xmlns:h="http://java.sun.com/jsf/html"
         xmlns:a4j="http://richfaces.org/a4j">
 
-    <div id="alert-modal" class="modal fade" tabindex="-1" role="dialog">
+    <div id="alert-modal" class="modal fade" data-backdrop="static" tabindex="-1" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body"></div>
@@ -33,7 +33,6 @@
     </div>
 
     <a4j:outputPanel id="jsf-alert-messages" ajaxRendered="true" styleClass="hide">
-
         <ui:repeat value="#{facesContext.messageList}" var="message">
             <h:outputScript rendered="#{messagesMB.isInfo(message)}">
                 alertModal.putInfo("#{message.detail}");
@@ -47,6 +46,9 @@
         </ui:repeat>
         <h:outputScript rendered="#{!empty facesContext.externalContext.requestMap['javax.servlet.error.message']}">
             alertModal.putDanger("#{facesContext.externalContext.requestMap['javax.servlet.error.message']}");
+        </h:outputScript>
+        <h:outputScript rendered="#{param['acesso-negado'] != null}">
+            alertModal.putDanger("#{seg_msg['geral.acesso.negado']}");
         </h:outputScript>
     </a4j:outputPanel>
 </ui:composition>

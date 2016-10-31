@@ -19,6 +19,7 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + ApplicationUtil() </td></tr>
+<tr><td align="left" balign="left"> + getSafeNameAuthenticatedUser() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ApplicationUtil.html", fontname="arial", fontcolor="black", fontsize=10.0];
 }

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+        xmlns:sat="http://sefaz.to.gov.br/composites"
+        xmlns:a4j="http://richfaces.org/a4j">
+
+<ui:composition template="/protected/views/templates/views/default-template.xhtml">
+
+    <ui:param name="pageTitle" value="#{seg_msg['seg.gestao.ativarInativarPerfil.titulo']}"/>
+
+    <ui:define name="header">
+        <h:outputScript library="js" name="seg/gestao/ativar-inativar-perfil.js"/>
+        <h:outputScript library="js" name="core/sat.date.js"/>
+    </ui:define>
+
+    <ui:define name="content">
+        <sat:panel title="#{seg_msg['seg.gestao.ativarInativarPerfil.titulo']}">
+            <div class="col-md-12">
+                <h:form id="ativar-desativar-filtro">
+                    <div class="row">
+                        <div class="form-group col-md-3">
+                            <h:outputLabel
+                                    for="unidadeOrganizacional">#{seg_msg['seg.gestao.ativarInativarPerfil.filter.unidadeOrganizacional']}
+                            </h:outputLabel>
+                            <h:selectOneMenu value="#{ativarInativarPerfilMB.filter.codigoUnidadeOrganizacional}"
+                                    id="unidadeOrganizacional"
+                                    styleClass="form-control">
+                                <f:selectItem value="#{null}"
+                                        itemLabel="Todas as Unidades"/>
+                                <f:selectItems value="#{ativarInativarPerfilMB.allUnidadeOrganizacional}"
+                                        var="unidadeOrganizacional"
+                                        itemValue="#{unidadeOrganizacional.identificacaoUnidOrganizac}"
+                                        itemLabel="#{unidadeOrganizacional.nomeUnidOrganizac}"/>
+                            </h:selectOneMenu>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <h:outputLabel
+                                    for="postoTrabalho">#{seg_msg['seg.gestao.ativarInativarPerfil.filter.postoTrabalho']}
+                            </h:outputLabel>
+                            <h:selectOneMenu value="#{ativarInativarPerfilMB.filter.codigoPostoTrabalho}"
+                                    id="postoTrabalho"
+                                    styleClass="form-control">
+                                <f:selectItem value="#{null}"
+                                        itemLabel="Todos os Postos"/>
+                                <f:selectItems value="#{ativarInativarPerfilMB.allPostoTrabalho}"
+                                        var="postoTrabalho"
+                                        itemValue="#{postoTrabalho.identificacaoPostoTrabalho}"
+                                        itemLabel="#{postoTrabalho.nomePostoTrabalho}"/>
+                            </h:selectOneMenu>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <h:outputLabel for="nomeUsuario">
+                                #{seg_msg['seg.gestao.ativarInativarPerfil.filter.nomeCompletoUsuario']}
+                            </h:outputLabel>
+                            <h:inputText value="#{ativarInativarPerfilMB.filter.nomeCompletoUsuario}"
+                                    id="nomeUsuario"
+                                    styleClass="form-control"
+                                    maxlength="30">
+                            </h:inputText>
+                        </div>
+                        <div class="form-group col-md-3">
+                            <h:outputLabel for="cpfUsuario">
+                                #{seg_msg['seg.gestao.ativarInativarPerfil.filter.cpf']}
+                            </h:outputLabel>
+                            <h:inputText value="#{ativarInativarPerfilMB.filter.cpfUsuario}"
+                                    id="cpfUsuario"
+                                    styleClass="form-control"
+                                    maxlength="14"
+                                    p:data-mask="999.999.999-99">
+                                <f:converter converterId="cpfFacesConverter"/>
+                            </h:inputText>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-12 text-right">
+                        <h:commandButton type="button"
+                                value="#{seg_msg['seg.gestao.ativarInativarPerfil.table.button.consultar']}"
+                                styleClass="btn btn-primary align-bottom"
+                                action="#{ativarInativarPerfilMB.search}">
+                            <f:ajax render="usuario-sistema-table"
+                                    execute="unidadeOrganizacional postoTrabalho nomeUsuario cpfUsuario"/>
+                        </h:commandButton>
+
+                        <sat:opcaoAjudaButton styleClass="align-bottom" />
+                    </div>
+                </h:form>
+            </div>
+            <sat:table id="usuario-sistema-table"
+                    bundle="seg_msg"
+                    content="#{ativarInativarPerfilMB.allUsuarioSistema}"
+                    headers="seg.gestao.ativarInativarPerfil.table.unidadeOrganizacional,
+                             seg.gestao.ativarInativarPerfil.table.postoTrabalho,
+                             seg.gestao.ativarInativarPerfil.table.nomeUsuario,
+                             seg.gestao.ativarInativarPerfil.table.cpfUsuario,
+                             seg.gestao.ativarInativarPerfil.table.perfis"
+                    fields="nomeUnidOrganizac, nomePostoDeTrabalho, nomeCompletoUsuario, cpfUsuario:cpf,
+                            usuarioPerfis, cpfUsuario:hide"
+                    actionsHeader="seg.gestao.ativarInativarPerfil.table.acoes"
+                    columnDefs="{'class': 'tbody-nowrap', 'targets': 3}"
+                    hasActions="true"
+                    actionEvents="select-row:click:viewUserProfiles(5)">
+                <f:facet name="actions">
+                    <a href="javascript:void(0);" class="select-row glyphicon glyphicon-pencil" data-toggle="tooltip"
+                            title="Ativar/Inativar perfis"/>
+                </f:facet>
+            </sat:table>
+            <h:form>
+                <a4j:jsFunction name="viewUserProfiles"
+                        action="#{ativarInativarPerfilMB.setAllPerfisUsuariosView}"
+                        render="usuario-sistema-table-modal nomeUsuarioModal"
+                        oncomplete="openModal()">
+                    <a4j:param name="cpf" assignTo="#{ativarInativarPerfilMB.dto.cpfUsuario}"/>
+                </a4j:jsFunction>
+            </h:form>
+            <div id="usuarioSistemaModal" class="modal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" id="usuarioSistemaModalDialog">
+                    <div class="modal-content" id="usuarioSistemaModalContent">
+                        <div class="modal-header" id="usuarioSistemaModalHeader">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar"
+                                    onclick="resetFields()">
+                                <span aria-hidden="true">&#xd7;</span>
+                            </button>
+                            <h4 class="modal-title"
+                                    id="usuarioSistemaModalTitle">#{seg_msg['seg.gestao.ativarInativarPerfil.form.titulo']}</h4>
+                        </div>
+                        <div class="modal-body" id="usuarioSistemaModalBody">
+                            <h:form id="consulta-usuario-form">
+                                <h:outputLabel value="#{seg_msg['seg.gestao.ativarInativarPerfil.form.nomeUsuario']}"/>
+                                <h3>
+                                    <h:outputLabel styleClass="label label-default"
+                                            value="#{ativarInativarPerfilMB.nomeUsuario}"
+                                            rendered="true"
+                                            id="nomeUsuarioModal"/>
+                                </h3>
+                                <div>
+                                    <sat:table id="usuario-sistema-table-modal"
+                                            bundle="seg_msg"
+                                            content="#{ativarInativarPerfilMB.allPerfisUsuario}"
+                                            headers="seg.gestao.ativarInativarPerfil.table.form.perfil"
+                                            fields="nomePerfilSistema, identificacaoUsuarioPerfil:hide,
+                                                    situacaoPerfil:hide"
+                                            actionsHeader="seg.gestao.ativarInativarPerfil.table.form.ativo"
+                                            hasActions="true"
+                                            actionEvents="check-row:load:setChecked(2),
+                                                          check-row:click:toggleSituacao(1)"
+                                            actionStyleClass="tbody-center"
+                                            paging="false">
+                                        <f:facet name="actions">
+                                            <input type="checkbox" class="check-row" value="true"/>
+                                        </f:facet>
+                                    </sat:table>
+                                </div>
+                                <div class="modal-footer" id="usuarioSistemaModalFooter">
+                                    <div class="col-md-12" >
+                                        <button type="button" class="btn btn-default" data-dismiss="modal"
+                                                value="#{seg_msg['seg.gestao.usuarioSistema.form.fechar']}"
+                                                aria-label="#{seg_msg['seg.gestao.ativarInativarPerfil.form.fechar']}"
+                                                onclick="resetFields()">
+                                            <span aria-hidden="false">#{seg_msg['seg.gestao.ativarInativarPerfil.form.fechar']}</span>
+                                        </button>
+                                        <h:commandButton type="button"
+                                                value="#{seg_msg['seg.gestao.ativarInativarPerfil.form.salvar']}"
+                                                styleClass="btn btn-primary fa-align-right"
+                                                action="#{ativarInativarPerfilMB.updatePerfilUsuario}"
+                                                p:data-dismiss="modal">
+                                            <f:ajax render="usuario-sistema-table"/>
+                                        </h:commandButton>
+                                    </div>
+                                </div>
+                                <a4j:jsFunction name="toggleSituacao"
+                                        action="#{ativarInativarPerfilMB.toggleSituacao}"
+                                        render="usuario-sistema-table-modal">
+                                    <a4j:param name="identificacaoUsuarioPerfil" assignTo="#{ativarInativarPerfilMB.idPerfilDto}"/>
+                                </a4j:jsFunction>
+                                <a4j:jsFunction name="updatePerfilList"
+                                        action="#{ativarInativarPerfilMB.updatePerfilUsuario}"
+                                        render="usuario-sistema-table">
+                                </a4j:jsFunction>
+                            </h:form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </sat:panel>
+    </ui:define>
+</ui:composition>
+</html>

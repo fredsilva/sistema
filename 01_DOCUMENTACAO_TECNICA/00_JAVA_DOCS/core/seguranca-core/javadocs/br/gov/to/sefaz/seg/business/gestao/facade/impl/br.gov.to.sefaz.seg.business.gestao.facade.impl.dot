@@ -9,8 +9,41 @@ digraph G {
 	node [fontname="arial",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// br.gov.to.sefaz.seg.business.gestao.facade.impl.UsuarioSistemaFacadeImpl
+	c4465 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.UsuarioSistemaFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioSistemaFacadeImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> UsuarioSistemaFacadeImpl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + UsuarioSistemaFacadeImpl(service : UsuarioSistemaService, tipoUsuarioService : TipoUsuarioService, estadoService : EstadoService, municipioService : MunicipioService, logradouroService : LogradouroService) </td></tr>
+<tr><td align="left" balign="left"> + find(filter : UsuarioSistemaFilter) : List&lt;UsuarioSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllTipoUsuario() : Collection&lt;TipoUsuario&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllEstados() : Collection&lt;Estado&gt; </td></tr>
+<tr><td align="left" balign="left"> + findMunicipiosByUF(uf : String) : Collection&lt;Municipio&gt; </td></tr>
+<tr><td align="left" balign="left"> + findUnidadeOrganizacional() : UnidadeOrganizacional </td></tr>
+<tr><td align="left" balign="left"> + saveNewUsuarioSistema(usuarioSistema : UsuarioSistema) </td></tr>
+<tr><td align="left" balign="left"> + findOneUsuarioSistema(cpf : String) : UsuarioSistema </td></tr>
+<tr><td align="left" balign="left"> + changePassword(dto : ChangePasswordDto) </td></tr>
+<tr><td align="left" balign="left"> + findAllLogradouros() : Collection&lt;Logradouro&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./UsuarioSistemaFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.facade.impl.UsuarioPrincipalEmpresaFacadeImpl
+	c4466 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.UsuarioPrincipalEmpresaFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UsuarioPrincipalEmpresaFacadeImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> UsuarioPrincipalEmpresaFacadeImpl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + UsuarioPrincipalEmpresaFacadeImpl(service : UsuarioPrincipalEmpresaService) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./UsuarioPrincipalEmpresaFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.facade.impl.UnidadeOrganizacionalFacadeImpl
-	c1191 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.UnidadeOrganizacionalFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UnidadeOrganizacionalFacadeImpl.html">
+	c4467 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.UnidadeOrganizacionalFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UnidadeOrganizacionalFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UnidadeOrganizacionalFacadeImpl </td></tr>
 		</table></td></tr>
@@ -20,10 +53,11 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + UnidadeOrganizacionalFacadeImpl(service : UnidadeOrganizacionalService) </td></tr>
 <tr><td align="left" balign="left"> + find(filter : UnidadeOrganizacionalFilter) : List&lt;UnidadeOrganizacional&gt; </td></tr>
+<tr><td align="left" balign="left"> + findTiposUnidades() : List&lt;TipoUnidade&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./UnidadeOrganizacionalFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.facade.impl.TipoUsuarioFacadeImpl
-	c1192 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.TipoUsuarioFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoUsuarioFacadeImpl.html">
+	c4468 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.TipoUsuarioFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoUsuarioFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoUsuarioFacadeImpl </td></tr>
 		</table></td></tr>
@@ -33,10 +67,28 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + TipoUsuarioFacadeImpl(service : TipoUsuarioService) </td></tr>
 <tr><td align="left" balign="left"> + find(filter : TipoUsuarioFilter) : List&lt;TipoUsuario&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllTipoUsuario() : List&lt;TipoUsuario&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./TipoUsuarioFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.facade.impl.ProcuracaoUsuarioFacadeImpl
+	c4469 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.ProcuracaoUsuarioFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ProcuracaoUsuarioFacadeImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ProcuracaoUsuarioFacadeImpl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ProcuracaoUsuarioFacadeImpl(service : ProcuracaoUsuarioService, opcaoService : OpcaoAplicacaoService, usuarioService : UsuarioSistemaService, listagemCpfProcuracaoService : ListagemCpfProcuracaoService) </td></tr>
+<tr><td align="left" balign="left"> + getOpcoesFromUsuario() : List&lt;OpcaoAplicacao&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllCpfProcuracaoFromUsuario() : List&lt;ListagemCpfProcuracao&gt; </td></tr>
+<tr><td align="left" balign="left"> + findUsuarioNomeById(usuarioCpf : String) : String </td></tr>
+<tr><td align="left" balign="left"> + findProcuracaoByCpf(cpfOrigem : String, procuradorCpf : String) : ProcuracaoUsuario </td></tr>
+<tr><td align="left" balign="left"> + findProcuracaoByCnpj(cnpjOrigem : String, procuradorCpf : String) : ProcuracaoUsuario </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ProcuracaoUsuarioFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.facade.impl.PostoTrabalhoFacadeImpl
-	c1193 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.PostoTrabalhoFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PostoTrabalhoFacadeImpl.html">
+	c4470 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.PostoTrabalhoFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PostoTrabalhoFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PostoTrabalhoFacadeImpl </td></tr>
 		</table></td></tr>
@@ -49,8 +101,47 @@ digraph G {
 <tr><td align="left" balign="left"> + findAllUnidadeOrganizacional() : Collection&lt;UnidadeOrganizacional&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./PostoTrabalhoFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.facade.impl.PerfilSistemaFacadeImpl
+	c4471 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.PerfilSistemaFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PerfilSistemaFacadeImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> PerfilSistemaFacadeImpl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + PerfilSistemaFacadeImpl(service : PerfilSistemaService, papelSistemaService : PapelSistemaService, usuarioPerfilService : UsuarioPerfilService, perfilPapelService : PerfilPapelService) </td></tr>
+<tr><td align="left" balign="left"> + findByFilter(filter : PerfilSistemaFilter) : Collection&lt;PerfilSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllPerfilSistema(filter : PerfilSistemaFilter) : Collection&lt;PerfilSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + saveOrUpdatePerfilSistema(dto : PerfilSistema) : PerfilSistema </td></tr>
+<tr><td align="left" balign="left"> + findOneComplete(id : Long) : PerfilSistema </td></tr>
+<tr><td align="left" balign="left"> + findAllPapelByPerfil(id : Long) : Collection&lt;PapelSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllPerfilPapelByPerfil(id : Long) : Collection&lt;PerfilPapel&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllPapelSistema() : Collection&lt;PapelSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllUsuariosByPerfil(identificacaoPerfil : Long) : Collection&lt;UsuarioPerfil&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./PerfilSistemaFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.facade.impl.PapelSistemaFacadeImpl
+	c4472 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.PapelSistemaFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PapelSistemaFacadeImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> PapelSistemaFacadeImpl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + PapelSistemaFacadeImpl(service : PapelSistemaService, opcaoAplicacaoService : OpcaoAplicacaoService, papelOpcaoService : PapelOpcaoService, perfilSistemaService : PerfilSistemaService) </td></tr>
+<tr><td align="left" balign="left"> + findByFilter(filter : PapelSistemaFilter) : Collection&lt;PapelSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllPapelSistema() : List&lt;PapelSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllOpcaoAplicacao() : List&lt;OpcaoAplicacao&gt; </td></tr>
+<tr><td align="left" balign="left"> + saveOrUpdatePapelSistema(dto : PapelSistema) : PapelSistema </td></tr>
+<tr><td align="left" balign="left"> + findOneCounted(id : Long) : PapelSistema </td></tr>
+<tr><td align="left" balign="left"> + findAllPapelOpcaoById(idPapel : Long) : Set&lt;PapelOpcao&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllPerfilByPapel(id : Long) : Collection&lt;PerfilSistema&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./PapelSistemaFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.facade.impl.ModuloSistemaFacadeImpl
-	c1194 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.ModuloSistemaFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ModuloSistemaFacadeImpl.html">
+	c4473 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.ModuloSistemaFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ModuloSistemaFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ModuloSistemaFacadeImpl </td></tr>
 		</table></td></tr>
@@ -61,5 +152,103 @@ digraph G {
 <tr><td align="left" balign="left"> + ModuloSistemaFacadeImpl(service : ModuloSistemaService) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ModuloSistemaFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.facade.impl.ManutencaoCadastroFuncionalidadeFacadeImpl
+	c4474 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.ManutencaoCadastroFuncionalidadeFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ManutencaoCadastroFuncionalidadeFacadeImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ManutencaoCadastroFuncionalidadeFacadeImpl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ManutencaoCadastroFuncionalidadeFacadeImpl(service : OpcaoAplicacaoService, moduloSistemaService : ModuloSistemaService, aplicacaoModuloService : AplicacaoModuloService) </td></tr>
+<tr><td align="left" balign="left"> + findAllModuloSistema() : Collection&lt;ModuloSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllAplicacaoModulo() : Collection&lt;AplicacaoModulo&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAplicacoesPorModulo(identificacaoModuloSistema : Long) : Collection&lt;AplicacaoModulo&gt; </td></tr>
+<tr><td align="left" balign="left"> + find(filter : OpcaoAplicacaoFilter) : List&lt;OpcaoAplicacao&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ManutencaoCadastroFuncionalidadeFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.facade.impl.ManterUsuarioSistemaFacadeImpl
+	c4475 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.ManterUsuarioSistemaFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ManterUsuarioSistemaFacadeImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ManterUsuarioSistemaFacadeImpl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ManterUsuarioSistemaFacadeImpl(service : UsuarioSistemaService, unidadeOrganizacionalService : UnidadeOrganizacionalService, postoTrabalhoService : PostoTrabalhoService, estadoService : EstadoService, municipioService : MunicipioService, tipoUsuarioService : TipoUsuarioService, logradouroService : LogradouroService) </td></tr>
+<tr><td align="left" balign="left"> + find(filter : ManterUsuarioSistemaFilter) : Collection&lt;UsuarioSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + resetPassword(usuarioSistema : UsuarioSistema) </td></tr>
+<tr><td align="left" balign="left"> + toggleUserStatus(usuarioSistema : UsuarioSistema) : UsuarioSistema </td></tr>
+<tr><td align="left" balign="left"> + findOneUsuarioSistema(cpfUsuario : String) : UsuarioSistema </td></tr>
+<tr><td align="left" balign="left"> + findAllUnidadeOrganizacional() : Collection&lt;UnidadeOrganizacional&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllPostoTrabalho() : Collection&lt;PostoTrabalho&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllEstados() : Collection&lt;Estado&gt; </td></tr>
+<tr><td align="left" balign="left"> + findMunicipiosByUF(s : String) : Collection&lt;Municipio&gt; </td></tr>
+<tr><td align="left" balign="left"> + loadTipoUsuario() : Collection&lt;TipoUsuario&gt; </td></tr>
+<tr><td align="left" balign="left"> + updateUser(usuarioSistema : UsuarioSistema) : UsuarioSistema </td></tr>
+<tr><td align="left" balign="left"> + findAllPostoTrabalhoByUnidadeOrganizacional(identificUnidOrganizac : Long) : Collection&lt;PostoTrabalho&gt; </td></tr>
+<tr><td align="left" balign="left"> + saveUsuarioSistema(usuarioSistema : UsuarioSistema) : UsuarioSistema </td></tr>
+<tr><td align="left" balign="left"> + findAllLogradouros() : Collection&lt;Logradouro&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./ManterUsuarioSistemaFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.facade.impl.CadastroSenhaFacadeImpl
+	c4476 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.CadastroSenhaFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CadastroSenhaFacadeImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> CadastroSenhaFacadeImpl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + CadastroSenhaFacadeImpl(service : CadastroSenhaService, logradouroService : LogradouroService) </td></tr>
+<tr><td align="left" balign="left"> + find(filter : CadastroSenhaFilter) : Collection&lt;UsuarioSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + resetPassword(usuarioSistema : UsuarioSistema) </td></tr>
+<tr><td align="left" balign="left"> + authorizeUser(usuarioSistema : UsuarioSistema) </td></tr>
+<tr><td align="left" balign="left"> + findOneUsuarioSistema(cpfUsuario : String) : UsuarioSistema </td></tr>
+<tr><td align="left" balign="left"> + findAllLogradouros() : Collection&lt;Logradouro&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./CadastroSenhaFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.facade.impl.AtribuirPerfilFacadeImpl
+	c4477 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.AtribuirPerfilFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AtribuirPerfilFacadeImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> AtribuirPerfilFacadeImpl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + AtribuirPerfilFacadeImpl(usuarioSistemaService : UsuarioSistemaService, perfilSistemaService : PerfilSistemaService, unidadeOrganizacionalService : UnidadeOrganizacionalService, postoTrabalhoService : PostoTrabalhoService, tipoUsuarioService : TipoUsuarioService) </td></tr>
+<tr><td align="left" balign="left"> + find(filter : AtribuirPerfilFilter) : Collection&lt;UsuarioSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findOneUsuarioSistema(cpfUsuario : String) : UsuarioSistema </td></tr>
+<tr><td align="left" balign="left"> + findAllUnidadeOrganizacional() : Collection&lt;UnidadeOrganizacional&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllPostoTrabalho() : Collection&lt;PostoTrabalho&gt; </td></tr>
+<tr><td align="left" balign="left"> + loadTipoUsuario() : Collection&lt;TipoUsuario&gt; </td></tr>
+<tr><td align="left" balign="left"> + updateUsuarioPerfil(dto : UsuarioSistema) : UsuarioSistema </td></tr>
+<tr><td align="left" balign="left"> + findAllPostoTrabalhoByUnidadeOrganizacional(identificUnidOrganizac : Long) : Collection&lt;PostoTrabalho&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllPerfilSistema() : Collection&lt;PerfilSistema&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./AtribuirPerfilFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.seg.business.gestao.facade.impl.AtivarInativarPerfilFacadeImpl
+	c4478 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.AtivarInativarPerfilFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AtivarInativarPerfilFacadeImpl.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> AtivarInativarPerfilFacadeImpl </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + AtivarInativarPerfilFacadeImpl(service : UsuarioPerfilService, usuarioSistemaService : UsuarioSistemaService, unidadeOrganizacionalService : UnidadeOrganizacionalService, postoTrabalhoService : PostoTrabalhoService) </td></tr>
+<tr><td align="left" balign="left"> + find(filter : AtivarInativarPerfilFilter) : Collection&lt;UsuarioSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + loadAllUsuarioPerfil(usuarioSistema : UsuarioSistema) : Collection&lt;UsuarioPerfil&gt; </td></tr>
+<tr><td align="left" balign="left"> + buildProfileString(usuarioSistemas : Collection&lt;UsuarioSistema&gt;) </td></tr>
+<tr><td align="left" balign="left"> + updatePerfilUsuarioList(usuarioPerfilList : Collection&lt;UsuarioPerfil&gt;) </td></tr>
+<tr><td align="left" balign="left"> + findAllPostoTrabalho() : Collection&lt;PostoTrabalho&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllUnidadeOrganizacional() : Collection&lt;UnidadeOrganizacional&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllUsuarioSistema(filter : AtivarInativarPerfilFilter) : List&lt;UsuarioSistema&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllPostoTrabalhoByUnidadeOrganizacional(identificUnidOrganizac : Long) : Collection&lt;PostoTrabalho&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./AtivarInativarPerfilFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 }
 

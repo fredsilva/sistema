@@ -44,10 +44,10 @@
                                     id="classificacaoFilter"
                                     styleClass="form-control">
                                 <f:selectItem value="#{null}" itemLabel=""/>
-                                <f:selectItems value="#{enumsMB.classificacaoReceitas}"
+                                <f:selectItems value="#{arrEnumsMB.classificacaoReceitas}"
                                         var="classificacao"
                                         itemValue="#{classificacao}"
-                                        itemLabel="#{enumsMB.getClassificacaoReceitaLabel(classificacao)}"/>
+                                        itemLabel="#{classificacao.getCodeLabel()}"/>
                             </h:selectOneMenu>
                         </div>
                         <div class="form-group col-md-3">
@@ -59,10 +59,10 @@
                                     id="tipoReceitaFilter"
                                     styleClass="form-control">
                                 <f:selectItem value="#{null}" itemLabel=""/>
-                                <f:selectItems value="#{enumsMB.tiposReceita}"
+                                <f:selectItems value="#{arrEnumsMB.tiposReceita}"
                                         var="tipoReceita"
                                         itemValue="#{tipoReceita}"
-                                        itemLabel="#{enumsMB.getTiposReceitaLabel(tipoReceita)}"/>
+                                        itemLabel="#{tipoReceita.getCodeLabel()}"/>
                             </h:selectOneMenu>
                         </div>
                     </div>
@@ -75,10 +75,10 @@
                                     id="situacaoFilter"
                                     styleClass="form-control">
                                 <f:selectItem value="#{null}" itemLabel=""/>
-                                <f:selectItems value="#{enumsMB.situacoes}"
-                                        var="situacao"
-                                        itemValue="#{situacao}"
-                                        itemLabel="#{enumsMB.getSituacaoLabel(situacao)}"/>
+                                <f:selectItems value="#{arrEnumsMB.situacoes}"
+                                        var="tipoUsuario"
+                                        itemValue="#{tipoUsuario}"
+                                        itemLabel="#{situacao.codeLabel}"/>
                             </h:selectOneMenu>
                         </div>
                         <div class="form-group col-md-offset-6 col-lg-4 text-right align-bottom">
@@ -107,7 +107,7 @@
                                 dataAlteracao:date,usuarioAlteracao,
                                 classificacaoReceita:hide,tipoReceita:hide,
                                 situacao:hide,imprimeDare:hide,idBarra:hide,
-                                planoContas:hide,permiteTaxas:hide"
+                                idPlanoContas:hide,permiteTaxas:hide"
                         hasActions="true"
                         actionEvents="select-row:click:selectRow,
                                delete-row:click:deleteReceita(0)">
@@ -164,10 +164,10 @@
                             <h:selectOneMenu value="#{receitasMB.dto.classificacaoReceita}"
                                     id="classificaoReceita"
                                     styleClass="form-control">
-                                <f:selectItems value="#{enumsMB.classificacaoReceitas}"
+                                <f:selectItems value="#{arrEnumsMB.classificacaoReceitas}"
                                         var="classificacao"
                                         itemValue="#{classificacao}"
-                                        itemLabel="#{enumsMB.getClassificacaoReceitaLabel(classificacao)}"/>
+                                        itemLabel="#{classificacao.getCodeLabel()}"/>
                             </h:selectOneMenu>
                         </div>
                         <div class="form-group col-md-3">
@@ -177,10 +177,10 @@
                             <h:selectOneMenu value="#{receitasMB.dto.tipoReceita}"
                                     id="tipoReceita"
                                     styleClass="form-control">
-                                <f:selectItems value="#{enumsMB.tiposReceita}"
+                                <f:selectItems value="#{arrEnumsMB.tiposReceita}"
                                         var="tiposReceita"
                                         itemValue="#{tiposReceita}"
-                                        itemLabel="#{enumsMB.getTiposReceitaLabel(tiposReceita)}"/>
+                                        itemLabel="#{tipoReceita.getCodeLabel()}"/>
                             </h:selectOneMenu>
                         </div>
                     </div>
@@ -191,10 +191,10 @@
                             </h:outputLabel>
                             <h:selectOneMenu value="#{receitasMB.dto.situacao}" id="situacao"
                                     styleClass="form-control">
-                                <f:selectItems value="#{enumsMB.situacoes}"
+                                <f:selectItems value="#{arrEnumsMB.situacoes}"
                                         var="situacao"
                                         itemValue="#{situacao}"
-                                        itemLabel="#{enumsMB.getSituacaoLabel(situacao)}"/>
+                                        itemLabel="#{situacao.getCodeLabel()}"/>
                             </h:selectOneMenu>
                         </div>
                         <div class="form-group col-md-2 align-bottom">
@@ -216,13 +216,13 @@
                             <h:outputLabel for="planoContas">
                                 #{arr_msg['parametros.receitas.form.planoContas']}
                             </h:outputLabel>
-                            <h:selectOneMenu value="#{receitasMB.dto.planoContas}"
+                            <h:selectOneMenu value="#{receitasMB.dto.idPlanoContas}"
                                     id="planoContas"
                                     styleClass="form-control">
                                 <f:selectItem value="#{null}" itemLabel=""/>
                                 <f:selectItems value="#{receitasMB.allPlanoContas}"
                                         var="planoConta"
-                                        itemValue="#{planoConta}"
+                                        itemValue="#{planoConta.id}"
                                         itemLabel="#{planoConta.compositeName}"/>
                             </h:selectOneMenu>
                         </div>
@@ -278,7 +278,11 @@
                                     </h:inputText>
                                 </div>
                                 <h:outputScript>
-                                    $("#receitas-form\\:valorUnitario").maskMoney({thousands:'.', decimal:',', allowZero:true});
+                                    $("#receitas-form\\:valorUnitario").maskMoney({
+                                        thousands: '.',
+                                        decimal: ',',
+                                        allowZero: true
+                                    });
                                 </h:outputScript>
                                 <div class="form-group col-md-2">
                                     <h:outputLabel for="valorLimite">
@@ -290,7 +294,11 @@
                                     </h:inputText>
                                 </div>
                                 <h:outputScript>
-                                    $("#receitas-form\\:valorLimite").maskMoney({thousands:'.', decimal:',', allowZero:true});
+                                    $("#receitas-form\\:valorLimite").maskMoney({
+                                        thousands: '.',
+                                        decimal: ',',
+                                        allowZero: true
+                                    });
                                 </h:outputScript>
                                 <div class="form-group col-md-2">
                                     <h:outputLabel for="valorAcrescimo">
@@ -302,7 +310,11 @@
                                     </h:inputText>
                                 </div>
                                 <h:outputScript>
-                                    $("#receitas-form\\:valorAcrescimo").maskMoney({thousands:'.', decimal:',', allowZero:true});
+                                    $("#receitas-form\\:valorAcrescimo").maskMoney({
+                                        thousands: '.',
+                                        decimal: ',',
+                                        allowZero: true
+                                    });
                                 </h:outputScript>
                             </div>
                             <div class="row">
@@ -333,8 +345,8 @@
                                             parametros.receitas.form.taxas.tabela.valorUnitario,
                                             parametros.receitas.form.taxas.tabela.valorLimite,
                                             parametros.receitas.form.taxas.tabela.valorAcrescimo"
-                                    fields="subcodigo,descricao,unidade,valorUnitario,
-                                            valorLimite,valorAcrescimo"
+                                    fields="subcodigo,descricao,unidade,valorUnitario:number,
+                                            valorLimite:number,valorAcrescimo:number"
                                     hasActions="true"
                                     actionEvents="select-row:click:selectTaxaRow,
                                             delete-row:click:deleteTaxa(0)">
@@ -363,10 +375,10 @@
                                             value="#{receitasMB.receitasRepasseDto.tipoRepasse}"
                                             id="tiposRepasse"
                                             styleClass="form-control">
-                                        <f:selectItems value="#{enumsMB.tiposRepasse}"
+                                        <f:selectItems value="#{arrEnumsMB.tiposRepasse}"
                                                 var="tipoRepasse"
                                                 itemValue="#{tipoRepasse}"
-                                                itemLabel="#{enumsMB.getTiposRepasseLabel(tipoRepasse)}"/>
+                                                itemLabel="#{tipoRepasse.getCodeLabel()}"/>
                                     </h:selectOneMenu>
                                 </div>
                                 <div class="form-group col-md-2">
@@ -378,7 +390,11 @@
                                         <f:convertNumber locale="pt-BR" maxFractionDigits="2" maxIntegerDigits="3"/>
                                     </h:inputText>
                                     <h:outputScript>
-                                        $("#receitas-form\\:percentual").maskMoney({thousands:'.', decimal:',', allowZero:true});
+                                        $("#receitas-form\\:percentual").maskMoney({
+                                            thousands: '.',
+                                            decimal: ',',
+                                            allowZero: true
+                                        });
                                     </h:outputScript>
                                 </div>
                                 <div class='form-group col-md-2'>
@@ -470,8 +486,8 @@
                                             <sat:saveUpdateButton
                                                     label="#{arr_msg['parametros.receitas.form.repasse.adicionar']}"
                                                     render="repasse-table"
-                                                    execute="tiposRepasse percentual dataInicio dataFinal principal
-                                                        correcao multa taxas juros"
+                                                    execute="idReceita tiposRepasse percentual dataInicio dataFinal
+                                                        principal correcao multa taxas juros"
                                                     onEvent="resetRepassesOnSuccess" crudMb="#{receitasMB}"
                                                     saveAction="addRepasse" updateAction="updateRepasse"/>
                                         </div>
@@ -486,7 +502,7 @@
                                             parametros.receitas.form.repasse.tabela.dataInicio,
                                             parametros.receitas.form.repasse.tabela.dataFim,
                                             parametros.receitas.form.repasse.tabela.incidencia"
-                                    fields="tipoRepasse:string,percentualRepasse,dataInicio:date,
+                                    fields="tipoRepasse:string,percentualRepasse:number,dataInicio:date,
                                             dataFinal:date,incidenciaLabel,tipoRepasse:hide,dataInicio:hide,
                                             repartePrincipal:hide,reparteMulta:hide,reparteJuros:hide,
                                             reparteCorrecao:hide,reparteTaxa:hide"
@@ -518,7 +534,7 @@
                                     render="receitas-form receitas-table"/>
                             <sat:saveUpdateButton label="#{arr_msg['parametros.receitas.form.salvar']}"
                                     render="receitas-table" styleClass="align-bottom"
-                                    execute="idReceita descricaoReceita classificaoReceita tipoReceita situacao dare codigoBarra"
+                                    execute="idReceita descricaoReceita classificaoReceita tipoReceita situacao dare codigoBarra planoContas permiteSubCodigo"
                                     onEvent="resetOnSuccess" crudMb="#{receitasMB}"/>
                         </div>
                     </div>

@@ -59,10 +59,10 @@
                                     id="tipoConvenioFilter"
                                     styleClass="form-control">
                                 <f:selectItem value="#{null}" itemLabel=""/>
-                                <f:selectItems value="#{enumsMB.tiposConvenio}"
+                                <f:selectItems value="#{arrEnumsMB.tiposConvenio}"
                                         var="tipoConvenio"
                                         itemValue="#{tipoConvenio}"
-                                        itemLabel="#{enumsMB.getTipoConvenioLabel(tipoConvenio)}"/>
+                                        itemLabel="#{tipoConvenio.getCodeLabel()}"/>
                             </h:selectOneMenu>
                         </div>
                         <div class="form-group col-md-2">
@@ -72,10 +72,10 @@
                             <h:selectOneMenu value="#{conveniosArrecMB.filter.tipoBarra}" id="barraFilter"
                                     styleClass="form-control">
                                 <f:selectItem value="#{null}" itemLabel=""/>
-                                <f:selectItems value="#{enumsMB.tiposBarra}"
+                                <f:selectItems value="#{arrEnumsMB.tiposBarra}"
                                         var="tipoBarra"
                                         itemValue="#{tipoBarra}"
-                                        itemLabel="#{enumsMB.getTipoBarraLabel(tipoBarra)}"/>
+                                        itemLabel="#{tipoBarra.getCodeLabel()}"/>
                             </h:selectOneMenu>
                         </div>
                     </div>
@@ -162,6 +162,10 @@
                                         itemLabel="#{banco.compositeName}"/>
                                 <f:ajax render="agencia" listener="#{conveniosArrecMB.getBancoAgencias()}"/>
                             </h:selectOneMenu>
+                            <a4j:jsFunction name="getAgenciaBanco"
+                                    render="agencia" execute="banco">
+                                <a4j:param name="agencia" assignTo="#{conveniosArrecMB.dto.idAgencia}"/>
+                            </a4j:jsFunction>
                         </div>
                         <div class="form-group col-md-2">
                             <h:outputLabel for="agencia">
@@ -181,10 +185,10 @@
                             </h:outputLabel>
                             <h:selectOneMenu value="#{conveniosArrecMB.dto.tipoBarra}" id="barra"
                                     styleClass="form-control">
-                                <f:selectItems value="#{enumsMB.tiposBarra}"
+                                <f:selectItems value="#{arrEnumsMB.tiposBarra}"
                                         var="tipoBarra"
                                         itemValue="#{tipoBarra}"
-                                        itemLabel="#{enumsMB.getTipoBarraLabel(tipoBarra)}"/>
+                                        itemLabel="#{tipoBarra.getCodeLabel()}"/>
                             </h:selectOneMenu>
                         </div>
                         <div class="form-group col-md-2">
@@ -205,10 +209,10 @@
                                     </h:outputLabel>
                                     <h:selectOneMenu value="#{conveniosArrecMB.dto.situacao}" id="situacao"
                                             styleClass="form-control">
-                                        <f:selectItems value="#{enumsMB.situacoes}"
+                                        <f:selectItems value="#{arrEnumsMB.situacoes}"
                                                 var="situacao"
                                                 itemValue="#{situacao}"
-                                                itemLabel="#{enumsMB.getSituacaoLabel(situacao)}"/>
+                                                itemLabel="#{situacao.getCodeLabel()}"/>
                                     </h:selectOneMenu>
                                 </div>
                                 <div class="form-group col-md-6">
@@ -218,10 +222,10 @@
                                     </h:outputLabel>
                                     <h:selectOneMenu value="#{conveniosArrecMB.dto.tipoConvenio}" id="tipoConvenio"
                                             styleClass="form-control">
-                                        <f:selectItems value="#{enumsMB.tiposConvenio}"
+                                        <f:selectItems value="#{arrEnumsMB.tiposConvenio}"
                                                 var="tipoConvenio"
                                                 itemValue="#{tipoConvenio}"
-                                                itemLabel="#{enumsMB.getTipoConvenioLabel(tipoConvenio)}"/>
+                                                itemLabel="#{tipoConvenio.getCodeLabel()}"/>
                                     </h:selectOneMenu>
                                 </div>
                             </div>
@@ -302,10 +306,10 @@
                                                 value="#{conveniosArrecMB.conveniosTarifasDto.formaPagamento}"
                                                 id="formaPagamento"
                                                 styleClass="form-control">
-                                            <f:selectItems value="#{enumsMB.formasPagamento}"
+                                            <f:selectItems value="#{arrEnumsMB.formasPagamento}"
                                                     var="formaPagamento"
                                                     itemValue="#{formaPagamento}"
-                                                    itemLabel="#{enumsMB.getFormaPagamentoLabel(formaPagamento)}"/>
+                                                    itemLabel="#{formaPagamento.getCodeLabel()}"/>
                                         </h:selectOneMenu>
                                     </div>
                                     <div class='form-group col-sm-3'>
@@ -349,12 +353,16 @@
                                         <h:inputText value="#{conveniosArrecMB.conveniosTarifasDto.valor}"
                                                 id="valorTarifa"
                                                 styleClass="form-control decimal"
-                                                maxlength="8">
+                                                maxlength="6">
                                             <f:convertNumber locale="pt-BR" currencySymbol="R$" maxFractionDigits="2"
-                                                    maxIntegerDigits="5"/>
+                                                    maxIntegerDigits="3"/>
                                         </h:inputText>
                                         <h:outputScript>
-                                            $("#convenios-arrec-form\\:valorTarifa").maskMoney({thousands:'.', decimal:',', allowZero:true});
+                                            $("#convenios-arrec-form\\:valorTarifa").maskMoney({
+                                                thousands: '.',
+                                                decimal: ',',
+                                                allowZero: true
+                                            });
                                         </h:outputScript>
                                     </div>
                                 </div>
@@ -407,7 +415,7 @@
                             <a4j:jsFunction name="clearDtos" action="#{conveniosArrecMB.clearDtos}"
                                     render="convenios-arrec-form convenios-arrec-table"/>
                             <sat:saveUpdateButton label="#{arr_msg['parametros.conveniosArrec.botao.salvar']}"
-                                    render="convenios-arrec-table"  styleClass="align-bottom"
+                                    render="convenios-arrec-table" styleClass="align-bottom"
                                     execute="codigo descricaoConvenio banco agencia barra versaoArquivo situacao tipoConvenio"
                                     onEvent="resetOnSuccess" crudMb="#{conveniosArrecMB}"/>
                         </div>
