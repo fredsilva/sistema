@@ -10,6 +10,7 @@
     <rule ref="rulesets/java/braces.xml"/>
     <rule ref="rulesets/java/codesize.xml">
         <exclude name="ExcessiveParameterList"/>
+        <exclude name="ExcessivePublicCount"/>
     </rule>
     <rule ref="rulesets/java/codesize.xml/TooManyMethods">
         <properties>
@@ -24,6 +25,8 @@
         <exclude name="CallSuperInConstructor"/>
         <exclude name="AvoidLiteralsInIfCondition"/>
         <exclude name="UseConcurrentHashMap"/>
+        <exclude name="OneDeclarationPerLine"/>
+        <exclude name="NullAssignment"/>
     </rule>
     <rule ref="rulesets/java/coupling.xml">
         <exclude name="LawOfDemeter"/>
@@ -64,6 +67,7 @@
         <exclude name="UseStringBufferForStringAppends"/>
         <exclude name="AvoidInstantiatingObjectsInLoops"/>
         <exclude name="PrematureDeclaration"/>
+        <exclude name="SimplifyStartsWith"/>
     </rule>
     <rule ref="rulesets/java/strictexception.xml"/>
     <rule ref="rulesets/java/strings.xml">

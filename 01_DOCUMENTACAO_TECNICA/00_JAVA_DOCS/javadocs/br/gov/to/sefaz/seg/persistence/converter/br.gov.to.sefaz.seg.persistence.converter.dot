@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.persistence.converter.TipoUsuarioConverter
-	c103728 [label=<<table title="br.gov.to.sefaz.seg.persistence.converter.TipoUsuarioConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoUsuarioConverter.html">
+	c119947 [label=<<table title="br.gov.to.sefaz.seg.persistence.converter.TipoUsuarioConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoUsuarioConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoUsuarioConverter </td></tr>
 		</table></td></tr>
@@ -25,7 +25,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoUsuarioConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.converter.TipoUnidadeConverter
-	c103729 [label=<<table title="br.gov.to.sefaz.seg.persistence.converter.TipoUnidadeConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoUnidadeConverter.html">
+	c119948 [label=<<table title="br.gov.to.sefaz.seg.persistence.converter.TipoUnidadeConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoUnidadeConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoUnidadeConverter </td></tr>
 		</table></td></tr>
@@ -35,12 +35,12 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + TipoUnidadeConverter() </td></tr>
 <tr><td align="left" balign="left"> + setService(service : UnidadeOrganizacionalService) </td></tr>
-<tr><td align="left" balign="left"> + convertToDatabaseColumn(tipoUnidade : TipoUnidade) : Character </td></tr>
-<tr><td align="left" balign="left"> + convertToEntityAttribute(code : Character) : TipoUnidade </td></tr>
+<tr><td align="left" balign="left"> + convertToDatabaseColumn(tipoUnidade : TipoUnidade) : String </td></tr>
+<tr><td align="left" balign="left"> + convertToEntityAttribute(code : String) : TipoUnidade </td></tr>
 		</table></td></tr>
 		</table>>, URL="./TipoUnidadeConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.converter.TipoOperacaoEnumConverter
-	c103730 [label=<<table title="br.gov.to.sefaz.seg.persistence.converter.TipoOperacaoEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoOperacaoEnumConverter.html">
+	c119949 [label=<<table title="br.gov.to.sefaz.seg.persistence.converter.TipoOperacaoEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoOperacaoEnumConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoOperacaoEnumConverter </td></tr>
 		</table></td></tr>
@@ -54,7 +54,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoOperacaoEnumConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.converter.TipoComunicacaoEnumConverter
-	c103731 [label=<<table title="br.gov.to.sefaz.seg.persistence.converter.TipoComunicacaoEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoComunicacaoEnumConverter.html">
+	c119950 [label=<<table title="br.gov.to.sefaz.seg.persistence.converter.TipoComunicacaoEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoComunicacaoEnumConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoComunicacaoEnumConverter </td></tr>
 		</table></td></tr>
@@ -68,7 +68,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoComunicacaoEnumConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.converter.SituacaoUsuarioEnumConverter
-	c103732 [label=<<table title="br.gov.to.sefaz.seg.persistence.converter.SituacaoUsuarioEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SituacaoUsuarioEnumConverter.html">
+	c119951 [label=<<table title="br.gov.to.sefaz.seg.persistence.converter.SituacaoUsuarioEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SituacaoUsuarioEnumConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SituacaoUsuarioEnumConverter </td></tr>
 		</table></td></tr>
@@ -82,7 +82,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SituacaoUsuarioEnumConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.converter.SituacaoSolicitacaoEnumConverter
-	c103733 [label=<<table title="br.gov.to.sefaz.seg.persistence.converter.SituacaoSolicitacaoEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SituacaoSolicitacaoEnumConverter.html">
+	c119952 [label=<<table title="br.gov.to.sefaz.seg.persistence.converter.SituacaoSolicitacaoEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SituacaoSolicitacaoEnumConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SituacaoSolicitacaoEnumConverter </td></tr>
 		</table></td></tr>
@@ -96,7 +96,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SituacaoSolicitacaoEnumConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.converter.ConverterPackageMarker
-	c103734 [label=<<table title="br.gov.to.sefaz.seg.persistence.converter.ConverterPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConverterPackageMarker.html">
+	c119953 [label=<<table title="br.gov.to.sefaz.seg.persistence.converter.ConverterPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConverterPackageMarker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ConverterPackageMarker </td></tr>

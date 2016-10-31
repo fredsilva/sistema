@@ -9,8 +9,69 @@ digraph G {
 	node [fontname="arial",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// br.gov.to.sefaz.util.properties.PropertiesReaderProvider
+	c15589 [label=<<table title="br.gov.to.sefaz.util.properties.PropertiesReaderProvider" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PropertiesReaderProvider.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> PropertiesReaderProvider </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + PropertiesReaderProvider(customPropertiesObservable : CustomPropertiesObservable) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./PropertiesReaderProvider.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.util.properties.PropertiesReader
+	c15590 [label=<<table title="br.gov.to.sefaz.util.properties.PropertiesReader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PropertiesReader.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> PropertiesReader </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + run() </td></tr>
+<tr><td align="left" balign="left"> + processFile(fileName : Path) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./PropertiesReader.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.util.properties.PropertiesPackageMarker
+	c15591 [label=<<table title="br.gov.to.sefaz.util.properties.PropertiesPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PropertiesPackageMarker.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> PropertiesPackageMarker </td></tr>
+		</table></td></tr>
+		</table>>, URL="./PropertiesPackageMarker.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.util.properties.CustomPropertiesObserver
+	c15592 [label=<<table title="br.gov.to.sefaz.util.properties.CustomPropertiesObserver" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CustomPropertiesObserver.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> CustomPropertiesObserver </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + CustomPropertiesObserver(customPropertiesObservable : CustomPropertiesObservable) </td></tr>
+<tr><td align="left" balign="left"> + update(o : Observable, arg : Object) </td></tr>
+<tr><td align="left" balign="left"> + getCustomProperties() : Properties </td></tr>
+<tr><td align="left" balign="left"> + getCustomProperty(name : String) : Optional&lt;String&gt; </td></tr>
+		</table></td></tr>
+		</table>>, URL="./CustomPropertiesObserver.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.util.properties.CustomPropertiesObservable
+	c15593 [label=<<table title="br.gov.to.sefaz.util.properties.CustomPropertiesObservable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CustomPropertiesObservable.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> CustomPropertiesObservable </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + CustomPropertiesObservable() </td></tr>
+<tr><td align="left" balign="left"> + getCustomProperties() : Properties </td></tr>
+<tr><td align="left" balign="left"> + setCustomProperties(customProperties : Properties) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./CustomPropertiesObservable.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.util.properties.AppProperties
-	c10536 [label=<<table title="br.gov.to.sefaz.util.properties.AppProperties" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AppProperties.html">
+	c15594 [label=<<table title="br.gov.to.sefaz.util.properties.AppProperties" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AppProperties.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AppProperties </td></tr>
 		</table></td></tr>
@@ -19,12 +80,14 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + AppProperties() </td></tr>
-<tr><td align="left" balign="left"> + getProperty(name : String) : Optional&lt;String&gt; </td></tr>
+<tr><td align="left" balign="left"> + getAppProperty(name : String) : Optional&lt;String&gt; </td></tr>
+<tr><td align="left" balign="left"> + getCustomProperties() : Properties </td></tr>
 <tr><td align="left" balign="left"> + getServerInfo() : String </td></tr>
+<tr><td align="left" balign="left"> + getCustomProperty(name : String) : Optional&lt;String&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./AppProperties.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.util.properties.ApplicationPropertyLoadException
-	c10537 [label=<<table title="br.gov.to.sefaz.util.properties.ApplicationPropertyLoadException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ApplicationPropertyLoadException.html">
+	c15595 [label=<<table title="br.gov.to.sefaz.util.properties.ApplicationPropertyLoadException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ApplicationPropertyLoadException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ApplicationPropertyLoadException </td></tr>
 		</table></td></tr>

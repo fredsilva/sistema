@@ -1,6 +1,16 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./AppProperties.html" title="br.gov.to.sefaz.util.properties.AppProperties" alt="" coords="16,11,311,121"/>
-<area shape="rect" id="node1" href="./AppProperties.html" title="&lt;TABLE&gt;" alt="" coords="5,5,321,127"/>
-<area shape="rect" id="node2_1" href="./ApplicationPropertyLoadException.html" title="br.gov.to.sefaz.util.properties.ApplicationPropertyLoadException" alt="" coords="357,11,807,121"/>
-<area shape="rect" id="node2" href="./ApplicationPropertyLoadException.html" title="&lt;TABLE&gt;" alt="" coords="346,5,818,127"/>
+<area shape="rect" id="node1_0" href="./PropertiesReaderProvider.html" title="br.gov.to.sefaz.util.properties.PropertiesReaderProvider" alt="" coords="16,45,548,121"/>
+<area shape="rect" id="node1" href="./PropertiesReaderProvider.html" title="&lt;TABLE&gt;" alt="" coords="5,40,559,127"/>
+<area shape="rect" id="node2_1" href="./PropertiesReader.html" title="br.gov.to.sefaz.util.properties.PropertiesReader" alt="" coords="593,37,789,130"/>
+<area shape="rect" id="node2" href="./PropertiesReader.html" title="&lt;TABLE&gt;" alt="" coords="583,31,800,135"/>
+<area shape="rect" id="node3_2" href="./PropertiesPackageMarker.html" title="br.gov.to.sefaz.util.properties.PropertiesPackageMarker" alt="" coords="835,62,1004,105"/>
+<area shape="rect" id="node3" href="./PropertiesPackageMarker.html" title="&lt;TABLE&gt;" alt="" coords="824,57,1015,110"/>
+<area shape="rect" id="node4_3" href="./CustomPropertiesObserver.html" title="br.gov.to.sefaz.util.properties.CustomPropertiesObserver" alt="" coords="1049,19,1589,147"/>
+<area shape="rect" id="node4" href="./CustomPropertiesObserver.html" title="&lt;TABLE&gt;" alt="" coords="1039,14,1600,153"/>
+<area shape="rect" id="node5_4" href="./CustomPropertiesObservable.html" title="br.gov.to.sefaz.util.properties.CustomPropertiesObservable" alt="" coords="1635,28,1969,139"/>
+<area shape="rect" id="node5" href="./CustomPropertiesObservable.html" title="&lt;TABLE&gt;" alt="" coords="1624,23,1980,144"/>
+<area shape="rect" id="node6_5" href="./AppProperties.html" title="br.gov.to.sefaz.util.properties.AppProperties" alt="" coords="2015,11,2355,156"/>
+<area shape="rect" id="node6" href="./AppProperties.html" title="&lt;TABLE&gt;" alt="" coords="2004,5,2365,161"/>
+<area shape="rect" id="node7_6" href="./ApplicationPropertyLoadException.html" title="br.gov.to.sefaz.util.properties.ApplicationPropertyLoadException" alt="" coords="2401,28,2851,139"/>
+<area shape="rect" id="node7" href="./ApplicationPropertyLoadException.html" title="&lt;TABLE&gt;" alt="" coords="2390,23,2862,144"/>
 </map>

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.service.impl.DefaultCrudService<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c201651 [label=<<table title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../business/service/impl/DefaultCrudService.html">
+	c248058 [label=<<table title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../business/service/impl/DefaultCrudService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultCrudService&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
 		</table></td></tr>
@@ -30,7 +30,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../../business/service/impl/DefaultCrudService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.service.ArquivoRecepcaoService
-	c202274 [label=<<table title="br.gov.to.sefaz.arr.processamento.service.ArquivoRecepcaoService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ArquivoRecepcaoService.html">
+	c248732 [label=<<table title="br.gov.to.sefaz.arr.processamento.service.ArquivoRecepcaoService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ArquivoRecepcaoService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ArquivoRecepcaoService </td></tr>
@@ -46,7 +46,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../ArquivoRecepcaoService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.service.impl.ArquivoRecepcaoServiceImpl
-	c202286 [label=<<table title="br.gov.to.sefaz.arr.processamento.service.impl.ArquivoRecepcaoServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ArquivoRecepcaoServiceImpl.html">
+	c248745 [label=<<table title="br.gov.to.sefaz.arr.processamento.service.impl.ArquivoRecepcaoServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ArquivoRecepcaoServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArquivoRecepcaoServiceImpl </td></tr>
 		</table></td></tr>
@@ -62,8 +62,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ArquivoRecepcaoServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.arr.processamento.service.impl.ArquivoRecepcaoServiceImpl extends br.gov.to.sefaz.business.service.impl.DefaultCrudService<br.gov.to.sefaz.arr.persistence.entity.ArquivoRecepcao, java.lang.Long>
-	c201651:p -> c202286:p [dir=back,arrowtail=empty];
+	c248058:p -> c248745:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.processamento.service.impl.ArquivoRecepcaoServiceImpl implements br.gov.to.sefaz.arr.processamento.service.ArquivoRecepcaoService
-	c202274:p -> c202286:p [dir=back,arrowtail=empty,style=dashed];
+	c248732:p -> c248745:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./PedidoTiposFacade.html" title="br.gov.to.sefaz.arr.parametros.business.facade.PedidoTiposFacade" alt="" coords="665,267,1435,464"/>
-<area shape="rect" id="node1" href="./PedidoTiposFacade.html" title="&lt;TABLE&gt;" alt="" coords="654,261,1446,469"/>
-<area shape="rect" id="node2_1" href="./impl/PedidoTiposFacadeImpl.html" title="br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoTiposFacadeImpl" alt="" coords="16,523,2084,720"/>
-<area shape="rect" id="node2" href="./impl/PedidoTiposFacadeImpl.html" title="&lt;TABLE&gt;" alt="" coords="5,517,2095,725"/>
-<area shape="rect" id="node3_2" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/facade/CrudFacade.html" title="br.gov.to.sefaz.business.facade.CrudFacade" alt="" coords="910,11,1190,208"/>
-<area shape="rect" id="node3" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/facade/CrudFacade.html" title="&lt;TABLE&gt;" alt="" coords="899,5,1201,213"/>
+<area shape="rect" id="node1_0" href="./PedidoTiposFacade.html" title="br.gov.to.sefaz.arr.parametros.business.facade.PedidoTiposFacade" alt="" coords="665,284,1435,481"/>
+<area shape="rect" id="node1" href="./PedidoTiposFacade.html" title="&lt;TABLE&gt;" alt="" coords="654,279,1446,487"/>
+<area shape="rect" id="node2_1" href="./impl/PedidoTiposFacadeImpl.html" title="br.gov.to.sefaz.arr.parametros.business.facade.impl.PedidoTiposFacadeImpl" alt="" coords="16,540,2084,737"/>
+<area shape="rect" id="node2" href="./impl/PedidoTiposFacadeImpl.html" title="&lt;TABLE&gt;" alt="" coords="5,535,2095,743"/>
+<area shape="rect" id="node3_2" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/facade/CrudFacade.html" title="br.gov.to.sefaz.business.facade.CrudFacade" alt="" coords="904,11,1196,225"/>
+<area shape="rect" id="node3" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/facade/CrudFacade.html" title="&lt;TABLE&gt;" alt="" coords="893,5,1207,231"/>
 </map>

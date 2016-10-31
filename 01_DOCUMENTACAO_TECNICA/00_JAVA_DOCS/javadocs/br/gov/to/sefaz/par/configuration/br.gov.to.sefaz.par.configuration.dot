@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.par.configuration.ParWebConfiguration
-	c67613 [label=<<table title="br.gov.to.sefaz.par.configuration.ParWebConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ParWebConfiguration.html">
+	c79889 [label=<<table title="br.gov.to.sefaz.par.configuration.ParWebConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ParWebConfiguration.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ParWebConfiguration </td></tr>
 		</table></td></tr>
@@ -22,7 +22,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ParWebConfiguration.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.par.configuration.CatCoreConfiguration
-	c67614 [label=<<table title="br.gov.to.sefaz.par.configuration.CatCoreConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatCoreConfiguration.html">
+	c79890 [label=<<table title="br.gov.to.sefaz.par.configuration.CatCoreConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatCoreConfiguration.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CatCoreConfiguration </td></tr>
 		</table></td></tr>

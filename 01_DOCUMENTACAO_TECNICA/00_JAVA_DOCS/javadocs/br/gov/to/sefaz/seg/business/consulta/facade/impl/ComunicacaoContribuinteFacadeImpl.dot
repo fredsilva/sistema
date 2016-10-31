@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.consulta.facade.ComunicacaoContribuinteFacade
-	c291967 [label=<<table title="br.gov.to.sefaz.seg.business.consulta.facade.ComunicacaoContribuinteFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ComunicacaoContribuinteFacade.html">
+	c351188 [label=<<table title="br.gov.to.sefaz.seg.business.consulta.facade.ComunicacaoContribuinteFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ComunicacaoContribuinteFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ComunicacaoContribuinteFacade </td></tr>
@@ -23,7 +23,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../ComunicacaoContribuinteFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.consulta.facade.impl.ComunicacaoContribuinteFacadeImpl
-	c291970 [label=<<table title="br.gov.to.sefaz.seg.business.consulta.facade.impl.ComunicacaoContribuinteFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ComunicacaoContribuinteFacadeImpl.html">
+	c351191 [label=<<table title="br.gov.to.sefaz.seg.business.consulta.facade.impl.ComunicacaoContribuinteFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ComunicacaoContribuinteFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ComunicacaoContribuinteFacadeImpl </td></tr>
 		</table></td></tr>
@@ -36,6 +36,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ComunicacaoContribuinteFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.business.consulta.facade.impl.ComunicacaoContribuinteFacadeImpl implements br.gov.to.sefaz.seg.business.consulta.facade.ComunicacaoContribuinteFacade
-	c291967:p -> c291970:p [dir=back,arrowtail=empty,style=dashed];
+	c351188:p -> c351191:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.service.CrudService<E, I extends java.io.Serializable>
-	c743074 [label=<<table title="br.gov.to.sefaz.business.service.CrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../business/service/CrudService.html">
+	c925616 [label=<<table title="br.gov.to.sefaz.business.service.CrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../business/service/CrudService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CrudService&lt;E, I extends Serializable&gt; </td></tr>
@@ -30,7 +30,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../../business/service/CrudService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.ReceitasTaxasService
-	c743429 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.ReceitasTaxasService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ReceitasTaxasService.html">
+	c926008 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.ReceitasTaxasService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ReceitasTaxasService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ReceitasTaxasService </td></tr>
@@ -44,7 +44,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ReceitasTaxasService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.impl.ReceitasTaxasServiceImpl
-	c743456 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.ReceitasTaxasServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/ReceitasTaxasServiceImpl.html">
+	c926035 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.ReceitasTaxasServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/ReceitasTaxasServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ReceitasTaxasServiceImpl </td></tr>
 		</table></td></tr>
@@ -59,8 +59,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./impl/ReceitasTaxasServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.arr.parametros.business.service.ReceitasTaxasService implements br.gov.to.sefaz.business.service.CrudService<E, I extends java.io.Serializable>
-	c743074:p -> c743429:p [dir=back,arrowtail=empty,style=dashed];
+	c925616:p -> c926008:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.arr.parametros.business.service.impl.ReceitasTaxasServiceImpl implements br.gov.to.sefaz.arr.parametros.business.service.ReceitasTaxasService
-	c743429:p -> c743456:p [dir=back,arrowtail=empty,style=dashed];
+	c926008:p -> c926035:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.authentication.facade.DefaultTemplateFacade
-	c371676 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.facade.DefaultTemplateFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DefaultTemplateFacade.html">
+	c488241 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.facade.DefaultTemplateFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DefaultTemplateFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> DefaultTemplateFacade </td></tr>
@@ -41,7 +41,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./DefaultTemplateFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.authentication.facade.impl.DefaultTemplateFacadeImpl
-	c371678 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.facade.impl.DefaultTemplateFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/DefaultTemplateFacadeImpl.html">
+	c488243 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.facade.impl.DefaultTemplateFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/DefaultTemplateFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultTemplateFacadeImpl </td></tr>
 		</table></td></tr>
@@ -72,6 +72,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./impl/DefaultTemplateFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.business.authentication.facade.impl.DefaultTemplateFacadeImpl implements br.gov.to.sefaz.seg.business.authentication.facade.DefaultTemplateFacade
-	c371676:p -> c371678:p [dir=back,arrowtail=empty,style=dashed];
+	c488241:p -> c488243:p [dir=back,arrowtail=empty,style=dashed];
 }
 

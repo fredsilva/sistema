@@ -1,6 +1,6 @@
 package br.gov.to.sefaz.arr.processamento.validation.validator.detalhe.arrecadacao;
 
-import br.gov.to.sefaz.arr.processamento.service.DareService;
+import br.gov.to.sefaz.arr.dare.service.DareService;
 import br.gov.to.sefaz.arr.processamento.validation.validator.detalhe.DetalheValidator;
 
 import java.util.Objects;

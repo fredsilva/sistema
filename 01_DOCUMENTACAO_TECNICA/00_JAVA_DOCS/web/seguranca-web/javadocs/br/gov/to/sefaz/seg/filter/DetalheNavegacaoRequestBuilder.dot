@@ -22,7 +22,7 @@ digraph G {
 <tr><td align="left" balign="left"> + withHttpRequest(request : HttpServletRequest) : DetalheNavegacaoRequestBuilder </td></tr>
 <tr><td align="left" balign="left"> + withCpfUsuario(cpfUsuario : String) : DetalheNavegacaoRequestBuilder </td></tr>
 <tr><td align="left" balign="left"> + withDataOperacao(localDateTime : LocalDateTime) : DetalheNavegacaoRequestBuilder </td></tr>
-<tr><td align="left" balign="left"> + withElapsedTime(elapsedTime : long) : DetalheNavegacaoRequestBuilder </td></tr>
+<tr><td align="left" balign="left"> + withElapsedTime(timeEllapsed : long) : DetalheNavegacaoRequestBuilder </td></tr>
 <tr><td align="left" balign="left"> + withAtuacaoNomeDe(cpfCnpj : String) : DetalheNavegacaoRequestBuilder </td></tr>
 <tr><td align="left" balign="left"> + build() : DetalheNavegacao </td></tr>
 		</table></td></tr>

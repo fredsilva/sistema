@@ -13,12 +13,15 @@ import org.hibernate.validator.constraints.NotEmpty;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Convert;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.validation.constraints.Max;
@@ -99,6 +102,9 @@ public class Receitas extends AbstractEntity<Integer> {
             insertable = false, updatable = false)
     @ManyToOne()
     private PlanoContas planoContas;
+
+    @OneToMany(mappedBy = "receitas", fetch = FetchType.LAZY)
+    private Set<DareOrigemReceita> dareOrigemReceita;
 
     @Transient
     private List<ReceitasRepasse> receitasRepasseCollection;
@@ -226,6 +232,14 @@ public class Receitas extends AbstractEntity<Integer> {
 
     public void setIdPlanoContas(Long idPlanoContas) {
         this.idPlanoContas = idPlanoContas;
+    }
+
+    public Set<DareOrigemReceita> getDareOrigemReceita() {
+        return dareOrigemReceita;
+    }
+
+    public void setDareOrigemReceita(Set<DareOrigemReceita> dareOrigemReceita) {
+        this.dareOrigemReceita = dareOrigemReceita;
     }
 
     public List<ReceitasRepasse> getReceitasRepasse() {

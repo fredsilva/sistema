@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder<T, S>
-	c16833 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../QueryStructureBuilder.html">
+	c17477 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../QueryStructureBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> QueryStructureBuilder&lt;T, S&gt; </td></tr>
@@ -24,7 +24,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../QueryStructureBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.sql.update.UpdateBuilder
-	c16851 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.update.UpdateBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UpdateBuilder.html">
+	c17495 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.update.UpdateBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UpdateBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UpdateBuilder </td></tr>
 		</table></td></tr>
@@ -44,6 +44,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./UpdateBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.persistence.query.builder.sql.update.UpdateBuilder implements br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder<T, S>
-	c16833:p -> c16851:p [dir=back,arrowtail=empty,style=dashed];
+	c17477:p -> c17495:p [dir=back,arrowtail=empty,style=dashed];
 }
 

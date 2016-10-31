@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.query.structure.select.groupby.GroupByStructure
-	c47420 [label=<<table title="br.gov.to.sefaz.persistence.query.structure.select.groupby.GroupByStructure" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./GroupByStructure.html">
+	c56511 [label=<<table title="br.gov.to.sefaz.persistence.query.structure.select.groupby.GroupByStructure" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./GroupByStructure.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> GroupByStructure </td></tr>
 		</table></td></tr>

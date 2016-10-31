@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="../UsuarioPerfilService.html" title="br.gov.to.sefaz.seg.business.gestao.service.UsuarioPerfilService" alt="" coords="16,11,531,225"/>
-<area shape="rect" id="node1" href="../UsuarioPerfilService.html" title="&lt;TABLE&gt;" alt="" coords="5,5,541,231"/>
-<area shape="rect" id="node2_1" href="./UsuarioPerfilServiceImpl.html" title="br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioPerfilServiceImpl" alt="" coords="281,284,789,516"/>
-<area shape="rect" id="node2" href="./UsuarioPerfilServiceImpl.html" title="&lt;TABLE&gt;" alt="" coords="270,279,799,521"/>
+<area shape="rect" id="node1_0" href="../UsuarioPerfilService.html" title="br.gov.to.sefaz.seg.business.gestao.service.UsuarioPerfilService" alt="" coords="16,19,531,217"/>
+<area shape="rect" id="node1" href="../UsuarioPerfilService.html" title="&lt;TABLE&gt;" alt="" coords="5,14,541,222"/>
+<area shape="rect" id="node2_1" href="./UsuarioPerfilServiceImpl.html" title="br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioPerfilServiceImpl" alt="" coords="281,284,789,481"/>
+<area shape="rect" id="node2" href="./UsuarioPerfilServiceImpl.html" title="&lt;TABLE&gt;" alt="" coords="270,279,799,487"/>
 <area shape="rect" id="node3_2" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/service/impl/DefaultCrudService.html" title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" alt="" coords="577,11,1018,225"/>
 <area shape="rect" id="node3" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/service/impl/DefaultCrudService.html" title="&lt;TABLE&gt;" alt="" coords="566,5,1029,231"/>
 </map>

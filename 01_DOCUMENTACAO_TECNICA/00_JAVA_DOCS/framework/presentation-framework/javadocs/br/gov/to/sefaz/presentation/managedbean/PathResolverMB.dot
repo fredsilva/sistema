@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.presentation.managedbean.PathResolverMB
-	c883 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.PathResolverMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./PathResolverMB.html">
+	c984 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.PathResolverMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./PathResolverMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PathResolverMB </td></tr>
 		</table></td></tr>
@@ -19,6 +19,7 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + PathResolverMB() </td></tr>
+<tr><td align="left" balign="left"> + viewPath(route : String) : String </td></tr>
 <tr><td align="left" balign="left"> + protectedViewPath(route : String) : String </td></tr>
 <tr><td align="left" balign="left"> + isActualProtectedView(url : String) : boolean </td></tr>
 <tr><td align="left" balign="left"> + publicViewPath(route : String) : String </td></tr>

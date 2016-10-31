@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.consulta.facade.ConsultaComunicacaoSistemaFacade
-	c304230 [label=<<table title="br.gov.to.sefaz.seg.business.consulta.facade.ConsultaComunicacaoSistemaFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ConsultaComunicacaoSistemaFacade.html">
+	c364795 [label=<<table title="br.gov.to.sefaz.seg.business.consulta.facade.ConsultaComunicacaoSistemaFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ConsultaComunicacaoSistemaFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ConsultaComunicacaoSistemaFacade </td></tr>
@@ -24,7 +24,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../ConsultaComunicacaoSistemaFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.consulta.facade.impl.ConsultaComunicacaoSistemaFacadeImpl
-	c304233 [label=<<table title="br.gov.to.sefaz.seg.business.consulta.facade.impl.ConsultaComunicacaoSistemaFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ConsultaComunicacaoSistemaFacadeImpl.html">
+	c364798 [label=<<table title="br.gov.to.sefaz.seg.business.consulta.facade.impl.ConsultaComunicacaoSistemaFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ConsultaComunicacaoSistemaFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ConsultaComunicacaoSistemaFacadeImpl </td></tr>
 		</table></td></tr>
@@ -38,6 +38,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ConsultaComunicacaoSistemaFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.business.consulta.facade.impl.ConsultaComunicacaoSistemaFacadeImpl implements br.gov.to.sefaz.seg.business.consulta.facade.ConsultaComunicacaoSistemaFacade
-	c304230:p -> c304233:p [dir=back,arrowtail=empty,style=dashed];
+	c364795:p -> c364798:p [dir=back,arrowtail=empty,style=dashed];
 }
 

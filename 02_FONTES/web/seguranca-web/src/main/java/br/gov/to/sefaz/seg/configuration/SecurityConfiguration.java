@@ -77,7 +77,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     private void setOpcoesRules(HttpSecurity http) throws Exception {
         for (OpcaoAplicacao opcaoAplicacao : opcaoAplicacaoRepository.findAll()) {
             http.authorizeRequests()
-                    .antMatchers("/protected/views/" + opcaoAplicacao.getOpcaoUrl())
+                    .antMatchers(opcaoAplicacao.getOpcaoUrl())
                     .hasRole(opcaoAplicacao.getId().toString());
         }
     }

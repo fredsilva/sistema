@@ -78,9 +78,11 @@ digraph G {
 <tr><td align="left" balign="left"> + getSolicitacaoUsuario() : SolicitacaoUsuario </td></tr>
 <tr><td align="left" balign="left"> + setSolicitacaoUsuario(solicitacaoUsuario : SolicitacaoUsuario) </td></tr>
 <tr><td align="left" balign="left"> + getUsuarioPostoTrabalho() : UsuarioPostoTrabalho </td></tr>
+<tr><td align="left" balign="left"> + getListUsuarioPostoTrabalho() : List&lt;UsuarioPostoTrabalho&gt; </td></tr>
 <tr><td align="left" balign="left"> + setUsuarioPostoTrabalho(usuarioPostoTrabalho : UsuarioPostoTrabalho) </td></tr>
-<tr><td align="left" balign="left"> + getUsuarioPostoTrabalhoPostoTrabalhoIdentific() : Integer </td></tr>
-<tr><td align="left" balign="left"> + setUsuarioPostoTrabalhoPostoTrabalhoIdentific(postoTrabalhoPostoTrabalhoIdentific : Integer) </td></tr>
+<tr><td align="left" balign="left"> + setListUsuarioPostoTrabalho(listUsuarioPostoTrabalho : List&lt;UsuarioPostoTrabalho&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getIdentificacaoPostoTrabalho() : Integer </td></tr>
+<tr><td align="left" balign="left"> + setIdentificacaoPostoTrabalho(identificacaoPostoTrabalho : Integer) </td></tr>
 <tr><td align="left" balign="left"> + setUnidadeOrganizacionalPostoTrabalho(identificUnidOrganizac : Long) </td></tr>
 <tr><td align="left" balign="left"> + getUnidadeOrganizacionalPostoTrabalho() : Long </td></tr>
 <tr><td align="left" balign="left"> + setPostoTrabalho(identificacaoPostoTrabalho : Integer) </td></tr>
@@ -247,6 +249,7 @@ digraph G {
 <tr><td align="left" balign="left"> + getTipoUnidade() : TipoUnidade </td></tr>
 <tr><td align="left" balign="left"> + setTipoUnidade(tipoUnidade : TipoUnidade) </td></tr>
 <tr><td align="left" balign="left"> + getDescricaoTipoUnidade() : String </td></tr>
+<tr><td align="left" balign="left"> + getCodeLabel() : String </td></tr>
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 <tr><td align="left" balign="left"> + equals(o : Object) : boolean </td></tr>
 <tr><td align="left" balign="left"> + hashCode() : int </td></tr>
@@ -624,6 +627,8 @@ digraph G {
 <tr><td align="left" balign="left"> + setAplicacaoModulo(aplicacaoModulo : AplicacaoModulo) </td></tr>
 <tr><td align="left" balign="left"> + getDescricaoAplicacao() : String </td></tr>
 <tr><td align="left" balign="left"> + getAbreviacaoModulo() : String </td></tr>
+<tr><td align="left" balign="left"> + getDescricaoAplicacaoModulo() : String </td></tr>
+<tr><td align="left" balign="left"> + setDescricaoAplicacaoModulo(descricaoAplicacaoModulo : String) </td></tr>
 <tr><td align="left" balign="left"> + getIdModulo() : Long </td></tr>
 <tr><td align="left" balign="left"> + getDescricaoModulo() : String </td></tr>
 <tr><td align="left" balign="left"> + equals(o : Object) : boolean </td></tr>

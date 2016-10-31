@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.presentation.managedbean.AutowiredMB
-	c308838 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.AutowiredMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../presentation/managedbean/AutowiredMB.html">
+	c369886 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.AutowiredMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../presentation/managedbean/AutowiredMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AutowiredMB </td></tr>
 		</table></td></tr>
@@ -23,7 +23,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../presentation/managedbean/AutowiredMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.ConsultaHistoricoNavegacaoMB
-	c309234 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ConsultaHistoricoNavegacaoMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ConsultaHistoricoNavegacaoMB.html">
+	c370321 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ConsultaHistoricoNavegacaoMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ConsultaHistoricoNavegacaoMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ConsultaHistoricoNavegacaoMB </td></tr>
 		</table></td></tr>
@@ -40,6 +40,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ConsultaHistoricoNavegacaoMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.managedbean.ConsultaHistoricoNavegacaoMB extends br.gov.to.sefaz.presentation.managedbean.AutowiredMB
-	c308838:p -> c309234:p [dir=back,arrowtail=empty];
+	c369886:p -> c370321:p [dir=back,arrowtail=empty];
 }
 

@@ -33,12 +33,12 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + OpcaoAplicacaoServiceImpl(repository : OpcaoAplicacaoRepository) </td></tr>
+<tr><td align="left" balign="left"> + OpcaoAplicacaoServiceImpl(repository : OpcaoAplicacaoRepository, aplicacaoModuloRepository : AplicacaoModuloRepository) </td></tr>
 <tr><td align="left" balign="left"> + findByFilter(filter : OpcaoAplicacaoFilter) : List&lt;OpcaoAplicacao&gt; </td></tr>
 <tr><td align="left" balign="left"> + findAllOpcoes() : List&lt;OpcaoAplicacao&gt; </td></tr>
 <tr><td align="left" balign="left"> + findAllFromPerfilUsuario() : List&lt;OpcaoAplicacao&gt; </td></tr>
 <tr><td align="left" balign="left"> + save(entity : OpcaoAplicacao) : OpcaoAplicacao </td></tr>
-<tr><td align="left" balign="left"> + update(entity : OpcaoAplicacao) : OpcaoAplicacao </td></tr>
+<tr><td align="left" balign="left"> + update(opcaoAplicacao : OpcaoAplicacao) : OpcaoAplicacao </td></tr>
 		</table></td></tr>
 		</table>>, URL="./impl/OpcaoAplicacaoServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.business.gestao.service.OpcaoAplicacaoService implements br.gov.to.sefaz.business.service.CrudService<E, I extends java.io.Serializable>

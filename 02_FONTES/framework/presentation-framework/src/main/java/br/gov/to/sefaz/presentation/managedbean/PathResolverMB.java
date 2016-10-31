@@ -17,21 +17,36 @@ import javax.faces.context.FacesContext;
 @ManagedBean(name = "pathResolverMB")
 public class PathResolverMB {
 
+    private static final String PROTECTED_PATH = "/protected/views/";
+
+    private static final String PUBLIC_PATH = "/public/";
+
     /**
-     * Resolve a rota para o diretorio de views privadas.
+     * Resolve a rota para o diretório de uma determinada view.
      *
      * @param route complemento da rota
-     * @return rota completa para o diretorio de views privadas
+     * @return rota completa para o diretório
+     */
+    public String viewPath(String route) {
+        return getContextPath() + route;
+    }
+
+
+    /**
+     * Resolve a rota para o diretório de views privadas.
+     *
+     * @param route complemento da rota
+     * @return rota completa para o diretório de views privadas
      */
     public String protectedViewPath(String route) {
-        return getContextPath() + "/protected/views/" + route;
+        return getContextPath() + PROTECTED_PATH + route;
     }
 
     /**
-     * Retorna true se a url passada é da pagina protected atual atualmente aberta.
+     * Retorna true se a url passada é da página protected atual atualmente aberta.
      *
      * @param url url a ser comparada com a atual
-     * @return true se a url passada é da pagina protected atual atualmente aberta
+     * @return true se a url passada é da página protected atual atualmente aberta
      */
     public boolean isActualProtectedView(String url) {
         String actualPath = FacesContext.getCurrentInstance().getExternalContext().getRequestServletPath();
@@ -39,20 +54,20 @@ public class PathResolverMB {
     }
 
     /**
-     * Resolve a rota para o diretorio de views publicas.
+     * Resolve a rota para o diretório de views públicas.
      *
      * @param route complemento da rota
-     * @return rota completa para o diretorio de views publicas
+     * @return rota completa para o diretório de views públicas
      */
     public String publicViewPath(String route) {
-        return getContextPath() + "/public/" + route;
+        return getContextPath() + PUBLIC_PATH + route;
     }
 
-    /**
-     * Resolve a rota para o diretorio de CSS.
+    /**m
+     * Resolve a rota para o diretório de CSS.
      *
      * @param route complemento da rota
-     * @return rota completa para o diretorio de CSS
+     * @return rota completa para o diretório de CSS
      */
     public String cssPath(String route) {
         return getContextPath() + "/resources/css/" + route;

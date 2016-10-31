@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="../../../../business/facade/CrudFacade.html" title="br.gov.to.sefaz.business.facade.CrudFacade" alt="" coords="122,11,394,208"/>
-<area shape="rect" id="node1" href="../../../../business/facade/CrudFacade.html" title="&lt;TABLE&gt;" alt="" coords="111,5,405,213"/>
-<area shape="rect" id="node2_1" href="./ConveniosTarifasFacade.html" title="br.gov.to.sefaz.arr.parametros.business.facade.ConveniosTarifasFacade" alt="" coords="178,267,338,309"/>
-<area shape="rect" id="node2" href="./ConveniosTarifasFacade.html" title="&lt;TABLE&gt;" alt="" coords="167,261,349,315"/>
-<area shape="rect" id="node3_2" href="./impl/ConveniosTarifasFacadeImpl.html" title="br.gov.to.sefaz.arr.parametros.business.facade.impl.ConveniosTarifasFacadeImpl" alt="" coords="16,368,500,444"/>
-<area shape="rect" id="node3" href="./impl/ConveniosTarifasFacadeImpl.html" title="&lt;TABLE&gt;" alt="" coords="5,363,511,449"/>
+<area shape="rect" id="node1_0" href="../../../../business/facade/CrudFacade.html" title="br.gov.to.sefaz.business.facade.CrudFacade" alt="" coords="116,11,400,225"/>
+<area shape="rect" id="node1" href="../../../../business/facade/CrudFacade.html" title="&lt;TABLE&gt;" alt="" coords="105,5,411,231"/>
+<area shape="rect" id="node2_1" href="./ConveniosTarifasFacade.html" title="br.gov.to.sefaz.arr.parametros.business.facade.ConveniosTarifasFacade" alt="" coords="178,284,338,327"/>
+<area shape="rect" id="node2" href="./ConveniosTarifasFacade.html" title="&lt;TABLE&gt;" alt="" coords="167,279,349,332"/>
+<area shape="rect" id="node3_2" href="./impl/ConveniosTarifasFacadeImpl.html" title="br.gov.to.sefaz.arr.parametros.business.facade.impl.ConveniosTarifasFacadeImpl" alt="" coords="16,385,500,461"/>
+<area shape="rect" id="node3" href="./impl/ConveniosTarifasFacadeImpl.html" title="&lt;TABLE&gt;" alt="" coords="5,380,511,467"/>
 </map>

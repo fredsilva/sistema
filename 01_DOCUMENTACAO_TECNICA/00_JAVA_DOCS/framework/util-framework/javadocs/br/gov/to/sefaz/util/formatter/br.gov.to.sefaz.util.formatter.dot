@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.util.formatter.FormatterUtil
-	c129 [label=<<table title="br.gov.to.sefaz.util.formatter.FormatterUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FormatterUtil.html">
+	c307 [label=<<table title="br.gov.to.sefaz.util.formatter.FormatterUtil" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FormatterUtil.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> FormatterUtil </td></tr>
 		</table></td></tr>
@@ -27,7 +27,9 @@ digraph G {
 <tr><td align="left" balign="left"> + formatCep(cep : String) : String </td></tr>
 <tr><td align="left" balign="left"> + formatCpf(cpf : String) : String </td></tr>
 <tr><td align="left" balign="left"> + formatCnpj(cnpj : String) : String </td></tr>
+<tr><td align="left" balign="left"> + formatInscricaoEstadual(inscricao : Long) : String </td></tr>
 <tr><td align="left" balign="left"> + formatNumber(value : Number) : String </td></tr>
+<tr><td align="left" balign="left"> + formatPeriodoMesAno(periodo : Integer) : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./FormatterUtil.html", fontname="arial", fontcolor="black", fontsize=10.0];
 }

@@ -44,10 +44,11 @@ br.gov.to.sefaz.persistence.query.structure.update
 br.gov.to.sefaz.persistence.query.structure.where
 br.gov.to.sefaz.persistence.repository
 br.gov.to.sefaz.persistence.satquery
+br.gov.to.sefaz.persistence.satquery.handler
 br.gov.to.sefaz.persistence.satquery.parser
 br.gov.to.sefaz.persistence.satquery.parser.delete
-br.gov.to.sefaz.persistence.satquery.parser.handler
 br.gov.to.sefaz.persistence.satquery.parser.insert
+br.gov.to.sefaz.persistence.satquery.parser.jsql.visitor
 br.gov.to.sefaz.persistence.satquery.parser.select
 br.gov.to.sefaz.persistence.satquery.parser.update
 br.gov.to.sefaz.persistence.satquery.parser.where

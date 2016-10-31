@@ -31,4 +31,14 @@ public interface UnidadeOrganizacionalService extends CrudService<UnidadeOrganiz
     List<TipoUnidade> findTiposUnidades();
 
 
+    /**
+     * Busca uma lista {@link br.gov.to.sefaz.seg.persistence.entity.UnidadeOrganizacional} conforme os
+     * {@link br.gov.to.sefaz.seg.persistence.entity.UnidadeOrganizacional#codigoTipoUnidade}s.
+     *
+     * @param characters representa os
+     *                   {@link br.gov.to.sefaz.seg.persistence.entity.UnidadeOrganizacional#codigoTipoUnidade}s com
+     *                   que será realizada a busca
+     * @return lista com as unidades encontradas.
+     */
+    List<UnidadeOrganizacional> findAllByTipoUnidade(Character... characters);
 }

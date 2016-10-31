@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./FileReaderExist.html" title="br.gov.to.sefaz.arr.processamento.reader.FileReaderExist" alt="" coords="16,19,279,113"/>
-<area shape="rect" id="node1" href="./FileReaderExist.html" title="&lt;TABLE&gt;" alt="" coords="5,14,289,118"/>
-<area shape="rect" id="node2_1" href="./FileReader.html" title="br.gov.to.sefaz.arr.processamento.reader.FileReader" alt="" coords="324,11,563,121"/>
-<area shape="rect" id="node2" href="./FileReader.html" title="&lt;TABLE&gt;" alt="" coords="313,5,573,127"/>
-<area shape="rect" id="node3_2" href="./FileFactory.html" title="br.gov.to.sefaz.arr.processamento.reader.FileFactory" alt="" coords="609,19,1246,113"/>
-<area shape="rect" id="node3" href="./FileFactory.html" title="&lt;TABLE&gt;" alt="" coords="598,14,1257,118"/>
+<area shape="rect" id="node1_0" href="./FileReaderExist.html" title="br.gov.to.sefaz.arr.processamento.reader.FileReaderExist" alt="" coords="16,28,279,121"/>
+<area shape="rect" id="node1" href="./FileReaderExist.html" title="&lt;TABLE&gt;" alt="" coords="5,23,289,127"/>
+<area shape="rect" id="node2_1" href="./FileReader.html" title="br.gov.to.sefaz.arr.processamento.reader.FileReader" alt="" coords="324,11,891,139"/>
+<area shape="rect" id="node2" href="./FileReader.html" title="&lt;TABLE&gt;" alt="" coords="313,5,901,144"/>
+<area shape="rect" id="node3_2" href="./FileFactory.html" title="br.gov.to.sefaz.arr.processamento.reader.FileFactory" alt="" coords="937,28,1574,121"/>
+<area shape="rect" id="node3" href="./FileFactory.html" title="&lt;TABLE&gt;" alt="" coords="926,23,1585,127"/>
 </map>

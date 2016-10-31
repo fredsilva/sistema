@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.arr.persistence.entity.TipoRejeicaoArquivos
-	c129371 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.TipoRejeicaoArquivos" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoRejeicaoArquivos.html">
+	c157151 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.TipoRejeicaoArquivos" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoRejeicaoArquivos.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoRejeicaoArquivos </td></tr>
 		</table></td></tr>
@@ -34,7 +34,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoRejeicaoArquivos.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.TipoGruposCnaes
-	c129372 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.TipoGruposCnaes" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoGruposCnaes.html">
+	c157152 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.TipoGruposCnaes" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoGruposCnaes.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoGruposCnaes </td></tr>
 		</table></td></tr>
@@ -60,7 +60,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoGruposCnaes.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.RtcRepasse
-	c129373 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.RtcRepasse" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RtcRepasse.html">
+	c157153 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.RtcRepasse" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RtcRepasse.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> RtcRepasse </td></tr>
 		</table></td></tr>
@@ -90,7 +90,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./RtcRepasse.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.ResumoStrPK
-	c129374 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ResumoStrPK" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ResumoStrPK.html">
+	c157154 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ResumoStrPK" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ResumoStrPK.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ResumoStrPK </td></tr>
 		</table></td></tr>
@@ -112,7 +112,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ResumoStrPK.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.ResumoStr
-	c129375 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ResumoStr" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ResumoStr.html">
+	c157155 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ResumoStr" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ResumoStr.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ResumoStr </td></tr>
 		</table></td></tr>
@@ -158,7 +158,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ResumoStr.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.ReceitasTaxasPK
-	c129376 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ReceitasTaxasPK" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ReceitasTaxasPK.html">
+	c157156 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ReceitasTaxasPK" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ReceitasTaxasPK.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ReceitasTaxasPK </td></tr>
 		</table></td></tr>
@@ -178,7 +178,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ReceitasTaxasPK.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.ReceitasTaxas
-	c129377 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ReceitasTaxas" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ReceitasTaxas.html">
+	c157157 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ReceitasTaxas" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ReceitasTaxas.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ReceitasTaxas </td></tr>
 		</table></td></tr>
@@ -215,7 +215,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ReceitasTaxas.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.ReceitasRepassePK
-	c129378 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ReceitasRepassePK" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ReceitasRepassePK.html">
+	c157158 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ReceitasRepassePK" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ReceitasRepassePK.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ReceitasRepassePK </td></tr>
 		</table></td></tr>
@@ -237,7 +237,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ReceitasRepassePK.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.ReceitasRepasse
-	c129379 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ReceitasRepasse" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ReceitasRepasse.html">
+	c157159 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ReceitasRepasse" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ReceitasRepasse.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ReceitasRepasse </td></tr>
 		</table></td></tr>
@@ -276,7 +276,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ReceitasRepasse.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.Receitas
-	c129380 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.Receitas" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Receitas.html">
+	c157160 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.Receitas" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Receitas.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Receitas </td></tr>
 		</table></td></tr>
@@ -314,6 +314,8 @@ digraph G {
 <tr><td align="left" balign="left"> + setPlanoContas(planoContas : PlanoContas) </td></tr>
 <tr><td align="left" balign="left"> + getIdPlanoContas() : Long </td></tr>
 <tr><td align="left" balign="left"> + setIdPlanoContas(idPlanoContas : Long) </td></tr>
+<tr><td align="left" balign="left"> + getDareOrigemReceita() : Set&lt;DareOrigemReceita&gt; </td></tr>
+<tr><td align="left" balign="left"> + setDareOrigemReceita(dareOrigemReceita : Set&lt;DareOrigemReceita&gt;) </td></tr>
 <tr><td align="left" balign="left"> + getReceitasRepasse() : List&lt;ReceitasRepasse&gt; </td></tr>
 <tr><td align="left" balign="left"> + setReceitasRepasse(receitasRepasseCollection : List&lt;ReceitasRepasse&gt;) </td></tr>
 <tr><td align="left" balign="left"> + getReceitasTaxas() : List&lt;ReceitasTaxas&gt; </td></tr>
@@ -325,7 +327,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Receitas.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.PlanoContas
-	c129381 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.PlanoContas" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PlanoContas.html">
+	c157161 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.PlanoContas" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PlanoContas.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PlanoContas </td></tr>
 		</table></td></tr>
@@ -363,7 +365,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PlanoContas.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.PedidoTipos
-	c129382 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.PedidoTipos" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoTipos.html">
+	c157162 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.PedidoTipos" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoTipos.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoTipos </td></tr>
 		</table></td></tr>
@@ -399,7 +401,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PedidoTipos.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.PedidoTipoDocs
-	c129383 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.PedidoTipoDocs" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoTipoDocs.html">
+	c157163 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.PedidoTipoDocs" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoTipoDocs.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoTipoDocs </td></tr>
 		</table></td></tr>
@@ -422,7 +424,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PedidoTipoDocs.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.PedidoTipoAcoes
-	c129384 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.PedidoTipoAcoes" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoTipoAcoes.html">
+	c157164 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.PedidoTipoAcoes" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoTipoAcoes.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoTipoAcoes </td></tr>
 		</table></td></tr>
@@ -450,7 +452,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PedidoTipoAcoes.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.PedidoReceitaPK
-	c129385 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.PedidoReceitaPK" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoReceitaPK.html">
+	c157165 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.PedidoReceitaPK" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoReceitaPK.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoReceitaPK </td></tr>
 		</table></td></tr>
@@ -472,7 +474,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PedidoReceitaPK.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.PedidoReceita
-	c129386 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.PedidoReceita" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoReceita.html">
+	c157166 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.PedidoReceita" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoReceita.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoReceita </td></tr>
 		</table></td></tr>
@@ -504,7 +506,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PedidoReceita.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.PedidoDocsExigidosPK
-	c129387 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.PedidoDocsExigidosPK" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoDocsExigidosPK.html">
+	c157167 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.PedidoDocsExigidosPK" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoDocsExigidosPK.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoDocsExigidosPK </td></tr>
 		</table></td></tr>
@@ -524,7 +526,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PedidoDocsExigidosPK.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.PedidoDocsExigidos
-	c129388 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.PedidoDocsExigidos" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoDocsExigidos.html">
+	c157168 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.PedidoDocsExigidos" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoDocsExigidos.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoDocsExigidos </td></tr>
 		</table></td></tr>
@@ -553,7 +555,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PedidoDocsExigidos.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.PedidoCamposAcoes
-	c129389 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.PedidoCamposAcoes" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoCamposAcoes.html">
+	c157169 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.PedidoCamposAcoes" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoCamposAcoes.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoCamposAcoes </td></tr>
 		</table></td></tr>
@@ -581,7 +583,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PedidoCamposAcoes.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.PedidoAreasServidoresPK
-	c129390 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.PedidoAreasServidoresPK" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoAreasServidoresPK.html">
+	c157170 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.PedidoAreasServidoresPK" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoAreasServidoresPK.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoAreasServidoresPK </td></tr>
 		</table></td></tr>
@@ -601,7 +603,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PedidoAreasServidoresPK.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.PedidoAreasServidores
-	c129391 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.PedidoAreasServidores" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoAreasServidores.html">
+	c157171 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.PedidoAreasServidores" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoAreasServidores.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoAreasServidores </td></tr>
 		</table></td></tr>
@@ -630,7 +632,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PedidoAreasServidores.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.PedidoAreasFaixaValor
-	c129392 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.PedidoAreasFaixaValor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoAreasFaixaValor.html">
+	c157172 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.PedidoAreasFaixaValor" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoAreasFaixaValor.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoAreasFaixaValor </td></tr>
 		</table></td></tr>
@@ -652,7 +654,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PedidoAreasFaixaValor.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.PedidoAreas
-	c129393 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.PedidoAreas" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoAreas.html">
+	c157173 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.PedidoAreas" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoAreas.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoAreas </td></tr>
 		</table></td></tr>
@@ -703,7 +705,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PedidoAreas.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.PagosArrecPK
-	c129394 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.PagosArrecPK" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PagosArrecPK.html">
+	c157174 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.PagosArrecPK" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PagosArrecPK.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PagosArrecPK </td></tr>
 		</table></td></tr>
@@ -723,7 +725,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PagosArrecPK.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.PagosArrec
-	c129395 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.PagosArrec" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PagosArrec.html">
+	c157175 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.PagosArrec" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PagosArrec.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PagosArrec </td></tr>
 		</table></td></tr>
@@ -804,7 +806,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PagosArrec.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.MunicipiosContasPK
-	c129396 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.MunicipiosContasPK" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MunicipiosContasPK.html">
+	c157176 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.MunicipiosContasPK" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MunicipiosContasPK.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MunicipiosContasPK </td></tr>
 		</table></td></tr>
@@ -824,7 +826,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./MunicipiosContasPK.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.MunicipiosContas
-	c129397 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.MunicipiosContas" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MunicipiosContas.html">
+	c157177 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.MunicipiosContas" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MunicipiosContas.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MunicipiosContas </td></tr>
 		</table></td></tr>
@@ -851,7 +853,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./MunicipiosContas.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.LotesPagosPK
-	c129398 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.LotesPagosPK" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LotesPagosPK.html">
+	c157178 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.LotesPagosPK" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LotesPagosPK.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LotesPagosPK </td></tr>
 		</table></td></tr>
@@ -871,7 +873,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./LotesPagosPK.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.LotesPagosArrec
-	c129399 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.LotesPagosArrec" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LotesPagosArrec.html">
+	c157179 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.LotesPagosArrec" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LotesPagosArrec.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LotesPagosArrec </td></tr>
 		</table></td></tr>
@@ -916,7 +918,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./LotesPagosArrec.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.LotesPagos
-	c129400 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.LotesPagos" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LotesPagos.html">
+	c157180 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.LotesPagos" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LotesPagos.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LotesPagos </td></tr>
 		</table></td></tr>
@@ -937,7 +939,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./LotesPagos.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.GruposCnaePK
-	c129401 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.GruposCnaePK" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./GruposCnaePK.html">
+	c157181 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.GruposCnaePK" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./GruposCnaePK.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> GruposCnaePK </td></tr>
 		</table></td></tr>
@@ -957,7 +959,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./GruposCnaePK.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.GruposCnae
-	c129402 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.GruposCnae" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./GruposCnae.html">
+	c157182 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.GruposCnae" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./GruposCnae.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> GruposCnae </td></tr>
 		</table></td></tr>
@@ -977,7 +979,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./GruposCnae.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.DetalheStr
-	c129403 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.DetalheStr" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DetalheStr.html">
+	c157183 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.DetalheStr" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DetalheStr.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DetalheStr </td></tr>
 		</table></td></tr>
@@ -1000,7 +1002,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./DetalheStr.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.Delegacias
-	c129404 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.Delegacias" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Delegacias.html">
+	c157184 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.Delegacias" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Delegacias.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Delegacias </td></tr>
 		</table></td></tr>
@@ -1029,7 +1031,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Delegacias.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.DelegaciaAgenciasPK
-	c129405 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.DelegaciaAgenciasPK" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DelegaciaAgenciasPK.html">
+	c157185 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.DelegaciaAgenciasPK" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DelegaciaAgenciasPK.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DelegaciaAgenciasPK </td></tr>
 		</table></td></tr>
@@ -1049,7 +1051,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./DelegaciaAgenciasPK.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.DelegaciaAgencias
-	c129406 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.DelegaciaAgencias" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DelegaciaAgencias.html">
+	c157186 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.DelegaciaAgencias" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DelegaciaAgencias.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DelegaciaAgencias </td></tr>
 		</table></td></tr>
@@ -1075,8 +1077,50 @@ digraph G {
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./DelegaciaAgencias.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.arr.persistence.entity.DareOrigemReceitaPK
+	c157187 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.DareOrigemReceitaPK" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DareOrigemReceitaPK.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> DareOrigemReceitaPK </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + DareOrigemReceitaPK() </td></tr>
+<tr><td align="left" balign="left"> + DareOrigemReceitaPK(idReceita : Integer, idOrigemDebito : Integer) </td></tr>
+<tr><td align="left" balign="left"> + getIdReceita() : Integer </td></tr>
+<tr><td align="left" balign="left"> + setIdReceita(idReceita : Integer) </td></tr>
+<tr><td align="left" balign="left"> + getIdOrigemDebito() : Integer </td></tr>
+<tr><td align="left" balign="left"> + setIdOrigemDebito(idOrigemDebito : Integer) </td></tr>
+<tr><td align="left" balign="left"> + equals(o : Object) : boolean </td></tr>
+<tr><td align="left" balign="left"> + hashCode() : int </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./DareOrigemReceitaPK.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.arr.persistence.entity.DareOrigemReceita
+	c157188 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.DareOrigemReceita" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DareOrigemReceita.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> DareOrigemReceita </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + DareOrigemReceita() </td></tr>
+<tr><td align="left" balign="left"> + getId() : DareOrigemReceitaPK </td></tr>
+<tr><td align="left" balign="left"> + getIdReceita() : Integer </td></tr>
+<tr><td align="left" balign="left"> + setIdReceita(idReceita : Integer) </td></tr>
+<tr><td align="left" balign="left"> + getIdOrigemDebito() : Integer </td></tr>
+<tr><td align="left" balign="left"> + setIdOrigemDebito(idOrigemDebito : Integer) </td></tr>
+<tr><td align="left" balign="left"> + getReceitas() : Receitas </td></tr>
+<tr><td align="left" balign="left"> + setReceitas(receitas : Receitas) </td></tr>
+<tr><td align="left" balign="left"> + equals(o : Object) : boolean </td></tr>
+<tr><td align="left" balign="left"> + hashCode() : int </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./DareOrigemReceita.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.DareDetalhePK
-	c129407 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.DareDetalhePK" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DareDetalhePK.html">
+	c157189 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.DareDetalhePK" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DareDetalhePK.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DareDetalhePK </td></tr>
 		</table></td></tr>
@@ -1096,7 +1140,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./DareDetalhePK.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.DareDetalhe
-	c129408 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.DareDetalhe" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DareDetalhe.html">
+	c157190 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.DareDetalhe" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DareDetalhe.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DareDetalhe </td></tr>
 		</table></td></tr>
@@ -1105,6 +1149,7 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + DareDetalhe() </td></tr>
+<tr><td align="left" balign="left"> + DareDetalhe(idNossoNumeroDare : Long, idSeqDareDetalhe : Integer, idReceita : Integer, idSubcodigo : Integer, observacao : String, periodoReferencia : Integer, numeroDocumento : Long, numeroParcela : Integer, valorImposto : BigDecimal, valorCorrecaoMonetaria : BigDecimal, valorMulta : BigDecimal, valorReducaoMulta : BigDecimal, valorJuros : BigDecimal, valorReducaoJuros : BigDecimal, valorTaxa : BigDecimal, valorTotal : BigDecimal, informadoContribuinte : Boolean, idPessoaReferenciada : Long, tipoPessoaReferenciada : Integer, idContaCorrente : Long, idMunicipio : Integer, dataVencimento : LocalDate) </td></tr>
 <tr><td align="left" balign="left"> + getId() : DareDetalhePK </td></tr>
 <tr><td align="left" balign="left"> + getIdNossoNumeroDare() : Long </td></tr>
 <tr><td align="left" balign="left"> + setIdNossoNumeroDare(idNossoNumeroDare : Long) </td></tr>
@@ -1138,8 +1183,8 @@ digraph G {
 <tr><td align="left" balign="left"> + setValorTaxa(valorTaxa : BigDecimal) </td></tr>
 <tr><td align="left" balign="left"> + getValorTotal() : BigDecimal </td></tr>
 <tr><td align="left" balign="left"> + setValorTotal(valorTotal : BigDecimal) </td></tr>
-<tr><td align="left" balign="left"> + getInformadoContribuinte() : Integer </td></tr>
-<tr><td align="left" balign="left"> + setInformadoContribuinte(informadoContribuinte : Integer) </td></tr>
+<tr><td align="left" balign="left"> + getInformadoContribuinte() : Boolean </td></tr>
+<tr><td align="left" balign="left"> + setInformadoContribuinte(informadoContribuinte : Boolean) </td></tr>
 <tr><td align="left" balign="left"> + getIdPessoaReferenciada() : Long </td></tr>
 <tr><td align="left" balign="left"> + setIdPessoaReferenciada(idPessoaReferenciada : Long) </td></tr>
 <tr><td align="left" balign="left"> + getTipoPessoaReferenciada() : Integer </td></tr>
@@ -1152,13 +1197,24 @@ digraph G {
 <tr><td align="left" balign="left"> + setDare(dare : Dare) </td></tr>
 <tr><td align="left" balign="left"> + getPagosArrecCollection() : Collection&lt;PagosArrec&gt; </td></tr>
 <tr><td align="left" balign="left"> + setPagosArrecCollection(pagosArrecCollection : Collection&lt;PagosArrec&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getReceitasTaxas() : ReceitasTaxas </td></tr>
+<tr><td align="left" balign="left"> + setReceitasTaxas(receitasTaxas : ReceitasTaxas) </td></tr>
+<tr><td align="left" balign="left"> + getReceitas() : Receitas </td></tr>
+<tr><td align="left" balign="left"> + setReceitas(receitas : Receitas) </td></tr>
+<tr><td align="left" balign="left"> + getDataVencimentoDare() : LocalDate </td></tr>
+<tr><td align="left" balign="left"> + getDescricaoReceita() : String </td></tr>
+<tr><td align="left" balign="left"> + getDescricaoSubCodigo() : String </td></tr>
+<tr><td align="left" balign="left"> + getOrigemDebito() : OrigemDebitoEnum </td></tr>
+<tr><td align="left" balign="left"> + setOrigemDebito(origemDebito : OrigemDebitoEnum) </td></tr>
+<tr><td align="left" balign="left"> + getDataVencimentoContaCorrente() : LocalDate </td></tr>
+<tr><td align="left" balign="left"> + setDataVencimentoContaCorrente(dataVencimentoContaCorrente : LocalDate) </td></tr>
 <tr><td align="left" balign="left"> + equals(o : Object) : boolean </td></tr>
 <tr><td align="left" balign="left"> + hashCode() : int </td></tr>
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./DareDetalhe.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.Dare
-	c129409 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.Dare" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Dare.html">
+	c157191 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.Dare" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Dare.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Dare </td></tr>
 		</table></td></tr>
@@ -1167,19 +1223,20 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + Dare() </td></tr>
+<tr><td align="left" balign="left"> + Dare(idNossoNumeroDare : Long, idInstituicao : Long, ufEmissao : String, idMunicipioEmissao : Integer, dataVencimento : LocalDate, tipoPessoa : TipoPessoaEnum, idPessoa : Long, nomeRazaoSocial : String, dataEmissao : LocalDateTime, usuarioEmissor : String, quantidadeDebitos : Integer, valorTotalDare : BigDecimal, barraDare : String, dataPago : LocalDateTime, dareDetalheCollection : Collection&lt;DareDetalhe&gt;) </td></tr>
 <tr><td align="left" balign="left"> + getId() : Long </td></tr>
 <tr><td align="left" balign="left"> + getIdNossoNumeroDare() : Long </td></tr>
 <tr><td align="left" balign="left"> + setIdNossoNumeroDare(idNossoNumeroDare : Long) </td></tr>
-<tr><td align="left" balign="left"> + getIdInstituicao() : Integer </td></tr>
-<tr><td align="left" balign="left"> + setIdInstituicao(idInstituicao : Integer) </td></tr>
+<tr><td align="left" balign="left"> + getIdInstituicao() : Long </td></tr>
+<tr><td align="left" balign="left"> + setIdInstituicao(idInstituicao : Long) </td></tr>
 <tr><td align="left" balign="left"> + getUfEmissao() : String </td></tr>
 <tr><td align="left" balign="left"> + setUfEmissao(ufEmissao : String) </td></tr>
 <tr><td align="left" balign="left"> + getIdMunicipioEmissao() : Integer </td></tr>
 <tr><td align="left" balign="left"> + setIdMunicipioEmissao(idMunicipioEmissao : Integer) </td></tr>
 <tr><td align="left" balign="left"> + getDataVencimento() : LocalDate </td></tr>
 <tr><td align="left" balign="left"> + setDataVencimento(dataVencimento : LocalDate) </td></tr>
-<tr><td align="left" balign="left"> + getTipoPessoa() : Integer </td></tr>
-<tr><td align="left" balign="left"> + setTipoPessoa(tipoPessoa : Integer) </td></tr>
+<tr><td align="left" balign="left"> + getTipoPessoa() : TipoPessoaEnum </td></tr>
+<tr><td align="left" balign="left"> + setTipoPessoa(tipoPessoa : TipoPessoaEnum) </td></tr>
 <tr><td align="left" balign="left"> + getIdPessoa() : Long </td></tr>
 <tr><td align="left" balign="left"> + setIdPessoa(idPessoa : Long) </td></tr>
 <tr><td align="left" balign="left"> + getNomeRazaoSocial() : String </td></tr>
@@ -1198,13 +1255,19 @@ digraph G {
 <tr><td align="left" balign="left"> + setDataPago(dataPago : LocalDateTime) </td></tr>
 <tr><td align="left" balign="left"> + getDareDetalheCollection() : Collection&lt;DareDetalhe&gt; </td></tr>
 <tr><td align="left" balign="left"> + setDareDetalheCollection(dareDetalheCollection : Collection&lt;DareDetalhe&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getUnidadeOrganizacional() : UnidadeOrganizacional </td></tr>
+<tr><td align="left" balign="left"> + setUnidadeOrganizacional(unidadeOrganizacional : UnidadeOrganizacional) </td></tr>
+<tr><td align="left" balign="left"> + getMunicipio() : Municipio </td></tr>
+<tr><td align="left" balign="left"> + setMunicipio(municipio : Municipio) </td></tr>
+<tr><td align="left" balign="left"> + getNomeInstituicao() : String </td></tr>
+<tr><td align="left" balign="left"> + getNomeMunicipio() : String </td></tr>
 <tr><td align="left" balign="left"> + equals(o : Object) : boolean </td></tr>
 <tr><td align="left" balign="left"> + hashCode() : int </td></tr>
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Dare.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.ConveniosTarifas
-	c129410 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ConveniosTarifas" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConveniosTarifas.html">
+	c157192 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ConveniosTarifas" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConveniosTarifas.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ConveniosTarifas </td></tr>
 		</table></td></tr>
@@ -1236,7 +1299,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ConveniosTarifas.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.ConveniosReceitasPK
-	c129411 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ConveniosReceitasPK" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConveniosReceitasPK.html">
+	c157193 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ConveniosReceitasPK" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConveniosReceitasPK.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ConveniosReceitasPK </td></tr>
 		</table></td></tr>
@@ -1256,7 +1319,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ConveniosReceitasPK.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.ConveniosReceitas
-	c129412 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ConveniosReceitas" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConveniosReceitas.html">
+	c157194 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ConveniosReceitas" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConveniosReceitas.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ConveniosReceitas </td></tr>
 		</table></td></tr>
@@ -1277,7 +1340,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ConveniosReceitas.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.ConveniosArrec
-	c129413 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ConveniosArrec" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConveniosArrec.html">
+	c157195 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ConveniosArrec" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConveniosArrec.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ConveniosArrec </td></tr>
 		</table></td></tr>
@@ -1321,7 +1384,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ConveniosArrec.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.Bancos
-	c129414 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.Bancos" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Bancos.html">
+	c157196 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.Bancos" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Bancos.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Bancos </td></tr>
 		</table></td></tr>
@@ -1347,7 +1410,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Bancos.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.BancoAgenciasPK
-	c129415 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.BancoAgenciasPK" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BancoAgenciasPK.html">
+	c157197 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.BancoAgenciasPK" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BancoAgenciasPK.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BancoAgenciasPK </td></tr>
 		</table></td></tr>
@@ -1367,7 +1430,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./BancoAgenciasPK.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.BancoAgencias
-	c129416 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.BancoAgencias" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BancoAgencias.html">
+	c157198 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.BancoAgencias" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BancoAgencias.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BancoAgencias </td></tr>
 		</table></td></tr>
@@ -1416,7 +1479,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./BancoAgencias.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.ArrEntityPackageMarker
-	c129417 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ArrEntityPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArrEntityPackageMarker.html">
+	c157199 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ArrEntityPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArrEntityPackageMarker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArrEntityPackageMarker </td></tr>
 		</table></td></tr>
@@ -1428,7 +1491,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ArrEntityPackageMarker.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.ArquivosStr
-	c129418 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ArquivosStr" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArquivosStr.html">
+	c157200 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ArquivosStr" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArquivosStr.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArquivosStr </td></tr>
 		</table></td></tr>
@@ -1481,7 +1544,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ArquivosStr.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.ArquivoRecepcao
-	c129419 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ArquivoRecepcao" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArquivoRecepcao.html">
+	c157201 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ArquivoRecepcao" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArquivoRecepcao.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArquivoRecepcao </td></tr>
 		</table></td></tr>
@@ -1538,7 +1601,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ArquivoRecepcao.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.ArquivoErrosStrPK
-	c129420 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ArquivoErrosStrPK" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArquivoErrosStrPK.html">
+	c157202 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ArquivoErrosStrPK" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArquivoErrosStrPK.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArquivoErrosStrPK </td></tr>
 		</table></td></tr>
@@ -1558,7 +1621,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ArquivoErrosStrPK.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.ArquivoErrosStr
-	c129421 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ArquivoErrosStr" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArquivoErrosStr.html">
+	c157203 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ArquivoErrosStr" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArquivoErrosStr.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArquivoErrosStr </td></tr>
 		</table></td></tr>
@@ -1579,7 +1642,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ArquivoErrosStr.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.ArquivoErro
-	c129422 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ArquivoErro" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArquivoErro.html">
+	c157204 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ArquivoErro" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArquivoErro.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArquivoErro </td></tr>
 		</table></td></tr>
@@ -1603,7 +1666,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ArquivoErro.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.entity.ArquivoDetalhePagos
-	c129423 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ArquivoDetalhePagos" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArquivoDetalhePagos.html">
+	c157205 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ArquivoDetalhePagos" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArquivoDetalhePagos.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArquivoDetalhePagos </td></tr>
 		</table></td></tr>

@@ -19,7 +19,9 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + UsuarioPostoTrabalhoRepository() </td></tr>
+<tr><td align="left" balign="left"> + findByCpf(cpf : String) : UsuarioPostoTrabalho </td></tr>
 <tr><td align="left" balign="left"> + existsLockReferenceFuncionario(idPostoTrabalho : Integer) : boolean </td></tr>
+<tr><td align="left" balign="left"> + findOne(usuarioPostoTrabalhoPK : UsuarioPostoTrabalhoPK) : UsuarioPostoTrabalho </td></tr>
 		</table></td></tr>
 		</table>>, URL="./UsuarioPostoTrabalhoRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.persistence.repository.UsuarioPostoTrabalhoRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.seg.persistence.entity.UsuarioPostoTrabalho, br.gov.to.sefaz.seg.persistence.entity.UsuarioPostoTrabalhoPK>

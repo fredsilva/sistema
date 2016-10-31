@@ -35,8 +35,8 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + TipoUnidadeConverter() </td></tr>
 <tr><td align="left" balign="left"> + setService(service : UnidadeOrganizacionalService) </td></tr>
-<tr><td align="left" balign="left"> + convertToDatabaseColumn(tipoUnidade : TipoUnidade) : Character </td></tr>
-<tr><td align="left" balign="left"> + convertToEntityAttribute(code : Character) : TipoUnidade </td></tr>
+<tr><td align="left" balign="left"> + convertToDatabaseColumn(tipoUnidade : TipoUnidade) : String </td></tr>
+<tr><td align="left" balign="left"> + convertToEntityAttribute(code : String) : TipoUnidade </td></tr>
 		</table></td></tr>
 		</table>>, URL="./TipoUnidadeConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.converter.TipoOperacaoEnumConverter

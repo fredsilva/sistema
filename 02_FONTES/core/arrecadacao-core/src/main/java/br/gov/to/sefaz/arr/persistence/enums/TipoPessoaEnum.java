@@ -1,5 +1,9 @@
 package br.gov.to.sefaz.arr.persistence.enums;
 
+import br.gov.to.sefaz.persistence.enums.EnumCodeLabel;
+import br.gov.to.sefaz.util.formatter.FormatterUtil;
+
+import java.util.function.Function;
 import java.util.stream.Stream;
 
 /**
@@ -8,18 +12,41 @@ import java.util.stream.Stream;
  * @author <a href="mailto:gabriel.santos@ntconsult.com.br">gabriel.santos</a>
  * @since 07/07/2016 17:54:00
  */
-public enum TipoPessoaEnum {
+public enum TipoPessoaEnum implements EnumCodeLabel<Integer> {
 
-    INSCRICAO(1), CNPJ(2), CPF(3), RENAVAN(4);
+    INSCRICAO(1, "INSCRIÇÃO ESTADUAL", FormatterUtil::formatInscricaoEstadual),
+    CNPJ(2, "CNPJ", id -> FormatterUtil.formatCnpj(id.toString())),
+    CPF(3, "CPF", id -> FormatterUtil.formatCpf(id.toString())),
+    RENAVAM(4, "RENAVAM", Object::toString);
 
     private final Integer code;
+    private final String label;
+    private final Function<Long, String> formatter;
 
-    TipoPessoaEnum(Integer code) {
+    TipoPessoaEnum(Integer code, String label, Function<Long, String> formatter) {
         this.code = code;
+        this.label = label;
+        this.formatter = formatter;
     }
 
+    @Override
     public Integer getCode() {
         return code;
+    }
+
+    @Override
+    public String getLabel() {
+        return label;
+    }
+
+    /**
+     * formata o id de um contribuinte de acordo com o tipo de pessoa.
+     *
+     * @param idPessoa id do contribuinte
+     * @return idPessoa formatado
+     */
+    public String formatIdPessoa(Long idPessoa) {
+        return formatter.apply(idPessoa);
     }
 
     /**

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.entity.AbstractEntity<I extends java.io.Serializable>
-	c553746 [label=<<table title="br.gov.to.sefaz.persistence.entity.AbstractEntity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/entity/AbstractEntity.html">
+	c707771 [label=<<table title="br.gov.to.sefaz.persistence.entity.AbstractEntity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/entity/AbstractEntity.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractEntity&lt;I extends Serializable&gt; </font></td></tr>
 		</table></td></tr>
@@ -38,7 +38,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../persistence/entity/AbstractEntity.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.entity.OpcaoAplicacao
-	c554091 [label=<<table title="br.gov.to.sefaz.seg.persistence.entity.OpcaoAplicacao" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OpcaoAplicacao.html">
+	c708128 [label=<<table title="br.gov.to.sefaz.seg.persistence.entity.OpcaoAplicacao" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./OpcaoAplicacao.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OpcaoAplicacao </td></tr>
 		</table></td></tr>
@@ -65,6 +65,8 @@ digraph G {
 <tr><td align="left" balign="left"> + setAplicacaoModulo(aplicacaoModulo : AplicacaoModulo) </td></tr>
 <tr><td align="left" balign="left"> + getDescricaoAplicacao() : String </td></tr>
 <tr><td align="left" balign="left"> + getAbreviacaoModulo() : String </td></tr>
+<tr><td align="left" balign="left"> + getDescricaoAplicacaoModulo() : String </td></tr>
+<tr><td align="left" balign="left"> + setDescricaoAplicacaoModulo(descricaoAplicacaoModulo : String) </td></tr>
 <tr><td align="left" balign="left"> + getIdModulo() : Long </td></tr>
 <tr><td align="left" balign="left"> + getDescricaoModulo() : String </td></tr>
 <tr><td align="left" balign="left"> + equals(o : Object) : boolean </td></tr>
@@ -73,6 +75,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./OpcaoAplicacao.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.persistence.entity.OpcaoAplicacao extends br.gov.to.sefaz.persistence.entity.AbstractEntity<java.lang.Long>
-	c553746:p -> c554091:p [dir=back,arrowtail=empty];
+	c707771:p -> c708128:p [dir=back,arrowtail=empty];
 }
 

@@ -183,7 +183,7 @@
                                     <ul id="opcoes-menu-#{appModulo.id}" class="collapse">
                                     <ui:repeat value="#{appModulo.childs}" var="opcao">
                                         <li class="#{pathResolverMB.isActualProtectedView(opcao.ref)?'active':''}">
-                                            <a href="#{pathResolverMB.protectedViewPath(opcao.ref)}">#{opcao.name}</a>
+                                            <a href="#{pathResolverMB.viewPath(opcao.ref)}">#{opcao.name}</a>
                                         </li>
                                     </ui:repeat>
                                     </ul>

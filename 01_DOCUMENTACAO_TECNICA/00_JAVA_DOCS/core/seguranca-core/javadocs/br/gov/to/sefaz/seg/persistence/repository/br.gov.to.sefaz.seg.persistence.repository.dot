@@ -56,7 +56,9 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + UsuarioPostoTrabalhoRepository() </td></tr>
+<tr><td align="left" balign="left"> + findByCpf(cpf : String) : UsuarioPostoTrabalho </td></tr>
 <tr><td align="left" balign="left"> + existsLockReferenceFuncionario(idPostoTrabalho : Integer) : boolean </td></tr>
+<tr><td align="left" balign="left"> + findOne(usuarioPostoTrabalhoPK : UsuarioPostoTrabalhoPK) : UsuarioPostoTrabalho </td></tr>
 		</table></td></tr>
 		</table>>, URL="./UsuarioPostoTrabalhoRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.UsuarioPerfilRepository
@@ -88,6 +90,7 @@ digraph G {
 <tr><td align="left" balign="left"> + UnidadeOrganizacionalRepository() </td></tr>
 <tr><td align="left" balign="left"> + existsLockReferencePai(id : Long) : boolean </td></tr>
 <tr><td align="left" balign="left"> + existsLockReferencePostoTrabalho(id : Long) : boolean </td></tr>
+<tr><td align="left" balign="left"> + findOne(id : Long) : UnidadeOrganizacional </td></tr>
 		</table></td></tr>
 		</table>>, URL="./UnidadeOrganizacionalRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.SolicitacaoUsuarioRepository
@@ -160,6 +163,7 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + PostoTrabalhoRepository() </td></tr>
 <tr><td align="left" balign="left"> + findAllByUnidadeOrganizacional(identificUnidOrganizac : Long) : Collection&lt;PostoTrabalho&gt; </td></tr>
+<tr><td align="left" balign="left"> + findOne(id : Integer) : PostoTrabalho </td></tr>
 		</table></td></tr>
 		</table>>, URL="./PostoTrabalhoRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.PerfilSistemaRepository

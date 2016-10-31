@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.par.gestao.persistence.entity.ParametroGeral
-	c306 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.entity.ParametroGeral" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ParametroGeral.html">
+	c372 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.entity.ParametroGeral" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ParametroGeral.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ParametroGeral </td></tr>
 		</table></td></tr>
@@ -37,7 +37,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ParametroGeral.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.par.gestao.persistence.entity.Pais
-	c307 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.entity.Pais" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Pais.html">
+	c373 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.entity.Pais" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Pais.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Pais </td></tr>
 		</table></td></tr>
@@ -58,7 +58,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Pais.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.par.gestao.persistence.entity.Municipio
-	c308 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.entity.Municipio" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Municipio.html">
+	c374 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.entity.Municipio" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Municipio.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Municipio </td></tr>
 		</table></td></tr>
@@ -91,7 +91,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Municipio.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.par.gestao.persistence.entity.Logradouro
-	c309 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.entity.Logradouro" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Logradouro.html">
+	c375 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.entity.Logradouro" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Logradouro.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Logradouro </td></tr>
 		</table></td></tr>
@@ -110,8 +110,57 @@ digraph G {
 <tr><td align="left" balign="left"> + toString() : String </td></tr>
 		</table></td></tr>
 		</table>>, URL="./Logradouro.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.par.gestao.persistence.entity.FeriadoPK
+	c376 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.entity.FeriadoPK" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FeriadoPK.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> FeriadoPK </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + FeriadoPK() </td></tr>
+<tr><td align="left" balign="left"> + FeriadoPK(diaFeriado : Integer, mesFeriado : Integer, anoFeriado : Integer) </td></tr>
+<tr><td align="left" balign="left"> + getDiaFeriado() : Integer </td></tr>
+<tr><td align="left" balign="left"> + setDiaFeriado(diaFeriado : Integer) </td></tr>
+<tr><td align="left" balign="left"> + getMesFeriado() : Integer </td></tr>
+<tr><td align="left" balign="left"> + setMesFeriado(mesFeriado : Integer) </td></tr>
+<tr><td align="left" balign="left"> + getAnoFeriado() : Integer </td></tr>
+<tr><td align="left" balign="left"> + setAnoFeriado(anoFeriado : Integer) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./FeriadoPK.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.par.gestao.persistence.entity.Feriado
+	c377 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.entity.Feriado" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Feriado.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> Feriado </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + Feriado() </td></tr>
+<tr><td align="left" balign="left"> + getId() : FeriadoPK </td></tr>
+<tr><td align="left" balign="left"> + getDiaFeriado() : Integer </td></tr>
+<tr><td align="left" balign="left"> + setDiaFeriado(diaFeriado : Integer) </td></tr>
+<tr><td align="left" balign="left"> + getMesFeriado() : Integer </td></tr>
+<tr><td align="left" balign="left"> + setMesFeriado(mesFeriado : Integer) </td></tr>
+<tr><td align="left" balign="left"> + getAnoFeriado() : Integer </td></tr>
+<tr><td align="left" balign="left"> + setAnoFeriado(anoFeriado : Integer) </td></tr>
+<tr><td align="left" balign="left"> + getTipoFeriado() : TipoFeriadoEnum </td></tr>
+<tr><td align="left" balign="left"> + setTipoFeriado(tipoFeriado : TipoFeriadoEnum) </td></tr>
+<tr><td align="left" balign="left"> + getTxtObserva() : String </td></tr>
+<tr><td align="left" balign="left"> + setTxtObserva(txtObserva : String) </td></tr>
+<tr><td align="left" balign="left"> + getUnidadeFederacao() : String </td></tr>
+<tr><td align="left" balign="left"> + setUnidadeFederacao(unidadeFederacao : String) </td></tr>
+<tr><td align="left" balign="left"> + getCodigoIbge() : Integer </td></tr>
+<tr><td align="left" balign="left"> + setCodigoIbge(codigoIbge : Integer) </td></tr>
+<tr><td align="left" balign="left"> + equals(o : Object) : boolean </td></tr>
+<tr><td align="left" balign="left"> + hashCode() : int </td></tr>
+<tr><td align="left" balign="left"> + toString() : String </td></tr>
+		</table></td></tr>
+		</table>>, URL="./Feriado.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.par.gestao.persistence.entity.Estado
-	c310 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.entity.Estado" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Estado.html">
+	c378 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.entity.Estado" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Estado.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Estado </td></tr>
 		</table></td></tr>
@@ -142,7 +191,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Estado.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.par.gestao.persistence.entity.CatEntityPackageMarker
-	c311 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.entity.CatEntityPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatEntityPackageMarker.html">
+	c379 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.entity.CatEntityPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CatEntityPackageMarker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CatEntityPackageMarker </td></tr>
 		</table></td></tr>
@@ -154,7 +203,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./CatEntityPackageMarker.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.par.gestao.persistence.entity.AtividadeEconomica
-	c312 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.entity.AtividadeEconomica" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AtividadeEconomica.html">
+	c380 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.entity.AtividadeEconomica" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AtividadeEconomica.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AtividadeEconomica </td></tr>
 		</table></td></tr>

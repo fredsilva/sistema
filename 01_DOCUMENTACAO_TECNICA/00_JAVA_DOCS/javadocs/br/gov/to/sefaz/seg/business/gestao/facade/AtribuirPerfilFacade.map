@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="../../../../business/facade/CrudFacade.html" title="br.gov.to.sefaz.business.facade.CrudFacade" alt="" coords="672,11,944,208"/>
-<area shape="rect" id="node1" href="../../../../business/facade/CrudFacade.html" title="&lt;TABLE&gt;" alt="" coords="661,5,955,213"/>
-<area shape="rect" id="node2_1" href="./AtribuirPerfilFacade.html" title="br.gov.to.sefaz.seg.business.gestao.facade.AtribuirPerfilFacade" alt="" coords="484,267,1132,481"/>
-<area shape="rect" id="node2" href="./AtribuirPerfilFacade.html" title="&lt;TABLE&gt;" alt="" coords="473,261,1143,487"/>
-<area shape="rect" id="node3_2" href="./impl/AtribuirPerfilFacadeImpl.html" title="br.gov.to.sefaz.seg.business.gestao.facade.impl.AtribuirPerfilFacadeImpl" alt="" coords="16,540,1600,755"/>
-<area shape="rect" id="node3" href="./impl/AtribuirPerfilFacadeImpl.html" title="&lt;TABLE&gt;" alt="" coords="5,535,1611,760"/>
+<area shape="rect" id="node1_0" href="../../../../business/facade/CrudFacade.html" title="br.gov.to.sefaz.business.facade.CrudFacade" alt="" coords="666,11,950,225"/>
+<area shape="rect" id="node1" href="../../../../business/facade/CrudFacade.html" title="&lt;TABLE&gt;" alt="" coords="655,5,961,231"/>
+<area shape="rect" id="node2_1" href="./AtribuirPerfilFacade.html" title="br.gov.to.sefaz.seg.business.gestao.facade.AtribuirPerfilFacade" alt="" coords="484,284,1132,499"/>
+<area shape="rect" id="node2" href="./AtribuirPerfilFacade.html" title="&lt;TABLE&gt;" alt="" coords="473,279,1143,504"/>
+<area shape="rect" id="node3_2" href="./impl/AtribuirPerfilFacadeImpl.html" title="br.gov.to.sefaz.seg.business.gestao.facade.impl.AtribuirPerfilFacadeImpl" alt="" coords="16,557,1600,772"/>
+<area shape="rect" id="node3" href="./impl/AtribuirPerfilFacadeImpl.html" title="&lt;TABLE&gt;" alt="" coords="5,552,1611,777"/>
 </map>

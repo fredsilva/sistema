@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.par.gestao.persistence.repository.ParametroGeralRepository
-	c1279 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.repository.ParametroGeralRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ParametroGeralRepository.html">
+	c1752 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.repository.ParametroGeralRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ParametroGeralRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ParametroGeralRepository </td></tr>
 		</table></td></tr>
@@ -21,12 +21,13 @@ digraph G {
 <tr><td align="left" balign="left"> + ParametroGeralRepository() </td></tr>
 <tr><td align="left" balign="left"> + findByNome(nome : String) : ParametroGeral </td></tr>
 <tr><td align="left" balign="left"> + findPArametroGeralDinamico(sql : String, params : ParamsBuilder) : List&lt;CodeData&lt;&gt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + findExitsNome(idParametroGeral : Integer, nomeParametroGeral : String) : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ParametroGeralRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.par.gestao.persistence.repository.ParametroGeralRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.par.gestao.persistence.entity.ParametroGeral, java.lang.Integer>
-	c1284:p -> c1279:p [dir=back,arrowtail=empty];
+	c1758:p -> c1752:p [dir=back,arrowtail=empty];
 	// br.gov.to.sefaz.persistence.repository.BaseRepository<E, I extends java.io.Serializable>
-	c1284 [label=<<table title="br.gov.to.sefaz.persistence.repository.BaseRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/persistence/repository/BaseRepository.html">
+	c1758 [label=<<table title="br.gov.to.sefaz.persistence.repository.BaseRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/persistence/repository/BaseRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> BaseRepository&lt;E, I extends Serializable&gt; </font></td></tr>
 		</table></td></tr>

@@ -108,6 +108,10 @@ form button, form input[type="button"], form input[type="submit"] {
     margin-top: 25px;
 }
 
+.fill-col-btn {
+    width: 100%;
+}
+
 .dataTable thead th, .dataTable thead td {
     white-space: nowrap;
 }
@@ -148,10 +152,14 @@ fieldset.scheduler-border {
     border: 1px solid #DDD !important;
 }
 
-legend.scheduler-border {
+fieldset.scheduler-border legend {
     width: auto !important;
     border: none;
     font-size: 14px;
+}
+
+.red-text {
+    color: red;
 }
 
 .scrollx {
@@ -166,7 +174,7 @@ legend.scheduler-border {
     margin-right: 5px !important;
 }
 
-.alert {
+.alert.auto-wrap {
     white-space: pre-line;
 }
 

@@ -1,5 +1,7 @@
 package br.gov.to.sefaz.arr.parametros.managedbean;
 
+import br.gov.to.sefaz.arr.dare.enums.ValorAliquotaEnum;
+import br.gov.to.sefaz.arr.dare.enums.ValorMultaEnum;
 import br.gov.to.sefaz.arr.persistence.enums.ClassificacaoReceitaEnum;
 import br.gov.to.sefaz.arr.persistence.enums.FormaPagamentoEnum;
 import br.gov.to.sefaz.arr.persistence.enums.TipoCodigoBarraEnum;
@@ -62,6 +64,14 @@ public class ArrEnumsMB {
 
     public TipoPedidoCampoEnum[] getTiposPedidoCampos() {
         return TipoPedidoCampoEnum.values();
+    }
+
+    public ValorMultaEnum[] getMultas() {
+        return ValorMultaEnum.values();
+    }
+
+    public ValorAliquotaEnum[] getAliquotas() {
+        return ValorAliquotaEnum.values();
     }
 
 }

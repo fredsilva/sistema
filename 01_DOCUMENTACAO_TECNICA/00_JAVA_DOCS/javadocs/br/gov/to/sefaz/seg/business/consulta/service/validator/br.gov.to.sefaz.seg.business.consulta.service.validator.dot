@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.consulta.service.validator.TipoPeriodoConsultaValidator
-	c91335 [label=<<table title="br.gov.to.sefaz.seg.business.consulta.service.validator.TipoPeriodoConsultaValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoPeriodoConsultaValidator.html">
+	c106210 [label=<<table title="br.gov.to.sefaz.seg.business.consulta.service.validator.TipoPeriodoConsultaValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoPeriodoConsultaValidator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoPeriodoConsultaValidator </td></tr>
 		</table></td></tr>
@@ -24,7 +24,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoPeriodoConsultaValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.consulta.service.validator.HistoricoNavegacaoFilterValidator
-	c91336 [label=<<table title="br.gov.to.sefaz.seg.business.consulta.service.validator.HistoricoNavegacaoFilterValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./HistoricoNavegacaoFilterValidator.html">
+	c106211 [label=<<table title="br.gov.to.sefaz.seg.business.consulta.service.validator.HistoricoNavegacaoFilterValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./HistoricoNavegacaoFilterValidator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HistoricoNavegacaoFilterValidator </td></tr>
 		</table></td></tr>

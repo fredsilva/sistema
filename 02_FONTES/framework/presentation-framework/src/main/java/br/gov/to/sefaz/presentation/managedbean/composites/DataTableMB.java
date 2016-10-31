@@ -7,6 +7,7 @@ import br.gov.to.sefaz.presentation.managedbean.composites.domain.DataTableField
 import br.gov.to.sefaz.presentation.managedbean.composites.domain.JsFunctionSignature;
 import br.gov.to.sefaz.util.formatter.FormatterUtil;
 import br.gov.to.sefaz.util.message.SourceBundle;
+import br.gov.to.sefaz.util.reflection.ReflectionUtils;
 import org.apache.commons.lang3.StringUtils;
 
 import java.text.DateFormat;
@@ -51,6 +52,7 @@ public class DataTableMB {
     private static final String CPF_MASK = "###.###.###-##";
     private static final String CNPJ_MASK = "##.###.###/####-##";
     private static final String CNPJ_RAIZ_MASK = "##.###.###";
+    private static final String ALIAS_FOR_THIS = "this";
 
     private static final int CPF_LENGTH = 11;
     private static final int CNPJ_LENGTH = 14;
@@ -81,7 +83,7 @@ public class DataTableMB {
     public List<String> parseHeaders(String headers, List<DataTableField> fields, String bundle) {
         List<String> headersList = splitAndTrim(headers, FIRST_LVL_SEPARATOR);
 
-        fields.stream().filter(DataTableField::getHide).forEach(h -> headersList.add(""));
+        fields.stream().filter(DataTableField::getHide).forEach(h -> headersList.add(StringUtils.EMPTY));
 
         return headersList.stream().map(h -> getFromBundle(h, bundle)).collect(Collectors.toList());
     }
@@ -147,29 +149,40 @@ public class DataTableMB {
 
     /**
      * <p>Retorna o valor do campo no formato de exibição desejado, de acordo com o
-     * {@link DataTableFieldPrint}.</p>
+     * {@link DataTableField#getPrintType()}.</p>
      * <ul>
-     * <li>{@link DataTableFieldPrint#NONE}: O fieldValue será retornado sem nenhum tratamento</li>
-     * <li>{@link DataTableFieldPrint#STRING}: O será retornado o toString() do fieldValue</li>
-     * <li>{@link DataTableFieldPrint#NUMBER}: O será retornado o {@link java.text.NumberFormat} do fieldValue</li>
-     * <li>{@link DataTableFieldPrint#DATE}: Se fieldValue for do tipo {@link Calendar}, {@link Date},
+     * <li>{@link DataTableFieldPrint#NONE}: O campo da row será retornado sem nenhum tratamento</li>
+     * <li>{@link DataTableFieldPrint#STRING}: O será retornado o toString() do campo da row</li>
+     * <li>{@link DataTableFieldPrint#NUMBER}: O será retornado o {@link java.text.NumberFormat} do campo da row</li>
+     * <li>{@link DataTableFieldPrint#DATE}: Se campo da row for do tipo {@link Calendar}, {@link Date},
      * {@link TemporalAccessor} será retornada uma data no formato {@value #DATE_PATTERN}. Se não for de nenhum
-     * dos tipos citados será apenas retornado o toString do fieldValue.
+     * dos tipos citados será apenas retornado o toString do campo da row.
      * </li>
-     * <li>{@link DataTableFieldPrint#DATE_TIME}: Se fieldValue for do tipo {@link Calendar}, {@link Date},
+     * <li>{@link DataTableFieldPrint#DATE_TIME}: Se campo da row for do tipo {@link Calendar}, {@link Date},
      * {@link TemporalAccessor} será retornada uma data no formato {@value #DATE_TIME_PATTERN}. Se não for de nenhum
-     * dos tipos citados será apenas retornado o toString do fieldValue.</li>
+     * dos tipos citados será apenas retornado o toString do campo da row.</li>
      * </ul>
      *
-     * @param fieldValue valor do campo que será transformado para exibição
-     * @param printType  tipo do formato de exibição que será aplicado ao fieldValue
-     * @return fieldValue formatado de acordo com o {@link DataTableFieldPrint} informado
+     * @param row       linha da tabela ao qual o valor de um campo, ou ele mesmo será exibido na celula da tabela
+     * @param fieldDesc objeto descrevendo propriedades de um campo da row que será exibido na tabela
+     * @return campo da row formatado de acordo com o {@link DataTableFieldPrint} informado
      */
-    public Object formatToPrint(Object fieldValue, DataTableFieldPrint printType) {
-        if (Objects.isNull(fieldValue)) {
-            return "";
+    public Object formatToPrint(Object row, DataTableField fieldDesc) {
+        if (Objects.isNull(row)) {
+            return StringUtils.EMPTY;
         }
-        switch (printType) {
+
+        Object fieldValue = row;
+
+        if (!fieldDesc.getName().equals(ALIAS_FOR_THIS)) {
+            fieldValue = ReflectionUtils.invokeGetter(row, fieldDesc.getName());
+        }
+
+        if (Objects.isNull(fieldValue)) {
+            return StringUtils.EMPTY;
+        }
+
+        switch (fieldDesc.getPrintType()) {
             case BOOLEAN:
                 return booleanFormat(fieldValue);
             case DATE:
@@ -222,13 +235,13 @@ public class DataTableMB {
      * @param messageKey Chave da mensagem do arquivo de internacionalização
      * @param bundle     identificação do arqui que contém a mensagem de internacionalização
      * @return mensagem internacionalizada de arquivo/bundle específico, ou String vazia ("") em caso da messageKey
-     *      também ser vazia
+     *     também ser vazia
      */
     public String getFromBundle(String messageKey, String bundle) {
         messageKey = messageKey.trim();
 
         if (messageKey.isEmpty()) {
-            return "";
+            return StringUtils.EMPTY;
         }
 
         return SourceBundle.getMessage(bundle, messageKey);
@@ -314,7 +327,7 @@ public class DataTableMB {
             String elementClass = attributes.get(0);
             String bindType = attributes.get(1);
 
-            List<String> functionAndParams = splitAndTrim(attributes.get(2).replace(END_PARAMS_MARK, ""),
+            List<String> functionAndParams = splitAndTrim(attributes.get(2).replace(END_PARAMS_MARK, StringUtils.EMPTY),
                     "\\" + BEGIN_PARAMS_MARK);
             String function = functionAndParams.get(0);
 
@@ -335,8 +348,8 @@ public class DataTableMB {
                 eventType = attributes.get(3);
                 complement = attributes.get(4);
             } else {
-                eventType = "";
-                complement = "";
+                eventType = StringUtils.EMPTY;
+                complement = StringUtils.EMPTY;
             }
 
             parsedActions
@@ -350,6 +363,7 @@ public class DataTableMB {
      * Faz o parse dos campos da tabela que precisam ser - ou não - escondidos. Deve-se ser criado, na tela que
      * utilizará o recurso, um javascript que faça a validação necessária. O retorno dessa função, deve ser
      * obrigatoriamente um boolean. Vide cria-usuario-senha.js.
+     *
      * @param actionEvents string de eventos, funções e parâmetros que o componente terá.
      * @return Lista de ações e visibilidade.
      */
@@ -362,7 +376,7 @@ public class DataTableMB {
             String elementClass = attributes.get(0);
             String visibility = attributes.get(1);
 
-            List<String> functionAndParams = splitAndTrim(attributes.get(2).replace(END_PARAMS_MARK, ""),
+            List<String> functionAndParams = splitAndTrim(attributes.get(2).replace(END_PARAMS_MARK, StringUtils.EMPTY),
                     "\\" + BEGIN_PARAMS_MARK);
             String function = functionAndParams.get(0);
 
@@ -398,14 +412,9 @@ public class DataTableMB {
     }
 
     /**
-     * <p>
      * Constroi uma chamada JS a partir de um {@link DataTableActionEvents}, passando como parametros indices
      * especificos do paramName, passado por parametro, ou ele inteiro.
-     * </p>
-     * <p>
      * Exemplo:
-     * </p>
-     *
      * <pre>
      * {@code
      *      DataTableActionEvents defs;
@@ -491,7 +500,7 @@ public class DataTableMB {
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern(datePattern);
             return formatter.format((TemporalAccessor) value);
         } else {
-            return value == null ? "" : value.toString();
+            return value == null ? StringUtils.EMPTY : value.toString();
         }
     }
 

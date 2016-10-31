@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.arr.persistence.repository.BancoAgenciasRepository
-	c30196 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.BancoAgenciasRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./BancoAgenciasRepository.html">
+	c38619 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.BancoAgenciasRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./BancoAgenciasRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BancoAgenciasRepository </td></tr>
 		</table></td></tr>
@@ -31,9 +31,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./BancoAgenciasRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.arr.persistence.repository.BancoAgenciasRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.BancoAgencias, br.gov.to.sefaz.arr.persistence.entity.BancoAgenciasPK>
-	c30319:p -> c30196:p [dir=back,arrowtail=empty];
+	c38746:p -> c38619:p [dir=back,arrowtail=empty];
 	// br.gov.to.sefaz.persistence.repository.BaseRepository<E, I extends java.io.Serializable>
-	c30319 [label=<<table title="br.gov.to.sefaz.persistence.repository.BaseRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/persistence/repository/BaseRepository.html">
+	c38746 [label=<<table title="br.gov.to.sefaz.persistence.repository.BaseRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/persistence/repository/BaseRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> BaseRepository&lt;E, I extends Serializable&gt; </font></td></tr>
 		</table></td></tr>

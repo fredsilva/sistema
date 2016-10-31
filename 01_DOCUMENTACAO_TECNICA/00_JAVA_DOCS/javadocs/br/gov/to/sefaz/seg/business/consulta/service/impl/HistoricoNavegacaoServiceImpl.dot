@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.consulta.service.HistoricoNavegacaoService
-	c457555 [label=<<table title="br.gov.to.sefaz.seg.business.consulta.service.HistoricoNavegacaoService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../HistoricoNavegacaoService.html">
+	c594226 [label=<<table title="br.gov.to.sefaz.seg.business.consulta.service.HistoricoNavegacaoService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../HistoricoNavegacaoService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> HistoricoNavegacaoService </td></tr>
@@ -23,7 +23,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../HistoricoNavegacaoService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.consulta.service.impl.HistoricoNavegacaoServiceImpl
-	c457560 [label=<<table title="br.gov.to.sefaz.seg.business.consulta.service.impl.HistoricoNavegacaoServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./HistoricoNavegacaoServiceImpl.html">
+	c594231 [label=<<table title="br.gov.to.sefaz.seg.business.consulta.service.impl.HistoricoNavegacaoServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./HistoricoNavegacaoServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HistoricoNavegacaoServiceImpl </td></tr>
 		</table></td></tr>
@@ -36,6 +36,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./HistoricoNavegacaoServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.business.consulta.service.impl.HistoricoNavegacaoServiceImpl implements br.gov.to.sefaz.seg.business.consulta.service.HistoricoNavegacaoService
-	c457555:p -> c457560:p [dir=back,arrowtail=empty,style=dashed];
+	c594226:p -> c594231:p [dir=back,arrowtail=empty,style=dashed];
 }
 

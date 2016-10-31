@@ -16,8 +16,8 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + LOGIN_CONTEXT : String </td></tr>
+<tr><td align="left" balign="left"> + SOLICITACAO_AUTORIZACAO_SENHA_CONTEXT : String </td></tr>
 <tr><td align="left" balign="left"> + CHANGE_PASSWD_CONTEXT : String </td></tr>
-<tr><td align="left" balign="left"> + SAVE_USUARIO_JUSTIFICATIVA_CONTEXT : String </td></tr>
 <tr><td align="left" balign="left"> + ATIVAR_INATIVAR_PERFIL_FILTER_CONTEXT : String </td></tr>
 <tr><td align="left" balign="left"> + ATRIBUIR_PERFIL_FILTER_CONTEXT : String </td></tr>
 <tr><td align="left" balign="left"> + MANTER_USUARIO_SISTEMA_FILTER_CONTEXT : String </td></tr>
@@ -36,11 +36,10 @@ digraph G {
 <tr><td align="left" balign="left"> + findAllUsuarioSistema(filter : UsuarioSistemaFilter) : List&lt;UsuarioSistema&gt; </td></tr>
 <tr><td align="left" balign="left"> + saveNewUsuarioSistemaSolicitacaoSenha(usuarioSistema : UsuarioSistema) </td></tr>
 <tr><td align="left" balign="left"> + save(entity : UsuarioSistema) : UsuarioSistema </td></tr>
+<tr><td align="left" balign="left"> + update(entity : UsuarioSistema) : UsuarioSistema </td></tr>
 <tr><td align="left" balign="left"> + findAllUsuarioSistemaPerfil(filter : AtivarInativarPerfilFilter) : List&lt;UsuarioSistema&gt; </td></tr>
 <tr><td align="left" balign="left"> + findAllUsuarioSistemaManutencao(filter : ManterUsuarioSistemaFilter) : List&lt;UsuarioSistema&gt; </td></tr>
 <tr><td align="left" balign="left"> + updateStatusUsuario(usuarioSistema : UsuarioSistema) : UsuarioSistema </td></tr>
-<tr><td align="left" balign="left"> + updateUsuarioSistema(usuarioSistema : UsuarioSistema) : UsuarioSistema </td></tr>
-<tr><td align="left" balign="left"> + saveUsuarioSistema(usuarioSistema : UsuarioSistema) : UsuarioSistema </td></tr>
 <tr><td align="left" balign="left"> + enableUser(usuarioSistema : UsuarioSistema) </td></tr>
 <tr><td align="left" balign="left"> + countByTipoUsuario(tipoUsuario : TipoUsuario) : Long </td></tr>
 <tr><td align="left" balign="left"> + findAllByFilter(filter : AtribuirPerfilFilter) : Collection&lt;UsuarioSistema&gt; </td></tr>
@@ -72,7 +71,8 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + UsuarioPostoTrabalhoServiceImpl(usuarioPostoTrabalhoRepository : UsuarioPostoTrabalhoRepository) </td></tr>
 <tr><td align="left" balign="left"> + findAll() : Collection&lt;UsuarioPostoTrabalho&gt; </td></tr>
-<tr><td align="left" balign="left"> + removeUsuarioPostoTrabalho(cpf : String, postoTrabalho : PostoTrabalho) : Optional&lt;UsuarioPostoTrabalho&gt; </td></tr>
+<tr><td align="left" balign="left"> + saveOrUpdate(cpf : String, identificacaoPostoTrabalho : Integer) : UsuarioPostoTrabalho </td></tr>
+<tr><td align="left" balign="left"> + removeUsuarioPostoTrabalho(cpf : String, identificacaoPostoTrabalho : Integer) : Optional&lt;UsuarioPostoTrabalho&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./UsuarioPostoTrabalhoServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioPerfilServiceImpl
@@ -86,9 +86,7 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + UsuarioPerfilServiceImpl(repository : UsuarioPerfilRepository) </td></tr>
 <tr><td align="left" balign="left"> + buildProfileString(allUsuarioSistema : Collection&lt;UsuarioSistema&gt;) </td></tr>
-<tr><td align="left" balign="left"> + update(list : Collection&lt;UsuarioPerfil&gt;) : Collection&lt;UsuarioPerfil&gt; </td></tr>
 <tr><td align="left" balign="left"> + getAllUsuarioPerfilByCpf(cpfUsuario : String) : Collection&lt;UsuarioPerfil&gt; </td></tr>
-<tr><td align="left" balign="left"> + updateUsuarioPerfil(usuarioPerfilList : Collection&lt;UsuarioPerfil&gt;) </td></tr>
 <tr><td align="left" balign="left"> + deleteAllWithPerfilId(id : Long) </td></tr>
 <tr><td align="left" balign="left"> + findAllUsuariosPerfilByPerfilId(identificacaoPerfil : Long) : Collection&lt;UsuarioPerfil&gt; </td></tr>
 <tr><td align="left" balign="left"> + findAllPerfilById(cpfUsuario : String) : Set&lt;UsuarioPerfil&gt; </td></tr>
@@ -106,11 +104,12 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + UnidadeOrganizacionalServiceImpl(repository : UnidadeOrganizacionalRepository, parametroGeralService : ParametroGeralService) </td></tr>
-<tr><td align="left" balign="left"> + findAll(filter : UnidadeOrganizacionalFilter) : List&lt;UnidadeOrganizacional&gt; </td></tr>
+<tr><td align="left" balign="left"> + findByFilter(filter : UnidadeOrganizacionalFilter) : List&lt;UnidadeOrganizacional&gt; </td></tr>
 <tr><td align="left" balign="left"> + save(entity : UnidadeOrganizacional) : UnidadeOrganizacional </td></tr>
 <tr><td align="left" balign="left"> + update(entity : UnidadeOrganizacional) : UnidadeOrganizacional </td></tr>
 <tr><td align="left" balign="left"> + delete(id : Long) : Optional&lt;UnidadeOrganizacional&gt; </td></tr>
 <tr><td align="left" balign="left"> + findTiposUnidades() : List&lt;TipoUnidade&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllByTipoUnidade(characters : Character[]) : List&lt;UnidadeOrganizacional&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./UnidadeOrganizacionalServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.impl.TipoUsuarioServiceImpl
@@ -272,12 +271,12 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + OpcaoAplicacaoServiceImpl(repository : OpcaoAplicacaoRepository) </td></tr>
+<tr><td align="left" balign="left"> + OpcaoAplicacaoServiceImpl(repository : OpcaoAplicacaoRepository, aplicacaoModuloRepository : AplicacaoModuloRepository) </td></tr>
 <tr><td align="left" balign="left"> + findByFilter(filter : OpcaoAplicacaoFilter) : List&lt;OpcaoAplicacao&gt; </td></tr>
 <tr><td align="left" balign="left"> + findAllOpcoes() : List&lt;OpcaoAplicacao&gt; </td></tr>
 <tr><td align="left" balign="left"> + findAllFromPerfilUsuario() : List&lt;OpcaoAplicacao&gt; </td></tr>
 <tr><td align="left" balign="left"> + save(entity : OpcaoAplicacao) : OpcaoAplicacao </td></tr>
-<tr><td align="left" balign="left"> + update(entity : OpcaoAplicacao) : OpcaoAplicacao </td></tr>
+<tr><td align="left" balign="left"> + update(opcaoAplicacao : OpcaoAplicacao) : OpcaoAplicacao </td></tr>
 		</table></td></tr>
 		</table>>, URL="./OpcaoAplicacaoServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.impl.ModuloSistemaServiceImpl

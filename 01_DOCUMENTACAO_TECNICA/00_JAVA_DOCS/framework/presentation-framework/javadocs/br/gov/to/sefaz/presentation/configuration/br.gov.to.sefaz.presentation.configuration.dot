@@ -9,8 +9,33 @@ digraph G {
 	node [fontname="arial",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// br.gov.to.sefaz.presentation.configuration.WebServiceMvcConfigurationSupport
+	c33 [label=<<table title="br.gov.to.sefaz.presentation.configuration.WebServiceMvcConfigurationSupport" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WebServiceMvcConfigurationSupport.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> WebServiceMvcConfigurationSupport </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + WebServiceMvcConfigurationSupport() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./WebServiceMvcConfigurationSupport.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.presentation.configuration.WebServiceApplicationInitializer
+	c34 [label=<<table title="br.gov.to.sefaz.presentation.configuration.WebServiceApplicationInitializer" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WebServiceApplicationInitializer.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> WebServiceApplicationInitializer </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + WebServiceApplicationInitializer() </td></tr>
+<tr><td align="left" balign="left"> + onStartup(servletContext : ServletContext) </td></tr>
+		</table></td></tr>
+		</table>>, URL="./WebServiceApplicationInitializer.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.presentation.configuration.PresentationConfiguration
-	c30 [label=<<table title="br.gov.to.sefaz.presentation.configuration.PresentationConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PresentationConfiguration.html">
+	c35 [label=<<table title="br.gov.to.sefaz.presentation.configuration.PresentationConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PresentationConfiguration.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PresentationConfiguration </td></tr>
 		</table></td></tr>

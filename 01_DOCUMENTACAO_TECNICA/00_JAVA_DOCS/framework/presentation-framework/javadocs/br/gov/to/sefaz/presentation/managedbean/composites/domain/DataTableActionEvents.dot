@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.presentation.managedbean.composites.domain.JsFunctionSignature
-	c511 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.composites.domain.JsFunctionSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./JsFunctionSignature.html">
+	c570 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.composites.domain.JsFunctionSignature" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./JsFunctionSignature.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> JsFunctionSignature </td></tr>
@@ -24,7 +24,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./JsFunctionSignature.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.presentation.managedbean.composites.domain.DataTableActionEvents
-	c515 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.composites.domain.DataTableActionEvents" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DataTableActionEvents.html">
+	c574 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.composites.domain.DataTableActionEvents" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DataTableActionEvents.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DataTableActionEvents </td></tr>
 		</table></td></tr>
@@ -45,6 +45,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./DataTableActionEvents.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.presentation.managedbean.composites.domain.DataTableActionEvents implements br.gov.to.sefaz.presentation.managedbean.composites.domain.JsFunctionSignature
-	c511:p -> c515:p [dir=back,arrowtail=empty,style=dashed];
+	c570:p -> c574:p [dir=back,arrowtail=empty,style=dashed];
 }
 

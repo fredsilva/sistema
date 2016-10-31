@@ -9,29 +9,29 @@ digraph G {
 	node [fontname="arial",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
-	// br.gov.to.sefaz.exception.UnexpectedErrorException
-	c19 [label=<<table title="br.gov.to.sefaz.exception.UnexpectedErrorException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./UnexpectedErrorException.html">
+	// br.gov.to.sefaz.exception.InterceptedErrorException
+	c24 [label=<<table title="br.gov.to.sefaz.exception.InterceptedErrorException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./InterceptedErrorException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> UnexpectedErrorException </td></tr>
+<tr><td align="center" balign="center"> InterceptedErrorException </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + UnexpectedErrorException(message : String) </td></tr>
-<tr><td align="left" balign="left"> + UnexpectedErrorException(message : String, cause : Throwable) </td></tr>
-<tr><td align="left" balign="left"> + UnexpectedErrorException(cause : Throwable) </td></tr>
+<tr><td align="left" balign="left"> + InterceptedErrorException(message : String) </td></tr>
+<tr><td align="left" balign="left"> + InterceptedErrorException(message : String, cause : Throwable) </td></tr>
+<tr><td align="left" balign="left"> + InterceptedErrorException(cause : Throwable) </td></tr>
 		</table></td></tr>
-		</table>>, URL="./UnexpectedErrorException.html", fontname="arial", fontcolor="black", fontsize=10.0];
+		</table>>, URL="./InterceptedErrorException.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.exception.HandledSystemException
-	c20 [label=<<table title="br.gov.to.sefaz.exception.HandledSystemException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./HandledSystemException.html">
+	c25 [label=<<table title="br.gov.to.sefaz.exception.HandledSystemException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./HandledSystemException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> HandledSystemException </td></tr>
 		</table></td></tr>
 		</table>>, URL="./HandledSystemException.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.exception.BusinessException
-	c21 [label=<<table title="br.gov.to.sefaz.exception.BusinessException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BusinessException.html">
+	c26 [label=<<table title="br.gov.to.sefaz.exception.BusinessException" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BusinessException.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BusinessException </td></tr>
 		</table></td></tr>
@@ -43,9 +43,9 @@ digraph G {
 <tr><td align="left" balign="left"> + BusinessException(message : String, cause : Throwable) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./BusinessException.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	//br.gov.to.sefaz.exception.UnexpectedErrorException implements br.gov.to.sefaz.exception.HandledSystemException
-	c20:p -> c19:p [dir=back,arrowtail=empty,style=dashed];
+	//br.gov.to.sefaz.exception.InterceptedErrorException implements br.gov.to.sefaz.exception.HandledSystemException
+	c25:p -> c24:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.exception.BusinessException implements br.gov.to.sefaz.exception.HandledSystemException
-	c20:p -> c21:p [dir=back,arrowtail=empty,style=dashed];
+	c25:p -> c26:p [dir=back,arrowtail=empty,style=dashed];
 }
 

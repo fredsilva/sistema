@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.facade.CrudFacade<E, I extends java.io.Serializable>
-	c907804 [label=<<table title="br.gov.to.sefaz.business.facade.CrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../business/facade/CrudFacade.html">
+	c1121035 [label=<<table title="br.gov.to.sefaz.business.facade.CrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../business/facade/CrudFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CrudFacade&lt;E, I extends Serializable&gt; </td></tr>
@@ -24,12 +24,13 @@ digraph G {
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + save(entity : E) : E </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + save(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + update(entity : E) : E </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + update(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + delete(id : I) : Optional&lt;E&gt; </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + delete(list : Iterable&lt;I&gt;) </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../../business/facade/CrudFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.facade.UsuarioSistemaFacade
-	c907900 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.UsuarioSistemaFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UsuarioSistemaFacade.html">
+	c1121141 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.UsuarioSistemaFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UsuarioSistemaFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> UsuarioSistemaFacade </td></tr>
@@ -42,15 +43,13 @@ digraph G {
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllTipoUsuario() : Collection&lt;TipoUsuario&gt; </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllEstados() : Collection&lt;Estado&gt; </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findMunicipiosByUF(uf : String) : Collection&lt;Municipio&gt; </font></td></tr>
-<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findUnidadeOrganizacional() : UnidadeOrganizacional </font></td></tr>
-<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + saveNewUsuarioSistema(usuarioSistema : UsuarioSistema) </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + saveNewUsuarioSistemaSolicitacaoSenha(usuarioSistema : UsuarioSistema) </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + changePassword(dto : ChangePasswordDto) </font></td></tr>
-<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findOneUsuarioSistema(cpf : String) : UsuarioSistema </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllLogradouros() : Collection&lt;Logradouro&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./UsuarioSistemaFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.facade.impl.UsuarioSistemaFacadeImpl
-	c907914 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.UsuarioSistemaFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/UsuarioSistemaFacadeImpl.html">
+	c1121155 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.UsuarioSistemaFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/UsuarioSistemaFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UsuarioSistemaFacadeImpl </td></tr>
 		</table></td></tr>
@@ -63,16 +62,14 @@ digraph G {
 <tr><td align="left" balign="left"> + findAllTipoUsuario() : Collection&lt;TipoUsuario&gt; </td></tr>
 <tr><td align="left" balign="left"> + findAllEstados() : Collection&lt;Estado&gt; </td></tr>
 <tr><td align="left" balign="left"> + findMunicipiosByUF(uf : String) : Collection&lt;Municipio&gt; </td></tr>
-<tr><td align="left" balign="left"> + findUnidadeOrganizacional() : UnidadeOrganizacional </td></tr>
-<tr><td align="left" balign="left"> + saveNewUsuarioSistema(usuarioSistema : UsuarioSistema) </td></tr>
-<tr><td align="left" balign="left"> + findOneUsuarioSistema(cpf : String) : UsuarioSistema </td></tr>
+<tr><td align="left" balign="left"> + saveNewUsuarioSistemaSolicitacaoSenha(usuarioSistema : UsuarioSistema) </td></tr>
 <tr><td align="left" balign="left"> + changePassword(dto : ChangePasswordDto) </td></tr>
 <tr><td align="left" balign="left"> + findAllLogradouros() : Collection&lt;Logradouro&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./impl/UsuarioSistemaFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.business.gestao.facade.UsuarioSistemaFacade implements br.gov.to.sefaz.business.facade.CrudFacade<E, I extends java.io.Serializable>
-	c907804:p -> c907900:p [dir=back,arrowtail=empty,style=dashed];
+	c1121035:p -> c1121141:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.seg.business.gestao.facade.impl.UsuarioSistemaFacadeImpl implements br.gov.to.sefaz.seg.business.gestao.facade.UsuarioSistemaFacade
-	c907900:p -> c907914:p [dir=back,arrowtail=empty,style=dashed];
+	c1121141:p -> c1121155:p [dir=back,arrowtail=empty,style=dashed];
 }
 

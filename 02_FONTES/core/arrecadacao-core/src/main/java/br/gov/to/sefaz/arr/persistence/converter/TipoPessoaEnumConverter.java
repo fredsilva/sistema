@@ -2,6 +2,7 @@ package br.gov.to.sefaz.arr.persistence.converter;
 
 import br.gov.to.sefaz.arr.persistence.enums.TipoPessoaEnum;
 
+import java.util.Objects;
 import javax.persistence.AttributeConverter;
 
 /**
@@ -13,8 +14,8 @@ import javax.persistence.AttributeConverter;
  */
 public class TipoPessoaEnumConverter implements AttributeConverter<TipoPessoaEnum, Integer> {
     @Override
-    public Integer convertToDatabaseColumn(TipoPessoaEnum attribute) {
-        return attribute.getCode();
+    public Integer convertToDatabaseColumn(TipoPessoaEnum tipoPessoa) {
+        return Objects.nonNull(tipoPessoa) ? tipoPessoa.getCode() : null;
     }
 
     @Override

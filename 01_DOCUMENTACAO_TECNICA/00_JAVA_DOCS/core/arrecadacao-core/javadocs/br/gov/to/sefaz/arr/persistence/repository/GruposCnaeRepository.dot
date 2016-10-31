@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.arr.persistence.repository.GruposCnaeRepository
-	c68185 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.GruposCnaeRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./GruposCnaeRepository.html">
+	c90546 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.GruposCnaeRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./GruposCnaeRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> GruposCnaeRepository </td></tr>
 		</table></td></tr>
@@ -24,9 +24,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./GruposCnaeRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.arr.persistence.repository.GruposCnaeRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.GruposCnae, br.gov.to.sefaz.arr.persistence.entity.GruposCnaePK>
-	c68318:p -> c68185:p [dir=back,arrowtail=empty];
+	c90686:p -> c90546:p [dir=back,arrowtail=empty];
 	// br.gov.to.sefaz.persistence.repository.BaseRepository<E, I extends java.io.Serializable>
-	c68318 [label=<<table title="br.gov.to.sefaz.persistence.repository.BaseRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/persistence/repository/BaseRepository.html">
+	c90686 [label=<<table title="br.gov.to.sefaz.persistence.repository.BaseRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/persistence/repository/BaseRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> BaseRepository&lt;E, I extends Serializable&gt; </font></td></tr>
 		</table></td></tr>

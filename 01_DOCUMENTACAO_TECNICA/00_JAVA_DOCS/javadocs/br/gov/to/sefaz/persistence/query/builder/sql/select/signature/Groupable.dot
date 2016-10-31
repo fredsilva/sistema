@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Selectable<S, J, G, O, W>
-	c434628 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Selectable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Selectable.html">
+	c567818 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Selectable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Selectable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Selectable&lt;S, J, G, O, W&gt; </td></tr>
@@ -24,7 +24,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Selectable.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Groupable<R>
-	c434631 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Groupable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Groupable.html">
+	c567821 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Groupable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Groupable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Groupable&lt;R&gt; </td></tr>
@@ -37,6 +37,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Groupable.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Selectable<S, J, G, O, W> implements br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Groupable<R>
-	c434631:p -> c434628:p [dir=back,arrowtail=empty,style=dashed];
+	c567821:p -> c567818:p [dir=back,arrowtail=empty,style=dashed];
 }
 

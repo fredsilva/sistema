@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.repository.BaseRepository<E, I extends java.io.Serializable>
-	c742185 [label=<<table title="br.gov.to.sefaz.persistence.repository.BaseRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/repository/BaseRepository.html">
+	c924629 [label=<<table title="br.gov.to.sefaz.persistence.repository.BaseRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/repository/BaseRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> BaseRepository&lt;E, I extends Serializable&gt; </font></td></tr>
 		</table></td></tr>
@@ -69,7 +69,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../persistence/repository/BaseRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.ReceitasTaxasRepository
-	c742728 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.ReceitasTaxasRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ReceitasTaxasRepository.html">
+	c925218 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.ReceitasTaxasRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ReceitasTaxasRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ReceitasTaxasRepository </td></tr>
 		</table></td></tr>
@@ -84,6 +84,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ReceitasTaxasRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.arr.persistence.repository.ReceitasTaxasRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.ReceitasTaxas, br.gov.to.sefaz.arr.persistence.entity.ReceitasTaxasPK>
-	c742185:p -> c742728:p [dir=back,arrowtail=empty];
+	c924629:p -> c925218:p [dir=back,arrowtail=empty];
 }
 

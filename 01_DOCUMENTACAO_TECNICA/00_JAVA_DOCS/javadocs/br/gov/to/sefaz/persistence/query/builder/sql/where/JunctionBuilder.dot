@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.query.builder.sql.where.JunctionBuilder<T>
-	c482821 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.where.JunctionBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./JunctionBuilder.html">
+	c624209 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.where.JunctionBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./JunctionBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> JunctionBuilder&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -22,7 +22,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./JunctionBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractJunctionBuilder<W extends br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractWhereBuilder<?, T, ?>, T>
-	c482824 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractJunctionBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractJunctionBuilder.html">
+	c624212 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractJunctionBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractJunctionBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractJunctionBuilder&lt;W extends AbstractWhereBuilder&lt;?, T, ?&gt;, T&gt; </font></td></tr>
 		</table></td></tr>
@@ -38,6 +38,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./AbstractJunctionBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.persistence.query.builder.sql.where.JunctionBuilder<T> extends br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractJunctionBuilder<br.gov.to.sefaz.persistence.query.builder.sql.where.WhereBuilder<T>, T>
-	c482824:p -> c482821:p [dir=back,arrowtail=empty];
+	c624212:p -> c624209:p [dir=back,arrowtail=empty];
 }
 

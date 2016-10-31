@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.query.builder.sql.where.WhereHandler
-	c35999 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.where.WhereHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WhereHandler.html">
+	c43842 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.where.WhereHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WhereHandler.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> WhereHandler </td></tr>
@@ -23,7 +23,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./WhereHandler.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.sql.where.WhereBuilder<T>
-	c36000 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.where.WhereBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WhereBuilder.html">
+	c43843 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.where.WhereBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./WhereBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> WhereBuilder&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -35,7 +35,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./WhereBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.sql.where.JunctionBuilder<T>
-	c36001 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.where.JunctionBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./JunctionBuilder.html">
+	c43844 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.where.JunctionBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./JunctionBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> JunctionBuilder&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -47,7 +47,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./JunctionBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.sql.where.ConditionModifier
-	c36002 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.where.ConditionModifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConditionModifier.html">
+	c43845 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.where.ConditionModifier" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConditionModifier.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> ConditionModifier </td></tr>
@@ -61,7 +61,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ConditionModifier.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractWhereBuilder<W extends br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractWhereBuilder<W, T, J>, T, J extends br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractJunctionBuilder<W, T>>
-	c36003 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractWhereBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractWhereBuilder.html">
+	c43846 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractWhereBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractWhereBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractWhereBuilder&lt;W extends AbstractWhereBuilder&lt;W, T, J&gt;, T, J extends AbstractJunctionBuilder&lt;W, T&gt;&gt; </font></td></tr>
 		</table></td></tr>
@@ -101,7 +101,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./AbstractWhereBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractJunctionBuilder<W extends br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractWhereBuilder<?, T, ?>, T>
-	c36004 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractJunctionBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractJunctionBuilder.html">
+	c43847 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractJunctionBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AbstractJunctionBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractJunctionBuilder&lt;W extends AbstractWhereBuilder&lt;?, T, ?&gt;, T&gt; </font></td></tr>
 		</table></td></tr>
@@ -117,8 +117,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./AbstractJunctionBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.persistence.query.builder.sql.where.WhereBuilder<T> extends br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractWhereBuilder<br.gov.to.sefaz.persistence.query.builder.sql.where.WhereBuilder<T>, T, br.gov.to.sefaz.persistence.query.builder.sql.where.JunctionBuilder<T>>
-	c36003:p -> c36000:p [dir=back,arrowtail=empty];
+	c43846:p -> c43843:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.persistence.query.builder.sql.where.JunctionBuilder<T> extends br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractJunctionBuilder<br.gov.to.sefaz.persistence.query.builder.sql.where.WhereBuilder<T>, T>
-	c36004:p -> c36001:p [dir=back,arrowtail=empty];
+	c43847:p -> c43844:p [dir=back,arrowtail=empty];
 }
 

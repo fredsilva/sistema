@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.arr.persistence.repository.ResumoStrRepository
-	c118037 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.ResumoStrRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ResumoStrRepository.html">
+	c148300 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.ResumoStrRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ResumoStrRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ResumoStrRepository </td></tr>
 		</table></td></tr>
@@ -22,9 +22,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ResumoStrRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.arr.persistence.repository.ResumoStrRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.ResumoStr, br.gov.to.sefaz.arr.persistence.entity.ResumoStrPK>
-	c118188:p -> c118037:p [dir=back,arrowtail=empty];
+	c148459:p -> c148300:p [dir=back,arrowtail=empty];
 	// br.gov.to.sefaz.persistence.repository.BaseRepository<E, I extends java.io.Serializable>
-	c118188 [label=<<table title="br.gov.to.sefaz.persistence.repository.BaseRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/persistence/repository/BaseRepository.html">
+	c148459 [label=<<table title="br.gov.to.sefaz.persistence.repository.BaseRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/persistence/repository/BaseRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> BaseRepository&lt;E, I extends Serializable&gt; </font></td></tr>
 		</table></td></tr>

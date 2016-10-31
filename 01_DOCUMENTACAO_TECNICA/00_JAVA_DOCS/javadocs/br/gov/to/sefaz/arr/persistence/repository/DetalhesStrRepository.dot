@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.repository.BaseRepository<E, I extends java.io.Serializable>
-	c389124 [label=<<table title="br.gov.to.sefaz.persistence.repository.BaseRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/repository/BaseRepository.html">
+	c507597 [label=<<table title="br.gov.to.sefaz.persistence.repository.BaseRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/repository/BaseRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> BaseRepository&lt;E, I extends Serializable&gt; </font></td></tr>
 		</table></td></tr>
@@ -69,7 +69,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../persistence/repository/BaseRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.DetalhesStrRepository
-	c389684 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.DetalhesStrRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DetalhesStrRepository.html">
+	c508204 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.DetalhesStrRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DetalhesStrRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DetalhesStrRepository </td></tr>
 		</table></td></tr>
@@ -81,6 +81,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./DetalhesStrRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.arr.persistence.repository.DetalhesStrRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.DetalheStr, java.lang.Long>
-	c389124:p -> c389684:p [dir=back,arrowtail=empty];
+	c507597:p -> c508204:p [dir=back,arrowtail=empty];
 }
 

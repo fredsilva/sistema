@@ -30,6 +30,7 @@ digraph G {
 <tr><td align="left" balign="left"> + setIdentificacaoOpcaoApplicacao(identificacaoOpcaoApplicacao : Long) </td></tr>
 <tr><td align="left" balign="left"> + getIdentificacaoOpcaoApplicacao() : Long </td></tr>
 <tr><td align="left" balign="left"> + toggleOpcaoAplicacao() </td></tr>
+<tr><td align="left" balign="left"> + clearDto() </td></tr>
 <tr><td align="left" balign="left"> + save() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ManterProcuracaoMB.html", fontname="arial", fontcolor="black", fontsize=10.0];

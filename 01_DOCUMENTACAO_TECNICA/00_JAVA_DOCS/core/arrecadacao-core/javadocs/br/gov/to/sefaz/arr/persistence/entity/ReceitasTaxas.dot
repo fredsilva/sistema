@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.arr.persistence.entity.ReceitasTaxas
-	c115180 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ReceitasTaxas" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ReceitasTaxas.html">
+	c145126 [label=<<table title="br.gov.to.sefaz.arr.persistence.entity.ReceitasTaxas" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ReceitasTaxas.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ReceitasTaxas </td></tr>
 		</table></td></tr>
@@ -47,9 +47,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ReceitasTaxas.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.arr.persistence.entity.ReceitasTaxas extends br.gov.to.sefaz.persistence.entity.AbstractEntity<br.gov.to.sefaz.arr.persistence.entity.ReceitasTaxasPK>
-	c115397:p -> c115180:p [dir=back,arrowtail=empty];
+	c145356:p -> c145126:p [dir=back,arrowtail=empty];
 	// br.gov.to.sefaz.persistence.entity.AbstractEntity<I extends java.io.Serializable>
-	c115397 [label=<<table title="br.gov.to.sefaz.persistence.entity.AbstractEntity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/persistence/entity/AbstractEntity.html">
+	c145356 [label=<<table title="br.gov.to.sefaz.persistence.entity.AbstractEntity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/persistence/entity/AbstractEntity.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractEntity&lt;I extends Serializable&gt; </font></td></tr>
 		</table></td></tr>

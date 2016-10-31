@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.authentication.handler.LdapHandler
-	c81675 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.handler.LdapHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LdapHandler.html">
+	c95494 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.handler.LdapHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LdapHandler.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LdapHandler </td></tr>
 		</table></td></tr>
@@ -24,7 +24,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./LdapHandler.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.authentication.handler.LdapHandler.LdapProperties
-	c81676 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.handler.LdapHandler.LdapProperties" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LdapHandler.LdapProperties.html">
+	c95495 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.handler.LdapHandler.LdapProperties" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LdapHandler.LdapProperties.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LdapProperties </td></tr>
 		</table></td></tr>
@@ -52,7 +52,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./LdapHandler.LdapProperties.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.authentication.handler.AuthenticatedUserHandler
-	c81677 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.handler.AuthenticatedUserHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AuthenticatedUserHandler.html">
+	c95496 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.handler.AuthenticatedUserHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AuthenticatedUserHandler.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AuthenticatedUserHandler </td></tr>
 		</table></td></tr>

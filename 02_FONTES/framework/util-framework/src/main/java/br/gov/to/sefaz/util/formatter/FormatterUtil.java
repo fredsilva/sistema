@@ -8,6 +8,7 @@ import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.Objects;
 
 /**
  * Classe util para realização de formatação de valores.
@@ -35,7 +36,7 @@ public class FormatterUtil {
      * Formata uma data em um formato desejado.
      *
      * @param format Formato da data desejado
-     * @param date data a ser formatada
+     * @param date   data a ser formatada
      * @return data formatada
      */
     public static String formatDate(String format, LocalDate date) {
@@ -57,7 +58,7 @@ public class FormatterUtil {
      * Formata um data hora  de acordo com o formato desejado.
      *
      * @param format Formato da data hora  desejado
-     * @param date data hora a ser formatada
+     * @param date   data hora a ser formatada
      * @return data hora  formatada
      */
     public static String formatDateTime(String format, LocalDateTime date) {
@@ -96,6 +97,16 @@ public class FormatterUtil {
     }
 
     /**
+     * Formata uma incrição estadual de tocantins.
+     *
+     * @param inscricao incrição estadual, sem máscara
+     * @return incrição estadual formatado, com máscara
+     */
+    public static String formatInscricaoEstadual(Long inscricao) {
+        return inscricao.toString().replaceAll("(\\d{8})(\\d)", "$1-$2");
+    }
+
+    /**
      * Converte um número em uma String formatada.
      * Se o número tiver decimais, formata para sempre mostrar os dígitos.
      *
@@ -110,6 +121,20 @@ public class FormatterUtil {
         }
 
         return numberFormat.format(value);
+    }
+
+    /**
+     * Converte um período ANOMES em uma String formatada em Mês/Ano.
+     * Exemplo:
+     * periodo = 201610
+     * retorno = 10/2016
+     *
+     * @param periodo período a ser formatado
+     * @return mês/ano do período informado
+     */
+    public static String formatPeriodoMesAno(Integer periodo) {
+        return Objects.isNull(periodo) ? null :
+                periodo.toString().replaceAll("(\\d{4})(\\d{2})", "$2/$1");
     }
 
 }

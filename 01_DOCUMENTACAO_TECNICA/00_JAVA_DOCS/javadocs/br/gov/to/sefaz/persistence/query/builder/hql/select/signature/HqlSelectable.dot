@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.query.builder.hql.select.HqlSelectBuilder
-	c470524 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.select.HqlSelectBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../HqlSelectBuilder.html">
+	c608623 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.select.HqlSelectBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../HqlSelectBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HqlSelectBuilder </td></tr>
 		</table></td></tr>
@@ -52,14 +52,14 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../HqlSelectBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.hql.select.signature.HqlSelectable<S, J, G, O, W>
-	c470527 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.select.signature.HqlSelectable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./HqlSelectable.html">
+	c608626 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.select.signature.HqlSelectable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./HqlSelectable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> HqlSelectable&lt;S, J, G, O, W&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./HqlSelectable.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.hql.select.signature.HqlOrderable<R>
-	c470528 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.select.signature.HqlOrderable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./HqlOrderable.html">
+	c608627 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.select.signature.HqlOrderable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./HqlOrderable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> HqlOrderable&lt;R&gt; </td></tr>
@@ -72,7 +72,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./HqlOrderable.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.hql.select.signature.HqlJoinable<R>
-	c470529 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.select.signature.HqlJoinable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./HqlJoinable.html">
+	c608628 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.select.signature.HqlJoinable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./HqlJoinable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> HqlJoinable&lt;R&gt; </td></tr>
@@ -93,7 +93,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./HqlJoinable.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.hql.select.signature.HqlGroupable<R>
-	c470530 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.select.signature.HqlGroupable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./HqlGroupable.html">
+	c608629 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.select.signature.HqlGroupable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./HqlGroupable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> HqlGroupable&lt;R&gt; </td></tr>
@@ -106,7 +106,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./HqlGroupable.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.hql.select.signature.HqlConditionable<R>
-	c470531 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.select.signature.HqlConditionable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./HqlConditionable.html">
+	c608630 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.select.signature.HqlConditionable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./HqlConditionable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> HqlConditionable&lt;R&gt; </td></tr>
@@ -119,7 +119,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./HqlConditionable.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Selectable<S, J, G, O, W>
-	c470546 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Selectable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../sql/select/signature/Selectable.html">
+	c608645 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Selectable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../sql/select/signature/Selectable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Selectable&lt;S, J, G, O, W&gt; </td></tr>
@@ -133,16 +133,16 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../sql/select/signature/Selectable.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.persistence.query.builder.hql.select.HqlSelectBuilder implements br.gov.to.sefaz.persistence.query.builder.hql.select.signature.HqlSelectable<S, J, G, O, W>
-	c470527:p -> c470524:p [dir=back,arrowtail=empty,style=dashed];
+	c608626:p -> c608623:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.persistence.query.builder.hql.select.signature.HqlSelectable<S, J, G, O, W> implements br.gov.to.sefaz.persistence.query.builder.sql.select.signature.Selectable<S, J, G, O, W>
-	c470546:p -> c470527:p [dir=back,arrowtail=empty,style=dashed];
+	c608645:p -> c608626:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.persistence.query.builder.hql.select.signature.HqlSelectable<S, J, G, O, W> implements br.gov.to.sefaz.persistence.query.builder.hql.select.signature.HqlJoinable<R>
-	c470529:p -> c470527:p [dir=back,arrowtail=empty,style=dashed];
+	c608628:p -> c608626:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.persistence.query.builder.hql.select.signature.HqlSelectable<S, J, G, O, W> implements br.gov.to.sefaz.persistence.query.builder.hql.select.signature.HqlGroupable<R>
-	c470530:p -> c470527:p [dir=back,arrowtail=empty,style=dashed];
+	c608629:p -> c608626:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.persistence.query.builder.hql.select.signature.HqlSelectable<S, J, G, O, W> implements br.gov.to.sefaz.persistence.query.builder.hql.select.signature.HqlOrderable<R>
-	c470528:p -> c470527:p [dir=back,arrowtail=empty,style=dashed];
+	c608627:p -> c608626:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.persistence.query.builder.hql.select.signature.HqlSelectable<S, J, G, O, W> implements br.gov.to.sefaz.persistence.query.builder.hql.select.signature.HqlConditionable<R>
-	c470531:p -> c470527:p [dir=back,arrowtail=empty,style=dashed];
+	c608630:p -> c608626:p [dir=back,arrowtail=empty,style=dashed];
 }
 

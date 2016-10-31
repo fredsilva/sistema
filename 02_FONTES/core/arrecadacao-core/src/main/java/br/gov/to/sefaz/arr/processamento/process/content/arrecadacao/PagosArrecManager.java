@@ -1,5 +1,6 @@
 package br.gov.to.sefaz.arr.processamento.process.content.arrecadacao;
 
+import br.gov.to.sefaz.arr.dare.service.DareService;
 import br.gov.to.sefaz.arr.persistence.entity.ArquivoDetalhePagos;
 import br.gov.to.sefaz.arr.persistence.entity.ArquivoRecepcao;
 import br.gov.to.sefaz.arr.persistence.entity.Dare;
@@ -12,7 +13,6 @@ import br.gov.to.sefaz.arr.processamento.domain.detalhe.arrecadacao.FileDetalheA
 import br.gov.to.sefaz.arr.processamento.domain.detalhe.arrecadacao.builder.CodigoBarraCreator;
 import br.gov.to.sefaz.arr.processamento.domain.detalhe.arrecadacao.builder.CodigoBarrasExtractor;
 import br.gov.to.sefaz.arr.processamento.service.ArquivoRecepcaoService;
-import br.gov.to.sefaz.arr.processamento.service.DareService;
 import br.gov.to.sefaz.arr.processamento.service.PagosArrecService;
 import br.gov.to.sefaz.arr.processamento.validation.DetalheValidationSuite;
 import br.gov.to.sefaz.arr.processamento.validation.validator.detalhe.DetalheValidator;

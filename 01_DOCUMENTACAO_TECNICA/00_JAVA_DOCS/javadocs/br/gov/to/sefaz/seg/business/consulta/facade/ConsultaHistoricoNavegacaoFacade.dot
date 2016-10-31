@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.consulta.facade.ConsultaHistoricoNavegacaoFacade
-	c306857 [label=<<table title="br.gov.to.sefaz.seg.business.consulta.facade.ConsultaHistoricoNavegacaoFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ConsultaHistoricoNavegacaoFacade.html">
+	c367710 [label=<<table title="br.gov.to.sefaz.seg.business.consulta.facade.ConsultaHistoricoNavegacaoFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ConsultaHistoricoNavegacaoFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ConsultaHistoricoNavegacaoFacade </td></tr>
@@ -23,7 +23,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ConsultaHistoricoNavegacaoFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.consulta.facade.impl.ConsultaHistoricoNavegacaoFacadeImpl
-	c306860 [label=<<table title="br.gov.to.sefaz.seg.business.consulta.facade.impl.ConsultaHistoricoNavegacaoFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/ConsultaHistoricoNavegacaoFacadeImpl.html">
+	c367713 [label=<<table title="br.gov.to.sefaz.seg.business.consulta.facade.impl.ConsultaHistoricoNavegacaoFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/ConsultaHistoricoNavegacaoFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ConsultaHistoricoNavegacaoFacadeImpl </td></tr>
 		</table></td></tr>
@@ -36,6 +36,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./impl/ConsultaHistoricoNavegacaoFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.business.consulta.facade.impl.ConsultaHistoricoNavegacaoFacadeImpl implements br.gov.to.sefaz.seg.business.consulta.facade.ConsultaHistoricoNavegacaoFacade
-	c306857:p -> c306860:p [dir=back,arrowtail=empty,style=dashed];
+	c367710:p -> c367713:p [dir=back,arrowtail=empty,style=dashed];
 }
 

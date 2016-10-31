@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.repository.BaseRepository<E, I extends java.io.Serializable>
-	c713273 [label=<<table title="br.gov.to.sefaz.persistence.repository.BaseRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/repository/BaseRepository.html">
+	c889632 [label=<<table title="br.gov.to.sefaz.persistence.repository.BaseRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/repository/BaseRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> BaseRepository&lt;E, I extends Serializable&gt; </font></td></tr>
 		</table></td></tr>
@@ -69,7 +69,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../persistence/repository/BaseRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.ProcuracaoUsuarioRepository
-	c713554 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.ProcuracaoUsuarioRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ProcuracaoUsuarioRepository.html">
+	c889925 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.ProcuracaoUsuarioRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ProcuracaoUsuarioRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ProcuracaoUsuarioRepository </td></tr>
 		</table></td></tr>
@@ -84,6 +84,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ProcuracaoUsuarioRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.persistence.repository.ProcuracaoUsuarioRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.seg.persistence.entity.ProcuracaoUsuario, java.lang.Long>
-	c713273:p -> c713554:p [dir=back,arrowtail=empty];
+	c889632:p -> c889925:p [dir=back,arrowtail=empty];
 }
 

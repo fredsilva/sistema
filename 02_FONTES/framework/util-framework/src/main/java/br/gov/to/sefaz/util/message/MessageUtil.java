@@ -91,6 +91,15 @@ public final class MessageUtil {
         }
     }
 
+    /**
+     * Adiciona mensagem de erro ao SourceBundle para ser mostrado em tela.
+     * @param bundle bundle no qual está presente a mensagem.
+     * @param key chave para ser buscada a mensagem no bundle.
+     */
+    public static void addErrorMessage(String bundle, String key) {
+        addMessage(bundle, FacesMessage.SEVERITY_ERROR , key);
+    }
+
     private static FacesMessage getFacesMessage(String bundle, Severity severity, String key) {
         String msg;
         if (bundle != null) {

@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="../UsuarioPostoTrabalhoService.html" title="br.gov.to.sefaz.seg.business.gestao.service.UsuarioPostoTrabalhoService" alt="" coords="16,71,684,165"/>
-<area shape="rect" id="node1" href="../UsuarioPostoTrabalhoService.html" title="&lt;TABLE&gt;" alt="" coords="5,66,695,170"/>
-<area shape="rect" id="node2_1" href="./UsuarioPostoTrabalhoServiceImpl.html" title="br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioPostoTrabalhoServiceImpl" alt="" coords="321,284,979,395"/>
-<area shape="rect" id="node2" href="./UsuarioPostoTrabalhoServiceImpl.html" title="&lt;TABLE&gt;" alt="" coords="311,279,989,400"/>
-<area shape="rect" id="node3_2" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/service/impl/DefaultCrudService.html" title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" alt="" coords="729,11,1171,225"/>
-<area shape="rect" id="node3" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/service/impl/DefaultCrudService.html" title="&lt;TABLE&gt;" alt="" coords="719,5,1181,231"/>
+<area shape="rect" id="node1_0" href="../UsuarioPostoTrabalhoService.html" title="br.gov.to.sefaz.seg.business.gestao.service.UsuarioPostoTrabalhoService" alt="" coords="16,63,713,173"/>
+<area shape="rect" id="node1" href="../UsuarioPostoTrabalhoService.html" title="&lt;TABLE&gt;" alt="" coords="5,57,724,179"/>
+<area shape="rect" id="node2_1" href="./UsuarioPostoTrabalhoServiceImpl.html" title="br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioPostoTrabalhoServiceImpl" alt="" coords="327,284,1015,412"/>
+<area shape="rect" id="node2" href="./UsuarioPostoTrabalhoServiceImpl.html" title="&lt;TABLE&gt;" alt="" coords="317,279,1026,417"/>
+<area shape="rect" id="node3_2" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/service/impl/DefaultCrudService.html" title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" alt="" coords="759,11,1200,225"/>
+<area shape="rect" id="node3" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/service/impl/DefaultCrudService.html" title="&lt;TABLE&gt;" alt="" coords="748,5,1211,231"/>
 </map>

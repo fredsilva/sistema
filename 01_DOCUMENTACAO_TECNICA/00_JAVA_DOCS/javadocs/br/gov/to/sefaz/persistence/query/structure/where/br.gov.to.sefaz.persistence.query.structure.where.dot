@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.query.structure.where.JunctionOperator
-	c51807 [label=<<table title="br.gov.to.sefaz.persistence.query.structure.where.JunctionOperator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./JunctionOperator.html">
+	c61378 [label=<<table title="br.gov.to.sefaz.persistence.query.structure.where.JunctionOperator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./JunctionOperator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> JunctionOperator </td></tr>
@@ -24,7 +24,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./JunctionOperator.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.structure.where.ConditionStructure
-	c51808 [label=<<table title="br.gov.to.sefaz.persistence.query.structure.where.ConditionStructure" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConditionStructure.html">
+	c61379 [label=<<table title="br.gov.to.sefaz.persistence.query.structure.where.ConditionStructure" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConditionStructure.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ConditionStructure </td></tr>
 		</table></td></tr>
@@ -46,7 +46,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ConditionStructure.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.structure.where.ConditionsStructure
-	c51809 [label=<<table title="br.gov.to.sefaz.persistence.query.structure.where.ConditionsStructure" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConditionsStructure.html">
+	c61380 [label=<<table title="br.gov.to.sefaz.persistence.query.structure.where.ConditionsStructure" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConditionsStructure.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ConditionsStructure </td></tr>
 		</table></td></tr>
@@ -61,7 +61,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ConditionsStructure.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.structure.where.ComparisonOperator
-	c51810 [label=<<table title="br.gov.to.sefaz.persistence.query.structure.where.ComparisonOperator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ComparisonOperator.html">
+	c61381 [label=<<table title="br.gov.to.sefaz.persistence.query.structure.where.ComparisonOperator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ComparisonOperator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> ComparisonOperator </td></tr>
@@ -84,7 +84,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ComparisonOperator.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.structure.where.Comparison
-	c51811 [label=<<table title="br.gov.to.sefaz.persistence.query.structure.where.Comparison" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Comparison.html">
+	c61382 [label=<<table title="br.gov.to.sefaz.persistence.query.structure.where.Comparison" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Comparison.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Comparison </td></tr>
 		</table></td></tr>

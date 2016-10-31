@@ -9,8 +9,33 @@ digraph G {
 	node [fontname="arial",fontsize=10,shape=plaintext];
 	nodesep=0.25;
 	ranksep=0.5;
+	// br.gov.to.sefaz.business.service.validation.custom.EmailValidatorHandler
+	c126 [label=<<table title="br.gov.to.sefaz.business.service.validation.custom.EmailValidatorHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EmailValidatorHandler.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> EmailValidatorHandler </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + EmailValidatorHandler() </td></tr>
+<tr><td align="left" balign="left"> + isValid(email : String) : boolean </td></tr>
+		</table></td></tr>
+		</table>>, URL="./EmailValidatorHandler.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.business.service.validation.custom.Email
+	c127 [label=<<table title="br.gov.to.sefaz.business.service.validation.custom.Email" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Email.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="arial italic"> Email </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./Email.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.business.service.validation.custom.Email.List
+	c128 [label=<<table title="br.gov.to.sefaz.business.service.validation.custom.Email.List" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Email.List.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"><font face="arial italic"> List </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./Email.List.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.business.service.validation.custom.CpfValidatorHandler
-	c111 [label=<<table title="br.gov.to.sefaz.business.service.validation.custom.CpfValidatorHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CpfValidatorHandler.html">
+	c129 [label=<<table title="br.gov.to.sefaz.business.service.validation.custom.CpfValidatorHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CpfValidatorHandler.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CpfValidatorHandler </td></tr>
 		</table></td></tr>
@@ -19,12 +44,13 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + CpfValidatorHandler() </td></tr>
+<tr><td align="left" balign="left"> + validateCpf(cpf : String) : boolean </td></tr>
 <tr><td align="left" balign="left"> + validateLength(cpf : String) : boolean </td></tr>
 <tr><td align="left" balign="left"> + validateDigits(cpf : String) : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="./CpfValidatorHandler.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.business.service.validation.custom.CpfValidator
-	c112 [label=<<table title="br.gov.to.sefaz.business.service.validation.custom.CpfValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CpfValidator.html">
+	c130 [label=<<table title="br.gov.to.sefaz.business.service.validation.custom.CpfValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CpfValidator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CpfValidator </td></tr>
 		</table></td></tr>
@@ -38,19 +64,19 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./CpfValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.business.service.validation.custom.Cpf
-	c113 [label=<<table title="br.gov.to.sefaz.business.service.validation.custom.Cpf" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Cpf.html">
+	c131 [label=<<table title="br.gov.to.sefaz.business.service.validation.custom.Cpf" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Cpf.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> Cpf </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./Cpf.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.business.service.validation.custom.Cpf.List
-	c114 [label=<<table title="br.gov.to.sefaz.business.service.validation.custom.Cpf.List" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Cpf.List.html">
+	c132 [label=<<table title="br.gov.to.sefaz.business.service.validation.custom.Cpf.List" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Cpf.List.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> List </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./Cpf.List.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.business.service.validation.custom.CnpjValidatorHandler
-	c115 [label=<<table title="br.gov.to.sefaz.business.service.validation.custom.CnpjValidatorHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CnpjValidatorHandler.html">
+	c133 [label=<<table title="br.gov.to.sefaz.business.service.validation.custom.CnpjValidatorHandler" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CnpjValidatorHandler.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CnpjValidatorHandler </td></tr>
 		</table></td></tr>
@@ -59,12 +85,13 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + CnpjValidatorHandler() </td></tr>
+<tr><td align="left" balign="left"> + validateCnpj(cnpj : String) : boolean </td></tr>
 <tr><td align="left" balign="left"> + validateLength(cnpj : String) : boolean </td></tr>
 <tr><td align="left" balign="left"> + validateDigits(cnpj : String) : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="./CnpjValidatorHandler.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.business.service.validation.custom.CnpjValidator
-	c116 [label=<<table title="br.gov.to.sefaz.business.service.validation.custom.CnpjValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CnpjValidator.html">
+	c134 [label=<<table title="br.gov.to.sefaz.business.service.validation.custom.CnpjValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./CnpjValidator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CnpjValidator </td></tr>
 		</table></td></tr>
@@ -78,13 +105,13 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./CnpjValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.business.service.validation.custom.Cnpj
-	c117 [label=<<table title="br.gov.to.sefaz.business.service.validation.custom.Cnpj" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Cnpj.html">
+	c135 [label=<<table title="br.gov.to.sefaz.business.service.validation.custom.Cnpj" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Cnpj.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> Cnpj </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./Cnpj.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.business.service.validation.custom.Cnpj.List
-	c118 [label=<<table title="br.gov.to.sefaz.business.service.validation.custom.Cnpj.List" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Cnpj.List.html">
+	c136 [label=<<table title="br.gov.to.sefaz.business.service.validation.custom.Cnpj.List" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Cnpj.List.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> List </font></td></tr>
 		</table></td></tr>

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.arr.processamento.creator.PagosArrecCreator
-	c133861 [label=<<table title="br.gov.to.sefaz.arr.processamento.creator.PagosArrecCreator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PagosArrecCreator.html">
+	c163107 [label=<<table title="br.gov.to.sefaz.arr.processamento.creator.PagosArrecCreator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PagosArrecCreator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PagosArrecCreator </td></tr>
 		</table></td></tr>
@@ -23,7 +23,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PagosArrecCreator.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.creator.LotesPagosArrecTparCreator
-	c133862 [label=<<table title="br.gov.to.sefaz.arr.processamento.creator.LotesPagosArrecTparCreator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LotesPagosArrecTparCreator.html">
+	c163108 [label=<<table title="br.gov.to.sefaz.arr.processamento.creator.LotesPagosArrecTparCreator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LotesPagosArrecTparCreator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LotesPagosArrecTparCreator </td></tr>
 		</table></td></tr>
@@ -36,7 +36,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./LotesPagosArrecTparCreator.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.creator.LotesPagosArrecBdarCreator
-	c133863 [label=<<table title="br.gov.to.sefaz.arr.processamento.creator.LotesPagosArrecBdarCreator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LotesPagosArrecBdarCreator.html">
+	c163109 [label=<<table title="br.gov.to.sefaz.arr.processamento.creator.LotesPagosArrecBdarCreator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LotesPagosArrecBdarCreator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LotesPagosArrecBdarCreator </td></tr>
 		</table></td></tr>
@@ -49,7 +49,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./LotesPagosArrecBdarCreator.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.creator.FileReaderCreator
-	c133864 [label=<<table title="br.gov.to.sefaz.arr.processamento.creator.FileReaderCreator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FileReaderCreator.html">
+	c163110 [label=<<table title="br.gov.to.sefaz.arr.processamento.creator.FileReaderCreator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FileReaderCreator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> FileReaderCreator </td></tr>
 		</table></td></tr>
@@ -57,11 +57,11 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + FileReaderCreator(fileFactory : FileFactory) </td></tr>
+<tr><td align="left" balign="left"> + FileReaderCreator(fileFactory : FileFactory, customPropertiesObserver : CustomPropertiesObserver) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./FileReaderCreator.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.creator.ArquivoRecepcaoCreator
-	c133865 [label=<<table title="br.gov.to.sefaz.arr.processamento.creator.ArquivoRecepcaoCreator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArquivoRecepcaoCreator.html">
+	c163111 [label=<<table title="br.gov.to.sefaz.arr.processamento.creator.ArquivoRecepcaoCreator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArquivoRecepcaoCreator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArquivoRecepcaoCreator </td></tr>
 		</table></td></tr>
@@ -74,7 +74,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ArquivoRecepcaoCreator.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.creator.ArquivoDetalhePagosSNCreator
-	c133866 [label=<<table title="br.gov.to.sefaz.arr.processamento.creator.ArquivoDetalhePagosSNCreator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArquivoDetalhePagosSNCreator.html">
+	c163112 [label=<<table title="br.gov.to.sefaz.arr.processamento.creator.ArquivoDetalhePagosSNCreator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArquivoDetalhePagosSNCreator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArquivoDetalhePagosSNCreator </td></tr>
 		</table></td></tr>
@@ -87,7 +87,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ArquivoDetalhePagosSNCreator.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.creator.ArquivoDetalhePagosArrecCreator
-	c133867 [label=<<table title="br.gov.to.sefaz.arr.processamento.creator.ArquivoDetalhePagosArrecCreator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArquivoDetalhePagosArrecCreator.html">
+	c163113 [label=<<table title="br.gov.to.sefaz.arr.processamento.creator.ArquivoDetalhePagosArrecCreator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArquivoDetalhePagosArrecCreator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArquivoDetalhePagosArrecCreator </td></tr>
 		</table></td></tr>

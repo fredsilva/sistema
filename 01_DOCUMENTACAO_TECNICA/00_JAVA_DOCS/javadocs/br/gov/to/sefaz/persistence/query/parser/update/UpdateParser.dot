@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.query.parser.QueryStructureParser<S>
-	c877095 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.QueryStructureParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../QueryStructureParser.html">
+	c1086964 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.QueryStructureParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../QueryStructureParser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> QueryStructureParser&lt;S&gt; </td></tr>
@@ -25,7 +25,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../QueryStructureParser.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.parser.update.UpdateParser
-	c877099 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.update.UpdateParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UpdateParser.html">
+	c1086968 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.update.UpdateParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UpdateParser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UpdateParser </td></tr>
 		</table></td></tr>
@@ -39,7 +39,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./UpdateParser.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.satquery.parser.update.SatUpdateParser
-	c877137 [label=<<table title="br.gov.to.sefaz.persistence.satquery.parser.update.SatUpdateParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../satquery/parser/update/SatUpdateParser.html">
+	c1087008 [label=<<table title="br.gov.to.sefaz.persistence.satquery.parser.update.SatUpdateParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../satquery/parser/update/SatUpdateParser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SatUpdateParser </td></tr>
 		</table></td></tr>
@@ -53,8 +53,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../satquery/parser/update/SatUpdateParser.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.persistence.query.parser.update.UpdateParser implements br.gov.to.sefaz.persistence.query.parser.QueryStructureParser<S>
-	c877095:p -> c877099:p [dir=back,arrowtail=empty,style=dashed];
+	c1086964:p -> c1086968:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.persistence.satquery.parser.update.SatUpdateParser extends br.gov.to.sefaz.persistence.query.parser.update.UpdateParser
-	c877099:p -> c877137:p [dir=back,arrowtail=empty];
+	c1086968:p -> c1087008:p [dir=back,arrowtail=empty];
 }
 

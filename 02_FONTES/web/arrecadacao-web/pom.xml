@@ -8,7 +8,7 @@
     <parent>
         <groupId>br.gov.to.sefaz</groupId>
         <artifactId>web</artifactId>
-        <version>1.6.4</version>
+        <version>1.7.1</version>
     </parent>
 
     <groupId>br.gov.to.sefaz.web</groupId>
@@ -24,6 +24,18 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.powermock</groupId>
+            <artifactId>powermock-module-junit4</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.powermock</groupId>
+            <artifactId>powermock-api-mockito</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-all</artifactId>
         </dependency>
 
         <dependency>

@@ -72,13 +72,8 @@ function bindDataTableEvents(componentId, bindType, bindClass, eventType, event,
     };
 
     if (bindType === "load") {
-        $('#' + componentId + '-dt tbody').find('.' + bindClass).each(function (key, value) {
+        dataTable.$('.' + bindClass).each(function (key, value) {
             executeEvent(this);
-        });
-        $('#' + componentId + '-dt tbody').on("append", function () {
-            $(this).find('.' + bindClass).each(function (key, value) {
-                executeEvent(this);
-            });
         });
     } else {
         $('#' + componentId + '-dt tbody').on(bindType, '.' + bindClass, function () {
@@ -88,6 +83,8 @@ function bindDataTableEvents(componentId, bindType, bindClass, eventType, event,
 }
 
 function bindDataTableVisible(componentId, elementClass, visibility, func) {
+    var dataTable = getDataTable(componentId);
+
     var hideElements = function (element) {
         element = $(element);
         var data = dataTable.row(element.parents('tr')).data();
@@ -104,14 +101,7 @@ function bindDataTableVisible(componentId, elementClass, visibility, func) {
         }
     };
 
-    var dataTable = getDataTable(componentId);
-    $('#' + componentId + '-dt tbody').find('.' + elementClass).each(function (key, value) {
+    dataTable.$('.' + elementClass).each(function (key, value) {
         hideElements(this);
-    });
-
-    $('#' + componentId + '-dt tbody').on("append", function () {
-        $(this).find('.' + elementClass).each(function (key, value) {
-            hideElements(this);
-        });
     });
 }

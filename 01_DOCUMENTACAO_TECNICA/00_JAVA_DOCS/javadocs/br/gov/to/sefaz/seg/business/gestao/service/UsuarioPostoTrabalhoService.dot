@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.service.CrudService<E, I extends java.io.Serializable>
-	c887656 [label=<<table title="br.gov.to.sefaz.business.service.CrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../business/service/CrudService.html">
+	c1098679 [label=<<table title="br.gov.to.sefaz.business.service.CrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../business/service/CrudService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CrudService&lt;E, I extends Serializable&gt; </td></tr>
@@ -30,7 +30,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../../business/service/CrudService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.UsuarioPostoTrabalhoService
-	c887780 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.UsuarioPostoTrabalhoService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UsuarioPostoTrabalhoService.html">
+	c1098813 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.UsuarioPostoTrabalhoService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UsuarioPostoTrabalhoService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> UsuarioPostoTrabalhoService </td></tr>
@@ -39,11 +39,12 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + removeUsuarioPostoTrabalho(cpf : String, postoTrabalho : PostoTrabalho) : Optional&lt;UsuarioPostoTrabalho&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + removeUsuarioPostoTrabalho(cpf : String, identificacaoPostoTrabalho : Integer) : Optional&lt;UsuarioPostoTrabalho&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + saveOrUpdate(cpf : String, identificacaoPostoTrabalho : Integer) : UsuarioPostoTrabalho </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./UsuarioPostoTrabalhoService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioPostoTrabalhoServiceImpl
-	c887815 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioPostoTrabalhoServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/UsuarioPostoTrabalhoServiceImpl.html">
+	c1098848 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioPostoTrabalhoServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/UsuarioPostoTrabalhoServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UsuarioPostoTrabalhoServiceImpl </td></tr>
 		</table></td></tr>
@@ -53,12 +54,13 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + UsuarioPostoTrabalhoServiceImpl(usuarioPostoTrabalhoRepository : UsuarioPostoTrabalhoRepository) </td></tr>
 <tr><td align="left" balign="left"> + findAll() : Collection&lt;UsuarioPostoTrabalho&gt; </td></tr>
-<tr><td align="left" balign="left"> + removeUsuarioPostoTrabalho(cpf : String, postoTrabalho : PostoTrabalho) : Optional&lt;UsuarioPostoTrabalho&gt; </td></tr>
+<tr><td align="left" balign="left"> + saveOrUpdate(cpf : String, identificacaoPostoTrabalho : Integer) : UsuarioPostoTrabalho </td></tr>
+<tr><td align="left" balign="left"> + removeUsuarioPostoTrabalho(cpf : String, identificacaoPostoTrabalho : Integer) : Optional&lt;UsuarioPostoTrabalho&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./impl/UsuarioPostoTrabalhoServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.business.gestao.service.UsuarioPostoTrabalhoService implements br.gov.to.sefaz.business.service.CrudService<E, I extends java.io.Serializable>
-	c887656:p -> c887780:p [dir=back,arrowtail=empty,style=dashed];
+	c1098679:p -> c1098813:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioPostoTrabalhoServiceImpl implements br.gov.to.sefaz.seg.business.gestao.service.UsuarioPostoTrabalhoService
-	c887780:p -> c887815:p [dir=back,arrowtail=empty,style=dashed];
+	c1098813:p -> c1098848:p [dir=back,arrowtail=empty,style=dashed];
 }
 

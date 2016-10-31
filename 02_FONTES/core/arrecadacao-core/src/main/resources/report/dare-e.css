@@ -1,0 +1,194 @@
+@page {
+    margin: 25px 0 25px 0;
+}
+
+body {
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#content {
+    width: 744px;
+    height: 600px;
+    margin: 0 25px 0 24px;
+}
+
+.header {
+    width: 100%;
+}
+
+.wrapper {
+    overflow: hidden;
+}
+
+.header .identification {
+    overflow: hidden;
+    padding-right: 5px;
+}
+
+.header .identification > * {
+    display: inline-block;
+}
+
+.header .identification .barcode {
+    width: 40%;
+}
+
+.header .identification .barcode img {
+    width: 100%;
+}
+
+.header .identification .code {
+    width: 40%;
+}
+
+.header .identification .box {
+    line-height: 70%;
+    font-size: 0.55em;
+    border: 1px solid #000;
+    padding: 3px;
+    margin-left: 3px;
+    float: right;
+}
+
+.header .identification .via {
+    font-size: 0.5em;
+    width: 20%;
+    text-align: right;
+}
+
+.header .infos {
+    width: 100%;
+}
+
+.header .infos > tr > td {
+    vertical-align: top;
+    padding: 2px;
+}
+
+.header .infos > tr > td:nth-child(1) {
+    width: 80%;
+}
+
+.header .gov-info img {
+    padding: 15px;
+    width: 35px;
+}
+
+.header .gov-info h1 {
+    font-size: 1.0em;
+    margin: 0;
+}
+
+.header .gov-info h2 {
+    font-size: 0.9em;
+    margin: 0;
+}
+
+.header .gov-info h2:nth-child(2) {
+    margin-bottom: 6px;
+}
+
+.header .gov-info > * {
+    float: left;
+}
+
+.header .issuer-info {
+    font-size: 0.5em;
+}
+
+.header .issuer-info p {
+    margin: 0 0 10px 5px;
+}
+
+.header .issuer-info > table > tr > * {
+    padding: 3px 5px;
+}
+
+.header .issuer-info > table > tr > td {
+    font-size: 0.9em;
+}
+
+.header .pay-info h1 {
+    font-size: 1.4em;
+    margin: 0;
+    color: #130443;
+}
+
+.header .pay-info h2 {
+    margin: 0;
+    font-size: 0.65em;
+}
+
+.header .pay-info p {
+    margin: 3px 0 8px 0;
+    font-size: 0.9em;
+    color: red;
+    font-weight: bold;
+}
+
+.header .pay-info p small {
+    font-weight: normal;
+}
+
+.header .pay-info p:last-child {
+    margin-bottom: 0;
+}
+
+.footer {
+    font-size: 0.5em;
+    font-weight: bold;
+    overflow: hidden;
+    margin: 3px 10px;
+}
+
+.footer .left {
+    float: left;
+}
+
+.footer .right {
+    float: right;
+    text-align: right;
+}
+
+.cut-line {
+    margin: 25px 0 15px -25px;
+    width: 800px;
+    border-bottom: none;
+    border-top: 1px dashed black;
+}
+
+fieldset {
+    position: relative;
+    font-size: 0.5em;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+fieldset legend {
+    font-size: 1.1em;
+    position: absolute;
+    top: -8px;
+    left: 10px;
+    background-color: white;
+    padding: 1px 3px;
+}
+
+fieldset > table {
+    width: 100%;
+}
+
+#additional-info {
+    background-color: #cfe2f3;
+    min-height: 100px;
+}
+
+#additional-info > table > tr > td:nth-child(2) {
+    text-align: right;
+}
+
+#payment-list {
+    min-height: 300px;
+}

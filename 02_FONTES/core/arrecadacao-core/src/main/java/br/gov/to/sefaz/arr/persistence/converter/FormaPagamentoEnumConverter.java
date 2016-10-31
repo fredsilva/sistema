@@ -11,7 +11,6 @@ import javax.persistence.AttributeConverter;
  * @author <a href="mailto:gabriel.santos@ntconsult.com.br">gabriel.santos</a>
  * @since 05/05/2016 17:35:22
  */
-@SuppressWarnings("PMD")
 public class FormaPagamentoEnumConverter implements AttributeConverter<FormaPagamentoEnum, Integer> {
 
     @Override

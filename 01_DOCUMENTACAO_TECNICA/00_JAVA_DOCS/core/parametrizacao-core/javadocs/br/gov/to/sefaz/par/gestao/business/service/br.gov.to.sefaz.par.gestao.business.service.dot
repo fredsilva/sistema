@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.par.gestao.business.service.ParametroGeralService
-	c132 [label=<<table title="br.gov.to.sefaz.par.gestao.business.service.ParametroGeralService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ParametroGeralService.html">
+	c160 [label=<<table title="br.gov.to.sefaz.par.gestao.business.service.ParametroGeralService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ParametroGeralService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ParametroGeralService </td></tr>
@@ -26,7 +26,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ParametroGeralService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.par.gestao.business.service.MunicipioService
-	c133 [label=<<table title="br.gov.to.sefaz.par.gestao.business.service.MunicipioService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MunicipioService.html">
+	c161 [label=<<table title="br.gov.to.sefaz.par.gestao.business.service.MunicipioService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MunicipioService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> MunicipioService </td></tr>
@@ -39,21 +39,34 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./MunicipioService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.par.gestao.business.service.LogradouroService
-	c134 [label=<<table title="br.gov.to.sefaz.par.gestao.business.service.LogradouroService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LogradouroService.html">
+	c162 [label=<<table title="br.gov.to.sefaz.par.gestao.business.service.LogradouroService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LogradouroService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> LogradouroService </td></tr>
 		</table></td></tr>
 		</table>>, URL="./LogradouroService.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.par.gestao.business.service.FeriadoService
+	c163 [label=<<table title="br.gov.to.sefaz.par.gestao.business.service.FeriadoService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FeriadoService.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
+<tr><td align="center" balign="center"> FeriadoService </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + getDataUtil(data : LocalDate, codIbgeMunicipio : Integer) : LocalDate </font></td></tr>
+		</table></td></tr>
+		</table>>, URL="./FeriadoService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.par.gestao.business.service.EstadoService
-	c135 [label=<<table title="br.gov.to.sefaz.par.gestao.business.service.EstadoService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EstadoService.html">
+	c164 [label=<<table title="br.gov.to.sefaz.par.gestao.business.service.EstadoService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EstadoService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> EstadoService </td></tr>
 		</table></td></tr>
 		</table>>, URL="./EstadoService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.par.gestao.business.service.AtividadeEconomicaService
-	c136 [label=<<table title="br.gov.to.sefaz.par.gestao.business.service.AtividadeEconomicaService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AtividadeEconomicaService.html">
+	c165 [label=<<table title="br.gov.to.sefaz.par.gestao.business.service.AtividadeEconomicaService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AtividadeEconomicaService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> AtividadeEconomicaService </td></tr>

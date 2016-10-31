@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.facade.CrudFacade<E, I extends java.io.Serializable>
-	c331309 [label=<<table title="br.gov.to.sefaz.business.facade.CrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../business/facade/CrudFacade.html">
+	c400674 [label=<<table title="br.gov.to.sefaz.business.facade.CrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../business/facade/CrudFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CrudFacade&lt;E, I extends Serializable&gt; </td></tr>
@@ -24,19 +24,20 @@ digraph G {
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + save(entity : E) : E </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + save(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + update(entity : E) : E </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + update(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + delete(id : I) : Optional&lt;E&gt; </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + delete(list : Iterable&lt;I&gt;) </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../../business/facade/CrudFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.ConveniosTarifasFacade
-	c331650 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.ConveniosTarifasFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ConveniosTarifasFacade.html">
+	c401052 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.ConveniosTarifasFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ConveniosTarifasFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ConveniosTarifasFacade </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ConveniosTarifasFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.impl.ConveniosTarifasFacadeImpl
-	c331660 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.ConveniosTarifasFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/ConveniosTarifasFacadeImpl.html">
+	c401062 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.ConveniosTarifasFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/ConveniosTarifasFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ConveniosTarifasFacadeImpl </td></tr>
 		</table></td></tr>
@@ -48,8 +49,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./impl/ConveniosTarifasFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.arr.parametros.business.facade.ConveniosTarifasFacade implements br.gov.to.sefaz.business.facade.CrudFacade<E, I extends java.io.Serializable>
-	c331309:p -> c331650:p [dir=back,arrowtail=empty,style=dashed];
+	c400674:p -> c401052:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.arr.parametros.business.facade.impl.ConveniosTarifasFacadeImpl implements br.gov.to.sefaz.arr.parametros.business.facade.ConveniosTarifasFacade
-	c331650:p -> c331660:p [dir=back,arrowtail=empty,style=dashed];
+	c401052:p -> c401062:p [dir=back,arrowtail=empty,style=dashed];
 }
 

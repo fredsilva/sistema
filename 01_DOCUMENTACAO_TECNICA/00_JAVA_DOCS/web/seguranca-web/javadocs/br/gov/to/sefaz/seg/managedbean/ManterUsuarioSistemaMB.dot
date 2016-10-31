@@ -29,8 +29,6 @@ digraph G {
 <tr><td align="left" balign="left"> + getAllUnidadeOrganizacionais() : Collection&lt;UnidadeOrganizacional&gt; </td></tr>
 <tr><td align="left" balign="left"> + loadAllUnidadeOrganizacionais() </td></tr>
 <tr><td align="left" balign="left"> + getAllPostoTrabalho() : Collection&lt;PostoTrabalho&gt; </td></tr>
-<tr><td align="left" balign="left"> + updateUser() </td></tr>
-<tr><td align="left" balign="left"> + createUser() </td></tr>
 <tr><td align="left" balign="left"> + getEstados() : Collection&lt;Estado&gt; </td></tr>
 <tr><td align="left" balign="left"> + getMunicipios() : Collection&lt;Municipio&gt; </td></tr>
 <tr><td align="left" balign="left"> + getTipoUsuarios() : Collection&lt;TipoUsuario&gt; </td></tr>

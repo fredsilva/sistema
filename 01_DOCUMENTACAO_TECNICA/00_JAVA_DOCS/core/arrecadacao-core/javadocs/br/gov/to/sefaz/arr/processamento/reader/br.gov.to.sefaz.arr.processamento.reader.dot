@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.arr.processamento.reader.FileReaderExist
-	c11767 [label=<<table title="br.gov.to.sefaz.arr.processamento.reader.FileReaderExist" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FileReaderExist.html">
+	c16964 [label=<<table title="br.gov.to.sefaz.arr.processamento.reader.FileReaderExist" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FileReaderExist.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> FileReaderExist </td></tr>
 		</table></td></tr>
@@ -23,7 +23,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./FileReaderExist.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.reader.FileReader
-	c11768 [label=<<table title="br.gov.to.sefaz.arr.processamento.reader.FileReader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FileReader.html">
+	c16965 [label=<<table title="br.gov.to.sefaz.arr.processamento.reader.FileReader" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FileReader.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> FileReader </td></tr>
 		</table></td></tr>
@@ -31,13 +31,14 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + FileReader(fileFactory : FileFactory) </td></tr>
+<tr><td align="left" balign="left"> + FileReader(fileFactory : FileFactory, customPropertiesObserver : CustomPropertiesObserver) </td></tr>
 <tr><td align="left" balign="left"> + run() </td></tr>
 <tr><td align="left" balign="left"> + processFile(fileName : Path) </td></tr>
+<tr><td align="left" balign="left"> + update(o : Observable, arg : Object) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./FileReader.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.reader.FileFactory
-	c11769 [label=<<table title="br.gov.to.sefaz.arr.processamento.reader.FileFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FileFactory.html">
+	c16966 [label=<<table title="br.gov.to.sefaz.arr.processamento.reader.FileFactory" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FileFactory.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> FileFactory </td></tr>
 		</table></td></tr>

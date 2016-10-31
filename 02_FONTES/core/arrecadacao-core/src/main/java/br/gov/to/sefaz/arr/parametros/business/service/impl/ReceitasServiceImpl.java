@@ -19,6 +19,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 /**
  * Implementação do serviço da entidade {@link br.gov.to.sefaz.arr.persistence.entity.Receitas}.
@@ -67,6 +68,21 @@ public class ReceitasServiceImpl extends DefaultCrudService<Receitas, Integer>
                 .and().opt().equal("tipoReceita", filter.getTipoReceita())
                 .and().opt().equal("situacao", filter.getSituacao())
                 .orderById());
+    }
+
+    @Override
+    public Collection<Receitas> findWithIds(Set<Integer> idReceitas) {
+        return getRepository().find(select -> select
+                .where()
+                .opt().in("idReceita", idReceitas)
+                .orderBy("idReceita"));
+    }
+
+    @Override
+    public Collection<Receitas> findWithOrigemDebitoId(Integer origemDebitoId) {
+        return getRepository().find("re", select -> select
+                .innerJoin("re.dareOrigemReceita", "dor")
+                .where().equal("dor.idOrigemDebito", origemDebitoId));
     }
 
     @Override

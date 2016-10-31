@@ -23,9 +23,7 @@ digraph G {
 <tr><td align="left" balign="left"> + findAllTipoUsuario() : Collection&lt;TipoUsuario&gt; </td></tr>
 <tr><td align="left" balign="left"> + findAllEstados() : Collection&lt;Estado&gt; </td></tr>
 <tr><td align="left" balign="left"> + findMunicipiosByUF(uf : String) : Collection&lt;Municipio&gt; </td></tr>
-<tr><td align="left" balign="left"> + findUnidadeOrganizacional() : UnidadeOrganizacional </td></tr>
-<tr><td align="left" balign="left"> + saveNewUsuarioSistema(usuarioSistema : UsuarioSistema) </td></tr>
-<tr><td align="left" balign="left"> + findOneUsuarioSistema(cpf : String) : UsuarioSistema </td></tr>
+<tr><td align="left" balign="left"> + saveNewUsuarioSistemaSolicitacaoSenha(usuarioSistema : UsuarioSistema) </td></tr>
 <tr><td align="left" balign="left"> + changePassword(dto : ChangePasswordDto) </td></tr>
 <tr><td align="left" balign="left"> + findAllLogradouros() : Collection&lt;Logradouro&gt; </td></tr>
 		</table></td></tr>
@@ -187,9 +185,7 @@ digraph G {
 <tr><td align="left" balign="left"> + findAllEstados() : Collection&lt;Estado&gt; </td></tr>
 <tr><td align="left" balign="left"> + findMunicipiosByUF(s : String) : Collection&lt;Municipio&gt; </td></tr>
 <tr><td align="left" balign="left"> + loadTipoUsuario() : Collection&lt;TipoUsuario&gt; </td></tr>
-<tr><td align="left" balign="left"> + updateUser(usuarioSistema : UsuarioSistema) : UsuarioSistema </td></tr>
 <tr><td align="left" balign="left"> + findAllPostoTrabalhoByUnidadeOrganizacional(identificUnidOrganizac : Long) : Collection&lt;PostoTrabalho&gt; </td></tr>
-<tr><td align="left" balign="left"> + saveUsuarioSistema(usuarioSistema : UsuarioSistema) : UsuarioSistema </td></tr>
 <tr><td align="left" balign="left"> + findAllLogradouros() : Collection&lt;Logradouro&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ManterUsuarioSistemaFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
@@ -243,7 +239,6 @@ digraph G {
 <tr><td align="left" balign="left"> + find(filter : AtivarInativarPerfilFilter) : Collection&lt;UsuarioSistema&gt; </td></tr>
 <tr><td align="left" balign="left"> + loadAllUsuarioPerfil(usuarioSistema : UsuarioSistema) : Collection&lt;UsuarioPerfil&gt; </td></tr>
 <tr><td align="left" balign="left"> + buildProfileString(usuarioSistemas : Collection&lt;UsuarioSistema&gt;) </td></tr>
-<tr><td align="left" balign="left"> + updatePerfilUsuarioList(usuarioPerfilList : Collection&lt;UsuarioPerfil&gt;) </td></tr>
 <tr><td align="left" balign="left"> + findAllPostoTrabalho() : Collection&lt;PostoTrabalho&gt; </td></tr>
 <tr><td align="left" balign="left"> + findAllUnidadeOrganizacional() : Collection&lt;UnidadeOrganizacional&gt; </td></tr>
 <tr><td align="left" balign="left"> + findAllUsuarioSistema(filter : AtivarInativarPerfilFilter) : List&lt;UsuarioSistema&gt; </td></tr>

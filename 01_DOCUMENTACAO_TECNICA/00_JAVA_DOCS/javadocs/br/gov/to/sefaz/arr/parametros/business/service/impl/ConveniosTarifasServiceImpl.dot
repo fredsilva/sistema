@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.service.impl.DefaultCrudService<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c334817 [label=<<table title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/service/impl/DefaultCrudService.html">
+	c404566 [label=<<table title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/service/impl/DefaultCrudService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultCrudService&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
 		</table></td></tr>
@@ -30,7 +30,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../../../business/service/impl/DefaultCrudService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.ConveniosTarifasService
-	c335186 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.ConveniosTarifasService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ConveniosTarifasService.html">
+	c404972 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.ConveniosTarifasService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ConveniosTarifasService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ConveniosTarifasService </td></tr>
@@ -47,7 +47,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../ConveniosTarifasService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.impl.ConveniosTarifasServiceImpl
-	c335213 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.ConveniosTarifasServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ConveniosTarifasServiceImpl.html">
+	c404999 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.ConveniosTarifasServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ConveniosTarifasServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ConveniosTarifasServiceImpl </td></tr>
 		</table></td></tr>
@@ -65,8 +65,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ConveniosTarifasServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.arr.parametros.business.service.impl.ConveniosTarifasServiceImpl extends br.gov.to.sefaz.business.service.impl.DefaultCrudService<br.gov.to.sefaz.arr.persistence.entity.ConveniosTarifas, java.lang.Integer>
-	c334817:p -> c335213:p [dir=back,arrowtail=empty];
+	c404566:p -> c404999:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.parametros.business.service.impl.ConveniosTarifasServiceImpl implements br.gov.to.sefaz.arr.parametros.business.service.ConveniosTarifasService
-	c335186:p -> c335213:p [dir=back,arrowtail=empty,style=dashed];
+	c404972:p -> c404999:p [dir=back,arrowtail=empty,style=dashed];
 }
 

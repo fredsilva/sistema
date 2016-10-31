@@ -1,8 +1,10 @@
 package br.gov.to.sefaz.arr.configuration;
 
+import br.gov.to.sefaz.arr.dare.DarePackageMarker;
 import br.gov.to.sefaz.arr.parametros.business.BusinessPackageMarker;
 import br.gov.to.sefaz.arr.persistence.entity.ArrEntityPackageMarker;
 import br.gov.to.sefaz.arr.persistence.repository.RepositoryPackageMarker;
+import br.gov.to.sefaz.arr.persistence.view.ArrViewPackageMarker;
 import br.gov.to.sefaz.arr.processamento.ProcessamentoPackageMarker;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -17,7 +19,9 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @Configuration
 @ComponentScan(basePackageClasses = {
         BusinessPackageMarker.class,
+        DarePackageMarker.class,
         ArrEntityPackageMarker.class,
+        ArrViewPackageMarker.class,
         RepositoryPackageMarker.class,
         ProcessamentoPackageMarker.class})
 @EnableJpaRepositories(basePackageClasses = {RepositoryPackageMarker.class})

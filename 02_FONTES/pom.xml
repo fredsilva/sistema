@@ -5,7 +5,7 @@
 
     <groupId>br.gov.to.sefaz</groupId>
     <artifactId>sat</artifactId>
-    <version>1.6.4</version>
+    <version>1.7.1</version>
     <packaging>pom</packaging>
 
     <name>sat</name>
@@ -73,6 +73,8 @@
         <bcprov.version>1.54</bcprov.version>
         <geoip.version>1.3.1</geoip.version>
         <jsoup.version>1.9.2</jsoup.version>
+        <flying-saucer.version>9.0.9</flying-saucer.version>
+        <barcode4j.version>2.1</barcode4j.version>
 
         <!-- Versao da dependencia de JSON -->
         <jackson.version>2.7.5</jackson.version>
@@ -91,7 +93,7 @@
         <maven-checkstyle-plugin.version>2.17</maven-checkstyle-plugin.version>
 
         <!-- Versão Sistema -->
-        <sat.version>1.6.4</sat.version>
+        <sat.version>1.7.1</sat.version>
     </properties>
 
     <dependencyManagement>
@@ -338,7 +340,12 @@
                         <artifactId>bctsp-jdk14</artifactId>
                     </exclusion>
                 </exclusions>
-                <version>9.0.9</version>
+                <version>${flying-saucer.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.sf.barcode4j</groupId>
+                <artifactId>barcode4j</artifactId>
+                <version>${barcode4j.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.maxmind.geoip</groupId>
@@ -471,6 +478,12 @@
             <timezone>-3</timezone>
         </developer>
         <developer>
+            <id>thiago.luz</id>
+            <name>Thiago Lovato da Luz</name>
+            <email>thiago.luz@ntconsult.com.br</email>
+            <timezone>-3</timezone>
+        </developer>
+	<developer>
             <id>volceri.davila</id>
             <name>Volceri D Avila</name>
             <email>volceri.davila@ntconsult.com.br</email>

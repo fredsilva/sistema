@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.arr.parametros.business.service.ConveniosTarifasService
-	c47793 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.ConveniosTarifasService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ConveniosTarifasService.html">
+	c60132 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.ConveniosTarifasService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ConveniosTarifasService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ConveniosTarifasService </td></tr>
@@ -27,7 +27,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ConveniosTarifasService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.impl.ConveniosTarifasServiceImpl
-	c47820 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.ConveniosTarifasServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/ConveniosTarifasServiceImpl.html">
+	c60159 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.ConveniosTarifasServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/ConveniosTarifasServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ConveniosTarifasServiceImpl </td></tr>
 		</table></td></tr>
@@ -45,11 +45,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./impl/ConveniosTarifasServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.arr.parametros.business.service.ConveniosTarifasService implements br.gov.to.sefaz.business.service.CrudService<E, I extends java.io.Serializable>
-	c48101:p -> c47793:p [dir=back,arrowtail=empty,style=dashed];
+	c60455:p -> c60132:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.arr.parametros.business.service.impl.ConveniosTarifasServiceImpl implements br.gov.to.sefaz.arr.parametros.business.service.ConveniosTarifasService
-	c47793:p -> c47820:p [dir=back,arrowtail=empty,style=dashed];
+	c60132:p -> c60159:p [dir=back,arrowtail=empty,style=dashed];
 	// br.gov.to.sefaz.business.service.CrudService<E, I extends java.io.Serializable>
-	c48101 [label=<<table title="br.gov.to.sefaz.business.service.CrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/service/CrudService.html">
+	c60455 [label=<<table title="br.gov.to.sefaz.business.service.CrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/service/CrudService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CrudService&lt;E, I extends Serializable&gt; </td></tr>

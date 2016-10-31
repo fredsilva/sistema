@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.presentation.managedbean.composites.DataTableMB
-	c111700 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.composites.DataTableMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DataTableMB.html">
+	c128786 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.composites.DataTableMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DataTableMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DataTableMB </td></tr>
 		</table></td></tr>
@@ -21,7 +21,7 @@ digraph G {
 <tr><td align="left" balign="left"> + DataTableMB() </td></tr>
 <tr><td align="left" balign="left"> + parseHeaders(headers : String, fields : List&lt;DataTableField&gt;, bundle : String) : List&lt;String&gt; </td></tr>
 <tr><td align="left" balign="left"> + parseFields(fields : String) : List&lt;DataTableField&gt; </td></tr>
-<tr><td align="left" balign="left"> + formatToPrint(fieldValue : Object, printType : DataTableFieldPrint) : Object </td></tr>
+<tr><td align="left" balign="left"> + formatToPrint(row : Object, fieldDesc : DataTableField) : Object </td></tr>
 <tr><td align="left" balign="left"> + getFromBundle(messageKey : String, bundle : String) : String </td></tr>
 <tr><td align="left" balign="left"> + parseActionEvents(actionEvents : String) : List&lt;DataTableActionEvents&gt; </td></tr>
 <tr><td align="left" balign="left"> + parseActionVisible(actionEvents : String) : List&lt;DataTableActionVisible&gt; </td></tr>

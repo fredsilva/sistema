@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.service.impl.DefaultCrudService<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c755342 [label=<<table title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../business/service/impl/DefaultCrudService.html">
+	c941173 [label=<<table title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../business/service/impl/DefaultCrudService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultCrudService&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
 		</table></td></tr>
@@ -30,14 +30,14 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../../business/service/impl/DefaultCrudService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.service.ResumoStrService
-	c755957 [label=<<table title="br.gov.to.sefaz.arr.processamento.service.ResumoStrService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ResumoStrService.html">
+	c941841 [label=<<table title="br.gov.to.sefaz.arr.processamento.service.ResumoStrService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ResumoStrService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ResumoStrService </td></tr>
 		</table></td></tr>
 		</table>>, URL="../ResumoStrService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.service.impl.ResumoStrServiceImpl
-	c755969 [label=<<table title="br.gov.to.sefaz.arr.processamento.service.impl.ResumoStrServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ResumoStrServiceImpl.html">
+	c941854 [label=<<table title="br.gov.to.sefaz.arr.processamento.service.impl.ResumoStrServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ResumoStrServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ResumoStrServiceImpl </td></tr>
 		</table></td></tr>
@@ -49,8 +49,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ResumoStrServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.arr.processamento.service.impl.ResumoStrServiceImpl extends br.gov.to.sefaz.business.service.impl.DefaultCrudService<br.gov.to.sefaz.arr.persistence.entity.ResumoStr, br.gov.to.sefaz.arr.persistence.entity.ResumoStrPK>
-	c755342:p -> c755969:p [dir=back,arrowtail=empty];
+	c941173:p -> c941854:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.processamento.service.impl.ResumoStrServiceImpl implements br.gov.to.sefaz.arr.processamento.service.ResumoStrService
-	c755957:p -> c755969:p [dir=back,arrowtail=empty,style=dashed];
+	c941841:p -> c941854:p [dir=back,arrowtail=empty,style=dashed];
 }
 

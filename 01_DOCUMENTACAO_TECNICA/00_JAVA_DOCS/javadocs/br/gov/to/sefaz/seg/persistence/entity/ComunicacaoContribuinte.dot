@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.persistence.entity.ComunicacaoContribuinte
-	c290390 [label=<<table title="br.gov.to.sefaz.seg.persistence.entity.ComunicacaoContribuinte" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ComunicacaoContribuinte.html">
+	c349419 [label=<<table title="br.gov.to.sefaz.seg.persistence.entity.ComunicacaoContribuinte" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ComunicacaoContribuinte.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ComunicacaoContribuinte </td></tr>
 		</table></td></tr>
@@ -44,9 +44,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ComunicacaoContribuinte.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.persistence.entity.ComunicacaoContribuinte implements java.io.Serializable
-	c290870:p -> c290390:p [dir=back,arrowtail=empty,style=dashed];
+	c349964:p -> c349419:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
-	c290870 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/io/Serializable.html">
+	c349964 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Serializable </td></tr>

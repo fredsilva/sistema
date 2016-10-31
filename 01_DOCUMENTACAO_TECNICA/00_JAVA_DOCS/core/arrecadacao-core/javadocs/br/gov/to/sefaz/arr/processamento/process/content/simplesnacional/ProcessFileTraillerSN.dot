@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.arr.processamento.process.content.ProcessFileContent
-	c106600 [label=<<table title="br.gov.to.sefaz.arr.processamento.process.content.ProcessFileContent" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ProcessFileContent.html">
+	c135585 [label=<<table title="br.gov.to.sefaz.arr.processamento.process.content.ProcessFileContent" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ProcessFileContent.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ProcessFileContent </td></tr>
@@ -23,7 +23,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../ProcessFileContent.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.process.content.simplesnacional.ProcessFileTraillerSN
-	c106602 [label=<<table title="br.gov.to.sefaz.arr.processamento.process.content.simplesnacional.ProcessFileTraillerSN" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ProcessFileTraillerSN.html">
+	c135587 [label=<<table title="br.gov.to.sefaz.arr.processamento.process.content.simplesnacional.ProcessFileTraillerSN" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ProcessFileTraillerSN.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ProcessFileTraillerSN </td></tr>
 		</table></td></tr>
@@ -36,6 +36,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ProcessFileTraillerSN.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.arr.processamento.process.content.simplesnacional.ProcessFileTraillerSN implements br.gov.to.sefaz.arr.processamento.process.content.ProcessFileContent
-	c106600:p -> c106602:p [dir=back,arrowtail=empty,style=dashed];
+	c135585:p -> c135587:p [dir=back,arrowtail=empty,style=dashed];
 }
 

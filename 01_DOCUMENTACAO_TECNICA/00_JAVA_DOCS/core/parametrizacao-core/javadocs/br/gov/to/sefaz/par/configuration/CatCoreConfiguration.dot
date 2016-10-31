@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.par.configuration.CatCoreConfiguration
-	c561 [label=<<table title="br.gov.to.sefaz.par.configuration.CatCoreConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CatCoreConfiguration.html">
+	c680 [label=<<table title="br.gov.to.sefaz.par.configuration.CatCoreConfiguration" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CatCoreConfiguration.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CatCoreConfiguration </td></tr>
 		</table></td></tr>

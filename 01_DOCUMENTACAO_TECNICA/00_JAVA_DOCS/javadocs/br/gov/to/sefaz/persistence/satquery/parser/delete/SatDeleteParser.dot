@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.query.parser.delete.DeleteParser
-	c762295 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.delete.DeleteParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../query/parser/delete/DeleteParser.html">
+	c948892 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.delete.DeleteParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../query/parser/delete/DeleteParser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DeleteParser </td></tr>
 		</table></td></tr>
@@ -24,7 +24,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../query/parser/delete/DeleteParser.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.satquery.parser.delete.SatDeleteParser
-	c762337 [label=<<table title="br.gov.to.sefaz.persistence.satquery.parser.delete.SatDeleteParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SatDeleteParser.html">
+	c948935 [label=<<table title="br.gov.to.sefaz.persistence.satquery.parser.delete.SatDeleteParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SatDeleteParser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SatDeleteParser </td></tr>
 		</table></td></tr>
@@ -34,11 +34,10 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + SatDeleteParser() </td></tr>
 <tr><td align="left" balign="left"> + setConditionsParser(conditionsParser : QueryStructureParser&lt;ConditionsStructure&gt;) </td></tr>
-<tr><td align="left" balign="left"> + setUpdateParser(updateParser : QueryStructureParser&lt;UpdateStructure&gt;) </td></tr>
 <tr><td align="left" balign="left"> + parse(structure : DeleteStructure, indentationLvl : int, paramId : ParamIdGenerator) : ResultQuery </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SatDeleteParser.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.persistence.satquery.parser.delete.SatDeleteParser extends br.gov.to.sefaz.persistence.query.parser.delete.DeleteParser
-	c762295:p -> c762337:p [dir=back,arrowtail=empty];
+	c948892:p -> c948935:p [dir=back,arrowtail=empty];
 }
 

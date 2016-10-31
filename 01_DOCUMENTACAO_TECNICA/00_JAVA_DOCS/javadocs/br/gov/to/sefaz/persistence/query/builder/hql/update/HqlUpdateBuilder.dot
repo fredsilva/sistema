@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.query.builder.hql.update.HqlUpdateBuilder
-	c471410 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.update.HqlUpdateBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./HqlUpdateBuilder.html">
+	c609605 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.update.HqlUpdateBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./HqlUpdateBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HqlUpdateBuilder </td></tr>
 		</table></td></tr>
@@ -31,7 +31,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./HqlUpdateBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder<T, S>
-	c471411 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../QueryStructureBuilder.html">
+	c609606 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../QueryStructureBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> QueryStructureBuilder&lt;T, S&gt; </td></tr>
@@ -45,6 +45,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../QueryStructureBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.persistence.query.builder.hql.update.HqlUpdateBuilder implements br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder<T, S>
-	c471411:p -> c471410:p [dir=back,arrowtail=empty,style=dashed];
+	c609606:p -> c609605:p [dir=back,arrowtail=empty,style=dashed];
 }
 

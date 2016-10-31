@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.query.structure.select.orderby.OrderByStructure
-	c49175 [label=<<table title="br.gov.to.sefaz.persistence.query.structure.select.orderby.OrderByStructure" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OrderByStructure.html">
+	c58458 [label=<<table title="br.gov.to.sefaz.persistence.query.structure.select.orderby.OrderByStructure" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OrderByStructure.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OrderByStructure </td></tr>
 		</table></td></tr>
@@ -28,7 +28,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./OrderByStructure.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.structure.select.orderby.Order
-	c49176 [label=<<table title="br.gov.to.sefaz.persistence.query.structure.select.orderby.Order" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Order.html">
+	c58459 [label=<<table title="br.gov.to.sefaz.persistence.query.structure.select.orderby.Order" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Order.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> Order </td></tr>

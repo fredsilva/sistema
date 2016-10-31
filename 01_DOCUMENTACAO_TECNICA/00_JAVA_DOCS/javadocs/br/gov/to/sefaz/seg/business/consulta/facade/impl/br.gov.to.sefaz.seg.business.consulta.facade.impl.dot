@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.consulta.facade.impl.ConsultaHistoricoNavegacaoFacadeImpl
-	c87821 [label=<<table title="br.gov.to.sefaz.seg.business.consulta.facade.impl.ConsultaHistoricoNavegacaoFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConsultaHistoricoNavegacaoFacadeImpl.html">
+	c102312 [label=<<table title="br.gov.to.sefaz.seg.business.consulta.facade.impl.ConsultaHistoricoNavegacaoFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConsultaHistoricoNavegacaoFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ConsultaHistoricoNavegacaoFacadeImpl </td></tr>
 		</table></td></tr>
@@ -23,7 +23,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ConsultaHistoricoNavegacaoFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.consulta.facade.impl.ConsultaComunicacaoSistemaFacadeImpl
-	c87822 [label=<<table title="br.gov.to.sefaz.seg.business.consulta.facade.impl.ConsultaComunicacaoSistemaFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConsultaComunicacaoSistemaFacadeImpl.html">
+	c102313 [label=<<table title="br.gov.to.sefaz.seg.business.consulta.facade.impl.ConsultaComunicacaoSistemaFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConsultaComunicacaoSistemaFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ConsultaComunicacaoSistemaFacadeImpl </td></tr>
 		</table></td></tr>
@@ -37,7 +37,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ConsultaComunicacaoSistemaFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.consulta.facade.impl.ComunicacaoContribuinteFacadeImpl
-	c87823 [label=<<table title="br.gov.to.sefaz.seg.business.consulta.facade.impl.ComunicacaoContribuinteFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ComunicacaoContribuinteFacadeImpl.html">
+	c102314 [label=<<table title="br.gov.to.sefaz.seg.business.consulta.facade.impl.ComunicacaoContribuinteFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ComunicacaoContribuinteFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ComunicacaoContribuinteFacadeImpl </td></tr>
 		</table></td></tr>

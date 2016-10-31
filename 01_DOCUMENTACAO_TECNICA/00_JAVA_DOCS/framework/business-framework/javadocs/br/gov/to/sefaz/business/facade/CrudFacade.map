@@ -1,6 +1,6 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./CrudFacade.html" title="br.gov.to.sefaz.business.facade.CrudFacade" alt="" coords="101,11,373,208"/>
-<area shape="rect" id="node1" href="./CrudFacade.html" title="&lt;TABLE&gt;" alt="" coords="91,5,384,213"/>
-<area shape="rect" id="node2_1" href="./impl/DefaultCrudFacade.html" title="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" alt="" coords="16,267,459,464"/>
-<area shape="rect" id="node2" href="./impl/DefaultCrudFacade.html" title="&lt;TABLE&gt;" alt="" coords="5,261,469,469"/>
+<area shape="rect" id="node1_0" href="./CrudFacade.html" title="br.gov.to.sefaz.business.facade.CrudFacade" alt="" coords="95,11,379,225"/>
+<area shape="rect" id="node1" href="./CrudFacade.html" title="&lt;TABLE&gt;" alt="" coords="85,5,390,231"/>
+<area shape="rect" id="node2_1" href="./impl/DefaultCrudFacade.html" title="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" alt="" coords="16,284,459,499"/>
+<area shape="rect" id="node2" href="./impl/DefaultCrudFacade.html" title="&lt;TABLE&gt;" alt="" coords="5,279,469,504"/>
 </map>

@@ -56,6 +56,7 @@ digraph G {
 <tr><td align="left" balign="left"> + save(arg0 : E) : E </td></tr>
 <tr><td align="left" balign="left"> + save(arg0 : Collection&lt;E&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + update(arg0 : E) : E </td></tr>
+<tr><td align="left" balign="left"> + update(arg0 : Collection&lt;E&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + delete(arg0 : I) : Optional&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + delete(arg0 : Iterable&lt;I&gt;) </td></tr>
 		</table></td></tr>

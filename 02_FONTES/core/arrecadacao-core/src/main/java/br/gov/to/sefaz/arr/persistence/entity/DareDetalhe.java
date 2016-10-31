@@ -1,16 +1,21 @@
 package br.gov.to.sefaz.arr.persistence.entity;
 
+import br.gov.to.sefaz.arr.persistence.enums.OrigemDebitoEnum;
+import br.gov.to.sefaz.persistence.converter.OneOrNullBooleanConverter;
 import br.gov.to.sefaz.persistence.entity.AbstractEntity;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.Collection;
 import java.util.Objects;
 import javax.persistence.Column;
+import javax.persistence.Convert;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
@@ -23,12 +28,13 @@ import javax.validation.constraints.Size;
  * @author <a href="mailto:gabriel.santos@ntconsult.com.br">gabriel.santos</a>
  * @since 22/06/2016 10:57:41
  */
-@SuppressWarnings("PMD")
+@SuppressWarnings({"PMD.GodClass", "PMD.TooManyFields"})
 @Entity
 @Table(name = "TA_DARE_DETALHE", schema = "SEFAZ_ARR")
 @IdClass(DareDetalhePK.class)
 public class DareDetalhe extends AbstractEntity<DareDetalhePK> {
 
+    private static final String ID_RECEITA = "ID_RECEITA";
     private static final long serialVersionUID = -8549793202091736110L;
 
     @Id
@@ -42,7 +48,7 @@ public class DareDetalhe extends AbstractEntity<DareDetalhePK> {
     private Integer idSeqDareDetalhe;
 
     @NotNull
-    @Column(name = "ID_RECEITA")
+    @Column(name = ID_RECEITA)
     private Integer idReceita;
 
     @Column(name = "ID_SUBCODIGO")
@@ -88,7 +94,8 @@ public class DareDetalhe extends AbstractEntity<DareDetalhePK> {
     private BigDecimal valorTotal;
 
     @Column(name = "INFORMADO_CONTRIBUINTE")
-    private Integer informadoContribuinte;
+    @Convert(converter = OneOrNullBooleanConverter.class)
+    private Boolean informadoContribuinte;
 
     @Column(name = "ID_PESSOA_REFERENCIADA")
     private Long idPessoaReferenciada;
@@ -107,8 +114,62 @@ public class DareDetalhe extends AbstractEntity<DareDetalhePK> {
     @ManyToOne(fetch = FetchType.LAZY)
     private Dare dare;
 
+    @JoinColumns(
+            {@JoinColumn(name = ID_RECEITA, referencedColumnName = ID_RECEITA,
+                    insertable = false, updatable = false),
+                    @JoinColumn(name = "ID_SUBCODIGO", referencedColumnName = "ID_SUBCODIGO",
+                            insertable = false, updatable = false)
+            })
+    @ManyToOne
+    private ReceitasTaxas receitasTaxas;
+
+    @JoinColumn(name = ID_RECEITA, referencedColumnName = ID_RECEITA,
+            insertable = false, updatable = false)
+    @ManyToOne
+    private Receitas receitas;
+
     @Transient
     private Collection<PagosArrec> pagosArrecCollection;
+
+    @Transient
+    private OrigemDebitoEnum origemDebito;
+
+    @Transient
+    private LocalDate dataVencimentoContaCorrente;
+
+    public DareDetalhe() {
+        // necessário para inicialização por reflexão.
+    }
+
+    public DareDetalhe(Long idNossoNumeroDare, Integer idSeqDareDetalhe, Integer idReceita, Integer idSubcodigo,
+            String observacao, Integer periodoReferencia, Long numeroDocumento, Integer numeroParcela,
+            BigDecimal valorImposto, BigDecimal valorCorrecaoMonetaria, BigDecimal valorMulta,
+            BigDecimal valorReducaoMulta, BigDecimal valorJuros, BigDecimal valorReducaoJuros, BigDecimal valorTaxa,
+            BigDecimal valorTotal, Boolean informadoContribuinte, Long idPessoaReferenciada,
+            Integer tipoPessoaReferenciada, Long idContaCorrente, Integer idMunicipio, LocalDate dataVencimento) {
+        this.idNossoNumeroDare = idNossoNumeroDare;
+        this.idSeqDareDetalhe = idSeqDareDetalhe;
+        this.idReceita = idReceita;
+        this.idSubcodigo = idSubcodigo;
+        this.observacao = observacao;
+        this.periodoReferencia = periodoReferencia;
+        this.numeroDocumento = numeroDocumento;
+        this.numeroParcela = numeroParcela;
+        this.valorImposto = valorImposto;
+        this.valorCorrecaoMonetaria = valorCorrecaoMonetaria;
+        this.valorMulta = valorMulta;
+        this.valorReducaoMulta = valorReducaoMulta;
+        this.valorJuros = valorJuros;
+        this.valorReducaoJuros = valorReducaoJuros;
+        this.valorTaxa = valorTaxa;
+        this.valorTotal = valorTotal;
+        this.informadoContribuinte = informadoContribuinte;
+        this.idPessoaReferenciada = idPessoaReferenciada;
+        this.tipoPessoaReferenciada = tipoPessoaReferenciada;
+        this.idContaCorrente = idContaCorrente;
+        this.idMunicipio = idMunicipio;
+        this.dataVencimentoContaCorrente = dataVencimento;
+    }
 
     @Override
     public DareDetalhePK getId() {
@@ -243,11 +304,11 @@ public class DareDetalhe extends AbstractEntity<DareDetalhePK> {
         this.valorTotal = valorTotal;
     }
 
-    public Integer getInformadoContribuinte() {
+    public Boolean getInformadoContribuinte() {
         return informadoContribuinte;
     }
 
-    public void setInformadoContribuinte(Integer informadoContribuinte) {
+    public void setInformadoContribuinte(Boolean informadoContribuinte) {
         this.informadoContribuinte = informadoContribuinte;
     }
 
@@ -297,6 +358,51 @@ public class DareDetalhe extends AbstractEntity<DareDetalhePK> {
 
     public void setPagosArrecCollection(Collection<PagosArrec> pagosArrecCollection) {
         this.pagosArrecCollection = pagosArrecCollection;
+    }
+
+    public ReceitasTaxas getReceitasTaxas() {
+        return receitasTaxas;
+    }
+
+    public void setReceitasTaxas(ReceitasTaxas receitasTaxas) {
+        this.receitasTaxas = receitasTaxas;
+    }
+
+    public Receitas getReceitas() {
+        return receitas;
+    }
+
+    public void setReceitas(Receitas receitas) {
+        this.receitas = receitas;
+    }
+
+    public LocalDate getDataVencimentoDare() {
+        return getDare().getDataVencimento();
+    }
+
+    public String getDescricaoReceita() {
+        return getReceitas().getIdReceita() + "-" + getReceitas().getDescricaoReceita();
+    }
+
+    public String getDescricaoSubCodigo() {
+        return Objects.nonNull(getReceitasTaxas()) ? getReceitasTaxas().getIdSubcodigo() + "-"
+                + getReceitasTaxas().getDescricao() : null;
+    }
+
+    public OrigemDebitoEnum getOrigemDebito() {
+        return origemDebito;
+    }
+
+    public void setOrigemDebito(OrigemDebitoEnum origemDebito) {
+        this.origemDebito = origemDebito;
+    }
+
+    public LocalDate getDataVencimentoContaCorrente() {
+        return dataVencimentoContaCorrente;
+    }
+
+    public void setDataVencimentoContaCorrente(LocalDate dataVencimentoContaCorrente) {
+        this.dataVencimentoContaCorrente = dataVencimentoContaCorrente;
     }
 
     @Override

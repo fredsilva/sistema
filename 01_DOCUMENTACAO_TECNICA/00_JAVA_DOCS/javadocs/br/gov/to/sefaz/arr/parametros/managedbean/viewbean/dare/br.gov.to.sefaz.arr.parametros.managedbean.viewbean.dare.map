@@ -1,0 +1,18 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./DebitoSemPagamentoParcialViewBean.html" title="br.gov.to.sefaz.arr.parametros.managedbean.viewbean.dare.DebitoSemPagamentoParcialViewBean" alt="" coords="16,297,440,494"/>
+<area shape="rect" id="node1" href="./DebitoSemPagamentoParcialViewBean.html" title="&lt;TABLE&gt;" alt="" coords="5,291,451,499"/>
+<area shape="rect" id="node2_1" href="./DebitoPagamentoParcialViewBean.html" title="br.gov.to.sefaz.arr.parametros.managedbean.viewbean.dare.DebitoPagamentoParcialViewBean" alt="" coords="485,80,971,711"/>
+<area shape="rect" id="node2" href="./DebitoPagamentoParcialViewBean.html" title="&lt;TABLE&gt;" alt="" coords="475,75,981,716"/>
+<area shape="rect" id="node3_2" href="./DebitoIpvaViewBean.html" title="br.gov.to.sefaz.arr.parametros.managedbean.viewbean.dare.DebitoIpvaViewBean" alt="" coords="1016,279,1440,511"/>
+<area shape="rect" id="node3" href="./DebitoIpvaViewBean.html" title="&lt;TABLE&gt;" alt="" coords="1005,274,1451,517"/>
+<area shape="rect" id="node4_3" href="./DebitoIcmsFreteViewBean.html" title="br.gov.to.sefaz.arr.parametros.managedbean.viewbean.dare.DebitoIcmsFreteViewBean" alt="" coords="1485,80,1853,711"/>
+<area shape="rect" id="node4" href="./DebitoIcmsFreteViewBean.html" title="&lt;TABLE&gt;" alt="" coords="1475,75,1864,716"/>
+<area shape="rect" id="node5_4" href="./DebitoDiversoViewBean.html" title="br.gov.to.sefaz.arr.parametros.managedbean.viewbean.dare.DebitoDiversoViewBean" alt="" coords="1899,115,2339,676"/>
+<area shape="rect" id="node5" href="./DebitoDiversoViewBean.html" title="&lt;TABLE&gt;" alt="" coords="1888,109,2349,681"/>
+<area shape="rect" id="node6_5" href="./DareEViewBean.html" title="br.gov.to.sefaz.arr.parametros.managedbean.viewbean.dare.DareEViewBean" alt="" coords="2384,80,2819,711"/>
+<area shape="rect" id="node6" href="./DareEViewBean.html" title="&lt;TABLE&gt;" alt="" coords="2373,75,2829,716"/>
+<area shape="rect" id="node7_6" href="./DareEPagamento.html" title="br.gov.to.sefaz.arr.parametros.managedbean.viewbean.dare.DareEPagamento" alt="" coords="2864,11,5496,780"/>
+<area shape="rect" id="node7" href="./DareEPagamento.html" title="&lt;TABLE&gt;" alt="" coords="2853,5,5507,785"/>
+<area shape="rect" id="node8_7" href="./DareDadosPagamentoController.html" title="br.gov.to.sefaz.arr.parametros.managedbean.viewbean.dare.DareDadosPagamentoController" alt="" coords="5541,80,6480,711"/>
+<area shape="rect" id="node8" href="./DareDadosPagamentoController.html" title="&lt;TABLE&gt;" alt="" coords="5531,75,6491,716"/>
+</map>

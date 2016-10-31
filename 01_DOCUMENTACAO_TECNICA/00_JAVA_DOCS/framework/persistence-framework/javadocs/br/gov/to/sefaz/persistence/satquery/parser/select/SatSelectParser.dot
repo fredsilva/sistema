@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.query.parser.select.SelectParser
-	c15667 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.select.SelectParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../query/parser/select/SelectParser.html">
+	c16066 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.select.SelectParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../query/parser/select/SelectParser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SelectParser </td></tr>
 		</table></td></tr>
@@ -24,7 +24,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../query/parser/select/SelectParser.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.satquery.parser.select.SatSelectParser
-	c15705 [label=<<table title="br.gov.to.sefaz.persistence.satquery.parser.select.SatSelectParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SatSelectParser.html">
+	c16106 [label=<<table title="br.gov.to.sefaz.persistence.satquery.parser.select.SatSelectParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SatSelectParser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SatSelectParser </td></tr>
 		</table></td></tr>
@@ -38,6 +38,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SatSelectParser.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.persistence.satquery.parser.select.SatSelectParser extends br.gov.to.sefaz.persistence.query.parser.select.SelectParser
-	c15667:p -> c15705:p [dir=back,arrowtail=empty];
+	c16066:p -> c16106:p [dir=back,arrowtail=empty];
 }
 

@@ -3,6 +3,7 @@ package br.gov.to.sefaz.seg.persistence.entity;
 import br.gov.to.sefaz.persistence.entity.AbstractEntity;
 import br.gov.to.sefaz.seg.persistence.converter.TipoUnidadeConverter;
 import br.gov.to.sefaz.seg.persistence.domain.TipoUnidade;
+import org.apache.commons.lang3.StringUtils;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import java.util.Objects;
@@ -179,7 +180,11 @@ public class UnidadeOrganizacional extends AbstractEntity<Long> {
     }
 
     public String getDescricaoTipoUnidade() {
-        return Objects.isNull(tipoUnidade) ? "" : tipoUnidade.getDescricaoTipoUnidade();
+        return Objects.isNull(tipoUnidade) ? StringUtils.EMPTY : tipoUnidade.getDescricaoTipoUnidade();
+    }
+
+    public String getCodeLabel() {
+        return getTipoUnidade().getCodigoTipoUnidade() + " - " + getNomeUnidOrganizac();
     }
 
     @Override

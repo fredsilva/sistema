@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.query.builder.hql.delete.HqlDeleteBuilder
-	c14523 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.delete.HqlDeleteBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./hql/delete/HqlDeleteBuilder.html">
+	c15014 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.delete.HqlDeleteBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./hql/delete/HqlDeleteBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HqlDeleteBuilder </td></tr>
 		</table></td></tr>
@@ -28,7 +28,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./hql/delete/HqlDeleteBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.hql.insert.HqlInsertBuilder
-	c14526 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.insert.HqlInsertBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./hql/insert/HqlInsertBuilder.html">
+	c15017 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.insert.HqlInsertBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./hql/insert/HqlInsertBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HqlInsertBuilder </td></tr>
 		</table></td></tr>
@@ -45,7 +45,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./hql/insert/HqlInsertBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.hql.select.groupby.HqlGroupByBuilder
-	c14529 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.select.groupby.HqlGroupByBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./hql/select/groupby/HqlGroupByBuilder.html">
+	c15020 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.select.groupby.HqlGroupByBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./hql/select/groupby/HqlGroupByBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HqlGroupByBuilder </td></tr>
 		</table></td></tr>
@@ -62,7 +62,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./hql/select/groupby/HqlGroupByBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.hql.select.HqlSelectBuilder
-	c14530 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.select.HqlSelectBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./hql/select/HqlSelectBuilder.html">
+	c15021 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.select.HqlSelectBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./hql/select/HqlSelectBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HqlSelectBuilder </td></tr>
 		</table></td></tr>
@@ -104,7 +104,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./hql/select/HqlSelectBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.hql.select.join.HqlJoinBuilder
-	c14531 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.select.join.HqlJoinBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./hql/select/join/HqlJoinBuilder.html">
+	c15022 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.select.join.HqlJoinBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./hql/select/join/HqlJoinBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HqlJoinBuilder </td></tr>
 		</table></td></tr>
@@ -143,7 +143,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./hql/select/join/HqlJoinBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.hql.select.orderby.HqlOrderByBuilder
-	c14532 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.select.orderby.HqlOrderByBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./hql/select/orderby/HqlOrderByBuilder.html">
+	c15023 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.select.orderby.HqlOrderByBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./hql/select/orderby/HqlOrderByBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HqlOrderByBuilder </td></tr>
 		</table></td></tr>
@@ -159,7 +159,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./hql/select/orderby/HqlOrderByBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.hql.update.HqlUpdateBuilder
-	c14540 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.update.HqlUpdateBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./hql/update/HqlUpdateBuilder.html">
+	c15031 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.update.HqlUpdateBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./hql/update/HqlUpdateBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HqlUpdateBuilder </td></tr>
 		</table></td></tr>
@@ -180,7 +180,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./hql/update/HqlUpdateBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder<T, S>
-	c14541 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./QueryStructureBuilder.html">
+	c15032 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./QueryStructureBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> QueryStructureBuilder&lt;T, S&gt; </td></tr>
@@ -194,7 +194,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./QueryStructureBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.sql.delete.DeleteBuilder
-	c14544 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.delete.DeleteBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./sql/delete/DeleteBuilder.html">
+	c15035 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.delete.DeleteBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./sql/delete/DeleteBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DeleteBuilder </td></tr>
 		</table></td></tr>
@@ -211,7 +211,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./sql/delete/DeleteBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.sql.insert.InsertBuilder
-	c14545 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.insert.InsertBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./sql/insert/InsertBuilder.html">
+	c15036 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.insert.InsertBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./sql/insert/InsertBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> InsertBuilder </td></tr>
 		</table></td></tr>
@@ -228,7 +228,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./sql/insert/InsertBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.sql.select.groupby.GroupByBuilder
-	c14548 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.select.groupby.GroupByBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./sql/select/groupby/GroupByBuilder.html">
+	c15039 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.select.groupby.GroupByBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./sql/select/groupby/GroupByBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> GroupByBuilder </td></tr>
 		</table></td></tr>
@@ -245,7 +245,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./sql/select/groupby/GroupByBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.sql.select.join.JoinBuilder
-	c14549 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.select.join.JoinBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./sql/select/join/JoinBuilder.html">
+	c15040 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.select.join.JoinBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./sql/select/join/JoinBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> JoinBuilder </td></tr>
 		</table></td></tr>
@@ -262,7 +262,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./sql/select/join/JoinBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.sql.select.orderby.OrderByBuilder
-	c14550 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.select.orderby.OrderByBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./sql/select/orderby/OrderByBuilder.html">
+	c15041 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.select.orderby.OrderByBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./sql/select/orderby/OrderByBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OrderByBuilder </td></tr>
 		</table></td></tr>
@@ -279,7 +279,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./sql/select/orderby/OrderByBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.sql.select.SelectBuilder
-	c14551 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.select.SelectBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./sql/select/SelectBuilder.html">
+	c15042 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.select.SelectBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./sql/select/SelectBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SelectBuilder </td></tr>
 		</table></td></tr>
@@ -312,7 +312,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./sql/select/SelectBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.sql.update.UpdateBuilder
-	c14559 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.update.UpdateBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./sql/update/UpdateBuilder.html">
+	c15050 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.update.UpdateBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./sql/update/UpdateBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UpdateBuilder </td></tr>
 		</table></td></tr>
@@ -332,7 +332,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./sql/update/UpdateBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractWhereBuilder<W extends br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractWhereBuilder<W, T, J>, T, J extends br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractJunctionBuilder<W, T>>
-	c14564 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractWhereBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./sql/where/AbstractWhereBuilder.html">
+	c15055 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractWhereBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./sql/where/AbstractWhereBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractWhereBuilder&lt;W extends AbstractWhereBuilder&lt;W, T, J&gt;, T, J extends AbstractJunctionBuilder&lt;W, T&gt;&gt; </font></td></tr>
 		</table></td></tr>
@@ -372,7 +372,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./sql/where/AbstractWhereBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractJunctionBuilder<W extends br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractWhereBuilder<?, T, ?>, T>
-	c14565 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractJunctionBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./sql/where/AbstractJunctionBuilder.html">
+	c15056 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractJunctionBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./sql/where/AbstractJunctionBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractJunctionBuilder&lt;W extends AbstractWhereBuilder&lt;?, T, ?&gt;, T&gt; </font></td></tr>
 		</table></td></tr>
@@ -388,36 +388,36 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./sql/where/AbstractJunctionBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.persistence.query.builder.hql.delete.HqlDeleteBuilder implements br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder<T, S>
-	c14541:p -> c14523:p [dir=back,arrowtail=empty,style=dashed];
+	c15032:p -> c15014:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.persistence.query.builder.hql.insert.HqlInsertBuilder implements br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder<T, S>
-	c14541:p -> c14526:p [dir=back,arrowtail=empty,style=dashed];
+	c15032:p -> c15017:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.persistence.query.builder.hql.select.groupby.HqlGroupByBuilder implements br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder<T, S>
-	c14541:p -> c14529:p [dir=back,arrowtail=empty,style=dashed];
+	c15032:p -> c15020:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.persistence.query.builder.hql.select.HqlSelectBuilder implements br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder<T, S>
-	c14541:p -> c14530:p [dir=back,arrowtail=empty,style=dashed];
+	c15032:p -> c15021:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.persistence.query.builder.hql.select.join.HqlJoinBuilder implements br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder<T, S>
-	c14541:p -> c14531:p [dir=back,arrowtail=empty,style=dashed];
+	c15032:p -> c15022:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.persistence.query.builder.hql.select.orderby.HqlOrderByBuilder implements br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder<T, S>
-	c14541:p -> c14532:p [dir=back,arrowtail=empty,style=dashed];
+	c15032:p -> c15023:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.persistence.query.builder.hql.update.HqlUpdateBuilder implements br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder<T, S>
-	c14541:p -> c14540:p [dir=back,arrowtail=empty,style=dashed];
+	c15032:p -> c15031:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.persistence.query.builder.sql.delete.DeleteBuilder implements br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder<T, S>
-	c14541:p -> c14544:p [dir=back,arrowtail=empty,style=dashed];
+	c15032:p -> c15035:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.persistence.query.builder.sql.insert.InsertBuilder implements br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder<T, S>
-	c14541:p -> c14545:p [dir=back,arrowtail=empty,style=dashed];
+	c15032:p -> c15036:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.persistence.query.builder.sql.select.groupby.GroupByBuilder implements br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder<T, S>
-	c14541:p -> c14548:p [dir=back,arrowtail=empty,style=dashed];
+	c15032:p -> c15039:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.persistence.query.builder.sql.select.join.JoinBuilder implements br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder<T, S>
-	c14541:p -> c14549:p [dir=back,arrowtail=empty,style=dashed];
+	c15032:p -> c15040:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.persistence.query.builder.sql.select.orderby.OrderByBuilder implements br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder<T, S>
-	c14541:p -> c14550:p [dir=back,arrowtail=empty,style=dashed];
+	c15032:p -> c15041:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.persistence.query.builder.sql.select.SelectBuilder implements br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder<T, S>
-	c14541:p -> c14551:p [dir=back,arrowtail=empty,style=dashed];
+	c15032:p -> c15042:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.persistence.query.builder.sql.update.UpdateBuilder implements br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder<T, S>
-	c14541:p -> c14559:p [dir=back,arrowtail=empty,style=dashed];
+	c15032:p -> c15050:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractWhereBuilder<W extends br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractWhereBuilder<W, T, J>, T, J extends br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractJunctionBuilder<W, T>> implements br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder<T, S>
-	c14541:p -> c14564:p [dir=back,arrowtail=empty,style=dashed];
+	c15032:p -> c15055:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractJunctionBuilder<W extends br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractWhereBuilder<?, T, ?>, T> implements br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder<T, S>
-	c14541:p -> c14565:p [dir=back,arrowtail=empty,style=dashed];
+	c15032:p -> c15056:p [dir=back,arrowtail=empty,style=dashed];
 }
 

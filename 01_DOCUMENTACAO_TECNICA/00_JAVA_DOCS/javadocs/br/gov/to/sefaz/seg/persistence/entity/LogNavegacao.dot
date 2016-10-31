@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.entity.AbstractEntity<I extends java.io.Serializable>
-	c493294 [label=<<table title="br.gov.to.sefaz.persistence.entity.AbstractEntity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/entity/AbstractEntity.html">
+	c635834 [label=<<table title="br.gov.to.sefaz.persistence.entity.AbstractEntity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/entity/AbstractEntity.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractEntity&lt;I extends Serializable&gt; </font></td></tr>
 		</table></td></tr>
@@ -38,7 +38,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../persistence/entity/AbstractEntity.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.entity.LogNavegacao
-	c493641 [label=<<table title="br.gov.to.sefaz.seg.persistence.entity.LogNavegacao" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./LogNavegacao.html">
+	c636193 [label=<<table title="br.gov.to.sefaz.seg.persistence.entity.LogNavegacao" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./LogNavegacao.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LogNavegacao </td></tr>
 		</table></td></tr>
@@ -73,6 +73,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./LogNavegacao.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.persistence.entity.LogNavegacao extends br.gov.to.sefaz.persistence.entity.AbstractEntity<java.lang.Long>
-	c493294:p -> c493641:p [dir=back,arrowtail=empty];
+	c635834:p -> c636193:p [dir=back,arrowtail=empty];
 }
 

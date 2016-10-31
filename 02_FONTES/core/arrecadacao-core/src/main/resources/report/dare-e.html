@@ -1,0 +1,221 @@
+<html>
+<head>
+    <title>DARE-e</title>
+    <link href="dare-e.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="content">
+    <div class="header">
+        <div class="identification">
+            <div class="barcode">
+                <img src="barcodeImg"/>
+            </div>
+            <div class="code">
+                <!-- A ordem dos pedaços deve ser invertida pois estão com "float: right;" -->
+                <!-- consequentemente são posicionados em ordem da DIREITA para a esquerda -->
+                <div class="box">${barcodePiece4}</div>
+                <div class="box">${barcodePiece3}</div>
+                <div class="box">${barcodePiece2}</div>
+                <div class="box">${barcodePiece1}</div>
+            </div>
+            <div class="via">
+                1 VIA DO BANCO
+            </div>
+        </div>
+        <table class="infos" cellpadding="0" cellspacing="0" border="1">
+            <tr>
+                <td class="gov-info">
+                    <div>
+                        <img src="/report/common/logo-togov.jpg"/>
+                    </div>
+                    <div>
+                        <h1>GOVERNO DO ESTADO DO TOCANTINS</h1>
+                        <h2>SECRETARIA DA FAZENDA</h2>
+                        <h2>DIRETORIA DA RECEITA
+                            <br/>DOCUMENTO DE ARRECADAÇÃO DE RECEITAS ESTADUAIS</h2>
+                    </div>
+                </td>
+                <td rowspan="2" class="pay-info">
+                    <h1>DARE-e</h1>
+                    <h2>NOSSO NÚMERO</h2>
+                    <p>${nossoNumero}</p>
+                    <h2>DATA E HORA DE EMISSÃO</h2>
+                    <p>
+                        <small>${dataHoraEmissao}</small>
+                    </p>
+                    <h2>DATA DE VENCIMENTO</h2>
+                    <p>${dataVencimento}</p>
+                    <h2>TOTAL VALOR A RECOLHER</h2>
+                    <p>R$ ${valorTotal}</p>
+                </td>
+            </tr>
+            <tr>
+                <td class="issuer-info">
+                    <p><strong>DADOS EMITENTE</strong></p>
+                    <p><strong>INSTITUIÇÃO: ${instituicao}</strong></p>
+                    <table cellpadding="0" cellspacing="0">
+                        <tr>
+                            <th>UF EMISSORA</th>
+                            <th>MUNICIPIO</th>
+                        </tr>
+                        <tr>
+                            <td>${ufEmissora}</td>
+                            <td>${municipio}</td>
+                        </tr>
+                        <tr>
+                            <th>IDENTIFICAÇÃO</th>
+                            <th>CONTRIBUINTE</th>
+                            <th>RAZÃO SOCIAL / NOME</th>
+                        </tr>
+                        <tr>
+                            <td>${identificacaoTipo}</td>
+                            <td>${contribuinteId}</td>
+                            <td>${nomeRazaoSocial}</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="footer">
+        <div class="left">AUTENTICAÇÃO BANCÁRIA</div>
+        <div class="right">PAGAMENTO REALIZADO NAS REDES BANCÁRIAS CREDENCIADAS</div>
+    </div>
+    <hr class="cut-line"/>
+    <div class="header">
+        <div class="identification">
+            <div class="barcode">
+                <img src="barcodeImg"/>
+            </div>
+            <div class="code">
+                <!-- A ordem dos pedaços deve ser invertida pois estão com "float: right;" -->
+                <!-- consequentemente são posicionados em ordem da DIREITA para a esquerda -->
+                <div class="box">${barcodePiece4}</div>
+                <div class="box">${barcodePiece3}</div>
+                <div class="box">${barcodePiece2}</div>
+                <div class="box">${barcodePiece1}</div>
+            </div>
+            <div class="via">
+                2 VIA DO CONTRIBUINTE
+            </div>
+        </div>
+        <table class="infos" cellpadding="0" cellspacing="0" border="1">
+            <tr>
+                <td class="gov-info">
+                    <div>
+                        <img src="/report/common/logo-togov.jpg"/>
+                    </div>
+                    <div>
+                        <h1>GOVERNO DO ESTADO DO TOCANTINS</h1>
+                        <h2>SECRETARIA DA FAZENDA</h2>
+                        <h2>DIRETORIA DA RECEITA
+                            <br/>DOCUMENTO DE ARRECADAÇÃO DE RECEITAS ESTADUAIS</h2>
+                    </div>
+                </td>
+                <td rowspan="2" class="pay-info">
+                    <h1>DARE-e</h1>
+                    <h2>NOSSO NÚMERO</h2>
+                    <p>${nossoNumero}</p>
+                    <h2>DATA E HORA DE EMISSÃO</h2>
+                    <p>
+                        <small>${dataHoraEmissao}</small>
+                    </p>
+                    <h2>DATA DE VENCIMENTO</h2>
+                    <p>
+                        <small>${dataVencimento}</small>
+                    </p>
+                    <h2>QUANTIDADE A RECOLHER</h2>
+                    <p>
+                        <small>${quantidadeRecolher}</small>
+                    </p>
+                    <h2>TOTAL VALOR A RECOLHER</h2>
+                    <p>
+                        <small>R$ ${valorTotal}</small>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="issuer-info">
+                    <p><strong>DADOS EMITENTE</strong></p>
+                    <p><strong>INSTITUIÇÃO: ${instituicao}</strong></p>
+                    <table cellpadding="0" cellspacing="0">
+                        <tr>
+                            <th>UF EMISSORA</th>
+                            <th>MUNICIPIO</th>
+                        </tr>
+                        <tr>
+                            <td>${ufEmissora}</td>
+                            <td>${municipio}</td>
+                        </tr>
+                        <tr>
+                            <th>IDENTIFICAÇÃO</th>
+                            <th>CONTRIBUINTE</th>
+                            <th>RAZÃO SOCIAL / NOME</th>
+                        </tr>
+                        <tr>
+                            <td>${identificacaoTipo}</td>
+                            <td>${contribuinteId}</td>
+                            <td>${nomeRazaoSocial}</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <fieldset id="additional-info">
+        <legend>Informações Complementares</legend>
+        <table cellpadding="0" cellspacing="0" border="0">
+            #{repeat:detalhes:detalhe}
+            #{if:!detalhe.obcervacaoEmpty}
+            <tr>
+                <td>ITEM ${detalhe.item})</td>
+                <td>${detalhe.informacaoComplementar}</td>
+            </tr>
+            #{:if}
+            #{:repeat}
+        </table>
+    </fieldset>
+    <fieldset id="payment-list">
+        <legend>Lista de Pagamentos a Recolher</legend>
+        <table cellpadding="1" cellspacing="0" border="0">
+            <tr>
+                <th>ITEM</th>
+                <th>DOCUMENTO/PARCELA</th>
+                <th>PERIODO</th>
+                <th>DATA VENCIMENTO</th>
+                <th align="right">VL.PRINCIPAL</th>
+                <th align="right">VL.ATLZ.MONET</th>
+                <th align="right">VL.MULTA</th>
+                <th align="right">VL.JUROS</th>
+                <th align="right">VL.REDUÇÕES</th>
+                <th align="right">VL.TSE</th>
+                <th align="right">VL.TOTAL</th>
+                <th/>
+                <th>RECEITA / SUB CÓDIGO</th>
+            </tr>
+            #{repeat:detalhes:detalhe}
+            <tr>
+                <td>${detalhe.item}</td>
+                <td>${detalhe.documentoParcela}</td>
+                <td>${detalhe.periodo}</td>
+                <td>${detalhe.dataVencimento}</td>
+                <td align="right">${detalhe.vlPrincipal}</td>
+                <td align="right">${detalhe.vlAtlzMonet}</td>
+                <td align="right">${detalhe.vlMulta}</td>
+                <td align="right">${detalhe.vlJuros}</td>
+                <td align="right">${detalhe.vlReducoes}</td>
+                <td align="right">${detalhe.vlTse}</td>
+                <td align="right">${detalhe.vlTotal}</td>
+                <td>${detalhe.informadoContribuinte}</td>
+                <td>${detalhe.receitaSubCodigo}</td>
+            </tr>
+            #{:repeat}
+        </table>
+    </fieldset>
+    <div class="footer">
+        <div class="left">AUTENTICAÇÃO BANCÁRIA</div>
+        <div class="right">PAGAMENTO REALIZADO NAS REDES BANCÁRIAS CREDENCIADAS</div>
+    </div>
+</div>
+</body>
+</html>

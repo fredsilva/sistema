@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.service.impl.DefaultCrudService<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c340073 [label=<<table title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/service/impl/DefaultCrudService.html">
+	c410398 [label=<<table title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/service/impl/DefaultCrudService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultCrudService&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
 		</table></td></tr>
@@ -30,7 +30,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../../../business/service/impl/DefaultCrudService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.CorreioContribuinteService
-	c340213 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.CorreioContribuinteService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../CorreioContribuinteService.html">
+	c410548 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.CorreioContribuinteService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../CorreioContribuinteService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CorreioContribuinteService </td></tr>
@@ -44,7 +44,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../CorreioContribuinteService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.impl.CorreioContribuinteServiceImpl
-	c340248 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.CorreioContribuinteServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CorreioContribuinteServiceImpl.html">
+	c410583 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.CorreioContribuinteServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./CorreioContribuinteServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CorreioContribuinteServiceImpl </td></tr>
 		</table></td></tr>
@@ -58,8 +58,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./CorreioContribuinteServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.business.gestao.service.impl.CorreioContribuinteServiceImpl extends br.gov.to.sefaz.business.service.impl.DefaultCrudService<br.gov.to.sefaz.seg.persistence.entity.CorreioContribuinte, java.lang.Long>
-	c340073:p -> c340248:p [dir=back,arrowtail=empty];
+	c410398:p -> c410583:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.business.gestao.service.impl.CorreioContribuinteServiceImpl implements br.gov.to.sefaz.seg.business.gestao.service.CorreioContribuinteService
-	c340213:p -> c340248:p [dir=back,arrowtail=empty,style=dashed];
+	c410548:p -> c410583:p [dir=back,arrowtail=empty,style=dashed];
 }
 

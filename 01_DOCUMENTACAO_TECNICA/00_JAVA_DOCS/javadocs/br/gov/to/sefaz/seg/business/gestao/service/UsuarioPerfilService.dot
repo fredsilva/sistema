@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.service.CrudService<E, I extends java.io.Serializable>
-	c882399 [label=<<table title="br.gov.to.sefaz.business.service.CrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../business/service/CrudService.html">
+	c1092846 [label=<<table title="br.gov.to.sefaz.business.service.CrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../business/service/CrudService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CrudService&lt;E, I extends Serializable&gt; </td></tr>
@@ -30,7 +30,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../../business/service/CrudService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.UsuarioPerfilService
-	c882524 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.UsuarioPerfilService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UsuarioPerfilService.html">
+	c1092981 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.UsuarioPerfilService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UsuarioPerfilService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> UsuarioPerfilService </td></tr>
@@ -41,7 +41,6 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + buildProfileString(allUsuarioSistema : Collection&lt;UsuarioSistema&gt;) </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + getAllUsuarioPerfilByCpf(cpfUsuario : String) : Collection&lt;UsuarioPerfil&gt; </font></td></tr>
-<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + updateUsuarioPerfil(usuarioPerfilList : Collection&lt;UsuarioPerfil&gt;) </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + deleteAllWithPerfilId(id : Long) </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllUsuariosPerfilByPerfilId(identificacaoPerfil : Long) : Collection&lt;UsuarioPerfil&gt; </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllPerfilById(cpfUsuario : String) : Set&lt;UsuarioPerfil&gt; </font></td></tr>
@@ -50,7 +49,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./UsuarioPerfilService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioPerfilServiceImpl
-	c882559 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioPerfilServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/UsuarioPerfilServiceImpl.html">
+	c1093016 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioPerfilServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/UsuarioPerfilServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UsuarioPerfilServiceImpl </td></tr>
 		</table></td></tr>
@@ -60,9 +59,7 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + UsuarioPerfilServiceImpl(repository : UsuarioPerfilRepository) </td></tr>
 <tr><td align="left" balign="left"> + buildProfileString(allUsuarioSistema : Collection&lt;UsuarioSistema&gt;) </td></tr>
-<tr><td align="left" balign="left"> + update(list : Collection&lt;UsuarioPerfil&gt;) : Collection&lt;UsuarioPerfil&gt; </td></tr>
 <tr><td align="left" balign="left"> + getAllUsuarioPerfilByCpf(cpfUsuario : String) : Collection&lt;UsuarioPerfil&gt; </td></tr>
-<tr><td align="left" balign="left"> + updateUsuarioPerfil(usuarioPerfilList : Collection&lt;UsuarioPerfil&gt;) </td></tr>
 <tr><td align="left" balign="left"> + deleteAllWithPerfilId(id : Long) </td></tr>
 <tr><td align="left" balign="left"> + findAllUsuariosPerfilByPerfilId(identificacaoPerfil : Long) : Collection&lt;UsuarioPerfil&gt; </td></tr>
 <tr><td align="left" balign="left"> + findAllPerfilById(cpfUsuario : String) : Set&lt;UsuarioPerfil&gt; </td></tr>
@@ -71,8 +68,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./impl/UsuarioPerfilServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.business.gestao.service.UsuarioPerfilService implements br.gov.to.sefaz.business.service.CrudService<E, I extends java.io.Serializable>
-	c882399:p -> c882524:p [dir=back,arrowtail=empty,style=dashed];
+	c1092846:p -> c1092981:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.seg.business.gestao.service.impl.UsuarioPerfilServiceImpl implements br.gov.to.sefaz.seg.business.gestao.service.UsuarioPerfilService
-	c882524:p -> c882559:p [dir=back,arrowtail=empty,style=dashed];
+	c1092981:p -> c1093016:p [dir=back,arrowtail=empty,style=dashed];
 }
 

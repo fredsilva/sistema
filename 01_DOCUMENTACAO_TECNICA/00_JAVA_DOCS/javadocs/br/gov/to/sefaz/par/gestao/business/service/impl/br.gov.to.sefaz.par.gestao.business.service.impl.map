@@ -5,8 +5,10 @@
 <area shape="rect" id="node2" href="./MunicipioServiceImpl.html" title="&lt;TABLE&gt;" alt="" coords="771,83,1139,205"/>
 <area shape="rect" id="node3_2" href="./LogradouroServiceImpl.html" title="br.gov.to.sefaz.par.gestao.business.service.impl.LogradouroServiceImpl" alt="" coords="1174,28,1567,260"/>
 <area shape="rect" id="node3" href="./LogradouroServiceImpl.html" title="&lt;TABLE&gt;" alt="" coords="1163,23,1578,265"/>
-<area shape="rect" id="node4_3" href="./EstadoServiceImpl.html" title="br.gov.to.sefaz.par.gestao.business.service.impl.EstadoServiceImpl" alt="" coords="1613,97,1931,191"/>
-<area shape="rect" id="node4" href="./EstadoServiceImpl.html" title="&lt;TABLE&gt;" alt="" coords="1602,92,1942,196"/>
-<area shape="rect" id="node5_4" href="./AtividadeEconomicaServiceImpl.html" title="br.gov.to.sefaz.par.gestao.business.service.impl.AtividadeEconomicaServiceImpl" alt="" coords="1977,97,2468,191"/>
-<area shape="rect" id="node5" href="./AtividadeEconomicaServiceImpl.html" title="&lt;TABLE&gt;" alt="" coords="1967,92,2479,196"/>
+<area shape="rect" id="node4_3" href="./FeriadoServiceImpl.html" title="br.gov.to.sefaz.par.gestao.business.service.impl.FeriadoServiceImpl" alt="" coords="1613,97,2051,191"/>
+<area shape="rect" id="node4" href="./FeriadoServiceImpl.html" title="&lt;TABLE&gt;" alt="" coords="1603,92,2061,196"/>
+<area shape="rect" id="node5_4" href="./EstadoServiceImpl.html" title="br.gov.to.sefaz.par.gestao.business.service.impl.EstadoServiceImpl" alt="" coords="2097,97,2415,191"/>
+<area shape="rect" id="node5" href="./EstadoServiceImpl.html" title="&lt;TABLE&gt;" alt="" coords="2086,92,2426,196"/>
+<area shape="rect" id="node6_5" href="./AtividadeEconomicaServiceImpl.html" title="br.gov.to.sefaz.par.gestao.business.service.impl.AtividadeEconomicaServiceImpl" alt="" coords="2461,97,2952,191"/>
+<area shape="rect" id="node6" href="./AtividadeEconomicaServiceImpl.html" title="&lt;TABLE&gt;" alt="" coords="2451,92,2963,196"/>
 </map>

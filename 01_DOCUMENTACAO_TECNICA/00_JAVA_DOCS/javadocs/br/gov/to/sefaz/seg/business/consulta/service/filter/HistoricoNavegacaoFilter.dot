@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.consulta.service.filter.HistoricoNavegacaoFilter
-	c454053 [label=<<table title="br.gov.to.sefaz.seg.business.consulta.service.filter.HistoricoNavegacaoFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./HistoricoNavegacaoFilter.html">
+	c590340 [label=<<table title="br.gov.to.sefaz.seg.business.consulta.service.filter.HistoricoNavegacaoFilter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./HistoricoNavegacaoFilter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HistoricoNavegacaoFilter </td></tr>
 		</table></td></tr>

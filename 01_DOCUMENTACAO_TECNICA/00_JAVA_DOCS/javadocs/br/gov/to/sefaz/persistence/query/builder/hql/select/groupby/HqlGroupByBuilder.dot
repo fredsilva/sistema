@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.query.builder.hql.select.groupby.HqlGroupByBuilder
-	c460011 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.select.groupby.HqlGroupByBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./HqlGroupByBuilder.html">
+	c596958 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.select.groupby.HqlGroupByBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./HqlGroupByBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HqlGroupByBuilder </td></tr>
 		</table></td></tr>
@@ -27,7 +27,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./HqlGroupByBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder<T, S>
-	c460023 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../QueryStructureBuilder.html">
+	c596970 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../QueryStructureBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> QueryStructureBuilder&lt;T, S&gt; </td></tr>
@@ -41,6 +41,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../QueryStructureBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.persistence.query.builder.hql.select.groupby.HqlGroupByBuilder implements br.gov.to.sefaz.persistence.query.builder.QueryStructureBuilder<T, S>
-	c460023:p -> c460011:p [dir=back,arrowtail=empty,style=dashed];
+	c596970:p -> c596958:p [dir=back,arrowtail=empty,style=dashed];
 }
 

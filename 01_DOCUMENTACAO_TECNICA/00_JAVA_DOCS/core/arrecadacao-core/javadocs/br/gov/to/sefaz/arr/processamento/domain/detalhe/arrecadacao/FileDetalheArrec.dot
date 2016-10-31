@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.arr.processamento.domain.detalhe.arrecadacao.FileDetalheArrec
-	c60551 [label=<<table title="br.gov.to.sefaz.arr.processamento.domain.detalhe.arrecadacao.FileDetalheArrec" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./FileDetalheArrec.html">
+	c82061 [label=<<table title="br.gov.to.sefaz.arr.processamento.domain.detalhe.arrecadacao.FileDetalheArrec" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./FileDetalheArrec.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> FileDetalheArrec </td></tr>
 		</table></td></tr>
@@ -45,7 +45,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./FileDetalheArrec.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.domain.detalhe.FileDetalhe
-	c60554 [label=<<table title="br.gov.to.sefaz.arr.processamento.domain.detalhe.FileDetalhe" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../FileDetalhe.html">
+	c82064 [label=<<table title="br.gov.to.sefaz.arr.processamento.domain.detalhe.FileDetalhe" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../FileDetalhe.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> FileDetalhe </td></tr>
@@ -60,6 +60,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../FileDetalhe.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.arr.processamento.domain.detalhe.arrecadacao.FileDetalheArrec implements br.gov.to.sefaz.arr.processamento.domain.detalhe.FileDetalhe
-	c60554:p -> c60551:p [dir=back,arrowtail=empty,style=dashed];
+	c82064:p -> c82061:p [dir=back,arrowtail=empty,style=dashed];
 }
 

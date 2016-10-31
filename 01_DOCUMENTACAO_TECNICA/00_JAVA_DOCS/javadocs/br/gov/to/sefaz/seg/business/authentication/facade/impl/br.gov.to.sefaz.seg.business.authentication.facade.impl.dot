@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.authentication.facade.impl.LoginSistemaFacadeImpl
-	c79920 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.facade.impl.LoginSistemaFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LoginSistemaFacadeImpl.html">
+	c93547 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.facade.impl.LoginSistemaFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LoginSistemaFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LoginSistemaFacadeImpl </td></tr>
 		</table></td></tr>
@@ -25,7 +25,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./LoginSistemaFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.authentication.facade.impl.DefaultTemplateFacadeImpl
-	c79921 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.facade.impl.DefaultTemplateFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DefaultTemplateFacadeImpl.html">
+	c93548 [label=<<table title="br.gov.to.sefaz.seg.business.authentication.facade.impl.DefaultTemplateFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DefaultTemplateFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultTemplateFacadeImpl </td></tr>
 		</table></td></tr>

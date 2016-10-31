@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.service.CrudService<E, I extends java.io.Serializable>
-	c738693 [label=<<table title="br.gov.to.sefaz.business.service.CrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../business/service/CrudService.html">
+	c920755 [label=<<table title="br.gov.to.sefaz.business.service.CrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../business/service/CrudService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CrudService&lt;E, I extends Serializable&gt; </td></tr>
@@ -30,7 +30,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../../business/service/CrudService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.ReceitasService
-	c739049 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.ReceitasService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ReceitasService.html">
+	c921148 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.ReceitasService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ReceitasService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ReceitasService </td></tr>
@@ -42,10 +42,12 @@ digraph G {
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllActiveReceitas() : Collection&lt;Receitas&gt; </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + getAllReceitasByIdConvenio(idConvenio : Long) : Collection&lt;Receitas&gt; </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + find(filter : ReceitasFilter) : List&lt;Receitas&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findWithIds(idReceitas : Set&lt;Integer&gt;) : Collection&lt;Receitas&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findWithOrigemDebitoId(origemDebitoId : Integer) : Collection&lt;Receitas&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./ReceitasService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.impl.ReceitasServiceImpl
-	c739076 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.ReceitasServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/ReceitasServiceImpl.html">
+	c921175 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.ReceitasServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/ReceitasServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ReceitasServiceImpl </td></tr>
 		</table></td></tr>
@@ -57,14 +59,16 @@ digraph G {
 <tr><td align="left" balign="left"> + findAllActiveReceitas() : Collection&lt;Receitas&gt; </td></tr>
 <tr><td align="left" balign="left"> + getAllReceitasByIdConvenio(idConvenio : Long) : Collection&lt;Receitas&gt; </td></tr>
 <tr><td align="left" balign="left"> + find(filter : ReceitasFilter) : List&lt;Receitas&gt; </td></tr>
+<tr><td align="left" balign="left"> + findWithIds(idReceitas : Set&lt;Integer&gt;) : Collection&lt;Receitas&gt; </td></tr>
+<tr><td align="left" balign="left"> + findWithOrigemDebitoId(origemDebitoId : Integer) : Collection&lt;Receitas&gt; </td></tr>
 <tr><td align="left" balign="left"> + save(receitas : Receitas) : Receitas </td></tr>
 <tr><td align="left" balign="left"> + update(receitas : Receitas) : Receitas </td></tr>
 <tr><td align="left" balign="left"> + delete(id : Integer) : Optional&lt;Receitas&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./impl/ReceitasServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.arr.parametros.business.service.ReceitasService implements br.gov.to.sefaz.business.service.CrudService<E, I extends java.io.Serializable>
-	c738693:p -> c739049:p [dir=back,arrowtail=empty,style=dashed];
+	c920755:p -> c921148:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.arr.parametros.business.service.impl.ReceitasServiceImpl implements br.gov.to.sefaz.arr.parametros.business.service.ReceitasService
-	c739049:p -> c739076:p [dir=back,arrowtail=empty,style=dashed];
+	c921148:p -> c921175:p [dir=back,arrowtail=empty,style=dashed];
 }
 

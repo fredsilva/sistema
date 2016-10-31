@@ -23,7 +23,7 @@ public enum TipoRejeicaoEnum implements EnumCodeLabel<Integer> {
     TP_RECEITA_N_CAD(9, "Tipo de Receita não cadastrado."),
     TP_VL_INF_N_CAD(10, "Tipo de Valor informativo não cadastrado."),
     VERSAO_BARRA_RECEP_DIF_HOMOL(11, "Versão da Barra Recepcionada Diferente da Atual Homologada."),
-    CNPJ_N_LOCALIZADO(12, "CPF/CNPJ/Inscrição Estadual/ Renavan não Localizado."),
+    CNPJ_N_LOCALIZADO(12, "CPF/CNPJ/Inscrição Estadual/Renavam não Localizado."),
     SIS_SEFAZ_GER_BARRA_N_LOCALIZADO(13, "Sistema da SEFAZ, gerador da Barra não Identificado."),
     NSU_DUPLICADO(14, "NSU Duplicado."),
     ERRO_N_CLASSIFICADO(15, "Erro Não Classificado, Verificar Layout da BARRA."),

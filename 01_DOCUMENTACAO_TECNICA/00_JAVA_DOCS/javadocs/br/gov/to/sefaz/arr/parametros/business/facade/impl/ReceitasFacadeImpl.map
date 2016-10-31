@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="../../../../../business/facade/impl/DefaultCrudFacade.html" title="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" alt="" coords="94,11,537,208"/>
-<area shape="rect" id="node1" href="../../../../../business/facade/impl/DefaultCrudFacade.html" title="&lt;TABLE&gt;" alt="" coords="83,5,547,213"/>
-<area shape="rect" id="node3_1" href="./ReceitasFacadeImpl.html" title="br.gov.to.sefaz.arr.parametros.business.facade.impl.ReceitasFacadeImpl" alt="" coords="16,267,1143,429"/>
-<area shape="rect" id="node3" href="./ReceitasFacadeImpl.html" title="&lt;TABLE&gt;" alt="" coords="5,261,1153,435"/>
-<area shape="rect" id="node2_2" href="../ReceitasFacade.html" title="br.gov.to.sefaz.arr.parametros.business.facade.ReceitasFacade" alt="" coords="582,28,1105,191"/>
-<area shape="rect" id="node2" href="../ReceitasFacade.html" title="&lt;TABLE&gt;" alt="" coords="571,23,1115,196"/>
+<area shape="rect" id="node1_0" href="../../../../../business/facade/impl/DefaultCrudFacade.html" title="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" alt="" coords="94,11,537,225"/>
+<area shape="rect" id="node1" href="../../../../../business/facade/impl/DefaultCrudFacade.html" title="&lt;TABLE&gt;" alt="" coords="83,5,547,231"/>
+<area shape="rect" id="node3_1" href="./ReceitasFacadeImpl.html" title="br.gov.to.sefaz.arr.parametros.business.facade.impl.ReceitasFacadeImpl" alt="" coords="16,284,1143,447"/>
+<area shape="rect" id="node3" href="./ReceitasFacadeImpl.html" title="&lt;TABLE&gt;" alt="" coords="5,279,1153,452"/>
+<area shape="rect" id="node2_2" href="../ReceitasFacade.html" title="br.gov.to.sefaz.arr.parametros.business.facade.ReceitasFacade" alt="" coords="582,37,1105,199"/>
+<area shape="rect" id="node2" href="../ReceitasFacade.html" title="&lt;TABLE&gt;" alt="" coords="571,31,1115,205"/>
 </map>

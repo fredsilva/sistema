@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.arr.processamento.converter.str.ValorInformativoToConvenioEnum
-	c4756 [label=<<table title="br.gov.to.sefaz.arr.processamento.converter.str.ValorInformativoToConvenioEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ValorInformativoToConvenioEnum.html">
+	c9173 [label=<<table title="br.gov.to.sefaz.arr.processamento.converter.str.ValorInformativoToConvenioEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ValorInformativoToConvenioEnum.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> ValorInformativoToConvenioEnum </td></tr>
@@ -47,7 +47,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ValorInformativoToConvenioEnum.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.converter.str.TipoReceitaToTipoConvenioEnum
-	c4757 [label=<<table title="br.gov.to.sefaz.arr.processamento.converter.str.TipoReceitaToTipoConvenioEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoReceitaToTipoConvenioEnum.html">
+	c9174 [label=<<table title="br.gov.to.sefaz.arr.processamento.converter.str.TipoReceitaToTipoConvenioEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoReceitaToTipoConvenioEnum.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> TipoReceitaToTipoConvenioEnum </td></tr>
@@ -64,7 +64,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoReceitaToTipoConvenioEnum.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.converter.str.STR0020ToArquivoStrConverter
-	c4758 [label=<<table title="br.gov.to.sefaz.arr.processamento.converter.str.STR0020ToArquivoStrConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./STR0020ToArquivoStrConverter.html">
+	c9175 [label=<<table title="br.gov.to.sefaz.arr.processamento.converter.str.STR0020ToArquivoStrConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./STR0020ToArquivoStrConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> STR0020ToArquivoStrConverter </td></tr>
 		</table></td></tr>

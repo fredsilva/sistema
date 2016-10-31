@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.repository.BaseRepository<E, I extends java.io.Serializable>
-	c455709 [label=<<table title="br.gov.to.sefaz.persistence.repository.BaseRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/repository/BaseRepository.html">
+	c592176 [label=<<table title="br.gov.to.sefaz.persistence.repository.BaseRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/repository/BaseRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> BaseRepository&lt;E, I extends Serializable&gt; </font></td></tr>
 		</table></td></tr>
@@ -69,7 +69,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../persistence/repository/BaseRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.HistoricoNavegacaoRepository
-	c456002 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.HistoricoNavegacaoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./HistoricoNavegacaoRepository.html">
+	c592481 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.HistoricoNavegacaoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./HistoricoNavegacaoRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HistoricoNavegacaoRepository </td></tr>
 		</table></td></tr>
@@ -81,6 +81,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./HistoricoNavegacaoRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.persistence.repository.HistoricoNavegacaoRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.seg.persistence.entity.HistoricoNavegacao, java.lang.Long>
-	c455709:p -> c456002:p [dir=back,arrowtail=empty];
+	c592176:p -> c592481:p [dir=back,arrowtail=empty];
 }
 

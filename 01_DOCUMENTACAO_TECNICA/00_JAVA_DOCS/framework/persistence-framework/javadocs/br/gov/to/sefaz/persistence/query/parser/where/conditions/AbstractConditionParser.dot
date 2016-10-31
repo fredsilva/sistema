@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.query.parser.QueryStructureParser<S>
-	c5911 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.QueryStructureParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../QueryStructureParser.html">
+	c6128 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.QueryStructureParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../QueryStructureParser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> QueryStructureParser&lt;S&gt; </td></tr>
@@ -25,7 +25,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../QueryStructureParser.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.parser.where.conditions.SimpleConditionParser
-	c5922 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.where.conditions.SimpleConditionParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SimpleConditionParser.html">
+	c6139 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.where.conditions.SimpleConditionParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SimpleConditionParser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SimpleConditionParser </td></tr>
 		</table></td></tr>
@@ -38,7 +38,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SimpleConditionParser.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.parser.where.conditions.LikeParser
-	c5924 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.where.conditions.LikeParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LikeParser.html">
+	c6141 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.where.conditions.LikeParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LikeParser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LikeParser </td></tr>
 		</table></td></tr>
@@ -51,7 +51,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./LikeParser.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.parser.where.conditions.IsNullParser
-	c5926 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.where.conditions.IsNullParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./IsNullParser.html">
+	c6143 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.where.conditions.IsNullParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./IsNullParser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> IsNullParser </td></tr>
 		</table></td></tr>
@@ -64,7 +64,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./IsNullParser.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.parser.where.conditions.InParser
-	c5928 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.where.conditions.InParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./InParser.html">
+	c6145 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.where.conditions.InParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./InParser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> InParser </td></tr>
 		</table></td></tr>
@@ -77,7 +77,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./InParser.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.parser.where.conditions.GroupedCondictionParser
-	c5930 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.where.conditions.GroupedCondictionParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./GroupedCondictionParser.html">
+	c6147 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.where.conditions.GroupedCondictionParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./GroupedCondictionParser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> GroupedCondictionParser </td></tr>
 		</table></td></tr>
@@ -90,7 +90,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./GroupedCondictionParser.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.parser.where.conditions.ExistsParser
-	c5932 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.where.conditions.ExistsParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExistsParser.html">
+	c6149 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.where.conditions.ExistsParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ExistsParser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ExistsParser </td></tr>
 		</table></td></tr>
@@ -103,7 +103,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ExistsParser.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.parser.where.conditions.BetweenParser
-	c5934 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.where.conditions.BetweenParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BetweenParser.html">
+	c6151 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.where.conditions.BetweenParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BetweenParser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BetweenParser </td></tr>
 		</table></td></tr>
@@ -116,7 +116,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./BetweenParser.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.parser.where.conditions.AbstractConditionParser
-	c5935 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.where.conditions.AbstractConditionParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AbstractConditionParser.html">
+	c6152 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.where.conditions.AbstractConditionParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./AbstractConditionParser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractConditionParser </font></td></tr>
 		</table></td></tr>
@@ -130,20 +130,20 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./AbstractConditionParser.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.persistence.query.parser.where.conditions.SimpleConditionParser extends br.gov.to.sefaz.persistence.query.parser.where.conditions.AbstractConditionParser
-	c5935:p -> c5922:p [dir=back,arrowtail=empty];
+	c6152:p -> c6139:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.persistence.query.parser.where.conditions.LikeParser extends br.gov.to.sefaz.persistence.query.parser.where.conditions.AbstractConditionParser
-	c5935:p -> c5924:p [dir=back,arrowtail=empty];
+	c6152:p -> c6141:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.persistence.query.parser.where.conditions.IsNullParser extends br.gov.to.sefaz.persistence.query.parser.where.conditions.AbstractConditionParser
-	c5935:p -> c5926:p [dir=back,arrowtail=empty];
+	c6152:p -> c6143:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.persistence.query.parser.where.conditions.InParser extends br.gov.to.sefaz.persistence.query.parser.where.conditions.AbstractConditionParser
-	c5935:p -> c5928:p [dir=back,arrowtail=empty];
+	c6152:p -> c6145:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.persistence.query.parser.where.conditions.GroupedCondictionParser extends br.gov.to.sefaz.persistence.query.parser.where.conditions.AbstractConditionParser
-	c5935:p -> c5930:p [dir=back,arrowtail=empty];
+	c6152:p -> c6147:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.persistence.query.parser.where.conditions.ExistsParser extends br.gov.to.sefaz.persistence.query.parser.where.conditions.AbstractConditionParser
-	c5935:p -> c5932:p [dir=back,arrowtail=empty];
+	c6152:p -> c6149:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.persistence.query.parser.where.conditions.BetweenParser extends br.gov.to.sefaz.persistence.query.parser.where.conditions.AbstractConditionParser
-	c5935:p -> c5934:p [dir=back,arrowtail=empty];
+	c6152:p -> c6151:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.persistence.query.parser.where.conditions.AbstractConditionParser implements br.gov.to.sefaz.persistence.query.parser.QueryStructureParser<S>
-	c5911:p -> c5935:p [dir=back,arrowtail=empty,style=dashed];
+	c6128:p -> c6152:p [dir=back,arrowtail=empty,style=dashed];
 }
 

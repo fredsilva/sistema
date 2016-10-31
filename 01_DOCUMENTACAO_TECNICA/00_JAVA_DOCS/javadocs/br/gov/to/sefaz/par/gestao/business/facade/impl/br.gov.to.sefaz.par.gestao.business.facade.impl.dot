@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.par.gestao.business.facade.impl.ParametroGeralFacadeImpl
-	c68491 [label=<<table title="br.gov.to.sefaz.par.gestao.business.facade.impl.ParametroGeralFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ParametroGeralFacadeImpl.html">
+	c80863 [label=<<table title="br.gov.to.sefaz.par.gestao.business.facade.impl.ParametroGeralFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ParametroGeralFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ParametroGeralFacadeImpl </td></tr>
 		</table></td></tr>

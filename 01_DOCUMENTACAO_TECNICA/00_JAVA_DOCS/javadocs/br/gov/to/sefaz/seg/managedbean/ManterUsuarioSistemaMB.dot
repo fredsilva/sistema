@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c527875 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../presentation/managedbean/impl/DefaultCrudMB.html">
+	c675146 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../presentation/managedbean/impl/DefaultCrudMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultCrudMB&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
 		</table></td></tr>
@@ -30,7 +30,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../presentation/managedbean/impl/DefaultCrudMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.ManterUsuarioSistemaMB
-	c528259 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ManterUsuarioSistemaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ManterUsuarioSistemaMB.html">
+	c675569 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ManterUsuarioSistemaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ManterUsuarioSistemaMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ManterUsuarioSistemaMB </td></tr>
 		</table></td></tr>
@@ -49,8 +49,6 @@ digraph G {
 <tr><td align="left" balign="left"> + getAllUnidadeOrganizacionais() : Collection&lt;UnidadeOrganizacional&gt; </td></tr>
 <tr><td align="left" balign="left"> + loadAllUnidadeOrganizacionais() </td></tr>
 <tr><td align="left" balign="left"> + getAllPostoTrabalho() : Collection&lt;PostoTrabalho&gt; </td></tr>
-<tr><td align="left" balign="left"> + updateUser() </td></tr>
-<tr><td align="left" balign="left"> + createUser() </td></tr>
 <tr><td align="left" balign="left"> + getEstados() : Collection&lt;Estado&gt; </td></tr>
 <tr><td align="left" balign="left"> + getMunicipios() : Collection&lt;Municipio&gt; </td></tr>
 <tr><td align="left" balign="left"> + getTipoUsuarios() : Collection&lt;TipoUsuario&gt; </td></tr>
@@ -60,6 +58,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ManterUsuarioSistemaMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.managedbean.ManterUsuarioSistemaMB extends br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema, java.lang.String>
-	c527875:p -> c528259:p [dir=back,arrowtail=empty];
+	c675146:p -> c675569:p [dir=back,arrowtail=empty];
 }
 

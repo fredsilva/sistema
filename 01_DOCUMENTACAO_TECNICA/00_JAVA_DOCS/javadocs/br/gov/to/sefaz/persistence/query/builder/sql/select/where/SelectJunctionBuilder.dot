@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.query.builder.sql.select.where.SelectJunctionBuilder
-	c778065 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.select.where.SelectJunctionBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SelectJunctionBuilder.html">
+	c969308 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.select.where.SelectJunctionBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./SelectJunctionBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SelectJunctionBuilder </td></tr>
 		</table></td></tr>
@@ -25,7 +25,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SelectJunctionBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractJunctionBuilder<W extends br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractWhereBuilder<?, T, ?>, T>
-	c778072 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractJunctionBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../where/AbstractJunctionBuilder.html">
+	c969315 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractJunctionBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../where/AbstractJunctionBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractJunctionBuilder&lt;W extends AbstractWhereBuilder&lt;?, T, ?&gt;, T&gt; </font></td></tr>
 		</table></td></tr>
@@ -41,6 +41,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../where/AbstractJunctionBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.persistence.query.builder.sql.select.where.SelectJunctionBuilder extends br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractJunctionBuilder<br.gov.to.sefaz.persistence.query.builder.sql.select.where.SelectWhereBuilder, br.gov.to.sefaz.persistence.query.builder.sql.select.SelectBuilder>
-	c778072:p -> c778065:p [dir=back,arrowtail=empty];
+	c969315:p -> c969308:p [dir=back,arrowtail=empty];
 }
 

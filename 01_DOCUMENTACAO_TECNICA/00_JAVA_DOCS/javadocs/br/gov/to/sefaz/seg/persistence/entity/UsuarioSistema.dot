@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.entity.AbstractEntity<I extends java.io.Serializable>
-	c900696 [label=<<table title="br.gov.to.sefaz.persistence.entity.AbstractEntity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/entity/AbstractEntity.html">
+	c1113157 [label=<<table title="br.gov.to.sefaz.persistence.entity.AbstractEntity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/entity/AbstractEntity.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractEntity&lt;I extends Serializable&gt; </font></td></tr>
 		</table></td></tr>
@@ -38,7 +38,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../persistence/entity/AbstractEntity.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema
-	c901022 [label=<<table title="br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UsuarioSistema.html">
+	c1113495 [label=<<table title="br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UsuarioSistema.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UsuarioSistema </td></tr>
 		</table></td></tr>
@@ -106,9 +106,11 @@ digraph G {
 <tr><td align="left" balign="left"> + getSolicitacaoUsuario() : SolicitacaoUsuario </td></tr>
 <tr><td align="left" balign="left"> + setSolicitacaoUsuario(solicitacaoUsuario : SolicitacaoUsuario) </td></tr>
 <tr><td align="left" balign="left"> + getUsuarioPostoTrabalho() : UsuarioPostoTrabalho </td></tr>
+<tr><td align="left" balign="left"> + getListUsuarioPostoTrabalho() : List&lt;UsuarioPostoTrabalho&gt; </td></tr>
 <tr><td align="left" balign="left"> + setUsuarioPostoTrabalho(usuarioPostoTrabalho : UsuarioPostoTrabalho) </td></tr>
-<tr><td align="left" balign="left"> + getUsuarioPostoTrabalhoPostoTrabalhoIdentific() : Integer </td></tr>
-<tr><td align="left" balign="left"> + setUsuarioPostoTrabalhoPostoTrabalhoIdentific(postoTrabalhoPostoTrabalhoIdentific : Integer) </td></tr>
+<tr><td align="left" balign="left"> + setListUsuarioPostoTrabalho(listUsuarioPostoTrabalho : List&lt;UsuarioPostoTrabalho&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getIdentificacaoPostoTrabalho() : Integer </td></tr>
+<tr><td align="left" balign="left"> + setIdentificacaoPostoTrabalho(identificacaoPostoTrabalho : Integer) </td></tr>
 <tr><td align="left" balign="left"> + setUnidadeOrganizacionalPostoTrabalho(identificUnidOrganizac : Long) </td></tr>
 <tr><td align="left" balign="left"> + getUnidadeOrganizacionalPostoTrabalho() : Long </td></tr>
 <tr><td align="left" balign="left"> + setPostoTrabalho(identificacaoPostoTrabalho : Integer) </td></tr>
@@ -138,6 +140,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./UsuarioSistema.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema extends br.gov.to.sefaz.persistence.entity.AbstractEntity<java.lang.String>
-	c900696:p -> c901022:p [dir=back,arrowtail=empty];
+	c1113157:p -> c1113495:p [dir=back,arrowtail=empty];
 }
 

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.query.parser.QueryStructureParser<S>
-	c39515 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.QueryStructureParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./QueryStructureParser.html">
+	c47742 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.QueryStructureParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./QueryStructureParser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> QueryStructureParser&lt;S&gt; </td></tr>
@@ -25,7 +25,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./QueryStructureParser.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.parser.QueryParser
-	c39516 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.QueryParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./QueryParser.html">
+	c47743 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.QueryParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./QueryParser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> QueryParser </td></tr>
 		</table></td></tr>
@@ -41,7 +41,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./QueryParser.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.parser.QualifyQueryParser
-	c39517 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.QualifyQueryParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./QualifyQueryParser.html">
+	c47744 [label=<<table title="br.gov.to.sefaz.persistence.query.parser.QualifyQueryParser" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./QualifyQueryParser.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> QualifyQueryParser </font></td></tr>
 		</table></td></tr>

@@ -1,8 +1,8 @@
 package br.gov.to.sefaz.arr.processamento.validation.validator.detalhe.arrecadacao.builder;
 
+import br.gov.to.sefaz.arr.dare.service.DareService;
 import br.gov.to.sefaz.arr.persistence.entity.ArquivoRecepcao;
 import br.gov.to.sefaz.arr.processamento.domain.detalhe.arrecadacao.CodigoBarra;
-import br.gov.to.sefaz.arr.processamento.service.DareService;
 import br.gov.to.sefaz.arr.processamento.validation.validator.detalhe.CodigoBarraValidatorBuilder;
 import br.gov.to.sefaz.arr.processamento.validation.validator.detalhe.DetalheValidator;
 import br.gov.to.sefaz.arr.processamento.validation.validator.detalhe.arrecadacao.BarraDareValidator;

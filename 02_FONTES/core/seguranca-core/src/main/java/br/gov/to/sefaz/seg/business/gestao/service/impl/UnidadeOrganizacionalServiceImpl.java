@@ -78,6 +78,13 @@ public class UnidadeOrganizacionalServiceImpl extends DefaultCrudService<Unidade
         return parametroGeralService.findCodeData(new TipoUnidadeConverter(), LISTAGEM_TIPO_UNIDADE);
     }
 
+    @Override
+    public List<UnidadeOrganizacional> findAllByTipoUnidade(Character... characters) {
+        return getRepository().find(sb -> sb.where()
+                .in("codigoTipoUnidade", characters)
+                .orderBy("identificacaoUnidOrganizac"));
+    }
+
     /**
      * Classe para deleção de Unidade Organizacional.
      *

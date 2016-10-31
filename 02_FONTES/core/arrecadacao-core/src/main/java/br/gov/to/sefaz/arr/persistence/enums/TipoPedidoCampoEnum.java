@@ -18,7 +18,7 @@ public enum TipoPedidoCampoEnum implements EnumCodeLabel<Integer> {
     NRO_PARCELA(3, "Nro. Parcela"),
     INSCRICAO_ESTADUAL(4, "Inscrição Estadual"),
     CPF_CNPJ(5, "CPF/CNPJ"),
-    RENAVAM(6, "Renavan"),
+    RENAVAM(6, "Renavam"),
     VALOR_TOTAL(7, "Valor Total"),
     NUMERO_AUTENTICACAO(8, "Número Autenticação"),
     VALOR_AUTENTICADO(9, "Valor Autenticado"),

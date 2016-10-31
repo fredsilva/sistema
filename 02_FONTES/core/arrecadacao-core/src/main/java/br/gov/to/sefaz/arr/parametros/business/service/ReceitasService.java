@@ -6,6 +6,7 @@ import br.gov.to.sefaz.business.service.CrudService;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Contrato de acesso do serviço de {@link br.gov.to.sefaz.arr.persistence.entity.Receitas}.
@@ -43,4 +44,19 @@ public interface ReceitasService extends CrudService<Receitas, Integer> {
      *      consulta do filtro
      */
     List<Receitas> find(ReceitasFilter filter);
+
+    /**
+     * Busca as {@link br.gov.to.sefaz.arr.persistence.entity.Receitas} pelo seu ID.
+     *
+     * @param idReceitas id da receita {@link br.gov.to.sefaz.arr.persistence.entity.Receitas#idReceita}
+     * @return uma coleção com as receitas encontradas
+     */
+    Collection<Receitas> findWithIds(Set<Integer> idReceitas);
+
+    /**
+     * Busca as {@link br.gov.to.sefaz.arr.persistence.entity.Receitas} pelo ID da origem de débito.
+     * @param origemDebitoId id da Origem de Débito.
+     * @return uma coleção com as receitas encontradas
+     */
+    Collection<Receitas> findWithOrigemDebitoId(Integer origemDebitoId);
 }

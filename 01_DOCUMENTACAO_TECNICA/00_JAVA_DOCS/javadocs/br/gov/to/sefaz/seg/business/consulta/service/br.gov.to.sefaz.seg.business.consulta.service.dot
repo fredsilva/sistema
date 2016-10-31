@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.consulta.service.HistoricoNavegacaoService
-	c88700 [label=<<table title="br.gov.to.sefaz.seg.business.consulta.service.HistoricoNavegacaoService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./HistoricoNavegacaoService.html">
+	c103287 [label=<<table title="br.gov.to.sefaz.seg.business.consulta.service.HistoricoNavegacaoService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./HistoricoNavegacaoService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> HistoricoNavegacaoService </td></tr>
@@ -23,7 +23,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./HistoricoNavegacaoService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.consulta.service.ComunicacaoContribuinteService
-	c88701 [label=<<table title="br.gov.to.sefaz.seg.business.consulta.service.ComunicacaoContribuinteService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ComunicacaoContribuinteService.html">
+	c103288 [label=<<table title="br.gov.to.sefaz.seg.business.consulta.service.ComunicacaoContribuinteService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ComunicacaoContribuinteService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ComunicacaoContribuinteService </td></tr>

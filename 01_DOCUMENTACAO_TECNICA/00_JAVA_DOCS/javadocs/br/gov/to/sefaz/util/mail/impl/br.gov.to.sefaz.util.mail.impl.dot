@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.util.mail.impl.MailSenderImpl
-	c7903 [label=<<table title="br.gov.to.sefaz.util.mail.impl.MailSenderImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MailSenderImpl.html">
+	c10716 [label=<<table title="br.gov.to.sefaz.util.mail.impl.MailSenderImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MailSenderImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MailSenderImpl </td></tr>
 		</table></td></tr>

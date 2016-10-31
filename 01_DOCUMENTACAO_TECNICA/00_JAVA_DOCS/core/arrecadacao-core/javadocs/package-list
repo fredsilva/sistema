@@ -1,4 +1,13 @@
 br.gov.to.sefaz.arr.configuration
+br.gov.to.sefaz.arr.dare
+br.gov.to.sefaz.arr.dare.enums
+br.gov.to.sefaz.arr.dare.facade
+br.gov.to.sefaz.arr.dare.facade.impl
+br.gov.to.sefaz.arr.dare.service
+br.gov.to.sefaz.arr.dare.service.domain
+br.gov.to.sefaz.arr.dare.service.filter
+br.gov.to.sefaz.arr.dare.service.impl
+br.gov.to.sefaz.arr.dare.service.validator
 br.gov.to.sefaz.arr.parametros.business
 br.gov.to.sefaz.arr.parametros.business.facade
 br.gov.to.sefaz.arr.parametros.business.facade.impl
@@ -10,6 +19,7 @@ br.gov.to.sefaz.arr.persistence.converter
 br.gov.to.sefaz.arr.persistence.entity
 br.gov.to.sefaz.arr.persistence.enums
 br.gov.to.sefaz.arr.persistence.repository
+br.gov.to.sefaz.arr.persistence.view
 br.gov.to.sefaz.arr.processamento
 br.gov.to.sefaz.arr.processamento.converter
 br.gov.to.sefaz.arr.processamento.converter.str
@@ -33,6 +43,8 @@ br.gov.to.sefaz.arr.processamento.process.content.str
 br.gov.to.sefaz.arr.processamento.process.content.util
 br.gov.to.sefaz.arr.processamento.reader
 br.gov.to.sefaz.arr.processamento.service
+br.gov.to.sefaz.arr.processamento.service.converter
+br.gov.to.sefaz.arr.processamento.service.domain
 br.gov.to.sefaz.arr.processamento.service.impl
 br.gov.to.sefaz.arr.processamento.type
 br.gov.to.sefaz.arr.processamento.type.factory

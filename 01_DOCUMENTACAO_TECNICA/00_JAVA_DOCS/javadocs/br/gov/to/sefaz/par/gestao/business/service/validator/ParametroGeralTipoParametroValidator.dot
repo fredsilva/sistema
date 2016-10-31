@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.service.validation.ServiceValidator<T>
-	c598539 [label=<<table title="br.gov.to.sefaz.business.service.validation.ServiceValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/service/validation/ServiceValidator.html">
+	c761354 [label=<<table title="br.gov.to.sefaz.business.service.validation.ServiceValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/service/validation/ServiceValidator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ServiceValidator&lt;T&gt; </td></tr>
@@ -25,7 +25,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../../../business/service/validation/ServiceValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.par.gestao.business.service.validator.ParametroGeralTipoParametroValidator
-	c598558 [label=<<table title="br.gov.to.sefaz.par.gestao.business.service.validator.ParametroGeralTipoParametroValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ParametroGeralTipoParametroValidator.html">
+	c761375 [label=<<table title="br.gov.to.sefaz.par.gestao.business.service.validator.ParametroGeralTipoParametroValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ParametroGeralTipoParametroValidator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ParametroGeralTipoParametroValidator </td></tr>
 		</table></td></tr>
@@ -33,12 +33,12 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + ParametroGeralTipoParametroValidator() </td></tr>
+<tr><td align="left" balign="left"> + ParametroGeralTipoParametroValidator(repository : ParametroGeralRepository) </td></tr>
 <tr><td align="left" balign="left"> + support(clazz : Class&lt;?&gt;, context : String) : boolean </td></tr>
 <tr><td align="left" balign="left"> + validate(parametroGeral : ParametroGeral) : Set&lt;CustomViolation&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ParametroGeralTipoParametroValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.par.gestao.business.service.validator.ParametroGeralTipoParametroValidator implements br.gov.to.sefaz.business.service.validation.ServiceValidator<T>
-	c598539:p -> c598558:p [dir=back,arrowtail=empty,style=dashed];
+	c761354:p -> c761375:p [dir=back,arrowtail=empty,style=dashed];
 }
 

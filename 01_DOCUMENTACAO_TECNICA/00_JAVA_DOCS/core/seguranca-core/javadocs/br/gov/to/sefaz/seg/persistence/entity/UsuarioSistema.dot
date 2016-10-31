@@ -78,9 +78,11 @@ digraph G {
 <tr><td align="left" balign="left"> + getSolicitacaoUsuario() : SolicitacaoUsuario </td></tr>
 <tr><td align="left" balign="left"> + setSolicitacaoUsuario(solicitacaoUsuario : SolicitacaoUsuario) </td></tr>
 <tr><td align="left" balign="left"> + getUsuarioPostoTrabalho() : UsuarioPostoTrabalho </td></tr>
+<tr><td align="left" balign="left"> + getListUsuarioPostoTrabalho() : List&lt;UsuarioPostoTrabalho&gt; </td></tr>
 <tr><td align="left" balign="left"> + setUsuarioPostoTrabalho(usuarioPostoTrabalho : UsuarioPostoTrabalho) </td></tr>
-<tr><td align="left" balign="left"> + getUsuarioPostoTrabalhoPostoTrabalhoIdentific() : Integer </td></tr>
-<tr><td align="left" balign="left"> + setUsuarioPostoTrabalhoPostoTrabalhoIdentific(postoTrabalhoPostoTrabalhoIdentific : Integer) </td></tr>
+<tr><td align="left" balign="left"> + setListUsuarioPostoTrabalho(listUsuarioPostoTrabalho : List&lt;UsuarioPostoTrabalho&gt;) </td></tr>
+<tr><td align="left" balign="left"> + getIdentificacaoPostoTrabalho() : Integer </td></tr>
+<tr><td align="left" balign="left"> + setIdentificacaoPostoTrabalho(identificacaoPostoTrabalho : Integer) </td></tr>
 <tr><td align="left" balign="left"> + setUnidadeOrganizacionalPostoTrabalho(identificUnidOrganizac : Long) </td></tr>
 <tr><td align="left" balign="left"> + getUnidadeOrganizacionalPostoTrabalho() : Long </td></tr>
 <tr><td align="left" balign="left"> + setPostoTrabalho(identificacaoPostoTrabalho : Integer) </td></tr>

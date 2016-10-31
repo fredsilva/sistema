@@ -1,0 +1,10 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./ValorMultaEnum.html" title="br.gov.to.sefaz.arr.dare.enums.ValorMultaEnum" alt="" coords="16,54,185,182"/>
+<area shape="rect" id="node1" href="./ValorMultaEnum.html" title="&lt;TABLE&gt;" alt="" coords="5,49,196,187"/>
+<area shape="rect" id="node2_1" href="./ValorAliquotaEnum.html" title="br.gov.to.sefaz.arr.dare.enums.ValorAliquotaEnum" alt="" coords="231,28,413,208"/>
+<area shape="rect" id="node2" href="./ValorAliquotaEnum.html" title="&lt;TABLE&gt;" alt="" coords="220,23,424,213"/>
+<area shape="rect" id="node3_2" href="./TipoUnidadeEnum.html" title="br.gov.to.sefaz.arr.dare.enums.TipoUnidadeEnum" alt="" coords="459,11,611,225"/>
+<area shape="rect" id="node3" href="./TipoUnidadeEnum.html" title="&lt;TABLE&gt;" alt="" coords="449,5,622,231"/>
+<area shape="rect" id="node4_3" href="./SituacaoContaCorrenteEnum.html" title="br.gov.to.sefaz.arr.dare.enums.SituacaoContaCorrenteEnum" alt="" coords="657,63,845,173"/>
+<area shape="rect" id="node4" href="./SituacaoContaCorrenteEnum.html" title="&lt;TABLE&gt;" alt="" coords="647,57,856,179"/>
+</map>

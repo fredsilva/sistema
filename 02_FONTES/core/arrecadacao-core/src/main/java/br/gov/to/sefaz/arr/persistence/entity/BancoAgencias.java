@@ -1,6 +1,7 @@
 package br.gov.to.sefaz.arr.persistence.entity;
 
 import br.gov.to.sefaz.business.service.validation.custom.Cnpj;
+import br.gov.to.sefaz.business.service.validation.custom.Email;
 import br.gov.to.sefaz.par.gestao.persistence.entity.Municipio;
 import br.gov.to.sefaz.persistence.converter.OneOrNullBooleanConverter;
 import br.gov.to.sefaz.persistence.converter.SituacaoEnumConverter;
@@ -20,7 +21,6 @@ import javax.persistence.Table;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 /**
@@ -91,8 +91,7 @@ public class BancoAgencias extends AbstractEntity<BancoAgenciasPK> {
 
     @NotEmpty(message = "#{arr_msg['parametros.bancoAgencias.email.obrigatorio']}")
     @Size(max = 150, message = "#{arr_msg['parametros.bancoAgencias.email.tamanho']}")
-    @Pattern(regexp = "([A-Za-z0-9\\._-]+@[A-Za-z0-9\\._-]+\\.[A-Za-z]{2,4}+)|",
-            message = "#{arr_msg['parametros.bancoAgencias.email.incorreto']}")
+    @Email(message = "#{arr_msg['parametros.bancoAgencias.email.incorreto']}")
     @Column(name = "EMAIL", nullable = false, length = 150)
     private String email;
 

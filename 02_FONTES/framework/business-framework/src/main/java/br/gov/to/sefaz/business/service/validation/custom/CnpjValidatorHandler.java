@@ -10,14 +10,23 @@ import java.util.InputMismatchException;
  * @author <a href="mailto:cristiano.luis@ntconsult.com.br">cristiano.luis</a>
  * @since 07/06/2016 13:30:15
  */
-@SuppressWarnings("PMD")
 public class CnpjValidatorHandler {
+
+    /**
+     * Valida a quantidade de dígitos do cnpj e seu digito verificador.
+     *
+     * @param cnpj cnpj a ser validado
+     * @return true para cnpj válido, false para cnpj inválido
+     */
+    public boolean validateCnpj(String cnpj) {
+        return validateLength(cnpj) && validateDigits(cnpj);
+    }
 
     /**
      * Valida a quantidade de dígitos do cnpj.
      *
      * @param cnpj cnpj a ser validado
-     * @return ture para cnpj válido, false para cnpj inválido
+     * @return true para cnpj válido, false para cnpj inválido
      */
     public boolean validateLength(String cnpj) {
         boolean valid = true;
@@ -30,7 +39,7 @@ public class CnpjValidatorHandler {
     }
 
     /**
-     * Valida os dígitos verificdores do cnpj.
+     * Valida os dígitos verificadores do cnpj.
      *
      * @param cnpj cnpj a ser validado
      * @return ture para cnpj válido, false para cnpj inválido

@@ -37,9 +37,9 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + TipoUnidade(codigoTipoUnidade : Character, descricaoTipoUnidade : String) </td></tr>
-<tr><td align="left" balign="left"> + getCodigoTipoUnidade() : Character </td></tr>
-<tr><td align="left" balign="left"> + setCodigoTipoUnidade(codigoTipoUnidade : Character) </td></tr>
+<tr><td align="left" balign="left"> + TipoUnidade(codigoTipoUnidade : String, descricaoTipoUnidade : String) </td></tr>
+<tr><td align="left" balign="left"> + getCodigoTipoUnidade() : String </td></tr>
+<tr><td align="left" balign="left"> + setCodigoTipoUnidade(codigoTipoUnidade : String) </td></tr>
 <tr><td align="left" balign="left"> + getDescricaoTipoUnidade() : String </td></tr>
 <tr><td align="left" balign="left"> + setDescricaoTipoUnidade(descricaoTipoUnidade : String) </td></tr>
 		</table></td></tr>

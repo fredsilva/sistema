@@ -10,14 +10,14 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.arr.parametros.business.service.PedidoAreasFaixaValorService
-	c82995 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.PedidoAreasFaixaValorService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../PedidoAreasFaixaValorService.html">
+	c109351 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.PedidoAreasFaixaValorService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../PedidoAreasFaixaValorService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> PedidoAreasFaixaValorService </td></tr>
 		</table></td></tr>
 		</table>>, URL="../PedidoAreasFaixaValorService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoAreasFaixaValorServiceImpl
-	c83022 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoAreasFaixaValorServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./PedidoAreasFaixaValorServiceImpl.html">
+	c109378 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoAreasFaixaValorServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./PedidoAreasFaixaValorServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoAreasFaixaValorServiceImpl </td></tr>
 		</table></td></tr>
@@ -29,11 +29,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PedidoAreasFaixaValorServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoAreasFaixaValorServiceImpl extends br.gov.to.sefaz.business.service.impl.DefaultCrudService<br.gov.to.sefaz.arr.persistence.entity.PedidoAreasFaixaValor, java.lang.Integer>
-	c83307:p -> c83022:p [dir=back,arrowtail=empty];
+	c109678:p -> c109378:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.parametros.business.service.impl.PedidoAreasFaixaValorServiceImpl implements br.gov.to.sefaz.arr.parametros.business.service.PedidoAreasFaixaValorService
-	c82995:p -> c83022:p [dir=back,arrowtail=empty,style=dashed];
+	c109351:p -> c109378:p [dir=back,arrowtail=empty,style=dashed];
 	// br.gov.to.sefaz.business.service.impl.DefaultCrudService<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c83307 [label=<<table title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/service/impl/DefaultCrudService.html">
+	c109678 [label=<<table title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/service/impl/DefaultCrudService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultCrudService&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
 		</table></td></tr>

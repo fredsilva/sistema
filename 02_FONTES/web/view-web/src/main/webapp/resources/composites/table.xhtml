@@ -38,7 +38,13 @@
     <cc:attribute name="rowCallback" type="java.lang.String" default="null"
             shortDescription="Método de callback para pós-processamento depois que cada row for gerada pela tabela."/>
     <cc:facet name="actions"
-            shortDescription="Elementos HTML que serão replicados em cada linha da coluna de ações da tabela. Os eventos são mapeados através da classe do elemento HTML. Mais detalhes em br.gov.to.sefaz.business.managedbean.composites.DataTableMB#parseActionEvents(String)"/>
+            shortDescription="Elementos HTML que serão replicados em cada linha da coluna de ações da tabela.
+            Os eventos são mapeados através da classe do elemento HTML.
+            Mais detalhes em br.gov.to.sefaz.business.managedbean.composites.DataTableMB#parseActionEvents(String)"/>
+    <cc:facet name="actionsHeaderCustom"
+            shortDescription="Elementos HTML que serão replicados no header das actions.
+            Os eventos são mapeados através da classe do elemento HTML.
+            Mais detalhes em br.gov.to.sefaz.business.managedbean.composites.DataTableMB#parseActionEvents(String)"/>
 
 </cc:interface>
 
@@ -48,27 +54,32 @@
     <div id="#{cc.clientId}">
         <table id="#{cc.attrs.id}-dt" class="table table-hover">
             <thead>
-                <tr>
-                    <ui:repeat value="#{dataTableMB.parseHeaders(cc.attrs.headers, fields, cc.attrs.bundle)}"
-                            var="head">
-                        <th>#{head}</th>
-                    </ui:repeat>
-                    <c:if test="#{cc.attrs.hasActions}">
+            <tr>
+                <ui:repeat value="#{dataTableMB.parseHeaders(cc.attrs.headers, fields, cc.attrs.bundle)}"
+                        var="head">
+                    <th>#{head}</th>
+                </ui:repeat>
+                <c:if test="#{cc.attrs.hasActions}">
+                    <c:if test="#{not empty cc.attrs.actionsHeader}">
                         <th>#{dataTableMB.getFromBundle(cc.attrs.actionsHeader, cc.attrs.bundle)}</th>
                     </c:if>
-                </tr>
+                    <c:if test="#{empty cc.attrs.actionsHeader}">
+                        <th><cc:renderFacet name="actionsHeaderCustom"/></th>
+                    </c:if>
+                </c:if>
+            </tr>
             </thead>
             <tbody>
-                <ui:repeat value="#{cc.attrs.content}" var="row">
-                    <tr>
+            <ui:repeat value="#{cc.attrs.content}" var="row">
+                <tr>
                     <ui:repeat value="#{fields}" var="field">
-                        <td>#{dataTableMB.formatToPrint(row[field.name], field.printType)}</td>
+                        <td>#{dataTableMB.formatToPrint(row, field)}</td>
                     </ui:repeat>
                     <c:if test="#{cc.attrs.hasActions}">
                         <td></td>
                     </c:if>
-                    </tr>
-                </ui:repeat>
+                </tr>
+            </ui:repeat>
             </tbody>
         </table>
         <div id="default-content-#{cc.attrs.id}" class="hide">

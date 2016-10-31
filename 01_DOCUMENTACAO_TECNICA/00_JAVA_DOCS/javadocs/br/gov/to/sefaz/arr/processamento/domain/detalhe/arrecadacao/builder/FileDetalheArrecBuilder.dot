@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.arr.processamento.domain.detalhe.arrecadacao.builder.FileDetalheArrecBuilder
-	c413364 [label=<<table title="br.gov.to.sefaz.arr.processamento.domain.detalhe.arrecadacao.builder.FileDetalheArrecBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./FileDetalheArrecBuilder.html">
+	c543236 [label=<<table title="br.gov.to.sefaz.arr.processamento.domain.detalhe.arrecadacao.builder.FileDetalheArrecBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./FileDetalheArrecBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> FileDetalheArrecBuilder </td></tr>
 		</table></td></tr>
@@ -25,7 +25,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./FileDetalheArrecBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.domain.detalhe.FileDetalheBuilder
-	c413369 [label=<<table title="br.gov.to.sefaz.arr.processamento.domain.detalhe.FileDetalheBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../FileDetalheBuilder.html">
+	c543241 [label=<<table title="br.gov.to.sefaz.arr.processamento.domain.detalhe.FileDetalheBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../FileDetalheBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> FileDetalheBuilder </td></tr>
@@ -40,6 +40,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../FileDetalheBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.arr.processamento.domain.detalhe.arrecadacao.builder.FileDetalheArrecBuilder implements br.gov.to.sefaz.arr.processamento.domain.detalhe.FileDetalheBuilder
-	c413369:p -> c413364:p [dir=back,arrowtail=empty,style=dashed];
+	c543241:p -> c543236:p [dir=back,arrowtail=empty,style=dashed];
 }
 

@@ -1,12 +1,10 @@
 package br.gov.to.sefaz.seg.business.authentication.domain;
 
 import br.gov.to.sefaz.business.service.validation.custom.Cpf;
-
+import br.gov.to.sefaz.business.service.validation.custom.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import java.util.Objects;
-
-import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 /**
@@ -24,8 +22,7 @@ public class ResetPasswordDto {
 
     @NotEmpty(message = "#{seg_msg['reset.password.email.obrigatorio']}")
     @Size(max = 50, message = "#{seg_msg['reset.password.email.tamanho']}")
-    @Pattern(regexp = "([A-Za-z0-9\\._-]+@[A-Za-z0-9\\._-]+\\.[A-Za-z]{2,4}+)|",
-            message = "#{seg_msg['reset.password.email.incorreto']}")
+    @Email(message = "#{seg_msg['reset.password.email.incorreto']}")
     private String email;
 
     public ResetPasswordDto() {

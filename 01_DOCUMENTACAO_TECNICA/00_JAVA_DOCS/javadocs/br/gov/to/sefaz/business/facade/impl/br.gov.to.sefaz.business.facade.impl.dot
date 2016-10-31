@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c62338 [label=<<table title="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DefaultCrudFacade.html">
+	c74035 [label=<<table title="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DefaultCrudFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultCrudFacade&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
 		</table></td></tr>
@@ -24,6 +24,7 @@ digraph G {
 <tr><td align="left" balign="left"> + save(entity : E) : E </td></tr>
 <tr><td align="left" balign="left"> + save(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + update(entity : E) : E </td></tr>
+<tr><td align="left" balign="left"> + update(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + delete(id : I) : Optional&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + delete(ids : Iterable&lt;I&gt;) </td></tr>
 		</table></td></tr>

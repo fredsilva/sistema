@@ -7,10 +7,14 @@
 <area shape="rect" id="node3" href="./Municipio.html" title="&lt;TABLE&gt;" alt="" coords="1273,5,2426,456"/>
 <area shape="rect" id="node4_3" href="./Logradouro.html" title="br.gov.to.sefaz.par.gestao.persistence.entity.Logradouro" alt="" coords="2461,123,2886,338"/>
 <area shape="rect" id="node4" href="./Logradouro.html" title="&lt;TABLE&gt;" alt="" coords="2450,118,2897,343"/>
-<area shape="rect" id="node5_4" href="./Estado.html" title="br.gov.to.sefaz.par.gestao.persistence.entity.Estado" alt="" coords="2932,28,4169,433"/>
-<area shape="rect" id="node5" href="./Estado.html" title="&lt;TABLE&gt;" alt="" coords="2921,23,4180,439"/>
-<area shape="rect" id="node6_5" href="./CatEntityPackageMarker.html" title="br.gov.to.sefaz.par.gestao.persistence.entity.CatEntityPackageMarker" alt="" coords="4215,193,4399,269"/>
-<area shape="rect" id="node6" href="./CatEntityPackageMarker.html" title="&lt;TABLE&gt;" alt="" coords="4204,187,4409,274"/>
-<area shape="rect" id="node7_6" href="./AtividadeEconomica.html" title="br.gov.to.sefaz.par.gestao.persistence.entity.AtividadeEconomica" alt="" coords="4445,37,5478,425"/>
-<area shape="rect" id="node7" href="./AtividadeEconomica.html" title="&lt;TABLE&gt;" alt="" coords="4434,31,5489,430"/>
+<area shape="rect" id="node5_4" href="./FeriadoPK.html" title="br.gov.to.sefaz.par.gestao.persistence.entity.FeriadoPK" alt="" coords="2932,132,3393,329"/>
+<area shape="rect" id="node5" href="./FeriadoPK.html" title="&lt;TABLE&gt;" alt="" coords="2921,127,3404,335"/>
+<area shape="rect" id="node6_5" href="./Feriado.html" title="br.gov.to.sefaz.par.gestao.persistence.entity.Feriado" alt="" coords="3439,37,3756,425"/>
+<area shape="rect" id="node6" href="./Feriado.html" title="&lt;TABLE&gt;" alt="" coords="3428,31,3767,430"/>
+<area shape="rect" id="node7_6" href="./Estado.html" title="br.gov.to.sefaz.par.gestao.persistence.entity.Estado" alt="" coords="3801,28,5039,433"/>
+<area shape="rect" id="node7" href="./Estado.html" title="&lt;TABLE&gt;" alt="" coords="3791,23,5049,439"/>
+<area shape="rect" id="node8_7" href="./CatEntityPackageMarker.html" title="br.gov.to.sefaz.par.gestao.persistence.entity.CatEntityPackageMarker" alt="" coords="5084,193,5268,269"/>
+<area shape="rect" id="node8" href="./CatEntityPackageMarker.html" title="&lt;TABLE&gt;" alt="" coords="5073,187,5279,274"/>
+<area shape="rect" id="node9_8" href="./AtividadeEconomica.html" title="br.gov.to.sefaz.par.gestao.persistence.entity.AtividadeEconomica" alt="" coords="5314,37,6347,425"/>
+<area shape="rect" id="node9" href="./AtividadeEconomica.html" title="&lt;TABLE&gt;" alt="" coords="5303,31,6358,430"/>
 </map>

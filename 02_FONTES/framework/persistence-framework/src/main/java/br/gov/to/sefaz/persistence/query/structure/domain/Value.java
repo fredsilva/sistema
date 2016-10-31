@@ -2,6 +2,7 @@ package br.gov.to.sefaz.persistence.query.structure.domain;
 
 import org.springframework.util.StringUtils;
 
+import java.util.Collection;
 import java.util.Objects;
 
 /**
@@ -43,7 +44,9 @@ public final class Value {
     }
 
     public boolean isEmpty() {
-        return getType() == ValueType.PARAM && StringUtils.isEmpty(rootValue);
+        return getType() == ValueType.PARAM && (StringUtils.isEmpty(rootValue)
+                || (rootValue instanceof Collection
+                && ((Collection) rootValue).isEmpty()));
     }
 
     @Override

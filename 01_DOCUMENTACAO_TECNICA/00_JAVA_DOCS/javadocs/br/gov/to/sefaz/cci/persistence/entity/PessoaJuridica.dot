@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.entity.AbstractEntity<I extends java.io.Serializable>
-	c666757 [label=<<table title="br.gov.to.sefaz.persistence.entity.AbstractEntity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/entity/AbstractEntity.html">
+	c838028 [label=<<table title="br.gov.to.sefaz.persistence.entity.AbstractEntity" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/entity/AbstractEntity.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractEntity&lt;I extends Serializable&gt; </font></td></tr>
 		</table></td></tr>
@@ -38,7 +38,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../persistence/entity/AbstractEntity.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.cci.persistence.entity.PessoaJuridica
-	c667181 [label=<<table title="br.gov.to.sefaz.cci.persistence.entity.PessoaJuridica" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./PessoaJuridica.html">
+	c838467 [label=<<table title="br.gov.to.sefaz.cci.persistence.entity.PessoaJuridica" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./PessoaJuridica.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PessoaJuridica </td></tr>
 		</table></td></tr>
@@ -78,6 +78,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PessoaJuridica.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.cci.persistence.entity.PessoaJuridica extends br.gov.to.sefaz.persistence.entity.AbstractEntity<java.lang.String>
-	c666757:p -> c667181:p [dir=back,arrowtail=empty];
+	c838028:p -> c838467:p [dir=back,arrowtail=empty];
 }
 

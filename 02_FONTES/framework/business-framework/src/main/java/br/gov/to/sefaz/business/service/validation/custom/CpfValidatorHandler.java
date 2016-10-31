@@ -13,20 +13,30 @@ import java.util.InputMismatchException;
 public class CpfValidatorHandler {
 
     /**
+     * Valida a quantidade de dígitos do cpf e seu número verificador.
+     *
+     * @param cpf cpf a ser validado
+     * @return true para cpf válido, false para cpf inválido
+     */
+    public boolean validateCpf(String cpf) {
+        return validateLength(cpf) && validateDigits(cpf);
+    }
+
+    /**
      * Valida a quantidade de dígitos do cpf.
      *
      * @param cpf cpf a ser validado
-     * @return ture para cpf válido, false para cpf inválido
+     * @return true para cpf válido, false para cpf inválido
      */
     public boolean validateLength(String cpf) {
         return StringUtils.trimToEmpty(cpf).length() == 11;
     }
 
     /**
-     * Valida os dígitos verificdores do cpf.
+     * Valida os dígitos verificadores do cpf.
      *
      * @param cpf cpf a ser validado
-     * @return ture para cpf válido, false para cpf inválido
+     * @return true para cpf válido, false para cpf inválido
      */
     public boolean validateDigits(String cpf) {
         boolean valid = false;

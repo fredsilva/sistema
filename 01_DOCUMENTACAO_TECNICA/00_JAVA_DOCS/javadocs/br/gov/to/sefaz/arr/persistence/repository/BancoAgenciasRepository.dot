@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.repository.BaseRepository<E, I extends java.io.Serializable>
-	c235802 [label=<<table title="br.gov.to.sefaz.persistence.repository.BaseRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/repository/BaseRepository.html">
+	c286923 [label=<<table title="br.gov.to.sefaz.persistence.repository.BaseRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/repository/BaseRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> BaseRepository&lt;E, I extends Serializable&gt; </font></td></tr>
 		</table></td></tr>
@@ -69,7 +69,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../persistence/repository/BaseRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.BancoAgenciasRepository
-	c236371 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.BancoAgenciasRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./BancoAgenciasRepository.html">
+	c287542 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.BancoAgenciasRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./BancoAgenciasRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BancoAgenciasRepository </td></tr>
 		</table></td></tr>
@@ -90,6 +90,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./BancoAgenciasRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.arr.persistence.repository.BancoAgenciasRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.BancoAgencias, br.gov.to.sefaz.arr.persistence.entity.BancoAgenciasPK>
-	c235802:p -> c236371:p [dir=back,arrowtail=empty];
+	c286923:p -> c287542:p [dir=back,arrowtail=empty];
 }
 

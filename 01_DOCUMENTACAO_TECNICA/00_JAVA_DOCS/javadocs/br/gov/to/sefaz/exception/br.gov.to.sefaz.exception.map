@@ -5,10 +5,12 @@
 <area shape="rect" id="node2" href="./SatExceptionHandlerFactory.html" title="&lt;TABLE&gt;" alt="" coords="1021,57,1443,161"/>
 <area shape="rect" id="node3_2" href="./SatExceptionHandler.html" title="br.gov.to.sefaz.exception.SatExceptionHandler" alt="" coords="1477,45,1957,173"/>
 <area shape="rect" id="node3" href="./SatExceptionHandler.html" title="&lt;TABLE&gt;" alt="" coords="1467,40,1968,179"/>
-<area shape="rect" id="node4_3" href="./UnexpectedErrorException.html" title="br.gov.to.sefaz.exception.UnexpectedErrorException" alt="" coords="1669,267,2075,377"/>
-<area shape="rect" id="node4" href="./UnexpectedErrorException.html" title="&lt;TABLE&gt;" alt="" coords="1658,261,2086,383"/>
-<area shape="rect" id="node5_4" href="./HandledSystemException.html" title="br.gov.to.sefaz.exception.HandledSystemException" alt="" coords="2003,88,2173,131"/>
-<area shape="rect" id="node5" href="./HandledSystemException.html" title="&lt;TABLE&gt;" alt="" coords="1993,83,2183,136"/>
-<area shape="rect" id="node6_5" href="./BusinessException.html" title="br.gov.to.sefaz.exception.BusinessException" alt="" coords="2121,275,2485,369"/>
-<area shape="rect" id="node6" href="./BusinessException.html" title="&lt;TABLE&gt;" alt="" coords="2110,270,2495,374"/>
+<area shape="rect" id="node4_3" href="./UnhandledException.html" title="br.gov.to.sefaz.exception.UnhandledException" alt="" coords="2003,54,2373,165"/>
+<area shape="rect" id="node4" href="./UnhandledException.html" title="&lt;TABLE&gt;" alt="" coords="1992,49,2384,170"/>
+<area shape="rect" id="node5_4" href="./InterceptedErrorException.html" title="br.gov.to.sefaz.exception.InterceptedErrorException" alt="" coords="2089,267,2490,377"/>
+<area shape="rect" id="node5" href="./InterceptedErrorException.html" title="&lt;TABLE&gt;" alt="" coords="2078,261,2501,383"/>
+<area shape="rect" id="node6_5" href="./HandledSystemException.html" title="br.gov.to.sefaz.exception.HandledSystemException" alt="" coords="2419,88,2589,131"/>
+<area shape="rect" id="node6" href="./HandledSystemException.html" title="&lt;TABLE&gt;" alt="" coords="2409,83,2599,136"/>
+<area shape="rect" id="node7_6" href="./BusinessException.html" title="br.gov.to.sefaz.exception.BusinessException" alt="" coords="2535,275,2899,369"/>
+<area shape="rect" id="node7" href="./BusinessException.html" title="&lt;TABLE&gt;" alt="" coords="2525,270,2910,374"/>
 </map>

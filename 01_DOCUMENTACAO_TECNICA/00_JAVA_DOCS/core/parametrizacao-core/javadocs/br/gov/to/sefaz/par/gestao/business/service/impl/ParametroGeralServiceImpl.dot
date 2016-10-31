@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.par.gestao.business.service.ParametroGeralService
-	c1322 [label=<<table title="br.gov.to.sefaz.par.gestao.business.service.ParametroGeralService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ParametroGeralService.html">
+	c1803 [label=<<table title="br.gov.to.sefaz.par.gestao.business.service.ParametroGeralService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ParametroGeralService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ParametroGeralService </td></tr>
@@ -26,7 +26,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../ParametroGeralService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.par.gestao.business.service.impl.ParametroGeralServiceImpl
-	c1328 [label=<<table title="br.gov.to.sefaz.par.gestao.business.service.impl.ParametroGeralServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ParametroGeralServiceImpl.html">
+	c1810 [label=<<table title="br.gov.to.sefaz.par.gestao.business.service.impl.ParametroGeralServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ParametroGeralServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ParametroGeralServiceImpl </td></tr>
 		</table></td></tr>
@@ -49,11 +49,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ParametroGeralServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.par.gestao.business.service.impl.ParametroGeralServiceImpl extends br.gov.to.sefaz.business.service.impl.DefaultCrudService<br.gov.to.sefaz.par.gestao.persistence.entity.ParametroGeral, java.lang.Integer>
-	c1350:p -> c1328:p [dir=back,arrowtail=empty];
+	c1838:p -> c1810:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.par.gestao.business.service.impl.ParametroGeralServiceImpl implements br.gov.to.sefaz.par.gestao.business.service.ParametroGeralService
-	c1322:p -> c1328:p [dir=back,arrowtail=empty,style=dashed];
+	c1803:p -> c1810:p [dir=back,arrowtail=empty,style=dashed];
 	// br.gov.to.sefaz.business.service.impl.DefaultCrudService<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c1350 [label=<<table title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/service/impl/DefaultCrudService.html">
+	c1838 [label=<<table title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/service/impl/DefaultCrudService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultCrudService&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
 		</table></td></tr>

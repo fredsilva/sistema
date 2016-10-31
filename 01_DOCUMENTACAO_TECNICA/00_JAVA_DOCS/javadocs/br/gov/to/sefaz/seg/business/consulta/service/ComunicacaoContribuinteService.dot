@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.seg.business.consulta.service.ComunicacaoContribuinteService
-	c294600 [label=<<table title="br.gov.to.sefaz.seg.business.consulta.service.ComunicacaoContribuinteService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ComunicacaoContribuinteService.html">
+	c354109 [label=<<table title="br.gov.to.sefaz.seg.business.consulta.service.ComunicacaoContribuinteService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ComunicacaoContribuinteService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ComunicacaoContribuinteService </td></tr>
@@ -24,7 +24,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ComunicacaoContribuinteService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.consulta.service.impl.ComunicacaoContribuinteServiceImpl
-	c294605 [label=<<table title="br.gov.to.sefaz.seg.business.consulta.service.impl.ComunicacaoContribuinteServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/ComunicacaoContribuinteServiceImpl.html">
+	c354114 [label=<<table title="br.gov.to.sefaz.seg.business.consulta.service.impl.ComunicacaoContribuinteServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/ComunicacaoContribuinteServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ComunicacaoContribuinteServiceImpl </td></tr>
 		</table></td></tr>
@@ -38,6 +38,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./impl/ComunicacaoContribuinteServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.business.consulta.service.impl.ComunicacaoContribuinteServiceImpl implements br.gov.to.sefaz.seg.business.consulta.service.ComunicacaoContribuinteService
-	c294600:p -> c294605:p [dir=back,arrowtail=empty,style=dashed];
+	c354109:p -> c354114:p [dir=back,arrowtail=empty,style=dashed];
 }
 

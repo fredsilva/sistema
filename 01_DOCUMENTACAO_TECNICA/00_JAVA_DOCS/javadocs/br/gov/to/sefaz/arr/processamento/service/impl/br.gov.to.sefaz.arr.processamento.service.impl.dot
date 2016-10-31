@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.arr.processamento.service.impl.ResumoStrServiceImpl
-	c152320 [label=<<table title="br.gov.to.sefaz.arr.processamento.service.impl.ResumoStrServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ResumoStrServiceImpl.html">
+	c185527 [label=<<table title="br.gov.to.sefaz.arr.processamento.service.impl.ResumoStrServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ResumoStrServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ResumoStrServiceImpl </td></tr>
 		</table></td></tr>
@@ -22,7 +22,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ResumoStrServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.service.impl.PagosArrecServiceImpl
-	c152321 [label=<<table title="br.gov.to.sefaz.arr.processamento.service.impl.PagosArrecServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PagosArrecServiceImpl.html">
+	c185528 [label=<<table title="br.gov.to.sefaz.arr.processamento.service.impl.PagosArrecServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PagosArrecServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PagosArrecServiceImpl </td></tr>
 		</table></td></tr>
@@ -36,7 +36,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PagosArrecServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.service.impl.LotesPagosServiceImpl
-	c152322 [label=<<table title="br.gov.to.sefaz.arr.processamento.service.impl.LotesPagosServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LotesPagosServiceImpl.html">
+	c185529 [label=<<table title="br.gov.to.sefaz.arr.processamento.service.impl.LotesPagosServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LotesPagosServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LotesPagosServiceImpl </td></tr>
 		</table></td></tr>
@@ -48,7 +48,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./LotesPagosServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.service.impl.LotesPagosArrecServiceImpl
-	c152323 [label=<<table title="br.gov.to.sefaz.arr.processamento.service.impl.LotesPagosArrecServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LotesPagosArrecServiceImpl.html">
+	c185530 [label=<<table title="br.gov.to.sefaz.arr.processamento.service.impl.LotesPagosArrecServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LotesPagosArrecServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LotesPagosArrecServiceImpl </td></tr>
 		</table></td></tr>
@@ -64,7 +64,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./LotesPagosArrecServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.service.impl.DetalhesStrServiceImpl
-	c152324 [label=<<table title="br.gov.to.sefaz.arr.processamento.service.impl.DetalhesStrServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DetalhesStrServiceImpl.html">
+	c185531 [label=<<table title="br.gov.to.sefaz.arr.processamento.service.impl.DetalhesStrServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DetalhesStrServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DetalhesStrServiceImpl </td></tr>
 		</table></td></tr>
@@ -76,33 +76,8 @@ digraph G {
 <tr><td align="left" balign="left"> + sumValorInformativo(dataArrecadacao : LocalDate, idBanco : Integer, idConvenio : Long) : BigDecimal </td></tr>
 		</table></td></tr>
 		</table>>, URL="./DetalhesStrServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	// br.gov.to.sefaz.arr.processamento.service.impl.DareServiceImpl
-	c152325 [label=<<table title="br.gov.to.sefaz.arr.processamento.service.impl.DareServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DareServiceImpl.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> DareServiceImpl </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + DareServiceImpl(repository : DareRepository) </td></tr>
-		</table></td></tr>
-		</table>>, URL="./DareServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	// br.gov.to.sefaz.arr.processamento.service.impl.DareDetalheServiceImpl
-	c152326 [label=<<table title="br.gov.to.sefaz.arr.processamento.service.impl.DareDetalheServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DareDetalheServiceImpl.html">
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="center" balign="center"> DareDetalheServiceImpl </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left">  </td></tr>
-		</table></td></tr>
-		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + DareDetalheServiceImpl(repository : DareDetalheRepository) </td></tr>
-<tr><td align="left" balign="left"> + findAllByNossoNumero(idNossoNumeroDare : Long) : List&lt;DareDetalhe&gt; </td></tr>
-		</table></td></tr>
-		</table>>, URL="./DareDetalheServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.service.impl.ArquivosStrServiceImpl
-	c152327 [label=<<table title="br.gov.to.sefaz.arr.processamento.service.impl.ArquivosStrServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArquivosStrServiceImpl.html">
+	c185532 [label=<<table title="br.gov.to.sefaz.arr.processamento.service.impl.ArquivosStrServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArquivosStrServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArquivosStrServiceImpl </td></tr>
 		</table></td></tr>
@@ -116,7 +91,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ArquivosStrServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.service.impl.ArquivoRecepcaoServiceImpl
-	c152328 [label=<<table title="br.gov.to.sefaz.arr.processamento.service.impl.ArquivoRecepcaoServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArquivoRecepcaoServiceImpl.html">
+	c185533 [label=<<table title="br.gov.to.sefaz.arr.processamento.service.impl.ArquivoRecepcaoServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArquivoRecepcaoServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArquivoRecepcaoServiceImpl </td></tr>
 		</table></td></tr>
@@ -132,7 +107,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ArquivoRecepcaoServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.service.impl.ArquivoErrosStrServiceImpl
-	c152329 [label=<<table title="br.gov.to.sefaz.arr.processamento.service.impl.ArquivoErrosStrServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArquivoErrosStrServiceImpl.html">
+	c185534 [label=<<table title="br.gov.to.sefaz.arr.processamento.service.impl.ArquivoErrosStrServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArquivoErrosStrServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArquivoErrosStrServiceImpl </td></tr>
 		</table></td></tr>
@@ -144,7 +119,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ArquivoErrosStrServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.service.impl.ArquivoErroServiceImpl
-	c152330 [label=<<table title="br.gov.to.sefaz.arr.processamento.service.impl.ArquivoErroServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArquivoErroServiceImpl.html">
+	c185535 [label=<<table title="br.gov.to.sefaz.arr.processamento.service.impl.ArquivoErroServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArquivoErroServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArquivoErroServiceImpl </td></tr>
 		</table></td></tr>
@@ -157,7 +132,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ArquivoErroServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.service.impl.ArquivoDetalhePagosServiceImpl
-	c152331 [label=<<table title="br.gov.to.sefaz.arr.processamento.service.impl.ArquivoDetalhePagosServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArquivoDetalhePagosServiceImpl.html">
+	c185536 [label=<<table title="br.gov.to.sefaz.arr.processamento.service.impl.ArquivoDetalhePagosServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArquivoDetalhePagosServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArquivoDetalhePagosServiceImpl </td></tr>
 		</table></td></tr>

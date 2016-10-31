@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.domain.CodeData<C, D>
-	c855137 [label=<<table title="br.gov.to.sefaz.persistence.domain.CodeData" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/domain/CodeData.html">
+	c1061634 [label=<<table title="br.gov.to.sefaz.persistence.domain.CodeData" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../persistence/domain/CodeData.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CodeData&lt;C, D&gt; </td></tr>
 		</table></td></tr>
@@ -26,7 +26,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../persistence/domain/CodeData.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.domain.TipoUnidade
-	c855464 [label=<<table title="br.gov.to.sefaz.seg.persistence.domain.TipoUnidade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TipoUnidade.html">
+	c1061973 [label=<<table title="br.gov.to.sefaz.seg.persistence.domain.TipoUnidade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TipoUnidade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoUnidade </td></tr>
 		</table></td></tr>
@@ -34,14 +34,14 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + TipoUnidade(codigoTipoUnidade : Character, descricaoTipoUnidade : String) </td></tr>
-<tr><td align="left" balign="left"> + getCodigoTipoUnidade() : Character </td></tr>
-<tr><td align="left" balign="left"> + setCodigoTipoUnidade(codigoTipoUnidade : Character) </td></tr>
+<tr><td align="left" balign="left"> + TipoUnidade(codigoTipoUnidade : String, descricaoTipoUnidade : String) </td></tr>
+<tr><td align="left" balign="left"> + getCodigoTipoUnidade() : String </td></tr>
+<tr><td align="left" balign="left"> + setCodigoTipoUnidade(codigoTipoUnidade : String) </td></tr>
 <tr><td align="left" balign="left"> + getDescricaoTipoUnidade() : String </td></tr>
 <tr><td align="left" balign="left"> + setDescricaoTipoUnidade(descricaoTipoUnidade : String) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./TipoUnidade.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	//br.gov.to.sefaz.seg.persistence.domain.TipoUnidade extends br.gov.to.sefaz.persistence.domain.CodeData<java.lang.Character, java.lang.String>
-	c855137:p -> c855464:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.seg.persistence.domain.TipoUnidade extends br.gov.to.sefaz.persistence.domain.CodeData<java.lang.String, java.lang.String>
+	c1061634:p -> c1061973:p [dir=back,arrowtail=empty];
 }
 

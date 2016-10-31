@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./UnexpectedErrorException.html" title="br.gov.to.sefaz.exception.UnexpectedErrorException" alt="" coords="16,112,423,223"/>
-<area shape="rect" id="node1" href="./UnexpectedErrorException.html" title="&lt;TABLE&gt;" alt="" coords="5,107,433,228"/>
-<area shape="rect" id="node2_1" href="./HandledSystemException.html" title="br.gov.to.sefaz.exception.HandledSystemException" alt="" coords="349,11,519,53"/>
-<area shape="rect" id="node2" href="./HandledSystemException.html" title="&lt;TABLE&gt;" alt="" coords="339,5,529,59"/>
-<area shape="rect" id="node3_2" href="./BusinessException.html" title="br.gov.to.sefaz.exception.BusinessException" alt="" coords="468,121,832,214"/>
-<area shape="rect" id="node3" href="./BusinessException.html" title="&lt;TABLE&gt;" alt="" coords="457,115,843,219"/>
+<area shape="rect" id="node1_0" href="./InterceptedErrorException.html" title="br.gov.to.sefaz.exception.InterceptedErrorException" alt="" coords="16,112,417,223"/>
+<area shape="rect" id="node1" href="./InterceptedErrorException.html" title="&lt;TABLE&gt;" alt="" coords="5,107,428,228"/>
+<area shape="rect" id="node2_1" href="./HandledSystemException.html" title="br.gov.to.sefaz.exception.HandledSystemException" alt="" coords="345,11,515,53"/>
+<area shape="rect" id="node2" href="./HandledSystemException.html" title="&lt;TABLE&gt;" alt="" coords="335,5,525,59"/>
+<area shape="rect" id="node3_2" href="./BusinessException.html" title="br.gov.to.sefaz.exception.BusinessException" alt="" coords="463,121,827,214"/>
+<area shape="rect" id="node3" href="./BusinessException.html" title="&lt;TABLE&gt;" alt="" coords="452,115,837,219"/>
 </map>

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c869258 [label=<<table title="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/facade/impl/DefaultCrudFacade.html">
+	c1078265 [label=<<table title="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/facade/impl/DefaultCrudFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultCrudFacade&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
 		</table></td></tr>
@@ -24,12 +24,13 @@ digraph G {
 <tr><td align="left" balign="left"> + save(entity : E) : E </td></tr>
 <tr><td align="left" balign="left"> + save(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + update(entity : E) : E </td></tr>
+<tr><td align="left" balign="left"> + update(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + delete(id : I) : Optional&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + delete(ids : Iterable&lt;I&gt;) </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../../../business/facade/impl/DefaultCrudFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.facade.UnidadeOrganizacionalFacade
-	c869355 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.UnidadeOrganizacionalFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../UnidadeOrganizacionalFacade.html">
+	c1078372 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.UnidadeOrganizacionalFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../UnidadeOrganizacionalFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> UnidadeOrganizacionalFacade </td></tr>
@@ -43,7 +44,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../UnidadeOrganizacionalFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.facade.impl.UnidadeOrganizacionalFacadeImpl
-	c869369 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.UnidadeOrganizacionalFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UnidadeOrganizacionalFacadeImpl.html">
+	c1078386 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.facade.impl.UnidadeOrganizacionalFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UnidadeOrganizacionalFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UnidadeOrganizacionalFacadeImpl </td></tr>
 		</table></td></tr>
@@ -57,8 +58,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./UnidadeOrganizacionalFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.business.gestao.facade.impl.UnidadeOrganizacionalFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.seg.persistence.entity.UnidadeOrganizacional, java.lang.Long>
-	c869258:p -> c869369:p [dir=back,arrowtail=empty];
+	c1078265:p -> c1078386:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.business.gestao.facade.impl.UnidadeOrganizacionalFacadeImpl implements br.gov.to.sefaz.seg.business.gestao.facade.UnidadeOrganizacionalFacade
-	c869355:p -> c869369:p [dir=back,arrowtail=empty,style=dashed];
+	c1078372:p -> c1078386:p [dir=back,arrowtail=empty,style=dashed];
 }
 

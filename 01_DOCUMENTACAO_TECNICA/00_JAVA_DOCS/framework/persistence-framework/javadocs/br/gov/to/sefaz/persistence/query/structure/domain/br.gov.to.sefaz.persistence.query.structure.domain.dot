@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.query.structure.domain.ValueType
-	c4004 [label=<<table title="br.gov.to.sefaz.persistence.query.structure.domain.ValueType" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ValueType.html">
+	c4076 [label=<<table title="br.gov.to.sefaz.persistence.query.structure.domain.ValueType" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ValueType.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> ValueType </td></tr>
@@ -24,7 +24,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ValueType.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.structure.domain.Value
-	c4005 [label=<<table title="br.gov.to.sefaz.persistence.query.structure.domain.Value" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Value.html">
+	c4077 [label=<<table title="br.gov.to.sefaz.persistence.query.structure.domain.Value" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Value.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Value </td></tr>
 		</table></td></tr>
@@ -45,7 +45,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Value.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.structure.domain.OptionalQuery<T>
-	c4006 [label=<<table title="br.gov.to.sefaz.persistence.query.structure.domain.OptionalQuery" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OptionalQuery.html">
+	c4078 [label=<<table title="br.gov.to.sefaz.persistence.query.structure.domain.OptionalQuery" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OptionalQuery.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OptionalQuery&lt;T&gt; </td></tr>
 		</table></td></tr>
@@ -61,7 +61,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./OptionalQuery.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.structure.domain.Alias<T>
-	c4007 [label=<<table title="br.gov.to.sefaz.persistence.query.structure.domain.Alias" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Alias.html">
+	c4079 [label=<<table title="br.gov.to.sefaz.persistence.query.structure.domain.Alias" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./Alias.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Alias&lt;T&gt; </td></tr>
 		</table></td></tr>

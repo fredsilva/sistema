@@ -1,0 +1,8 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="../DareFacade.html" title="br.gov.to.sefaz.arr.dare.facade.DareFacade" alt="" coords="379,11,999,295"/>
+<area shape="rect" id="node1" href="../DareFacade.html" title="&lt;TABLE&gt;" alt="" coords="369,5,1010,300"/>
+<area shape="rect" id="node2_1" href="./DareFacadeImpl.html" title="br.gov.to.sefaz.arr.dare.facade.impl.DareFacadeImpl" alt="" coords="16,353,1939,637"/>
+<area shape="rect" id="node2" href="./DareFacadeImpl.html" title="&lt;TABLE&gt;" alt="" coords="5,348,1949,643"/>
+<area shape="rect" id="node3_2" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/facade/impl/DefaultCrudFacade.html" title="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" alt="" coords="1045,45,1488,260"/>
+<area shape="rect" id="node3" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/facade/impl/DefaultCrudFacade.html" title="&lt;TABLE&gt;" alt="" coords="1035,40,1499,265"/>
+</map>

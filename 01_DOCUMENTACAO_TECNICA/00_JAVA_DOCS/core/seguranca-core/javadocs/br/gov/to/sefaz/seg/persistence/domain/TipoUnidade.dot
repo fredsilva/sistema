@@ -18,14 +18,14 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"> + TipoUnidade(codigoTipoUnidade : Character, descricaoTipoUnidade : String) </td></tr>
-<tr><td align="left" balign="left"> + getCodigoTipoUnidade() : Character </td></tr>
-<tr><td align="left" balign="left"> + setCodigoTipoUnidade(codigoTipoUnidade : Character) </td></tr>
+<tr><td align="left" balign="left"> + TipoUnidade(codigoTipoUnidade : String, descricaoTipoUnidade : String) </td></tr>
+<tr><td align="left" balign="left"> + getCodigoTipoUnidade() : String </td></tr>
+<tr><td align="left" balign="left"> + setCodigoTipoUnidade(codigoTipoUnidade : String) </td></tr>
 <tr><td align="left" balign="left"> + getDescricaoTipoUnidade() : String </td></tr>
 <tr><td align="left" balign="left"> + setDescricaoTipoUnidade(descricaoTipoUnidade : String) </td></tr>
 		</table></td></tr>
 		</table>>, URL="./TipoUnidade.html", fontname="arial", fontcolor="black", fontsize=10.0];
-	//br.gov.to.sefaz.seg.persistence.domain.TipoUnidade extends br.gov.to.sefaz.persistence.domain.CodeData<java.lang.Character, java.lang.String>
+	//br.gov.to.sefaz.seg.persistence.domain.TipoUnidade extends br.gov.to.sefaz.persistence.domain.CodeData<java.lang.String, java.lang.String>
 	c49093:p -> c49031:p [dir=back,arrowtail=empty];
 	// br.gov.to.sefaz.persistence.domain.CodeData<C, D>
 	c49093 [label=<<table title="br.gov.to.sefaz.persistence.domain.CodeData" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/persistence/domain/CodeData.html">

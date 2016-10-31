@@ -31,7 +31,7 @@ import br.gov.to.sefaz.seg.persistence.repository.UsuarioSistemaRepository;
 import br.gov.to.sefaz.util.formatter.FormatterUtil;
 import br.gov.to.sefaz.util.message.MessageUtil;
 import br.gov.to.sefaz.util.message.SourceBundle;
-import br.gov.to.sefaz.util.report.PdfRender;
+import br.gov.to.sefaz.util.pdf.PdfRender;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

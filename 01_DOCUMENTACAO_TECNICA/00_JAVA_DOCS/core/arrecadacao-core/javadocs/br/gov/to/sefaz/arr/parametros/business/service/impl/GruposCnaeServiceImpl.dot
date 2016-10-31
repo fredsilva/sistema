@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.arr.parametros.business.service.GruposCnaeService
-	c68705 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.GruposCnaeService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../GruposCnaeService.html">
+	c91136 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.GruposCnaeService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../GruposCnaeService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> GruposCnaeService </td></tr>
@@ -24,7 +24,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../GruposCnaeService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.service.impl.GruposCnaeServiceImpl
-	c68732 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.GruposCnaeServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./GruposCnaeServiceImpl.html">
+	c91163 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.service.impl.GruposCnaeServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./GruposCnaeServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> GruposCnaeServiceImpl </td></tr>
 		</table></td></tr>
@@ -39,11 +39,11 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./GruposCnaeServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.arr.parametros.business.service.impl.GruposCnaeServiceImpl extends br.gov.to.sefaz.business.service.impl.DefaultCrudService<br.gov.to.sefaz.arr.persistence.entity.GruposCnae, br.gov.to.sefaz.arr.persistence.entity.GruposCnaePK>
-	c69016:p -> c68732:p [dir=back,arrowtail=empty];
+	c91462:p -> c91163:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.parametros.business.service.impl.GruposCnaeServiceImpl implements br.gov.to.sefaz.arr.parametros.business.service.GruposCnaeService
-	c68705:p -> c68732:p [dir=back,arrowtail=empty,style=dashed];
+	c91136:p -> c91163:p [dir=back,arrowtail=empty,style=dashed];
 	// br.gov.to.sefaz.business.service.impl.DefaultCrudService<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c69016 [label=<<table title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/service/impl/DefaultCrudService.html">
+	c91462 [label=<<table title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/service/impl/DefaultCrudService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultCrudService&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
 		</table></td></tr>

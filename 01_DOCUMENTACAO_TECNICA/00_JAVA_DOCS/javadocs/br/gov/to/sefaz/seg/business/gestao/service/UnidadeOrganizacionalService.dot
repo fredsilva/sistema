@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.service.CrudService<E, I extends java.io.Serializable>
-	c872763 [label=<<table title="br.gov.to.sefaz.business.service.CrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../business/service/CrudService.html">
+	c1082154 [label=<<table title="br.gov.to.sefaz.business.service.CrudService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../business/service/CrudService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CrudService&lt;E, I extends Serializable&gt; </td></tr>
@@ -30,7 +30,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../../business/service/CrudService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.UnidadeOrganizacionalService
-	c872889 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.UnidadeOrganizacionalService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UnidadeOrganizacionalService.html">
+	c1082290 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.UnidadeOrganizacionalService" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./UnidadeOrganizacionalService.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> UnidadeOrganizacionalService </td></tr>
@@ -39,12 +39,13 @@ digraph G {
 <tr><td align="left" balign="left">  </td></tr>
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
-<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAll(filter : UnidadeOrganizacionalFilter) : List&lt;UnidadeOrganizacional&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findByFilter(filter : UnidadeOrganizacionalFilter) : List&lt;UnidadeOrganizacional&gt; </font></td></tr>
 <tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findTiposUnidades() : List&lt;TipoUnidade&gt; </font></td></tr>
+<tr><td align="left" balign="left"><font face="arial italic" point-size="10.0"> + findAllByTipoUnidade(characters : Character[]) : List&lt;UnidadeOrganizacional&gt; </font></td></tr>
 		</table></td></tr>
 		</table>>, URL="./UnidadeOrganizacionalService.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.business.gestao.service.impl.UnidadeOrganizacionalServiceImpl
-	c872924 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.UnidadeOrganizacionalServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/UnidadeOrganizacionalServiceImpl.html">
+	c1082325 [label=<<table title="br.gov.to.sefaz.seg.business.gestao.service.impl.UnidadeOrganizacionalServiceImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./impl/UnidadeOrganizacionalServiceImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UnidadeOrganizacionalServiceImpl </td></tr>
 		</table></td></tr>
@@ -53,16 +54,17 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + UnidadeOrganizacionalServiceImpl(repository : UnidadeOrganizacionalRepository, parametroGeralService : ParametroGeralService) </td></tr>
-<tr><td align="left" balign="left"> + findAll(filter : UnidadeOrganizacionalFilter) : List&lt;UnidadeOrganizacional&gt; </td></tr>
+<tr><td align="left" balign="left"> + findByFilter(filter : UnidadeOrganizacionalFilter) : List&lt;UnidadeOrganizacional&gt; </td></tr>
 <tr><td align="left" balign="left"> + save(entity : UnidadeOrganizacional) : UnidadeOrganizacional </td></tr>
 <tr><td align="left" balign="left"> + update(entity : UnidadeOrganizacional) : UnidadeOrganizacional </td></tr>
 <tr><td align="left" balign="left"> + delete(id : Long) : Optional&lt;UnidadeOrganizacional&gt; </td></tr>
 <tr><td align="left" balign="left"> + findTiposUnidades() : List&lt;TipoUnidade&gt; </td></tr>
+<tr><td align="left" balign="left"> + findAllByTipoUnidade(characters : Character[]) : List&lt;UnidadeOrganizacional&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="./impl/UnidadeOrganizacionalServiceImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.business.gestao.service.UnidadeOrganizacionalService implements br.gov.to.sefaz.business.service.CrudService<E, I extends java.io.Serializable>
-	c872763:p -> c872889:p [dir=back,arrowtail=empty,style=dashed];
+	c1082154:p -> c1082290:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.seg.business.gestao.service.impl.UnidadeOrganizacionalServiceImpl implements br.gov.to.sefaz.seg.business.gestao.service.UnidadeOrganizacionalService
-	c872889:p -> c872924:p [dir=back,arrowtail=empty,style=dashed];
+	c1082290:p -> c1082325:p [dir=back,arrowtail=empty,style=dashed];
 }
 

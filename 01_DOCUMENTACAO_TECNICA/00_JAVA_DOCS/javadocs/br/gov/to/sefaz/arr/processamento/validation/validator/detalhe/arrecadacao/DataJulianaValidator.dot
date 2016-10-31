@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.arr.processamento.validation.validator.detalhe.arrecadacao.DataJulianaValidator
-	c363506 [label=<<table title="br.gov.to.sefaz.arr.processamento.validation.validator.detalhe.arrecadacao.DataJulianaValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DataJulianaValidator.html">
+	c464572 [label=<<table title="br.gov.to.sefaz.arr.processamento.validation.validator.detalhe.arrecadacao.DataJulianaValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DataJulianaValidator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DataJulianaValidator </td></tr>
 		</table></td></tr>
@@ -24,7 +24,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./DataJulianaValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.processamento.validation.validator.detalhe.DetalheValidator
-	c363511 [label=<<table title="br.gov.to.sefaz.arr.processamento.validation.validator.detalhe.DetalheValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../DetalheValidator.html">
+	c464577 [label=<<table title="br.gov.to.sefaz.arr.processamento.validation.validator.detalhe.DetalheValidator" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../DetalheValidator.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> DetalheValidator </td></tr>
@@ -38,6 +38,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../DetalheValidator.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.arr.processamento.validation.validator.detalhe.arrecadacao.DataJulianaValidator implements br.gov.to.sefaz.arr.processamento.validation.validator.detalhe.DetalheValidator
-	c363511:p -> c363506:p [dir=back,arrowtail=empty,style=dashed];
+	c464577:p -> c464572:p [dir=back,arrowtail=empty,style=dashed];
 }
 

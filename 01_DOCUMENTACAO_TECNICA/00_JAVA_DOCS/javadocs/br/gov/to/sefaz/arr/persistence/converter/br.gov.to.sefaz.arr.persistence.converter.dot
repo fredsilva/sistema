@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.arr.persistence.converter.TipoValorInformativoEnumConverter
-	c128475 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.TipoValorInformativoEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoValorInformativoEnumConverter.html">
+	c156157 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.TipoValorInformativoEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoValorInformativoEnumConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoValorInformativoEnumConverter </td></tr>
 		</table></td></tr>
@@ -24,7 +24,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoValorInformativoEnumConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.converter.TipoRepasseEnumConverter
-	c128476 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.TipoRepasseEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoRepasseEnumConverter.html">
+	c156158 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.TipoRepasseEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoRepasseEnumConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoRepasseEnumConverter </td></tr>
 		</table></td></tr>
@@ -38,7 +38,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoRepasseEnumConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.converter.TipoRecolhimentoStrEnumConverter
-	c128477 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.TipoRecolhimentoStrEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoRecolhimentoStrEnumConverter.html">
+	c156159 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.TipoRecolhimentoStrEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoRecolhimentoStrEnumConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoRecolhimentoStrEnumConverter </td></tr>
 		</table></td></tr>
@@ -52,7 +52,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoRecolhimentoStrEnumConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.converter.TipoReceitaStrEnumConverter
-	c128478 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.TipoReceitaStrEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoReceitaStrEnumConverter.html">
+	c156160 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.TipoReceitaStrEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoReceitaStrEnumConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoReceitaStrEnumConverter </td></tr>
 		</table></td></tr>
@@ -66,7 +66,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoReceitaStrEnumConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.converter.TipoReceitaEnumConverter
-	c128479 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.TipoReceitaEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoReceitaEnumConverter.html">
+	c156161 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.TipoReceitaEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoReceitaEnumConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoReceitaEnumConverter </td></tr>
 		</table></td></tr>
@@ -80,7 +80,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoReceitaEnumConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.converter.TipoPessoaEnumConverter
-	c128480 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.TipoPessoaEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoPessoaEnumConverter.html">
+	c156162 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.TipoPessoaEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoPessoaEnumConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoPessoaEnumConverter </td></tr>
 		</table></td></tr>
@@ -89,12 +89,12 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + TipoPessoaEnumConverter() </td></tr>
-<tr><td align="left" balign="left"> + convertToDatabaseColumn(attribute : TipoPessoaEnum) : Integer </td></tr>
+<tr><td align="left" balign="left"> + convertToDatabaseColumn(tipoPessoa : TipoPessoaEnum) : Integer </td></tr>
 <tr><td align="left" balign="left"> + convertToEntityAttribute(dbData : Integer) : TipoPessoaEnum </td></tr>
 		</table></td></tr>
 		</table>>, URL="./TipoPessoaEnumConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.converter.TipoPedidoCampoEnumConverter
-	c128481 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.TipoPedidoCampoEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoPedidoCampoEnumConverter.html">
+	c156163 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.TipoPedidoCampoEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoPedidoCampoEnumConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoPedidoCampoEnumConverter </td></tr>
 		</table></td></tr>
@@ -108,7 +108,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoPedidoCampoEnumConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.converter.TipoPedidoAcoesEnumConverter
-	c128482 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.TipoPedidoAcoesEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoPedidoAcoesEnumConverter.html">
+	c156164 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.TipoPedidoAcoesEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoPedidoAcoesEnumConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoPedidoAcoesEnumConverter </td></tr>
 		</table></td></tr>
@@ -122,7 +122,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoPedidoAcoesEnumConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.converter.TipoLotePagosArrecEnumConverter
-	c128483 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.TipoLotePagosArrecEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoLotePagosArrecEnumConverter.html">
+	c156165 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.TipoLotePagosArrecEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoLotePagosArrecEnumConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoLotePagosArrecEnumConverter </td></tr>
 		</table></td></tr>
@@ -136,7 +136,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoLotePagosArrecEnumConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.converter.TipoConvenioEnumConverter
-	c128484 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.TipoConvenioEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoConvenioEnumConverter.html">
+	c156166 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.TipoConvenioEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoConvenioEnumConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoConvenioEnumConverter </td></tr>
 		</table></td></tr>
@@ -150,7 +150,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoConvenioEnumConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.converter.TipoContaEnumConverter
-	c128485 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.TipoContaEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoContaEnumConverter.html">
+	c156167 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.TipoContaEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoContaEnumConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoContaEnumConverter </td></tr>
 		</table></td></tr>
@@ -164,7 +164,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoContaEnumConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.converter.TipoCodigoBarraEnumConverter
-	c128486 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.TipoCodigoBarraEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoCodigoBarraEnumConverter.html">
+	c156168 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.TipoCodigoBarraEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoCodigoBarraEnumConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoCodigoBarraEnumConverter </td></tr>
 		</table></td></tr>
@@ -178,7 +178,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoCodigoBarraEnumConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.converter.TipoArquivoEnumConverter
-	c128487 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.TipoArquivoEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoArquivoEnumConverter.html">
+	c156169 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.TipoArquivoEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoArquivoEnumConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoArquivoEnumConverter </td></tr>
 		</table></td></tr>
@@ -192,7 +192,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoArquivoEnumConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.converter.SituacaoProcessamentoStrEnumConverter
-	c128488 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.SituacaoProcessamentoStrEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SituacaoProcessamentoStrEnumConverter.html">
+	c156170 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.SituacaoProcessamentoStrEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SituacaoProcessamentoStrEnumConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SituacaoProcessamentoStrEnumConverter </td></tr>
 		</table></td></tr>
@@ -205,8 +205,22 @@ digraph G {
 <tr><td align="left" balign="left"> + convertToEntityAttribute(id : Integer) : SituacaoProcessamentoStrEnum </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SituacaoProcessamentoStrEnumConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.arr.persistence.converter.SituacaoContaCorrenteEnumConverter
+	c156171 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.SituacaoContaCorrenteEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SituacaoContaCorrenteEnumConverter.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> SituacaoContaCorrenteEnumConverter </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + SituacaoContaCorrenteEnumConverter() </td></tr>
+<tr><td align="left" balign="left"> + convertToDatabaseColumn(situacaoContaCorrente : SituacaoContaCorrenteEnum) : Integer </td></tr>
+<tr><td align="left" balign="left"> + convertToEntityAttribute(code : Integer) : SituacaoContaCorrenteEnum </td></tr>
+		</table></td></tr>
+		</table>>, URL="./SituacaoContaCorrenteEnumConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.converter.SituacaoConciliacaoConverter
-	c128489 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.SituacaoConciliacaoConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SituacaoConciliacaoConverter.html">
+	c156172 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.SituacaoConciliacaoConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SituacaoConciliacaoConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SituacaoConciliacaoConverter </td></tr>
 		</table></td></tr>
@@ -220,7 +234,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./SituacaoConciliacaoConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.converter.SituacaoArquivoEnumConverter
-	c128490 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.SituacaoArquivoEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SituacaoArquivoEnumConverter.html">
+	c156173 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.SituacaoArquivoEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./SituacaoArquivoEnumConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SituacaoArquivoEnumConverter </td></tr>
 		</table></td></tr>
@@ -233,8 +247,22 @@ digraph G {
 <tr><td align="left" balign="left"> + convertToEntityAttribute(code : Integer) : SituacaoArquivoEnum </td></tr>
 		</table></td></tr>
 		</table>>, URL="./SituacaoArquivoEnumConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.arr.persistence.converter.OrigemDebitoEnumConverter
+	c156174 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.OrigemDebitoEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./OrigemDebitoEnumConverter.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> OrigemDebitoEnumConverter </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + OrigemDebitoEnumConverter() </td></tr>
+<tr><td align="left" balign="left"> + convertToDatabaseColumn(origemDebitoEnum : OrigemDebitoEnum) : Integer </td></tr>
+<tr><td align="left" balign="left"> + convertToEntityAttribute(id : Integer) : OrigemDebitoEnum </td></tr>
+		</table></td></tr>
+		</table>>, URL="./OrigemDebitoEnumConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.converter.FormaPagamentoEnumConverter
-	c128491 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.FormaPagamentoEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FormaPagamentoEnumConverter.html">
+	c156175 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.FormaPagamentoEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FormaPagamentoEnumConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> FormaPagamentoEnumConverter </td></tr>
 		</table></td></tr>
@@ -248,7 +276,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./FormaPagamentoEnumConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.converter.FileTypeEnumConverter
-	c128492 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.FileTypeEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FileTypeEnumConverter.html">
+	c156176 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.FileTypeEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FileTypeEnumConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> FileTypeEnumConverter </td></tr>
 		</table></td></tr>
@@ -262,7 +290,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./FileTypeEnumConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.converter.EstadoLoteEnumConverter
-	c128493 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.EstadoLoteEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EstadoLoteEnumConverter.html">
+	c156177 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.EstadoLoteEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EstadoLoteEnumConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> EstadoLoteEnumConverter </td></tr>
 		</table></td></tr>
@@ -276,7 +304,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./EstadoLoteEnumConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.converter.ClassificacaoReceitaEnumConverter
-	c128494 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.ClassificacaoReceitaEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ClassificacaoReceitaEnumConverter.html">
+	c156178 [label=<<table title="br.gov.to.sefaz.arr.persistence.converter.ClassificacaoReceitaEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ClassificacaoReceitaEnumConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ClassificacaoReceitaEnumConverter </td></tr>
 		</table></td></tr>

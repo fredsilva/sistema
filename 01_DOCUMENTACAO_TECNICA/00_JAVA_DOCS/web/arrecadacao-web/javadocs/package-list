@@ -1,3 +1,11 @@
 br.gov.to.sefaz.arr.configuration
+br.gov.to.sefaz.arr.parametros.controller
+br.gov.to.sefaz.arr.parametros.controller.rest
 br.gov.to.sefaz.arr.parametros.managedbean
+br.gov.to.sefaz.arr.parametros.managedbean.converter
+br.gov.to.sefaz.arr.parametros.managedbean.helper
+br.gov.to.sefaz.arr.parametros.managedbean.mapper
+br.gov.to.sefaz.arr.parametros.managedbean.validator
 br.gov.to.sefaz.arr.parametros.managedbean.viewbean
+br.gov.to.sefaz.arr.parametros.managedbean.viewbean.dare
+br.gov.to.sefaz.arr.parametros.managedbean.viewbean.dare.validator

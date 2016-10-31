@@ -1,5 +1,6 @@
 package br.gov.to.sefaz.arr.processamento.creator;
 
+import br.gov.to.sefaz.arr.dare.service.DareDetalheService;
 import br.gov.to.sefaz.arr.persistence.entity.ArquivoDetalhePagos;
 import br.gov.to.sefaz.arr.persistence.entity.Dare;
 import br.gov.to.sefaz.arr.persistence.entity.DareDetalhe;
@@ -9,7 +10,6 @@ import br.gov.to.sefaz.arr.persistence.enums.SituacaoDareEnum;
 import br.gov.to.sefaz.arr.persistence.enums.TipoCodigoBarraEnum;
 import br.gov.to.sefaz.arr.persistence.enums.TipoPessoaEnum;
 import br.gov.to.sefaz.arr.processamento.domain.detalhe.arrecadacao.FileDetalheArrec;
-import br.gov.to.sefaz.arr.processamento.service.DareDetalheService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -145,7 +145,7 @@ public class PagosArrecCreator {
                 : dareDetalhe.getValorTaxa();
 
         PagosArrec pagosArrec = new PagosArrec(idBdarTpar, ordemLote, dareDetalhe.getIdReceita(), ID_REPASSE,
-                idDetalheArquivo, idPessoa, TipoPessoaEnum.getValue(dare.getTipoPessoa()),
+                idDetalheArquivo, idPessoa, dare.getTipoPessoa(),
                 dataPagamento, valorTotal, valorImposto, valorMulta, valorJuros, valorCorrecaoMonetaria,
                 valorTaxa, tipoDare, ORIGEM_DARE, SITUACAO_DARE, dataTransacao, numeroSequencial);
         pagosArrec.setIdMunicipioDare(dareDetalhe.getIdMunicipio());

@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.presentation.managedbean.CrudMB<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c370166 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.CrudMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../CrudMB.html">
+	c485570 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.CrudMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../CrudMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> CrudMB&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
@@ -29,7 +29,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../CrudMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.presentation.managedbean.AutowiredMB
-	c370168 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.AutowiredMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../AutowiredMB.html">
+	c485572 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.AutowiredMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../AutowiredMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AutowiredMB </td></tr>
 		</table></td></tr>
@@ -42,7 +42,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../AutowiredMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c370176 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DefaultCrudMB.html">
+	c485580 [label=<<table title="br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./DefaultCrudMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultCrudMB&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
 		</table></td></tr>
@@ -62,7 +62,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./DefaultCrudMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.UsuarioSistemaMB
-	c370549 [label=<<table title="br.gov.to.sefaz.seg.managedbean.UsuarioSistemaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/managedbean/UsuarioSistemaMB.html">
+	c485992 [label=<<table title="br.gov.to.sefaz.seg.managedbean.UsuarioSistemaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/managedbean/UsuarioSistemaMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UsuarioSistemaMB </td></tr>
 		</table></td></tr>
@@ -86,7 +86,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../seg/managedbean/UsuarioSistemaMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.UsuarioPrincipalEmpresaMB
-	c370550 [label=<<table title="br.gov.to.sefaz.seg.managedbean.UsuarioPrincipalEmpresaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/managedbean/UsuarioPrincipalEmpresaMB.html">
+	c485993 [label=<<table title="br.gov.to.sefaz.seg.managedbean.UsuarioPrincipalEmpresaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/managedbean/UsuarioPrincipalEmpresaMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UsuarioPrincipalEmpresaMB </td></tr>
 		</table></td></tr>
@@ -101,7 +101,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../seg/managedbean/UsuarioPrincipalEmpresaMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.UnidadeOrganizacionalMB
-	c370551 [label=<<table title="br.gov.to.sefaz.seg.managedbean.UnidadeOrganizacionalMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/managedbean/UnidadeOrganizacionalMB.html">
+	c485994 [label=<<table title="br.gov.to.sefaz.seg.managedbean.UnidadeOrganizacionalMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/managedbean/UnidadeOrganizacionalMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UnidadeOrganizacionalMB </td></tr>
 		</table></td></tr>
@@ -119,7 +119,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../seg/managedbean/UnidadeOrganizacionalMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.PostoTrabalhoMB
-	c370555 [label=<<table title="br.gov.to.sefaz.seg.managedbean.PostoTrabalhoMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/managedbean/PostoTrabalhoMB.html">
+	c485998 [label=<<table title="br.gov.to.sefaz.seg.managedbean.PostoTrabalhoMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/managedbean/PostoTrabalhoMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PostoTrabalhoMB </td></tr>
 		</table></td></tr>
@@ -137,7 +137,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../seg/managedbean/PostoTrabalhoMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.PerfilSistemaMB
-	c370556 [label=<<table title="br.gov.to.sefaz.seg.managedbean.PerfilSistemaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/managedbean/PerfilSistemaMB.html">
+	c485999 [label=<<table title="br.gov.to.sefaz.seg.managedbean.PerfilSistemaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/managedbean/PerfilSistemaMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PerfilSistemaMB </td></tr>
 		</table></td></tr>
@@ -170,7 +170,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../seg/managedbean/PerfilSistemaMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.PapelSistemaMB
-	c370557 [label=<<table title="br.gov.to.sefaz.seg.managedbean.PapelSistemaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/managedbean/PapelSistemaMB.html">
+	c486000 [label=<<table title="br.gov.to.sefaz.seg.managedbean.PapelSistemaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/managedbean/PapelSistemaMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PapelSistemaMB </td></tr>
 		</table></td></tr>
@@ -201,7 +201,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../seg/managedbean/PapelSistemaMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.ModuloSistemaMB
-	c370558 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ModuloSistemaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/managedbean/ModuloSistemaMB.html">
+	c486001 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ModuloSistemaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/managedbean/ModuloSistemaMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ModuloSistemaMB </td></tr>
 		</table></td></tr>
@@ -215,7 +215,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../seg/managedbean/ModuloSistemaMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.ManutencaoCadastroFuncionalidadeMB
-	c370559 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ManutencaoCadastroFuncionalidadeMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/managedbean/ManutencaoCadastroFuncionalidadeMB.html">
+	c486002 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ManutencaoCadastroFuncionalidadeMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/managedbean/ManutencaoCadastroFuncionalidadeMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ManutencaoCadastroFuncionalidadeMB </td></tr>
 		</table></td></tr>
@@ -241,7 +241,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../seg/managedbean/ManutencaoCadastroFuncionalidadeMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.ManterUsuarioSistemaMB
-	c370560 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ManterUsuarioSistemaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/managedbean/ManterUsuarioSistemaMB.html">
+	c486003 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ManterUsuarioSistemaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/managedbean/ManterUsuarioSistemaMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ManterUsuarioSistemaMB </td></tr>
 		</table></td></tr>
@@ -260,8 +260,6 @@ digraph G {
 <tr><td align="left" balign="left"> + getAllUnidadeOrganizacionais() : Collection&lt;UnidadeOrganizacional&gt; </td></tr>
 <tr><td align="left" balign="left"> + loadAllUnidadeOrganizacionais() </td></tr>
 <tr><td align="left" balign="left"> + getAllPostoTrabalho() : Collection&lt;PostoTrabalho&gt; </td></tr>
-<tr><td align="left" balign="left"> + updateUser() </td></tr>
-<tr><td align="left" balign="left"> + createUser() </td></tr>
 <tr><td align="left" balign="left"> + getEstados() : Collection&lt;Estado&gt; </td></tr>
 <tr><td align="left" balign="left"> + getMunicipios() : Collection&lt;Municipio&gt; </td></tr>
 <tr><td align="left" balign="left"> + getTipoUsuarios() : Collection&lt;TipoUsuario&gt; </td></tr>
@@ -271,7 +269,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../seg/managedbean/ManterUsuarioSistemaMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.ManterProcuracaoMB
-	c370561 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ManterProcuracaoMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/managedbean/ManterProcuracaoMB.html">
+	c486004 [label=<<table title="br.gov.to.sefaz.seg.managedbean.ManterProcuracaoMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/managedbean/ManterProcuracaoMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ManterProcuracaoMB </td></tr>
 		</table></td></tr>
@@ -291,11 +289,12 @@ digraph G {
 <tr><td align="left" balign="left"> + setIdentificacaoOpcaoApplicacao(identificacaoOpcaoApplicacao : Long) </td></tr>
 <tr><td align="left" balign="left"> + getIdentificacaoOpcaoApplicacao() : Long </td></tr>
 <tr><td align="left" balign="left"> + toggleOpcaoAplicacao() </td></tr>
+<tr><td align="left" balign="left"> + clearDto() </td></tr>
 <tr><td align="left" balign="left"> + save() </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../seg/managedbean/ManterProcuracaoMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.CadastroSenhaMB
-	c370569 [label=<<table title="br.gov.to.sefaz.seg.managedbean.CadastroSenhaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/managedbean/CadastroSenhaMB.html">
+	c486012 [label=<<table title="br.gov.to.sefaz.seg.managedbean.CadastroSenhaMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/managedbean/CadastroSenhaMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CadastroSenhaMB </td></tr>
 		</table></td></tr>
@@ -315,7 +314,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../seg/managedbean/CadastroSenhaMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.AtribuirPerfilMB
-	c370570 [label=<<table title="br.gov.to.sefaz.seg.managedbean.AtribuirPerfilMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/managedbean/AtribuirPerfilMB.html">
+	c486013 [label=<<table title="br.gov.to.sefaz.seg.managedbean.AtribuirPerfilMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/managedbean/AtribuirPerfilMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AtribuirPerfilMB </td></tr>
 		</table></td></tr>
@@ -344,7 +343,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../seg/managedbean/AtribuirPerfilMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.managedbean.AtivarInativarPerfilMB
-	c370571 [label=<<table title="br.gov.to.sefaz.seg.managedbean.AtivarInativarPerfilMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/managedbean/AtivarInativarPerfilMB.html">
+	c486014 [label=<<table title="br.gov.to.sefaz.seg.managedbean.AtivarInativarPerfilMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../seg/managedbean/AtivarInativarPerfilMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AtivarInativarPerfilMB </td></tr>
 		</table></td></tr>
@@ -371,7 +370,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../seg/managedbean/AtivarInativarPerfilMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.par.managebean.ParametroGeralMB
-	c370583 [label=<<table title="br.gov.to.sefaz.par.managebean.ParametroGeralMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../par/managebean/ParametroGeralMB.html">
+	c486026 [label=<<table title="br.gov.to.sefaz.par.managebean.ParametroGeralMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../par/managebean/ParametroGeralMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ParametroGeralMB </td></tr>
 		</table></td></tr>
@@ -388,7 +387,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../par/managebean/ParametroGeralMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.managedbean.TipoRejeicaoArquivosMB
-	c370585 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.TipoRejeicaoArquivosMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/managedbean/TipoRejeicaoArquivosMB.html">
+	c486030 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.TipoRejeicaoArquivosMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/managedbean/TipoRejeicaoArquivosMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoRejeicaoArquivosMB </td></tr>
 		</table></td></tr>
@@ -401,7 +400,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../arr/parametros/managedbean/TipoRejeicaoArquivosMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.managedbean.TipoGruposCnaesMB
-	c370586 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.TipoGruposCnaesMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/managedbean/TipoGruposCnaesMB.html">
+	c486031 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.TipoGruposCnaesMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/managedbean/TipoGruposCnaesMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoGruposCnaesMB </td></tr>
 		</table></td></tr>
@@ -427,7 +426,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../arr/parametros/managedbean/TipoGruposCnaesMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.managedbean.ReceitasMB
-	c370587 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.ReceitasMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/managedbean/ReceitasMB.html">
+	c486032 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.ReceitasMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/managedbean/ReceitasMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ReceitasMB </td></tr>
 		</table></td></tr>
@@ -456,7 +455,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../arr/parametros/managedbean/ReceitasMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.managedbean.PlanoContasMB
-	c370588 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.PlanoContasMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/managedbean/PlanoContasMB.html">
+	c486033 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.PlanoContasMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/managedbean/PlanoContasMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PlanoContasMB </td></tr>
 		</table></td></tr>
@@ -472,7 +471,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../arr/parametros/managedbean/PlanoContasMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.managedbean.PedidoTiposMB
-	c370589 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.PedidoTiposMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/managedbean/PedidoTiposMB.html">
+	c486034 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.PedidoTiposMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/managedbean/PedidoTiposMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoTiposMB </td></tr>
 		</table></td></tr>
@@ -507,7 +506,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../arr/parametros/managedbean/PedidoTiposMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.managedbean.PedidoAreasMB
-	c370590 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.PedidoAreasMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/managedbean/PedidoAreasMB.html">
+	c486035 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.PedidoAreasMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/managedbean/PedidoAreasMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoAreasMB </td></tr>
 		</table></td></tr>
@@ -545,8 +544,62 @@ digraph G {
 <tr><td align="left" balign="left"> + searchServidor() </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../arr/parametros/managedbean/PedidoAreasMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.arr.parametros.managedbean.DareMB
+	c486037 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.DareMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/managedbean/DareMB.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> DareMB </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + DareMB() </td></tr>
+<tr><td align="left" balign="left"> + init() </td></tr>
+<tr><td align="left" balign="left"> + save() </td></tr>
+<tr><td align="left" balign="left"> + clearDtos() </td></tr>
+<tr><td align="left" balign="left"> + clearViewBeans() </td></tr>
+<tr><td align="left" balign="left"> + loadMunicipiosOperacao() </td></tr>
+<tr><td align="left" balign="left"> + getEstadoMunicipioOperacao() : EstadoMunicipioViewUtil </td></tr>
+<tr><td align="left" balign="left"> + getDareViewBean() : DareEViewBean </td></tr>
+<tr><td align="left" balign="left"> + getDadosPagamentoController() : DareDadosPagamentoController </td></tr>
+<tr><td align="left" balign="left"> + getInstituicoes() : List&lt;UnidadeOrganizacional&gt; </td></tr>
+<tr><td align="left" balign="left"> + getTipoContribuintes() : List&lt;TipoContribuinteEnum&gt; </td></tr>
+<tr><td align="left" balign="left"> + getTiposPessoa() : List&lt;TipoPessoaEnum&gt; </td></tr>
+<tr><td align="left" balign="left"> + isTipoPessoaCpf() : boolean </td></tr>
+<tr><td align="left" balign="left"> + isTipoPessoaCnpj() : boolean </td></tr>
+<tr><td align="left" balign="left"> + isTipoPessoaRenavamOrInscricaoEstadual() : boolean </td></tr>
+<tr><td align="left" balign="left"> + isTipoContribuinteNaoContribuinte() : boolean </td></tr>
+<tr><td align="left" balign="left"> + searchContribuinte() </td></tr>
+<tr><td align="left" balign="left"> + clearContribuintesFields() </td></tr>
+<tr><td align="left" balign="left"> + getTipoImpostos() : List&lt;TipoImpostoEnum&gt; </td></tr>
+<tr><td align="left" balign="left"> + getOrigemDebitos() : List&lt;OrigemDebitoEnum&gt; </td></tr>
+<tr><td align="left" balign="left"> + resetOrigemDebito() </td></tr>
+<tr><td align="left" balign="left"> + loadDadosPagamento() </td></tr>
+<tr><td align="left" balign="left"> + isDebitoComPagamentoParcial() : boolean </td></tr>
+<tr><td align="left" balign="left"> + isDebitoSemPagamentoParcial() : boolean </td></tr>
+<tr><td align="left" balign="left"> + isDebitoIpva() : boolean </td></tr>
+<tr><td align="left" balign="left"> + isDebitoIcms() : boolean </td></tr>
+<tr><td align="left" balign="left"> + isDebitoDiverso() : boolean </td></tr>
+<tr><td align="left" balign="left"> + addPagamentoToDarePagamentoList() </td></tr>
+<tr><td align="left" balign="left"> + removePagamento() </td></tr>
+<tr><td align="left" balign="left"> + getTableDebitoCC() : List&lt;DareEPagamento&gt; </td></tr>
+<tr><td align="left" balign="left"> + addDebitoToSelectedList() </td></tr>
+<tr><td align="left" balign="left"> + removeDebitosFromSelectedList() </td></tr>
+<tr><td align="left" balign="left"> + addAllDebitosToSelectedList() </td></tr>
+<tr><td align="left" balign="left"> + removeAllDebitosFromSelectedList() </td></tr>
+<tr><td align="left" balign="left"> + getDebitosSelectedListSize() : Integer </td></tr>
+<tr><td align="left" balign="left"> + searchDocumentoSemPagamentoParcial() </td></tr>
+<tr><td align="left" balign="left"> + searchDebitoIpvaByAnoReferencia() </td></tr>
+<tr><td align="left" balign="left"> + searchDocumentoComPagamentoParcial() </td></tr>
+<tr><td align="left" balign="left"> + getReceitasComPagamentoParcial() : Collection&lt;Receitas&gt; </td></tr>
+<tr><td align="left" balign="left"> + loadSubCodigos() </td></tr>
+<tr><td align="left" balign="left"> + abrirPaginaImpressao() </td></tr>
+<tr><td align="left" balign="left"> + getDareEmailHelper() : DareEmailHelper </td></tr>
+<tr><td align="left" balign="left"> + sendDareEmail() </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../../arr/parametros/managedbean/DareMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.managedbean.ConveniosArrecMB
-	c370592 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.ConveniosArrecMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/managedbean/ConveniosArrecMB.html">
+	c486038 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.ConveniosArrecMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/managedbean/ConveniosArrecMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ConveniosArrecMB </td></tr>
 		</table></td></tr>
@@ -576,7 +629,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../arr/parametros/managedbean/ConveniosArrecMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.managedbean.BancosMB
-	c370593 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.BancosMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/managedbean/BancosMB.html">
+	c486039 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.BancosMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/managedbean/BancosMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BancosMB </td></tr>
 		</table></td></tr>
@@ -589,7 +642,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../arr/parametros/managedbean/BancosMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.managedbean.BancoAgenciasMB
-	c370594 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.BancoAgenciasMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/managedbean/BancoAgenciasMB.html">
+	c486040 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.BancoAgenciasMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../arr/parametros/managedbean/BancoAgenciasMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BancoAgenciasMB </td></tr>
 		</table></td></tr>
@@ -613,54 +666,56 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../arr/parametros/managedbean/BancoAgenciasMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable> extends br.gov.to.sefaz.presentation.managedbean.AutowiredMB
-	c370168:p -> c370176:p [dir=back,arrowtail=empty];
+	c485572:p -> c485580:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable> implements br.gov.to.sefaz.presentation.managedbean.CrudMB<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c370166:p -> c370176:p [dir=back,arrowtail=empty,style=dashed];
+	c485570:p -> c485580:p [dir=back,arrowtail=empty,style=dashed];
 	//br.gov.to.sefaz.seg.managedbean.UsuarioSistemaMB extends br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema, java.lang.String>
-	c370176:p -> c370549:p [dir=back,arrowtail=empty];
+	c485580:p -> c485992:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.managedbean.UsuarioPrincipalEmpresaMB extends br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<br.gov.to.sefaz.seg.persistence.entity.UsuarioPrincipalEmpresa, java.lang.Long>
-	c370176:p -> c370550:p [dir=back,arrowtail=empty];
+	c485580:p -> c485993:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.managedbean.UnidadeOrganizacionalMB extends br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<br.gov.to.sefaz.seg.persistence.entity.UnidadeOrganizacional, java.lang.Long>
-	c370176:p -> c370551:p [dir=back,arrowtail=empty];
+	c485580:p -> c485994:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.managedbean.PostoTrabalhoMB extends br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<br.gov.to.sefaz.seg.persistence.entity.PostoTrabalho, java.lang.Integer>
-	c370176:p -> c370555:p [dir=back,arrowtail=empty];
+	c485580:p -> c485998:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.managedbean.PerfilSistemaMB extends br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<br.gov.to.sefaz.seg.persistence.entity.PerfilSistema, java.lang.Long>
-	c370176:p -> c370556:p [dir=back,arrowtail=empty];
+	c485580:p -> c485999:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.managedbean.PapelSistemaMB extends br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<br.gov.to.sefaz.seg.persistence.entity.PapelSistema, java.lang.Long>
-	c370176:p -> c370557:p [dir=back,arrowtail=empty];
+	c485580:p -> c486000:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.managedbean.ModuloSistemaMB extends br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<br.gov.to.sefaz.seg.persistence.entity.ModuloSistema, java.lang.Long>
-	c370176:p -> c370558:p [dir=back,arrowtail=empty];
+	c485580:p -> c486001:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.managedbean.ManutencaoCadastroFuncionalidadeMB extends br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<br.gov.to.sefaz.seg.persistence.entity.OpcaoAplicacao, java.lang.Long>
-	c370176:p -> c370559:p [dir=back,arrowtail=empty];
+	c485580:p -> c486002:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.managedbean.ManterUsuarioSistemaMB extends br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema, java.lang.String>
-	c370176:p -> c370560:p [dir=back,arrowtail=empty];
+	c485580:p -> c486003:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.managedbean.ManterProcuracaoMB extends br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<br.gov.to.sefaz.seg.persistence.entity.ProcuracaoUsuario, java.lang.Long>
-	c370176:p -> c370561:p [dir=back,arrowtail=empty];
+	c485580:p -> c486004:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.managedbean.CadastroSenhaMB extends br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema, java.lang.String>
-	c370176:p -> c370569:p [dir=back,arrowtail=empty];
+	c485580:p -> c486012:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.managedbean.AtribuirPerfilMB extends br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema, java.lang.String>
-	c370176:p -> c370570:p [dir=back,arrowtail=empty];
+	c485580:p -> c486013:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.managedbean.AtivarInativarPerfilMB extends br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<br.gov.to.sefaz.seg.persistence.entity.UsuarioPerfil, java.lang.Long>
-	c370176:p -> c370571:p [dir=back,arrowtail=empty];
+	c485580:p -> c486014:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.par.managebean.ParametroGeralMB extends br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<br.gov.to.sefaz.par.gestao.persistence.entity.ParametroGeral, java.lang.Integer>
-	c370176:p -> c370583:p [dir=back,arrowtail=empty];
+	c485580:p -> c486026:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.parametros.managedbean.TipoRejeicaoArquivosMB extends br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<br.gov.to.sefaz.arr.persistence.entity.TipoRejeicaoArquivos, java.lang.Integer>
-	c370176:p -> c370585:p [dir=back,arrowtail=empty];
+	c485580:p -> c486030:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.parametros.managedbean.TipoGruposCnaesMB extends br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<br.gov.to.sefaz.arr.persistence.entity.TipoGruposCnaes, java.lang.Integer>
-	c370176:p -> c370586:p [dir=back,arrowtail=empty];
+	c485580:p -> c486031:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.parametros.managedbean.ReceitasMB extends br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<br.gov.to.sefaz.arr.persistence.entity.Receitas, java.lang.Integer>
-	c370176:p -> c370587:p [dir=back,arrowtail=empty];
+	c485580:p -> c486032:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.parametros.managedbean.PlanoContasMB extends br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<br.gov.to.sefaz.arr.persistence.entity.PlanoContas, java.lang.Long>
-	c370176:p -> c370588:p [dir=back,arrowtail=empty];
+	c485580:p -> c486033:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.parametros.managedbean.PedidoTiposMB extends br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<br.gov.to.sefaz.arr.persistence.entity.PedidoTipos, java.lang.Integer>
-	c370176:p -> c370589:p [dir=back,arrowtail=empty];
+	c485580:p -> c486034:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.parametros.managedbean.PedidoAreasMB extends br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<br.gov.to.sefaz.arr.persistence.entity.PedidoAreas, java.lang.Integer>
-	c370176:p -> c370590:p [dir=back,arrowtail=empty];
+	c485580:p -> c486035:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.arr.parametros.managedbean.DareMB extends br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<br.gov.to.sefaz.arr.persistence.entity.Dare, java.lang.Long>
+	c485580:p -> c486037:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.parametros.managedbean.ConveniosArrecMB extends br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<br.gov.to.sefaz.arr.persistence.entity.ConveniosArrec, java.lang.Long>
-	c370176:p -> c370592:p [dir=back,arrowtail=empty];
+	c485580:p -> c486038:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.parametros.managedbean.BancosMB extends br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<br.gov.to.sefaz.arr.persistence.entity.Bancos, java.lang.Integer>
-	c370176:p -> c370593:p [dir=back,arrowtail=empty];
+	c485580:p -> c486039:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.parametros.managedbean.BancoAgenciasMB extends br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB<br.gov.to.sefaz.arr.persistence.entity.BancoAgencias, br.gov.to.sefaz.arr.persistence.entity.BancoAgenciasPK>
-	c370176:p -> c370594:p [dir=back,arrowtail=empty];
+	c485580:p -> c486040:p [dir=back,arrowtail=empty];
 }
 

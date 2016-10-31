@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.query.builder.hql.select.groupby.HqlHavingJunctionBuilder
-	c10056 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.select.groupby.HqlHavingJunctionBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./HqlHavingJunctionBuilder.html">
+	c10465 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.select.groupby.HqlHavingJunctionBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./HqlHavingJunctionBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HqlHavingJunctionBuilder </td></tr>
 		</table></td></tr>
@@ -24,7 +24,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./HqlHavingJunctionBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractJunctionBuilder<W extends br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractWhereBuilder<?, T, ?>, T>
-	c10094 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractJunctionBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../sql/where/AbstractJunctionBuilder.html">
+	c10503 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractJunctionBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../sql/where/AbstractJunctionBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> AbstractJunctionBuilder&lt;W extends AbstractWhereBuilder&lt;?, T, ?&gt;, T&gt; </font></td></tr>
 		</table></td></tr>
@@ -40,6 +40,6 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../../sql/where/AbstractJunctionBuilder.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.persistence.query.builder.hql.select.groupby.HqlHavingJunctionBuilder extends br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractJunctionBuilder<br.gov.to.sefaz.persistence.query.builder.hql.select.groupby.HqlHavingBuilder, br.gov.to.sefaz.persistence.query.builder.hql.select.HqlSelectBuilder>
-	c10094:p -> c10056:p [dir=back,arrowtail=empty];
+	c10503:p -> c10465:p [dir=back,arrowtail=empty];
 }
 

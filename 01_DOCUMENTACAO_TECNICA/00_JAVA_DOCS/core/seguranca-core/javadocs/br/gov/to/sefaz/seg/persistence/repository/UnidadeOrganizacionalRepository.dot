@@ -21,6 +21,7 @@ digraph G {
 <tr><td align="left" balign="left"> + UnidadeOrganizacionalRepository() </td></tr>
 <tr><td align="left" balign="left"> + existsLockReferencePai(id : Long) : boolean </td></tr>
 <tr><td align="left" balign="left"> + existsLockReferencePostoTrabalho(id : Long) : boolean </td></tr>
+<tr><td align="left" balign="left"> + findOne(id : Long) : UnidadeOrganizacional </td></tr>
 		</table></td></tr>
 		</table>>, URL="./UnidadeOrganizacionalRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.seg.persistence.repository.UnidadeOrganizacionalRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.seg.persistence.entity.UnidadeOrganizacional, java.lang.Long>

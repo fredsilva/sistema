@@ -262,8 +262,6 @@ digraph G {
 <tr><td align="left" balign="left"> + getAllUnidadeOrganizacionais() : Collection&lt;UnidadeOrganizacional&gt; </td></tr>
 <tr><td align="left" balign="left"> + loadAllUnidadeOrganizacionais() </td></tr>
 <tr><td align="left" balign="left"> + getAllPostoTrabalho() : Collection&lt;PostoTrabalho&gt; </td></tr>
-<tr><td align="left" balign="left"> + updateUser() </td></tr>
-<tr><td align="left" balign="left"> + createUser() </td></tr>
 <tr><td align="left" balign="left"> + getEstados() : Collection&lt;Estado&gt; </td></tr>
 <tr><td align="left" balign="left"> + getMunicipios() : Collection&lt;Municipio&gt; </td></tr>
 <tr><td align="left" balign="left"> + getTipoUsuarios() : Collection&lt;TipoUsuario&gt; </td></tr>
@@ -293,6 +291,7 @@ digraph G {
 <tr><td align="left" balign="left"> + setIdentificacaoOpcaoApplicacao(identificacaoOpcaoApplicacao : Long) </td></tr>
 <tr><td align="left" balign="left"> + getIdentificacaoOpcaoApplicacao() : Long </td></tr>
 <tr><td align="left" balign="left"> + toggleOpcaoAplicacao() </td></tr>
+<tr><td align="left" balign="left"> + clearDto() </td></tr>
 <tr><td align="left" balign="left"> + save() </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ManterProcuracaoMB.html", fontname="arial", fontcolor="black", fontsize=10.0];

@@ -1,8 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node1_0" href="./UnexpectedErrorException.html" title="br.gov.to.sefaz.exception.UnexpectedErrorException" alt="" coords="43,197,449,308"/>
-<area shape="rect" id="node1" href="./UnexpectedErrorException.html" title="&lt;TABLE&gt;" alt="" coords="32,192,460,313"/>
-<area shape="rect" id="node2_1" href="./HandledSystemException.html" title="br.gov.to.sefaz.exception.HandledSystemException" alt="" coords="16,53,185,96"/>
-<area shape="rect" id="node2" href="./HandledSystemException.html" title="&lt;TABLE&gt;" alt="" coords="5,48,196,101"/>
-<area shape="rect" id="node3_2" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/RuntimeException.html" title="java.lang.RuntimeException" alt="" coords="231,11,551,139"/>
-<area shape="rect" id="node3" href="http://java.sun.com/j2se/1.4.2/docs/api/java/lang/RuntimeException.html" title="&lt;TABLE&gt;" alt="" coords="221,5,562,144"/>
-</map>

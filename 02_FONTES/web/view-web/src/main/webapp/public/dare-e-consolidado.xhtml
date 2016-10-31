@@ -1,0 +1,1297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:h="http://xmlns.jcp.org/jsf/html"
+        xmlns:ui="http://java.sun.com/jsf/facelets"
+        xmlns:f="http://java.sun.com/jsf/core"
+        xmlns:sat="http://sefaz.to.gov.br/composites"
+        xmlns:a4j="http://richfaces.org/a4j"
+        xmlns:p="http://xmlns.jcp.org/jsf/passthrough">
+
+<h:head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <title>DARE-e Consolidado</title>
+    <link href="#{pathResolverMB.cssPath('bootstrap.css')}" rel="stylesheet" type="text/css"/>
+    <link href="#{pathResolverMB.cssPath('sat.css')}" rel="stylesheet" type="text/css"/>
+    <link href="#{pathResolverMB.cssPath('jquery-ui.css')}" rel="stylesheet" type="text/css"/>
+    <style>
+        .ui-datepicker-calendar {
+            display: none;
+        }
+    </style>
+    <h:outputScript library="javax.faces" name="jsf.js"/>
+    <h:outputScript library="org.richfaces" name="jquery.js"/>
+    <h:outputScript library="org.richfaces" name="richfaces.js"/>
+    <h:outputScript library="org.richfaces" name="richfaces-queue.js"/>
+    <h:outputScript library="js" name="lib/bootstrap.min.js"/>
+    <h:outputScript library="js" name="lib/jasny-bootstrap.min.js"/>
+    <h:outputScript library="js" name="lib/jquery.dataTables.js"/>
+    <h:outputScript library="js" name="lib/dataTables.bootstrap4.js"/>
+    <h:outputScript library="js" name="lib/natural.js"/>
+    <h:outputScript library="js" name="lib/jquery-ui.js"/>
+    <h:outputScript library="js" name="lib/jquery.maskMoney.min.js"/>
+    <h:outputScript library="js" name="lib/jquery.mask.min.js"/>
+    <h:outputScript library="js" name="core/sat.js"/>
+    <h:outputScript library="js" name="core/sat.modals.js"/>
+    <h:outputScript library="js" name="core/sat.jsf.js"/>
+    <h:outputScript library="js" name="core/sat.forms.js"/>
+    <h:outputScript library="js" name="core/sat.dataTable.js"/>
+    <h:outputScript library="js" name="public/dare-e-consolidado.js"/>
+    <h:outputScript library="js" name="core/sat.date.js"/>
+</h:head>
+<body>
+<div class="col-md-12">
+    <h:form id="dare-eletronico-form">
+        <!--DARE GERADO-->
+        <fieldset class="scheduler-border form-group">
+            <legend class="red-text">#{arr_msg['arr.par.dareEletronicoConsolidado.dareGerado']}</legend>
+            <div class="row">
+                <h:outputLabel for="nossoNumero" styleClass="col-md-2">
+                    #{arr_msg['arr.par.dareEletronicoConsolidado.nossoNumero']}
+                </h:outputLabel>
+                <div class="form-group col-md-4">
+                    <h:inputText value="#{dareMB.dareViewBean.nossoNumero}"
+                            id="nossoNumero"
+                            styleClass="form-control"
+                            readonly="true"/>
+                </div>
+                <h:outputLabel for="dataHoraGeracao" styleClass="col-md-2">
+                    #{arr_msg['arr.par.dareEletronicoConsolidado.dataEHoraGeracao']}
+                </h:outputLabel>
+                <div class="form-group col-md-4">
+                    <h:inputText value="#{dareMB.dareViewBean.dataGeracao}"
+                            id="dataHoraGeracao"
+                            styleClass="form-control"
+                            readonly="true">
+                        <f:converter converterId="localDateTimeFacesConverter"/>
+                    </h:inputText>
+                </div>
+            </div>
+        </fieldset>
+
+        <!--Dados da Operação-->
+        <fieldset class="scheduler-border form-group">
+            <legend>#{arr_msg['arr.par.dareEletronicoConsolidado.dadosOperacao']}</legend>
+            <div class="row">
+                <h:outputLabel for="unidadeOrganizacional" styleClass="col-md-2">
+                    #{arr_msg['arr.par.dareEletronicoConsolidado.unidadeOrganizacional']}: *
+                </h:outputLabel>
+                <div class="form-group col-md-10">
+                    <h:selectOneMenu value="#{dareMB.dareViewBean.unidadeOrganizacional}"
+                            disabled="#{!dareMB.dareViewBean.listaPagamentos.isEmpty()}"
+                            id="unidadeOrganizacional"
+                            styleClass="form-control">
+                        <f:selectItem value="#{null}"
+                                itemLabel=""/>
+                        <f:selectItems value="#{dareMB.getInstituicoes()}"
+                                var="unidadeOrganizacional"
+                                itemValue="#{unidadeOrganizacional.identificacaoUnidOrganizac}"
+                                itemLabel="#{unidadeOrganizacional.getCodeLabel()}"/>
+                        <f:ajax render="tipoContribuintes tipoImposto"/>
+                    </h:selectOneMenu>
+                </div>
+                <h:outputLabel for="unidadeFederativa" styleClass="col-md-2">
+                    #{arr_msg['arr.par.dareEletronicoConsolidado.ufEmissora']}: *
+                </h:outputLabel>
+                <div class="form-group col-md-2">
+                    <h:selectOneMenu value="#{dareMB.dareViewBean.unidadeFederacao}"
+                            disabled="#{!dareMB.dareViewBean.listaPagamentos.isEmpty()}"
+                            id="unidadeFederativa"
+                            styleClass="form-control">
+                        <f:selectItem value="#{null}"
+                                itemLabel=""/>
+                        <f:selectItems value="#{dareMB.estadoMunicipioOperacao.getEstados()}"
+                                var="estado"
+                                itemValue="#{estado.unidadeFederacao}"
+                                itemLabel="#{estado.nomeEstado}"/>
+                        <f:ajax render="municipio"
+                                listener="#{dareMB.loadMunicipiosOperacao()}"/>
+                    </h:selectOneMenu>
+                </div>
+                <h:outputLabel for="municipio" styleClass="col-md-1 text-right text-nowrap">
+                    #{arr_msg['arr.par.dareEletronicoConsolidado.municipio']}: *
+                </h:outputLabel>
+                <div class="form-group col-md-7">
+                    <h:selectOneMenu value="#{dareMB.dareViewBean.municipio}"
+                            disabled="#{!dareMB.dareViewBean.listaPagamentos.isEmpty()}"
+                            id="municipio"
+                            styleClass="form-control">
+                        <f:selectItem value="#{null}"
+                                itemLabel=""/>
+                        <f:selectItems value="#{dareMB.estadoMunicipioOperacao.getMunicipios()}"
+                                var="municipio"
+                                itemValue="#{municipio.codigoIbge}"
+                                itemLabel="#{municipio.nomeMunicipio}"/>
+                        <f:ajax execute="municipio"/>
+                    </h:selectOneMenu>
+                </div>
+            </div>
+        </fieldset>
+
+        <!--Dados do Contribuinte-->
+        <fieldset class="scheduler-border form-group">
+            <legend>#{arr_msg['arr.par.dareEletronicoConsolidado.dadosContribuinte']}</legend>
+            <div class="row">
+                <h:outputLabel for="tipoContribuintes" styleClass="col-md-2">
+                    #{arr_msg['arr.par.dareEletronicoConsolidado.tipoContribuinte']}: *
+                </h:outputLabel>
+                <div class="form-group col-md-3">
+                    <h:selectOneMenu value="#{dareMB.dareViewBean.tipoContribuinte}"
+                            disabled="#{!dareMB.dareViewBean.listaPagamentos.isEmpty()}"
+                            id="tipoContribuintes"
+                            styleClass="form-control"
+                            onchange="clearContribuintesFields()">
+                        <f:selectItem value="#{null}"
+                                itemLabel=""/>
+                        <f:selectItems value="#{dareMB.getTipoContribuintes()}"
+                                var="tipoContribuinte"
+                                itemValue="#{tipoContribuinte}"
+                                itemLabel="#{tipoContribuinte.getCodeLabel()}"/>
+                        <f:ajax render="searchButton tipoPessoa"
+                                listener="#{dareMB.getTiposPessoa()}"/>
+                    </h:selectOneMenu>
+                </div>
+            </div>
+            <div class="row">
+                <h:outputLabel for="tipoPessoa" styleClass="col-md-2">
+                    #{arr_msg['arr.par.dareEletronicoConsolidado.tipoIdentificacao']}: *
+                </h:outputLabel>
+                <div class="form-group col-md-3">
+                    <h:selectOneMenu value="#{dareMB.dareViewBean.tipoPessoa}"
+                            disabled="#{!dareMB.dareViewBean.listaPagamentos.isEmpty()}"
+                            id="tipoPessoa"
+                            styleClass="form-control"
+                            onchange="clearContribuintesFields()">
+                        <f:selectItem value="#{null}"
+                                itemLabel=""/>
+                        <f:selectItems value="#{dareMB.getTiposPessoa()}"
+                                var="tipoIdentificacao"
+                                itemValue="#{tipoIdentificacao}"
+                                itemLabel="#{tipoIdentificacao.getCodeLabel()}"/>
+                        <f:ajax execute="@this" render="searchTipoIdentificacao"/>
+                    </h:selectOneMenu>
+                </div>
+                <div class="form-group col-md-3">
+                    <div class="input-group">
+                        <h:panelGroup id="searchTipoIdentificacao">
+                            <h:inputText rendered="#{dareMB.isTipoPessoaCpf()}"
+                                    value="#{dareMB.dareViewBean.idContribuinteFilter}"
+                                    id="idCpf"
+                                    disabled="#{!dareMB.dareViewBean.listaPagamentos.isEmpty()}"
+                                    styleClass="form-control justInteger" maxlength="14"
+                                    p:data-mask="999.999.999-99">
+                                <f:converter converterId="cpfFacesConverter"/>
+                                <f:ajax execute="@this"/>
+                            </h:inputText>
+                            <h:inputText rendered="#{dareMB.isTipoPessoaCnpj()}"
+                                    value="#{dareMB.dareViewBean.idContribuinteFilter}"
+                                    id="idCnpj"
+                                    disabled="#{!dareMB.dareViewBean.listaPagamentos.isEmpty()}"
+                                    styleClass="form-control justInteger" maxlength="18"
+                                    p:data-mask="99.999.999/9999-99">
+                                <f:converter converterId="cnpjFacesConverter"/>
+                                <f:ajax execute="@this"/>
+                            </h:inputText>
+                            <h:inputText rendered="#{dareMB.isTipoPessoaRenavamOrInscricaoEstadual()}"
+                                    value="#{dareMB.dareViewBean.idContribuinteFilter}"
+                                    id="idcontribuinte"
+                                    disabled="#{!dareMB.dareViewBean.listaPagamentos.isEmpty()}"
+                                    styleClass="form-control justInteger" maxlength="14">
+                                <f:ajax execute="@this"/>
+                            </h:inputText>
+                        </h:panelGroup>
+                        <h:panelGroup id="searchButton" class="input-group-btn">
+                            <h:commandLink rendered="#{!dareMB.tipoContribuinteNaoContribuinte}"
+                                    type="button" styleClass="btn btn-primary"
+                                    action="#{dareMB.searchContribuinte()}">
+                                <i class="glyphicon glyphicon-search"/>
+                                <f:ajax render="cpfCnpj nomeRazaoSocial"
+                                        execute="tipoContribuintes tipoPessoa searchTipoIdentificacao"/>
+                            </h:commandLink>
+                        </h:panelGroup>
+                    </div>
+                </div>
+                <h:outputLabel for="cpfCnpj" styleClass="col-md-1">
+                    #{arr_msg['arr.par.dareEletronicoConsolidado.cpfCnpj']}
+                </h:outputLabel>
+                <div class="form-group col-md-3">
+                    <h:inputText value="#{dareMB.dareViewBean.identificacaoPessoa}" id="cpfCnpj"
+                            styleClass="form-control" maxlength="18" readonly="true">
+                        <f:converter converterId="cpfCnpjFacesConverter"/>
+                    </h:inputText>
+                </div>
+            </div>
+            <div class="row">
+                <h:outputLabel for="nomeRazaoSocial" styleClass="col-md-2">
+                    #{arr_msg['arr.par.dareEletronicoConsolidado.nomeRazaoSocial']}:
+                </h:outputLabel>
+                <div class="form-group col-md-10">
+                    <h:inputText value="#{dareMB.dareViewBean.nomePessoa}"
+                            id="nomeRazaoSocial"
+                            styleClass="form-control"
+                            readonly="true"/>
+                </div>
+            </div>
+        </fieldset>
+
+        <!--Dados de Identificação do Pagamento-->
+        <fieldset class="scheduler-border form-group">
+            <legend>#{arr_msg['arr.par.dareEletronicoConsolidado.dadosIdentificacaoPagamento']}</legend>
+            <div class="row">
+                <h:outputLabel for="tipoImposto" styleClass="col-md-2">
+                    #{arr_msg['arr.par.dareEletronicoConsolidado.tipoImposto']}: *
+                </h:outputLabel>
+                <div class="form-group col-md-10">
+                    <h:selectOneMenu value="#{dareMB.dareViewBean.tipoImposto}"
+                            id="tipoImposto"
+                            valueChangeListener="#{dareMB.resetOrigemDebito()}"
+                            styleClass="form-control">
+                        <f:selectItem value="#{null}"
+                                itemLabel=""/>
+                        <f:selectItems value="#{dareMB.getTipoImpostos()}"
+                                var="tipoImposto"
+                                itemValue="#{tipoImposto}"
+                                itemLabel="#{tipoImposto.getCodeLabel()}"/>
+                        <f:ajax render="origemDebito dadosPagamento" listener="listenerOrigemDebitos()"/>
+                    </h:selectOneMenu>
+                    <a4j:jsFunction name="listenerOrigemDebitos"
+                            action="#{dareMB.getOrigemDebitos()}"
+                            render="origemDebito"
+                            oncomplete="#{dareMB.clearViewBeans()}">
+                    </a4j:jsFunction>
+                </div>
+            </div>
+            <div class="row">
+                <h:outputLabel for="origemDebito" styleClass="col-md-2">
+                    #{arr_msg['arr.par.dareEletronicoConsolidado.origemDebito']}: *
+                </h:outputLabel>
+                <div class="form-group col-md-8">
+                    <h:selectOneMenu value="#{dareMB.dareViewBean.origemDebito}"
+                            id="origemDebito"
+                            styleClass="form-control">
+                        <f:selectItem value="#{null}"
+                                itemLabel=""/>
+                        <f:selectItems value="#{dareMB.getOrigemDebitos()}"
+                                var="origemDebito"
+                                itemValue="#{origemDebito}"
+                                itemLabel="#{origemDebito.getCodeLabel()}"/>
+                        <f:ajax render="dadosPagamento" listener="#{dareMB.loadDadosPagamento()}"/>
+                    </h:selectOneMenu>
+                </div>
+            </div>
+        </fieldset>
+
+        <!--Dados do Pagamento-->
+        <fieldset class="scheduler-border form-group">
+            <legend>#{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamentoTipoImpostoOrigemDebito']}</legend>
+
+            <h:panelGroup id="dadosPagamento">
+                <!--Debito com Pagamento Parcial-->
+                <h:panelGroup rendered="#{dareMB.isDebitoComPagamentoParcial()}" id="debitosComPagamentoParcial">
+                    <div class="row form-group">
+                        <h:inputHidden
+                                value="#{dareMB.dadosPagamentoController.debitoPagamentoParcial.idContaCorrente}"
+                                id="debitoParcialIdContaCorrente"/>
+                        <h:outputLabel for="searchDocumentoComPgtoParcial" styleClass="col-md-2">
+                            #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.documento']}: *
+                        </h:outputLabel>
+                        <div class="col-md-3">
+                            <div class="input-group">
+                                <h:inputText
+                                        value="#{dareMB.dadosPagamentoController.debitoPagamentoParcial.idDocumento}"
+                                        id="searchDocumentoComPgtoParcial"
+                                        styleClass="form-control justInteger" maxlength="15"/>
+                                <span class="input-group-btn">
+                                <h:commandLink type="button" styleClass="btn btn-primary"
+                                        action="#{dareMB.searchDocumentoComPagamentoParcial()}"
+                                        id="searchDocumentoComPagamentoParcialBtn">
+                                    <i class="glyphicon glyphicon-search"/>
+                                    <f:ajax render="debitosComPagamentoParcial receita"
+                                            execute="searchTipoIdentificacao cpfCnpj searchDocumentoComPgtoParcial"
+                                            listener="#{dareMB.getReceitasComPagamentoParcial()}"/>
+                                </h:commandLink>
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <h:outputLabel styleClass="col-md-2">
+                            #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.receita']}: *
+                        </h:outputLabel>
+                        <div class="col-md-10">
+                            <h:selectOneMenu value="#{dareMB.dadosPagamentoController.debitoPagamentoParcial.idReceita}"
+                                    id="receita"
+                                    styleClass="form-control">
+                                <f:selectItem value="#{null}"
+                                        itemLabel=""/>
+                                <f:selectItems value="#{dareMB.getReceitasComPagamentoParcial()}"
+                                        var="receita"
+                                        itemValue="#{receita.idReceita}"
+                                        itemLabel="#{receita.getCompositeName()}"/>
+                                <f:ajax render="debitosComPagamentoParcial"
+                                        execute="receita"
+                                        listener="#{dareMB.dadosPagamentoController.getValuesDebitoComPagamentoParcial()}"/>
+                            </h:selectOneMenu>
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <div class="col-md-2">
+                            <h:outputLabel>
+                                #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.periodoAnoReferencia']}:
+                            </h:outputLabel>
+                        </div>
+                        <h:panelGroup id="periodoReferenciaPagParcial" styleClass="col-md-2">
+                            <div class="input-group">
+                                <h:inputText id="dataReferencia"
+                                        value="#{dareMB.dadosPagamentoController.debitoPagamentoParcial.periodoReferencia}"
+                                        styleClass="datepickerMY form-control" maxlength="7"
+                                        p:data-mask="99/9999">
+                                    <f:ajax execute="@this" render="periodoReferenciaPagParcial"/>
+                                    <f:converter converterId="periodoAnoReferenciaConverter"/>
+                                </h:inputText>
+                                <h:outputLabel for="dataReferencia" class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"/>
+                                </h:outputLabel>
+                                <h:outputScript>
+                                    formatDateMesAno('.datepickerMY', "mm/yy");
+                                </h:outputScript>
+                            </div>
+                        </h:panelGroup>
+                    </div>
+
+                    <div class="row form-group">
+                        <h:outputLabel styleClass="col-md-2" for="vlImposto">
+                            #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.valorImposto']}:
+                        </h:outputLabel>
+                        <div class="col-md-2">
+                            <h:inputText styleClass="form-control"
+                                    value="#{dareMB.dadosPagamentoController.debitoPagamentoParcial.valorImposto}"
+                                    id="vlImposto" readonly="true"/>
+                        </div>
+                        <h:outputLabel styleClass="col-md-2" for="vlAtlzMonet">
+                            #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.valorAtlzMonetaria']}:
+                        </h:outputLabel>
+                        <div class="col-md-2">
+                            <h:inputText styleClass="form-control"
+                                    value="#{dareMB.dadosPagamentoController.debitoPagamentoParcial.valorAtlzMonetaria}"
+                                    id="vlAtlzMonet" readonly="true"/>
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <h:outputLabel styleClass="col-md-2" for="vlMulta">
+                            #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.valorMulta']}:
+                        </h:outputLabel>
+                        <div class="col-md-2">
+                            <h:inputText styleClass="form-control"
+                                    value="#{dareMB.dadosPagamentoController.debitoPagamentoParcial.valorMulta}"
+                                    id="vlMulta" readonly="true"/>
+                        </div>
+                        <h:outputLabel styleClass="col-md-2" for="vlRedMulta">
+                            #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.valorRedMulta']}:
+                        </h:outputLabel>
+                        <div class="col-md-2">
+                            <h:inputText styleClass="form-control"
+                                    value="#{dareMB.dadosPagamentoController.debitoPagamentoParcial.valorReducaoMulta}"
+                                    id="vlRedMulta" readonly="true"/>
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <h:outputLabel styleClass="col-md-2" for="vlJuros">
+                            #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.valorJuros']}:
+                        </h:outputLabel>
+                        <div class="col-md-2">
+                            <h:inputText styleClass="form-control"
+                                    value="#{dareMB.dadosPagamentoController.debitoPagamentoParcial.valorJuros}"
+                                    id="vlJuros"
+                                    readonly="true"/>
+                        </div>
+                        <h:outputLabel styleClass="col-md-2" for="vlRedJuros">
+                            #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.valorRedJuros']}:
+                        </h:outputLabel>
+                        <div class="col-md-2">
+                            <h:inputText styleClass="form-control"
+                                    value="#{dareMB.dadosPagamentoController.debitoPagamentoParcial.valorReducaoJuros}"
+                                    id="vlRedJuros" readonly="true"/>
+                        </div>
+                    </div>
+
+                    <div class="row form-group">
+                        <div class="col-md-4 align-bottom">
+                            <h:outputLabel>
+                                <h:selectBooleanCheckbox id="checkValorDif"
+                                        value="#{dareMB.dadosPagamentoController.debitoPagamentoParcial.isValorPagarDiferente}">
+                                    <f:ajax event="change" execute="vlAPagar totalRecolher"
+                                            render="debitosComPagamentoParcial"
+                                            listener="#{dareMB.dadosPagamentoController.updateValorTotalComPgtoParcialWithValorPagar}"/>
+                                </h:selectBooleanCheckbox>
+                                #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.desejaDiferente']}
+                            </h:outputLabel>
+                        </div>
+                        <h:outputLabel styleClass="col-md-2 align-bottom" for="vlAPagar">
+                            #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.valorAPagar']}:
+                        </h:outputLabel>
+                        <div class="col-md-2 align-bottom">
+                            <h:inputText value="#{dareMB.dadosPagamentoController.debitoPagamentoParcial.valorPagar}"
+                                    styleClass="form-control sat-currency"
+                                    disabled="#{not dareMB.dadosPagamentoController.debitoPagamentoParcial.isValorPagarDiferente}"
+                                    id="vlAPagar"
+                                    maxlength="14">
+                                <f:ajax event="blur" execute="vlAPagar totalRecolher"
+                                        render="debitosComPagamentoParcial"
+                                        listener="#{dareMB.dadosPagamentoController.updateValorTotalComPgtoParcialWithValorPagar}"/>
+                                <f:convertNumber locale="pt-BR" maxFractionDigits="2" minFractionDigits="2"
+                                        maxIntegerDigits="9"/>
+                            </h:inputText>
+                        </div>
+                        <h:panelGroup class="form-group" id="totalARecolherRenderPanel">
+                            <div class="col-md-offset-1 col-md-3 text-right">
+                                <h:outputLabel styleClass="red-text">
+                                    #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.table.totalARecolher']}
+                                </h:outputLabel>
+                                <h:inputText styleClass="form-control sat-currency"
+                                        value="#{dareMB.dadosPagamentoController.debitoPagamentoParcial.totalRecolher}"
+                                        id="totalRecolher" disabled="true">
+                                    <f:convertNumber locale="pt-BR" maxFractionDigits="2" minFractionDigits="2"/>
+                                </h:inputText>
+                            </div>
+                        </h:panelGroup>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <fieldset class="scheduler-border form-group">
+                                <legend>#{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.table.informacoesComplementares']}</legend>
+                                <h:inputTextarea styleClass="form-control"
+                                        value="#{dareMB.dadosPagamentoController.debitoPagamentoParcial.informacaoComplementar}"
+                                        style="resize:vertical"
+                                        id="infoComplementarPagamentoParcial"
+                                        p:maxlength="1000">
+                                    <f:ajax execute="@this"/>
+                                </h:inputTextarea>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <h:outputScript>
+                        maskMoneyFormatToCurrency(".sat-currency");
+                    </h:outputScript>
+                </h:panelGroup>
+
+                <!--Debito de Pagamento IPVA OU Sem Pagamento Parcial-->
+                <h:panelGroup rendered="#{dareMB.isDebitoIpva() or dareMB.isDebitoSemPagamentoParcial()}"
+                        id="debitosPagamento">
+                    <h:panelGroup rendered="#{dareMB.isDebitoIpva()}" id="debitosPagamentoIPVAFilter">
+                        <div class="row form-group">
+                            <h:outputLabel styleClass="col-md-2">
+                                #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.anoRefInicial']}: *
+                            </h:outputLabel>
+                            <div class="col-md-2">
+                                <h:inputText
+                                        value="#{dareMB.dadosPagamentoController.debitoIpva.debitoIpvaFilter.anoInicial}"
+                                        id="searchAnoReferenciaInicial" styleClass="form-control justInteger"
+                                        maxlength="4"/>
+                            </div>
+                            <h:outputLabel styleClass="col-md-2">
+                                #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.anoRefFinal']}: *
+                            </h:outputLabel>
+                            <div class="col-md-2">
+                                <div class="input-group">
+                                    <h:inputText
+                                            value="#{dareMB.dadosPagamentoController.debitoIpva.debitoIpvaFilter.anoFinal}"
+                                            id="searchAnoReferenciaFinal" styleClass="form-control justInteger"
+                                            maxlength="4"/>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <h:commandLink type="button" styleClass="btn btn-primary"
+                                        action="#{dareMB.searchDebitoIpvaByAnoReferencia()}">
+                                    <i class="glyphicon glyphicon-search"/>
+                                    <f:ajax render="dare-table-debitos"
+                                            execute="searchTipoIdentificacao cpfCnpj searchAnoReferenciaInicial searchAnoReferenciaFinal"/>
+                                </h:commandLink>
+                            </div>
+                        </div>
+                    </h:panelGroup>
+                    <h:panelGroup rendered="#{dareMB.isDebitoSemPagamentoParcial()}"
+                            id="debitosSemPagamentoParcial">
+                        <div class="row form-group">
+                            <h:outputLabel for="origemDebito" styleClass="col-md-2">
+                                #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.documento']}: *
+                            </h:outputLabel>
+                            <div class="col-md-3">
+                                <div class="input-group">
+                                    <h:inputText
+                                            value="#{dareMB.dadosPagamentoController.debitoSemPagamentoParcial.idDocumento}"
+                                            id="documentoSemPgtoParcial"
+                                            styleClass="form-control justInteger" maxlength="15"/>
+                                    <span class="input-group-btn">
+                                     <h:commandLink type="button" styleClass="btn btn-primary"
+                                             action="#{dareMB.searchDocumentoSemPagamentoParcial()}">
+                                        <i class="glyphicon glyphicon-search"/>
+                                        <f:ajax render="dare-table-debitos"
+                                                execute="searchTipoIdentificacao cpfCnpj documentoSemPgtoParcial"/>
+                                    </h:commandLink>
+                                </span>
+                                </div>
+                            </div>
+                        </div>
+                    </h:panelGroup>
+                    <div class="row">
+                        <h:outputLabel styleClass="col-md-3">
+                            #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.listaDebitosLocalizados']}
+                        </h:outputLabel>
+                    </div>
+
+                    <sat:table id="dare-table-debitos"
+                            bundle="arr_msg"
+                            content="#{dareMB.tableDebitoCC}"
+                            headers="arr.par.dareEletronicoConsolidado.table.docParcela,
+                                    arr.par.dareEletronicoConsolidado.table.periodoAno,
+                                    arr.par.dareEletronicoConsolidado.table.dtVenc,
+                                    arr.par.dareEletronicoConsolidado.table.receita,
+                                    arr.par.dareEletronicoConsolidado.table.vlImposto,
+                                    arr.par.dareEletronicoConsolidado.table.vlMulta,
+                                    arr.par.dareEletronicoConsolidado.table.vlJuros,
+                                    arr.par.dareEletronicoConsolidado.table.vlCorrecaoM,
+                                    arr.par.dareEletronicoConsolidado.table.vlTse,
+                                    arr.par.dareEletronicoConsolidado.table.vlReducao,
+                                    arr.par.dareEletronicoConsolidado.table.vlTotal"
+                            fields="documento,periodoAno,dataVencimento,receita,valorImposto:number,
+                                    valorMulta:number,valorJuros:number,valorCorrecaoMonetaria:number,valorTse:number,
+                                    valorReducao:number,valorTotal:number,idContaCorrente:hide,selected:hide"
+                            hasActions="true"
+                            actionEvents="select-row:load:setChecked(12),
+                            select-row:click:addOrRemoveDebitoFromSelectedList(11)">
+                        <f:facet name="actionsHeaderCustom">
+                            <input type="checkbox" id="dare-table-debitos-header-checkbox"
+                                    onclick="checkAllDocumentoRecolher(this)"/>
+                            #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.table.todos']}
+                        </f:facet>
+                        <f:facet name="actions">
+                            <input type="checkbox" class="select-row"/>
+                        </f:facet>
+                    </sat:table>
+                    <div class="row form-group">
+                        <div class="col-md-offset-8 col-md-3 red-text text-right">
+                            #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.table.totalARecolher']}
+                            #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.table.selecionado']}
+                        </div>
+                        <div class="col-md-1 text-right red-text">
+                            <h:panelGroup id="totalRecolherListSize">
+                                #{dareMB.debitosSelectedListSize}
+                            </h:panelGroup>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <fieldset class="scheduler-border form-group">
+                                <legend>#{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.table.informacoesComplementares']}</legend>
+                                <h:panelGroup rendered="#{dareMB.isDebitoSemPagamentoParcial()}"
+                                        id="observacaoSemPagamentoParcial">
+                                    <h:inputTextarea styleClass="form-control"
+                                            value="#{dareMB.dadosPagamentoController.debitoSemPagamentoParcial.informacaoComplementar}"
+                                            id="infoComplementarSemPagamentoParcial"
+                                            style="resize:vertical"
+                                            p:maxlength="1000">
+                                        <f:ajax execute="@this"/>
+                                    </h:inputTextarea>
+                                </h:panelGroup>
+                                <h:panelGroup rendered="#{dareMB.isDebitoIpva()}" id="observacaoIpva">
+                                    <h:inputTextarea styleClass="form-control"
+                                            value="#{dareMB.dadosPagamentoController.debitoIpva.informacaoComplementar}"
+                                            style="resize:vertical"
+                                            id="infoComplementarIpva"
+                                            p:maxlength="1000">
+                                        <f:ajax execute="@this"/>
+                                    </h:inputTextarea>
+                                </h:panelGroup>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <h:outputScript>
+                        maskMoneyFormatToCurrency(".sat-currency");
+                        formatDateMesAno('.datepickerMY', "mm/yy");
+                    </h:outputScript>
+                </h:panelGroup>
+
+                <!--Debito ICMS Frete-->
+                <h:panelGroup rendered="#{dareMB.isDebitoIcms()}" id="debitosICMSFrete">
+                    <div class="row form-group">
+                        <div class="col-md-2">
+                            <h:outputLabel for="ufOrigem">
+                                #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.ufOrigem']}: *
+                            </h:outputLabel>
+                        </div>
+                        <div class="col-md-2">
+                            <h:selectOneMenu value="#{dareMB.dadosPagamentoController.debitoIcmsFrete.ufOrigem}"
+                                    id="ufOrigem"
+                                    styleClass="form-control">
+                                <f:selectItem value="#{null}"
+                                        itemLabel=""/>
+                                <f:selectItems
+                                        value="#{dareMB.dadosPagamentoController.estadoMunicipioOrigem.getEstados()}"
+                                        var="estado"
+                                        itemValue="#{estado.unidadeFederacao}"
+                                        itemLabel="#{estado.unidadeFederacao}"/>
+                                <f:ajax render="municipioOrigem"
+                                        listener="#{dareMB.dadosPagamentoController.loadMunicipiosOrigem()}"/>
+                            </h:selectOneMenu>
+                        </div>
+                        <div class="col-md-8">
+                            <h:selectOneMenu value="#{dareMB.dadosPagamentoController.debitoIcmsFrete.municipioOrigem}"
+                                    id="municipioOrigem"
+                                    styleClass="form-control">
+                                <f:selectItem value="#{null}"
+                                        itemLabel=""/>
+                                <f:selectItems
+                                        value="#{dareMB.dadosPagamentoController.estadoMunicipioOrigem.getMunicipios()}"
+                                        var="municipio"
+                                        itemValue="#{municipio.codigoIbge}"
+                                        itemLabel="#{municipio.nomeMunicipio}"/>
+                                <f:ajax execute="municipioOrigem"/>
+                            </h:selectOneMenu>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-2">
+                            <h:outputLabel for="ufDestino">
+                                #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.ufDestino']}: *
+                            </h:outputLabel>
+                        </div>
+                        <div class="col-md-2">
+                            <h:selectOneMenu value="#{dareMB.dadosPagamentoController.debitoIcmsFrete.ufDestino}"
+                                    id="ufDestino"
+                                    styleClass="form-control">
+                                <f:selectItem value="#{null}"
+                                        itemLabel=""/>
+                                <f:selectItems
+                                        value="#{dareMB.dadosPagamentoController.estadoMunicipioDestino.getEstados()}"
+                                        var="estado"
+                                        itemValue="#{estado.unidadeFederacao}"
+                                        itemLabel="#{estado.unidadeFederacao}"/>
+                                <f:ajax render="municipioDestino"
+                                        listener="#{dareMB.dadosPagamentoController.loadMunicipiosDestino()}"/>
+                            </h:selectOneMenu>
+                        </div>
+                        <div class="col-md-8">
+                            <h:selectOneMenu value="#{dareMB.dadosPagamentoController.debitoIcmsFrete.municipioDestino}"
+                                    id="municipioDestino"
+                                    styleClass="form-control">
+                                <f:selectItem value="#{null}"
+                                        itemLabel=""/>
+                                <f:selectItems
+                                        value="#{dareMB.dadosPagamentoController.estadoMunicipioDestino.getMunicipios()}"
+                                        var="municipio"
+                                        itemValue="#{municipio.codigoIbge}"
+                                        itemLabel="#{municipio.nomeMunicipio}"/>
+                                <f:ajax execute="municipioDestino"/>
+                            </h:selectOneMenu>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-2">
+                            <h:outputLabel for="distanciaKm">
+                                #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.distanciaKm']}: *
+                            </h:outputLabel>
+                        </div>
+                        <div class="col-md-3">
+                            <h:inputText value="#{dareMB.dadosPagamentoController.debitoIcmsFrete.distancia}"
+                                    id="distanciaKm"
+                                    styleClass="form-control sat-measure" maxlength="9">
+                                <f:convertNumber locale="pt-BR" maxFractionDigits="3" maxIntegerDigits="6"/>
+                                <f:ajax execute="distanciaKm"/>
+                            </h:inputText>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-2">
+                            <h:outputLabel for="pesoT">
+                                #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.pesoT']}: *
+                            </h:outputLabel>
+                        </div>
+                        <div class="col-md-3">
+                            <h:inputText value="#{dareMB.dadosPagamentoController.debitoIcmsFrete.peso}" id="pesoT"
+                                    styleClass="form-control sat-measure" maxlength="9">
+                                <f:convertNumber locale="pt-BR" maxFractionDigits="3" maxIntegerDigits="6"/>
+                                <f:ajax execute="pesoT"/>
+                            </h:inputText>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-2">
+                            <h:outputLabel for="notaFiscal">
+                                #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.notaFiscal']}: *
+                            </h:outputLabel>
+                        </div>
+                        <div class="col-md-3">
+                            <h:inputText value="#{dareMB.dadosPagamentoController.debitoIcmsFrete.notaFiscal}"
+                                    id="notaFiscal"
+                                    styleClass="form-control justInteger" maxlength="15">
+                                <f:ajax execute="notaFiscal"/>
+                            </h:inputText>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-2">
+                            <h:outputLabel for="aliquota">
+                                #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.aliquota']}: *
+                            </h:outputLabel>
+                        </div>
+                        <div class="col-md-2">
+                            <h:selectOneMenu value="#{dareMB.dadosPagamentoController.debitoIcmsFrete.aliquota}"
+                                    id="aliquota"
+                                    styleClass="form-control"
+                                    onchange="calculateDebitoIcmsFreteTotal()">
+                                <f:selectItem value="#{null}"
+                                        itemLabel=""/>
+                                <f:selectItems value="#{arrEnumsMB.aliquotas}"
+                                        var="aliquota"
+                                        itemValue="#{aliquota}"
+                                        itemLabel="#{aliquota.label}"/>
+                            </h:selectOneMenu>
+                        </div>
+                        <div class="col-md-2">
+                            <h:outputLabel for="multa">
+                                #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.multa']}: *
+                            </h:outputLabel>
+                        </div>
+                        <div class="col-md-2">
+                            <h:selectOneMenu value="#{dareMB.dadosPagamentoController.debitoIcmsFrete.multa}"
+                                    id="multa"
+                                    styleClass="form-control"
+                                    onchange="calculateDebitoIcmsFreteTotal()">
+                                <f:selectItem value="#{null}"
+                                        itemLabel=""/>
+                                <f:selectItems value="#{arrEnumsMB.multas}"
+                                        var="multa"
+                                        itemValue="#{multa}"
+                                        itemLabel="#{multa.label}"/>
+                            </h:selectOneMenu>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-3 text-left">
+                            <h:outputLabel for="valorBc">
+                                #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.valorBc']}*
+                            </h:outputLabel>
+                            <h:inputText styleClass="form-control sat-currency"
+                                    value="#{dareMB.dadosPagamentoController.debitoIcmsFrete.valorBc}"
+                                    id="valorBc" maxlength="14"
+                                    onblur="calculateDebitoIcmsFreteTotal()">
+                                <f:convertNumber locale="pt-BR" maxFractionDigits="2" minFractionDigits="2"
+                                        maxIntegerDigits="9"/>
+                            </h:inputText>
+                        </div>
+                        <a4j:jsFunction name="calculateDebitoIcmsFreteTotal"
+                                action="#{dareMB.dadosPagamentoController.calculateValorTotalFrete}"
+                                execute="aliquota multa valorBc"
+                                render="debitoIcmsFreteValoresPanel"/>
+                        <h:panelGroup id="debitoIcmsFreteValoresPanel">
+                            <div class="col-md-3 text-left">
+                                <h:outputLabel>
+                                    #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.valorImposto']}
+                                </h:outputLabel>
+                                <h:inputText styleClass="form-control sat-currency"
+                                        value="#{dareMB.dadosPagamentoController.debitoIcmsFrete.valorImposto}"
+                                        id="valorImposto" disabled="true">
+                                    <f:convertNumber locale="pt-BR" maxFractionDigits="2" minFractionDigits="2"
+                                            maxIntegerDigits="9"/>
+                                </h:inputText>
+                            </div>
+                            <div class="col-md-3 text-left">
+                                <h:outputLabel>
+                                    #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.valorMulta']}
+                                </h:outputLabel>
+                                <h:inputText styleClass="form-control sat-currency"
+                                        value="#{dareMB.dadosPagamentoController.debitoIcmsFrete.valorMulta}"
+                                        id="valorMulta" disabled="true">
+                                    <f:convertNumber locale="pt-BR" maxFractionDigits="2" minFractionDigits="2"
+                                            maxIntegerDigits="9"/>
+                                </h:inputText>
+                            </div>
+                            <div class="col-md-3 text-right">
+                                <h:outputLabel>
+                                    #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.table.valorTotalFrete']}
+                                </h:outputLabel>
+                                <h:inputText styleClass="form-control sat-currency"
+                                        value="#{dareMB.dadosPagamentoController.debitoIcmsFrete.valorTotalFrete}"
+                                        id="valorTotalFrete" disabled="true">
+                                    <f:convertNumber locale="pt-BR" maxFractionDigits="2" minFractionDigits="2"/>
+                                </h:inputText>
+                            </div>
+                        </h:panelGroup>
+                    </div>
+
+                    <fieldset class="scheduler-border form-group">
+                        <legend>#{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.table.informacoesComplementares']}</legend>
+                        <h:inputTextarea styleClass="form-control"
+                                value="#{dareMB.dadosPagamentoController.debitoIcmsFrete.observacoes}"
+                                id="icmsFreteObservacao"
+                                style="resize:vertical"
+                                p:maxlength="788">
+                            <f:ajax execute="@this"/>
+                        </h:inputTextarea>
+                    </fieldset>
+                    <h:outputScript>
+                        maskNumberField(".sat-measure", 3);
+                        maskMoneyFormatToCurrency(".sat-currency");
+                        formatDateMesAno('.datepickerMY', "mm/yy");
+                    </h:outputScript>
+                </h:panelGroup>
+
+                <!--Debito Diversos-->
+                <h:panelGroup rendered="#{dareMB.isDebitoDiverso()}" id="debitosDiversos">
+                    <div class="row form-group">
+                        <div class="col-md-2">
+                            <h:outputLabel for="docsDiversosDocumento">
+                                #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.documento']}:
+                            </h:outputLabel>
+                        </div>
+                        <div class="col-md-2">
+                            <h:inputText value="#{dareMB.dadosPagamentoController.debitoDiverso.idDocumento}"
+                                    id="docsDiversosDocumento" styleClass="form-control justInteger" maxlength="15">
+                                <f:ajax execute="@this"/>
+                            </h:inputText>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-2">
+                            <h:outputLabel for="docsDiversosReceita">
+                                #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.receita']}: *
+                            </h:outputLabel>
+                        </div>
+                        <div class="col-md-10">
+                            <h:selectOneMenu id="docsDiversosReceita"
+                                    styleClass="form-control"
+                                    value="#{dareMB.dadosPagamentoController.debitoDiverso.idReceita}">
+                                <f:selectItem value="#{null}"
+                                        itemLabel=""/>
+                                <f:selectItems value="#{dareMB.dadosPagamentoController.debitoDiverso.receitas}"
+                                        var="receitas"
+                                        itemValue="#{receitas.idReceita}"
+                                        itemLabel="#{receitas.compositeName}"/>
+                                <f:ajax execute="docsDiversosDocumento docsDiversosPeriodoReferencia docsDiversosReceita"
+                                        render="debitosDiversos"
+                                        listener="#{dareMB.loadSubCodigos()}"/>
+                            </h:selectOneMenu>
+                        </div>
+                    </div>
+                    <div class="row form-group">
+                        <div class="col-md-2">
+                            <h:outputLabel for="docsDiversosSubCodigo">
+                                #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.subCodigo']}:
+                            </h:outputLabel>
+                        </div>
+                        <div class="col-md-10">
+                            <h:selectOneMenu value="#{dareMB.dadosPagamentoController.debitoDiverso.idSubCodigo}"
+                                    id="docsDiversosSubCodigo"
+                                    styleClass="form-control"
+                                    onchange="setValuesWithSubCodigoData()">
+                                <f:selectItem value="#{null}"
+                                        itemLabel="">
+                                </f:selectItem>
+                                <f:selectItems
+                                        value="#{dareMB.dadosPagamentoController.debitoDiverso.getReceitasTaxas()}"
+                                        var="receitasTaxas"
+                                        itemValue="#{receitasTaxas.idSubcodigo}"
+                                        itemLabel="#{receitasTaxas.compositeName}"/>
+                            </h:selectOneMenu>
+                            <a4j:jsFunction name="setValuesWithSubCodigoData"
+                                    action="#{dareMB.dadosPagamentoController.calculateTseValues}"
+                                    render="debitosDiversos"
+                                    execute="docsDiversosDocumento
+                                        docsDiversosPeriodoReferencia
+                                        docsDiversosSubCodigo
+                                        docsDiversosQtdTSE
+                                        docsDiversosVlrUnitTSE
+                                        docsDiversosVlrTSE">
+                            </a4j:jsFunction>
+                        </div>
+                    </div>
+                    <h:panelGroup id="containsSubcodigo"
+                            rendered="#{dareMB.dadosPagamentoController.debitoDiverso.idSubCodigo != null}">
+                        <div class="row form-group">
+                            <div class="col-md-2">
+                                <h:outputLabel for="docsDiversosQtdTSE">
+                                    #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.qtdTSE']}:
+                                </h:outputLabel>
+                            </div>
+                            <div class="col-md-2">
+                                <h:inputText id="docsDiversosQtdTSE"
+                                        styleClass="form-control justInteger"
+                                        value="#{dareMB.dadosPagamentoController.debitoDiverso.quantidadeTse}"
+                                        onblur="setValuesWithSubCodigoData()">
+                                </h:inputText>
+                            </div>
+                            <div class="col-md-2">
+                                <h:outputLabel for="docsDiversosVlrUnitTSE">
+                                    #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.valorUnitarioTSE']}:
+                                </h:outputLabel>
+                            </div>
+                            <div class="col-md-2">
+                                <h:inputText id="docsDiversosVlrUnitTSE"
+                                        styleClass="form-control sat-currency"
+                                        value="#{dareMB.dadosPagamentoController.debitoDiverso.valorUnitarioTse}"
+                                        onblur="setValuesWithSubCodigoData()" maxlength="14">
+                                    <f:convertNumber locale="pt-BR" minFractionDigits="2" maxFractionDigits="2"
+                                            maxIntegerDigits="9"/>
+                                </h:inputText>
+                            </div>
+                            <div class="col-md-2">
+                                <h:outputLabel for="docsDiversosVlrTSE">
+                                    #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.valorTSE']}:
+                                </h:outputLabel>
+                            </div>
+                            <div class="col-md-2">
+                                <h:inputText id="docsDiversosVlrTSE"
+                                        value="#{dareMB.dadosPagamentoController.debitoDiverso.valorTse}"
+                                        styleClass="form-control sat-currency"
+                                        disabled="true">
+                                    <f:convertNumber locale="pt-BR" minFractionDigits="2" maxFractionDigits="2"
+                                            maxIntegerDigits="9"/>
+                                    <f:ajax execute="@this"/>
+                                </h:inputText>
+                            </div>
+                        </div>
+                    </h:panelGroup>
+                    <div class="row form-group">
+                        <div class="col-md-2">
+                            <h:outputLabel for="docsDiversosPeriodoReferencia">
+                                #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.periodoReferencia']}: *
+                            </h:outputLabel>
+                        </div>
+                        <h:panelGroup id="periodoReferenciaDiverso" styleClass="col-md-2">
+                            <div class="input-group">
+                                <h:inputText id="docsDiversosPeriodoReferencia"
+                                        value="#{dareMB.dadosPagamentoController.debitoDiverso.periodoReferencia}"
+                                        styleClass="datepickerMY form-control" maxlength="7"
+                                        p:data-mask="99/9999">
+                                    <f:ajax execute="@this" render="periodoReferenciaDiverso"/>
+                                    <f:converter converterId="periodoAnoReferenciaConverter"/>
+                                </h:inputText>
+                                <h:outputLabel for="docsDiversosPeriodoReferencia"
+                                        class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"/>
+                                </h:outputLabel>
+                                <h:outputScript>
+                                    formatDateMesAno('.datepickerMY', "mm/yy");
+                                </h:outputScript>
+                            </div>
+                        </h:panelGroup>
+                    </div>
+                    <h:panelGroup id="notContainsSubcodigo"
+                            rendered="#{dareMB.dadosPagamentoController.debitoDiverso.idSubCodigo == null}">
+                        <div class="row form-group">
+                            <div class="col-md-2">
+                                <h:outputLabel for="docsDiversosValorImposto">
+                                    #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.valorImposto']}: *
+                                </h:outputLabel>
+                            </div>
+                            <div class="col-md-2">
+                                <h:inputText id="docsDiversosValorImposto"
+                                        value="#{dareMB.dadosPagamentoController.debitoDiverso.valorImposto}"
+                                        styleClass="form-control sat-currency" maxlength="14"
+                                        onblur="updateTotalARecolherDebitosDiversos()">
+                                    <f:convertNumber locale="pt-BR" minFractionDigits="2" maxFractionDigits="2"
+                                            maxIntegerDigits="9"/>
+                                </h:inputText>
+                            </div>
+                            <div class="col-md-2">
+                                <h:outputLabel for="docsDiversosValorMulta">
+                                    #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.valorMulta']}: *
+                                </h:outputLabel>
+                            </div>
+                            <div class="col-md-2">
+                                <h:inputText id="docsDiversosValorMulta"
+                                        value="#{dareMB.dadosPagamentoController.debitoDiverso.valorMulta}"
+                                        styleClass="form-control sat-currency" maxlength="14"
+                                        onblur="updateTotalARecolherDebitosDiversos()">
+                                    <f:convertNumber locale="pt-BR" minFractionDigits="2" maxFractionDigits="2"
+                                            maxIntegerDigits="9"/>
+                                </h:inputText>
+                            </div>
+                            <div class="col-md-2">
+                                <h:outputLabel for="docsDiversosValorJuros">
+                                    #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.valorJuros']}: *
+                                </h:outputLabel>
+                            </div>
+                            <div class="col-md-2">
+                                <h:inputText id="docsDiversosValorJuros"
+                                        value="#{dareMB.dadosPagamentoController.debitoDiverso.valorJuros}"
+                                        styleClass="form-control sat-currency" maxlength="14"
+                                        onblur="updateTotalARecolherDebitosDiversos()">
+                                    <f:convertNumber locale="pt-BR" minFractionDigits="2" maxFractionDigits="2"
+                                            maxIntegerDigits="9"/>
+                                </h:inputText>
+                            </div>
+                        </div>
+                    </h:panelGroup>
+                    <div class="row form-group">
+                        <div class="col-md-offset-9 col-md-3 text-right">
+                            <h:outputLabel styleClass="red-text">
+                                #{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.table.totalARecolher']}
+                            </h:outputLabel>
+                            <h:inputText styleClass="form-control sat-currency"
+                                    value="#{dareMB.dadosPagamentoController.debitoDiverso.totalRecolher}"
+                                    id="docsDiversosTotalRecolher"
+                                    readonly="true">
+                                <f:convertNumber locale="pt-BR" minFractionDigits="2" maxFractionDigits="2"/>
+                            </h:inputText>
+                        </div>
+                    </div>
+                    <fieldset class="scheduler-border form-group">
+                        <legend>#{arr_msg['arr.par.dareEletronicoConsolidado.dadoPagamento.table.informacoesComplementares']}</legend>
+                        <h:inputTextarea styleClass="form-control"
+                                style="resize:vertical"
+                                id="debitoDiversoInformacoesComplementares"
+                                value="#{dareMB.dadosPagamentoController.debitoDiverso.informacoesComplementares}">
+                            <f:ajax execute="@this"/>
+                        </h:inputTextarea>
+                    </fieldset>
+                    <h:outputScript>
+                        maskMoneyFormatToCurrency(".sat-currency");
+                    </h:outputScript>
+                </h:panelGroup>
+            </h:panelGroup>
+        </fieldset>
+
+        <div class="row form-group">
+            <div class="col-md-offset-9 col-md-3">
+                <h:commandLink type="button" class="btn btn-primary fill-col-btn" id="btnAdicionarItem"
+                        onclick="addPagamentoToDarePagamentoList()">
+                    <i class="glyphicon glyphicon-plus" aria-hidden="true"/>
+                    #{arr_msg['arr.par.dareEletronicoConsolidado.adicionarItemLista']}
+                    <f:ajax render="@form"/>
+                </h:commandLink>
+            </div>
+        </div>
+        <a4j:jsFunction name="clearContribuintesFields"
+                action="#{dareMB.clearContribuintesFields()}"
+                render="searchTipoIdentificacao cpfCnpj nomeRazaoSocial"/>
+        <a4j:jsFunction name="addPagamentoToDarePagamentoList"
+                action="#{dareMB.addPagamentoToDarePagamentoList()}"
+                render="dare-panel-group"/>
+
+        <!--Lista de Pagamentos Adicionados-->
+        <fieldset class="scheduler-border form-group">
+            <legend>#{arr_msg['arr.par.dareEletronicoConsolidado.listaPagamentosAdicionados']}</legend>
+            <h:panelGroup id="dare-panel-group">
+                <sat:table id="dare-table"
+                        bundle="arr_msg"
+                        content="#{dareMB.dareViewBean.listaPagamentos}"
+                        headers="arr.par.dareEletronicoConsolidado.table.docParcela,
+                                    arr.par.dareEletronicoConsolidado.table.periodoAno,
+                                    arr.par.dareEletronicoConsolidado.table.dtVenc,
+                                    arr.par.dareEletronicoConsolidado.table.receita,
+                                    arr.par.dareEletronicoConsolidado.table.vlImposto,
+                                    arr.par.dareEletronicoConsolidado.table.vlMulta,
+                                    arr.par.dareEletronicoConsolidado.table.vlJuros,
+                                    arr.par.dareEletronicoConsolidado.table.vlCorrecaoM,
+                                    arr.par.dareEletronicoConsolidado.table.vlTse,
+                                    arr.par.dareEletronicoConsolidado.table.vlReducao,
+                                    arr.par.dareEletronicoConsolidado.table.vlTotal"
+                        fields="documento,periodoAnoFormatted,dataVencimento,receita,valorImposto:number,
+                                    valorMulta:number,valorJuros:number,valorCorrecaoMonetaria:number,
+                                    valorTse:number,valorReducao:number,valorTotal:number,id:hide"
+                        hasActions="true"
+                        actionEvents="delete-row:click:deletePagamento(11)">
+                    <f:facet name="actions">
+                        <i class="delete-row glyphicon glyphicon-trash" aria-hidden="true" data-toggle="tooltip"
+                                title="Excluir" role="button"/>
+                    </f:facet>
+                </sat:table>
+                <div class="row form-group">
+                    <div class="col-md-offset-8 col-md-2 red-text">
+                        #{arr_msg['arr.par.dareEletronicoConsolidado.table.quantidadeDocumentos']}
+                    </div>
+                    <div class="col-md-2 text-right red-text">
+                        <h:outputLabel id="quantidadePagamentos"
+                                value="#{dareMB.dareViewBean.listaPagamentos.size()}"/>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col-md-offset-8 col-md-2 red-text">
+                        #{arr_msg['arr.par.dareEletronicoConsolidado.table.totalDare']}
+                    </div>
+                    <div class="col-md-2 text-right red-text">
+                        <h:outputLabel id="valorTotalPagamento"
+                                value=" #{dareMB.dareViewBean.calcValorTotal()}"/>
+                    </div>
+                </div>
+            </h:panelGroup>
+            <div class="row">
+                <div class="col-md-4 text-left">
+                    <button type="button" class="btn btn-primary" id="btnLimpar" onclick="resetFieldsDare()">
+                        <i class="glyphicon glyphicon-trash"/>
+                        #{arr_msg['arr.par.dareEletronicoConsolidado.table.button.limpar']}
+                    </button>
+                    <a4j:jsFunction name="clearDtos" action="#{dareMB.clearDtos}"
+                            render="dare-eletronico-form"/>
+                </div>
+                <div class="col-md-2 text-right">
+                    <h:commandLink target="_blank" class="btn btn-primary disabled" id="btnPrint"
+                            action="#{dareMB.abrirPaginaImpressao}">
+                        <i class="glyphicon glyphicon-print"/>
+                        #{arr_msg['arr.par.dareEletronicoConsolidado.table.button.imprimir']}
+                    </h:commandLink>
+                </div>
+                <div class="col-md-2 text-left">
+                    <h:commandLink class="btn btn-primary disabled" id="btnEmail"
+                            onclick="openEmailModal()" immediate="true">
+                        <i class="glyphicon glyphicon-envelope"/>
+                        #{arr_msg['arr.par.dareEletronicoConsolidado.table.button.enviarEmail']}
+                        <f:ajax execute="@this"/>
+                    </h:commandLink>
+                </div>
+                <div class="col-md-4 text-right">
+                    <h:commandLink class="btn btn-primary" id="btnGerar" action="#{dareMB.save}">
+                        <i class="glyphicon glyphicon-floppy-save"/>
+                        #{arr_msg['arr.par.dareEletronicoConsolidado.table.button.gerarDare']}
+                        <a4j:ajax render="nossoNumero dataHoraGeracao btnGerar btnPrint btnAdicionarItem btnEmail"
+                                oncomplete="habilitarBotoesAposGerarDare()"/>
+                    </h:commandLink>
+                </div>
+            </div>
+        </fieldset>
+
+        <a4j:jsFunction name="addDebitosToSelectedList"
+                action="#{dareMB.addDebitoToSelectedList}"
+                render="totalRecolherListSize">
+            <a4j:param name="idContaCorrente"
+                    assignTo="#{dareMB.dadosPagamentoController.idContaCorrente}"/>
+        </a4j:jsFunction>
+        <a4j:jsFunction name="removeDebitosFromSelectedList"
+                action="#{dareMB.removeDebitosFromSelectedList}"
+                render="totalRecolherListSize">
+            <a4j:param name="idContaCorrente"
+                    assignTo="#{dareMB.dadosPagamentoController.idContaCorrente}"/>
+        </a4j:jsFunction>
+        <a4j:jsFunction name="addAllDocumentoRecolherToSelectedList"
+                action="#{dareMB.addAllDebitosToSelectedList}"
+                render="totalRecolherListSize"
+                oncomplete="checkAllDocumentoRecolherOnSuccess()">
+        </a4j:jsFunction>
+        <a4j:jsFunction name="removeAllDebitosFromSelectedList"
+                action="#{dareMB.removeAllDebitosFromSelectedList}"
+                render="totalRecolherListSize"
+                oncomplete="uncheckAllDocumentoRecolherOnSuccess()">
+        </a4j:jsFunction>
+        <a4j:jsFunction
+                name="updateTotalARecolherDebitosDiversos"
+                action="#{dareMB.dadosPagamentoController.updateTotalRecolherDebitosDiversos}"
+                execute="docsDiversosPeriodoReferencia docsDiversosValorImposto docsDiversosValorMulta docsDiversosValorJuros"
+                render="debitosDiversos"/>
+        <a4j:jsFunction name="deletePagamento"
+                action="#{dareMB.removePagamento()}"
+                render="dare-table quantidadePagamentos valorTotalPagamento">
+            <a4j:param name="id" assignTo="#{dareMB.dareViewBean.idPagamento}"/>
+        </a4j:jsFunction>
+    </h:form>
+
+    <div id="dareEletronicoEmailModal" class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <h:form id="dare-email-form">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&#xd7;</span>
+                        </button>
+                        <h4 class="modal-title" id="dareEmailModalTitle">
+                            #{arr_msg['arr.par.dareEletronicoConsolidado.email.title']}
+                        </h4>
+                    </div>
+                    <div class="modal-body" id="dareEmailModalBody">
+                        <div class="row form-group">
+                            <div class="col-md-3">
+                                <h:outputLabel for="dareAssuntoEmail">
+                                    #{arr_msg['arr.par.dareEletronicoConsolidado.email.assunto']} *
+                                </h:outputLabel>
+                            </div>
+                            <div class="col-md-9">
+                                <h:inputText styleClass="form-control"
+                                        id="dareAssuntoEmail"
+                                        value="#{dareMB.dareEmailHelper.dareEmail.assunto}"/>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-3">
+                                <h:outputLabel for="dareMensagemEmail">
+                                    #{arr_msg['arr.par.dareEletronicoConsolidado.email.mensagem']} *
+                                </h:outputLabel>
+                            </div>
+                            <div class="col-md-9">
+                                <h:inputTextarea styleClass="form-control"
+                                        style="resize:vertical"
+                                        id="dareMensagemEmail"
+                                        value="#{dareMB.dareEmailHelper.dareEmail.mensagem}"/>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <div class="col-md-3">
+                                <h:outputLabel for="dareEmailDestinatario">
+                                    #{arr_msg['arr.par.dareEletronicoConsolidado.email.email']} *
+                                </h:outputLabel>
+                            </div>
+                            <div class="col-md-6">
+                                <h:inputText id="dareEmailDestinatario" styleClass="form-control"
+                                        value="#{dareMB.dareEmailHelper.dareEmail.destinatario}"/>
+                            </div>
+                            <div class="col-md-3">
+                                <h:commandLink type="button" class="btn btn-primary fill-col-btn"
+                                        action="#{dareMB.dareEmailHelper.addEmail()}">
+                                    <i class="glyphicon glyphicon-plus"/>
+                                    #{arr_msg['arr.par.dareEletronicoConsolidado.email.btn.adicionar']}
+                                    <f:ajax render="dare-email-table dareEmailDestinatario"
+                                            execute="dareEmailDestinatario"/>
+                                </h:commandLink>
+                            </div>
+                            <div class="col-md-12">
+                                <sat:table id="dare-email-table"
+                                        bundle="arr_msg"
+                                        headers="arr.par.dareEletronicoConsolidado.email.table.title"
+                                        fields="this"
+                                        hasActions="true"
+                                        content="#{dareMB.dareEmailHelper.dareEmail.destinatarios}"
+                                        actionEvents="delete-row:click:removeDestinatario(0)">
+                                    <f:facet name="actions">
+                                        <i class="delete-row glyphicon glyphicon-trash" aria-hidden="true"
+                                                data-toggle="tooltip" title="Remover" role="button"/>
+                                    </f:facet>
+                                </sat:table>
+                            </div>
+                            <a4j:jsFunction name="removeDestinatario"
+                                    render="dare-email-table"
+                                    action="#{dareMB.dareEmailHelper.removeEmail}">
+                                <a4j:param name="email"
+                                        assignTo="#{dareMB.dareEmailHelper.dareEmail.selectedDestinario}"/>
+                            </a4j:jsFunction>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="col-md-12">
+                            <button type="button" class="btn btn-default" data-dismiss="modal"
+                                    value="#{msg['alert.modal.fechar']}"
+                                    aria-label="#{msg['alert.modal.fechar']}">
+                                <span aria-hidden="false">#{msg['alert.modal.fechar']}</span>
+                            </button>
+                            <h:commandButton type="button"
+                                    value="#{arr_msg['arr.par.dareEletronicoConsolidado.email.btn.enviar']}"
+                                    styleClass="btn btn-primary fa-align-right"
+                                    action="#{dareMB.sendDareEmail()}">
+                                <f:ajax execute="dareAssuntoEmail dareMensagemEmail" render="dare-email-form"/>
+                            </h:commandButton>
+                        </div>
+                    </div>
+                </h:form>
+            </div>
+        </div>
+    </div>
+</div>
+<ui:include src="/protected/views/templates/modals/core-modals.xhtml"/>
+<ui:include src="/protected/views/templates/modals/success-marker.xhtml"/>
+</body>
+</html>

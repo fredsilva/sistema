@@ -24,7 +24,7 @@ function showBtnUpdate(formId) {
 }
 
 function setRadioValue(name, SelectdValue) {
-    $('input[name="' + name+ '"][value="' + SelectdValue + '"]').prop('checked', true);
+    $('input[name="' + name + '"][value="' + SelectdValue + '"]').prop('checked', true);
 }
 
 function findTab(navId, tabId) {
@@ -61,9 +61,9 @@ $(document).on("paste", ".justInteger", function (e) {
 
 });
 
-$(document).on("keypress", ".justCharacter", function(e){
+$(document).on("keypress", ".justCharacter", function (e) {
     var inputValue = e.which;
-    if(!((inputValue >= 65 && inputValue <= 90) || (inputValue >= 97 && inputValue <= 122))) {
+    if (!((inputValue >= 65 && inputValue <= 90) || (inputValue >= 97 && inputValue <= 122))) {
         event.preventDefault();
     }
 });
@@ -80,7 +80,7 @@ $(document).ready(function () {
     $(".decimal").maskMoney({thousands: '.', decimal: ',', allowZero: true});
 });
 
-$.fn.maskCnpjCpf = function() {
+$.fn.maskCnpjCpf = function () {
     var field = this;
     field.on("keydown", function (e) {
 
@@ -106,3 +106,36 @@ $.fn.maskCnpjCpf = function() {
     field.mask('000.000.000-00');
     field.attr('maxlength', '18');
 };
+
+function maskNumberField(selector, precision) {
+    $(selector).maskMoney({
+        thousands: '.',
+        decimal: ',',
+        precision: precision,
+        allowZero: true
+    });
+}
+
+function maskMoneyFormatToCurrency(selector) {
+    maskNumberField(selector, 2);
+}
+
+function formatDateMesAno(selector, dateFormat) {
+    var defaults = {
+        changeMonth: true,
+        changeYear: true,
+        showButtonPanel: true,
+        dateFormat: dateFormat,
+        onClose: function (dateText, inst) {
+            function isDonePressed() {
+                return ($('#ui-datepicker-div').html().indexOf('ui-datepicker-close ui-state-default ui-priority-primary ui-corner-all ui-state-hover') > -1);
+            }
+
+            if (isDonePressed()) {
+                $(this).datepicker('setDate', new Date(inst.selectedYear, inst.selectedMonth, 1)).trigger('change');
+                $('.date-picker').focusout()
+            }
+        }
+    };
+    datePicker(selector, defaults);
+}

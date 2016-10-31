@@ -1,8 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./ReceitasFacade.html" title="br.gov.to.sefaz.arr.parametros.business.facade.ReceitasFacade" alt="" coords="318,267,841,429"/>
-<area shape="rect" id="node1" href="./ReceitasFacade.html" title="&lt;TABLE&gt;" alt="" coords="307,261,851,435"/>
-<area shape="rect" id="node2_1" href="./impl/ReceitasFacadeImpl.html" title="br.gov.to.sefaz.arr.parametros.business.facade.impl.ReceitasFacadeImpl" alt="" coords="16,488,1143,651"/>
-<area shape="rect" id="node2" href="./impl/ReceitasFacadeImpl.html" title="&lt;TABLE&gt;" alt="" coords="5,483,1153,656"/>
-<area shape="rect" id="node3_2" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/facade/CrudFacade.html" title="br.gov.to.sefaz.business.facade.CrudFacade" alt="" coords="439,11,719,208"/>
-<area shape="rect" id="node3" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/facade/CrudFacade.html" title="&lt;TABLE&gt;" alt="" coords="429,5,730,213"/>
+<area shape="rect" id="node1_0" href="./ReceitasFacade.html" title="br.gov.to.sefaz.arr.parametros.business.facade.ReceitasFacade" alt="" coords="318,284,841,447"/>
+<area shape="rect" id="node1" href="./ReceitasFacade.html" title="&lt;TABLE&gt;" alt="" coords="307,279,851,452"/>
+<area shape="rect" id="node2_1" href="./impl/ReceitasFacadeImpl.html" title="br.gov.to.sefaz.arr.parametros.business.facade.impl.ReceitasFacadeImpl" alt="" coords="16,505,1143,668"/>
+<area shape="rect" id="node2" href="./impl/ReceitasFacadeImpl.html" title="&lt;TABLE&gt;" alt="" coords="5,500,1153,673"/>
+<area shape="rect" id="node3_2" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/facade/CrudFacade.html" title="br.gov.to.sefaz.business.facade.CrudFacade" alt="" coords="433,11,725,225"/>
+<area shape="rect" id="node3" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/business/facade/CrudFacade.html" title="&lt;TABLE&gt;" alt="" coords="423,5,736,231"/>
 </map>

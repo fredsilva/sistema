@@ -1,8 +1,8 @@
 <map id="G" name="G">
 <area shape="rect" id="node1_0" href="../../../../../business/service/impl/DefaultCrudService.html" title="br.gov.to.sefaz.business.service.impl.DefaultCrudService" alt="" coords="16,11,457,225"/>
 <area shape="rect" id="node1" href="../../../../../business/service/impl/DefaultCrudService.html" title="&lt;TABLE&gt;" alt="" coords="5,5,468,231"/>
-<area shape="rect" id="node3_1" href="./ReceitasServiceImpl.html" title="br.gov.to.sefaz.arr.parametros.business.service.impl.ReceitasServiceImpl" alt="" coords="23,284,935,464"/>
-<area shape="rect" id="node3" href="./ReceitasServiceImpl.html" title="&lt;TABLE&gt;" alt="" coords="13,279,946,469"/>
-<area shape="rect" id="node2_2" href="../ReceitasService.html" title="br.gov.to.sefaz.arr.parametros.business.service.ReceitasService" alt="" coords="503,54,944,182"/>
-<area shape="rect" id="node2" href="../ReceitasService.html" title="&lt;TABLE&gt;" alt="" coords="492,49,955,187"/>
+<area shape="rect" id="node3_1" href="./ReceitasServiceImpl.html" title="br.gov.to.sefaz.arr.parametros.business.service.impl.ReceitasServiceImpl" alt="" coords="27,284,939,499"/>
+<area shape="rect" id="node3" href="./ReceitasServiceImpl.html" title="&lt;TABLE&gt;" alt="" coords="17,279,950,504"/>
+<area shape="rect" id="node2_2" href="../ReceitasService.html" title="br.gov.to.sefaz.arr.parametros.business.service.ReceitasService" alt="" coords="503,37,957,199"/>
+<area shape="rect" id="node2" href="../ReceitasService.html" title="&lt;TABLE&gt;" alt="" coords="492,31,968,205"/>
 </map>

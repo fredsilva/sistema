@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.arr.persistence.enums.TipoReceitaStrEnum
-	c131971 [label=<<table title="br.gov.to.sefaz.arr.persistence.enums.TipoReceitaStrEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TipoReceitaStrEnum.html">
+	c165344 [label=<<table title="br.gov.to.sefaz.arr.persistence.enums.TipoReceitaStrEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TipoReceitaStrEnum.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> TipoReceitaStrEnum </td></tr>
@@ -28,9 +28,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoReceitaStrEnum.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.arr.persistence.enums.TipoReceitaStrEnum implements br.gov.to.sefaz.persistence.enums.EnumCodeLabel<T>
-	c132139:p -> c131971:p [dir=back,arrowtail=empty,style=dashed];
+	c165523:p -> c165344:p [dir=back,arrowtail=empty,style=dashed];
 	// br.gov.to.sefaz.persistence.enums.EnumCodeLabel<T>
-	c132139 [label=<<table title="br.gov.to.sefaz.persistence.enums.EnumCodeLabel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/persistence/enums/EnumCodeLabel.html">
+	c165523 [label=<<table title="br.gov.to.sefaz.persistence.enums.EnumCodeLabel" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/br/gov/to/sefaz/persistence/enums/EnumCodeLabel.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> EnumCodeLabel&lt;T&gt; </td></tr>

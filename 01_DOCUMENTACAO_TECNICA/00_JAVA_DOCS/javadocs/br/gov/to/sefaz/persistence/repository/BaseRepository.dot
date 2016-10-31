@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.repository.BaseRepository<E, I extends java.io.Serializable>
-	c246314 [label=<<table title="br.gov.to.sefaz.persistence.repository.BaseRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./BaseRepository.html">
+	c300531 [label=<<table title="br.gov.to.sefaz.persistence.repository.BaseRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./BaseRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"><font face="arial italic"> BaseRepository&lt;E, I extends Serializable&gt; </font></td></tr>
 		</table></td></tr>
@@ -69,7 +69,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./BaseRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.par.gestao.persistence.repository.ParametroGeralRepository
-	c246373 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.repository.ParametroGeralRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../par/gestao/persistence/repository/ParametroGeralRepository.html">
+	c300601 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.repository.ParametroGeralRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../par/gestao/persistence/repository/ParametroGeralRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ParametroGeralRepository </td></tr>
 		</table></td></tr>
@@ -80,10 +80,11 @@ digraph G {
 <tr><td align="left" balign="left"> + ParametroGeralRepository() </td></tr>
 <tr><td align="left" balign="left"> + findByNome(nome : String) : ParametroGeral </td></tr>
 <tr><td align="left" balign="left"> + findPArametroGeralDinamico(sql : String, params : ParamsBuilder) : List&lt;CodeData&lt;&gt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + findExitsNome(idParametroGeral : Integer, nomeParametroGeral : String) : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../par/gestao/persistence/repository/ParametroGeralRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.par.gestao.persistence.repository.MunicipioRepository
-	c246374 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.repository.MunicipioRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../par/gestao/persistence/repository/MunicipioRepository.html">
+	c300602 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.repository.MunicipioRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../par/gestao/persistence/repository/MunicipioRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MunicipioRepository </td></tr>
 		</table></td></tr>
@@ -95,8 +96,21 @@ digraph G {
 <tr><td align="left" balign="left"> + findByUF(uf : String) : Collection&lt;Municipio&gt; </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../par/gestao/persistence/repository/MunicipioRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.par.gestao.persistence.repository.FeriadoRepository
+	c300604 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.repository.FeriadoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../par/gestao/persistence/repository/FeriadoRepository.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> FeriadoRepository </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + FeriadoRepository() </td></tr>
+<tr><td align="left" balign="left"> + isFeriadoMunicipalOuNacional(data : LocalDate, codMunicipioIbge : Integer) : boolean </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../par/gestao/persistence/repository/FeriadoRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.par.gestao.persistence.repository.EstadoRepository
-	c246376 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.repository.EstadoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../par/gestao/persistence/repository/EstadoRepository.html">
+	c300605 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.repository.EstadoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../par/gestao/persistence/repository/EstadoRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> EstadoRepository </td></tr>
 		</table></td></tr>
@@ -108,7 +122,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../par/gestao/persistence/repository/EstadoRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.par.gestao.persistence.repository.AtividadeEconomicaRepository
-	c246377 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.repository.AtividadeEconomicaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../par/gestao/persistence/repository/AtividadeEconomicaRepository.html">
+	c300606 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.repository.AtividadeEconomicaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../par/gestao/persistence/repository/AtividadeEconomicaRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AtividadeEconomicaRepository </td></tr>
 		</table></td></tr>
@@ -121,7 +135,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../par/gestao/persistence/repository/AtividadeEconomicaRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.UsuarioSistemaRepository
-	c246587 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.UsuarioSistemaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/UsuarioSistemaRepository.html">
+	c300816 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.UsuarioSistemaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/UsuarioSistemaRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UsuarioSistemaRepository </td></tr>
 		</table></td></tr>
@@ -142,7 +156,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../seg/persistence/repository/UsuarioSistemaRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.UsuarioPrincipalEmpresaRepository
-	c246588 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.UsuarioPrincipalEmpresaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/UsuarioPrincipalEmpresaRepository.html">
+	c300817 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.UsuarioPrincipalEmpresaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/UsuarioPrincipalEmpresaRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UsuarioPrincipalEmpresaRepository </td></tr>
 		</table></td></tr>
@@ -158,7 +172,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../seg/persistence/repository/UsuarioPrincipalEmpresaRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.UsuarioPostoTrabalhoRepository
-	c246589 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.UsuarioPostoTrabalhoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/UsuarioPostoTrabalhoRepository.html">
+	c300818 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.UsuarioPostoTrabalhoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/UsuarioPostoTrabalhoRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UsuarioPostoTrabalhoRepository </td></tr>
 		</table></td></tr>
@@ -167,11 +181,13 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + UsuarioPostoTrabalhoRepository() </td></tr>
+<tr><td align="left" balign="left"> + findByCpf(cpf : String) : UsuarioPostoTrabalho </td></tr>
 <tr><td align="left" balign="left"> + existsLockReferenceFuncionario(idPostoTrabalho : Integer) : boolean </td></tr>
+<tr><td align="left" balign="left"> + findOne(usuarioPostoTrabalhoPK : UsuarioPostoTrabalhoPK) : UsuarioPostoTrabalho </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../seg/persistence/repository/UsuarioPostoTrabalhoRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.UsuarioPerfilRepository
-	c246590 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.UsuarioPerfilRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/UsuarioPerfilRepository.html">
+	c300819 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.UsuarioPerfilRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/UsuarioPerfilRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UsuarioPerfilRepository </td></tr>
 		</table></td></tr>
@@ -188,7 +204,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../seg/persistence/repository/UsuarioPerfilRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.UnidadeOrganizacionalRepository
-	c246591 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.UnidadeOrganizacionalRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/UnidadeOrganizacionalRepository.html">
+	c300820 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.UnidadeOrganizacionalRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/UnidadeOrganizacionalRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> UnidadeOrganizacionalRepository </td></tr>
 		</table></td></tr>
@@ -199,10 +215,11 @@ digraph G {
 <tr><td align="left" balign="left"> + UnidadeOrganizacionalRepository() </td></tr>
 <tr><td align="left" balign="left"> + existsLockReferencePai(id : Long) : boolean </td></tr>
 <tr><td align="left" balign="left"> + existsLockReferencePostoTrabalho(id : Long) : boolean </td></tr>
+<tr><td align="left" balign="left"> + findOne(id : Long) : UnidadeOrganizacional </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../seg/persistence/repository/UnidadeOrganizacionalRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.SolicitacaoUsuarioRepository
-	c246592 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.SolicitacaoUsuarioRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/SolicitacaoUsuarioRepository.html">
+	c300821 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.SolicitacaoUsuarioRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/SolicitacaoUsuarioRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SolicitacaoUsuarioRepository </td></tr>
 		</table></td></tr>
@@ -215,7 +232,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../seg/persistence/repository/SolicitacaoUsuarioRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.SmsContribuinteRepository
-	c246593 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.SmsContribuinteRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/SmsContribuinteRepository.html">
+	c300822 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.SmsContribuinteRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/SmsContribuinteRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> SmsContribuinteRepository </td></tr>
 		</table></td></tr>
@@ -227,7 +244,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../seg/persistence/repository/SmsContribuinteRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.ProcuracaoUsuarioRepository
-	c246595 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.ProcuracaoUsuarioRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/ProcuracaoUsuarioRepository.html">
+	c300824 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.ProcuracaoUsuarioRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/ProcuracaoUsuarioRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ProcuracaoUsuarioRepository </td></tr>
 		</table></td></tr>
@@ -242,7 +259,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../seg/persistence/repository/ProcuracaoUsuarioRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.ProcuracaoOpcaoRepository
-	c246596 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.ProcuracaoOpcaoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/ProcuracaoOpcaoRepository.html">
+	c300825 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.ProcuracaoOpcaoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/ProcuracaoOpcaoRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ProcuracaoOpcaoRepository </td></tr>
 		</table></td></tr>
@@ -254,7 +271,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../seg/persistence/repository/ProcuracaoOpcaoRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.PostoTrabalhoRepository
-	c246597 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.PostoTrabalhoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/PostoTrabalhoRepository.html">
+	c300826 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.PostoTrabalhoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/PostoTrabalhoRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PostoTrabalhoRepository </td></tr>
 		</table></td></tr>
@@ -264,10 +281,11 @@ digraph G {
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + PostoTrabalhoRepository() </td></tr>
 <tr><td align="left" balign="left"> + findAllByUnidadeOrganizacional(identificUnidOrganizac : Long) : Collection&lt;PostoTrabalho&gt; </td></tr>
+<tr><td align="left" balign="left"> + findOne(id : Integer) : PostoTrabalho </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../seg/persistence/repository/PostoTrabalhoRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.PerfilSistemaRepository
-	c246598 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.PerfilSistemaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/PerfilSistemaRepository.html">
+	c300827 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.PerfilSistemaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/PerfilSistemaRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PerfilSistemaRepository </td></tr>
 		</table></td></tr>
@@ -283,7 +301,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../seg/persistence/repository/PerfilSistemaRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.PerfilPapelRepository
-	c246599 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.PerfilPapelRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/PerfilPapelRepository.html">
+	c300828 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.PerfilPapelRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/PerfilPapelRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PerfilPapelRepository </td></tr>
 		</table></td></tr>
@@ -295,7 +313,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../seg/persistence/repository/PerfilPapelRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.PapelSistemaRepository
-	c246600 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.PapelSistemaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/PapelSistemaRepository.html">
+	c300829 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.PapelSistemaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/PapelSistemaRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PapelSistemaRepository </td></tr>
 		</table></td></tr>
@@ -312,7 +330,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../seg/persistence/repository/PapelSistemaRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.PapelOpcaoRepository
-	c246601 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.PapelOpcaoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/PapelOpcaoRepository.html">
+	c300830 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.PapelOpcaoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/PapelOpcaoRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PapelOpcaoRepository </td></tr>
 		</table></td></tr>
@@ -326,7 +344,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../seg/persistence/repository/PapelOpcaoRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.OperacaoAuditadaRepository
-	c246602 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.OperacaoAuditadaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/OperacaoAuditadaRepository.html">
+	c300831 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.OperacaoAuditadaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/OperacaoAuditadaRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OperacaoAuditadaRepository </td></tr>
 		</table></td></tr>
@@ -338,7 +356,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../seg/persistence/repository/OperacaoAuditadaRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.OpcaoAplicacaoRepository
-	c246603 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.OpcaoAplicacaoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/OpcaoAplicacaoRepository.html">
+	c300832 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.OpcaoAplicacaoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/OpcaoAplicacaoRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> OpcaoAplicacaoRepository </td></tr>
 		</table></td></tr>
@@ -352,7 +370,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../seg/persistence/repository/OpcaoAplicacaoRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.ModuloSistemaRepository
-	c246604 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.ModuloSistemaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/ModuloSistemaRepository.html">
+	c300833 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.ModuloSistemaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/ModuloSistemaRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ModuloSistemaRepository </td></tr>
 		</table></td></tr>
@@ -366,7 +384,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../seg/persistence/repository/ModuloSistemaRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.LogNavegacaoRepository
-	c246605 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.LogNavegacaoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/LogNavegacaoRepository.html">
+	c300834 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.LogNavegacaoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/LogNavegacaoRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LogNavegacaoRepository </td></tr>
 		</table></td></tr>
@@ -378,7 +396,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../seg/persistence/repository/LogNavegacaoRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.ListagemCpfProcuracaoRepository
-	c246606 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.ListagemCpfProcuracaoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/ListagemCpfProcuracaoRepository.html">
+	c300835 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.ListagemCpfProcuracaoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/ListagemCpfProcuracaoRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ListagemCpfProcuracaoRepository </td></tr>
 		</table></td></tr>
@@ -390,7 +408,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../seg/persistence/repository/ListagemCpfProcuracaoRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.HistoricoNavegacaoRepository
-	c246607 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.HistoricoNavegacaoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/HistoricoNavegacaoRepository.html">
+	c300836 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.HistoricoNavegacaoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/HistoricoNavegacaoRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HistoricoNavegacaoRepository </td></tr>
 		</table></td></tr>
@@ -402,7 +420,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../seg/persistence/repository/HistoricoNavegacaoRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.HistoricoLoginSistemaRepository
-	c246608 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.HistoricoLoginSistemaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/HistoricoLoginSistemaRepository.html">
+	c300837 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.HistoricoLoginSistemaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/HistoricoLoginSistemaRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HistoricoLoginSistemaRepository </td></tr>
 		</table></td></tr>
@@ -414,7 +432,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../seg/persistence/repository/HistoricoLoginSistemaRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.ErroProcessoAuditoriaRepository
-	c246609 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.ErroProcessoAuditoriaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/ErroProcessoAuditoriaRepository.html">
+	c300838 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.ErroProcessoAuditoriaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/ErroProcessoAuditoriaRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ErroProcessoAuditoriaRepository </td></tr>
 		</table></td></tr>
@@ -426,7 +444,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../seg/persistence/repository/ErroProcessoAuditoriaRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.CorreioContribuinteRepository
-	c246610 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.CorreioContribuinteRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/CorreioContribuinteRepository.html">
+	c300839 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.CorreioContribuinteRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/CorreioContribuinteRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> CorreioContribuinteRepository </td></tr>
 		</table></td></tr>
@@ -438,7 +456,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../seg/persistence/repository/CorreioContribuinteRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.ComunicacaoContribuinteRepository
-	c246611 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.ComunicacaoContribuinteRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/ComunicacaoContribuinteRepository.html">
+	c300840 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.ComunicacaoContribuinteRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/ComunicacaoContribuinteRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ComunicacaoContribuinteRepository </td></tr>
 		</table></td></tr>
@@ -450,7 +468,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../seg/persistence/repository/ComunicacaoContribuinteRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.AtribuirPerfilRepository
-	c246612 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.AtribuirPerfilRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/AtribuirPerfilRepository.html">
+	c300841 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.AtribuirPerfilRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/AtribuirPerfilRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AtribuirPerfilRepository </td></tr>
 		</table></td></tr>
@@ -463,7 +481,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../seg/persistence/repository/AtribuirPerfilRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.seg.persistence.repository.AplicacaoModuloRepository
-	c246613 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.AplicacaoModuloRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/AplicacaoModuloRepository.html">
+	c300842 [label=<<table title="br.gov.to.sefaz.seg.persistence.repository.AplicacaoModuloRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../seg/persistence/repository/AplicacaoModuloRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AplicacaoModuloRepository </td></tr>
 		</table></td></tr>
@@ -475,7 +493,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../seg/persistence/repository/AplicacaoModuloRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.cci.persistence.repository.PessoaJuridicaRepository
-	c246655 [label=<<table title="br.gov.to.sefaz.cci.persistence.repository.PessoaJuridicaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../cci/persistence/repository/PessoaJuridicaRepository.html">
+	c300887 [label=<<table title="br.gov.to.sefaz.cci.persistence.repository.PessoaJuridicaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../cci/persistence/repository/PessoaJuridicaRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PessoaJuridicaRepository </td></tr>
 		</table></td></tr>
@@ -487,7 +505,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../cci/persistence/repository/PessoaJuridicaRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.cci.persistence.repository.ContribuinteIcmsRepository
-	c246656 [label=<<table title="br.gov.to.sefaz.cci.persistence.repository.ContribuinteIcmsRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../cci/persistence/repository/ContribuinteIcmsRepository.html">
+	c300888 [label=<<table title="br.gov.to.sefaz.cci.persistence.repository.ContribuinteIcmsRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../cci/persistence/repository/ContribuinteIcmsRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ContribuinteIcmsRepository </td></tr>
 		</table></td></tr>
@@ -499,7 +517,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../cci/persistence/repository/ContribuinteIcmsRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.TipoRejeicaoArquivosRepository
-	c246853 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.TipoRejeicaoArquivosRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/TipoRejeicaoArquivosRepository.html">
+	c301116 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.TipoRejeicaoArquivosRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/TipoRejeicaoArquivosRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoRejeicaoArquivosRepository </td></tr>
 		</table></td></tr>
@@ -513,7 +531,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/repository/TipoRejeicaoArquivosRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.TipoGruposCnaesRepository
-	c246854 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.TipoGruposCnaesRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/TipoGruposCnaesRepository.html">
+	c301117 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.TipoGruposCnaesRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/TipoGruposCnaesRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoGruposCnaesRepository </td></tr>
 		</table></td></tr>
@@ -528,7 +546,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/repository/TipoGruposCnaesRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.ResumoStrRepository
-	c246855 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.ResumoStrRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/ResumoStrRepository.html">
+	c301118 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.ResumoStrRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/ResumoStrRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ResumoStrRepository </td></tr>
 		</table></td></tr>
@@ -540,7 +558,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/repository/ResumoStrRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.ReceitasTaxasRepository
-	c246857 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.ReceitasTaxasRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/ReceitasTaxasRepository.html">
+	c301120 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.ReceitasTaxasRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/ReceitasTaxasRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ReceitasTaxasRepository </td></tr>
 		</table></td></tr>
@@ -555,7 +573,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/repository/ReceitasTaxasRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.ReceitasRepository
-	c246858 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.ReceitasRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/ReceitasRepository.html">
+	c301121 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.ReceitasRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/ReceitasRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ReceitasRepository </td></tr>
 		</table></td></tr>
@@ -570,7 +588,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/repository/ReceitasRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.ReceitasRepasseRepository
-	c246859 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.ReceitasRepasseRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/ReceitasRepasseRepository.html">
+	c301122 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.ReceitasRepasseRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/ReceitasRepasseRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ReceitasRepasseRepository </td></tr>
 		</table></td></tr>
@@ -583,7 +601,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/repository/ReceitasRepasseRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.PlanoContasRepository
-	c246860 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.PlanoContasRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/PlanoContasRepository.html">
+	c301123 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.PlanoContasRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/PlanoContasRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PlanoContasRepository </td></tr>
 		</table></td></tr>
@@ -599,7 +617,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/repository/PlanoContasRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.PedidoTiposRepository
-	c246861 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.PedidoTiposRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/PedidoTiposRepository.html">
+	c301124 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.PedidoTiposRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/PedidoTiposRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoTiposRepository </td></tr>
 		</table></td></tr>
@@ -614,7 +632,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/repository/PedidoTiposRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.PedidoTipoDocsRepository
-	c246862 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.PedidoTipoDocsRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/PedidoTipoDocsRepository.html">
+	c301125 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.PedidoTipoDocsRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/PedidoTipoDocsRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoTipoDocsRepository </td></tr>
 		</table></td></tr>
@@ -626,7 +644,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/repository/PedidoTipoDocsRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.PedidoTipoAcoesRepository
-	c246863 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.PedidoTipoAcoesRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/PedidoTipoAcoesRepository.html">
+	c301126 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.PedidoTipoAcoesRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/PedidoTipoAcoesRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoTipoAcoesRepository </td></tr>
 		</table></td></tr>
@@ -640,7 +658,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/repository/PedidoTipoAcoesRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.PedidoReceitaRepository
-	c246864 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.PedidoReceitaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/PedidoReceitaRepository.html">
+	c301127 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.PedidoReceitaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/PedidoReceitaRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoReceitaRepository </td></tr>
 		</table></td></tr>
@@ -654,7 +672,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/repository/PedidoReceitaRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.PedidoDocsExigidosRepository
-	c246865 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.PedidoDocsExigidosRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/PedidoDocsExigidosRepository.html">
+	c301128 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.PedidoDocsExigidosRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/PedidoDocsExigidosRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoDocsExigidosRepository </td></tr>
 		</table></td></tr>
@@ -668,7 +686,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/repository/PedidoDocsExigidosRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.PedidoCamposAcoesRepository
-	c246866 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.PedidoCamposAcoesRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/PedidoCamposAcoesRepository.html">
+	c301129 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.PedidoCamposAcoesRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/PedidoCamposAcoesRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoCamposAcoesRepository </td></tr>
 		</table></td></tr>
@@ -681,7 +699,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/repository/PedidoCamposAcoesRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.PedidoAreasServidoresRepository
-	c246867 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.PedidoAreasServidoresRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/PedidoAreasServidoresRepository.html">
+	c301130 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.PedidoAreasServidoresRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/PedidoAreasServidoresRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoAreasServidoresRepository </td></tr>
 		</table></td></tr>
@@ -696,7 +714,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/repository/PedidoAreasServidoresRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.PedidoAreasRepository
-	c246868 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.PedidoAreasRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/PedidoAreasRepository.html">
+	c301131 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.PedidoAreasRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/PedidoAreasRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoAreasRepository </td></tr>
 		</table></td></tr>
@@ -714,7 +732,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/repository/PedidoAreasRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.PedidoAreasFaixaValorRepository
-	c246869 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.PedidoAreasFaixaValorRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/PedidoAreasFaixaValorRepository.html">
+	c301132 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.PedidoAreasFaixaValorRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/PedidoAreasFaixaValorRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoAreasFaixaValorRepository </td></tr>
 		</table></td></tr>
@@ -726,7 +744,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/repository/PedidoAreasFaixaValorRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.PagosArrecRepository
-	c246870 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.PagosArrecRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/PagosArrecRepository.html">
+	c301133 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.PagosArrecRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/PagosArrecRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PagosArrecRepository </td></tr>
 		</table></td></tr>
@@ -737,8 +755,20 @@ digraph G {
 <tr><td align="left" balign="left"> + PagosArrecRepository() </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/repository/PagosArrecRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.arr.persistence.repository.NotaAvulsaRepository
+	c301134 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.NotaAvulsaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/NotaAvulsaRepository.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> NotaAvulsaRepository </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + NotaAvulsaRepository() </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../arr/persistence/repository/NotaAvulsaRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.LotesPagosRepository
-	c246871 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.LotesPagosRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/LotesPagosRepository.html">
+	c301135 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.LotesPagosRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/LotesPagosRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LotesPagosRepository </td></tr>
 		</table></td></tr>
@@ -750,7 +780,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/repository/LotesPagosRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.LotesPagosArrecRepository
-	c246872 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.LotesPagosArrecRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/LotesPagosArrecRepository.html">
+	c301136 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.LotesPagosArrecRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/LotesPagosArrecRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> LotesPagosArrecRepository </td></tr>
 		</table></td></tr>
@@ -762,7 +792,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/repository/LotesPagosArrecRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.GruposCnaeRepository
-	c246873 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.GruposCnaeRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/GruposCnaeRepository.html">
+	c301137 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.GruposCnaeRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/GruposCnaeRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> GruposCnaeRepository </td></tr>
 		</table></td></tr>
@@ -776,7 +806,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/repository/GruposCnaeRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.DetalhesStrRepository
-	c246874 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.DetalhesStrRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/DetalhesStrRepository.html">
+	c301138 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.DetalhesStrRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/DetalhesStrRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DetalhesStrRepository </td></tr>
 		</table></td></tr>
@@ -788,7 +818,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/repository/DetalhesStrRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.DelegaciasRepository
-	c246875 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.DelegaciasRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/DelegaciasRepository.html">
+	c301139 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.DelegaciasRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/DelegaciasRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DelegaciasRepository </td></tr>
 		</table></td></tr>
@@ -800,7 +830,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/repository/DelegaciasRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.DelegaciaAgenciasRepository
-	c246876 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.DelegaciaAgenciasRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/DelegaciaAgenciasRepository.html">
+	c301140 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.DelegaciaAgenciasRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/DelegaciaAgenciasRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DelegaciaAgenciasRepository </td></tr>
 		</table></td></tr>
@@ -811,8 +841,20 @@ digraph G {
 <tr><td align="left" balign="left"> + DelegaciaAgenciasRepository() </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/repository/DelegaciaAgenciasRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.arr.persistence.repository.DebitosContaCorrenteRepository
+	c301141 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.DebitosContaCorrenteRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/DebitosContaCorrenteRepository.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> DebitosContaCorrenteRepository </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + DebitosContaCorrenteRepository() </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../arr/persistence/repository/DebitosContaCorrenteRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.DareRepository
-	c246877 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.DareRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/DareRepository.html">
+	c301142 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.DareRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/DareRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DareRepository </td></tr>
 		</table></td></tr>
@@ -821,10 +863,24 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + DareRepository() </td></tr>
+<tr><td align="left" balign="left"> + getNextValSeq() : Long </td></tr>
+<tr><td align="left" balign="left"> + findDareByNossoNumero(nossoNumero : Long) : Dare </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/repository/DareRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.arr.persistence.repository.DareOrigemReceitaRepository
+	c301143 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.DareOrigemReceitaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/DareOrigemReceitaRepository.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> DareOrigemReceitaRepository </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + DareOrigemReceitaRepository() </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../arr/persistence/repository/DareOrigemReceitaRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.DareDetalheRepository
-	c246878 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.DareDetalheRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/DareDetalheRepository.html">
+	c301144 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.DareDetalheRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/DareDetalheRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DareDetalheRepository </td></tr>
 		</table></td></tr>
@@ -836,7 +892,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/repository/DareDetalheRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.ConveniosTarifasRepository
-	c246879 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.ConveniosTarifasRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/ConveniosTarifasRepository.html">
+	c301145 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.ConveniosTarifasRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/ConveniosTarifasRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ConveniosTarifasRepository </td></tr>
 		</table></td></tr>
@@ -849,7 +905,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/repository/ConveniosTarifasRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.ConveniosReceitasRepository
-	c246880 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.ConveniosReceitasRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/ConveniosReceitasRepository.html">
+	c301146 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.ConveniosReceitasRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/ConveniosReceitasRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ConveniosReceitasRepository </td></tr>
 		</table></td></tr>
@@ -862,7 +918,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/repository/ConveniosReceitasRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.ConveniosArrecRepository
-	c246881 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.ConveniosArrecRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/ConveniosArrecRepository.html">
+	c301147 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.ConveniosArrecRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/ConveniosArrecRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ConveniosArrecRepository </td></tr>
 		</table></td></tr>
@@ -874,10 +930,24 @@ digraph G {
 <tr><td align="left" balign="left"> + findIdConvenioArrecByTipoConvenioAndAgencia(tipoConvenio : TipoConvenioEnum, idBanco : Integer, idAgencia : Integer) : Collection&lt;Long&gt; </td></tr>
 <tr><td align="left" balign="left"> + existsLockReference(id : Long) : boolean </td></tr>
 <tr><td align="left" balign="left"> + updateSituacao(id : Long, situacao : SituacaoEnum) </td></tr>
+<tr><td align="left" balign="left"> + findOne(id : Long) : ConveniosArrec </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/repository/ConveniosArrecRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.arr.persistence.repository.ContribuintesRepository
+	c301148 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.ContribuintesRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/ContribuintesRepository.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> ContribuintesRepository </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + ContribuintesRepository() </td></tr>
+<tr><td align="left" balign="left"> + findByFilter(contribuinteFilter : DareContribuinteFilter) : Contribuintes </td></tr>
+		</table></td></tr>
+		</table>>, URL="../../arr/persistence/repository/ContribuintesRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.BancosRepository
-	c246882 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.BancosRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/BancosRepository.html">
+	c301149 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.BancosRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/BancosRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BancosRepository </td></tr>
 		</table></td></tr>
@@ -892,7 +962,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/repository/BancosRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.BancoAgenciasRepository
-	c246883 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.BancoAgenciasRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/BancoAgenciasRepository.html">
+	c301150 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.BancoAgenciasRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/BancoAgenciasRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BancoAgenciasRepository </td></tr>
 		</table></td></tr>
@@ -913,7 +983,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/repository/BancoAgenciasRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.ArquivosStrRepository
-	c246884 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.ArquivosStrRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/ArquivosStrRepository.html">
+	c301151 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.ArquivosStrRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/ArquivosStrRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArquivosStrRepository </td></tr>
 		</table></td></tr>
@@ -925,7 +995,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/repository/ArquivosStrRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.ArquivoRecepcaoRepository
-	c246885 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.ArquivoRecepcaoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/ArquivoRecepcaoRepository.html">
+	c301152 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.ArquivoRecepcaoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/ArquivoRecepcaoRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArquivoRecepcaoRepository </td></tr>
 		</table></td></tr>
@@ -934,10 +1004,11 @@ digraph G {
 		</table></td></tr>
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="left" balign="left"> + ArquivoRecepcaoRepository() </td></tr>
+<tr><td align="left" balign="left"> + findOne(id : Long) : ArquivoRecepcao </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/repository/ArquivoRecepcaoRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.ArquivoErrosStrRepository
-	c246886 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.ArquivoErrosStrRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/ArquivoErrosStrRepository.html">
+	c301153 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.ArquivoErrosStrRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/ArquivoErrosStrRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArquivoErrosStrRepository </td></tr>
 		</table></td></tr>
@@ -949,7 +1020,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/repository/ArquivoErrosStrRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.ArquivoErroRepository
-	c246887 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.ArquivoErroRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/ArquivoErroRepository.html">
+	c301154 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.ArquivoErroRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/ArquivoErroRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArquivoErroRepository </td></tr>
 		</table></td></tr>
@@ -961,7 +1032,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/repository/ArquivoErroRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.persistence.repository.ArquivoDetalhePagosRepository
-	c246888 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.ArquivoDetalhePagosRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/ArquivoDetalhePagosRepository.html">
+	c301155 [label=<<table title="br.gov.to.sefaz.arr.persistence.repository.ArquivoDetalhePagosRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../arr/persistence/repository/ArquivoDetalhePagosRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArquivoDetalhePagosRepository </td></tr>
 		</table></td></tr>
@@ -973,138 +1044,148 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../../arr/persistence/repository/ArquivoDetalhePagosRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.par.gestao.persistence.repository.ParametroGeralRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.par.gestao.persistence.entity.ParametroGeral, java.lang.Integer>
-	c246314:p -> c246373:p [dir=back,arrowtail=empty];
+	c300531:p -> c300601:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.par.gestao.persistence.repository.MunicipioRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.par.gestao.persistence.entity.Municipio, java.lang.Integer>
-	c246314:p -> c246374:p [dir=back,arrowtail=empty];
+	c300531:p -> c300602:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.par.gestao.persistence.repository.FeriadoRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.par.gestao.persistence.entity.Feriado, br.gov.to.sefaz.par.gestao.persistence.entity.FeriadoPK>
+	c300531:p -> c300604:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.par.gestao.persistence.repository.EstadoRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.par.gestao.persistence.entity.Estado, java.lang.String>
-	c246314:p -> c246376:p [dir=back,arrowtail=empty];
+	c300531:p -> c300605:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.par.gestao.persistence.repository.AtividadeEconomicaRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.par.gestao.persistence.entity.AtividadeEconomica, java.lang.String>
-	c246314:p -> c246377:p [dir=back,arrowtail=empty];
+	c300531:p -> c300606:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.persistence.repository.UsuarioSistemaRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema, java.lang.String>
-	c246314:p -> c246587:p [dir=back,arrowtail=empty];
+	c300531:p -> c300816:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.persistence.repository.UsuarioPrincipalEmpresaRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.seg.persistence.entity.UsuarioPrincipalEmpresa, java.lang.Long>
-	c246314:p -> c246588:p [dir=back,arrowtail=empty];
+	c300531:p -> c300817:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.persistence.repository.UsuarioPostoTrabalhoRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.seg.persistence.entity.UsuarioPostoTrabalho, br.gov.to.sefaz.seg.persistence.entity.UsuarioPostoTrabalhoPK>
-	c246314:p -> c246589:p [dir=back,arrowtail=empty];
+	c300531:p -> c300818:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.persistence.repository.UsuarioPerfilRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.seg.persistence.entity.UsuarioPerfil, java.lang.Long>
-	c246314:p -> c246590:p [dir=back,arrowtail=empty];
+	c300531:p -> c300819:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.persistence.repository.UnidadeOrganizacionalRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.seg.persistence.entity.UnidadeOrganizacional, java.lang.Long>
-	c246314:p -> c246591:p [dir=back,arrowtail=empty];
+	c300531:p -> c300820:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.persistence.repository.SolicitacaoUsuarioRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.seg.persistence.entity.SolicitacaoUsuario, java.lang.Long>
-	c246314:p -> c246592:p [dir=back,arrowtail=empty];
+	c300531:p -> c300821:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.persistence.repository.SmsContribuinteRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.seg.persistence.entity.SmsContribuinte, java.lang.Long>
-	c246314:p -> c246593:p [dir=back,arrowtail=empty];
+	c300531:p -> c300822:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.persistence.repository.ProcuracaoUsuarioRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.seg.persistence.entity.ProcuracaoUsuario, java.lang.Long>
-	c246314:p -> c246595:p [dir=back,arrowtail=empty];
+	c300531:p -> c300824:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.persistence.repository.ProcuracaoOpcaoRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.seg.persistence.entity.ProcuracaoOpcao, java.lang.Long>
-	c246314:p -> c246596:p [dir=back,arrowtail=empty];
+	c300531:p -> c300825:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.persistence.repository.PostoTrabalhoRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.seg.persistence.entity.PostoTrabalho, java.lang.Integer>
-	c246314:p -> c246597:p [dir=back,arrowtail=empty];
+	c300531:p -> c300826:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.persistence.repository.PerfilSistemaRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.seg.persistence.entity.PerfilSistema, java.lang.Long>
-	c246314:p -> c246598:p [dir=back,arrowtail=empty];
+	c300531:p -> c300827:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.persistence.repository.PerfilPapelRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.seg.persistence.entity.PerfilPapel, br.gov.to.sefaz.seg.persistence.entity.PerfilPapelPK>
-	c246314:p -> c246599:p [dir=back,arrowtail=empty];
+	c300531:p -> c300828:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.persistence.repository.PapelSistemaRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.seg.persistence.entity.PapelSistema, java.lang.Long>
-	c246314:p -> c246600:p [dir=back,arrowtail=empty];
+	c300531:p -> c300829:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.persistence.repository.PapelOpcaoRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.seg.persistence.entity.PapelOpcao, br.gov.to.sefaz.seg.persistence.entity.PapelOpcaoPK>
-	c246314:p -> c246601:p [dir=back,arrowtail=empty];
+	c300531:p -> c300830:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.persistence.repository.OperacaoAuditadaRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.seg.persistence.entity.OperacaoAuditada, java.lang.Long>
-	c246314:p -> c246602:p [dir=back,arrowtail=empty];
+	c300531:p -> c300831:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.persistence.repository.OpcaoAplicacaoRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.seg.persistence.entity.OpcaoAplicacao, java.lang.Long>
-	c246314:p -> c246603:p [dir=back,arrowtail=empty];
+	c300531:p -> c300832:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.persistence.repository.ModuloSistemaRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.seg.persistence.entity.ModuloSistema, java.lang.Long>
-	c246314:p -> c246604:p [dir=back,arrowtail=empty];
+	c300531:p -> c300833:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.persistence.repository.LogNavegacaoRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.seg.persistence.entity.LogNavegacao, java.lang.Long>
-	c246314:p -> c246605:p [dir=back,arrowtail=empty];
+	c300531:p -> c300834:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.persistence.repository.ListagemCpfProcuracaoRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.seg.persistence.entity.ListagemCpfProcuracao, java.lang.String>
-	c246314:p -> c246606:p [dir=back,arrowtail=empty];
+	c300531:p -> c300835:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.persistence.repository.HistoricoNavegacaoRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.seg.persistence.entity.HistoricoNavegacao, java.lang.Long>
-	c246314:p -> c246607:p [dir=back,arrowtail=empty];
+	c300531:p -> c300836:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.persistence.repository.HistoricoLoginSistemaRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.seg.persistence.entity.HistoricoLoginSistema, java.lang.Long>
-	c246314:p -> c246608:p [dir=back,arrowtail=empty];
+	c300531:p -> c300837:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.persistence.repository.ErroProcessoAuditoriaRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.seg.persistence.entity.ErroProcessoAuditoria, java.lang.Long>
-	c246314:p -> c246609:p [dir=back,arrowtail=empty];
+	c300531:p -> c300838:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.persistence.repository.CorreioContribuinteRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.seg.persistence.entity.CorreioContribuinte, java.lang.Long>
-	c246314:p -> c246610:p [dir=back,arrowtail=empty];
+	c300531:p -> c300839:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.persistence.repository.ComunicacaoContribuinteRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.seg.persistence.entity.ComunicacaoContribuinte, java.lang.String>
-	c246314:p -> c246611:p [dir=back,arrowtail=empty];
+	c300531:p -> c300840:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.persistence.repository.AtribuirPerfilRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.seg.persistence.entity.UsuarioSistema, java.lang.String>
-	c246314:p -> c246612:p [dir=back,arrowtail=empty];
+	c300531:p -> c300841:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.seg.persistence.repository.AplicacaoModuloRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.seg.persistence.entity.AplicacaoModulo, java.lang.Long>
-	c246314:p -> c246613:p [dir=back,arrowtail=empty];
+	c300531:p -> c300842:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.cci.persistence.repository.PessoaJuridicaRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.cci.persistence.entity.PessoaJuridica, java.lang.String>
-	c246314:p -> c246655:p [dir=back,arrowtail=empty];
+	c300531:p -> c300887:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.cci.persistence.repository.ContribuinteIcmsRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.cci.persistence.entity.ContribuinteIcms, java.lang.String>
-	c246314:p -> c246656:p [dir=back,arrowtail=empty];
+	c300531:p -> c300888:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.persistence.repository.TipoRejeicaoArquivosRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.TipoRejeicaoArquivos, java.lang.Integer>
-	c246314:p -> c246853:p [dir=back,arrowtail=empty];
+	c300531:p -> c301116:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.persistence.repository.TipoGruposCnaesRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.TipoGruposCnaes, java.lang.Integer>
-	c246314:p -> c246854:p [dir=back,arrowtail=empty];
+	c300531:p -> c301117:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.persistence.repository.ResumoStrRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.ResumoStr, br.gov.to.sefaz.arr.persistence.entity.ResumoStrPK>
-	c246314:p -> c246855:p [dir=back,arrowtail=empty];
+	c300531:p -> c301118:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.persistence.repository.ReceitasTaxasRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.ReceitasTaxas, br.gov.to.sefaz.arr.persistence.entity.ReceitasTaxasPK>
-	c246314:p -> c246857:p [dir=back,arrowtail=empty];
+	c300531:p -> c301120:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.persistence.repository.ReceitasRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.Receitas, java.lang.Integer>
-	c246314:p -> c246858:p [dir=back,arrowtail=empty];
+	c300531:p -> c301121:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.persistence.repository.ReceitasRepasseRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.ReceitasRepasse, br.gov.to.sefaz.arr.persistence.entity.ReceitasRepassePK>
-	c246314:p -> c246859:p [dir=back,arrowtail=empty];
+	c300531:p -> c301122:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.persistence.repository.PlanoContasRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.PlanoContas, java.lang.Long>
-	c246314:p -> c246860:p [dir=back,arrowtail=empty];
+	c300531:p -> c301123:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.persistence.repository.PedidoTiposRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.PedidoTipos, java.lang.Integer>
-	c246314:p -> c246861:p [dir=back,arrowtail=empty];
+	c300531:p -> c301124:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.persistence.repository.PedidoTipoDocsRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.PedidoTipoDocs, java.lang.Integer>
-	c246314:p -> c246862:p [dir=back,arrowtail=empty];
+	c300531:p -> c301125:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.persistence.repository.PedidoTipoAcoesRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.PedidoTipoAcoes, java.lang.Integer>
-	c246314:p -> c246863:p [dir=back,arrowtail=empty];
+	c300531:p -> c301126:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.persistence.repository.PedidoReceitaRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.PedidoReceita, br.gov.to.sefaz.arr.persistence.entity.PedidoReceitaPK>
-	c246314:p -> c246864:p [dir=back,arrowtail=empty];
+	c300531:p -> c301127:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.persistence.repository.PedidoDocsExigidosRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.PedidoDocsExigidos, br.gov.to.sefaz.arr.persistence.entity.PedidoDocsExigidosPK>
-	c246314:p -> c246865:p [dir=back,arrowtail=empty];
+	c300531:p -> c301128:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.persistence.repository.PedidoCamposAcoesRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.PedidoCamposAcoes, java.lang.Integer>
-	c246314:p -> c246866:p [dir=back,arrowtail=empty];
+	c300531:p -> c301129:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.persistence.repository.PedidoAreasServidoresRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.PedidoAreasServidores, br.gov.to.sefaz.arr.persistence.entity.PedidoAreasServidoresPK>
-	c246314:p -> c246867:p [dir=back,arrowtail=empty];
+	c300531:p -> c301130:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.persistence.repository.PedidoAreasRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.PedidoAreas, java.lang.Integer>
-	c246314:p -> c246868:p [dir=back,arrowtail=empty];
+	c300531:p -> c301131:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.persistence.repository.PedidoAreasFaixaValorRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.PedidoAreasFaixaValor, java.lang.Integer>
-	c246314:p -> c246869:p [dir=back,arrowtail=empty];
+	c300531:p -> c301132:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.persistence.repository.PagosArrecRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.PagosArrec, br.gov.to.sefaz.arr.persistence.entity.PagosArrecPK>
-	c246314:p -> c246870:p [dir=back,arrowtail=empty];
+	c300531:p -> c301133:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.arr.persistence.repository.NotaAvulsaRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.view.NotaAvulsa, java.lang.Long>
+	c300531:p -> c301134:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.persistence.repository.LotesPagosRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.LotesPagos, br.gov.to.sefaz.arr.persistence.entity.LotesPagosPK>
-	c246314:p -> c246871:p [dir=back,arrowtail=empty];
+	c300531:p -> c301135:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.persistence.repository.LotesPagosArrecRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.LotesPagosArrec, java.lang.Long>
-	c246314:p -> c246872:p [dir=back,arrowtail=empty];
+	c300531:p -> c301136:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.persistence.repository.GruposCnaeRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.GruposCnae, br.gov.to.sefaz.arr.persistence.entity.GruposCnaePK>
-	c246314:p -> c246873:p [dir=back,arrowtail=empty];
+	c300531:p -> c301137:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.persistence.repository.DetalhesStrRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.DetalheStr, java.lang.Long>
-	c246314:p -> c246874:p [dir=back,arrowtail=empty];
+	c300531:p -> c301138:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.persistence.repository.DelegaciasRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.Delegacias, java.lang.Integer>
-	c246314:p -> c246875:p [dir=back,arrowtail=empty];
+	c300531:p -> c301139:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.persistence.repository.DelegaciaAgenciasRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.DelegaciaAgencias, br.gov.to.sefaz.arr.persistence.entity.DelegaciaAgenciasPK>
-	c246314:p -> c246876:p [dir=back,arrowtail=empty];
+	c300531:p -> c301140:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.arr.persistence.repository.DebitosContaCorrenteRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.view.DebitosContaCorrente, java.lang.Long>
+	c300531:p -> c301141:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.persistence.repository.DareRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.Dare, java.lang.Long>
-	c246314:p -> c246877:p [dir=back,arrowtail=empty];
+	c300531:p -> c301142:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.arr.persistence.repository.DareOrigemReceitaRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.DareOrigemReceita, br.gov.to.sefaz.arr.persistence.entity.DareOrigemReceitaPK>
+	c300531:p -> c301143:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.persistence.repository.DareDetalheRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.DareDetalhe, br.gov.to.sefaz.arr.persistence.entity.DareDetalhePK>
-	c246314:p -> c246878:p [dir=back,arrowtail=empty];
+	c300531:p -> c301144:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.persistence.repository.ConveniosTarifasRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.ConveniosTarifas, java.lang.Integer>
-	c246314:p -> c246879:p [dir=back,arrowtail=empty];
+	c300531:p -> c301145:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.persistence.repository.ConveniosReceitasRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.ConveniosReceitas, br.gov.to.sefaz.arr.persistence.entity.ConveniosReceitasPK>
-	c246314:p -> c246880:p [dir=back,arrowtail=empty];
+	c300531:p -> c301146:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.persistence.repository.ConveniosArrecRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.ConveniosArrec, java.lang.Long>
-	c246314:p -> c246881:p [dir=back,arrowtail=empty];
+	c300531:p -> c301147:p [dir=back,arrowtail=empty];
+	//br.gov.to.sefaz.arr.persistence.repository.ContribuintesRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.view.Contribuintes, br.gov.to.sefaz.arr.persistence.view.ContribuintesPK>
+	c300531:p -> c301148:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.persistence.repository.BancosRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.Bancos, java.lang.Integer>
-	c246314:p -> c246882:p [dir=back,arrowtail=empty];
+	c300531:p -> c301149:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.persistence.repository.BancoAgenciasRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.BancoAgencias, br.gov.to.sefaz.arr.persistence.entity.BancoAgenciasPK>
-	c246314:p -> c246883:p [dir=back,arrowtail=empty];
+	c300531:p -> c301150:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.persistence.repository.ArquivosStrRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.ArquivosStr, java.lang.Long>
-	c246314:p -> c246884:p [dir=back,arrowtail=empty];
+	c300531:p -> c301151:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.persistence.repository.ArquivoRecepcaoRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.ArquivoRecepcao, java.lang.Long>
-	c246314:p -> c246885:p [dir=back,arrowtail=empty];
+	c300531:p -> c301152:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.persistence.repository.ArquivoErrosStrRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.ArquivoErrosStr, br.gov.to.sefaz.arr.persistence.entity.ArquivoErrosStrPK>
-	c246314:p -> c246886:p [dir=back,arrowtail=empty];
+	c300531:p -> c301153:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.persistence.repository.ArquivoErroRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.ArquivoErro, java.lang.Long>
-	c246314:p -> c246887:p [dir=back,arrowtail=empty];
+	c300531:p -> c301154:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.persistence.repository.ArquivoDetalhePagosRepository extends br.gov.to.sefaz.persistence.repository.BaseRepository<br.gov.to.sefaz.arr.persistence.entity.ArquivoDetalhePagos, java.lang.Long>
-	c246314:p -> c246888:p [dir=back,arrowtail=empty];
+	c300531:p -> c301155:p [dir=back,arrowtail=empty];
 }
 

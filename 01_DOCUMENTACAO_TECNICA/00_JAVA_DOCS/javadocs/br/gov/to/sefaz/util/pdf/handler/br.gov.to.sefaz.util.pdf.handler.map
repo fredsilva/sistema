@@ -1,0 +1,14 @@
+<map id="G" name="G">
+<area shape="rect" id="node1_0" href="./TextExpressionHandler.html" title="br.gov.to.sefaz.util.pdf.handler.TextExpressionHandler" alt="" coords="439,193,1023,321"/>
+<area shape="rect" id="node1" href="./TextExpressionHandler.html" title="&lt;TABLE&gt;" alt="" coords="429,187,1034,326"/>
+<area shape="rect" id="node2_1" href="./RepeatExpressionReplaceHandler.html" title="br.gov.to.sefaz.util.pdf.handler.RepeatExpressionReplaceHandler" alt="" coords="16,561,1020,672"/>
+<area shape="rect" id="node2" href="./RepeatExpressionReplaceHandler.html" title="&lt;TABLE&gt;" alt="" coords="5,556,1031,677"/>
+<area shape="rect" id="node3_2" href="./LogicalExpressionFinderContext.html" title="br.gov.to.sefaz.util.pdf.handler.LogicalExpressionFinderContext" alt="" coords="2112,11,2433,503"/>
+<area shape="rect" id="node3" href="./LogicalExpressionFinderContext.html" title="&lt;TABLE&gt;" alt="" coords="2101,5,2444,508"/>
+<area shape="rect" id="node4_3" href="./IfExpressionReplaceHandler.html" title="br.gov.to.sefaz.util.pdf.handler.IfExpressionReplaceHandler" alt="" coords="1065,561,2069,672"/>
+<area shape="rect" id="node4" href="./IfExpressionReplaceHandler.html" title="&lt;TABLE&gt;" alt="" coords="1055,556,2080,677"/>
+<area shape="rect" id="node5_4" href="./ExpressionReplaceHandler.html" title="br.gov.to.sefaz.util.pdf.handler.ExpressionReplaceHandler" alt="" coords="1069,201,2066,312"/>
+<area shape="rect" id="node5" href="./ExpressionReplaceHandler.html" title="&lt;TABLE&gt;" alt="" coords="1058,196,2077,317"/>
+<area shape="rect" id="node6_5" href="./DefaultExpressionReplaceHandler.html" title="br.gov.to.sefaz.util.pdf.handler.DefaultExpressionReplaceHandler" alt="" coords="2115,561,3119,672"/>
+<area shape="rect" id="node6" href="./DefaultExpressionReplaceHandler.html" title="&lt;TABLE&gt;" alt="" coords="2104,556,3129,677"/>
+</map>

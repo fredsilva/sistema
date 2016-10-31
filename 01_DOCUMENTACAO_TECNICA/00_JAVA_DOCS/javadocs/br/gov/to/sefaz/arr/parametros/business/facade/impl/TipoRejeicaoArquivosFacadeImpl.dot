@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c847353 [label=<<table title="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/facade/impl/DefaultCrudFacade.html">
+	c1052988 [label=<<table title="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/facade/impl/DefaultCrudFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultCrudFacade&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
 		</table></td></tr>
@@ -24,19 +24,20 @@ digraph G {
 <tr><td align="left" balign="left"> + save(entity : E) : E </td></tr>
 <tr><td align="left" balign="left"> + save(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + update(entity : E) : E </td></tr>
+<tr><td align="left" balign="left"> + update(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + delete(id : I) : Optional&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + delete(ids : Iterable&lt;I&gt;) </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../../../business/facade/impl/DefaultCrudFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.TipoRejeicaoArquivosFacade
-	c847687 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.TipoRejeicaoArquivosFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../TipoRejeicaoArquivosFacade.html">
+	c1053359 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.TipoRejeicaoArquivosFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../TipoRejeicaoArquivosFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> TipoRejeicaoArquivosFacade </td></tr>
 		</table></td></tr>
 		</table>>, URL="../TipoRejeicaoArquivosFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoRejeicaoArquivosFacadeImpl
-	c847697 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoRejeicaoArquivosFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TipoRejeicaoArquivosFacadeImpl.html">
+	c1053369 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoRejeicaoArquivosFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./TipoRejeicaoArquivosFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoRejeicaoArquivosFacadeImpl </td></tr>
 		</table></td></tr>
@@ -48,8 +49,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoRejeicaoArquivosFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoRejeicaoArquivosFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.arr.persistence.entity.TipoRejeicaoArquivos, java.lang.Integer>
-	c847353:p -> c847697:p [dir=back,arrowtail=empty];
+	c1052988:p -> c1053369:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.parametros.business.facade.impl.TipoRejeicaoArquivosFacadeImpl implements br.gov.to.sefaz.arr.parametros.business.facade.TipoRejeicaoArquivosFacade
-	c847687:p -> c847697:p [dir=back,arrowtail=empty,style=dashed];
+	c1053359:p -> c1053369:p [dir=back,arrowtail=empty,style=dashed];
 }
 

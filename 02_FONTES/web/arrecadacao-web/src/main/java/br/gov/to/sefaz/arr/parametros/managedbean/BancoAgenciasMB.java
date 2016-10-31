@@ -8,6 +8,7 @@ import br.gov.to.sefaz.par.gestao.persistence.entity.Estado;
 import br.gov.to.sefaz.par.gestao.persistence.entity.Municipio;
 import br.gov.to.sefaz.presentation.managedbean.impl.DefaultCrudMB;
 import br.gov.to.sefaz.util.message.MessageUtil;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.Serializable;
@@ -17,6 +18,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 

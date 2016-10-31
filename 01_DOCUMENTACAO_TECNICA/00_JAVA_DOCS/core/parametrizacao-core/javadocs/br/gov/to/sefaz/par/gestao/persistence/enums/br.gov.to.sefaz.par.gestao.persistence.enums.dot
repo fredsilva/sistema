@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.par.gestao.persistence.enums.TipoParametroGeralEnum
-	c345 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.enums.TipoParametroGeralEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoParametroGeralEnum.html">
+	c420 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.enums.TipoParametroGeralEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoParametroGeralEnum.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
 <tr><td align="center" balign="center"> TipoParametroGeralEnum </td></tr>
@@ -23,5 +23,21 @@ digraph G {
 <tr><td align="left" balign="left"> DINAMICO </td></tr>
 		</table></td></tr>
 		</table>>, URL="./TipoParametroGeralEnum.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.par.gestao.persistence.enums.TipoFeriadoEnum
+	c421 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.enums.TipoFeriadoEnum" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoFeriadoEnum.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> &#171;enumeration&#187; </td></tr>
+<tr><td align="center" balign="center"> TipoFeriadoEnum </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> NACIONAL </td></tr>
+<tr><td align="left" balign="left"> ESTADUAL </td></tr>
+<tr><td align="left" balign="left"> MUNICIPAL </td></tr>
+<tr><td align="left" balign="left"> OUTROS </td></tr>
+		</table></td></tr>
+		</table>>, URL="./TipoFeriadoEnum.html", fontname="arial", fontcolor="black", fontsize=10.0];
 }
 

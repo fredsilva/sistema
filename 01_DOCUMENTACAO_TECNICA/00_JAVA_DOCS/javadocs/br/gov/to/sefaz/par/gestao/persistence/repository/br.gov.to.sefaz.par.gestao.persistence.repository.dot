@@ -10,14 +10,14 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.par.gestao.persistence.repository.RepositoryPackageMarker
-	c77276 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.repository.RepositoryPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RepositoryPackageMarker.html">
+	c90614 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.repository.RepositoryPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./RepositoryPackageMarker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> RepositoryPackageMarker </td></tr>
 		</table></td></tr>
 		</table>>, URL="./RepositoryPackageMarker.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.par.gestao.persistence.repository.ParametroGeralRepository
-	c77277 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.repository.ParametroGeralRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ParametroGeralRepository.html">
+	c90615 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.repository.ParametroGeralRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ParametroGeralRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ParametroGeralRepository </td></tr>
 		</table></td></tr>
@@ -28,10 +28,11 @@ digraph G {
 <tr><td align="left" balign="left"> + ParametroGeralRepository() </td></tr>
 <tr><td align="left" balign="left"> + findByNome(nome : String) : ParametroGeral </td></tr>
 <tr><td align="left" balign="left"> + findPArametroGeralDinamico(sql : String, params : ParamsBuilder) : List&lt;CodeData&lt;&gt;&gt; </td></tr>
+<tr><td align="left" balign="left"> + findExitsNome(idParametroGeral : Integer, nomeParametroGeral : String) : boolean </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ParametroGeralRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.par.gestao.persistence.repository.MunicipioRepository
-	c77278 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.repository.MunicipioRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MunicipioRepository.html">
+	c90616 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.repository.MunicipioRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./MunicipioRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> MunicipioRepository </td></tr>
 		</table></td></tr>
@@ -44,14 +45,27 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./MunicipioRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.par.gestao.persistence.repository.LogradouroRepository
-	c77279 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.repository.LogradouroRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LogradouroRepository.html">
+	c90617 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.repository.LogradouroRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./LogradouroRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> LogradouroRepository </td></tr>
 		</table></td></tr>
 		</table>>, URL="./LogradouroRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.par.gestao.persistence.repository.FeriadoRepository
+	c90618 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.repository.FeriadoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./FeriadoRepository.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> FeriadoRepository </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + FeriadoRepository() </td></tr>
+<tr><td align="left" balign="left"> + isFeriadoMunicipalOuNacional(data : LocalDate, codMunicipioIbge : Integer) : boolean </td></tr>
+		</table></td></tr>
+		</table>>, URL="./FeriadoRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.par.gestao.persistence.repository.EstadoRepository
-	c77280 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.repository.EstadoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EstadoRepository.html">
+	c90619 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.repository.EstadoRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./EstadoRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> EstadoRepository </td></tr>
 		</table></td></tr>
@@ -63,7 +77,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./EstadoRepository.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.par.gestao.persistence.repository.AtividadeEconomicaRepository
-	c77281 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.repository.AtividadeEconomicaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AtividadeEconomicaRepository.html">
+	c90620 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.repository.AtividadeEconomicaRepository" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./AtividadeEconomicaRepository.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> AtividadeEconomicaRepository </td></tr>
 		</table></td></tr>

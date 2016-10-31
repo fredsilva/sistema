@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.par.gestao.persistence.entity.Logradouro
-	c779 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.entity.Logradouro" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Logradouro.html">
+	c1144 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.entity.Logradouro" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./Logradouro.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> Logradouro </td></tr>
 		</table></td></tr>
@@ -30,9 +30,9 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./Logradouro.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.par.gestao.persistence.entity.Logradouro implements java.io.Serializable
-	c790:p -> c779:p [dir=back,arrowtail=empty,style=dashed];
+	c1159:p -> c1144:p [dir=back,arrowtail=empty,style=dashed];
 	// java.io.Serializable
-	c790 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/io/Serializable.html">
+	c1159 [label=<<table title="java.io.Serializable" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="http://java.sun.com/j2se/1.4.2/docs/api/java/io/Serializable.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> Serializable </td></tr>

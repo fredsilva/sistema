@@ -2,11 +2,9 @@ package br.gov.to.sefaz.persistence.query.builder.hql.handler;
 
 import br.gov.to.sefaz.persistence.query.builder.ParamsBuilder;
 import br.gov.to.sefaz.util.application.ApplicationUtil;
+import br.gov.to.sefaz.util.reflection.ReflectionUtils;
 
-import java.beans.IntrospectionException;
-import java.beans.PropertyDescriptor;
 import java.lang.reflect.Field;
-import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -35,17 +33,14 @@ public class EntityHandler {
             IdClass annotation = eClazz.getDeclaredAnnotation(IdClass.class);
             Class idClass = annotation.value();
 
-            ParamsBuilder params = ParamsBuilder.empty();
-            ids.forEach(field -> {
-                try {
-                    PropertyDescriptor propertyDescriptor = new PropertyDescriptor(field.getName(), idClass);
-                    params.put(field.getName(), propertyDescriptor.getReadMethod().invoke(id));
-                } catch (IllegalAccessException | InvocationTargetException | IntrospectionException e) {
-                    throw new EntityHandlingException(e);
-                }
-            });
+            if (idClass.isInstance(id)) {
+                ParamsBuilder params = ParamsBuilder.empty();
+                ids.forEach(field -> params.put(field.getName(), ReflectionUtils.invokeGetter(id, field.getName())));
+                return params;
+            }
 
-            return params;
+            throw new EntityHandlingException("The type of param 'id' needs to be the same of IdClass annotation ("
+                    + idClass.getName() + ")");
         }
     }
 

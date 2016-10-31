@@ -1,7 +1,7 @@
 package br.gov.to.sefaz.arr.configuration;
 
+import br.gov.to.sefaz.arr.parametros.controller.ControllerPackageMarker;
 import br.gov.to.sefaz.arr.parametros.managedbean.ManagedBeanPackageMarker;
-
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
@@ -12,6 +12,6 @@ import org.springframework.context.annotation.Configuration;
  * @since 05/05/2016 10:56:59
  */
 @Configuration
-@ComponentScan(basePackageClasses = {ManagedBeanPackageMarker.class})
+@ComponentScan(basePackageClasses = {ManagedBeanPackageMarker.class, ControllerPackageMarker.class})
 public class ArrWebConfiguration {
 }

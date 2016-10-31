@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.persistence.query.builder.hql.select.HqlSelectBuilder
-	c1003 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.select.HqlSelectBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./HqlSelectBuilder.html">
+	c1021 [label=<<table title="br.gov.to.sefaz.persistence.query.builder.hql.select.HqlSelectBuilder" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./HqlSelectBuilder.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> HqlSelectBuilder </td></tr>
 		</table></td></tr>

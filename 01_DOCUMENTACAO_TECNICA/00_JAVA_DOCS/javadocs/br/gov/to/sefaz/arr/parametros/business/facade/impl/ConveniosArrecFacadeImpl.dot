@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<E extends br.gov.to.sefaz.persistence.entity.AbstractEntity<I>, I extends java.io.Serializable>
-	c317293 [label=<<table title="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/facade/impl/DefaultCrudFacade.html">
+	c385122 [label=<<table title="br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../../../../../business/facade/impl/DefaultCrudFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> DefaultCrudFacade&lt;E extends AbstractEntity&lt;I&gt;, I extends Serializable&gt; </td></tr>
 		</table></td></tr>
@@ -24,12 +24,13 @@ digraph G {
 <tr><td align="left" balign="left"> + save(entity : E) : E </td></tr>
 <tr><td align="left" balign="left"> + save(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + update(entity : E) : E </td></tr>
+<tr><td align="left" balign="left"> + update(list : Collection&lt;E&gt;) : Collection&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + delete(id : I) : Optional&lt;E&gt; </td></tr>
 <tr><td align="left" balign="left"> + delete(ids : Iterable&lt;I&gt;) </td></tr>
 		</table></td></tr>
 		</table>>, URL="../../../../../business/facade/impl/DefaultCrudFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.ConveniosArrecFacade
-	c317634 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.ConveniosArrecFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ConveniosArrecFacade.html">
+	c385500 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.ConveniosArrecFacade" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="../ConveniosArrecFacade.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ConveniosArrecFacade </td></tr>
@@ -49,7 +50,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="../ConveniosArrecFacade.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.business.facade.impl.ConveniosArrecFacadeImpl
-	c317644 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.ConveniosArrecFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ConveniosArrecFacadeImpl.html">
+	c385510 [label=<<table title="br.gov.to.sefaz.arr.parametros.business.facade.impl.ConveniosArrecFacadeImpl" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" bgcolor="lemonChiffon" href="./ConveniosArrecFacadeImpl.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ConveniosArrecFacadeImpl </td></tr>
 		</table></td></tr>
@@ -69,8 +70,8 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ConveniosArrecFacadeImpl.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	//br.gov.to.sefaz.arr.parametros.business.facade.impl.ConveniosArrecFacadeImpl extends br.gov.to.sefaz.business.facade.impl.DefaultCrudFacade<br.gov.to.sefaz.arr.persistence.entity.ConveniosArrec, java.lang.Long>
-	c317293:p -> c317644:p [dir=back,arrowtail=empty];
+	c385122:p -> c385510:p [dir=back,arrowtail=empty];
 	//br.gov.to.sefaz.arr.parametros.business.facade.impl.ConveniosArrecFacadeImpl implements br.gov.to.sefaz.arr.parametros.business.facade.ConveniosArrecFacade
-	c317634:p -> c317644:p [dir=back,arrowtail=empty,style=dashed];
+	c385500:p -> c385510:p [dir=back,arrowtail=empty,style=dashed];
 }
 

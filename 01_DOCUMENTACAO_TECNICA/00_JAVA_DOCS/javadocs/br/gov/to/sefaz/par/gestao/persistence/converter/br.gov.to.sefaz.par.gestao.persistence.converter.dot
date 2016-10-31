@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.par.gestao.persistence.converter.TipoParametroGeralEnumConverter
-	c74639 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.converter.TipoParametroGeralEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoParametroGeralEnumConverter.html">
+	c87685 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.converter.TipoParametroGeralEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoParametroGeralEnumConverter.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoParametroGeralEnumConverter </td></tr>
 		</table></td></tr>
@@ -23,5 +23,19 @@ digraph G {
 <tr><td align="left" balign="left"> + convertToEntityAttribute(value : Character) : TipoParametroGeralEnum </td></tr>
 		</table></td></tr>
 		</table>>, URL="./TipoParametroGeralEnumConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.par.gestao.persistence.converter.TipoFeriadoEnumConverter
+	c87686 [label=<<table title="br.gov.to.sefaz.par.gestao.persistence.converter.TipoFeriadoEnumConverter" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoFeriadoEnumConverter.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> TipoFeriadoEnumConverter </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + TipoFeriadoEnumConverter() </td></tr>
+<tr><td align="left" balign="left"> + convertToDatabaseColumn(tipoFeriadoEnum : TipoFeriadoEnum) : Character </td></tr>
+<tr><td align="left" balign="left"> + convertToEntityAttribute(value : Character) : TipoFeriadoEnum </td></tr>
+		</table></td></tr>
+		</table>>, URL="./TipoFeriadoEnumConverter.html", fontname="arial", fontcolor="black", fontsize=10.0];
 }
 

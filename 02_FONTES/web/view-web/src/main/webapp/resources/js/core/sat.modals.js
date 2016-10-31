@@ -12,7 +12,7 @@ alertModal = {
         modalBody.empty();
         $.each(this.messages, function (key, value) {
             var alertDiv = document.createElement("div");
-            alertDiv.className = "alert " + value.class;
+            alertDiv.className = "alert auto-wrap " + value.class;
             alertDiv.appendChild(document.createTextNode(value.message));
 
             modalBody.append(alertDiv);

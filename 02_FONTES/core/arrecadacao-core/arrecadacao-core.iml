@@ -6,6 +6,7 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
@@ -91,6 +92,10 @@
     <orderEntry type="library" name="Maven: com.sun.mail:javax.mail:1.5.5" level="project" />
     <orderEntry type="library" name="Maven: javax.activation:activation:1.1" level="project" />
     <orderEntry type="library" name="Maven: org.bouncycastle:bcprov-jdk15on:1.54" level="project" />
+    <orderEntry type="library" name="Maven: net.sf.barcode4j:barcode4j:2.1" level="project" />
+    <orderEntry type="library" name="Maven: avalon-framework:avalon-framework-impl:4.2.0" level="project" />
+    <orderEntry type="library" name="Maven: commons-cli:commons-cli:1.0" level="project" />
+    <orderEntry type="library" name="Maven: commons-lang:commons-lang:1.0" level="project" />
     <orderEntry type="library" name="Maven: org.jsoup:jsoup:1.9.2" level="project" />
     <orderEntry type="module" module-name="parametrizacao-core" />
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-config:4.1.0.RELEASE" level="project" />

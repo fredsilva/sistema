@@ -1,4 +1,8 @@
 <map id="G" name="G">
-<area shape="rect" id="node1_0" href="./PresentationConfiguration.html" title="br.gov.to.sefaz.presentation.configuration.PresentationConfiguration" alt="" coords="16,11,204,87"/>
-<area shape="rect" id="node1" href="./PresentationConfiguration.html" title="&lt;TABLE&gt;" alt="" coords="5,5,215,92"/>
+<area shape="rect" id="node1_0" href="./WebServiceMvcConfigurationSupport.html" title="br.gov.to.sefaz.presentation.configuration.WebServiceMvcConfigurationSupport" alt="" coords="16,19,268,95"/>
+<area shape="rect" id="node1" href="./WebServiceMvcConfigurationSupport.html" title="&lt;TABLE&gt;" alt="" coords="5,14,279,101"/>
+<area shape="rect" id="node2_1" href="./WebServiceApplicationInitializer.html" title="br.gov.to.sefaz.presentation.configuration.WebServiceApplicationInitializer" alt="" coords="313,11,587,104"/>
+<area shape="rect" id="node2" href="./WebServiceApplicationInitializer.html" title="&lt;TABLE&gt;" alt="" coords="303,5,597,109"/>
+<area shape="rect" id="node3_2" href="./PresentationConfiguration.html" title="br.gov.to.sefaz.presentation.configuration.PresentationConfiguration" alt="" coords="632,19,820,95"/>
+<area shape="rect" id="node3" href="./PresentationConfiguration.html" title="&lt;TABLE&gt;" alt="" coords="621,14,831,101"/>
 </map>

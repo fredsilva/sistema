@@ -20,7 +20,7 @@ public class EstadoMunicipioViewUtil {
     private final EstadoService estadoService;
     private final MunicipioService municipioService;
 
-    EstadoMunicipioViewUtil(EstadoService estadoService, MunicipioService municipioService) {
+    public EstadoMunicipioViewUtil(EstadoService estadoService, MunicipioService municipioService) {
         this.estadoService = estadoService;
         this.municipioService = municipioService;
     }

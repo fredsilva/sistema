@@ -10,7 +10,7 @@ digraph G {
 	nodesep=0.25;
 	ranksep=0.5;
 	// br.gov.to.sefaz.arr.parametros.managedbean.TipoRejeicaoArquivosMB
-	c170808 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.TipoRejeicaoArquivosMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoRejeicaoArquivosMB.html">
+	c207975 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.TipoRejeicaoArquivosMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoRejeicaoArquivosMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoRejeicaoArquivosMB </td></tr>
 		</table></td></tr>
@@ -23,7 +23,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoRejeicaoArquivosMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.managedbean.TipoGruposCnaesMB
-	c170809 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.TipoGruposCnaesMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoGruposCnaesMB.html">
+	c207976 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.TipoGruposCnaesMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./TipoGruposCnaesMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> TipoGruposCnaesMB </td></tr>
 		</table></td></tr>
@@ -49,7 +49,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./TipoGruposCnaesMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.managedbean.ReceitasMB
-	c170810 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.ReceitasMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ReceitasMB.html">
+	c207977 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.ReceitasMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ReceitasMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ReceitasMB </td></tr>
 		</table></td></tr>
@@ -78,7 +78,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ReceitasMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.managedbean.PlanoContasMB
-	c170811 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.PlanoContasMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PlanoContasMB.html">
+	c207978 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.PlanoContasMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PlanoContasMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PlanoContasMB </td></tr>
 		</table></td></tr>
@@ -94,7 +94,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PlanoContasMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.managedbean.PedidoTiposMB
-	c170812 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.PedidoTiposMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoTiposMB.html">
+	c207979 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.PedidoTiposMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoTiposMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoTiposMB </td></tr>
 		</table></td></tr>
@@ -129,7 +129,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PedidoTiposMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.managedbean.PedidoAreasMB
-	c170813 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.PedidoAreasMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoAreasMB.html">
+	c207980 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.PedidoAreasMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./PedidoAreasMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> PedidoAreasMB </td></tr>
 		</table></td></tr>
@@ -168,14 +168,68 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./PedidoAreasMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.managedbean.ManagedBeanPackageMarker
-	c170814 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.ManagedBeanPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ManagedBeanPackageMarker.html">
+	c207981 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.ManagedBeanPackageMarker" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ManagedBeanPackageMarker.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> &#171;interface&#187; </td></tr>
 <tr><td align="center" balign="center"> ManagedBeanPackageMarker </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ManagedBeanPackageMarker.html", fontname="arial", fontcolor="black", fontsize=10.0];
+	// br.gov.to.sefaz.arr.parametros.managedbean.DareMB
+	c207982 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.DareMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./DareMB.html">
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="center" balign="center"> DareMB </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left">  </td></tr>
+		</table></td></tr>
+		<tr><td><table border="0" cellspacing="0" cellpadding="1">
+<tr><td align="left" balign="left"> + DareMB() </td></tr>
+<tr><td align="left" balign="left"> + init() </td></tr>
+<tr><td align="left" balign="left"> + save() </td></tr>
+<tr><td align="left" balign="left"> + clearDtos() </td></tr>
+<tr><td align="left" balign="left"> + clearViewBeans() </td></tr>
+<tr><td align="left" balign="left"> + loadMunicipiosOperacao() </td></tr>
+<tr><td align="left" balign="left"> + getEstadoMunicipioOperacao() : EstadoMunicipioViewUtil </td></tr>
+<tr><td align="left" balign="left"> + getDareViewBean() : DareEViewBean </td></tr>
+<tr><td align="left" balign="left"> + getDadosPagamentoController() : DareDadosPagamentoController </td></tr>
+<tr><td align="left" balign="left"> + getInstituicoes() : List&lt;UnidadeOrganizacional&gt; </td></tr>
+<tr><td align="left" balign="left"> + getTipoContribuintes() : List&lt;TipoContribuinteEnum&gt; </td></tr>
+<tr><td align="left" balign="left"> + getTiposPessoa() : List&lt;TipoPessoaEnum&gt; </td></tr>
+<tr><td align="left" balign="left"> + isTipoPessoaCpf() : boolean </td></tr>
+<tr><td align="left" balign="left"> + isTipoPessoaCnpj() : boolean </td></tr>
+<tr><td align="left" balign="left"> + isTipoPessoaRenavamOrInscricaoEstadual() : boolean </td></tr>
+<tr><td align="left" balign="left"> + isTipoContribuinteNaoContribuinte() : boolean </td></tr>
+<tr><td align="left" balign="left"> + searchContribuinte() </td></tr>
+<tr><td align="left" balign="left"> + clearContribuintesFields() </td></tr>
+<tr><td align="left" balign="left"> + getTipoImpostos() : List&lt;TipoImpostoEnum&gt; </td></tr>
+<tr><td align="left" balign="left"> + getOrigemDebitos() : List&lt;OrigemDebitoEnum&gt; </td></tr>
+<tr><td align="left" balign="left"> + resetOrigemDebito() </td></tr>
+<tr><td align="left" balign="left"> + loadDadosPagamento() </td></tr>
+<tr><td align="left" balign="left"> + isDebitoComPagamentoParcial() : boolean </td></tr>
+<tr><td align="left" balign="left"> + isDebitoSemPagamentoParcial() : boolean </td></tr>
+<tr><td align="left" balign="left"> + isDebitoIpva() : boolean </td></tr>
+<tr><td align="left" balign="left"> + isDebitoIcms() : boolean </td></tr>
+<tr><td align="left" balign="left"> + isDebitoDiverso() : boolean </td></tr>
+<tr><td align="left" balign="left"> + addPagamentoToDarePagamentoList() </td></tr>
+<tr><td align="left" balign="left"> + removePagamento() </td></tr>
+<tr><td align="left" balign="left"> + getTableDebitoCC() : List&lt;DareEPagamento&gt; </td></tr>
+<tr><td align="left" balign="left"> + addDebitoToSelectedList() </td></tr>
+<tr><td align="left" balign="left"> + removeDebitosFromSelectedList() </td></tr>
+<tr><td align="left" balign="left"> + addAllDebitosToSelectedList() </td></tr>
+<tr><td align="left" balign="left"> + removeAllDebitosFromSelectedList() </td></tr>
+<tr><td align="left" balign="left"> + getDebitosSelectedListSize() : Integer </td></tr>
+<tr><td align="left" balign="left"> + searchDocumentoSemPagamentoParcial() </td></tr>
+<tr><td align="left" balign="left"> + searchDebitoIpvaByAnoReferencia() </td></tr>
+<tr><td align="left" balign="left"> + searchDocumentoComPagamentoParcial() </td></tr>
+<tr><td align="left" balign="left"> + getReceitasComPagamentoParcial() : Collection&lt;Receitas&gt; </td></tr>
+<tr><td align="left" balign="left"> + loadSubCodigos() </td></tr>
+<tr><td align="left" balign="left"> + abrirPaginaImpressao() </td></tr>
+<tr><td align="left" balign="left"> + getDareEmailHelper() : DareEmailHelper </td></tr>
+<tr><td align="left" balign="left"> + sendDareEmail() </td></tr>
+		</table></td></tr>
+		</table>>, URL="./DareMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.managedbean.ConveniosArrecMB
-	c170815 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.ConveniosArrecMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConveniosArrecMB.html">
+	c207983 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.ConveniosArrecMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ConveniosArrecMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ConveniosArrecMB </td></tr>
 		</table></td></tr>
@@ -205,7 +259,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./ConveniosArrecMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.managedbean.BancosMB
-	c170816 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.BancosMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BancosMB.html">
+	c207984 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.BancosMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BancosMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BancosMB </td></tr>
 		</table></td></tr>
@@ -218,7 +272,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./BancosMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.managedbean.BancoAgenciasMB
-	c170817 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.BancoAgenciasMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BancoAgenciasMB.html">
+	c207985 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.BancoAgenciasMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./BancoAgenciasMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> BancoAgenciasMB </td></tr>
 		</table></td></tr>
@@ -242,7 +296,7 @@ digraph G {
 		</table></td></tr>
 		</table>>, URL="./BancoAgenciasMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 	// br.gov.to.sefaz.arr.parametros.managedbean.ArrEnumsMB
-	c170818 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.ArrEnumsMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArrEnumsMB.html">
+	c207986 [label=<<table title="br.gov.to.sefaz.arr.parametros.managedbean.ArrEnumsMB" border="0" cellborder="1" cellspacing="0" cellpadding="2" port="p" href="./ArrEnumsMB.html">
 		<tr><td><table border="0" cellspacing="0" cellpadding="1">
 <tr><td align="center" balign="center"> ArrEnumsMB </td></tr>
 		</table></td></tr>
@@ -261,6 +315,8 @@ digraph G {
 <tr><td align="left" balign="left"> + getTiposRepasse() : TipoRepasseEnum[] </td></tr>
 <tr><td align="left" balign="left"> + getTiposPedidoAcoes() : TipoPedidoAcoesEnum[] </td></tr>
 <tr><td align="left" balign="left"> + getTiposPedidoCampos() : TipoPedidoCampoEnum[] </td></tr>
+<tr><td align="left" balign="left"> + getMultas() : ValorMultaEnum[] </td></tr>
+<tr><td align="left" balign="left"> + getAliquotas() : ValorAliquotaEnum[] </td></tr>
 		</table></td></tr>
 		</table>>, URL="./ArrEnumsMB.html", fontname="arial", fontcolor="black", fontsize=10.0];
 }
