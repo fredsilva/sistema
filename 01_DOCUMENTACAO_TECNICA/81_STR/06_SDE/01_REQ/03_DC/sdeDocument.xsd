@@ -1,0 +1,1092 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Stylus Studio -->
+<!-- Created september 2016 by Santiago Reyes Benalcazar (CIAT) -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" version="1" elementFormDefault="unqualified" attributeFormDefault="unqualified">
+	<xsd:element name="sdeDocument">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Definição de esquema documento para o sistema Tocantins SAT</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:all>
+				<xsd:element ref="sdeDocumentHeader"/>
+				<xsd:element ref="sdeDocumentFields"/>
+				<xsd:element ref="sdeParagraphs" minOccurs="0"/>
+				<xsd:element ref="sdeDocumentPages" minOccurs="0"/>
+			</xsd:all>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="sdeDocumentHeader">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Contém informações gerais sobre o documento como informações autor , informações de conta corrente, entre outros</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:all>
+				<xsd:element ref="globalDocId"/>
+				<xsd:element ref="formCode"/>
+				<xsd:element ref="formVersion"/>
+				<xsd:element ref="globalStatus"/>
+				<xsd:element ref="generalInfo"/>
+				<xsd:element ref="currentAccountInfo"/>
+				<xsd:element ref="authorInfo"/>
+				<!-- eliminar
+				<xsd:element ref="reporterInfo" minOccurs="0"/>
+				-->
+			</xsd:all>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="sdeDocumentFields">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Uma lista de todos os campos que definem um documento</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="field" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="field">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Especificar as informações e os atributos de um campo específico no documento</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType mixed="true">
+			<xsd:sequence>
+				<xsd:choice minOccurs="0" maxOccurs="unbounded">
+					<xsd:element ref="radioOption"/>
+					<xsd:element ref="sdeTable"/>
+					<xsd:element ref="checkBoxOption"/>
+				</xsd:choice>
+			</xsd:sequence>
+			<xsd:attribute ref="colspan"/>
+			<xsd:attribute ref="calculate"/>
+			<xsd:attribute ref="required"/>
+			<xsd:attribute ref="class"/>
+			<xsd:attribute ref="page" use="required"/>
+			<xsd:attribute ref="id" use="required"/>
+			<xsd:attribute ref="fieldType"/>
+			<xsd:attribute ref="row"/>
+			<xsd:attribute ref="text-align"/>
+			<xsd:attribute ref="evaluate"/>
+			<xsd:attribute ref="col"/>
+			<xsd:attribute ref="dataType"/>
+			<!-- eliminar
+			<xsd:attribute ref="dbColumn"/>
+			-->
+			<xsd:attribute ref="radioLayout"/>
+			<xsd:attribute ref="calcorder"/>
+			<xsd:attribute ref="readonly"/>
+			<xsd:attribute ref="money"/>
+			<xsd:attribute ref="requiredmessage"/>
+			<xsd:attribute ref="validation"/>
+			<xsd:attribute ref="validationmessage"/>
+			<xsd:attribute ref="searchable"/>
+			<xsd:attribute ref="listName"/>
+			<xsd:attribute ref="longName"/>
+			<!--
+			<xsd:attribute ref="tPartyMap"/>
+			-->
+			<xsd:attribute ref="dbFunction"/>
+			<xsd:attribute ref="onFieldUpdatedId"/>
+			<xsd:attribute ref="triggerFieldUpdateFunction"/>
+			<xsd:attribute ref="returnParameterOrder"/>
+			<xsd:attribute ref="persistableColumn"/>
+			<!-- eliminar
+			<xsd:attribute ref="fieldNumber"/>
+			-->
+			<xsd:attribute ref="generalFunctionMap"/>
+			<!-- eliminar
+			<xsd:attribute ref="documentType"/>
+			-->
+			<!-- eliminar 
+			<xsd:attribute ref="triggerFieldUpdateEvent"/>
+			-->
+			<!-- eliminar 
+			<xsd:attribute ref="hiddenAction"/>
+			-->
+			<xsd:attribute ref="subDocumentFieldId"/>
+			<!--
+			<xsd:attribute ref="showOnline"/>
+			 eliminar
+			<xsd:attribute ref="tpIndividualFieldIdMap"/>
+			-->
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="formCode">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Identifica cada formulário com um código único</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="19"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:element>
+	<xsd:element name="formVersion" type="xsd:integer">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Ele permite controlar versões das formas</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="docTypeId" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Tipo de documento identificador anexado</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="globalStatus" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">
+O status do documento, especialmente usado para diferenciar se um documento está no projecto de estatuto , é que foi salvo, mas fórmulas e cálculos ainda não foram validados aplicada ; estado é enviada, que já está validações aplicadas e ações foram definidas aqui corridas foram executados após o recebimento no sistema ( é possível que afetou outros subsistemas, como conta corrente, BPMs , etc.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="obligationCode" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Código de	obrigação tributaria que afeta este documento</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:attribute name="class" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Converte diretamente para um atributo de estilo CSS; O atributo deve ser definido nos documentos de folhas de estilo</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	<xsd:attribute name="readonly" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">O campo será somente leitura</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	<xsd:attribute name="money" type="xsd:boolean">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Se o campo é um valor monetário</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	<!-- eliminar
+	<xsd:attribute name="tpIndividualFieldIdMap">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">T ODO</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="30"/>
+				<xsd:pattern value="([A-Za-z]([A-Za-z0-9_]+)?)"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:attribute>
+-->
+	<!-- eliminar
+	<xsd:attribute name="type" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">T ODO</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+-->
+	<xsd:attribute name="colspan" type="xsd:integer">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Número de colunas que o campo se estende para dentro da matriz de 16 colunas;</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	<xsd:attribute name="calculate" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Contiente a fórmula de cálculo em javascript formato o resultado será exibido no campo;</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	<xsd:attribute name="required" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Se for necessário inserir um valor no campo;</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	<xsd:attribute name="page" type="xsd:integer">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Documento página em que o campo está localizado , por padrão, apenas a primeira página, se houver um;</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	<xsd:attribute name="id">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Campo identificador exclusivo</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="30"/>
+				<xsd:pattern value="([A-Za-z]([A-Za-z0-9_]+)?)"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:attribute>
+	<xsd:attribute name="fieldType" type="fieldType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Identifica como o campo é exibido no formulário para capturar; Lista de valores predefinidos digite : FieldType</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	<xsd:attribute name="row" type="xsd:integer">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Linha na qual o campo será exibido</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	<xsd:attribute name="text-align" type="textAlign">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Definir o alinhamento (esquerda, centro, direita )</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	<xsd:attribute name="evaluate" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Se o campo deve ser avaliada durante a validação</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	<xsd:attribute name="col" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Coluna no qual exibir o campo</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	<xsd:attribute name="dataType" type="dmsDataType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Tipo de dados que suporta o campo</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	<xsd:attribute name="radioLayout" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Se o " rádio" tipo de campo é exibido horizontalmente ou verticalmente</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	<xsd:attribute name="calcorder" type="xsd:integer">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Um número inteiro em relação ao resto dos campos que determinam em que ordem fórmulas serão calculados</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	<xsd:attribute name="requiredmessage" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Mensagem para exibir se o campo é obrigatório e necessário para especificar um mensaja mais descritivo que " Campo obrigatório" que seria mostrado se não houver nenhum padrão este valor;</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	<xsd:attribute name="validation" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Formula "JavaScript" type para validar o valor inserido no campo; Se a fórmula não retorna verdadeiro valor , mensagem de validação será exibido e não ser autorizados a apresentar o formulário</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	<xsd:attribute name="validationmessage" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Mensagem a ser exibida quando a validação de campo não for atendida</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	<xsd:attribute name="order" type="xsd:integer">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">A ordem em que os valores do tipo de lista de campos " radioOption " ou " checkBoxOption " será exibido</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	<xsd:attribute name="colnum" type="xsd:integer">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Em casos de campos multiregistro , a ordem na qual a coluna é exibida no formulário</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	<xsd:attribute name="width" type="unit">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">En los casos de los campos multiregistro, el ancho de la columna a desplegar en porcentaje</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	<xsd:attribute name="title" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Em casos de campos multiregistro , o título da coluna a ser exibido</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	<xsd:attribute name="totalRowFunction" type="totalRowFunction">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Em casos de multiregistro campos que indica se esta coluna terá um total calculado , usando o " javascript" soma função ou avg</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	<!-- eliminar
+	<xsd:attribute name="dbColumn" type="dbColumn">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">T ODO</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	-->
+	<xsd:attribute name="totalRowLabel" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Para os casos de campos multiregistro , a etiqueta terá o total no final de uma coluna que tenha valor calculado</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	<!-- eliminar
+	<xsd:attribute name="fieldNumber" type="xsd:integer">
+		<xsd:annotation>
+			<xsd:documentation>To identify fields by cell number for batch key purpouses</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	-->
+
+	<xsd:attribute name="numberOfRows" type="xsd:integer">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Para campos do tipo " multiregistro " o número máximo de linhas a serem exibidas na forma</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+
+	<!-- eliminar
+	<xsd:attribute name="totalRow" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">T ODO</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	-->
+	<xsd:attribute name="listName" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">O valor deve pertencer a uma lista de catálogos do sistema SAT , que será acessível ao gerar a forma de captura; Se esse valor existe nessa lista, o formulário irá mostrar os valores desse catálogo em particular , através de um rótulo "HTML Select"</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	<xsd:attribute name="searchable" type="yesNo">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Se o valor for verdadeiro , este campo deve ser indexado para acelerar as pesquisas ea tela de busca entrar neste campo para que o usuário digite o valor quando você selecionar este tipo de formulário</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	<xsd:attribute name="longName">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Nome do campo longa</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:maxLength value="30"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:attribute>
+	<!-- eliminar
+	<xsd:attribute name="documentType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">T ODO</xsd:documentation>
+		</xsd:annotation>
+		<xsd:simpleType>
+			<xsd:restriction base="xsd:string">
+				<xsd:enumeration value="ASSESSMENT"/>
+				<xsd:enumeration value="REASSESSMENT"/>
+				<xsd:enumeration value="OBJECTION_TO_ASSESSMENT"/>
+				<xsd:enumeration value="OBJECTION_TO_REASSESSMENT"/>
+				<xsd:enumeration value="DECISION_TO_OBJECTION_OF_ASSESSMENT"/>
+				<xsd:enumeration value="DECISION_TO_OBJECTION_OF_REASSESSMENT"/>
+			</xsd:restriction>
+		</xsd:simpleType>
+	</xsd:attribute>
+	-->
+	<!-- eliminar
+	<xsd:attribute name="tPartyMap" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">T ODO</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	-->
+	<!-- eliminar - mejor que las filas sean autogeneradas
+	<xsd:attribute name="rowId" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">T ODO</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	-->
+	<xsd:attribute name="headerToFieldMap" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Permite que o campo de cabeçalho são associados com um campo específico documento; Assim , o valor do cabeçalho é automaticamente extraído do campo; O valor deve valer a pena campo existente no formulário</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	<!-- eliminar
+	<xsd:attribute name="hiddenAction" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">T ODO</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	-->
+	<xsd:attribute name="subDocumentFieldId" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Used for specify a the id of the field that should be inserted in this position when view and pdf</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+
+	<xsd:attribute name="dbFunction" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Used for calling a function Name in the database, the function should exist and return a value</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	<xsd:attribute name="onFieldUpdatedId" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>The id of the field that triggers the update of this field</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	<xsd:attribute name="triggerFieldUpdateFunction" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Defines the function that triggers field updates</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	<xsd:attribute name="returnParameterOrder" type="xsd:integer">
+		<xsd:annotation>
+			<xsd:documentation>Identifies the order in which the parameters return from the function that was triggered</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	
+	<xsd:attribute name="persistableColumn" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Sets the schema table column that should be persisted to any table that has id_document as primary or unique constraint</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	<!-- eliminar, las funciones se ejecutan por defecto con click en el campo
+	<xsd:attribute name="triggerFieldUpdateEvent" type="functionTriggerEvent">
+		<xsd:annotation>
+			<xsd:documentation>Identifies the event on which the function is triggered</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+	-->
+	<xsd:attribute name="generalFunctionMap" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation>Used to map to functions that retrieve blocks of data (example registry data)</xsd:documentation>
+		</xsd:annotation>
+	</xsd:attribute>
+
+	<xsd:element name="globalDocId" type="xsd:integer" default="0">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Número de chave atribuído ao documento , uma vez armazenadas primeiro</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+
+	<!-- eliminar
+	<xsd:element name="bussinessStatus" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">T ODO</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+-->
+
+	<xsd:element name="cccTIN">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Número de identificação fiscal devem seguir as regras definidas no sistema SAT para identificar um contribuinte ( pessoa pode ser jurifica , individual); É acompanhado pelo tipo de identificação cccTINTipo</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType mixed="true">
+			<xsd:attribute ref="headerToFieldMap"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="cccTINType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Tipo de identificação fiscal ( pessoa singular , pessoa colectiva, identificador de estadual)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType mixed="true">
+			<xsd:attribute ref="headerToFieldMap"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="cccPeriod">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Período fiscal correspondente ao documento</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType mixed="true">
+			<xsd:attribute ref="headerToFieldMap"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="cccObligationCode">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Obrigação tributaria correspondente ao documento</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType mixed="true">
+			<xsd:attribute ref="headerToFieldMap"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="cccFileDate">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Data em que o documento foi enviado; Esta data é tido em conta para cumprimento das obrigações fiscais , incluindo multas e cálculo de juros</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType mixed="true">
+			<xsd:attribute ref="headerToFieldMap"/>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- eliminar - no hay third party?
+	<xsd:element name="reporterTIN">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Número de identificação fiscal , que encaminha as informações</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType mixed="true">
+			<xsd:attribute ref="headerToFieldMap"/>
+		</xsd:complexType>
+	</xsd:element>
+
+	<xsd:element name="reporterTINType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Tipo de identificação fiscal , que encaminha as informações</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType mixed="true">
+			<xsd:attribute ref="headerToFieldMap"/>
+		</xsd:complexType>
+	</xsd:element>
+-->
+	<xsd:element name="cccSaveDate" type="xsd:date">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Data guardado o documento</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+
+	<xsd:element name="cccTransaction" type="cccTransactionType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Se o documento for aplicado na conta corrente do contribuinte o número da transação que foi gerado</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="cccStatus" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Estado del documento (borrador, enviado, aplicado en la cuenta)</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="authorLogin" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">"User ID" do autor do documento</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="authorFullName" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Nome completo do autor do documento</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="authorTIN" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Número de identificação fiscal do autor do documento</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+
+	<xsd:element name="authorDivision" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Unidade administrativa do autor do documento, si es funcionario</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="captureMethod" type="captureMethodType" default="Online">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Forma de captura de documentos</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="associationType" type="associationTypeType" default="Principal">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Tipo de Documento de referencia; Documento de referência no caso em que a corrente de referência a outro documento ; Inicialmente documento de referência retifica este documento é suportado</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="associatedDocumentId" type="xsd:integer" default="0">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Numero de Documento de referencia; Documento de referência no caso em que a corrente de referência a outro documento ; Inicialmente documento de referência retifica este documento é suportado</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="executeDbFunctions" type="executeDbFunctionsType" default="All">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Especifica se as funções banco de dados campos referenciados deve ser executado</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="processId" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Número identificador do processo ou fluxo de trabalho associado a este documento</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="validationHash" type="xsd:string">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Número de hash para validar o conteúdo do documento não foi alterado de acordo com a segurança do sistema de políticas e assinaturas electrónicas utilizadas</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="generalInfo">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Seção com documento de informação geral</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:all>
+				<xsd:element ref="validationHash" minOccurs="0"/>
+				<xsd:element ref="processId" minOccurs="0"/>
+				<xsd:element ref="captureMethod"/>
+				<xsd:element ref="associationType"/>
+				<xsd:element ref="associatedDocumentId" minOccurs="0"/>
+				<xsd:element ref="executeDbFunctions"/>
+				<!--
+				<xsd:element ref="bussinessStatus" minOccurs="0"/>
+				-->
+				<xsd:element ref="datesInfo"/>
+			</xsd:all>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="currentAccountInfo">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Informações associando este documento com a conta corrente do contribuinte</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:all>
+				<xsd:element ref="cccTIN"/>
+				<xsd:element ref="cccTINType"/>
+				<xsd:element ref="cccPeriod"/>
+				<xsd:element ref="cccObligationCode"/>
+				<xsd:element ref="cccFileDate" minOccurs="0"/>
+				<xsd:element ref="cccSaveDate" minOccurs="0"/>
+				<xsd:element ref="cccTransaction" minOccurs="0"/>
+				<xsd:element ref="cccStatus" minOccurs="0"/>
+			</xsd:all>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="authorInfo">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Informação do autor do documento</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:all>
+				<xsd:element ref="authorLogin"/>
+				<xsd:element ref="authorFullName"/>
+				<xsd:element ref="authorTIN"/>
+				<xsd:element ref="authorDivision" minOccurs="0"/>
+			</xsd:all>
+		</xsd:complexType>
+	</xsd:element>
+	<!--
+	<xsd:element name="reporterInfo">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">T ODO</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:all>
+				<xsd:element ref="reporterTIN"/>
+				<xsd:element ref="reporterTINType"/>
+			</xsd:all>
+		</xsd:complexType>
+	</xsd:element>
+	-->
+	<xsd:element name="datesInfo">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Datas seção do documento</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="dateCreated"/>
+				<xsd:element ref="dateSaved" minOccurs="0"/>
+				<xsd:element ref="dateUpdated" minOccurs="0"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="dateCreated" type="xsd:date" default="1999-01-01">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Data de criação</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="dateSaved" type="xsd:date">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Data de gravado</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="dateUpdated" type="xsd:date">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Data de atualização</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+
+	<xsd:element name="radioOption">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">A opção de um tipo de campo "radio"</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="xsd:string">
+					<xsd:attribute ref="order"/>
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="sdeTable">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Quando o campo é marcado como "grid" permite especificar a estrutura da tabela que define o cabeçalho , colunas e totais de linhas</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:all>
+				<xsd:element ref="sdeTH" minOccurs="0"/>
+				<!--
+				<xsd:element ref="sdeTBody" minOccurs="0"/>
+				-->
+				<xsd:element ref="sdeTF" minOccurs="0"/>
+			</xsd:all>
+			<xsd:attribute ref="numberOfRows" use="required"/>
+			<!-- eliminar
+			<xsd:attribute ref="totalRow"/>
+			-->
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="sdeTH">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Quando o campo é marcado como "grid" permite que você especifique o chefe da mesa e as colunas que contêm este</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="sdeCol" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="sdeCol">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Quando o campo é marcado como "grid" permite especificar o conteúdo de uma coluna semelhantes aos campos específicos atributos , mas com certas limitações; Além disso, ele permite que você especifique se os totais de coluna será adicionada na linha total</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="xsd:string">
+					<xsd:attribute ref="colnum" use="required"/>
+					<xsd:attribute ref="id" use="required"/>
+					<xsd:attribute ref="width"/>
+					<xsd:attribute ref="readonly"/>
+					<xsd:attribute ref="dataType" use="required"/>
+					<xsd:attribute ref="text-align"/>
+					<xsd:attribute ref="validation"/>
+					<xsd:attribute ref="fieldType" use="required"/>
+					<xsd:attribute ref="evaluate"/>
+					<xsd:attribute ref="title"/>
+					<xsd:attribute ref="totalRowFunction"/>
+					<xsd:attribute ref="totalRowLabel"/>
+					<xsd:attribute ref="calcorder"/>
+					<xsd:attribute ref="calculate"/>
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- eliminar, ya que las filas deben ser dinámicas
+	<xsd:element name="sdeTBody">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">T ODO</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="sdeTR" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	-->
+	<!-- eliminar, ya que las filas deben ser dinámicas
+	<xsd:element name="sdeTR">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">T ODO</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="sdeTD" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+			<xsd:attribute ref="rowId"/>
+		</xsd:complexType>
+	</xsd:element>
+	-->
+	<!-- eliminar - las filas de las tablas deben ser dinamicas
+	<xsd:element name="sdeTD">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">T ODO</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="xsd:string">
+					<xsd:attribute ref="colnum"/>
+					<xsd:attribute ref="id"/>
+					<xsd:attribute ref="width"/>
+					<xsd:attribute ref="readonly"/>
+					<xsd:attribute ref="dataType"/>
+					<xsd:attribute ref="text-align"/>
+					<xsd:attribute ref="validation"/>
+					<xsd:attribute ref="fieldType"/>
+					<xsd:attribute ref="evaluate"/>
+					<xsd:attribute ref="title"/>
+					<xsd:attribute ref="totalRowFunction"/>
+					<xsd:attribute ref="totalRowLabel"/>
+					<xsd:attribute ref="calcorder"/>
+					<xsd:attribute ref="calculate"/>
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+	-->
+	<xsd:element name="sdeTF">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Para campos especificados como "grid" permite que você especifique a linha de total</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="sdeTFVal" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="sdeTFVal">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Para campos especificados como "grid" permite especificar cada coluna específica linha de total</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="xsd:string">
+					<xsd:attribute ref="fieldType"/>
+					<xsd:attribute ref="id"/>
+					<xsd:attribute ref="calculate"/>
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="checkBoxOption">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Lista de opções de um campo "checkbox"</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:simpleContent>
+				<xsd:extension base="xsd:string">
+					<xsd:attribute ref="order"/>
+				</xsd:extension>
+			</xsd:simpleContent>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:simpleType name="cccTransactionType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Na lista que indica se ou não o documento é uma declaração</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="declaracion" id="declaracion"/>
+			<xsd:enumeration value="noDeclaracion" id="noDeclaracion"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="fieldType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Enumerou os tipos de campos que suportam o sistema; Cada tipo de campo tem um comportamento diferente na implantação do formulário; Atualmente suporta : label ( exibe uma etiqueta) , entrada ( mostra uma captura de campo) , grade ( exibe um campo multiregistro requer definição de uma tabela e suas colunas ) , data ( exibe um calendário para a selecção de data ) , rádio (exibe opções de tipo " botão html rádio" ) , caixa (exibido opções como " caixa de seleção html" ) , textarea ( exibe um campo para capturar texto grande ( " input type = 'text ' ') , escondido (campo não é exibido , mas que pode ter um teor calculado e armazenado no documento )</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="label"/>
+			<xsd:enumeration value="input"/>
+			<xsd:enumeration value="grid"/>
+			<xsd:enumeration value="radio"/>
+			<xsd:enumeration value="date"/>
+			<xsd:enumeration value="checkBox"/>
+			<xsd:enumeration value="textarea"/>
+			<xsd:enumeration value="list"/>
+			<xsd:enumeration value="hidden"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="dmsDataType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Tipo de dados suportado para a base de dados (string, number, date, text)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="string"/>
+			<xsd:enumeration value="number"/>
+			<xsd:enumeration value="date"/>
+			<xsd:enumeration value="text"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:simpleType name="unit">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Medir Unidade de largura da coluna em percentagem ou tamanho de 0 a 100</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[0-9]+(%|pt)"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--
+	<xsd:simpleType name="dbColumn">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">T ODO</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="string_[0-9][0-9]?[0-9]?|number_[0-9][0-9]?[0-9]?|date_[0-9][0-9]?[0-9]?|text_[0-9][0-9]?[0-9]?"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	-->
+	<!-- eliminar, no se usa
+	<xsd:simpleType name="listNameType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">T ODO</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	-->
+	<xsd:simpleType name="textAlign">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Alinhamento campo enumerado (esquerda, centro, direita , justificado)</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="left"/>
+			<xsd:enumeration value="center"/>
+			<xsd:enumeration value="right"/>
+			<xsd:enumeration value="justified"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="totalRowFunction">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Para um campo de tipo "grid" , a linha de total para calcular um tipo de agregado como "sum" ( soma ); No caso em que o valor acumulado não é necessário , " etiqueta " está especificada</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="sum"/>
+			<xsd:enumeration value="label"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="yesNo">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Valores enumerados sim e não ("yes", "no")</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="yes"/>
+			<xsd:enumeration value="no"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!-- eliminar, mucha sofisticación
+	<xsd:simpleType name="functionTriggerEvent">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">T ODO</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="OnField_DblClick"/>
+			<xsd:enumeration value="OnTabCheckButton_Click"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	-->
+	<xsd:simpleType name="executeDbFunctionsType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Os valores enumerados para especificar a execução de cobertura de funções de banco de dados definidos nos campos</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="All"/>
+			<!-- eliminar
+			<xsd:enumeration value="General"/>
+			<xsd:enumeration value="Specific"/>
+			-->
+			<xsd:enumeration value="None"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="associationTypeType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Enumerado de Tipo de Documento de referencia soportado</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Principal"/>
+			<xsd:enumeration value="Replacement"/>
+			<!--
+			<xsd:enumeration value="Assessment"/>
+			<xsd:enumeration value="Auxiliary"/>
+			-->
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="captureMethodType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Manera en que se capturo o documento</xsd:documentation>
+		</xsd:annotation>
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Online"/>
+			<xsd:enumeration value="Batch"/>
+			<xsd:enumeration value="System"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<!--  Paragraph Section -->
+	<xsd:element name="sdeParagraphs">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Para documentos não-estruturados recipiente de párragrafos</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="sdeParagraph" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="sdeParagraph">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">para documentos não-estruturados para documentos não estruturados que definem parrágrafo</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType mixed="true">
+			<xsd:sequence>
+				<xsd:any minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+			<xsd:attribute name="order" type="xsd:integer"/>
+			<xsd:attribute name="align" type="xsd:string"/>
+			<xsd:attribute name="space-after" type="xsd:string"/>
+			<xsd:attribute name="space-before" type="xsd:string"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="sdeElement">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Aplica-se a documentos não estruturados; A referência a um campo permite que o documento a ser implantado em posição especificada ; Esta é uma posição "in- line" , ou seja, ela é exibida abaixo do campo anterior</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute name="code" type="xsd:string"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="table" type="xsd:anyType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Aplica-se a documentos não estruturados; equivalente a etiqueta "table" de html</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="tr" type="xsd:anyType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Aplica-se a documentos não estruturados; Equivalente a etiqueta "tr" de html</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="td" type="xsd:anyType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Aplica-se a documentos não estruturados; Equivalente a etiqueta "td" de html</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="th" type="xsd:anyType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Aplica-se a documentos não estruturados; Equivalente a etiqueta "th" de html</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="B" type="xsd:anyType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Aplica-se a documentos não estruturados; Equivalente a etiqueta "B" de html, 
+primeiro convertido para maiúsculas</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="b" type="xsd:anyType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Aplica-se a documentos não estruturados; Equivalente a etiqueta "b" de html</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="I" type="xsd:anyType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Aplica-se a documentos não estruturados; Equivalente a etiqueta "i" de html, pero 
+primeiro convertido para maiúsculas</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="i" type="xsd:anyType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Aplica-se a documentos não estruturados; Equivalente a etiqueta "i" de html</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="U" type="xsd:anyType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Aplica-se a documentos não estruturados; Equivalente a etiqueta "U" de html, pero 
+primeiro convertido para maiúsculas</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<xsd:element name="u" type="xsd:anyType">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Aplica-se a documentos não estruturados; Equivalente a etiqueta "u" de html</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!-- eliminar , no se usa, en su lugar DocumentHeader
+	<xsd:element name="sdeHeader">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">TODO</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:attribute name="elementName" use="required">
+				<xsd:simpleType>
+					<xsd:restriction base="xsd:string">
+						<xsd:enumeration value="globalDocId"/>
+						<xsd:enumeration value="authorFullName"/>
+						<xsd:enumeration value="cccTIN"/>
+						<xsd:enumeration value="caBranch"/>
+						<xsd:enumeration value="cccPeriod"/>
+						<xsd:enumeration value="cccObligationCode"/>
+						<xsd:enumeration value="cccFileDate"/>
+						<xsd:enumeration value="dateCreated"/>
+						<xsd:enumeration value="dateUpdated"/>
+						<xsd:enumeration value="globalStatus"/>
+						<xsd:enumeration value="formCode"/>
+						<xsd:enumeration value="formVersion"/>
+						<xsd:enumeration value="authorDivision"/>
+						<xsd:enumeration value="authorTIN"/>
+					</xsd:restriction>
+				</xsd:simpleType>
+			</xsd:attribute>
+		</xsd:complexType>
+	</xsd:element>
+	-->
+	<xsd:element name="sdeDocumentPages">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">Seção para descrever as páginas de um formulário; Eles usaram mais de uma página para separar logicamente os campos e facilitar os dados de implantação e dedilhado; Se mais de uma página de cada campo deve especificar qual página será exibida</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="sdePage" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="sdePage">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="pt">especifica o nome eo número de uma página no formulário; deve ter pelo menos um</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexType mixed="true">
+			<xsd:attribute name="page" type="xsd:integer" use="required"/>
+			<xsd:attribute name="selected" type="xsd:boolean"/>
+			<xsd:attribute name="title" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+	<!-- End Paging section -->
+</xsd:schema>
