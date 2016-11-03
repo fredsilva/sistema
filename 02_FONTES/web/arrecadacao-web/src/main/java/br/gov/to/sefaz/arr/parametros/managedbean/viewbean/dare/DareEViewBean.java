@@ -4,6 +4,7 @@ import br.gov.to.sefaz.arr.persistence.enums.OrigemDebitoEnum;
 import br.gov.to.sefaz.arr.persistence.enums.TipoContribuinteEnum;
 import br.gov.to.sefaz.arr.persistence.enums.TipoImpostoEnum;
 import br.gov.to.sefaz.arr.persistence.enums.TipoPessoaEnum;
+import br.gov.to.sefaz.util.application.ApplicationUtil;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -200,7 +201,7 @@ public class DareEViewBean {
      * @return Valor total com valor monetário.
      */
     public String calcValorTotal() {
-        return NumberFormat.getCurrencyInstance().format(getValorTotal());
+        return NumberFormat.getCurrencyInstance(ApplicationUtil.LOCALE).format(getValorTotal());
     }
 
     /**

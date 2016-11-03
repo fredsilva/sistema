@@ -4,6 +4,7 @@ import br.gov.to.sefaz.arr.parametros.managedbean.viewbean.dare.DebitoDiversoVie
 import br.gov.to.sefaz.arr.persistence.entity.ReceitasTaxas;
 import br.gov.to.sefaz.business.service.validation.ServiceValidator;
 import br.gov.to.sefaz.business.service.validation.violation.CustomViolation;
+import br.gov.to.sefaz.util.application.ApplicationUtil;
 import br.gov.to.sefaz.util.message.MessageUtil;
 import br.gov.to.sefaz.util.message.SourceBundle;
 import org.springframework.stereotype.Component;
@@ -92,7 +93,7 @@ public class DebitoDiversoViewBeanValidator implements ServiceValidator<DebitoDi
             String message = SourceBundle.getMessage(MessageUtil.ARR,
                     "arr.par.dare.debitoDiversoViewBean.valorTse.greaterThan");
             String messageFormat = MessageFormat
-                    .format(message, NumberFormat.getCurrencyInstance().format(valorLimite));
+                    .format(message, NumberFormat.getCurrencyInstance(ApplicationUtil.LOCALE).format(valorLimite));
             customViolations.add(new CustomViolation(messageFormat));
         }
     }

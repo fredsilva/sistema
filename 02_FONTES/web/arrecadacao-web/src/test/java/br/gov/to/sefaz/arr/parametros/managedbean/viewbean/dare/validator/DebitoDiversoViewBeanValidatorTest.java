@@ -3,6 +3,7 @@ package br.gov.to.sefaz.arr.parametros.managedbean.viewbean.dare.validator;
 import br.gov.to.sefaz.arr.parametros.managedbean.viewbean.dare.DebitoDiversoViewBean;
 import br.gov.to.sefaz.arr.persistence.entity.ReceitasTaxas;
 import br.gov.to.sefaz.business.service.validation.violation.CustomViolation;
+import br.gov.to.sefaz.util.application.ApplicationUtil;
 import br.gov.to.sefaz.util.message.MessageUtil;
 import br.gov.to.sefaz.util.message.SourceBundle;
 import org.apache.commons.lang3.StringUtils;
@@ -52,9 +53,9 @@ public class DebitoDiversoViewBeanValidatorTest {
         PowerMockito.when(SourceBundle.getMessage(MessageUtil.ARR,
                 "arr.par.dare.debitoDiversoViewBean.valorTse.greaterThan")).thenReturn(message);
         String messageFormat = MessageFormat
-                .format(message, NumberFormat.getCurrencyInstance().format(BigDecimal.ONE));
-        PowerMockito.when(MessageFormat.format(message, NumberFormat.getCurrencyInstance().format(BigDecimal.ONE)))
-                .thenReturn(messageFormat);
+                .format(message, NumberFormat.getCurrencyInstance(ApplicationUtil.LOCALE).format(BigDecimal.ONE));
+        PowerMockito.when(MessageFormat.format(message, NumberFormat.getCurrencyInstance(ApplicationUtil.LOCALE)
+                .format(BigDecimal.ONE))).thenReturn(messageFormat);
     }
 
     @Test
