@@ -41,6 +41,7 @@ public class ManterProcuracaoMB extends DefaultCrudMB<ProcuracaoUsuario, Long> {
 
     public ManterProcuracaoMB() {
         super(ProcuracaoUsuario::new);
+        setDto(new ProcuracaoUsuario());
         this.cpfValidator = new CpfValidatorHandler();
         opcoesFromUsuario = new ArrayList<>();
         procuradorNome = "";

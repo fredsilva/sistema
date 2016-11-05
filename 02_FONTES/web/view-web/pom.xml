@@ -6,7 +6,7 @@
     <parent>
         <groupId>br.gov.to.sefaz</groupId>
         <artifactId>web</artifactId>
-        <version>1.7.4</version>
+        <version>1.7.5</version>
     </parent>
 
     <groupId>br.gov.to.sefaz.web</groupId>

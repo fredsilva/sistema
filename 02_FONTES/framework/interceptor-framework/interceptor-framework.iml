@@ -7,7 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="util-framework" />
     <orderEntry type="library" name="Maven: com.sun.faces:jsf-api:2.2.13" level="project" />
@@ -55,42 +55,10 @@
     <orderEntry type="library" name="Maven: commons-logging:commons-logging:1.1.1" level="project" />
     <orderEntry type="library" name="Maven: commons-lang:commons-lang:1.0" level="project" />
     <orderEntry type="library" name="Maven: junit:junit:4.10" level="project" />
+    <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-core:1.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.ant:ant:1.7.1" level="project" />
     <orderEntry type="library" name="Maven: org.apache.ant:ant-launcher:1.7.1" level="project" />
     <orderEntry type="library" name="Maven: org.jsoup:jsoup:1.9.2" level="project" />
-    <orderEntry type="module" module-name="seguranca-core" />
-    <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-core:1.1" level="project" />
-    <orderEntry type="library" name="Maven: org.powermock:powermock-module-junit4:1.6.5" level="project" />
-    <orderEntry type="library" name="Maven: org.powermock:powermock-module-junit4-common:1.6.5" level="project" />
-    <orderEntry type="library" name="Maven: org.powermock:powermock-core:1.6.5" level="project" />
-    <orderEntry type="library" name="Maven: org.powermock:powermock-reflect:1.6.5" level="project" />
-    <orderEntry type="library" name="Maven: org.javassist:javassist:3.20.0-GA" level="project" />
-    <orderEntry type="library" name="Maven: org.objenesis:objenesis:2.2" level="project" />
-    <orderEntry type="library" name="Maven: org.mockito:mockito-all:1.9.5" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-config:4.1.0.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-web:4.1.0.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-orm:4.2.6.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:4.2.6.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.data:spring-data-jpa:1.9.4.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.data:spring-data-commons:1.11.4.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.slf4j:slf4j-api:1.7.1" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.slf4j:jcl-over-slf4j:1.7.13" level="project" />
-    <orderEntry type="library" name="Maven: org.aspectj:aspectjrt:1.8.9" level="project" />
-    <orderEntry type="library" name="Maven: org.hibernate:hibernate-entitymanager:5.1.0.Final" level="project" />
-    <orderEntry type="library" name="Maven: org.hibernate:hibernate-core:5.1.0.Final" level="project" />
-    <orderEntry type="library" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final" level="project" />
-    <orderEntry type="library" name="Maven: antlr:antlr:2.7.7" level="project" />
-    <orderEntry type="library" name="Maven: org.apache.geronimo.specs:geronimo-jta_1.1_spec:1.1.1" level="project" />
-    <orderEntry type="library" name="Maven: org.jboss:jandex:2.0.0.Final" level="project" />
-    <orderEntry type="library" name="Maven: dom4j:dom4j:1.6.1" level="project" />
-    <orderEntry type="library" name="Maven: org.hibernate.common:hibernate-commons-annotations:5.0.1.Final" level="project" />
-    <orderEntry type="library" name="Maven: xml-apis:xml-apis:1.0.b2" level="project" />
-    <orderEntry type="module" module-name="business-framework" />
-    <orderEntry type="module" module-name="persistence-framework" />
-    <orderEntry type="library" name="Maven: org.aspectj:aspectjtools:1.8.9" level="project" />
-    <orderEntry type="library" name="Maven: cglib:cglib:3.2.1" level="project" />
-    <orderEntry type="library" name="Maven: org.ow2.asm:asm:5.0.3" level="project" />
-    <orderEntry type="library" name="Maven: com.github.jsqlparser:jsqlparser:0.9.6" level="project" />
-    <orderEntry type="module" module-name="parametrizacao-core" />
+    <orderEntry type="library" name="Maven: br.gov.to.sefaz.core:seguranca-core:1.7.5" level="project" />
   </component>
 </module>

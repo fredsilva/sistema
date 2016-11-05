@@ -7,7 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
-    <orderEntry type="inheritedJdk" />
+    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="Maven: junit:junit:4.10" level="project" />
     <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-core:1.1" level="project" />
@@ -83,15 +83,6 @@
     <orderEntry type="library" name="Maven: commons-cli:commons-cli:1.0" level="project" />
     <orderEntry type="library" name="Maven: commons-lang:commons-lang:1.0" level="project" />
     <orderEntry type="library" name="Maven: org.jsoup:jsoup:1.9.2" level="project" />
-    <orderEntry type="module" module-name="seguranca-core" />
-    <orderEntry type="library" name="Maven: org.powermock:powermock-module-junit4:1.6.5" level="project" />
-    <orderEntry type="library" name="Maven: org.powermock:powermock-module-junit4-common:1.6.5" level="project" />
-    <orderEntry type="library" name="Maven: org.powermock:powermock-core:1.6.5" level="project" />
-    <orderEntry type="library" name="Maven: org.powermock:powermock-reflect:1.6.5" level="project" />
-    <orderEntry type="library" name="Maven: org.objenesis:objenesis:2.2" level="project" />
-    <orderEntry type="library" name="Maven: org.mockito:mockito-all:1.9.5" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-config:4.1.0.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-web:4.1.0.RELEASE" level="project" />
-    <orderEntry type="module" module-name="parametrizacao-core" />
+    <orderEntry type="library" name="Maven: br.gov.to.sefaz.core:seguranca-core:1.7.5" level="project" />
   </component>
 </module>
