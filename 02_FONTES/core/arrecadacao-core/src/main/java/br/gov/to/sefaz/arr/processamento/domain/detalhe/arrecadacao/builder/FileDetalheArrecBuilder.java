@@ -78,21 +78,21 @@ public class FileDetalheArrecBuilder implements FileDetalheBuilder {
     }
 
     private FileDetalheArrecBuilder withCodigoBarras() {
-        String value = fileLineExtractor.getValueFromString(detalhe, 38, 82);
+        String value = fileLineExtractor.getValueFromString(detalhe, 37, 81);
         fileDetalhe.setCodigoBarras(value);
 
         return this;
     }
 
     private FileDetalheArrecBuilder withValorAutenticado() {
-        String value = fileLineExtractor.getValueFromString(detalhe, 82, 94);
+        String value = fileLineExtractor.getValueFromString(detalhe, 81, 93);
         fileDetalhe.setValorAutenticado(ConverterUtil.convertBigDecimal(value, 2));
 
         return this;
     }
 
     private FileDetalheArrecBuilder withFormaArrecadacao() {
-        String value = fileLineExtractor.getValueFromString(detalhe, 117, 118);
+        String value = fileLineExtractor.getValueFromString(detalhe, 116, 117);
         fileDetalhe.setFormaArrecadacao(value);
 
         return this;

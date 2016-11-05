@@ -25,7 +25,7 @@ public class DataGeracaoArquivoArrecValidator implements HeaderValidator {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd");
         LocalDate date = LocalDate.parse(dataGeracaoArquivo, formatter);
 
-        return date.isBefore(LocalDate.now());
+        return date.isBefore(LocalDate.now()) || date.isEqual(LocalDate.now());
     }
 
     @Override

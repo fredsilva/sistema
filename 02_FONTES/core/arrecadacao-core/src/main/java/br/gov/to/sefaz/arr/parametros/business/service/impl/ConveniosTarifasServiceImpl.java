@@ -83,9 +83,9 @@ public class ConveniosTarifasServiceImpl extends DefaultCrudService<ConveniosTar
                 .and()
                 .equal("formaPagamento", formaPagamento)
                 .and()
-                .greaterEqualThan("dataInicio", dataArrecadacao)
+                .lessEqualThan("dataInicio", dataArrecadacao)
                 .and()
-                .lessEqualThan("dataFim", dataArrecadacao));
+                .greaterEqualThan("dataFim", dataArrecadacao));
 
         return Objects.isNull(conveniosTarifas) ? BigDecimal.ZERO : conveniosTarifas.getValor();
     }
