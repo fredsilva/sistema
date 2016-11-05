@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
+ * Classe que contêm os métodos do comando Insert do QueryBuilder.
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 08/07/2016 15:18:00
  */
@@ -28,11 +29,25 @@ public class HqlInsertBuilder implements QueryStructureBuilder<HqlInsertBuilder,
         this.columnsList = new ArrayList<>();
     }
 
+    /**
+     * Método responsável por listar as colunas na consulta <code>columns</code>.
+     *
+     * @param columns informa uma coleção de colunas.
+     *
+     * @return retornar a montagem da coleção de colunas na consulta.
+     */
     public HqlInsertBuilder columns(String... columns) {
         this.columnsList.addAll(Arrays.stream(columns).collect(Collectors.toList()));
         return this;
     }
 
+    /**
+     * Método responsável por listar os valores na consulta <code>columns</code>.
+     *
+     * @param values informa uma coleção de colunas.
+     *
+     * @return retornar a montagem da coleção de values na consulta.
+     */
     public HqlInsertBuilder values(Object... values) {
         this.valuesList = new OptionalQuery<>(Arrays.stream(values)
                 .map(Value::ofParam)
@@ -40,6 +55,13 @@ public class HqlInsertBuilder implements QueryStructureBuilder<HqlInsertBuilder,
         return this;
     }
 
+    /**
+     * Método responsável por listar os valores na consulta <code>subquery</code>.
+     *
+     * @param subquery informa uma sentença da consulta.
+     *
+     * @return retornar a montagem da coleção de values na consulta.
+     */
     public HqlInsertBuilder values(HqlSelectBuilder subquery) {
         this.valuesList = new OptionalQuery<>(subquery.build());
         return this;

@@ -8,6 +8,7 @@ import br.gov.to.sefaz.persistence.query.structure.select.orderby.OrderByStructu
 import java.util.Map;
 
 /**
+ * Classe responsável por conter os métodos da operação Order By do QueryBuilder.
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 30/06/2016 10:02:00
  */
@@ -31,6 +32,15 @@ public class HqlOrderByBuilder implements QueryStructureBuilder<HqlSelectBuilder
         this.structure.putOrder(ordersBy);
     }
 
+    /**
+     * Método responsável por executar o comando AND BY do HQL informa os parâmetros
+     * <code>field</code> e <code>order</code> para a operação AND BY.
+     *
+     * @param field informa a campo do parâmetro.
+     * @param order informa o comando de ordenação(ASC/DESC).
+     *
+     * @return retornar a montagem da execução do comando AND BY do HQL.
+     */
     public HqlOrderByBuilder andBy(String field, Order order) {
         structure.putOrder(field, order);
         return this;

@@ -11,6 +11,11 @@ import java.util.List;
 import java.util.Objects;
 import java.util.stream.Collectors;
 
+/**
+ * Classe responsável por Comparar os valores das operações.
+ * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
+ * @since 01/08/2016 10:44:00
+ */
 public class Comparison {
 
     private final Value left;

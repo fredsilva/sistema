@@ -9,6 +9,7 @@ import br.gov.to.sefaz.persistence.query.structure.select.SelectStructure;
 import br.gov.to.sefaz.persistence.query.structure.where.ConditionStructure;
 
 /**
+ * Classe que representa o componente Parse para a condição Exists.
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 05/07/2016 15:21:00
  */

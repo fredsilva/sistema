@@ -21,6 +21,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
+ * Classe que representa a estrutura do componente Parse para o comando Select.
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 04/07/2016 11:29:00
  */
@@ -60,7 +61,8 @@ public class SelectParser implements QueryStructureParser<SelectStructure> {
         }
     }
 
-    protected void appendFrom(Alias<OptionalQuery<String>> from, QueryAppender query, ParamsBuilder params, ParamIdGenerator paramId) {
+    protected void appendFrom(Alias<OptionalQuery<String>> from, QueryAppender query,
+                              ParamsBuilder params, ParamIdGenerator paramId) {
         query.appendln("FROM ");
 
         if (from.getValue().isQuery()) {
@@ -76,7 +78,8 @@ public class SelectParser implements QueryStructureParser<SelectStructure> {
         query.append(from.getIfAlias(s -> " " + s));
     }
 
-    protected void appendJoins(List<JoinStructure> joins, QueryAppender query, ParamsBuilder params, ParamIdGenerator paramId) {
+    protected void appendJoins(List<JoinStructure> joins, QueryAppender query, ParamsBuilder params,
+                               ParamIdGenerator paramId) {
         joins.forEach(join -> {
             switch (join.getType()) {
                 case LEFT:
@@ -110,7 +113,8 @@ public class SelectParser implements QueryStructureParser<SelectStructure> {
         });
     }
 
-    protected void appendWhere(Optional<ConditionsStructure> where, QueryAppender query, ParamsBuilder params, ParamIdGenerator paramId) {
+    protected void appendWhere(Optional<ConditionsStructure> where, QueryAppender query, ParamsBuilder params,
+                               ParamIdGenerator paramId) {
         if (where.isPresent()) {
             ResultQuery conditions = conditionsParser.parse(where.get(), query.getDefaultPad(), paramId);
             params.put(conditions.getParams());
@@ -123,7 +127,8 @@ public class SelectParser implements QueryStructureParser<SelectStructure> {
         }
     }
 
-    protected void appendGroupBy(Optional<GroupByStructure> groupBy, List<Alias<String>> selectColumns, QueryAppender query, ParamsBuilder params, ParamIdGenerator paramId) {
+    protected void appendGroupBy(Optional<GroupByStructure> groupBy, List<Alias<String>> selectColumns,
+                                 QueryAppender query, ParamsBuilder params, ParamIdGenerator paramId) {
         if (groupBy.isPresent()) {
             GroupByStructure structure = groupBy.get();
             query.appendln("GROUP BY ");
@@ -150,7 +155,8 @@ public class SelectParser implements QueryStructureParser<SelectStructure> {
         }
     }
 
-    protected void appendOrderBy(Optional<OrderByStructure> orderBy, QueryAppender query, ParamsBuilder params, ParamIdGenerator paramId) {
+    protected void appendOrderBy(Optional<OrderByStructure> orderBy, QueryAppender query,
+                                 ParamsBuilder params, ParamIdGenerator paramId) {
         if (orderBy.isPresent()) {
             query.appendln("ORDER BY ");
 

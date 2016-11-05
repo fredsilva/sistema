@@ -15,6 +15,7 @@ import org.springframework.stereotype.Component;
 import java.util.Optional;
 
 /**
+ * Classe responsável por gerenciar o método Parse no comando Delete.
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 04/07/2016 11:29:00
  */
@@ -45,7 +46,8 @@ public class DeleteParser implements QueryStructureParser<DeleteStructure> {
         query.append("DELETE FROM ").append(from.getValue()).append(from.getIfAlias(a -> " " + a));
     }
 
-    protected void appendWhere(Optional<ConditionsStructure> where, QueryAppender query, ParamsBuilder params, ParamIdGenerator paramId) {
+    protected void appendWhere(Optional<ConditionsStructure> where, QueryAppender query, ParamsBuilder params,
+                               ParamIdGenerator paramId) {
         if (where.isPresent()) {
             ResultQuery conditions = conditionsParser.parse(where.get(), query.getDefaultPad(), paramId);
             params.put(conditions.getParams());

@@ -9,6 +9,7 @@ import java.util.Objects;
 import java.util.Optional;
 
 /**
+ * Classe que representa a estrutura do comando de Update.
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 08/07/2016 14:12:00
  */

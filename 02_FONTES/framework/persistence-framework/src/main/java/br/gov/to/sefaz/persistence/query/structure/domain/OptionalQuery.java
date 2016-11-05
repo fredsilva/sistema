@@ -5,8 +5,10 @@ import br.gov.to.sefaz.persistence.query.structure.select.SelectStructure;
 import java.util.Optional;
 
 /**
+ * Classe responsável por gerenciar as regras do Comando OptionalQuery.
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 29/06/2016 10:21:00
+ * @param <T> representa a Entidade base.
  */
 public class OptionalQuery<T> {
 

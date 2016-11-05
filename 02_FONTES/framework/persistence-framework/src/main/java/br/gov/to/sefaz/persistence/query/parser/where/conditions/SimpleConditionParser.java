@@ -6,6 +6,7 @@ import br.gov.to.sefaz.persistence.query.parser.domain.ParamIdGenerator;
 import br.gov.to.sefaz.persistence.query.structure.where.ConditionStructure;
 
 /**
+ * Classe que representa a estrutura do componente Parse para o comando SimpleCondition.
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 05/07/2016 14:39:00
  */
@@ -18,7 +19,8 @@ public class SimpleConditionParser extends AbstractConditionParser {
     }
 
     @Override
-    public String parseCondition(ConditionStructure structure, int indentationLvl, ParamIdGenerator paramId, ParamsBuilder params) {
+    public String parseCondition(ConditionStructure structure, int indentationLvl, ParamIdGenerator paramId,
+                                 ParamsBuilder params) {
         String leftValue = parseValue(structure.getComparision().getLeft(), params, paramId);
         String rightValue = parseValue(structure.getComparision().getRight().getValue().get(0), params, paramId);
         String comparison = leftValue + " " + operator + " " + rightValue;

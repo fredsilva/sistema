@@ -26,7 +26,8 @@ import static org.powermock.api.mockito.PowerMockito.when;
 
 /**
  * Teste para a classe
- * {@link br.gov.to.sefaz.seg.business.gestao.service.validator.UsuarioPrincipalEmpresaLoggedUserMandateStillValidValidator}.
+ * {@link br.gov.to.sefaz.seg.business.gestao.service.
+ * validator.UsuarioPrincipalEmpresaLoggedUserMandateStillValidValidator}.
  *
  * @author <a href="mailto:thiago.luz@ntconsult.com.br">thiago.luz</a>
  * @since 09/08/2016 11:14:00

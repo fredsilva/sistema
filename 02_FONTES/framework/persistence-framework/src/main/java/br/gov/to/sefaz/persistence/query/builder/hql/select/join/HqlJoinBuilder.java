@@ -20,6 +20,7 @@ import br.gov.to.sefaz.persistence.query.structure.select.orderby.Order;
 import java.util.Optional;
 
 /**
+ * Classe responsável por construir a estrutura do Join para consultas HQL.
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 01/08/2016 10:44:00
  */
@@ -40,6 +41,13 @@ public class HqlJoinBuilder implements QueryStructureBuilder<HqlSelectBuilder, J
         this.onBuilder = Optional.empty();
     }
 
+    /**
+     * Método responsável por executar a condição With <code>onHandler</code>.
+     *
+     * @param onHandler informa a campo que manipula a sentença.
+     *
+     * @return retornar a montagem da execução da condição With.
+     */
     public HqlSelectBuilder with(WhereHandler onHandler) {
         onBuilder =  Optional.of(new WhereBuilder<>(parent));
         onHandler.handle(onBuilder.get());

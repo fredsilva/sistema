@@ -9,6 +9,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
+ * Classe responsável por métodos de condicionais do QueryBuilder.
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 01/07/2016 10:46:00
  */
@@ -61,14 +62,25 @@ public class ConditionStructure {
         return junction;
     }
 
+    /**
+     * Método responsável por remover uma condição de Junção.
+     */
     public void removeJunction() {
         junction = Optional.empty();
     }
 
+    /**
+     * Método responsável por listar os dados da Entidade ConditionModifier.
+     */
     public Set<ConditionModifier> getModifiers() {
         return modifiers;
     }
 
+    /**
+     * Método responsável por verificar se existe parâmetro vazio.
+     *
+     * @return retorna true ou false para a condição do parâmetro.
+     */
     public boolean hasEmptyParam() {
         if (isGroup()) {
             return grouped.get().getConditions().stream().anyMatch(ConditionStructure::hasEmptyParam);

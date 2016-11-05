@@ -11,6 +11,7 @@ import br.gov.to.sefaz.persistence.query.structure.domain.Alias;
 import java.util.Optional;
 
 /**
+ * Classe responsável por métodos para Deletar do QueryBuilder.
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 08/07/2016 14:09:00
  */
@@ -29,6 +30,11 @@ public class DeleteBuilder implements QueryStructureBuilder<DeleteBuilder, Delet
         this.whereBuilder = Optional.empty();
     }
 
+    /**
+     * Método responsável por executar o comando Where do SQL.
+     *
+     * @return deve retornar o where da operação de Deletar.
+     */
     public WhereBuilder<DeleteBuilder> where() {
         if (!whereBuilder.isPresent()) {
             whereBuilder = Optional.of(new WhereBuilder<>(this));
@@ -36,6 +42,14 @@ public class DeleteBuilder implements QueryStructureBuilder<DeleteBuilder, Delet
         return whereBuilder.get();
     }
 
+    /**
+     * Método responsável por executar o comando Where informa o parâmetro
+     * <code>whereHandler</code> para a cláusula de condição do where.
+     *
+     * @param whereHandler informa uma sentença da consulta a entidade.
+     *
+     * @return retornar a montagem da execução do comando Where.
+     */
     public JunctionBuilder<DeleteBuilder> where(WhereHandler whereHandler) {
         return where().condition(whereHandler);
     }

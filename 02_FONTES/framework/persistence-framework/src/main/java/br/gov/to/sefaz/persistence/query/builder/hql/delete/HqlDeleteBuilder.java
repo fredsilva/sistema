@@ -14,6 +14,8 @@ import java.util.Map;
 import java.util.Optional;
 
 /**
+ * Classe responsável por conter os métodos
+ * de execução de Delete em HQL do QueryBuilder.
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 08/07/2016 14:09:00
  */
@@ -35,6 +37,11 @@ public class HqlDeleteBuilder implements QueryStructureBuilder<HqlDeleteBuilder,
         this.whereBuilder = Optional.empty();
     }
 
+    /**
+     * Método responsável por executar o comando Where do HQL.
+     *
+     * @return retornar a montagem do comando de execução Where do HQL.
+     */
     public WhereBuilder<HqlDeleteBuilder> where() {
         if (!whereBuilder.isPresent()) {
             whereBuilder = Optional.of(new WhereBuilder<>(this));
@@ -42,10 +49,26 @@ public class HqlDeleteBuilder implements QueryStructureBuilder<HqlDeleteBuilder,
         return whereBuilder.get();
     }
 
+    /**
+     * Método responsável por executar o comando Where do HQL informa o parâmetro
+     * <code>whereHandler</code> para a cláusula do where.
+     *
+     * @param whereHandler informa a sentença da consulta.
+     *
+     * @return retornar a montagem da execução do comando Where do HQL.
+     */
     public JunctionBuilder<HqlDeleteBuilder> where(WhereHandler whereHandler) {
         return where().condition(whereHandler);
     }
 
+    /**
+     * Método responsável por executar o comando Where do HQL informa o parâmetro
+     * <code>id</code> para a cláusula de condição do where.
+     *
+     * @param id chave que consulta a entidade.
+     *
+     * @return retornar a montagem da execução do comando Where do HQL.
+     */
     public JunctionBuilder<HqlDeleteBuilder> whereId(Object id) {
         WhereBuilder<HqlDeleteBuilder> where = where();
         ParamsBuilder idParams = EntityHandler.getIdParams(entityClass, id);

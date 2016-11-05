@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Objects;
 
 /**
+ * Classe responsável por criar a Estrutura do Comando Insert.
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 08/07/2016 15:50:00
  */

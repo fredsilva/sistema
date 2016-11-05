@@ -504,7 +504,8 @@ public class UsuarioSistema extends AbstractEntity<String> {
      */
     public UsuarioPostoTrabalho getUsuarioPostoTrabalho() {
         if (Objects.nonNull(listUsuarioPostoTrabalho) && !listUsuarioPostoTrabalho.isEmpty()) {
-            return listUsuarioPostoTrabalho.get(0);
+            UsuarioPostoTrabalho usuarioPostoTrabalho = listUsuarioPostoTrabalho.get(0);
+            return Objects.nonNull(usuarioPostoTrabalho) ? usuarioPostoTrabalho : new UsuarioPostoTrabalho();
         } else {
             return new UsuarioPostoTrabalho();
         }

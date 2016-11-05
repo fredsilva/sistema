@@ -7,6 +7,7 @@ import java.util.Objects;
 import java.util.Optional;
 
 /**
+ * Classe responsável por criar a Estrutura do Comando Join.
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 29/06/2016 09:15:00
  */

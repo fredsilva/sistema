@@ -380,8 +380,6 @@ public class UsuarioSistemaServiceImpl extends DefaultCrudService<UsuarioSistema
             return usuarioPostoTrabalhoService.saveOrUpdate(usuarioSistema.getCpfUsuario(),
                     usuarioPostoTrabalho.getIdentificacaoPostoTrabalho());
         } else {
-            usuarioPostoTrabalhoService.removeUsuarioPostoTrabalho(usuarioSistema.getCpfUsuario(),
-                    usuarioPostoTrabalho.getIdentificacaoPostoTrabalho());
             return null;
         }
     }

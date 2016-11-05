@@ -6,6 +6,7 @@ import java.util.Collection;
 import java.util.Objects;
 
 /**
+ * Classe que representa o contéudo do valor.
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 29/06/2016 10:59:00
  */
@@ -19,14 +20,33 @@ public final class Value {
         this.type = type;
     }
 
+    /**
+     * Método estático que recebe o nome da coluna.
+     *
+     * @param columnName informa o nome da coluna.
+     *
+     * @return contém o nome da coluna.
+     */
     public static Value ofColumn(String columnName) {
         return new Value(columnName, ValueType.COLUMN);
     }
 
+    /**
+     * Método estático que recebe o valor do parâmetro.
+     *
+     * @param value informa o valor.
+     *
+     * @return contém o valor do parâmetro.
+     */
     public static Value ofParam(Object value) {
         return new Value(value, ValueType.PARAM);
     }
 
+    /**
+     * Método estático que recebe o valor default nulo.
+     *
+     * @return contém o valor nulo.
+     */
     public static Value ofNull() {
         return new Value("NULL", ValueType.COLUMN);
     }

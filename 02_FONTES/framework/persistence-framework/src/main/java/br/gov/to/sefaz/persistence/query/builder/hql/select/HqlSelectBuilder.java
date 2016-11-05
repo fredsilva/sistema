@@ -24,6 +24,8 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
+ * Classe responsável por conter os métodos de execução
+ * de Delete em HQL do QueryBuilder.
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 07/07/2016 11:48:00
  */
@@ -164,6 +166,11 @@ public class HqlSelectBuilder implements QueryStructureBuilder<HqlSelectBuilder,
         return joinFetch(new Alias<>(field, alias), JoinType.FULL);
     }
 
+    /**
+     * Método responsável por executar o comando Where do HQL.
+     *
+     * @return retornar a montagem do comando de execução Where do HQL.
+     */
     public HqlSelectWhereBuilder where() {
         if (!whereBuilder.isPresent()) {
             whereBuilder = Optional.of(new HqlSelectWhereBuilder(this));
@@ -171,6 +178,14 @@ public class HqlSelectBuilder implements QueryStructureBuilder<HqlSelectBuilder,
         return whereBuilder.get();
     }
 
+    /**
+     * Método responsável por executar o comando Where do HQL informa o parâmetro
+     * <code>id</code> para a clausula de condição do where.
+     *
+     * @param id chave que consulta a entidade.
+     *
+     * @return retornar a montagem da execução do comando Where do HQL.
+     */
     @Override
     public HqlSelectJunctionBuilder whereId(Object id) {
         HqlSelectWhereBuilder where = where();
@@ -230,6 +245,13 @@ public class HqlSelectBuilder implements QueryStructureBuilder<HqlSelectBuilder,
         return hqlOrderByBuilder;
     }
 
+    /**
+     * Método responsável por executar a cláusula From na sentença da consulta.
+     *
+     * @param field informa a campo do parâmetro.
+     *
+     * @return retornar a montagem da execução do comando From.
+     */
     public String getFrom(String field) {
         return from.getIfAlias(a -> a + ".") + field;
     }

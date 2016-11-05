@@ -20,6 +20,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
+ * Classe responsável por conter os métodos de comando de Select em SQL do QueryBuilder.
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 30/06/2016 10:00:00
  */

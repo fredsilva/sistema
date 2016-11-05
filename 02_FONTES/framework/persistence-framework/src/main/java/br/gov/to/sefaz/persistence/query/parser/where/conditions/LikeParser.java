@@ -6,13 +6,15 @@ import br.gov.to.sefaz.persistence.query.parser.domain.ParamIdGenerator;
 import br.gov.to.sefaz.persistence.query.structure.where.ConditionStructure;
 
 /**
+ * Classe responsável por gerenciar o comando Parse na operação Like.
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 05/07/2016 16:29:00
  */
 public class LikeParser extends AbstractConditionParser {
 
     @Override
-    public String parseCondition(ConditionStructure structure, int indentationLvl, ParamIdGenerator paramId, ParamsBuilder params) {
+    public String parseCondition(ConditionStructure structure, int indentationLvl, ParamIdGenerator paramId,
+                                 ParamsBuilder params) {
         String leftValue = parseValue(structure.getComparision().getLeft(), params, paramId);
         String rightValue = parseValue(structure.getComparision().getRight().getValue().get(0), params, paramId);
 

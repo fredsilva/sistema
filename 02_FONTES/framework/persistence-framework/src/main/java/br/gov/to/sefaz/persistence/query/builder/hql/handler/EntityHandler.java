@@ -13,15 +13,31 @@ import javax.persistence.IdClass;
 import javax.persistence.Table;
 
 /**
+ * Classe responsável por controlar os eventos dos atributos de uma entidade.
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 07/07/2016 13:29:00
  */
 public class EntityHandler {
 
+    /**
+     * Método responsável por retornar o nome da Classe consultada.
+     *
+     * @param eClazz  Tipo da entidade base a ser consultada.
+     *
+     * @return retornar o nome da Classe consultada.
+     */
     public static String getName(Class<?> eClazz) {
         return eClazz.getSimpleName();
     }
 
+    /**
+     * Método responsável por consultar os parâmetros da Entidade.
+     *
+     * @param eClazz Tipo da entidade base a ser consultada.
+     * @param id chave que consulta a entidade.
+     *
+     * @return retornar os atributos da Entidade consultada.
+     */
     public static ParamsBuilder getIdParams(Class<?> eClazz, Object id) {
         List<Field> ids = Arrays.stream(eClazz.getDeclaredFields())
                 .filter(field -> field.getDeclaredAnnotation(Id.class) != null)
@@ -44,6 +60,13 @@ public class EntityHandler {
         }
     }
 
+    /**
+     * Método responsável por pesquisar os parâmetros da Entidade.
+     *
+     * @param eClazz Tipo da entidade base a ser consultada.
+     *
+     * @return retornar todos atributos da Entidade consultada.
+     */
     public static List<String> getIdFields(Class<?> eClazz) {
         return Arrays.stream(eClazz.getDeclaredFields())
                 .filter(field -> field.getDeclaredAnnotation(Id.class) != null)
@@ -51,6 +74,13 @@ public class EntityHandler {
                 .collect(Collectors.toList());
     }
 
+    /**
+     * Método responsável por consultar a Tabela referente a Entidade informada no parâmetro.
+     *
+     * @param eClazz Tipo da entidade base a ser consultada.
+     *
+     * @return retornar o schema e o nome da Tabela.
+     */
     public static String getTable(Class<?> eClazz) {
         Table table = eClazz.getDeclaredAnnotation(Table.class);
         String schema = table.schema().toLowerCase();
@@ -59,11 +89,25 @@ public class EntityHandler {
         return (schema.isEmpty() ? "" : schema + ".") + name;
     }
 
+    /**
+     * Método responsável por consultar o nome da Alias da Entidade.
+     *
+     * @param eClazz Tipo da entidade base a ser consultada.
+     *
+     * @return retornar o nome da Alias.
+     */
     public static String getAlias(Class<?> eClazz) {
         String name = getName(eClazz);
         return name.replaceAll("[^A-Z]", "").toLowerCase();
     }
 
+    /**
+     * Método responsável por consultar a Alias da Entidade.
+     *
+     * @param property informa o nome da alias.
+     *
+     * @return retornar o nome da Alias.
+     */
     public static String getAlias(String property) {
         property = property.replaceAll(".*\\.", "");
         String name = property.substring(1);

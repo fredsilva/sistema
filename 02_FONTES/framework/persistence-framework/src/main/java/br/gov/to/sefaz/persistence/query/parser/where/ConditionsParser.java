@@ -37,6 +37,7 @@ import static br.gov.to.sefaz.persistence.query.structure.where.ComparisonOperat
 import static br.gov.to.sefaz.persistence.query.structure.where.ComparisonOperator.LIKE;
 
 /**
+ * Classe responsável pelo construção dos condicionais dos operadores.
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 04/07/2016 16:35:00
  */
@@ -52,6 +53,13 @@ public class ConditionsParser implements QueryStructureParser<ConditionsStructur
         this.conditionsParsers = new HashMap<>();
     }
 
+
+    /**
+     * Método responsável por vincular os Enums das operações
+     * a sintaxe do SQL <code>selectParser</code>.
+     *
+     * @param selectParser informa a campo do parâmetro.
+     */
     @Autowired
     @QualifyQueryParser
     public void setSelectParser(QueryStructureParser<SelectStructure> selectParser) {

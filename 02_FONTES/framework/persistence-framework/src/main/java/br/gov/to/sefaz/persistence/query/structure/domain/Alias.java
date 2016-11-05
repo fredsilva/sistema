@@ -4,8 +4,10 @@ import java.util.Objects;
 import java.util.function.Function;
 
 /**
+ * Classe responsável por conter os métodos para Alias do QueryBuilder.
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 30/06/2016 09:32:00
+ * @param <T> entidade base.
  */
 public class Alias<T> {
 
@@ -30,10 +32,20 @@ public class Alias<T> {
         return aliasName;
     }
 
+    /**
+     * Método que contém Alias para a cláusula da consulta.
+     *
+     * @return retorna a sentença do Alias.
+     */
     public boolean hasAlias() {
         return !aliasName.isEmpty();
     }
 
+    /**
+     * Método que verifica se contém Alias para a cláusula da consulta.
+     *
+     * @return retorna o valor do Alias caso exista.
+     */
     public String getIfAlias(Function<String, String> handler) {
         return hasAlias() ? handler.apply(aliasName) : "";
     }

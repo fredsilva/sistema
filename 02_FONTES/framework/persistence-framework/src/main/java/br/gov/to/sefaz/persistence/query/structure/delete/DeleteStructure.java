@@ -7,6 +7,7 @@ import java.util.Objects;
 import java.util.Optional;
 
 /**
+ * Classe responsável por manter a estrutura do comando de Deletar.
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 08/07/2016 14:12:00
  */

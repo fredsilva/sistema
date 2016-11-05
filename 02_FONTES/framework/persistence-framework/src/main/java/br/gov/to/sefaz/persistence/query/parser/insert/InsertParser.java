@@ -17,6 +17,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
+ * Classe que representa a estrutura do componente Parse para o comando Insert.
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 04/07/2016 11:29:00
  */
@@ -53,7 +54,8 @@ public class InsertParser implements QueryStructureParser<InsertStructure> {
                 .append(")");
     }
 
-    protected void appendValues(OptionalQuery<List<Value>> values, QueryAppender query, ParamsBuilder params, ParamIdGenerator paramId) {
+    protected void appendValues(OptionalQuery<List<Value>> values, QueryAppender query, ParamsBuilder params,
+                                ParamIdGenerator paramId) {
         if (values.isQuery()) {
             ResultQuery subselect = selectParser.parse(values.getQuery(), query.getDefaultPad() + 1, paramId);
             query.appendln(subselect.getQuery());

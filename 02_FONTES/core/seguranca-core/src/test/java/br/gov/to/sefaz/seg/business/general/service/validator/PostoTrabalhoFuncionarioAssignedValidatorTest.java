@@ -65,7 +65,8 @@ public class PostoTrabalhoFuncionarioAssignedValidatorTest {
         PostoTrabalho postoTrabalho = createPostoTrabalhoMocked();
 
         when(postoTrabalho.getIdentificacaoPostoTrabalho()).thenReturn(2);
-        when(usuarioPostoTrabalhoRepository.existsLockReferenceFuncionario(postoTrabalho.getIdentificacaoPostoTrabalho()))
+        when(usuarioPostoTrabalhoRepository
+                     .existsLockReferenceFuncionario(postoTrabalho.getIdentificacaoPostoTrabalho()))
                 .thenReturn(true);
 
         Set<CustomViolation> violationSet = validator.validate(postoTrabalho.getIdentificacaoPostoTrabalho());

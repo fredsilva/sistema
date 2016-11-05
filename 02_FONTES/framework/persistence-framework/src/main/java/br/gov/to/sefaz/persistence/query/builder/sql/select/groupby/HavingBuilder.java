@@ -7,6 +7,7 @@ import br.gov.to.sefaz.persistence.query.builder.sql.where.AbstractWhereBuilder;
 import br.gov.to.sefaz.persistence.query.structure.select.orderby.Order;
 
 /**
+ * Classe responsável por conter os métodos da operação Having do QueryBuilder.
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 30/06/2016 10:01:00
  */

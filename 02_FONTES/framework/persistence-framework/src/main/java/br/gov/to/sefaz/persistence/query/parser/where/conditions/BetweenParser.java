@@ -9,6 +9,7 @@ import br.gov.to.sefaz.persistence.query.structure.where.ConditionStructure;
 import java.util.List;
 
 /**
+ * Classe responsável por gerenciar o comando Parse na operação Between.
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 05/07/2016 15:23:00
  */

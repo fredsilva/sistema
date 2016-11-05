@@ -11,6 +11,7 @@ import br.gov.to.sefaz.persistence.query.structure.select.join.JoinType;
 import java.util.Optional;
 
 /**
+ * Classe responsável por Construir a estrutura do Join.
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 30/06/2016 10:47:00
  */
@@ -29,12 +30,28 @@ public class JoinBuilder implements QueryStructureBuilder<SelectBuilder, JoinStr
         this.onBuilder = Optional.empty();
     }
 
+    /**
+     * Método responsável por executar a operação ON <code>onHandler</code>.
+     *
+     * @param onHandler informa a campo que manipula a sentença.
+     *
+     * @return retornar a montagem da execução da operação ON.
+     */
     public SelectBuilder on(WhereHandler onHandler) {
         onBuilder = Optional.of(new WhereBuilder<>(parent));
         onHandler.handle(onBuilder.get());
         return getRoot();
     }
 
+    /**
+     * Método responsável por executar a operação ON <code>leftColumn</code>
+     * e <code>rightColumn</code>.
+     *
+     * @param leftColumn  nome da coluna a esquerda a ser consultada.
+     * @param rightColumn  nome da coluna a direita a ser consultada.
+     *
+     * @return retornar a montagem da execução da operação ON.
+     */
     public SelectBuilder on(String leftColumn, String rightColumn) {
         String fromLeftColumn = withFrom(parent.getFrom(), leftColumn);
         String fromRightColumn = withFrom(getFrom(), rightColumn);
@@ -44,6 +61,13 @@ public class JoinBuilder implements QueryStructureBuilder<SelectBuilder, JoinStr
         return getRoot();
     }
 
+    /**
+     * Método responsável por executar a operação ON <code>column</code>.
+     *
+     * @param column informa as colunas da entidade.
+     *
+     * @return retornar a montagem da execução da operação ON.
+     */
     public SelectBuilder on(String column) {
         on(column, column);
         return getRoot();

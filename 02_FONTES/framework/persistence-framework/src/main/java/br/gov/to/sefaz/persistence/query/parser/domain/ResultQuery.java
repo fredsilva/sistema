@@ -4,6 +4,7 @@ import java.util.Map;
 import java.util.Objects;
 
 /**
+ * Classe que representa as responsabilidade do ResultQuery.
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 05/07/2016 13:20:00
  */

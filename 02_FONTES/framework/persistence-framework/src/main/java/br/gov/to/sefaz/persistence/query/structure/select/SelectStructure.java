@@ -14,6 +14,7 @@ import java.util.Objects;
 import java.util.Optional;
 
 /**
+ * Classe responsável por conter os metodos do comando Select do QueryBuilder.
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 28/06/2016 15:41:00
  */
@@ -41,18 +42,42 @@ public class SelectStructure {
         return queryLanguage;
     }
 
+    /**
+     * Método responsável por adiconar Alias na Coluna.
+     * <code>alias</code>.
+     *
+     * @param alias informa o nome da alias.
+     */
     public void addColumn(Alias<String> alias) {
         this.columns.add(alias);
     }
 
+    /**
+     * Método responsável por adiconar uma coleção de Alias na Coluna.
+     * <code>aliases</code>.
+     *
+     * @param aliases informa uma coleção de alias.
+     */
     public void addColumns(Collection<Alias<String>> aliases) {
         this.columns.addAll(aliases);
     }
 
+    /**
+     * Método responsável por adiconar uma estrutura de Join.
+     * <code>join</code>.
+     *
+     * @param join informa o nome do Join.
+     */
     public void addJoin(JoinStructure join) {
         this.joins.add(join);
     }
 
+    /**
+     * Método responsável por adiconar uma coleção estruturas de Joins.
+     * <code>joins</code>.
+     *
+     * @param joins informa uma coleção de Joins.
+     */
     public void addJoins(Collection<JoinStructure> joins) {
         this.joins.addAll(joins);
     }

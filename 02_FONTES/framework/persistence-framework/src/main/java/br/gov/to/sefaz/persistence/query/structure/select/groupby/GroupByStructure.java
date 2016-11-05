@@ -7,6 +7,7 @@ import java.util.Objects;
 import java.util.Optional;
 
 /**
+ * Classe responsável por manter a estrutura do comando de Group By.
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 30/06/2016 18:19:00
  */

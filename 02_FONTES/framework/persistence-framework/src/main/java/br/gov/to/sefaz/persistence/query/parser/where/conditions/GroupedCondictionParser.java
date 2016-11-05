@@ -8,6 +8,7 @@ import br.gov.to.sefaz.persistence.query.parser.where.ConditionsParser;
 import br.gov.to.sefaz.persistence.query.structure.where.ConditionStructure;
 
 /**
+ * Classe que representa o componente Parse para a condição Grouped Condiciton.
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 05/07/2016 16:52:00
  */

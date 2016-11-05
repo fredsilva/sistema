@@ -18,6 +18,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
+ * Classe responsável por gerenciar o método Parse no comando Update.
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 04/07/2016 11:29:00
  */
@@ -49,14 +50,16 @@ public class UpdateParser implements QueryStructureParser<UpdateStructure> {
         query.append("UPDATE ").append(from.getValue()).append(from.getIfAlias(a -> " " + a));
     }
 
-    protected void appendColumns(Map<String, Value> sets, QueryAppender query, ParamsBuilder params, ParamIdGenerator paramId) {
+    protected void appendColumns(Map<String, Value> sets, QueryAppender query, ParamsBuilder params,
+                                 ParamIdGenerator paramId) {
         query.appendln("SET ");
         query.appendln(1, sets.entrySet().stream()
                 .map(e -> e.getKey() + "=" + parseValue(e.getValue(), params, paramId))
                 .collect(Collectors.toList()), ",");
     }
 
-    protected void appendWhere(Optional<ConditionsStructure> where, QueryAppender query, ParamsBuilder params, ParamIdGenerator paramId) {
+    protected void appendWhere(Optional<ConditionsStructure> where, QueryAppender query, ParamsBuilder params,
+                               ParamIdGenerator paramId) {
         if (where.isPresent()) {
             ResultQuery conditions = conditionsParser.parse(where.get(), query.getDefaultPad(), paramId);
             params.put(conditions.getParams());

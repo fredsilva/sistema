@@ -14,6 +14,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
+ * Classe que representa a estrutura do componente Parse para o comando Select.
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 08/07/2016 18:25:00
  */
@@ -34,21 +35,47 @@ public class SatQueryParser {
         this.insertParser = insertParser;
     }
 
+    /**
+     * Método responsável que realiza o parse no comando do Select.
+     *
+     * @param selectBuilder informa o valor do select.
+     *
+     * @return retornar o valor do parse da Query.
+     */
     public ResultQuery parseSelect(
             QueryStructureBuilder<? extends QueryStructureBuilder<?, SelectStructure>, ?> selectBuilder) {
         return selectParser.parse(selectBuilder.getRoot().build());
     }
 
+    /**
+     * Método responsável que realiza o parse no comando Update.
+     *
+     * @param updateBuilder informa o valor do Update.
+     */
     public ResultQuery parseUpdate(
             QueryStructureBuilder<? extends QueryStructureBuilder<?, UpdateStructure>, ?> updateBuilder) {
         return updateParser.parse(updateBuilder.getRoot().build());
     }
 
+    /**
+     * Método responsável que realiza o parse no comando de Delete.
+     *
+     * @param deleteBuilder informa o valor do Delete.
+     *
+     * @return retornar o valor do parse da Query.
+     */
     public ResultQuery parseDelete(
             QueryStructureBuilder<? extends QueryStructureBuilder<?, DeleteStructure>, ?> deleteBuilder) {
         return deleteParser.parse(deleteBuilder.getRoot().build());
     }
 
+    /**
+     * Método responsável que realiza o parse no comando de Insert.
+     *
+     * @param insertBuilder informa o valor do Insert.
+     *
+     * @return retornar o valor do parse da Query.
+     */
     public ResultQuery parseInsert(
             QueryStructureBuilder<? extends QueryStructureBuilder<?, InsertStructure>, ?> insertBuilder) {
         return insertParser.parse(insertBuilder.getRoot().build());

@@ -13,6 +13,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**
+ * Classe responsável por conter os métodos da operação Group By do QueryBuilder.
  * @author <a href="mailto:gabriel.dias@ntconsult.com.br">gabriel.dias</a>
  * @since 30/06/2016 16:52:00
  */
@@ -29,6 +30,12 @@ public class GroupByBuilder implements QueryStructureBuilder<SelectBuilder, Grou
         this.havingBuilder = Optional.empty();
     }
 
+    /**
+     * Método responsável por executar o comando Having do HQL informa os parâmetros
+     * para a operação HAVING.
+     *
+     * @return retornar a montagem da execução do comando HAVING do HQL.
+     */
     public HavingBuilder having() {
         if (!havingBuilder.isPresent()) {
             havingBuilder = Optional.of(new HavingBuilder(getRoot()));

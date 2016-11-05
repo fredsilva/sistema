@@ -100,7 +100,8 @@
                     fields="nomeUnidOrganizac, nomePostoDeTrabalho, nomeCompletoUsuario, cpfUsuario:cpf,
                             usuarioPerfis, cpfUsuario:hide"
                     actionsHeader="seg.gestao.ativarInativarPerfil.table.acoes"
-                    columnDefs="{'class': 'tbody-nowrap', 'targets': 3}"
+                    columnDefs="{'class': 'tbody-nowrap', 'targets': 3},
+                                {'targets': [0] , 'orderData': [ 0, 1, 2]}"
                     hasActions="true"
                     actionEvents="select-row:click:viewUserProfiles(5)">
                 <f:facet name="actions">
