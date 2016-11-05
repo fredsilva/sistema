@@ -5,7 +5,7 @@
 
     <groupId>br.gov.to.sefaz</groupId>
     <artifactId>sat</artifactId>
-    <version>1.7.3</version>
+    <version>1.7.4</version>
     <packaging>pom</packaging>
 
     <name>sat</name>
@@ -93,7 +93,7 @@
         <maven-checkstyle-plugin.version>2.17</maven-checkstyle-plugin.version>
 
         <!-- Versão Sistema -->
-        <sat.version>1.7.3</sat.version>
+        <sat.version>1.7.4</sat.version>
     </properties>
 
     <dependencyManagement>

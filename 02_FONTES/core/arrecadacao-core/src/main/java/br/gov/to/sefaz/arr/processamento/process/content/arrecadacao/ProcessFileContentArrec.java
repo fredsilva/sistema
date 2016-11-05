@@ -44,7 +44,8 @@ public class ProcessFileContentArrec implements ProcessFileContent {
             ArquivoDetalhePagosArrecCreator arquivoDetalhePagosArrecCreator,
             ArquivoDetalhePagosService arquivoDetalhePagosService,
             FileContentExtractor fileContentExtractor, FileContentUtil fileContentUtil,
-            DetalheValidationSuite validationSuite, ProcessPagamentoLinhaArrec processPagamentoLinha) {
+            DetalheValidationSuite validationSuite,
+            ProcessPagamentoLinhaArrec processPagamentoLinha) {
         this.processFileLineError = processFileLineError;
         this.arquivoDetalhePagosArrecCreator = arquivoDetalhePagosArrecCreator;
         this.arquivoDetalhePagosService = arquivoDetalhePagosService;
@@ -73,6 +74,7 @@ public class ProcessFileContentArrec implements ProcessFileContent {
                     new FileDetalheArrec()) : arquivoDetalhePagos;
             fileLineError(arquivoDetalhePagos, currentLineContent, null);
         }
+
     }
 
     private void fileLineError(ArquivoDetalhePagos arquivoDetalhePagos, String conteudoLinha, Integer codigoRejeicao) {

@@ -293,7 +293,7 @@ public class Dare extends AbstractEntity<Long> {
                 && Objects.equals(ufEmissao, dare.ufEmissao)
                 && Objects.equals(idMunicipioEmissao, dare.idMunicipioEmissao)
                 && Objects.equals(dataVencimento, dare.dataVencimento)
-                && Objects.equals(tipoPessoa, dare.tipoPessoa)
+                && tipoPessoa == dare.tipoPessoa
                 && Objects.equals(idPessoa, dare.idPessoa)
                 && Objects.equals(nomeRazaoSocial, dare.nomeRazaoSocial)
                 && Objects.equals(dataEmissao, dare.dataEmissao)
@@ -301,15 +301,15 @@ public class Dare extends AbstractEntity<Long> {
                 && Objects.equals(quantidadeDebitos, dare.quantidadeDebitos)
                 && Objects.equals(valorTotalDare, dare.valorTotalDare)
                 && Objects.equals(barraDare, dare.barraDare)
-                && Objects.equals(dataPago, dare.dataPago)
-                && Objects.equals(dareDetalheCollection, dare.dareDetalheCollection);
+                && Objects.equals(dataPago, dare.dataPago);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(idNossoNumeroDare, idInstituicao, ufEmissao, idMunicipioEmissao, dataVencimento,
-                tipoPessoa, idPessoa, nomeRazaoSocial, dataEmissao, usuarioEmissor, quantidadeDebitos, valorTotalDare,
-                barraDare, dataPago, dareDetalheCollection);
+        return Objects.hash(idNossoNumeroDare, idInstituicao, ufEmissao,
+                idMunicipioEmissao, dataVencimento, tipoPessoa, idPessoa,
+                nomeRazaoSocial, dataEmissao, usuarioEmissor, quantidadeDebitos,
+                valorTotalDare, barraDare, dataPago);
     }
 
     @Override
@@ -329,7 +329,6 @@ public class Dare extends AbstractEntity<Long> {
                 + ", valorTotalDare=" + valorTotalDare
                 + ", barraDare='" + barraDare + '\''
                 + ", dataPago=" + dataPago
-                + ", dareDetalheCollection=" + dareDetalheCollection
                 + '}';
     }
 }

@@ -54,35 +54,35 @@ public class FileDetalheSNBuilder implements FileDetalheBuilder {
     }
 
     private FileDetalheSNBuilder withNumeroSequencial() {
-        String value = fileLineExtractor.getValueFromString(detalhe, 2, 10);
+        String value = fileLineExtractor.getValueFromString(detalhe, 1, 9);
         fileDetalhe.setNumeroSequencial(value);
 
         return this;
     }
 
     private FileDetalheSNBuilder withNumeroAutenticacao() {
-        String value = fileLineExtractor.getValueFromString(detalhe, 222, 245);
+        String value = fileLineExtractor.getValueFromString(detalhe, 221, 244);
         fileDetalhe.setNumeroAutenticacao(value);
 
         return this;
     }
 
     private FileDetalheSNBuilder withCnpjContribuinte() {
-        String value = fileLineExtractor.getValueFromString(detalhe, 75, 89);
+        String value = fileLineExtractor.getValueFromString(detalhe, 74, 88);
         fileDetalhe.setCnpjContribuinte(value);
 
         return this;
     }
 
     private FileDetalheSNBuilder withCodigoBanco() {
-        String value = fileLineExtractor.getValueFromString(detalhe, 245, 248);
+        String value = fileLineExtractor.getValueFromString(detalhe, 244, 247);
         fileDetalhe.setCodigoBanco(Integer.valueOf(value));
 
         return this;
     }
 
     private FileDetalheSNBuilder withCodigoAgencia() {
-        String value = fileLineExtractor.getValueFromString(detalhe, 248, 252);
+        String value = fileLineExtractor.getValueFromString(detalhe, 247, 251);
         fileDetalhe.setCodigoAgencia(Integer.valueOf(value));
 
         return this;
@@ -98,14 +98,14 @@ public class FileDetalheSNBuilder implements FileDetalheBuilder {
     }
 
     private FileDetalheSNBuilder withValorPrincipal() {
-        String value = fileLineExtractor.getValueFromString(detalhe, 107, 124);
+        String value = fileLineExtractor.getValueFromString(detalhe, 106, 123);
         fileDetalhe.setValorPrincipal(ConverterUtil.convertBigDecimal(value, 2));
 
         return this;
     }
 
     private FileDetalheSNBuilder withValorMulta() {
-        String value = fileLineExtractor.getValueFromString(detalhe, 124, 141);
+        String value = fileLineExtractor.getValueFromString(detalhe, 124, 140);
         fileDetalhe.setValorMulta(ConverterUtil.convertBigDecimal(value, 2));
 
         return this;
@@ -119,7 +119,7 @@ public class FileDetalheSNBuilder implements FileDetalheBuilder {
     }
 
     private FileDetalheSNBuilder withValorAutenticacao() {
-        String value = fileLineExtractor.getValueFromString(detalhe, 205, 222);
+        String value = fileLineExtractor.getValueFromString(detalhe, 204, 221);
         fileDetalhe.setValorAutenticacao(ConverterUtil.convertBigDecimal(value, 2));
 
         return this;

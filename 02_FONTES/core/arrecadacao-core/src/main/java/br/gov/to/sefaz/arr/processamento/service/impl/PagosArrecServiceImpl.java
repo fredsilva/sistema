@@ -40,14 +40,15 @@ public class PagosArrecServiceImpl extends DefaultCrudService<PagosArrec, PagosA
     @Override
     public boolean existsPagosArrecWith(String nsu, Integer codigoBanco, LocalDateTime dataArrecadacao,
             BigDecimal valorTotal) {
-        return getRepository().exists(hqlSelectBuilder -> hqlSelectBuilder
+        return getRepository().exists("pa", hqlSelectBuilder -> hqlSelectBuilder
+                .innerJoin("pa.lotesPagosArrec", "lpa")
                 .where()
-                .equal("nsuBarra", nsu)
+                .equal("pa.nsuBarra", nsu)
                 .and()
-                .equal("lotesPagosArrec.idBanco", codigoBanco)
+                .equal("lpa.idBanco", codigoBanco)
                 .and()
-                .equal("dataPagamento", dataArrecadacao)
+                .equal("pa.dataPagamento", dataArrecadacao)
                 .and()
-                .equal("valorTotal", valorTotal));
+                .equal("pa.valorTotal", valorTotal));
     }
 }

@@ -32,7 +32,7 @@ public class CodigoBarrasExtractor {
      *     extraída do código de barras
      */
     public TipoConvenioEnum getTipoConvenio(String codigoBarra) {
-        String tipoConvenio = fileLineExtractor.getValueFromString(codigoBarra, 15, 18);
+        String tipoConvenio = fileLineExtractor.getValueFromString(codigoBarra, 15, 19);
         return TipoConvenioEnum.getValue(Integer.valueOf(tipoConvenio));
     }
 
@@ -55,7 +55,7 @@ public class CodigoBarrasExtractor {
      * @return a versão conforme a informação extraída do código de barras
      */
     public int getVersaoDare(String codigoBarra) {
-        String versaoDare = fileLineExtractor.getValueFromString(codigoBarra, 18, 19);
+        String versaoDare = fileLineExtractor.getValueFromString(codigoBarra, 19, 20);
         return Integer.valueOf(versaoDare);
     }
 
@@ -66,7 +66,7 @@ public class CodigoBarrasExtractor {
      * @return o sistema emissor conforme a informação extraída do código de barras
      */
     public int getSistemaEmissor(String codigoBarra) {
-        String sistemaEmissor = fileLineExtractor.getValueFromString(codigoBarra, 19, 20);
+        String sistemaEmissor = fileLineExtractor.getValueFromString(codigoBarra, 20, 21);
         return Integer.valueOf(sistemaEmissor);
     }
 
@@ -77,7 +77,7 @@ public class CodigoBarrasExtractor {
      * @return a data de vencimento conforme a informação extraída do código de barras
      */
     public String getDataVencimento(String codigoBarra) {
-        return fileLineExtractor.getValueFromString(codigoBarra, 20, 25);
+        return fileLineExtractor.getValueFromString(codigoBarra, 21, 26);
     }
 
     /**
@@ -87,6 +87,6 @@ public class CodigoBarrasExtractor {
      * @return o nosso número conforme a informação extraída do código de barras
      */
     public String getNossoNumero(String codigoBarra) {
-        return fileLineExtractor.getValueFromString(codigoBarra, 25, 35);
+        return fileLineExtractor.getValueFromString(codigoBarra, 26, 36);
     }
 }

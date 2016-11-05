@@ -78,13 +78,14 @@ public class ProcessArquivoStr implements ProcessArquivo {
             this.arquivoStrValidator.validateArquivoJaLido(arquivosStrEntity);
             this.arquivoStrValidator.validateCodSefazInvalido(arquivoStr0020Domain);
             detalhesStr = this.processDetalhesStr.processDetalhes(arquivosStrEntity, arquivoStr0020Domain);
+            conciliarArquivo(arquivosStrEntity, arquivoStr0020Domain, detalhesStr);
         } catch (ProcessFileException e) {
             registerError(arquivosStrEntity, e);
+            conciliarArquivo(arquivosStrEntity, arquivoStr0020Domain, detalhesStr);
         } catch (Exception e) {
             situacao = SituacaoProcessamentoStrEnum.NAO_PROCESSADO;
             Logger.getLogger(this.getClass()).error("Erro inesperado ao processar arquivo STR20.", e);
         }
-        conciliarArquivo(arquivosStrEntity, arquivoStr0020Domain, detalhesStr);
         atualizarArquivoStrWithBlob(arquivosStrEntity, file, fileName);
         atualizarArquivoStrProcessado(arquivosStrEntity, situacao);
     }
