@@ -1,0 +1,23 @@
+<Ficha_de_Identificação>
+	<Número></Número>
+	<Data_do_Documento></Data_do_Documento>
+	<Tipo_de_Suporte></Tipo_de_Suporte>
+	<Espécie_ou_Tipo_Documental></Espécie_ou_Tipo_Documental>
+	<Identificação></Identificação>
+	<Acesso></Acesso>
+	<Referência></Referência>
+	<Resposta_ao></Resposta_ao>
+	<Prazo_de_Resposta></Prazo_de_Resposta>
+	<Classificação_Arquivistica></Classificação_Arquivistica>
+	<Palavras-Chave>
+		<Palavra-Chave></Palavra-Chave>
+	</Palavras-Chave>
+	<Descrição_do_Assinto></Descrição_do_Assinto>
+	<Interessado></Interessado>
+	<Arquivo_Digital></Arquivo_Digital>
+	<Número_de_Cópias></Número_de_Cópias>
+	<Tramitar_Após_Inclusão></Tramitar_Após_Inclusão>
+	<Mensagens-Erros>
+		<Mensagem-Erro></Mensagem-Erro>
+	</Mensagens-Erros>
+</Ficha_de_Identificação>
