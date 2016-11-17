@@ -30,14 +30,14 @@
 <ns>0</ns>
 <id>371</id>
 <revision>
-<id>1288</id>
-<timestamp>2016-10-14T09:17:05Z</timestamp>
+<id>1635</id>
+<timestamp>2016-10-31T10:17:15Z</timestamp>
 <contributor>
 <username>admin</username>
 <id>1</id>
 </contributor>
-<comment />
-<text xml:space="preserve" bytes="20485">=Instala����o do Ambiente do Sistema (Linux)=
+<comment>/* Configura����o do Sistema */ </comment>
+<text xml:space="preserve" bytes="21017">=Instala����o do Ambiente do Sistema (Linux)=
 
 Aqui ser��o apresentados os requisitos necess��rios para utilizar a ��ltima vers��o do sistema no ambiente Linux. Os passos a seguir ser��o demonstrados utilizando a distribui����o CentOS 6. Todos os comandos nesse manual ser��o executados utilizando o usu��rio &lt;tt&gt;root&lt;/tt&gt;, ent��o certifique-se de que o usu��rio que esta utilizando �� &lt;tt&gt;root&lt;/tt&gt; ou que tenha as devidas permiss��es para execu����o dos comandos.
 
@@ -420,9 +420,13 @@ o arquivo cont��m os seguintes par��metros:
 *&apos;&apos;&apos;ldap.provider.passwdManager&apos;&apos;&apos; - Senha do Administrador do LDAP.
 *&apos;&apos;&apos;ldap.connect.timeout&apos;&apos;&apos; - Tempo m��ximo de espera para realizar a conex��o com o LDAP.
 
+==Configura����o das Propriedades Customizadas do Sistema==
+
+Para alterar a configura����o das propriedades customizadas do sistema, deve-se editar o arquivo &apos;&apos;&apos;&apos;&apos;custom.properties&apos;&apos;&apos;&apos;&apos; dispon��vel no caminho &apos;&apos;&apos;&apos;&apos;(WILDFLY_HOME/standalone/configuration/custom.properties)&apos;&apos;&apos;&apos;&apos;, onde WILDFLY_HOME compreende �� pasta onde o servidor de aplica����o est�� instalado. Ao alterar o arquivo, automaticamente o sistema come��a a ler o novo valor da propriedade, sem necessitar reiniciar a aplica����o.
+
+o arquivo cont��m os seguintes par��metros:
+
 *&apos;&apos;&apos;arrec.directory&apos;&apos;&apos; - Diret��rio que realiza a recep����o dos arquivos de arrecada����o.
-
-
 
 = Deploy do Sistema =
 
@@ -455,7 +459,7 @@ o arquivo cont��m os seguintes par��metros:
 [[File:deploy_sistema_6.png|Deploy 6]]
 
 ----
-[[Manual de Manuten����o | Voltar]]
+[[Ambiente de Desenvolvimento | Voltar]]
 </text>
 </revision>
 </page>

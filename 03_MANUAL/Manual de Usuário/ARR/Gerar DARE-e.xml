@@ -1,0 +1,635 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
+<siteinfo>
+<sitename>SEFAZ-TO Wiki</sitename>
+<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<generator>JAMWiki 1.3.2</generator>
+<case>case-sensitive</case>
+<namespaces>
+<namespace key="-2">Media</namespace>
+<namespace key="-1">Special</namespace>
+<namespace key="0" />
+<namespace key="1">Comments</namespace>
+<namespace key="2">User</namespace>
+<namespace key="3">User comments</namespace>
+<namespace key="4">Project</namespace>
+<namespace key="5">Project comments</namespace>
+<namespace key="6">File</namespace>
+<namespace key="7">File comments</namespace>
+<namespace key="8">JAMWiki</namespace>
+<namespace key="9">JAMWiki comments</namespace>
+<namespace key="10">Template</namespace>
+<namespace key="11">Template comments</namespace>
+<namespace key="12">Help</namespace>
+<namespace key="13">Help comments</namespace>
+<namespace key="14">Category</namespace>
+<namespace key="15">Category comments</namespace>
+</namespaces>
+</siteinfo>
+<page>
+<title>Gerar DARE-e</title>
+<ns>0</ns>
+<id>511</id>
+<revision>
+<id>1626</id>
+<timestamp>2016-10-26T16:12:32Z</timestamp>
+<contributor>
+<username>admin</username>
+<id>1</id>
+</contributor>
+<comment>/* Enviar e-mail DARE-e */ </comment>
+<text xml:space="preserve" bytes="25596">Esta funcionalidade tem por objetivo a entrada de informa����es para a gera����o do &apos;&apos;&apos;DARE&apos;&apos;&apos; para pagamento em ag��ncias banc��rias.
+
+Para acessar a gera����o do &apos;&apos;DARE-e&apos;&apos;&apos;, �� necess��rio acessar o endere��o /public/dare-e-consolidado.jsf da aplica����o.
+
+----
+== Gerando a DARE-e ==
+Ao acessar a funcionalidade Gerar DARE-e �� apresentada a funcionalidade abaixo para entrada das informa����es para a gera����o da DARE-e. A funcionalidade ainda contempla as op����es de Imprimir a DARE e Enviar E-mail DARE.
+
+Para a gera����o da DARE-e �� necess��rio que sejam informados os seguintes grupos de dados:
+
+:* &lt;u&gt;Dados da Opera����o&lt;/u&gt;
+:* &lt;u&gt;Dados do Contribuinte&lt;/u&gt;
+:* &lt;u&gt;Dados de Identifica����o do Pagamento&lt;/u&gt;
+:* &lt;u&gt;Dados do Pagamento&lt;/u&gt;
+
+Ap��s o usu��rio informar todas as informa����es obrigat��rias (campos marcados com *), usu��rio deve clicar no bot��o &apos;&apos;&apos;Gerar DARE&apos;&apos;&apos;. 
+
+O sistema gera a DARE emitindo a mensagem &apos;&apos;&apos; &apos;&apos;Opera����o Realizada com Sucesso!&apos;&apos; &apos;&apos;&apos;.
+
+Para visualiza����o da DARE gerada o usu��rio ter�� duas formas:
+
+:* &lt;u&gt;Imprimir DARE&lt;/u&gt;
+:* &lt;u&gt;Enviar E-mail DARE&lt;/u&gt;
+
+
+&apos;&apos;&apos;&lt;u&gt;Print: Gerar DARE-e&lt;/u&gt;&apos;&apos;&apos;
+----
+[[File:1-ARRUC0210.jpg|1-ARRUC0210]]
+----
+
+
+&apos;&apos;&apos;Preenchimento dos campos:&apos;&apos;&apos;
+:*Os campos contendo * ao final do seu texto s��o de preenchimento obrigat��rio.
+
+
+&apos;&apos;&apos;Restri����es:&apos;&apos;&apos;
+
+:* &lt;u&gt;Validar Registros na Lista de Pagamentos Adicionados.&lt;/u&gt;
+:: O sistema verifica que n��o existe registros adicionados na lista de Pagamentos Adicionados e apresenta a mensagem &apos;&apos;&apos;&apos;&apos;Nenhum Item foi Adicionado na Lista de Pagamentos Adicionados. Favor adicionar um Item no M��nimo para Gera����o do DARE!&apos;&apos;&apos;&apos;&apos;.
+
+
+----
+----
+== Informando Dados da Opera����o ==
+
+Neste grupo de informa����es o usu��rio deve informar obrigatoriamente os campos abaixo destacados:
+
+:* &lt;u&gt;Institui����o&lt;/u&gt;
+:: Abaixo segue lista dos Tipos de Contribuintes por Institui����o:
+::* Sefaz
+::* Tribunal de Justi��a
+::* Secretaria da Sa��de
+::* Secretaria Seguran��a P��blica
+::* Secretaria Meio Ambiente
+::* Outras Institui����es
+:* &lt;u&gt;UF Emissora&lt;/u&gt;
+:* &lt;u&gt;Munic��pio&lt;/u&gt;
+
+
+&apos;&apos;&apos;&lt;u&gt;Print: Gerar DARE-e &gt;&gt; Entrada de Dados da Opera����o&lt;/u&gt;&apos;&apos;&apos;
+
+----
+[[File:2-ARRUC0210.jpg|2-ARRUC0210]]
+
+----
+----
+== Informando dados do Contribuinte ==
+
+Neste grupo de informa����es o usu��rio deve informar obrigatoriamente os campos abaixo destacados :
+
+* &lt;u&gt;Tipo Contribuinte&lt;/u&gt;
+:* Os Tipos de Contribuintes exibidos na listagem, ser��o baseados na sele����o do campo Institui����o que se encontra no do grupo de Dados da Opera����o.
+:: Abaixo segue lista dos Tipos de Contribuintes por Institui����o:
+::* Institui����es: Sefaz / Tribunal de Justi��a / Secretaria da Sa��de / Secretaria Seguran��a P��blica / Secretaria Meio Ambiente:
+:::* ICMS
+:::* IPVA
+:::* ITCD
+:::* N��o Contribuinte
+::* Outras Institui����es:
+:::* N��o Contribuinte
+:* Se a Institui����o informada no grupo Dados da Opera����o for diferente de Sefaz, somente ser�� permitido informar o tipo &quot;N��o Contribuinte&quot;.
+* &lt;u&gt;Tipo Identifica����o&lt;/u&gt;
+:* Os tipos de Identifica����o exibidos, ser��o baseados na sele����o do campo Tipo de Contribuinte. 
+:: Abaixo segue lista dos Tipos de Identifica����o por Tipo de Contribuinte:
+::* ICMS
+:::* Inscri����o Estadual
+::* IPVA
+:::* Renavan
+::* ITCD
+:::* CPF
+:::* CNPJ
+::* N��o Contribuinte
+:::* CPF
+:::* CNPJ
+
+* &lt;u&gt;C��digo Tipo Identifica����o&lt;/u&gt;
+:* Deve ser informado o c��digo de identifica����o referente ao tipo de identifica����o selecionado. 
+
+
+
+ Para carregar as informa����es do contribuinte, ap��s informar os dados acima, basta clicar no bot��o consultar.
+
+ As informa����es de CNPJ/CPF e Nome/Raz��o Social, s��o carregadas no sistema com base no tipo de identifica����o informado.
+
+
+
+&apos;&apos;&apos;&lt;u&gt;Print: Gerar DARE-e &gt;&gt; Dados do Contribuinte&lt;/u&gt;&apos;&apos;&apos;
+
+----
+[[File:3-ARRUC0210.jpg|3-ARRUC0210]]
+----
+
+
+&apos;&apos;&apos;Restri����es:&apos;&apos;&apos;
+
+:* &lt;u&gt;Tipo de Identifica����o n��o informado.&lt;/u&gt;
+:: O sistema verificou que n��o foi informado valor para o tipo de identifica����o. O sistema apresenta a mensagem &apos;&apos;&apos; &apos;&apos;N��o foi informado nenhum valor para o Tipo de Identifica����o selecionada. Informe o valor para o tipo de identifica����o selecionada para poder pesquisar!&apos;&apos; &apos;&apos;&apos; e retorna a tela para que seja informado um valor para o tipo de identifica����o.
+:* &lt;u&gt;Validar DV do tipo identifica����o do contribuinte.&lt;/u&gt;
+:: O sistema verificou que o digito verificador do tipo de identifica����o informado encontra-se com o digito inv��lido. O sistema apresenta a mensagem &apos;&apos;&apos; &apos;&apos;Digito Verificador Inv��lido&apos;&apos; &apos;&apos;&apos; e retorna a tela para que seja informado um valor para o tipo de identifica����o.
+:* &lt;u&gt;Contribuinte n��o Localizado.&lt;/u&gt;
+:: O sistema verificou que o contribuinte n��o foi localizado com o tipo de identifica����o informada. O sistema apresenta a mensagem &apos;&apos;&apos; &apos;&apos;N��o foi Poss��vel localizar o Tipo do Contribuinte com base nos dados Informados!&apos;&apos; &apos;&apos;&apos; e retorna atela para que seja informado um valor para o tipo de identifica����o.
+
+
+* &lt;u&gt;Tipo de Contribuinte selecionado: &quot;N��o Contribuinte&quot;&lt;/u&gt;
+
+** Quando o Tipo de Contribuinte for &apos;&apos;&apos;&quot;N��o Contribuinte&quot;&apos;&apos;&apos;, a op����o para busca da identifica����o n��o ser�� exibida, sendo assim o CPF ou CNPJ - conforme escolha do usu��rio para o Tipo Identifica����o - ser�� aquele informado por ele, n��o havendo consulta.
+
+&apos;&apos;&apos;&lt;u&gt;Print: Gerar DARE-e &gt;&gt; Dados do Contribuinte&lt;/u&gt;&apos;&apos;&apos;
+
+----
+[[File:ARRUC0210-nao-contribuinte.PNG|3-ARRUC0210]]
+
+
+----
+----
+== Informando dados de Identifica����o do Pagamento ==
+
+Neste grupo de informa����es o usu��rio deve informar obrigatoriamente os campos:
+
+* &lt;u&gt;Tipo do Imposto&lt;/u&gt;
+:* Os Tipos de Impostos exibidos na listagem, ser��o baseados na sele����o do campo Institui����o que se encontra no do grupo de Dados da Opera����o.
+::Exemplo: ICMS, IPVA, Taxas/Multas e Outras Receitas Tribut��rias, etc.
+:* Se a Institui����o informada no grupo Dados da Opera����o for diferente de Sefaz, somente ser�� permitido informar os Tipos de Impostos &quot;Taxas/Multas e Outras Receitas Tribut��rias&quot; e &quot;Taxas/Multas e Outras Receitas N��o Tribut��rias&quot;.
+
+
+&apos;&apos;&apos;&lt;u&gt;Print: Gerar DARE-e &gt;&gt; Dados de Identifica����o do Pagamento&lt;/u&gt;&apos;&apos;&apos;
+
+----
+[[File:4-ARRUC0210.jpg|4-ARRUC0210]]
+
+----
+----
+== Informando Dados do Pagamento ==
+
+* Para a entrada das informa����es, o usu��rio deve primeiramente ter informado o &apos;&apos;Tipo de Imposto&apos;&apos; e &apos;&apos;Origem do D��bito&apos;&apos; para que assim seja definido o grupo de informa����es a serem inseridas.
+: As op����es de entrada de Dados do Pagamento s��o:
+:# D��bitos com Possibilidade de Pagamentos Parciais
+:# D��bitos sem Possibilidade de Pagamentos Parciais
+:# D��bitos de Pagamentos de IPVA
+:# D��bitos de Pagamentos de ICMS Frete
+:# D��bitos de Pagamentos de Diversos
+
+ As informa����es de preenchimento para cada grupo de Dados de Pagamento, descrito acima, encontra-se nas sess��es abaixo.
+
+
+* Ap��s a entrada de todas as informa����es de Pagamento, conforme o grupo de Dados de Pagamento escolhido, o usu��rio seleciona a op����o &apos;&apos;&apos;&apos;&apos;Adicionar Item na Lista&apos;&apos;&apos;&apos;&apos;.
+: O sistema ir�� validar as regras de preenchimento com base nos campos obrigat��rios dos dados da opera����o, dados do contribuinte, dados de Identifica����o do pagamento e os dados do pagamento em conformidade com a tela apresentada.
+
+
+&apos;&apos;&apos;ATEN����O:&apos;&apos;&apos; Repita as etapas acima para cada documento que deseja ser inclu��do na Lista de Pagamento.
+
+
+&apos;&apos;&apos;Restri����es:&apos;&apos;&apos;
+
+:* &lt;u&gt;Documento Informado n��o Localizado.&lt;/u&gt;
+:: O sistema verificou que o documento n��o foi localizado ou n��o existia d��bitos para o documento informado. O sistema apresenta a mensagem &apos;&apos;&apos;&apos;&apos;Documento n��o Foi Localizado ou n��o existe D��bito para o Documento Informado. O Documento �� Obrigat��rio para a Origem do D��bito Selecionado. Informe o N��mero do Documento Correto para Localizar o D��bito!&apos;&apos;&apos;&apos;&apos; e retorna a tela para que seja informado um valor para o documento.
+
+:* &lt;u&gt;Validar Dados Obrigat��rios.&lt;/u&gt;
+:: Ao selecionar a op����o &apos;&apos;&apos;&apos;&apos;Adicionar Item na Lista&apos;&apos;&apos;&apos;&apos;, o sistema executa as seguintes valida����es:
+::* Dados da Opera����o:
+::# Campo Institui����o n��o foi informada e o sistema apresenta a seguinte mensagem &apos;&apos;&apos;&apos;&apos;Campo Institui����o �� Obrigat��rio!&apos;&apos;&apos;&apos;&apos;.
+::# Campo de Uf Emissora n��o foi informada e o sistema apresenta a seguinte mensagem &apos;&apos;&apos;&apos;&apos;Campo UF Emissora �� Obrigat��rio!&apos;&apos;&apos;&apos;&apos;.
+::# Campo Munic��pio n��o foi informado e o sistema apresenta a seguinte mensagem &apos;&apos;&apos;&apos;&apos;Campo Munic��pio da UF Emissora �� Obrigat��rio!&apos;&apos;&apos;&apos;&apos;.
+::* Dados do Contribuinte:
+::# Campo Tipo Contribuinte n��o foi informado e o sistema apresenta a seguinte mensagem &apos;&apos;&apos;&apos;&apos;Campo Tipo de Contribuinte  �� Obrigat��rio!&apos;&apos;&apos;&apos;&apos;.
+::# Campo Tipo de Identifica����o n��o foi informado e o sistema apresenta a seguinte mensagem &apos;&apos;&apos;&apos;&apos;Campo Tipo de Identifica����o �� Obrigat��rio!&apos;&apos;&apos;&apos;&apos;.
+::# Campo Valor do Tipo de Identifica����o selecionado n��o foi informado e o sistema apresenta a seguinte mensagem &apos;&apos;&apos;&apos;&apos;Campo Valor do Tipo de Identifica����o selecionado n��o foi Informado. Campo �� Obrigat��rio!&apos;&apos;&apos;&apos;&apos;.
+::# Sistema verificou que o Tipo do Imposto �� diferente de ���N��o Contribuinte��� e o campo de Nome/Raz��o Social encontra-se em branco. O sistema apresenta a seguinte mensagem &apos;&apos;&apos;&apos;&apos;Tipo de Imposto Informado �� diferente de ���N��o Contribuinte���. Campo Nome/Raz��o Social  �� Obrigat��rio est�� preenchido!&apos;&apos;&apos;&apos;&apos;.
+::* Dados de Identifica����o do Pagamento
+::# Campo Tipo do Imposto n��o foi informado e o sistema apresenta a seguinte mensagem &apos;&apos;&apos;&apos;&apos;Campo Tipo do Imposto �� Obrigat��rio!&apos;&apos;&apos;&apos;&apos;.
+::# Campo Origem D��bito n��o foi informado e o sistema apresenta a seguinte mensagem &apos;&apos;&apos;&apos;&apos;Campo Origem do D��bito �� Obrigat��rio!&apos;&apos;&apos;&apos;&apos;.
+:: Sistema identificando alguma das restri����es acima, retorna a tela para que a informa����o seja ajustada.
+
+::* Dados do Pagamento
+::# Quando o Valor Total for maior que R$ 999.999.999,99 o sistema apresenta a seguinte mensagem &apos;&apos;&apos;&apos;&apos;O DARE a ser pago est�� apresentando valores superiores a 999.999.999,99 Reais. Favor reduzir o valor do DARE a ser pago, retirando um item ou gerando um novo DARE com o Valor a Pagar menor.&apos;&apos;&apos;&apos;&apos;.
+----
+
+=== D��bitos com Possibilidade de Pagamentos Parciais ===
+
+Para informar &apos;&apos;&apos;&apos;&apos;D��bitos com Possibilidade de Pagamentos Parciais&apos;&apos;&apos;&apos;&apos; o usu��rio dever escolher uma das configura����es entre &apos;&apos;&apos;&apos;&apos;Tipo de Imposto&apos;&apos;&apos;&apos;&apos; e &apos;&apos;&apos;&apos;&apos;Origem de D��bito&apos;&apos;&apos;&apos;&apos;, conforme quadro abaixo.
+
+{| border=&quot;1&quot; cellpadding=&quot;10&quot; cellspacing=&quot;0&quot;
+|&apos;&apos;&apos;Tipo de Imposto&apos;&apos;&apos;
+|&apos;&apos;&apos;Origem de D��bito&apos;&apos;&apos;
+|-
+|rowspan=&quot;6&quot;|ICMS
+|Declarado ICMS
+|-
+|Declarado ICMS ST
+|-
+|Declarado ICMS Compl.
+|-
+|Auto de Infra����o / NLD
+|-
+|Divida Ativa
+|-
+|NF Opera����es Espont��neas ST
+|-
+|IPVA
+|Divida Ativa
+|-
+|rowspan=&quot;2&quot;|ITCD
+|ITCD
+|-
+|Divida Ativa
+|}
+
+
+
+Ap��s selecionado uma das combina����es de &apos;&apos;&apos;&apos;&apos;Tipo de Imposto&apos;&apos;&apos;&apos;&apos; e &apos;&apos;&apos;&apos;&apos;Origem de D��bito&apos;&apos;&apos;&apos;&apos; acima, o sistema carrega a tela abaixo:
+
+
+&apos;&apos;&apos;&lt;u&gt;Print: Gerar DARE-e &gt;&gt; Dados do Pagamento &gt;&gt; D��bitos com Possibilidade de Pagamentos Parciais&lt;/u&gt;&apos;&apos;&apos;
+
+----
+[[File:5A-ARRUC0210.jpg|5A-ARRUC0210]]
+----
+
+
+* O usu��rio deve informar o n��mero do &lt;u&gt;Documento&lt;/u&gt; de pagamento e ap��s selecionar a op����o pesquisar.
+
+* Com o documento identificado, usu��rio deve selecionar uma &lt;u&gt;Receita&lt;/u&gt;.
+: Ao selecionar uma &lt;u&gt;Receita&lt;/u&gt;, o sistema em conformidade com o tipo da conta que est�� vinculada ao documento, localiza o saldo devedor e preenche os campos:
+::* Per��odo/ Ano Refer��ncia
+::* Valor Imposto
+::* Valor Atlz. Monet��ria
+::* Valor Multa
+::* Valor Redu����o
+::* Valor Juros
+::* Valor Redu����o Juros
+: O sistema atualiza o total a recolher com base nos valores localizados.
+::* Total a Recolher
+
+
+&apos;&apos;&apos;ATEN����O:&apos;&apos;&apos; Para os casos onde o usu��rio escolher a Origem de D��bito &apos;&apos;&apos;&apos;&apos;NF Opera����es de espont��neas ST&apos;&apos;&apos;&apos;&apos;, o sistema seleciona a op����o &apos;&apos;&apos;&apos;&apos;Deseja informar um Valor Diferente pra Pagar?&apos;&apos;&apos;&apos;&apos; e habilita o campo &apos;&apos;&apos;&apos;&apos;Valor a Pagar&apos;&apos;&apos;&apos;&apos;.
+:* Para este tipo de Origem de D��bito, o sistema permite ao usu��rio informar o n��mero do documento sem realizar buscas de d��bitos no base de dados.
+:* Para este tipo de Origem de D��bito fica obrigat��rio o usu��rio informar o campo &apos;&apos;&apos;Per��odo/ Ano Refer��ncia&apos;&apos;&apos;.
+
+
+&apos;&apos;&apos;Restri����es:&apos;&apos;&apos;
+
+:* &lt;u&gt;Documento Informado n��o Localizado.&lt;/u&gt;
+:: O sistema verificou que o documento n��o foi localizado ou n��o existia d��bitos para o documento informado. O sistema apresenta a mensagem &apos;&apos;&apos;&apos;&apos;Documento n��o Foi Localizado ou n��o existe D��bito para o Documento Informado. O Documento �� Obrigat��rio para a Origem do D��bito Selecionado. Informe o N��mero do Documento Correto para Localizar o D��bito!&apos;&apos;&apos;&apos;&apos; e retorna a tela para que seja informado um valor para o documento.
+
+:* &lt;u&gt;Validar dados D��bitos com Possibilidade de Pagamentos Parciais.&lt;/u&gt;
+:: Ao selecionar a op����o &apos;&apos;&apos;Adicionar Item na Lista&apos;&apos;&apos;, o sistema executa as seguintes valida����es:
+:# Campo Documento n��o foi informado e o sistema apresenta a seguinte mensagem &apos;&apos;&apos;&apos;&apos;Informe o n��mero do Documento. Campo Obrigat��rio!&apos;&apos;&apos;&apos;&apos;.
+:# Campo de Receita n��o foi informado e o sistema apresenta a seguinte mensagem &apos;&apos;&apos;&apos;&apos;C��digo de Receita n��o foi Informado!&apos;&apos;&apos;&apos;&apos;.
+:# O sistema verificou que a Origem do D��bito que est�� informado �� ���NF Opera����es de espont��neas ST��� e o Per��odo de Refer��ncia n��o foi informado. O sistema apresenta a seguinte mensagem &apos;&apos;&apos;&apos;&apos;Per��odo de Refer��ncia �� Obrigat��rio para Origem do D��bito do tipo: ���NF Opera����es de espont��neas ST���&apos;&apos;&apos;&apos;&apos;.
+:# O sistema verificou que a op����o de Informar um Valor diferente a pagar est�� selecionada e o Valor a Pagar n��o foi informado. O sistema apresenta a seguinte mensagem &apos;&apos;&apos;&apos;&apos;A op����o de Informar um Valor diferente a Pagar est�� selecionada. Informe um Valor a Pagar!&apos;&apos;&apos;&apos;&apos;.
+
+
+----
+=== D��bitos sem Possibilidade de Pagamentos Parciais ===
+
+Para informar &apos;&apos;&apos;&apos;&apos;D��bitos sem Possibilidade de Pagamentos Parciais&apos;&apos;&apos;&apos;&apos; o usu��rio dever escolher uma das configura����es entre &apos;&apos;&apos;&apos;&apos;Tipo de Imposto&apos;&apos;&apos;&apos;&apos; e &apos;&apos;&apos;&apos;&apos;Origem de D��bito&apos;&apos;&apos;&apos;&apos;, conforme quadro abaixo.
+
+{| border=&quot;1&quot; cellpadding=&quot;10&quot; cellspacing=&quot;0&quot;
+|&apos;&apos;&apos;Tipo de Imposto&apos;&apos;&apos;
+|&apos;&apos;&apos;Origem de D��bito&apos;&apos;&apos;
+|-
+|rowspan=&quot;5&quot;|ICMS
+|Parcelamento
+|-
+|Parcelamento Divida Ativa
+|-
+|Cobran��a Tr��nsito
+|-
+|Nota Avulsa
+|-
+|DPCA
+|-
+|rowspan=&quot;2&quot;|IPVA
+|Parcelamento
+|-
+|Parcelamento Divida Ativa
+|-
+|rowspan=&quot;2&quot;|ITCD
+|Parcelamento
+|-
+|Parcelamento Divida Ativa
+|}
+
+
+
+Ap��s selecionado uma das combina����es de &apos;&apos;&apos;&apos;&apos;Tipo de Imposto&apos;&apos;&apos;&apos;&apos; e &apos;&apos;&apos;&apos;&apos;Origem de D��bito&apos;&apos;&apos;&apos;&apos; acima, o sistema carrega a tela abaixo:
+
+
+&apos;&apos;&apos;&lt;u&gt;Print: Gerar DARE-e &gt;&gt; Dados do Pagamento &gt;&gt; D��bitos sem Possibilidade de Pagamentos Parciais&lt;/u&gt;&apos;&apos;&apos;
+
+----
+[[File:5B-ARRUC0210.jpg|5B-ARRUC0210]]
+----
+
+
+* O usu��rio deve informar o n��mero do &lt;u&gt;Documento&lt;/u&gt; de pagamento e ap��s selecionar a op����o &apos;&apos;&apos;Pesquisar&apos;&apos;&apos;.
+
+* O sistema exibe os registros com d��bitos vinculados ao documento informado.
+:Para cada registro de d��bito vinculado ao documento �� exibido as seguintes informa����es:
+:* Documento/Parcela
+:* Per��odo/Ano
+:* Data Vencimento
+:* Receita
+:* Valor Imposto
+:* Valor Multa
+:* Valor Juros
+:* Valor Corre����o Monet��ria
+:* Valor TSE
+:* Valor Redu����o
+:* Valor Total
+
+
+&apos;&apos;&apos;Restri����es:&apos;&apos;&apos;
+
+:* &lt;u&gt;Documento Informado n��o Localizado.&lt;/u&gt;
+:: O sistema verificou que o documento n��o foi localizado ou n��o existia d��bitos para o documento informado. O sistema apresenta a mensagem &apos;&apos;&apos;&apos;&apos;Documento n��o Foi Localizado ou n��o existe D��bito para o Documento Informado. O Documento �� Obrigat��rio para a Origem do D��bito Selecionado. Informe o N��mero do Documento Correto para Localizar o D��bito!&apos;&apos;&apos;&apos;&apos; e retorna a tela para que seja informado um valor para o documento.
+
+:* &lt;u&gt;Validar D��bitos sem Possibilidade de Pagamentos Parciais.&lt;/u&gt;
+:: Ao selecionar a op����o &apos;&apos;&apos;Adicionar Item na Lista&apos;&apos;&apos;, o sistema executa as seguintes valida����es:
+:# Campo Documento n��o foi informado e o sistema apresenta a seguinte mensagem &apos;&apos;&apos;&apos;&apos;Informe o n��mero do Documento. Campo Obrigat��rio!&apos;&apos;&apos;&apos;&apos;.
+:# Nenhum Registro na Lista foi selecionado e o sistema apresenta a seguinte mensagem &apos;&apos;&apos;&apos;&apos;N��o foi informado nenhum registro de d��bito na lista de d��bitos. Selecione o Item no m��nimo!&apos;&apos;&apos;&apos;&apos;.
+
+
+----
+=== D��bitos de Pagamentos de IPVA ===
+
+Para informar &apos;&apos;&apos;&apos;&apos;D��bitos de Pagamentos de IPVA&apos;&apos;&apos;&apos;&apos; o usu��rio dever escolher uma das configura����es entre &apos;&apos;&apos;&apos;&apos;Tipo de Imposto&apos;&apos;&apos;&apos;&apos; e &apos;&apos;&apos;&apos;&apos;Origem de D��bito&apos;&apos;&apos;&apos;&apos;, conforme quadro abaixo.
+
+{| border=&quot;1&quot; cellpadding=&quot;10&quot; cellspacing=&quot;0&quot;
+|&apos;&apos;&apos;Tipo de Imposto&apos;&apos;&apos;
+|&apos;&apos;&apos;Origem de D��bito&apos;&apos;&apos;
+|-
+|IPVA
+|IPVA
+|}
+
+
+
+Ap��s selecionado uma das combina����es de &apos;&apos;&apos;&apos;&apos;Tipo de Imposto&apos;&apos;&apos;&apos;&apos; e &apos;&apos;&apos;&apos;&apos;Origem de D��bito&apos;&apos;&apos;&apos;&apos; acima, o sistema carrega a tela abaixo:
+
+
+&apos;&apos;&apos;&lt;u&gt;Print: Gerar DARE-e &gt;&gt; Dados do Pagamento &gt;&gt; D��bitos de Pagamentos de IPVA&lt;/u&gt;&apos;&apos;&apos;
+
+----
+[[File:5C-ARRUC0210.jpg|5C-ARRUC0210]]
+----
+
+
+* O usu��rio deve informar os dados abaixo e ap��s selecionar a op����o &apos;&apos;&apos;Pesquisar&apos;&apos;&apos;.
+:* Ano Refer��ncia Inicial
+:* Ano Refer��ncia Final
+
+* O sistema exibe os registros com d��bitos de IPVA para o intervalo informado.
+:Para cada registro de d��bito de IPVA retornado �� exibido as seguintes informa����es:
+:* Documento/Parcela
+:* Per��odo/Ano
+:* Data Vencimento
+:* Receita
+:* Valor Imposto
+:* Valor Multa
+:* Valor Juros
+:* Valor Corre����o Monet��ria
+:* Valor TSE
+:* Valor Redu����o
+:* Valor Total
+
+
+&apos;&apos;&apos;Restri����es:&apos;&apos;&apos;
+
+:* &lt;u&gt;Validar Intervalos de Anos de Refer��ncias.&lt;/u&gt;
+:: O sistema verifica as seguintes regras quando o usu��rio selecionou a op����o de pesquisar.
+:# Campo Ano de Refer��ncia Inicial e Final n��o foram informados e o sistema apresenta a seguinte mensagem &apos;&apos;&apos;&apos;&apos;Ano de Refer��ncia Inicial e Final do d��bito do IPVA s��o obrigat��rios!&apos;&apos;&apos;&apos;&apos;.
+:# Campo do Ano de Refer��ncia Final �� um ano Inferior ao Ano de Refer��ncia Inicial e o sistema apresenta a seguinte mensagem &apos;&apos;&apos;&apos;&apos;Ano de Refer��ncia final n��o pode ser Inferior ao Ano de Refer��ncia Inicial!&apos;&apos;&apos;&apos;&apos;.
+
+:* &lt;u&gt;Pesquisa sem Registro de D��bitos&lt;/u&gt;
+:: O sistema verifica que os crit��rios informados pelo ator n��o apresentaram registros com d��bitos. O sistema apresenta a mensagem &apos;&apos;&apos;&apos;&apos;N��o poss��vel localizar Registros para o(s) Filtro(s) Informado(s)!&apos;&apos;&apos;&apos;&apos;.
+
+:* &lt;u&gt;Validar D��bitos IPVA.&lt;/u&gt;
+:: Ao selecionar a op����o &apos;&apos;&apos;Adicionar Item na Lista&apos;&apos;&apos;, o sistema executa as seguintes valida����es:
+:# Nenhum Registro na Lista foi selecionado e o sistema apresenta a seguinte mensagem &apos;&apos;&apos;&apos;&apos;N��o foi informado nenhum registro de d��bito na lista de d��bitos. Selecione o Item no m��nimo!&apos;&apos;&apos;&apos;&apos;.
+
+
+----
+=== D��bitos de Pagamentos de ICMS Frete ===
+
+Para informar &apos;&apos;&apos;&apos;&apos;D��bitos  de Pagamentos de ICMS Frete&apos;&apos;&apos;&apos;&apos; o usu��rio dever escolher uma das configura����es entre &apos;&apos;&apos;&apos;&apos;Tipo de Imposto&apos;&apos;&apos;&apos;&apos; e &apos;&apos;&apos;&apos;&apos;Origem de D��bito&apos;&apos;&apos;&apos;&apos;, conforme quadro abaixo.
+
+{| border=&quot;1&quot; cellpadding=&quot;10&quot; cellspacing=&quot;0&quot;
+|&apos;&apos;&apos;Tipo de Imposto&apos;&apos;&apos;
+|&apos;&apos;&apos;Origem de D��bito&apos;&apos;&apos;
+|-
+|ICMS
+|ICMS Frete
+|}
+
+
+
+Ap��s selecionado uma das combina����es de &apos;&apos;&apos;&apos;&apos;Tipo de Imposto&apos;&apos;&apos;&apos;&apos; e &apos;&apos;&apos;&apos;&apos;Origem de D��bito&apos;&apos;&apos;&apos;&apos; acima, o sistema carrega a tela abaixo:
+
+
+&apos;&apos;&apos;&lt;u&gt;Print: Gerar DARE-e &gt;&gt; Dados do Pagamento &gt;&gt; D��bitos ICMS Frete&lt;/u&gt;&apos;&apos;&apos;
+
+----
+[[File:5D-ARRUC0210.jpg|5D-ARRUC0210]]
+----
+
+
+* O usu��rio deve informar os campos obrigat��rios abaixo.
+:* UF Origem
+:: Ao informar a UF, o sistema carrega os munic��pios da UF selecionada para que seja informado o munic��pio correto.
+:* UF Destino
+:: Ao informar a UF, o sistema carrega os munic��pios da UF selecionada para que seja informado o munic��pio correto.
+:* Dist��ncia ( KM ) do trajeto
+:* Peso ( T ) do transporte
+:* Nota Fiscal
+:* Al��quota ( % )
+:: Range: 2% / 12% / 18% / 19% / 25% / 27%
+:* Multa ( % )
+:: Range: 0% / 40% / 60%
+:* Valor de Base de C��lculo
+
+* As informa����es abaixo s��o calculadas com base nos dados informados acima.
+:* Valor Imposto
+:* Valor Multa
+:* Valor Total Frete
+
+
+
+&apos;&apos;&apos;Restri����es:&apos;&apos;&apos;
+
+:* &lt;u&gt;Validar D��bitos ICMS Frete.&lt;/u&gt;
+:: Ao selecionar a op����o &apos;&apos;&apos;Adicionar Item na Lista&apos;&apos;&apos;, o sistema executa as seguintes valida����es:
+:# Campo de UF Origem n��o foi informada e o sistema apresenta a seguinte mensagem &apos;&apos;&apos;&apos;&apos;Campo UF de Origem �� Obrigat��ria!&apos;&apos;&apos;&apos;&apos;.
+:# Campo de Munic��pio de Origem n��o foi informado e o sistema apresenta a seguinte mensagem &apos;&apos;&apos;&apos;&apos;Campo Munic��pio de Origem �� Obrigat��rio!&apos;&apos;&apos;&apos;&apos;.
+:# Campo de UF Destino n��o foi informada e o sistema apresenta a seguinte mensagem &apos;&apos;&apos;&apos;&apos;Campo UF de Destino �� Obrigat��rio!&apos;&apos;&apos;&apos;&apos;.
+:# Campo de Munic��pio de Destino n��o foi informado e o sistema apresenta a seguinte mensagem &apos;&apos;&apos;&apos;&apos;Campo Munic��pio de Destino �� Obrigat��rio!&apos;&apos;&apos;&apos;&apos;.
+:# Campo de Dist��ncia n��o foi informada e o sistema apresenta a seguinte mensagem &apos;&apos;&apos;&apos;&apos;Informe a Dist��ncia do Trajeto!&apos;&apos;&apos;&apos;&apos;.
+:# Campo de Peso n��o foi informado e o sistema apresenta a seguinte mensagem &apos;&apos;&apos;&apos;&apos;Informe o Peso da Carga!&apos;&apos;&apos;&apos;&apos;.
+:# Campo de Nota Fiscal n��o foi informada e o sistema apresenta a seguinte mensagem &apos;&apos;&apos;&apos;&apos;Informe o N��mero da Nota Fiscal da Mercadoria&apos;&apos;&apos;&apos;&apos;.
+:# Campo Al��quota n��o foi informada e o sistema apresenta a seguinte mensagem &apos;&apos;&apos;&apos;&apos;Informe a Al��quota do Frete!&apos;&apos;&apos;&apos;&apos;.
+:# Campo de Percentual da Multa n��o foi informada e o sistema apresenta a seguinte mensagem &apos;&apos;&apos;&apos;&apos;Informe o Percentual da Multa do Frete!&apos;&apos;&apos;&apos;&apos;.
+:# Campo Valor Base de C��lculo n��o foi informado e o sistema apresenta a seguinte mensagem &apos;&apos;&apos;&apos;&apos;Informe o Valor da Base de C��lculo para o C��lculo do Frete!&apos;&apos;&apos;&apos;&apos;.
+
+----
+=== D��bitos de Pagamentos Diversos ===
+
+Para informar &apos;&apos;&apos;&apos;&apos;D��bitos com Possibilidade de Pagamentos Parciais&apos;&apos;&apos;&apos;&apos; o usu��rio dever escolher uma das configura����es entre &apos;&apos;&apos;&apos;&apos;Tipo de Imposto&apos;&apos;&apos;&apos;&apos; e &apos;&apos;&apos;&apos;&apos;Origem de D��bito&apos;&apos;&apos;&apos;&apos;, conforme quadro abaixo.
+
+
+{| border=&quot;1&quot; cellpadding=&quot;10&quot; cellspacing=&quot;0&quot;
+|&apos;&apos;&apos;Tipo de Imposto&apos;&apos;&apos;
+|&apos;&apos;&apos;Origem de D��bito&apos;&apos;&apos;
+|-
+|rowspan=&quot;3&quot;|Taxas/Multas e Outras Receitas Tribut��rias
+|Multas
+|-
+|Taxas
+|-
+|Outras Receitas
+|-
+|rowspan=&quot;3&quot;|Taxas/Multas e Outras Receitas N��o Tribut��rias
+|Multas
+|-
+|Taxas
+|-
+|Outras Receitas
+|}
+
+
+
+Ap��s selecionado uma das combina����es de &apos;&apos;&apos;&apos;&apos;Tipo de Imposto&apos;&apos;&apos;&apos;&apos; e &apos;&apos;&apos;&apos;&apos;Origem de D��bito&apos;&apos;&apos;&apos;&apos; acima, o sistema carrega a tela abaixo:
+
+
+&apos;&apos;&apos;&lt;u&gt;Print: Gerar DARE-e &gt;&gt; Dados do Pagamento &gt;&gt; D��bitos Diversos sem Sub. C��digo&lt;/u&gt;&apos;&apos;&apos;
+
+----
+[[File:5E-ARRUC0210.jpg|5E-ARRUC0210]]
+----
+
+
+* Para os casos onde a Receita n��o contenha Sub. C��digo, o usu��rio deve informar os campos abaixo.
+:* Documento
+:* Receita
+:* Per��odo Refer��ncia
+:* Valor Imposto
+:* Valor Multa
+:* Valor Juros
+
+* Para os casos onde a Receita contenha Sub. C��digo, o usu��rio deve informar os campos abaixo.
+:* Documento
+:* Receita
+:* Sub. C��digo
+:* Quantidade TSE 
+:* Valor Unit��rio TSE
+:* Valor TSE
+:* Per��odo Refer��ncia
+
+* A informa����o &apos;&apos;Total a Recolher&apos;&apos;&apos; �� calculada com base nos dados acima informados.
+
+&apos;&apos;&apos;&lt;u&gt;Print: Gerar DARE-e &gt;&gt; Dados do Pagamento &gt;&gt; D��bitos Diversos com Sub. C��digo&lt;/u&gt;&apos;&apos;&apos;
+
+----
+[[File:dare-e-debito-diverso.PNG|5E-ARRUC0210]]
+----
+
+
+&apos;&apos;&apos;Restri����es&apos;&apos;&apos;
+
+:* &lt;u&gt;Validar Dados D��bitos Diversos.&lt;/u&gt;
+::* O sistema verifica se n��o foram informados os Dados do Pagamento:
+::# Campo de Receita n��o foi informado e o sistema apresenta a seguinte mensagem &apos;&apos;&apos;&apos;&apos;C��digo de Receita n��o foi Informado!&apos;&apos;&apos;&apos;&apos;.
+::# Campo Per��odo/Ano de Refer��ncia n��o foi informado e o sistema apresenta a seguinte mensagem &apos;&apos;&apos;&apos;&apos;Per��odo de Refer��ncia �� Obrigat��rio quando a Origem do D��bito for de Multas, Taxas e Outras Receitas.&apos;&apos;&apos;&apos;&apos;.
+::# Campo Valor Imposto n��o foi informado e o sistema apresenta a seguinte mensagem &apos;&apos;&apos;&apos;&apos;O campo Valor Imposto �� obrigat��rio e deve ser informado!&apos;&apos;&apos;&apos;&apos;.
+::# Campo Valor Multa n��o foi informado e o sistema apresenta a seguinte mensagem &apos;&apos;&apos;&apos;&apos;O campo Valor Multa �� obrigat��rio e deve ser informado!&apos;&apos;&apos;&apos;&apos;.
+::# Campo Valor Juros n��o foi informado e o sistema apresenta a seguinte mensagem &apos;&apos;&apos;&apos;&apos;O campo Valor Juros �� obrigat��rio e deve ser informado!&apos;&apos;&apos;&apos;&apos;.
+::* O sistema verificou que o SubC��digo foi informado e realiza as seguintes valida����es:
+::# Campos de Quantidade e Valor Unit��rio n��o foram informados e o sistema apresenta a seguinte mensagem &apos;&apos;&apos;&apos;&apos;SubC��digo foi Informado. Informe os valores de quantidade e valor Unit��rio corretamente!&apos;&apos;&apos;&apos;&apos;.
+::# Campo de Valor TSE supera o Valor M��ximo cadastrado e o sistema apresenta a seguinte mensagem &apos;&apos;&apos;&apos;&apos;O valor da TSE supera o valor m��ximo de R$ XXX,00 cadastrado para o Subc��digo Informado!&apos;&apos;&apos;&apos;&apos;.
+
+
+----
+----
+== Imprimir DARE-e ==
+
+* Caso o usu��rio selecione a op����o &apos;&apos;&apos;Imprimir DARE&apos;&apos;&apos; o sistema executa os seguintes passos.
+
+** Exibe em uma nova janela o arquivo DARE no formato .PDF para usu��rio imprimir. Conforme arquivo abaixo:
+
+[[File:dare-gerado.pdf|5E-ARRUC0210]]
+
+== Enviar e-mail DARE-e ==
+
+* Caso o usu��rio selecione a op����o &apos;&apos;&apos;Enviar e-mail DARE&apos;&apos;&apos; o sistema exibe o painel:
+
+
+&apos;&apos;&apos;&lt;u&gt;Print: Gerar DARE-e &gt;&gt; Dados do Pagamento &gt;&gt; Enviar Email DARE&lt;/u&gt;&apos;&apos;&apos;
+
+
+----
+[[File:email-ARRUC0250.PNG|email-ARRUC0250]]
+----
+
+
+* O usu��rio deve informar o &lt;u&gt;Assunto&lt;/u&gt; do Email.
+* O usu��rio deve informar a &lt;u&gt;Mensagem&lt;/u&gt; do Email.
+* O usu��rio deve informar um endere��o de &lt;u&gt;E-Mail&lt;/u&gt; valido e seleciona a op����o &apos;&apos;&apos;Adicionar&apos;&apos;&apos;.
+* O sistema valida e adiciona o E-mail informado na lista de &lt;u&gt;E-mail Destinat��rio Informado&lt;/u&gt;
+
+* O usu��rio seleciona a op����o &lt;u&gt;Enviar E-mail DARE&lt;/u&gt; e o email �� enviado para todos os destinat��rios informados na lista, contendo o assunto e a mensagem informada. Na mensagem se encontra o link para acesso do DARE gerado.
+
+
+&apos;&apos;&apos;Restri����es:&apos;&apos;&apos;
+
+:* &lt;u&gt;Campo Assunto n��o informado.&lt;/u&gt;
+:: O sistema verificou que o assunto do Email n��o foi informado.O sistema apresenta a mensagem &apos;&apos;&apos;&apos;&apos;O campo Assunto �� obrigat��rio e deve ser informado!&apos;&apos;&apos;&apos;&apos;.
+:* &lt;u&gt;Campo Mensagem n��o informado.&lt;/u&gt;
+:: O sistema verificou que a mensagem do Email n��o foi informada.O sistema apresenta a mensagem &apos;&apos;&apos;&apos;&apos;O campo Mensagem �� obrigat��rio e deve ser informado!&apos;&apos;&apos;&apos;&apos;.
+:* &lt;u&gt;Nenhum destinat��rio de Email.&lt;/u&gt;
+:: O sistema verificou que a lista de destinat��rio do Email est�� vazia. O sistema apresenta a mensagem &apos;&apos;&apos;&apos;&apos;Informe no M��nimo 1 Email de Destinat��rio na Lista!&apos;&apos;&apos;&apos;&apos;.
+:* &lt;u&gt;E-mail n��o est�� de correto.&lt;/u&gt;
+:: Ao tentar inserir um novo Email na lista de destinat��rio, o sistema verificou que o Email informado n��o est�� correto. O sistema apresenta a mensagem &apos;&apos;&apos;&apos;&apos;O Email informado n��o est�� correto!&apos;&apos;&apos;&apos;&apos;.
+
+
+----
+----
+== Limpar o formul��rio == 
+
+* Caso o usu��rio selecione a op����o &apos;&apos;&apos;Limpar&apos;&apos;&apos; o sistema limpa todos os campos, habilita a op����o &apos;&apos;&apos;Gerar DARE&apos;&apos;&apos; e apaga todos os itens adicionados na lista.
+
+
+&lt;/br&gt;
+----
+[[DARE | Voltar]]</text>
+</revision>
+</page>
+</mediawiki>

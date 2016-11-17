@@ -30,14 +30,14 @@
 <ns>0</ns>
 <id>1</id>
 <revision>
-<id>1286</id>
-<timestamp>2016-10-14T09:16:05Z</timestamp>
+<id>1283</id>
+<timestamp>2016-10-14T17:57:28Z</timestamp>
 <contributor>
 <username>admin</username>
 <id>1</id>
 </contributor>
 <comment />
-<text xml:space="preserve" bytes="3412">* [[Manual de Usu��rio]]
+<text xml:space="preserve" bytes="3489">* [[Manual de Usu��rio]]
 ** [[Acessando_o_Sistema|Acessando o Sistema]] 
 ***[[Login_do_Sistema|Login do Sistema]]
 **** [[Efetuar_Login_no_Sistema_com_CPF|Efetuar Login no Sistema com CPF]]
@@ -49,6 +49,8 @@
 ***[[Consulta_de_comunica����es_do_sistema_via_E-mail|Consulta de comunica����es do sistema via E-mail]]
 ***[[Consulta_de_comunica����es_do_sistema_via_SMS|Consulta de comunica����es do sistema via SMS]]
 ** [[M��dulo de Arrecada����o]]
+*** [[DARE]]
+**** [[Gerar_DARE-e|Gerar DARE-e]] 
 *** [[Par��metros]]
 **** [[Manuten����o_de_Bancos|Manuten����o de Bancos]] 
 ***** [[Manuten����o_de_Ag��ncias_Banc��rias|Manuten����o de Ag��ncias Banc��rias]]
@@ -85,7 +87,7 @@
 **** [[Solicita����o_de_senhas_de_Servicos|Solicitar Autoriza����o de Senhas de Servi��os]]
 **** [[Solicitar_para_atuar_como_usu��rio_principal_de_uma_empresa|Solicitar para atuar como usu��rio principal de uma empresa]]
 
-*[[Manual de Manuten����o]]
+*[[Ambiente de Desenvolvimento|Manual de Manuten����o]]
 **[[Instala����o do Ambiente do Sistema|Instala����o do Ambiente do Sistema Windows]]
 **[[Instala����o do Ambiente do Sistema Linux]]
 ** [[Instala����o do Ambiente de Desenvolvimento]]

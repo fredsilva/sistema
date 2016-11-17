@@ -30,14 +30,14 @@
 <ns>0</ns>
 <id>307</id>
 <revision>
-<id>1290</id>
-<timestamp>2016-10-14T09:17:40Z</timestamp>
+<id>1627</id>
+<timestamp>2016-10-27T17:47:04Z</timestamp>
 <contributor>
 <username>admin</username>
 <id>1</id>
 </contributor>
-<comment />
-<text xml:space="preserve" bytes="285">=Ordens de Servi��o=
+<comment>/* Ordens de Servi��o */ </comment>
+<text xml:space="preserve" bytes="311">=Ordens de Servi��o=
 
 *[[OS4721 - Par��metros Arrecada����o]]
 *[[OS4757 - Seguran��a B��sico]]
@@ -45,10 +45,11 @@
 *[[OS4777 - Gest��o de Seguran��a 01]]
 *[[OS4782 - Gest��o de Seguran��a 02]]
 *[[OS4810 - Consultas tranversais]]
+*[[OS4797 - DARE]]
 
 &lt;/br&gt;
 ----
-[[Manual de Manuten����o | Voltar]]
+[[Ambiente de Desenvolvimento | Voltar]]
 </text>
 </revision>
 </page>
