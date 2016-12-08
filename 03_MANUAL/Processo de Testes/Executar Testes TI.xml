@@ -1,0 +1,136 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
+<siteinfo>
+<sitename>SEFAZ-TO Wiki</sitename>
+<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<generator>JAMWiki 1.3.2</generator>
+<case>case-sensitive</case>
+<namespaces>
+<namespace key="-2">Media</namespace>
+<namespace key="-1">Special</namespace>
+<namespace key="0" />
+<namespace key="1">Comments</namespace>
+<namespace key="2">User</namespace>
+<namespace key="3">User comments</namespace>
+<namespace key="4">Project</namespace>
+<namespace key="5">Project comments</namespace>
+<namespace key="6">File</namespace>
+<namespace key="7">File comments</namespace>
+<namespace key="8">JAMWiki</namespace>
+<namespace key="9">JAMWiki comments</namespace>
+<namespace key="10">Template</namespace>
+<namespace key="11">Template comments</namespace>
+<namespace key="12">Help</namespace>
+<namespace key="13">Help comments</namespace>
+<namespace key="14">Category</namespace>
+<namespace key="15">Category comments</namespace>
+</namespaces>
+</siteinfo>
+<page>
+<title>Executar Testes TI</title>
+<ns>0</ns>
+<id>530</id>
+<revision>
+<id>1659</id>
+<timestamp>2016-11-24T15:34:51Z</timestamp>
+<contributor>
+<username>admin</username>
+<id>1</id>
+</contributor>
+<comment />
+<text xml:space="preserve" bytes="4939">[[File:ExecutarTesteTI.png|Executar Testes TI]]
+= An��lise de Cobertura de C��digo =
+== Processo ==
+Emitir o relat��rio dos dados coletados pelo JaCoCo e analisar seu resultado verificando quais partes do c��digo n��o foi executados.&lt;br/&gt;
+Dentro dos c��digos n��o executados devem observar se esta parte n��o foi alcan��ada por falta de teste ou n��o.&lt;br/&gt;
+&lt;br/&gt;
+&lt;font color=red&gt;&apos;&apos;&apos;O relat��rio do JaCoCo �� criado somente quando paramos o servidor de aplica����o.&apos;&apos;&apos;&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;
+Copiar o arquivo jacoco.exec (coleta de dados) do servidor para a esta����o de trabalho.&lt;br/&gt;
+Importar o jacoco.exec para o eclipse:
+  Bot��o direito na View Coverage
+  Clicar em Import Session
+  Selecionar a op����o: Coverage Session
+  Selecionar o arquivo jacoco.exec
+  Clicar no bot��o Neste
+  Selecionar os projetos que est��o sendo analisados
+  Clicar no bot��o Finish
+[[File:ImportarJacoco.png|none|700px|Selecionar Op����o de Importar]]
+[[File:SelecionarCoverageSession.png|none|700px|Selecionar Op����o Coverage Session]]
+[[File:RelatorioJacoco.png|none|700px|Relat��rio JaCoCo]]
+&lt;br/&gt;
+&apos;&apos;&apos;Verificar no relat��rio quais foram as classes e qual foi o motivo da n��o coberta.&apos;&apos;&apos;
+== Ferramenta ==
+No lado do servidor deve incluir uma op����o na vari��vel JAVA_OPTS para que seja feito a conta de dados das classes instrumentais.
+Para isto deve ir ao diret��rio: 
+  $JBOSS_HOME/bin
+Incluir no final do arquivo standalone.conf a seguite linha:
+  JAVA_OPTS=&quot;$JAVA_OPTS -javaagent:{onde o JaCoCo foi instalado}/lib/jacocoagent.jar=destfile={onde deseja salvar a coleta de dados}/jacoco.exec,append=true&quot;
+Reinicar o servidor de aplica����o&lt;br/&gt;
+  A op����o &apos;&apos;&apos;append=true&apos;&apos;&apos; sempre adiciona as novas coletas ao arquivo j�� existente. Sugiro que sempre que acabar um ciclo de testes, este arquivo deve ser movido desta pasta para uma coleta limpa no novo ciclo
+Para baixar o [http://www.eclemma.org/jacoco/ JaCoCo]
+= An��lise de Performance =
+== Processo ==
+VisualVM �� uma ferramenta que integra v��rias outras ferramentas de linha de comando da JDK(jconsole, jinfo, jstack���) j�� existentes. Com ele �� poss��vel monitorar e analisar suas aplica����es Java atrav��s de relat��rios e gr��ficos em tempo real.&lt;br/&gt;
+Executar no cliente (esta����o onde ser�� realizada a analise) o seguinte comando:
+  jvisualvm -cp:a {path onde encontra o pacote}/jboss-client.jar
+&lt;br/&gt;&lt;font color=red&gt;&apos;&apos;&apos;Copiar o pacote jboss-client,jar do servidor de aplica����o para a esta����o de trabalho.&apos;&apos;&apos;&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;
+[[File:visualvm monitor.png|none|700px|Java VisualVM Monitor]]
+[[File:visualvm sampler.png|none|700px|Java VisualVM Sample]]
+&lt;br/&gt;
+&apos;&apos;&apos;Verificar na aba Sampler quais s��o as classes que est��o gerando impacto no tempo de resposta da aplica����o.&apos;&apos;&apos;
+== Ferramenta ==
+No lado do servidor deve criar (sugest��o: criar em $JBOSS_HOME) um arquivo com o nome security.policy e o seguinte conte��do:
+  grant codebase &quot;file:$JAVA_HOME/lib/tools.jar&quot; {    
+    permission java.security.AllPermission;
+  };
+e executar o seguinte comando:
+  $JAVA_HOME/bin/jstatd -J-Djava.security.policy=$JBOSS_HOME/security.policy
+No lado do cliente devemos executar o Java VisualVM com o seguinte comando:
+   jvisualvm -cp:a {path onde encontra o pacote}/jboss-client.jar
+Adicionar a conex��o remota
+  Clicar no bot��o Add JMX Connections
+  Informar a Connection
+    service:jmx:http-remoting-jmx://{URL do Sistema}:9990
+  Informar o username e Password do administrador
+  Para salvar a conex��o: clicar no bot��o Ok
+[[File:visualvm jmx.png|none|700px|Java VisualVM Conex��o JMX]]
+  Para apresentar apenas os dados das classes do projeto: na aba Sampler selecionar a op����o Settings &gt;&gt; selecionar a op����o Profile only packages &gt;&gt; informar o seguinte valor: br.gov.to.sefaz.*
+  Para salvar as altera����es: clicar no bot��o Salvar e escolher um nome para o Preset e desmarcar a op����o Settings
+  Para iniciar a coleta de dados: na aba Sampler clicar no bot��o [CPU]
+[[File:visualvm settings.png|none|700px|Java VisualVM Sampler Settings]]
+= Verifica����o de Documenta����o T��cnica =
+== Processo ==
+Verificar se a documenta����o t��cnica entregue pela f��brica e est��o de acordo com o esperado.
+A documenta����o t��cnica encontra-se em:
+  ./sistema/01_DOCUMENTACAO_TECNICA
+Os documentos que devem ser verificados s��o
+  Diagramas
+  Java Doc
+= Abrir Mantis =
+== Processo ==
+Para cada inconsist��ncia aberta deve abrir um caso no mantis.&lt;br/&gt;
+&lt;br/&gt;
+Para abrir o caso no mantis deve acessar a seguinte URL
+  http://wpbastos.com/mantis
+Selecionar o projeto.&lt;br/&gt;
+Clica em relatar caso.
+[[File:MantisRelatarCaso.png|none|700px|Relatar caso no mantis]]
+informar os dados da inconformidade encontrada.&lt;br/&gt;
+* &apos;&apos;&apos;Categoria&apos;&apos;&apos;: 
+* &apos;&apos;&apos;Vers��o do produto&apos;&apos;&apos;:
+* &apos;&apos;&apos;Atribuir a&apos;&apos;&apos;:
+* &apos;&apos;&apos;Resumo&apos;&apos;&apos;:
+* &apos;&apos;&apos;Descri����o&apos;&apos;&apos;:
+* &apos;&apos;&apos;Passos para Reprodu����o&apos;&apos;&apos;:
+* &apos;&apos;&apos;Informa����es Adicionais&apos;&apos;&apos;:
+* &apos;&apos;&apos;Caso de Uso&apos;&apos;&apos;:
+* &apos;&apos;&apos;Tipo de Inconformidade&apos;&apos;&apos;:
+* &apos;&apos;&apos;Enviar Arquivo&apos;&apos;&apos;:
+Clicar no bot��o Enviar Relat��rio
+[[File:MantisCaso.png|none|700px|Novo caso no mantis]]
+
+&lt;/br&gt;
+----
+[[Processos de Testes | Voltar]]</text>
+</revision>
+</page>
+</mediawiki>

@@ -1,0 +1,192 @@
+<mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
+<siteinfo>
+<sitename>SEFAZ-TO Wiki</sitename>
+<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<generator>JAMWiki 1.3.2</generator>
+<case>case-sensitive</case>
+<namespaces>
+<namespace key="-2">Media</namespace>
+<namespace key="-1">Special</namespace>
+<namespace key="0" />
+<namespace key="1">Comments</namespace>
+<namespace key="2">User</namespace>
+<namespace key="3">User comments</namespace>
+<namespace key="4">Project</namespace>
+<namespace key="5">Project comments</namespace>
+<namespace key="6">File</namespace>
+<namespace key="7">File comments</namespace>
+<namespace key="8">JAMWiki</namespace>
+<namespace key="9">JAMWiki comments</namespace>
+<namespace key="10">Template</namespace>
+<namespace key="11">Template comments</namespace>
+<namespace key="12">Help</namespace>
+<namespace key="13">Help comments</namespace>
+<namespace key="14">Category</namespace>
+<namespace key="15">Category comments</namespace>
+</namespaces>
+</siteinfo>
+<page>
+<title>Instalar os Componentes Recebidos da FSW</title>
+<ns>0</ns>
+<id>529</id>
+<revision>
+<id>1658</id>
+<timestamp>2016-11-24T15:34:37Z</timestamp>
+<contributor>
+<username>admin</username>
+<id>1</id>
+</contributor>
+<comment />
+<text xml:space="preserve" bytes="8587">[[File:InstalarComponentesRecebidosFSW.png|Instalar os Componentes Recebido da FSW]]
+= Compila����o =
+== Processo ==
+Sempre que a FSW entregar uma nova OS, deve-se compilar e empacotar os c��digos fontes em um novo arquivo EAR. Neste momento da compila����o realizamos os testes de analise est��tica do c��digo e a instrumenta����o para a cobertura de c��digo.&lt;br/&gt;
+&lt;br/&gt;&lt;font color=red&gt;&apos;&apos;&apos;Para a compila����o deve ter o ambiente de desenvolvimento instalado e configurado. Vide [[Instala����o do Ambiente de Desenvolvimento]].&apos;&apos;&apos;&lt;/font&gt;&lt;br/&gt;&lt;/br&gt;
+Para a compila����o devemos ir ao diret��rio onde est�� os c��digos fontes:&lt;br/&gt;
+  ./sistema/02_FONTES
+&lt;br/&gt;&lt;font color=red&gt;&apos;&apos;&apos;Para configura����o dos par��metros do sistema vide [[Instala����o do Ambiente do Sistema]] ou [[Instala����o do Ambiente do Sistema Linux]] o item 3 - Configura����o do Sistema.&apos;&apos;&apos;&lt;/font&gt;&lt;br/&gt;&lt;/br&gt;
+Digitar o seguinte comando:
+  mvn clean pmd:check checkstyle:check org.jacoco:jacoco-maven-plugin:prepare-agent package
+Verificar o log de execu����o do Maven, se n��o ocorrer nenhum erro na execu����o o processo foi executado com sucesso.
+== Ferramenta ==
+As ferramentas abaixo devem estar configuradas antes da compila����o.
+=== PMD ===
+Aplica uma gama de regras para verificar se pr��ticas corretas est��o sendo realizadas, como evitar duplica����o de c��digo, garantir o correto uso de encoding, implementa����o do m��todo clone(), tamanho de m��todos e classes, tamanho de par��metros, uso do padr��o Singleton, cria����o desnecess��ria de vari��veis locais e muitas outras. O conjunto de regras �� extenso e visa garantir que o c��digo apresente as melhores pr��ticas poss��veis. A ferramenta a ser utilizada para aplicar boas pr��ticas �� o [https://pmd.github.io PMD].&lt;br/&gt;
+&lt;br/&gt;
+Para configurar o PMD �� necess��rio incluir o seguinte plugin em build no Maven (./sistema/02_FONTES/pom.xm)
+  &lt;plugin&gt;
+    &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+    &lt;artifactId&gt;maven-pmd-plugin&lt;/artifactId&gt;
+    &lt;version&gt;3.6&lt;/version&gt;
+    &lt;configuration&gt;
+      &lt;printFailingErrors&gt;true&lt;/printFailingErrors&gt;
+      &lt;includeTests&gt;true&lt;/includeTests&gt;
+      &lt;rulesets&gt;
+        &lt;ruleset&gt;${user.dir}/config/config-pmd/ruleset.xml&lt;/ruleset&gt;
+      &lt;/rulesets&gt;
+    &lt;/configuration&gt;
+  &lt;/plugin&gt;
+e o seguinte plugin em reporting no Maven (./sistema/02_FONTES/pom.xm)
+  &lt;plugin&gt;
+    &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+    &lt;artifactId&gt;maven-jxr-plugin&lt;/artifactId&gt;
+    &lt;version&gt;2.5&lt;/version&gt;
+  &lt;/plugin&gt;
+Para executar a valida����o est��tica do c��digo com o PMD deve ir para o diret��rio:
+  ./sistema/02_FONTES
+e digitar o seguinte comando:
+  mvn clean pmd:check
+Verificar o log de execu����o do Maven, se n��o ocorrer nenhum erro na execu����o (caso ocorra um erro analisar se o erro foi ocasionado pela configura����o ou alguma regra n��o atendida) a configura����o foi executada com sucesso.
+=== Checkstyle ===
+Considera elementos como identa����o, espa��os e tabs, conven����o de nomes, n��mero de par��metros, alinhamento na vertical, formato e presen��a de coment��rios, dentre outros. S��o todos os aspectos que contribuem para tornar o c��digo mais padronizado, organizado e leg��vel. A ferramenta a ser utilizada para verifica����o por estilo �� o [http://checkstyle.sourceforge.net Checkstyle].&lt;br/&gt;
+&lt;br/&gt;
+Para configurar o Checkstyle �� necess��rio incluir o seguinte plugin em build no Maven (./sistema/02_FONTES/pom.xm)
+  &lt;plugin&gt;
+    &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+    &lt;artifactId&gt;maven-checkstyle-plugin&lt;/artifactId&gt;
+    &lt;version&gt;${maven-checkstyle-plugin.version}&lt;/version&gt;
+    &lt;configuration&gt;
+      &lt;configLocation&gt;${user.dir}/config/config-checkstyle/checkstyle.xml&lt;/configLocation&gt;
+      &lt;consoleOutput&gt;true&lt;/consoleOutput&gt;
+      &lt;violationSeverity&gt;warning&lt;/violationSeverity&gt;
+      &lt;includeTestResources&gt;true&lt;/includeTestResources&gt;
+    &lt;/configuration&gt;
+  &lt;/plugin&gt;
+Para executar a valida����o est��tica do c��digo com o Checkstyle deve ir para o diret��rio
+  ./sistema/02_FONTES
+e digitar o seguinte comando:
+  mvn clean checkstyle:check
+Verificar o log de execu����o do Maven, se n��o ocorrer nenhum erro na execu����o (caso ocorra um erro analisar se o erro foi ocasionado pela configura����o ou alguma regra n��o atendida) a configura����o foi executada com sucesso.
+=== Jacoco ===
+Instrumenta as classes para coletar os dados para o relat��rio de cobertura de c��digo. A ferramenta a ser utilizada para cobertura de c��digo �� [http://www.eclemma.org/jacoco/ JaCoCo].&lt;br/&gt;
+&lt;br/&gt;
+Para configurar o JaCoCo �� necess��rio incluir o seguinte plugin em build no Maven (./sistema/02_FONTES/pom.xm)
+  &lt;plugin&gt;
+    &lt;groupId&gt;org.jacoco&lt;/groupId&gt;
+    &lt;artifactId&gt;jacoco-maven-plugin&lt;/artifactId&gt;
+    &lt;version&gt;0.7.7.201606060606&lt;/version&gt;
+    &lt;executions&gt;
+      &lt;execution&gt;
+        &lt;id&gt;agent&lt;/id&gt;
+         &lt;goals&gt;
+           &lt;goal&gt;prepare-agent&lt;/goal&gt;
+         &lt;/goals&gt;
+       &lt;/execution&gt;
+     &lt;/executions&gt;
+   &lt;/plugin&gt;
+Editar o arquivo:
+  ./sistema/02_FONTES/web/view-web/src/main/webapp/WEB-INF/spring/spring.xml
+incluir antes da tag &lt;/beans&gt; a seguinte linha:
+  &lt;aop:aspectj-autoproxy proxy-target-class=&quot;true&quot;/&gt;
+Adicionar dentro da tag beans a seguinte linha:
+  xmlns:aop=&quot;http://www.springframework.org/schema/aop&quot;
+Adicionar dentro de xsi:schemaLocation da tag beans a seguinte linha:
+  http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd&quot;
+O arquivo spring.xml completo deve ficar algo assim:
+  &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+  &lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot; 
+         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xmlns:mvc=&quot;http://www.springframework.org/schema/mvc&quot;
+         xmlns:context=&quot;http://www.springframework.org/schema/context&quot;
+         &lt;font color=red&gt;xmlns:aop=&quot;http://www.springframework.org/schema/aop&quot;&lt;/font&gt;
+         xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                             http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+                             http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+                             &lt;font color=red&gt;http://www.springframework.org/schema/context http://www.springframework.org/schema/task/spring-context-3.0.xsd&lt;/font&gt;
+                             http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd&quot;&gt;
+      &lt;mvc:annotation-driven/&gt;
+      &lt;mvc:default-servlet-handler/&gt;
+      &lt;context:annotation-config/&gt;
+      &lt;context:component-scan base-package=&quot;br.gov.to.sefaz.*.configuration&quot;/&gt;
+      &lt;font color=red&gt;&lt;aop:aspectj-autoproxy proxy-target-class=&quot;true&quot;/&gt;&lt;/font&gt;
+  &lt;/beans&gt;
+Para instrumentar as classes para a cobertura de c��digo deve ir para o diret��rio
+  ./sistema/02_FONTES
+e digitar o seguinte comando:
+  mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent
+Verificar o log de execu����o do Maven, se n��o ocorrer nenhum erro na execu����o a configura����o foi executada com sucesso.
+= Atualizar Banco de Dados =
+== Processo ==
+Verificar se precisa atualizar o Banco de Dados com os scripts da OS.&lt;br/&gt;
+&lt;br/&gt;&lt;font color=red&gt;&apos;&apos;&apos;Para o ver os scripts de banco de dados vide [[Manual para Manuten����o do Sistema]]&apos;&apos;&apos;&lt;/font&gt;
+= Deploy =
+== Processo ==
+Deve ser disponibilizado o arquivo EAR no servidor de aplica����o para liberar o aplicativo para testes funcionais.&lt;br/&gt;
+&lt;br/&gt;&lt;font color=red&gt;&apos;&apos;&apos;Para o deploy do sistema vide [[Instala����o do Ambiente do Sistema]] ou [[Instala����o do Ambiente do Sistema Linux]] o item 4 - Deploy do Sistema.&apos;&apos;&apos;&lt;/font&gt;
+= Teste Fuma��a =
+== Processo ==
+Executar um conjunto de casos de testes para garantir que o m��nimo necess��rio do sistema esteja funcionando para dar inicio os testes funcionais.
+== Ferramenta ==
+=== Plano de teste fuma��a ===
+Este plano encontra-se em:
+  ./pmat/planoTesteFuma��a.docx
+= Abrir Mantis =
+== Processo ==
+Para cada inconsist��ncia aberta deve abrir um caso no mantis.&lt;br/&gt;
+&lt;br/&gt;
+Para abrir o caso no mantis deve acessar a seguinte URL
+  http://wpbastos.com/mantis
+Selecionar o projeto.&lt;br/&gt;
+Clica em relatar caso.
+[[File:MantisRelatarCaso.png|none|700px|Relatar caso no mantis]]
+informar os dados da inconformidade encontrada.&lt;br/&gt;
+* &apos;&apos;&apos;Categoria&apos;&apos;&apos;: 
+* &apos;&apos;&apos;Vers��o do produto&apos;&apos;&apos;:
+* &apos;&apos;&apos;Atribuir a&apos;&apos;&apos;:
+* &apos;&apos;&apos;Resumo&apos;&apos;&apos;:
+* &apos;&apos;&apos;Descri����o&apos;&apos;&apos;:
+* &apos;&apos;&apos;Passos para Reprodu����o&apos;&apos;&apos;:
+* &apos;&apos;&apos;Informa����es Adicionais&apos;&apos;&apos;:
+* &apos;&apos;&apos;Caso de Uso&apos;&apos;&apos;:
+* &apos;&apos;&apos;Tipo de Inconformidade&apos;&apos;&apos;:
+* &apos;&apos;&apos;Enviar Arquivo&apos;&apos;&apos;:
+Clicar no bot��o Enviar Relat��rio
+[[File:MantisCaso.png|none|700px|Novo caso no mantis]]
+
+
+&lt;/br&gt;
+----
+[[Processos de Testes | Voltar]]</text>
+</revision>
+</page>
+</mediawiki>

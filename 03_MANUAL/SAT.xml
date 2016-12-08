@@ -725,6 +725,114 @@ http://loja.certificadodigital.com.br/Serasa/UPLOAD/Downloads/490.pdf
 </revision>
 </page>
 <page>
+<title>Executar Testes TI</title>
+<ns>0</ns>
+<id>530</id>
+<revision>
+<id>1659</id>
+<timestamp>2016-11-24T15:34:51Z</timestamp>
+<contributor>
+<username>admin</username>
+<id>1</id>
+</contributor>
+<comment />
+<text xml:space="preserve" bytes="4939">[[File:ExecutarTesteTI.png|Executar Testes TI]]
+= Anï¿½ï¿½lise de Cobertura de Cï¿½ï¿½digo =
+== Processo ==
+Emitir o relatï¿½ï¿½rio dos dados coletados pelo JaCoCo e analisar seu resultado verificando quais partes do cï¿½ï¿½digo nï¿½ï¿½o foi executados.&lt;br/&gt;
+Dentro dos cï¿½ï¿½digos nï¿½ï¿½o executados devem observar se esta parte nï¿½ï¿½o foi alcanï¿½ï¿½ada por falta de teste ou nï¿½ï¿½o.&lt;br/&gt;
+&lt;br/&gt;
+&lt;font color=red&gt;&apos;&apos;&apos;O relatï¿½ï¿½rio do JaCoCo ï¿½ï¿½ criado somente quando paramos o servidor de aplicaï¿½ï¿½ï¿½ï¿½o.&apos;&apos;&apos;&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;
+Copiar o arquivo jacoco.exec (coleta de dados) do servidor para a estaï¿½ï¿½ï¿½ï¿½o de trabalho.&lt;br/&gt;
+Importar o jacoco.exec para o eclipse:
+  Botï¿½ï¿½o direito na View Coverage
+  Clicar em Import Session
+  Selecionar a opï¿½ï¿½ï¿½ï¿½o: Coverage Session
+  Selecionar o arquivo jacoco.exec
+  Clicar no botï¿½ï¿½o Neste
+  Selecionar os projetos que estï¿½ï¿½o sendo analisados
+  Clicar no botï¿½ï¿½o Finish
+[[File:ImportarJacoco.png|none|700px|Selecionar Opï¿½ï¿½ï¿½ï¿½o de Importar]]
+[[File:SelecionarCoverageSession.png|none|700px|Selecionar Opï¿½ï¿½ï¿½ï¿½o Coverage Session]]
+[[File:RelatorioJacoco.png|none|700px|Relatï¿½ï¿½rio JaCoCo]]
+&lt;br/&gt;
+&apos;&apos;&apos;Verificar no relatï¿½ï¿½rio quais foram as classes e qual foi o motivo da nï¿½ï¿½o coberta.&apos;&apos;&apos;
+== Ferramenta ==
+No lado do servidor deve incluir uma opï¿½ï¿½ï¿½ï¿½o na variï¿½ï¿½vel JAVA_OPTS para que seja feito a conta de dados das classes instrumentais.
+Para isto deve ir ao diretï¿½ï¿½rio: 
+  $JBOSS_HOME/bin
+Incluir no final do arquivo standalone.conf a seguite linha:
+  JAVA_OPTS=&quot;$JAVA_OPTS -javaagent:{onde o JaCoCo foi instalado}/lib/jacocoagent.jar=destfile={onde deseja salvar a coleta de dados}/jacoco.exec,append=true&quot;
+Reinicar o servidor de aplicaï¿½ï¿½ï¿½ï¿½o&lt;br/&gt;
+  A opï¿½ï¿½ï¿½ï¿½o &apos;&apos;&apos;append=true&apos;&apos;&apos; sempre adiciona as novas coletas ao arquivo jï¿½ï¿½ existente. Sugiro que sempre que acabar um ciclo de testes, este arquivo deve ser movido desta pasta para uma coleta limpa no novo ciclo
+Para baixar o [http://www.eclemma.org/jacoco/ JaCoCo]
+= Anï¿½ï¿½lise de Performance =
+== Processo ==
+VisualVM ï¿½ï¿½ uma ferramenta que integra vï¿½ï¿½rias outras ferramentas de linha de comando da JDK(jconsole, jinfo, jstackï¿½ï¿½ï¿½) jï¿½ï¿½ existentes. Com ele ï¿½ï¿½ possï¿½ï¿½vel monitorar e analisar suas aplicaï¿½ï¿½ï¿½ï¿½es Java atravï¿½ï¿½s de relatï¿½ï¿½rios e grï¿½ï¿½ficos em tempo real.&lt;br/&gt;
+Executar no cliente (estaï¿½ï¿½ï¿½ï¿½o onde serï¿½ï¿½ realizada a analise) o seguinte comando:
+  jvisualvm -cp:a {path onde encontra o pacote}/jboss-client.jar
+&lt;br/&gt;&lt;font color=red&gt;&apos;&apos;&apos;Copiar o pacote jboss-client,jar do servidor de aplicaï¿½ï¿½ï¿½ï¿½o para a estaï¿½ï¿½ï¿½ï¿½o de trabalho.&apos;&apos;&apos;&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;
+[[File:visualvm monitor.png|none|700px|Java VisualVM Monitor]]
+[[File:visualvm sampler.png|none|700px|Java VisualVM Sample]]
+&lt;br/&gt;
+&apos;&apos;&apos;Verificar na aba Sampler quais sï¿½ï¿½o as classes que estï¿½ï¿½o gerando impacto no tempo de resposta da aplicaï¿½ï¿½ï¿½ï¿½o.&apos;&apos;&apos;
+== Ferramenta ==
+No lado do servidor deve criar (sugestï¿½ï¿½o: criar em $JBOSS_HOME) um arquivo com o nome security.policy e o seguinte conteï¿½ï¿½do:
+  grant codebase &quot;file:$JAVA_HOME/lib/tools.jar&quot; {    
+    permission java.security.AllPermission;
+  };
+e executar o seguinte comando:
+  $JAVA_HOME/bin/jstatd -J-Djava.security.policy=$JBOSS_HOME/security.policy
+No lado do cliente devemos executar o Java VisualVM com o seguinte comando:
+   jvisualvm -cp:a {path onde encontra o pacote}/jboss-client.jar
+Adicionar a conexï¿½ï¿½o remota
+  Clicar no botï¿½ï¿½o Add JMX Connections
+  Informar a Connection
+    service:jmx:http-remoting-jmx://{URL do Sistema}:9990
+  Informar o username e Password do administrador
+  Para salvar a conexï¿½ï¿½o: clicar no botï¿½ï¿½o Ok
+[[File:visualvm jmx.png|none|700px|Java VisualVM Conexï¿½ï¿½o JMX]]
+  Para apresentar apenas os dados das classes do projeto: na aba Sampler selecionar a opï¿½ï¿½ï¿½ï¿½o Settings &gt;&gt; selecionar a opï¿½ï¿½ï¿½ï¿½o Profile only packages &gt;&gt; informar o seguinte valor: br.gov.to.sefaz.*
+  Para salvar as alteraï¿½ï¿½ï¿½ï¿½es: clicar no botï¿½ï¿½o Salvar e escolher um nome para o Preset e desmarcar a opï¿½ï¿½ï¿½ï¿½o Settings
+  Para iniciar a coleta de dados: na aba Sampler clicar no botï¿½ï¿½o [CPU]
+[[File:visualvm settings.png|none|700px|Java VisualVM Sampler Settings]]
+= Verificaï¿½ï¿½ï¿½ï¿½o de Documentaï¿½ï¿½ï¿½ï¿½o Tï¿½ï¿½cnica =
+== Processo ==
+Verificar se a documentaï¿½ï¿½ï¿½ï¿½o tï¿½ï¿½cnica entregue pela fï¿½ï¿½brica e estï¿½ï¿½o de acordo com o esperado.
+A documentaï¿½ï¿½ï¿½ï¿½o tï¿½ï¿½cnica encontra-se em:
+  ./sistema/01_DOCUMENTACAO_TECNICA
+Os documentos que devem ser verificados sï¿½ï¿½o
+  Diagramas
+  Java Doc
+= Abrir Mantis =
+== Processo ==
+Para cada inconsistï¿½ï¿½ncia aberta deve abrir um caso no mantis.&lt;br/&gt;
+&lt;br/&gt;
+Para abrir o caso no mantis deve acessar a seguinte URL
+  http://wpbastos.com/mantis
+Selecionar o projeto.&lt;br/&gt;
+Clica em relatar caso.
+[[File:MantisRelatarCaso.png|none|700px|Relatar caso no mantis]]
+informar os dados da inconformidade encontrada.&lt;br/&gt;
+* &apos;&apos;&apos;Categoria&apos;&apos;&apos;: 
+* &apos;&apos;&apos;Versï¿½ï¿½o do produto&apos;&apos;&apos;:
+* &apos;&apos;&apos;Atribuir a&apos;&apos;&apos;:
+* &apos;&apos;&apos;Resumo&apos;&apos;&apos;:
+* &apos;&apos;&apos;Descriï¿½ï¿½ï¿½ï¿½o&apos;&apos;&apos;:
+* &apos;&apos;&apos;Passos para Reproduï¿½ï¿½ï¿½ï¿½o&apos;&apos;&apos;:
+* &apos;&apos;&apos;Informaï¿½ï¿½ï¿½ï¿½es Adicionais&apos;&apos;&apos;:
+* &apos;&apos;&apos;Caso de Uso&apos;&apos;&apos;:
+* &apos;&apos;&apos;Tipo de Inconformidade&apos;&apos;&apos;:
+* &apos;&apos;&apos;Enviar Arquivo&apos;&apos;&apos;:
+Clicar no botï¿½ï¿½o Enviar Relatï¿½ï¿½rio
+[[File:MantisCaso.png|none|700px|Novo caso no mantis]]
+
+&lt;/br&gt;
+----
+[[Processos de Testes | Voltar]]</text>
+</revision>
+</page>
+<page>
 <title>Gerar DARE-e</title>
 <ns>0</ns>
 <id>511</id>
@@ -1378,6 +1486,170 @@ Apï¿½ï¿½s selecionado uma das combinaï¿½ï¿½ï¿½ï¿½es de &apos;&apos;&apos;&apos;&
 ----
 [[Mï¿½ï¿½dulo de Seguranï¿½ï¿½a | Voltar]]
 </text>
+</revision>
+</page>
+<page>
+<title>Instalar os Componentes Recebidos da FSW</title>
+<ns>0</ns>
+<id>529</id>
+<revision>
+<id>1658</id>
+<timestamp>2016-11-24T15:34:37Z</timestamp>
+<contributor>
+<username>admin</username>
+<id>1</id>
+</contributor>
+<comment />
+<text xml:space="preserve" bytes="8587">[[File:InstalarComponentesRecebidosFSW.png|Instalar os Componentes Recebido da FSW]]
+= Compilaï¿½ï¿½ï¿½ï¿½o =
+== Processo ==
+Sempre que a FSW entregar uma nova OS, deve-se compilar e empacotar os cï¿½ï¿½digos fontes em um novo arquivo EAR. Neste momento da compilaï¿½ï¿½ï¿½ï¿½o realizamos os testes de analise estï¿½ï¿½tica do cï¿½ï¿½digo e a instrumentaï¿½ï¿½ï¿½ï¿½o para a cobertura de cï¿½ï¿½digo.&lt;br/&gt;
+&lt;br/&gt;&lt;font color=red&gt;&apos;&apos;&apos;Para a compilaï¿½ï¿½ï¿½ï¿½o deve ter o ambiente de desenvolvimento instalado e configurado. Vide [[Instalaï¿½ï¿½ï¿½ï¿½o do Ambiente de Desenvolvimento]].&apos;&apos;&apos;&lt;/font&gt;&lt;br/&gt;&lt;/br&gt;
+Para a compilaï¿½ï¿½ï¿½ï¿½o devemos ir ao diretï¿½ï¿½rio onde estï¿½ï¿½ os cï¿½ï¿½digos fontes:&lt;br/&gt;
+  ./sistema/02_FONTES
+&lt;br/&gt;&lt;font color=red&gt;&apos;&apos;&apos;Para configuraï¿½ï¿½ï¿½ï¿½o dos parï¿½ï¿½metros do sistema vide [[Instalaï¿½ï¿½ï¿½ï¿½o do Ambiente do Sistema]] ou [[Instalaï¿½ï¿½ï¿½ï¿½o do Ambiente do Sistema Linux]] o item 3 - Configuraï¿½ï¿½ï¿½ï¿½o do Sistema.&apos;&apos;&apos;&lt;/font&gt;&lt;br/&gt;&lt;/br&gt;
+Digitar o seguinte comando:
+  mvn clean pmd:check checkstyle:check org.jacoco:jacoco-maven-plugin:prepare-agent package
+Verificar o log de execuï¿½ï¿½ï¿½ï¿½o do Maven, se nï¿½ï¿½o ocorrer nenhum erro na execuï¿½ï¿½ï¿½ï¿½o o processo foi executado com sucesso.
+== Ferramenta ==
+As ferramentas abaixo devem estar configuradas antes da compilaï¿½ï¿½ï¿½ï¿½o.
+=== PMD ===
+Aplica uma gama de regras para verificar se prï¿½ï¿½ticas corretas estï¿½ï¿½o sendo realizadas, como evitar duplicaï¿½ï¿½ï¿½ï¿½o de cï¿½ï¿½digo, garantir o correto uso de encoding, implementaï¿½ï¿½ï¿½ï¿½o do mï¿½ï¿½todo clone(), tamanho de mï¿½ï¿½todos e classes, tamanho de parï¿½ï¿½metros, uso do padrï¿½ï¿½o Singleton, criaï¿½ï¿½ï¿½ï¿½o desnecessï¿½ï¿½ria de variï¿½ï¿½veis locais e muitas outras. O conjunto de regras ï¿½ï¿½ extenso e visa garantir que o cï¿½ï¿½digo apresente as melhores prï¿½ï¿½ticas possï¿½ï¿½veis. A ferramenta a ser utilizada para aplicar boas prï¿½ï¿½ticas ï¿½ï¿½ o [https://pmd.github.io PMD].&lt;br/&gt;
+&lt;br/&gt;
+Para configurar o PMD ï¿½ï¿½ necessï¿½ï¿½rio incluir o seguinte plugin em build no Maven (./sistema/02_FONTES/pom.xm)
+  &lt;plugin&gt;
+    &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+    &lt;artifactId&gt;maven-pmd-plugin&lt;/artifactId&gt;
+    &lt;version&gt;3.6&lt;/version&gt;
+    &lt;configuration&gt;
+      &lt;printFailingErrors&gt;true&lt;/printFailingErrors&gt;
+      &lt;includeTests&gt;true&lt;/includeTests&gt;
+      &lt;rulesets&gt;
+        &lt;ruleset&gt;${user.dir}/config/config-pmd/ruleset.xml&lt;/ruleset&gt;
+      &lt;/rulesets&gt;
+    &lt;/configuration&gt;
+  &lt;/plugin&gt;
+e o seguinte plugin em reporting no Maven (./sistema/02_FONTES/pom.xm)
+  &lt;plugin&gt;
+    &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+    &lt;artifactId&gt;maven-jxr-plugin&lt;/artifactId&gt;
+    &lt;version&gt;2.5&lt;/version&gt;
+  &lt;/plugin&gt;
+Para executar a validaï¿½ï¿½ï¿½ï¿½o estï¿½ï¿½tica do cï¿½ï¿½digo com o PMD deve ir para o diretï¿½ï¿½rio:
+  ./sistema/02_FONTES
+e digitar o seguinte comando:
+  mvn clean pmd:check
+Verificar o log de execuï¿½ï¿½ï¿½ï¿½o do Maven, se nï¿½ï¿½o ocorrer nenhum erro na execuï¿½ï¿½ï¿½ï¿½o (caso ocorra um erro analisar se o erro foi ocasionado pela configuraï¿½ï¿½ï¿½ï¿½o ou alguma regra nï¿½ï¿½o atendida) a configuraï¿½ï¿½ï¿½ï¿½o foi executada com sucesso.
+=== Checkstyle ===
+Considera elementos como identaï¿½ï¿½ï¿½ï¿½o, espaï¿½ï¿½os e tabs, convenï¿½ï¿½ï¿½ï¿½o de nomes, nï¿½ï¿½mero de parï¿½ï¿½metros, alinhamento na vertical, formato e presenï¿½ï¿½a de comentï¿½ï¿½rios, dentre outros. Sï¿½ï¿½o todos os aspectos que contribuem para tornar o cï¿½ï¿½digo mais padronizado, organizado e legï¿½ï¿½vel. A ferramenta a ser utilizada para verificaï¿½ï¿½ï¿½ï¿½o por estilo ï¿½ï¿½ o [http://checkstyle.sourceforge.net Checkstyle].&lt;br/&gt;
+&lt;br/&gt;
+Para configurar o Checkstyle ï¿½ï¿½ necessï¿½ï¿½rio incluir o seguinte plugin em build no Maven (./sistema/02_FONTES/pom.xm)
+  &lt;plugin&gt;
+    &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+    &lt;artifactId&gt;maven-checkstyle-plugin&lt;/artifactId&gt;
+    &lt;version&gt;${maven-checkstyle-plugin.version}&lt;/version&gt;
+    &lt;configuration&gt;
+      &lt;configLocation&gt;${user.dir}/config/config-checkstyle/checkstyle.xml&lt;/configLocation&gt;
+      &lt;consoleOutput&gt;true&lt;/consoleOutput&gt;
+      &lt;violationSeverity&gt;warning&lt;/violationSeverity&gt;
+      &lt;includeTestResources&gt;true&lt;/includeTestResources&gt;
+    &lt;/configuration&gt;
+  &lt;/plugin&gt;
+Para executar a validaï¿½ï¿½ï¿½ï¿½o estï¿½ï¿½tica do cï¿½ï¿½digo com o Checkstyle deve ir para o diretï¿½ï¿½rio
+  ./sistema/02_FONTES
+e digitar o seguinte comando:
+  mvn clean checkstyle:check
+Verificar o log de execuï¿½ï¿½ï¿½ï¿½o do Maven, se nï¿½ï¿½o ocorrer nenhum erro na execuï¿½ï¿½ï¿½ï¿½o (caso ocorra um erro analisar se o erro foi ocasionado pela configuraï¿½ï¿½ï¿½ï¿½o ou alguma regra nï¿½ï¿½o atendida) a configuraï¿½ï¿½ï¿½ï¿½o foi executada com sucesso.
+=== Jacoco ===
+Instrumenta as classes para coletar os dados para o relatï¿½ï¿½rio de cobertura de cï¿½ï¿½digo. A ferramenta a ser utilizada para cobertura de cï¿½ï¿½digo ï¿½ï¿½ [http://www.eclemma.org/jacoco/ JaCoCo].&lt;br/&gt;
+&lt;br/&gt;
+Para configurar o JaCoCo ï¿½ï¿½ necessï¿½ï¿½rio incluir o seguinte plugin em build no Maven (./sistema/02_FONTES/pom.xm)
+  &lt;plugin&gt;
+    &lt;groupId&gt;org.jacoco&lt;/groupId&gt;
+    &lt;artifactId&gt;jacoco-maven-plugin&lt;/artifactId&gt;
+    &lt;version&gt;0.7.7.201606060606&lt;/version&gt;
+    &lt;executions&gt;
+      &lt;execution&gt;
+        &lt;id&gt;agent&lt;/id&gt;
+         &lt;goals&gt;
+           &lt;goal&gt;prepare-agent&lt;/goal&gt;
+         &lt;/goals&gt;
+       &lt;/execution&gt;
+     &lt;/executions&gt;
+   &lt;/plugin&gt;
+Editar o arquivo:
+  ./sistema/02_FONTES/web/view-web/src/main/webapp/WEB-INF/spring/spring.xml
+incluir antes da tag &lt;/beans&gt; a seguinte linha:
+  &lt;aop:aspectj-autoproxy proxy-target-class=&quot;true&quot;/&gt;
+Adicionar dentro da tag beans a seguinte linha:
+  xmlns:aop=&quot;http://www.springframework.org/schema/aop&quot;
+Adicionar dentro de xsi:schemaLocation da tag beans a seguinte linha:
+  http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd&quot;
+O arquivo spring.xml completo deve ficar algo assim:
+  &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+  &lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot; 
+         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xmlns:mvc=&quot;http://www.springframework.org/schema/mvc&quot;
+         xmlns:context=&quot;http://www.springframework.org/schema/context&quot;
+         &lt;font color=red&gt;xmlns:aop=&quot;http://www.springframework.org/schema/aop&quot;&lt;/font&gt;
+         xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                             http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+                             http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+                             &lt;font color=red&gt;http://www.springframework.org/schema/context http://www.springframework.org/schema/task/spring-context-3.0.xsd&lt;/font&gt;
+                             http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd&quot;&gt;
+      &lt;mvc:annotation-driven/&gt;
+      &lt;mvc:default-servlet-handler/&gt;
+      &lt;context:annotation-config/&gt;
+      &lt;context:component-scan base-package=&quot;br.gov.to.sefaz.*.configuration&quot;/&gt;
+      &lt;font color=red&gt;&lt;aop:aspectj-autoproxy proxy-target-class=&quot;true&quot;/&gt;&lt;/font&gt;
+  &lt;/beans&gt;
+Para instrumentar as classes para a cobertura de cï¿½ï¿½digo deve ir para o diretï¿½ï¿½rio
+  ./sistema/02_FONTES
+e digitar o seguinte comando:
+  mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent
+Verificar o log de execuï¿½ï¿½ï¿½ï¿½o do Maven, se nï¿½ï¿½o ocorrer nenhum erro na execuï¿½ï¿½ï¿½ï¿½o a configuraï¿½ï¿½ï¿½ï¿½o foi executada com sucesso.
+= Atualizar Banco de Dados =
+== Processo ==
+Verificar se precisa atualizar o Banco de Dados com os scripts da OS.&lt;br/&gt;
+&lt;br/&gt;&lt;font color=red&gt;&apos;&apos;&apos;Para o ver os scripts de banco de dados vide [[Manual para Manutenï¿½ï¿½ï¿½ï¿½o do Sistema]]&apos;&apos;&apos;&lt;/font&gt;
+= Deploy =
+== Processo ==
+Deve ser disponibilizado o arquivo EAR no servidor de aplicaï¿½ï¿½ï¿½ï¿½o para liberar o aplicativo para testes funcionais.&lt;br/&gt;
+&lt;br/&gt;&lt;font color=red&gt;&apos;&apos;&apos;Para o deploy do sistema vide [[Instalaï¿½ï¿½ï¿½ï¿½o do Ambiente do Sistema]] ou [[Instalaï¿½ï¿½ï¿½ï¿½o do Ambiente do Sistema Linux]] o item 4 - Deploy do Sistema.&apos;&apos;&apos;&lt;/font&gt;
+= Teste Fumaï¿½ï¿½a =
+== Processo ==
+Executar um conjunto de casos de testes para garantir que o mï¿½ï¿½nimo necessï¿½ï¿½rio do sistema esteja funcionando para dar inicio os testes funcionais.
+== Ferramenta ==
+=== Plano de teste fumaï¿½ï¿½a ===
+Este plano encontra-se em:
+  ./pmat/planoTesteFumaï¿½ï¿½a.docx
+= Abrir Mantis =
+== Processo ==
+Para cada inconsistï¿½ï¿½ncia aberta deve abrir um caso no mantis.&lt;br/&gt;
+&lt;br/&gt;
+Para abrir o caso no mantis deve acessar a seguinte URL
+  http://wpbastos.com/mantis
+Selecionar o projeto.&lt;br/&gt;
+Clica em relatar caso.
+[[File:MantisRelatarCaso.png|none|700px|Relatar caso no mantis]]
+informar os dados da inconformidade encontrada.&lt;br/&gt;
+* &apos;&apos;&apos;Categoria&apos;&apos;&apos;: 
+* &apos;&apos;&apos;Versï¿½ï¿½o do produto&apos;&apos;&apos;:
+* &apos;&apos;&apos;Atribuir a&apos;&apos;&apos;:
+* &apos;&apos;&apos;Resumo&apos;&apos;&apos;:
+* &apos;&apos;&apos;Descriï¿½ï¿½ï¿½ï¿½o&apos;&apos;&apos;:
+* &apos;&apos;&apos;Passos para Reproduï¿½ï¿½ï¿½ï¿½o&apos;&apos;&apos;:
+* &apos;&apos;&apos;Informaï¿½ï¿½ï¿½ï¿½es Adicionais&apos;&apos;&apos;:
+* &apos;&apos;&apos;Caso de Uso&apos;&apos;&apos;:
+* &apos;&apos;&apos;Tipo de Inconformidade&apos;&apos;&apos;:
+* &apos;&apos;&apos;Enviar Arquivo&apos;&apos;&apos;:
+Clicar no botï¿½ï¿½o Enviar Relatï¿½ï¿½rio
+[[File:MantisCaso.png|none|700px|Novo caso no mantis]]
+
+
+&lt;/br&gt;
+----
+[[Processos de Testes | Voltar]]</text>
 </revision>
 </page>
 <page>
@@ -5633,6 +5905,27 @@ Os detalhes de cada Classe e Mï¿½ï¿½todo utilizado se encontram no JavaDoc do Si
 </revision>
 </page>
 <page>
+<title>Processos de Testes</title>
+<ns>0</ns>
+<id>528</id>
+<revision>
+<id>1656</id>
+<timestamp>2016-11-24T15:32:11Z</timestamp>
+<contributor>
+<username>admin</username>
+<id>1</id>
+</contributor>
+<comment />
+<text xml:space="preserve" bytes="113">[[Instalar os Componentes Recebidos da FSW]]&lt;br/&gt;
+[[Executar Testes TI]]
+
+
+&lt;/br&gt;
+----
+[[Pï¿½ï¿½gina Inicial | Voltar]]</text>
+</revision>
+</page>
+<page>
 <title>Procuraï¿½ï¿½ï¿½ï¿½o/Retirada das Opï¿½ï¿½ï¿½ï¿½es do Sistema</title>
 <ns>0</ns>
 <id>458</id>
@@ -5678,14 +5971,14 @@ Apï¿½ï¿½s, deve-se clicar no botï¿½ï¿½o &apos;&apos;&apos;&quot;Salvar Procuraï¿
 <ns>0</ns>
 <id>1</id>
 <revision>
-<id>1283</id>
-<timestamp>2016-10-14T17:57:28Z</timestamp>
+<id>1645</id>
+<timestamp>2016-11-24T15:25:49Z</timestamp>
 <contributor>
 <username>admin</username>
 <id>1</id>
 </contributor>
 <comment />
-<text xml:space="preserve" bytes="3489">* [[Manual de Usuï¿½ï¿½rio]]
+<text xml:space="preserve" bytes="3610">* [[Manual de Usuï¿½ï¿½rio]]
 ** [[Acessando_o_Sistema|Acessando o Sistema]] 
 ***[[Login_do_Sistema|Login do Sistema]]
 **** [[Efetuar_Login_no_Sistema_com_CPF|Efetuar Login no Sistema com CPF]]
@@ -5740,6 +6033,10 @@ Apï¿½ï¿½s, deve-se clicar no botï¿½ï¿½o &apos;&apos;&apos;&quot;Salvar Procuraï¿
 **[[Instalaï¿½ï¿½ï¿½ï¿½o do Ambiente do Sistema Linux]]
 ** [[Instalaï¿½ï¿½ï¿½ï¿½o do Ambiente de Desenvolvimento]]
 ** [[Manual para Manutenï¿½ï¿½ï¿½ï¿½o do Sistema]]
+
+*[[Processos de Testes|Processos de Testes]]
+**[[Instalar os Componentes Recebidos da FSW]]&lt;br/&gt;
+**[[Executar Testes TI]]
 </text>
 </revision>
 </page>

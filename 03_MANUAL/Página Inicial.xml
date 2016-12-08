@@ -30,14 +30,14 @@
 <ns>0</ns>
 <id>1</id>
 <revision>
-<id>1283</id>
-<timestamp>2016-10-14T17:57:28Z</timestamp>
+<id>1645</id>
+<timestamp>2016-11-24T15:25:49Z</timestamp>
 <contributor>
 <username>admin</username>
 <id>1</id>
 </contributor>
 <comment />
-<text xml:space="preserve" bytes="3489">* [[Manual de Usu��rio]]
+<text xml:space="preserve" bytes="3610">* [[Manual de Usu��rio]]
 ** [[Acessando_o_Sistema|Acessando o Sistema]] 
 ***[[Login_do_Sistema|Login do Sistema]]
 **** [[Efetuar_Login_no_Sistema_com_CPF|Efetuar Login no Sistema com CPF]]
@@ -92,6 +92,10 @@
 **[[Instala����o do Ambiente do Sistema Linux]]
 ** [[Instala����o do Ambiente de Desenvolvimento]]
 ** [[Manual para Manuten����o do Sistema]]
+
+*[[Processos de Testes|Processos de Testes]]
+**[[Instalar os Componentes Recebidos da FSW]]&lt;br/&gt;
+**[[Executar Testes TI]]
 </text>
 </revision>
 </page>
