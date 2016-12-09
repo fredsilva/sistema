@@ -1,7 +1,7 @@
 <mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
 <siteinfo>
 <sitename>SEFAZ-TO Wiki</sitename>
-<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<base>http://192.168.0.42:8080/jamwiki-1.3.2/en/StartingPoints</base>
 <generator>JAMWiki 1.3.2</generator>
 <case>case-sensitive</case>
 <namespaces>
@@ -37,24 +37,24 @@
 <id>1</id>
 </contributor>
 <comment />
-<text xml:space="preserve" bytes="797">Para gerar uma nova senha para um usu��rio j�� cadastrado anteriormente no sistema, �� necess��rio abrir o navegador Chrome, Internet Explorer, Firefox, Opera ou Safari, digitar o endere��o Web do sistema e pressionar a tecla ENTER. 
+<text xml:space="preserve" bytes="822">Para gerar uma nova senha para um usuário já cadastrado anteriormente no sistema, é necessário abrir o navegador Chrome, Internet Explorer, Firefox, Opera ou Safari, digitar o endereço Web do sistema e pressionar a tecla ENTER. 
 
-Abrir�� a tela de acesso, conforme Figura abaixo:
+Abrirá a tela de acesso, conforme Figura abaixo:
 
 [[File:Login_tela.jpg|caption]]
 
 
-O usu��rio dever�� clicar no link ���&lt;u&gt;LEMBRAR SENHA&lt;/u&gt;���.
+O usuário deverá clicar no link “&lt;u&gt;LEMBRAR SENHA&lt;/u&gt;”.
 
-Ap��s o sistema exibir�� tela para que o usu��rio informe &quot;CPF&quot; e &quot;Correio Eletr��nico&quot;.
+Após o sistema exibirá tela para que o usuário informe &quot;CPF&quot; e &quot;Correio Eletrônico&quot;.
 
 
 [[File:lembrar_senha.png|caption]]
 
-O usu��rio informa seu CPF e E-mail (correio eletr��nico) e clica no bot��o &quot;Enviar&quot;.
+O usuário informa seu CPF e E-mail (correio eletrônico) e clica no botão &quot;Enviar&quot;.
 
 
-O sistema efetuar�� a valida����o dos dados informados e enviar�� um e-mail contendo nova senha de acesso ao Sistema Tribut��rio da SEFAZ-TO, casos os dados informados sejam v��lido.
+O sistema efetuará a validação dos dados informados e enviará um e-mail contendo nova senha de acesso ao Sistema Tributário da SEFAZ-TO, casos os dados informados sejam válido.
 
 &lt;/br&gt;
 ----

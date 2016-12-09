@@ -1,7 +1,7 @@
 <mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
 <siteinfo>
 <sitename>SEFAZ-TO Wiki</sitename>
-<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<base>http://192.168.0.42:8080/jamwiki-1.3.2/en/StartingPoints</base>
 <generator>JAMWiki 1.3.2</generator>
 <case>case-sensitive</case>
 <namespaces>
@@ -26,7 +26,7 @@
 </namespaces>
 </siteinfo>
 <page>
-<title>M��dulo de Seguran��a</title>
+<title>Módulo de Segurança</title>
 <ns>0</ns>
 <id>353</id>
 <revision>
@@ -37,32 +37,32 @@
 <id>1</id>
 </contributor>
 <comment />
-<text xml:space="preserve" bytes="1574">* [[Gest��o de Seguran��a]]
+<text xml:space="preserve" bytes="1646">* [[Gestão de Segurança]]
 ** [[Consulta]]
-*** [[Consulta_de_Comunica����es_com_os_Contribuintes|Consulta de Comunica����es com os Contribuintes]]
-*** [[Consultar_Hist��rico_de_Acesso_(log)|Consultar Hist��rico de Acesso (log)]]
-** [[Gest��o de Seguran��a]]
-*** [[Altera����o_de_Senha|Altera����o de Senha]]
-*** [[Ativar/Inativar_Perfis_dos_Funcion��rios_SEFAZ|Ativar/Inativar perfis dos Funcion��rios SEFAZ]]
-*** [[Atribui����o_de_Perfis_aos_Usu��rios|Atribui����o de perfis aos usu��rios]]
-*** [[Consultar_Usu��rio|Consultar Usu��rio]]
-*** [[Cria����o_do_Usu��rio/Senha_no_Sistema|Cria����o do Usu��rio/Senha no Sistema]]
+*** [[Consulta_de_Comunicações_com_os_Contribuintes|Consulta de Comunicações com os Contribuintes]]
+*** [[Consultar_Histórico_de_Acesso_(log)|Consultar Histórico de Acesso (log)]]
+** [[Gestão de Segurança]]
+*** [[Alteração_de_Senha|Alteração de Senha]]
+*** [[Ativar/Inativar_Perfis_dos_Funcionários_SEFAZ|Ativar/Inativar perfis dos Funcionários SEFAZ]]
+*** [[Atribuição_de_Perfis_aos_Usuários|Atribuição de perfis aos usuários]]
+*** [[Consultar_Usuário|Consultar Usuário]]
+*** [[Criação_do_Usuário/Senha_no_Sistema|Criação do Usuário/Senha no Sistema]]
 *** [[Manter_Cadastro_de_Sistemas|Manter Cadastro de Sistemas]]
-*** [[Manuten����o_de_Postos_de_Trabalho|Manter Postos de Trabalho]]
-*** [[Manuten����o_de_Tipo_de_Usuario|Manter Tipos de Usu��rio]]
-*** [[Manuten����o_de_Unidades_Organizacionais|Manuten����o de Unidades Organizacionais]]
-*** [[Manuten����o_de_Usuario|Manter Usu��rio]]
-*** [[Manuten����o_de_Cadastro_de_Funcionalidades|Manuten����o do cadastro de funcionalidades]]
-*** [[Manuten����o_do_Cadastro_de_Perfil|Manuten����o do cadastro de perfil]]
-*** [[Manuten����o_dos_Pap��is(roles)|Manuten����o dos pap��is(roles)]]
-*** [[Procura����o/Retirada_das_Op����es_do_Sistema|Procura����o/Retirada das op����es do sistema]]
+*** [[Manutenção_de_Postos_de_Trabalho|Manter Postos de Trabalho]]
+*** [[Manutenção_de_Tipo_de_Usuario|Manter Tipos de Usuário]]
+*** [[Manutenção_de_Unidades_Organizacionais|Manutenção de Unidades Organizacionais]]
+*** [[Manutenção_de_Usuario|Manter Usuário]]
+*** [[Manutenção_de_Cadastro_de_Funcionalidades|Manutenção do cadastro de funcionalidades]]
+*** [[Manutenção_do_Cadastro_de_Perfil|Manutenção do cadastro de perfil]]
+*** [[Manutenção_dos_Papéis(roles)|Manutenção dos papéis(roles)]]
+*** [[Procuração/Retirada_das_Opções_do_Sistema|Procuração/Retirada das opções do sistema]]
 **** [[Selecionar_Contribuinte_Procurado|Selecionar Contribuinte Procurado]]
-*** [[Solicita����o_de_senhas_de_Servicos|Solicitar Autoriza����o de Senhas de Servi��os]]
-*** [[Solicitar_para_atuar_como_usu��rio_principal_de_uma_empresa|Solicitar para atuar como usu��rio principal de uma empresa]]
+*** [[Solicitação_de_senhas_de_Servicos|Solicitar Autorização de Senhas de Serviços]]
+*** [[Solicitar_para_atuar_como_usuário_principal_de_uma_empresa|Solicitar para atuar como usuário principal de uma empresa]]
 
 &lt;/br&gt;
 ----
-[[Manual de Usu��rio | Voltar]]</text>
+[[Manual de Usuário | Voltar]]</text>
 </revision>
 </page>
 </mediawiki>

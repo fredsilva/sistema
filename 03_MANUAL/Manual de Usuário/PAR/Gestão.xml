@@ -1,7 +1,7 @@
 <mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
 <siteinfo>
 <sitename>SEFAZ-TO Wiki</sitename>
-<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<base>http://192.168.0.42:8080/jamwiki-1.3.2/en/StartingPoints</base>
 <generator>JAMWiki 1.3.2</generator>
 <case>case-sensitive</case>
 <namespaces>
@@ -26,7 +26,7 @@
 </namespaces>
 </siteinfo>
 <page>
-<title>Gest��o</title>
+<title>Gestão</title>
 <ns>0</ns>
 <id>498</id>
 <revision>
@@ -37,7 +37,7 @@
 <id>1</id>
 </contributor>
 <comment />
-<text xml:space="preserve" bytes="93">* [[Manuten����o_dos_Par��metros_Gerais_do_Sistema|Manuten����o dos Par��metros Gerais do Sistema]]</text>
+<text xml:space="preserve" bytes="99">* [[Manutenção_dos_Parâmetros_Gerais_do_Sistema|Manutenção dos Parâmetros Gerais do Sistema]]</text>
 </revision>
 </page>
 </mediawiki>

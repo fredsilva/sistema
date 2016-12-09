@@ -1,7 +1,7 @@
 <mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
 <siteinfo>
 <sitename>SEFAZ-TO Wiki</sitename>
-<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<base>http://192.168.0.42:8080/jamwiki-1.3.2/en/StartingPoints</base>
 <generator>JAMWiki 1.3.2</generator>
 <case>case-sensitive</case>
 <namespaces>
@@ -26,7 +26,7 @@
 </namespaces>
 </siteinfo>
 <page>
-<title>Procura����o/Retirada das Op����es do Sistema</title>
+<title>Procuração/Retirada das Opções do Sistema</title>
 <ns>0</ns>
 <id>458</id>
 <revision>
@@ -37,32 +37,32 @@
 <id>1</id>
 </contributor>
 <comment />
-<text xml:space="preserve" bytes="1028">Acessar o menu &apos;&apos;&apos;Seguran��a do Sistema &gt; Ger��ncia &gt; Procura����o/Retirada das op����es do sistema&apos;&apos;&apos;
+<text xml:space="preserve" bytes="1067">Acessar o menu &apos;&apos;&apos;Segurança do Sistema &gt; Gerência &gt; Procuração/Retirada das opções do sistema&apos;&apos;&apos;
 
 [[File:1-SEGUC0460.jpg|1 - SEGUC0460]]
 
-Nesta tela pode-se outorgar op����es do sistema dispon��veis do um usu��rio para que algu��m trabalhe ���Em nome de:��� um contribuinte. Somente podem procurar-se aquelas op����es do perfil ���Contribuinte���. 
-Pode ser procurada as op����es de: CPF do ator, mais as empresas onde o ator �� usu��rio principal e mais as empresas onde o ator �� representante legal.
+Nesta tela pode-se outorgar opções do sistema disponíveis do um usuário para que alguém trabalhe “Em nome de:” um contribuinte. Somente podem procurar-se aquelas opções do perfil “Contribuinte”. 
+Pode ser procurada as opções de: CPF do ator, mais as empresas onde o ator é usuário principal e mais as empresas onde o ator é representante legal.
 
 ----
 == Carregar CPF no Sistema ==
 
-Pode-se utilizar os campos destacados na imagem abaixo &apos;&apos;&apos;(Passo 1)&apos;&apos;&apos; para carregar o CPF do procurado, clicando no bot��o &apos;&apos;&apos;Consultar (Passo 2)&apos;&apos;&apos;.
+Pode-se utilizar os campos destacados na imagem abaixo &apos;&apos;&apos;(Passo 1)&apos;&apos;&apos; para carregar o CPF do procurado, clicando no botão &apos;&apos;&apos;Consultar (Passo 2)&apos;&apos;&apos;.
 
 [[File:2-SEGUC0460.jpg|2 - SEGUC0460]]
 
 ----
-== Outorgar Op����es do Procurado ==
+== Outorgar Opções do Procurado ==
 
-Para outorgar op����es do sistema, deve-se selecionar as op����es, como mostrado no &apos;&apos;&apos;passo 1&apos;&apos;&apos; da imagem a seguir:
+Para outorgar opções do sistema, deve-se selecionar as opções, como mostrado no &apos;&apos;&apos;passo 1&apos;&apos;&apos; da imagem a seguir:
 
 [[File:3-SEGUC0460.jpg|3 - SEGUC0460]]
 
-Ap��s, deve-se clicar no bot��o &apos;&apos;&apos;&quot;Salvar Procura����o/Retirada&quot; (passo 2)&apos;&apos;&apos;.
+Após, deve-se clicar no botão &apos;&apos;&apos;&quot;Salvar Procuração/Retirada&quot; (passo 2)&apos;&apos;&apos;.
 
 &lt;/br&gt;
 ----
-[[Gest��o de Seguran��a | Voltar]]
+[[Gestão de Segurança | Voltar]]
 </text>
 </revision>
 </page>

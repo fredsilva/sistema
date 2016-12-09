@@ -1,7 +1,7 @@
 <mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
 <siteinfo>
 <sitename>SEFAZ-TO Wiki</sitename>
-<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<base>http://192.168.0.42:8080/jamwiki-1.3.2/en/StartingPoints</base>
 <generator>JAMWiki 1.3.2</generator>
 <case>case-sensitive</case>
 <namespaces>
@@ -26,7 +26,7 @@
 </namespaces>
 </siteinfo>
 <page>
-<title>Instala����o do Ambiente do Sistema Linux</title>
+<title>Instalação do Ambiente do Sistema Linux</title>
 <ns>0</ns>
 <id>371</id>
 <revision>
@@ -36,89 +36,89 @@
 <username>admin</username>
 <id>1</id>
 </contributor>
-<comment>/* Configura����o do Sistema */ </comment>
-<text xml:space="preserve" bytes="21017">=Instala����o do Ambiente do Sistema (Linux)=
+<comment>/* Configuração do Sistema */ </comment>
+<text xml:space="preserve" bytes="21310">=Instalação do Ambiente do Sistema (Linux)=
 
-Aqui ser��o apresentados os requisitos necess��rios para utilizar a ��ltima vers��o do sistema no ambiente Linux. Os passos a seguir ser��o demonstrados utilizando a distribui����o CentOS 6. Todos os comandos nesse manual ser��o executados utilizando o usu��rio &lt;tt&gt;root&lt;/tt&gt;, ent��o certifique-se de que o usu��rio que esta utilizando �� &lt;tt&gt;root&lt;/tt&gt; ou que tenha as devidas permiss��es para execu����o dos comandos.
+Aqui serão apresentados os requisitos necessários para utilizar a última versão do sistema no ambiente Linux. Os passos a seguir serão demonstrados utilizando a distribuição CentOS 6. Todos os comandos nesse manual serão executados utilizando o usuário &lt;tt&gt;root&lt;/tt&gt;, então certifique-se de que o usuário que esta utilizando é &lt;tt&gt;root&lt;/tt&gt; ou que tenha as devidas permissões para execução dos comandos.
 
-[[File:linux_centos_version_console.png|Vers��o do sistema operacional]]
+[[File:linux_centos_version_console.png|Versão do sistema operacional]]
 
-Caso esteja utilizando uma vers��o anterior e n��o deseja configurar conforme a ��ltima vers��o, ent��o deve-se seguir os passos descritos em cada OS do [[Manual para Manuten����o do Sistema]].
+Caso esteja utilizando uma versão anterior e não deseja configurar conforme a última versão, então deve-se seguir os passos descritos em cada OS do [[Manual para Manutenção do Sistema]].
 
-=&apos;&apos;&apos;Pr�� requisitos:&apos;&apos;&apos; =
+=&apos;&apos;&apos;Pré requisitos:&apos;&apos;&apos; =
 
 JDK 8, Wildfly, Maven, Git
 
 == Editor de texto ==
 
-O Editor de texto utilizado neste manual �� o &lt;tt&gt;vim&lt;/tt&gt;, qualquer outro editor pode ser utilizado, por��m se quiser utilizar o &lt;tt&gt;vim&lt;/tt&gt; certifique-se de que ele esta instalado baixe ele executando: &lt;pre&gt;sudo yum install vim&lt;/pre&gt;
+O Editor de texto utilizado neste manual é o &lt;tt&gt;vim&lt;/tt&gt;, qualquer outro editor pode ser utilizado, porém se quiser utilizar o &lt;tt&gt;vim&lt;/tt&gt; certifique-se de que ele esta instalado baixe ele executando: &lt;pre&gt;sudo yum install vim&lt;/pre&gt;
 [[File:linux_yum_install_vim.png]]
 
-Os comandos do &lt;tt&gt;vim&lt;/tt&gt; s��o semelhantes ao do editor &lt;tt&gt;vi&lt;/tt&gt;, se n��o possui conhecimento par�� utiliza-lo recomendo a leitura do artigo/tutorial [http://br-linux.org/artigos/vim_intro.htm Tutorial do Vim]
+Os comandos do &lt;tt&gt;vim&lt;/tt&gt; são semelhantes ao do editor &lt;tt&gt;vi&lt;/tt&gt;, se não possui conhecimento pará utiliza-lo recomendo a leitura do artigo/tutorial [http://br-linux.org/artigos/vim_intro.htm Tutorial do Vim]
 
 == Java Development Kit 8 (JDK8) ==
 
-=== Instala����o ===
+=== Instalação ===
 
-:*Baixar o comando &lt;tt&gt;wget&lt;/tt&gt; atrav��s do comando &lt;tt&gt;yum&lt;/tt&gt;, executando: &lt;pre&gt;sudo yum install wget&lt;/pre&gt;
+:*Baixar o comando &lt;tt&gt;wget&lt;/tt&gt; através do comando &lt;tt&gt;yum&lt;/tt&gt;, executando: &lt;pre&gt;sudo yum install wget&lt;/pre&gt;
 [[File:linux_yum_install_wget.png]]
 
-:*Baixar o JDK8 atrav��s do comando &lt;tt&gt;wget&lt;/tt&gt; executando: &lt;pre&gt;wget --no-check-certificate --no-cookies --header &quot;Cookie: oraclelicense=accept-securebackup-cookie&quot; http://download.oracle.com/otn-pub/java/jdk/8u92-b14/jdk-8u92-linux-i586.rpm&lt;/pre&gt;
+:*Baixar o JDK8 através do comando &lt;tt&gt;wget&lt;/tt&gt; executando: &lt;pre&gt;wget --no-check-certificate --no-cookies --header &quot;Cookie: oraclelicense=accept-securebackup-cookie&quot; http://download.oracle.com/otn-pub/java/jdk/8u92-b14/jdk-8u92-linux-i586.rpm&lt;/pre&gt;
 [[File:linux_wget_jdk8_rpm.png]]
 
 :*Executar o arquivo baixado com o comando &lt;tt&gt;rpm&lt;/tt&gt;, executando: &lt;pre&gt;sudo rpm -Uvh jdk-8u92-linux-i586.rpm&lt;/pre&gt;
 [[File:linux_install_jdk8_rpm.png]]
 
-=== Configura����o e teste da vari��vel de ambiente JAVA ===
+=== Configuração e teste da variável de ambiente JAVA ===
 
-:*Ap��s a instala����o do java �� necess��rio configurar a vari��vel de ambiente &lt;tt&gt;JAVA_HOME&lt;/tt&gt;. Para isto abra o arquivo &lt;tt&gt;/etc/bashrc&lt;/tt&gt; no editor de sua prefer��ncia.
+:*Após a instalação do java é necessário configurar a variável de ambiente &lt;tt&gt;JAVA_HOME&lt;/tt&gt;. Para isto abra o arquivo &lt;tt&gt;/etc/bashrc&lt;/tt&gt; no editor de sua preferência.
 [[File:linux_vim_edit_bashrc.png]]
 
 :*Adicione ao final do arquivo a linha: &lt;pre&gt;export JAVA_HOME=/usr/java/jdk1.8.0_92&lt;/pre&gt;
 [[File:linux_vim_java_home.png]]
 
-:*Ap��s adicionar a linha acima, salve o arquivo e execute: &lt;pre&gt;exec bash&lt;/pre&gt;
+:*Após adicionar a linha acima, salve o arquivo e execute: &lt;pre&gt;exec bash&lt;/pre&gt;
 [[File:linux_exec_bash.png]]
 
-:*Por fim, para testar a vari��vel de ambiente execute o comando: &lt;pre&gt;echo $JAVA_HOME&lt;/pre&gt;
+:*Por fim, para testar a variável de ambiente execute o comando: &lt;pre&gt;echo $JAVA_HOME&lt;/pre&gt;
 [[File:linux_echo_java_home.png]]
 
 == JBoss Wildfly ==
 
-=== Instala����o ===
+=== Instalação ===
 
-:*Baixe o JBoss Wildfly vers��o 10.0.0 final atrav��s do comando &lt;tt&gt;wget&lt;/tt&gt; &lt;pre&gt;wget http://download.jboss.org/wildfly/10.0.0.Final/wildfly-10.0.0.Final.zip&lt;/pre&gt;
+:*Baixe o JBoss Wildfly versão 10.0.0 final através do comando &lt;tt&gt;wget&lt;/tt&gt; &lt;pre&gt;wget http://download.jboss.org/wildfly/10.0.0.Final/wildfly-10.0.0.Final.zip&lt;/pre&gt;
 [[File:linux_wget_wildfly.png]]
 
-:*Para descompactar o wildfly �� necess��rio o comando &lt;tt&gt;unzip&lt;/tt&gt; que pode ser baixado pelo comando &lt;tt&gt;yum&lt;/tt&gt; executando: &lt;pre&gt;sudo yum install unzip&lt;/pre&gt;
+:*Para descompactar o wildfly é necessário o comando &lt;tt&gt;unzip&lt;/tt&gt; que pode ser baixado pelo comando &lt;tt&gt;yum&lt;/tt&gt; executando: &lt;pre&gt;sudo yum install unzip&lt;/pre&gt;
 [[File:linux_yum_install_unzip.png]]
 
-:*Ap��s ter o &lt;tt&gt;unzip&lt;/tt&gt; instalado extraia o &lt;tt&gt;wildfly-10.0.0.Final.zip&lt;/tt&gt; executando: &lt;pre&gt;unzip wildfly-10.0.0.Final.zip&lt;/pre&gt;
+:*Após ter o &lt;tt&gt;unzip&lt;/tt&gt; instalado extraia o &lt;tt&gt;wildfly-10.0.0.Final.zip&lt;/tt&gt; executando: &lt;pre&gt;unzip wildfly-10.0.0.Final.zip&lt;/pre&gt;
 [[File:linux_unzip_wildfly.png]]
 
-:*Mova o conte��do extra��do &lt;tt&gt;wildfly-10.0.0.Final&lt;/tt&gt; para o diret��rio &lt;tt&gt;/opt/&lt;/tt&gt; (ou outro de sua prefer��ncia), executando: &lt;pre&gt;sudo mv wildfly-10.0.0.Final /opt/&lt;/pre&gt;
+:*Mova o conteúdo extraído &lt;tt&gt;wildfly-10.0.0.Final&lt;/tt&gt; para o diretório &lt;tt&gt;/opt/&lt;/tt&gt; (ou outro de sua preferência), executando: &lt;pre&gt;sudo mv wildfly-10.0.0.Final /opt/&lt;/pre&gt;
 [[File:linux_mv_wildfly_opt.png]]
 
-=== Configura����o e teste da vari��vel de ambiente ===
+=== Configuração e teste da variável de ambiente ===
 
-:*Ap��s a instala����o do java �� necess��rio configurar a vari��vel de ambiente &lt;tt&gt;JBOSS_HOME&lt;/tt&gt;. Para isto abra o arquivo &lt;tt&gt;/etc/bashrc&lt;/tt&gt; no editor de sua prefer��ncia.
+:*Após a instalação do java é necessário configurar a variável de ambiente &lt;tt&gt;JBOSS_HOME&lt;/tt&gt;. Para isto abra o arquivo &lt;tt&gt;/etc/bashrc&lt;/tt&gt; no editor de sua preferência.
 [[File:linux_vim_edit_bashrc.png]]
 
 :*Adicione ao final do arquivo a linha: &lt;pre&gt;export JBOSS_HOME=/opt/wildfly-10.0.0.Final&lt;/pre&gt;
 [[File:linux_vim_jboss_home.png]]
 
-:*Ap��s adicionar a linha acima, salve o arquivo e execute: &lt;pre&gt;exec bash&lt;/pre&gt;
+:*Após adicionar a linha acima, salve o arquivo e execute: &lt;pre&gt;exec bash&lt;/pre&gt;
 [[File:linux_exec_bash.png]]
 
-:*Por fim, para testar a vari��vel de ambiente execute o comando: &lt;pre&gt;echo $JBOSS_HOME&lt;/pre&gt;
+:*Por fim, para testar a variável de ambiente execute o comando: &lt;pre&gt;echo $JBOSS_HOME&lt;/pre&gt;
 [[File:linux_echo_jboss_home.png]]
 
-=== Instala����o do servi��o ===
+=== Instalação do serviço ===
 
-:*Para instalar o wildfly como um servi��o do sistema �� necess��rio copiar o arquivo &lt;tt&gt;/opt/wildfly-10.0.0.Final/docs/contrib/init.d/wildfly-init-redhat.sh&lt;/tt&gt; para o diret��rio &lt;tt&gt;/etc/init.d/&lt;/tt&gt; com o nome de &lt;tt&gt;wildfly&lt;/tt&gt; (nome do servi��o), atrav��s do comando &lt;tt&gt;cp&lt;/tt&gt; executando: &lt;pre&gt;cp /opt/wildfly-10.0.0.Final/docs/contrib/scripts/init.d/wildfly-init-redhat.sh /etc/init.d/ wildfly&lt;/pre&gt;
+:*Para instalar o wildfly como um serviço do sistema é necessário copiar o arquivo &lt;tt&gt;/opt/wildfly-10.0.0.Final/docs/contrib/init.d/wildfly-init-redhat.sh&lt;/tt&gt; para o diretório &lt;tt&gt;/etc/init.d/&lt;/tt&gt; com o nome de &lt;tt&gt;wildfly&lt;/tt&gt; (nome do serviço), através do comando &lt;tt&gt;cp&lt;/tt&gt; executando: &lt;pre&gt;cp /opt/wildfly-10.0.0.Final/docs/contrib/scripts/init.d/wildfly-init-redhat.sh /etc/init.d/ wildfly&lt;/pre&gt;
 [[File:linux_cp_wildfly_service.png]]
 
-:*Al��m do script de servi��o �� necess��rio editar o arquivo de configura����o do wildfly (no editor de sua prefer��ncia) e alterar as linhas: &lt;pre&gt;## Location of JDK
+:*Além do script de serviço é necessário editar o arquivo de configuração do wildfly (no editor de sua preferência) e alterar as linhas: &lt;pre&gt;## Location of JDK
 JAVA_HOME=&quot;/usr/java/jdk1.8.0_92&quot;
 
 ## Location of WildFly
@@ -131,7 +131,7 @@ JBOSS_USER=wildfly
 [[File:linux_vim_wildfly_conf.png]]
 [[File:linux_edit_wildfly_conf.png]]
 
-:*Antes de executar o servi��o �� necess��rio habilitar o servi��o no sistema, criar a pasta de logs e criar o usu��rio de execu����o, executando os comandos: &lt;pre&gt;
+:*Antes de executar o serviço é necessário habilitar o serviço no sistema, criar a pasta de logs e criar o usuário de execução, executando os comandos: &lt;pre&gt;
 chkconfig --add wildfly
 chkconfig wildfly on
 mkdir -p /var/log/wildfly
@@ -139,19 +139,19 @@ adduser wildfly
 &lt;/pre&gt;
 [[File:linux_wildfly_service_user.png]]
 
-:*Por fim �� necess��rio dar permiss��es de acesso para a pasta do wildfly, utilizando o comando &lt;tt&gt;chmod&lt;/tt&gt;, execute: &lt;pre&gt;sudo chmod -R 777 /opt/wildfly-10.0.0.Final&lt;/pre&gt;
+:*Por fim é necessário dar permissões de acesso para a pasta do wildfly, utilizando o comando &lt;tt&gt;chmod&lt;/tt&gt;, execute: &lt;pre&gt;sudo chmod -R 777 /opt/wildfly-10.0.0.Final&lt;/pre&gt;
 [[File:linux_chmod_777_wildfly.png]]
 
-:*Aten����o: o comando &lt;tt&gt;chmod -R 777&lt;/tt&gt; vai dar permiss��es de leitura, escrita e execu����o a todos os usu��rios do servidor, caso queira dar permiss��es especificas ao usu��rios do sistema aprenda mais pelo tutorial [https://www.vivaolinux.com.br/artigo/Como-gerenciar-permissoes-no-Linux Como gerenciar permiss��es no Linux], mas tenha certeza de que o usu��rio &lt;tt&gt;wildfly&lt;/tt&gt; ter�� permiss��es de escrita, execu����o e leitura ao final de tudo.
+:*Atenção: o comando &lt;tt&gt;chmod -R 777&lt;/tt&gt; vai dar permissões de leitura, escrita e execução a todos os usuários do servidor, caso queira dar permissões especificas ao usuários do sistema aprenda mais pelo tutorial [https://www.vivaolinux.com.br/artigo/Como-gerenciar-permissoes-no-Linux Como gerenciar permissões no Linux], mas tenha certeza de que o usuário &lt;tt&gt;wildfly&lt;/tt&gt; terá permissões de escrita, execução e leitura ao final de tudo.
 
-=== Adicionar Usu��rio no Wildfly ===
+=== Adicionar Usuário no Wildfly ===
 
-:*Para gerenciar o &lt;tt&gt;wildfly&lt;/tt&gt; �� necess��rio criar um usu��rio, para isso v�� para a pasta &lt;tt&gt;bin&lt;/tt&gt; dentro da pasta de instala����o do &lt;tt&gt;wildfly&lt;/tt&gt; (JBOSS_HOME) e execute o script &lt;tt&gt;add-user.sh&lt;/tt&gt;, executando: &lt;pre&gt;cd $JBOSS_HOME/bin
+:*Para gerenciar o &lt;tt&gt;wildfly&lt;/tt&gt; é necessário criar um usuário, para isso vá para a pasta &lt;tt&gt;bin&lt;/tt&gt; dentro da pasta de instalação do &lt;tt&gt;wildfly&lt;/tt&gt; (JBOSS_HOME) e execute o script &lt;tt&gt;add-user.sh&lt;/tt&gt;, executando: &lt;pre&gt;cd $JBOSS_HOME/bin
 ./add-user.sh
 &lt;/pre&gt;
 [[File:linux_wildfly_add_user.png]]
 
-:*Configure o usu��rio como &lt;tt&gt;a) Management User (mgmt-users.properties)&lt;/tt&gt; e o resto das informa����es como preferir. No exemplo a seguir foi utilizado &lt;tt&gt;admin&lt;/tt&gt; como nome de usu��rio e senha, segue a execu����o: &lt;pre&gt;What type of user do you wish to add?
+:*Configure o usuário como &lt;tt&gt;a) Management User (mgmt-users.properties)&lt;/tt&gt; e o resto das informações como preferir. No exemplo a seguir foi utilizado &lt;tt&gt;admin&lt;/tt&gt; como nome de usuário e senha, segue a execução: &lt;pre&gt;What type of user do you wish to add?
  a) Management User (mgmt-users.properties)
  b) Application User (application-users.properties)
 (a): a
@@ -184,12 +184,12 @@ To represent the user add the following to the server-identities definition &lt;
 &lt;/pre&gt;
 [[File:linux_wildfly_add_user_admin.png]]
 
-=== Configura����o de acesso e inicializa����o do servi��o ===
+=== Configuração de acesso e inicialização do serviço ===
 
-:*Para liberar o acesso externo ao servidor abra o arquivo &lt;tt&gt;standalone.xml&lt;/tt&gt; na pasta de instala����o do &lt;tt&gt;wildfly&lt;/tt&gt; no editor de texto de sua prefer��ncia, conforme o exemplo: &lt;pre&gt;vim $JBOSS_HOME/standalone/configuration/standalone.xml&lt;/pre&gt;
+:*Para liberar o acesso externo ao servidor abra o arquivo &lt;tt&gt;standalone.xml&lt;/tt&gt; na pasta de instalação do &lt;tt&gt;wildfly&lt;/tt&gt; no editor de texto de sua preferência, conforme o exemplo: &lt;pre&gt;vim $JBOSS_HOME/standalone/configuration/standalone.xml&lt;/pre&gt;
 [[File:linux_vim_standalone_xml.png]]
 
-:*Ap��s abrir o arquivo altere o bloco &lt;tt&gt;interfaces&lt;/tt&gt; (normalmente pr��ximo ao final do arquivo) conforme o trecho a seguir: &lt;pre&gt;&lt;interfaces&gt;
+:*Após abrir o arquivo altere o bloco &lt;tt&gt;interfaces&lt;/tt&gt; (normalmente próximo ao final do arquivo) conforme o trecho a seguir: &lt;pre&gt;&lt;interfaces&gt;
     &lt;interface name=&quot;management&quot;&gt;
         &lt;any-address/&gt;
     &lt;/interface&gt;
@@ -200,27 +200,27 @@ To represent the user add the following to the server-identities definition &lt;
 &lt;/pre&gt;
 [[File:linux_edit_standalone_xml_interfaces.png]]
 
-:*Ap��s alterar o arquivo &lt;tt&gt;standalone.xml&lt;/tt&gt; inicie (ou reinicie) o servi��o para que ele funcione com as novas configura����es, executando: &lt;pre&gt;service wildfly start&lt;/pre&gt;
+:*Após alterar o arquivo &lt;tt&gt;standalone.xml&lt;/tt&gt; inicie (ou reinicie) o serviço para que ele funcione com as novas configurações, executando: &lt;pre&gt;service wildfly start&lt;/pre&gt;
 [[File:linux_wildfly_service_start.png]]
 
 :*Para testar se o wildfly esta funcionando execute: &lt;pre&gt;curl &apos;http://localhost:8080/&apos;&lt;/pre&gt;
 [[File:linux_curl_wildfly.png]]
 
-=== Configura����o Datasource Wildfly para o Projeto ===
+=== Configuração Datasource Wildfly para o Projeto ===
 
-:*Para executar os pr��ximos passos �� necess��rio utilizar um navegador, ent��o se a maquina utilizada n��o tiver interface gr��fica, tenha certeza de que tem acesso externo na porta 9990, para acessar por outra maquina.
+:*Para executar os próximos passos é necessário utilizar um navegador, então se a maquina utilizada não tiver interface gráfica, tenha certeza de que tem acesso externo na porta 9990, para acessar por outra maquina.
 
 :*Acessar  e baixar o driver ojdbc7.jar no caminho [http://www.oracle.com/technetwork/database/features/jdbc/jdbc-drivers-12c-download-1958347.html http://www.oracle.com/technetwork/database/features/jdbc/jdbc-drivers-12c-download-1958347.html].
 
 [[File:wildfly_6.png|Wildfly 6]]
 
-:*Executar o arquivo ���.standalone.bat��� da pasta ���bin��� do Wildfly.
+:*Executar o arquivo “.standalone.bat” da pasta “bin” do Wildfly.
 
-:*Acessar o caminho http://localhost:9990, logar com o nome de usu��rio e senha criados, conforme configurado no passo [[#Adicionar Usu��rio no Wildfly]]
+:*Acessar o caminho http://localhost:9990, logar com o nome de usuário e senha criados, conforme configurado no passo [[#Adicionar Usuário no Wildfly]]
 
 [[File:wildfly_7.png|Wildfly 7]]
 
-:*Em Deployments clique em Add. Selecione ���upload a new deployment���, clique Next.
+:*Em Deployments clique em Add. Selecione “upload a new deployment”, clique Next.
 
 [[File:wildfly_8.png|Wildfly 8]]
 
@@ -232,7 +232,7 @@ To represent the user add the following to the server-identities definition &lt;
 
 [[File:linux_wildfly_restart.png|Wildfly 10]]
 
-:*Acesse novamente e fa��a o login com o usu��rio criado.
+:*Acesse novamente e faça o login com o usuário criado.
 
 :*Em Configuration-&gt;Subsystems-&gt;Datasources-&gt;Non-XA clique em Add.
 
@@ -250,17 +250,17 @@ To represent the user add the following to the server-identities definition &lt;
 
 [[File:wildfly_14.png|Wildfly 14]]
 
-:*Preencha os campos com as configura����es das base de dados, exemplo de informa����es do banco de dados: &lt;pre&gt;Usu��rio: admin
+:*Preencha os campos com as configurações das base de dados, exemplo de informações do banco de dados: &lt;pre&gt;Usuário: admin
 Senha: admin
 Servidor: localhost
 Porta: 1521
 SID: orcl
 &lt;/pre&gt;
 
-:*Dadas as configura����es acima o wildfly devera ser configurado conforme a imagem abaixo:
+:*Dadas as configurações acima o wildfly devera ser configurado conforme a imagem abaixo:
 [[File:wildfly_config_db.png|Wildfly 14]]
 
-:*Clicar em Test Connection para verificar as configura����es. Depois clicar em OK e Finish.
+:*Clicar em Test Connection para verificar as configurações. Depois clicar em OK e Finish.
 
 [[File:wildfly_15.png|Wildfly 15]]
 
@@ -268,7 +268,7 @@ SID: orcl
 
 [[File:wildfly_16.png|Wildfly 16]]
 
-=== Configura����o SSL com Certificado Digital ===
+=== Configuração SSL com Certificado Digital ===
 
 :*Baixe os arquivos [[File:icptrustkeystore.jks]] e [[File:server.keystore]].
 
@@ -334,115 +334,115 @@ SID: orcl
         &lt;/outbound-socket-binding&gt;
  &lt;/socket-binding-group&gt;
 
-=== Configura����o do LDAP no Wildfly ===
+=== Configuração do LDAP no Wildfly ===
 
-:*Para que seja poss��vel se logar no sistema ou alterar a senha no Active Directory via protocolo LDAP �� necess��rio importar o certificado do AD no Java.
-:*Providencie o certificado do AD junto �� equipe de configura����o e manuten����o do Active Directory, o arquivo deve possuir a exten����o &apos;.crt&apos; ou &apos;.cer&apos;.
-:*Copie o certificado no servidor ou computador que est�� instalado o Wildfly.
-:*Entre na pasta de instala����o do Java JDK JAVA_HOME/jre/bin onde se encontra a instala����o do keytool.
-:*Para importar o certificado no Java JDK basta realizar o comando de importa����o do Keytool previamente apresentado conforme exemplo a seguir:
+:*Para que seja possível se logar no sistema ou alterar a senha no Active Directory via protocolo LDAP é necessário importar o certificado do AD no Java.
+:*Providencie o certificado do AD junto à equipe de configuração e manutenção do Active Directory, o arquivo deve possuir a extenção &apos;.crt&apos; ou &apos;.cer&apos;.
+:*Copie o certificado no servidor ou computador que está instalado o Wildfly.
+:*Entre na pasta de instalação do Java JDK JAVA_HOME/jre/bin onde se encontra a instalação do keytool.
+:*Para importar o certificado no Java JDK basta realizar o comando de importação do Keytool previamente apresentado conforme exemplo a seguir:
 
 &apos;&apos;&apos;keytool -import -alias [ALIAS] -file [CAMINHO ATE O ARQUIVO]/[NOME_CERTIFICADO_AD] -keystore JAVA_HOME/jre/lib/security/cacerts&apos;&apos;&apos;
 
-:*Altere os par��metros de configura����o no sistema conforme defini����es abaixo. Os par��metros espec��ficos do LDAP s��o os prefixados por &apos;ldap&apos;.
+:*Altere os parâmetros de configuração no sistema conforme definições abaixo. Os parâmetros específicos do LDAP são os prefixados por &apos;ldap&apos;.
 
 == Git ==
 
-=== Instala����o ===
+=== Instalação ===
 
 :*Para instalar o git, deve-se executar o seguinte comando: &lt;pre&gt;yum install git&lt;/pre&gt;
 [[File:linux_yum_installGit.jpg]]
 
 === Clonar o Projeto ===
 
-:*Ap��s a instala����o, executar o seguinte comando: &lt;pre&gt; git clone [servidor]:[local.git] &lt;/pre&gt; Obs: O servidor:local.git �� o caminho do projeto no respectivo servidor.
+:*Após a instalação, executar o seguinte comando: &lt;pre&gt; git clone [servidor]:[local.git] &lt;/pre&gt; Obs: O servidor:local.git é o caminho do projeto no respectivo servidor.
 [[File:gitClone.jpg]]
 
 
 
 == Maven ==
 
-=== Instala����o ===
+=== Instalação ===
 
 :*Para instalar o Maven, deve-se executar o seguinte comando: &lt;pre&gt;wget http://mirror.cc.columbia.edu/pub/software/apache/maven/maven-3/3.0.5/binaries/apache-maven-3.0.5-bin.tar.gz&lt;/pre&gt;
 [[File:maven_download.jpg]]
 
-:*Ap��s baixar, descompactar o arquivo para o diret��rio /usr/local (ou outro de sua prefer��ncia), utilizando o seguinte comando: &lt;pre&gt;sudo tar xzf apache-maven-3.0.5-bin.tar.gz -C /usr/local&lt;/pre&gt;
+:*Após baixar, descompactar o arquivo para o diretório /usr/local (ou outro de sua preferência), utilizando o seguinte comando: &lt;pre&gt;sudo tar xzf apache-maven-3.0.5-bin.tar.gz -C /usr/local&lt;/pre&gt;
 [[File:maven_tar.jpg]]
 
-:*Navegar at�� a pasta onde foi descompactado o maven e, executar na mesma o seguinte c��digo: &lt;pre&gt;sudo ln -s apache-maven-3.0.5 maven&lt;/pre&gt;
+:*Navegar até a pasta onde foi descompactado o maven e, executar na mesma o seguinte código: &lt;pre&gt;sudo ln -s apache-maven-3.0.5 maven&lt;/pre&gt;
 [[File:maven_ln.jpg]]
 
-:*Criar a vari��vel de ambiente do Maven, atrav��s do seguinte comando: &lt;pre&gt;sudo vim /etc/profile.d/maven.sh&lt;/pre&gt;
+:*Criar a variável de ambiente do Maven, através do seguinte comando: &lt;pre&gt;sudo vim /etc/profile.d/maven.sh&lt;/pre&gt;
 [[File:maven_vim.jpg]]
 
-:*Adicione o seguinte trecho de c��digo no final do arquivo: 
+:*Adicione o seguinte trecho de código no final do arquivo: 
 &lt;pre&gt;export M2_HOME=/usr/local/maven
 export PATH=${M2_HOME}/bin:${PATH}&lt;/pre&gt;
 [[File:maven_bashrc.jpg]]
 
-:*Ap��s adicionar a linha acima, salve o arquivo e execute: &lt;pre&gt;exec bash&lt;/pre&gt;
+:*Após adicionar a linha acima, salve o arquivo e execute: &lt;pre&gt;exec bash&lt;/pre&gt;
 [[File:maven_execBash.jpg]]
 
-:*Verificar se a instala����o do Maven foi executada atrav��s do comando: &lt;pre&gt;mvn -version&lt;/pre&gt;
+:*Verificar se a instalação do Maven foi executada através do comando: &lt;pre&gt;mvn -version&lt;/pre&gt;
 [[File:maven_version.jpg]]
 
-:*Navegar at�� a pasta onde foi clonado o projeto atrav��s do Git e executar os seguintes comandos: &lt;pre&gt;mvn clean package&lt;/pre&gt;
+:*Navegar até a pasta onde foi clonado o projeto através do Git e executar os seguintes comandos: &lt;pre&gt;mvn clean package&lt;/pre&gt;
 [[File:maven_cleanPackage.jpg]]
 
-:*Navegar at�� a pasta &apos;&apos;&apos;ear/target&apos;&apos;&apos; e verificar se existe o arquivo com extens��o &apos;&apos;&apos;.ear&apos;&apos;&apos;, como demonstrado na imagem abaixo.
+:*Navegar até a pasta &apos;&apos;&apos;ear/target&apos;&apos;&apos; e verificar se existe o arquivo com extensão &apos;&apos;&apos;.ear&apos;&apos;&apos;, como demonstrado na imagem abaixo.
 [[File:maven_ear.jpg]]
 
 
-=Configura����o do Sistema=
+=Configuração do Sistema=
 
-==Configura����o das Propriedades Gerais do Sistema==
+==Configuração das Propriedades Gerais do Sistema==
 
-Para alterar a configura����o das propriedades do sistema, deve-se editar o arquivo &apos;&apos;&apos;&apos;&apos;application.properties&apos;&apos;&apos;&apos;&apos; dispon��vel no caminho &apos;&apos;&apos;&apos;&apos;(WILDFLY_HOME/standalone/configuration/application.properties)&apos;&apos;&apos;&apos;&apos;, onde WILDFLY_HOME compreende �� pasta onde o servidor de aplica����o est�� instalado.
+Para alterar a configuração das propriedades do sistema, deve-se editar o arquivo &apos;&apos;&apos;&apos;&apos;application.properties&apos;&apos;&apos;&apos;&apos; disponível no caminho &apos;&apos;&apos;&apos;&apos;(WILDFLY_HOME/standalone/configuration/application.properties)&apos;&apos;&apos;&apos;&apos;, onde WILDFLY_HOME compreende à pasta onde o servidor de aplicação está instalado.
 
-o arquivo cont��m os seguintes par��metros:
+o arquivo contém os seguintes parâmetros:
 
-*&apos;&apos;&apos;exception.log.directory&apos;&apos;&apos; - Caminho para o diret��rio onde ser��o armazenados os Logs das exce����es do sistema. Se n��o for informado valor para esta propriedade as exce����es ser��o armazenadas na pasta de log do servidor de aplica����o &apos;&apos;&apos;&apos;&apos;(WILDFLY_HOME/standalone/log)&apos;&apos;&apos;&apos;&apos;.
+*&apos;&apos;&apos;exception.log.directory&apos;&apos;&apos; - Caminho para o diretório onde serão armazenados os Logs das exceções do sistema. Se não for informado valor para esta propriedade as exceções serão armazenadas na pasta de log do servidor de aplicação &apos;&apos;&apos;&apos;&apos;(WILDFLY_HOME/standalone/log)&apos;&apos;&apos;&apos;&apos;.
 
 *&apos;&apos;&apos;email.host&apos;&apos;&apos; - Host do servidor de email.
 *&apos;&apos;&apos;email.port&apos;&apos;&apos; - Porta do servidor de email.
-*&apos;&apos;&apos;email.username&apos;&apos;&apos; - Usu��rio do servidor de email, o qual ser�� respons��vel por enviar as mensagens do sistema.
-*&apos;&apos;&apos;email.password&apos;&apos;&apos; - Senha do usu��rio do servidor de email.
+*&apos;&apos;&apos;email.username&apos;&apos;&apos; - Usuário do servidor de email, o qual será responsável por enviar as mensagens do sistema.
+*&apos;&apos;&apos;email.password&apos;&apos;&apos; - Senha do usuário do servidor de email.
 
 *&apos;&apos;&apos;host.port&apos;&apos;&apos; - Porta do sistema.
-*&apos;&apos;&apos;certificado.port&apos;&apos;&apos; - Porta para autentica����o do certificado digital.
+*&apos;&apos;&apos;certificado.port&apos;&apos;&apos; - Porta para autenticação do certificado digital.
 
 *&apos;&apos;&apos;ldap.provider.url&apos;&apos;&apos; - URL do LDAP.
 *&apos;&apos;&apos;ldap.provider.url.ssl&apos;&apos;&apos; - URL segura do LDAP.
-*&apos;&apos;&apos;ldap.provider.domain&apos;&apos;&apos; - Dom��nio do LDAP.
-*&apos;&apos;&apos;ldap.provider.baseDomain&apos;&apos;&apos; - Dom��nio de pesquisa de usu��rio do LDAP.
+*&apos;&apos;&apos;ldap.provider.domain&apos;&apos;&apos; - Domínio do LDAP.
+*&apos;&apos;&apos;ldap.provider.baseDomain&apos;&apos;&apos; - Domínio de pesquisa de usuário do LDAP.
 *&apos;&apos;&apos;ldap.provider.userManager&apos;&apos;&apos; - Administrador do LDAP.
 *&apos;&apos;&apos;ldap.provider.passwdManager&apos;&apos;&apos; - Senha do Administrador do LDAP.
-*&apos;&apos;&apos;ldap.connect.timeout&apos;&apos;&apos; - Tempo m��ximo de espera para realizar a conex��o com o LDAP.
+*&apos;&apos;&apos;ldap.connect.timeout&apos;&apos;&apos; - Tempo máximo de espera para realizar a conexão com o LDAP.
 
-==Configura����o das Propriedades Customizadas do Sistema==
+==Configuração das Propriedades Customizadas do Sistema==
 
-Para alterar a configura����o das propriedades customizadas do sistema, deve-se editar o arquivo &apos;&apos;&apos;&apos;&apos;custom.properties&apos;&apos;&apos;&apos;&apos; dispon��vel no caminho &apos;&apos;&apos;&apos;&apos;(WILDFLY_HOME/standalone/configuration/custom.properties)&apos;&apos;&apos;&apos;&apos;, onde WILDFLY_HOME compreende �� pasta onde o servidor de aplica����o est�� instalado. Ao alterar o arquivo, automaticamente o sistema come��a a ler o novo valor da propriedade, sem necessitar reiniciar a aplica����o.
+Para alterar a configuração das propriedades customizadas do sistema, deve-se editar o arquivo &apos;&apos;&apos;&apos;&apos;custom.properties&apos;&apos;&apos;&apos;&apos; disponível no caminho &apos;&apos;&apos;&apos;&apos;(WILDFLY_HOME/standalone/configuration/custom.properties)&apos;&apos;&apos;&apos;&apos;, onde WILDFLY_HOME compreende à pasta onde o servidor de aplicação está instalado. Ao alterar o arquivo, automaticamente o sistema começa a ler o novo valor da propriedade, sem necessitar reiniciar a aplicação.
 
-o arquivo cont��m os seguintes par��metros:
+o arquivo contém os seguintes parâmetros:
 
-*&apos;&apos;&apos;arrec.directory&apos;&apos;&apos; - Diret��rio que realiza a recep����o dos arquivos de arrecada����o.
+*&apos;&apos;&apos;arrec.directory&apos;&apos;&apos; - Diretório que realiza a recepção dos arquivos de arrecadação.
 
 = Deploy do Sistema =
 
-:*Ap��s clonar o projeto atrav��s do Git, entre na pasta &quot;sistema&quot; e procure pela pasta &quot;02_FONTES&quot;, onde ficam os arquivos fonte do sistema.
+:*Após clonar o projeto através do Git, entre na pasta &quot;sistema&quot; e procure pela pasta &quot;02_FONTES&quot;, onde ficam os arquivos fonte do sistema.
 :*Entre na pasta &quot;02_FONTES&quot; e realize o comando: &quot;mvn clean deploy&quot;.
-:*Ao finalizar o comando o .ear estar�� dispon��vel para o servidor Wildfly.
+:*Ao finalizar o comando o .ear estará disponível para o servidor Wildfly.
 :*Acesse o painel administrador do Wildfly (URL:http://localhost:9990).
-:*Acesse a op����o &quot;Deployments&quot;&apos;&apos;&apos;
+:*Acesse a opção &quot;Deployments&quot;&apos;&apos;&apos;
 
 [[File:deploy_sistema_1.png|Deploy 1]]
 
-:*Pressione &quot;Add&quot; e selecione a op����o &quot;Upload a new deployment&quot; e pressione &quot;Next&quot;
+:*Pressione &quot;Add&quot; e selecione a opção &quot;Upload a new deployment&quot; e pressione &quot;Next&quot;
 
 [[File:deploy_sistema_2.png|Deploy 2]]
 
-:*Selecione o arquivo .ear que est�� localizado dentro da pasta &quot;sistema\02_FONTES\ear\target&quot;
+:*Selecione o arquivo .ear que está localizado dentro da pasta &quot;sistema\02_FONTES\ear\target&quot;
 
 [[File:deploy_sistema_3.png|Deploy 3]]
 
@@ -450,11 +450,11 @@ o arquivo cont��m os seguintes par��metros:
 
 [[File:deploy_sistema_4.png|Deploy 4]]
 
-:*Ao finalizar o arquivo .ear estar�� na lista de Deployments
+:*Ao finalizar o arquivo .ear estará na lista de Deployments
 
 [[File:deploy_sistema_5.png|Deploy 5]]
 
-:*A URL para acessar a aplica����o ��: &quot;http://localhost:8080/sat/public/login.jsf&quot;. &apos;&apos;&apos;OBS:&apos;&apos;&apos; O nome do &apos;&apos;Deploy&apos;&apos; �� o nome que ser�� atribu��do ap��s o &quot;localhost:8080/&quot;, ficando &quot;http://localhost:8080/[nome do deploy]/public/login.jsf&quot;
+:*A URL para acessar a aplicação é: &quot;http://localhost:8080/sat/public/login.jsf&quot;. &apos;&apos;&apos;OBS:&apos;&apos;&apos; O nome do &apos;&apos;Deploy&apos;&apos; é o nome que será atribuído após o &quot;localhost:8080/&quot;, ficando &quot;http://localhost:8080/[nome do deploy]/public/login.jsf&quot;
 
 [[File:deploy_sistema_6.png|Deploy 6]]
 

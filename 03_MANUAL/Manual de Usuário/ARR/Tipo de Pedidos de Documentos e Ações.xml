@@ -1,7 +1,7 @@
 <mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
 <siteinfo>
 <sitename>SEFAZ-TO Wiki</sitename>
-<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<base>http://192.168.0.42:8080/jamwiki-1.3.2/en/StartingPoints</base>
 <generator>JAMWiki 1.3.2</generator>
 <case>case-sensitive</case>
 <namespaces>
@@ -26,7 +26,7 @@
 </namespaces>
 </siteinfo>
 <page>
-<title>Tipo de Pedidos de Documentos e A����es</title>
+<title>Tipo de Pedidos de Documentos e Ações</title>
 <ns>0</ns>
 <id>113</id>
 <revision>
@@ -37,17 +37,17 @@
 <id>1</id>
 </contributor>
 <comment />
-<text xml:space="preserve" bytes="4493">Acessar o menu &apos;&apos;&apos;Par��metros &gt; Tipo de Pedidos de Documento e A����es.&apos;&apos;&apos;
+<text xml:space="preserve" bytes="4657">Acessar o menu &apos;&apos;&apos;Parâmetros &gt; Tipo de Pedidos de Documento e Ações.&apos;&apos;&apos;
 
-Abrir�� a tela de localiza����o contendo a lista de Tipo de Pedidos cadastrados
+Abrirá a tela de localização contendo a lista de Tipo de Pedidos cadastrados
 
 ----
 
-== Visualizar todos os Tipos de Pedidos de Documentos e A����es ==
+== Visualizar todos os Tipos de Pedidos de Documentos e Ações ==
 
-Os pedidos de restitui����o envolvem a descri����o do pedido, se permite parecer autom��tico, se permite recurso, qual o valor m��nimo para realizar o pedido, a  quantidade de dias necess��rios para analisar o pedido e a situa����o (ativo ou cancelado).
-As ��reas s��o aquelas respons��veis pela an��lise dos pedidos que foram realizados pelos  contribuintes. Na defini����o das ��reas deve ser informada a delegacia, se exige parecer, a ordem do parecer (informa qual a ordem do percurso que o pedido vai ter dentro da SEFAZ. Exemplo: Controladoria, Auditoria, Financeiro, Arrecada����o), a ��rea final do parecer (��ltima ��rea que vai dar o parecer), quantidade de dias necess��rios para dar o parecer, se o pedido pode ser encaminhado, situa����o da ��rea, dados do servidor respons��vel pelo parecer (Matr��cula, Nome, E-mail e Situa����o), Valor Inicial e final.
-O usu��rio deve informar se �� obrigat��rio, qual o tipo de  documento que deve ser anexado no pedido e a situa����o (ativo ou cancelado). Outra  importante  informa����o durante a parametriza����o do pedido s��o as a����es. Estas a����es podem ser para corre����o de pagamentos, cr��ditos em conta tribut��ria, cr��ditos em conta-corrente ou estorno de pagamentos. O usu��rio deve informar o tipo de a����o, tipo de campo (inteiro, num��rico, alfanum��rico ou data/hora), a descri����o do campo que ser�� disponibilizado durante o pedido, se o campo informado �� obrigat��rio e a situa����o do campo (ativo ou cancelado). 
+Os pedidos de restituição envolvem a descrição do pedido, se permite parecer automático, se permite recurso, qual o valor mínimo para realizar o pedido, a  quantidade de dias necessários para analisar o pedido e a situação (ativo ou cancelado).
+As áreas são aquelas responsáveis pela análise dos pedidos que foram realizados pelos  contribuintes. Na definição das áreas deve ser informada a delegacia, se exige parecer, a ordem do parecer (informa qual a ordem do percurso que o pedido vai ter dentro da SEFAZ. Exemplo: Controladoria, Auditoria, Financeiro, Arrecadação), a área final do parecer (última área que vai dar o parecer), quantidade de dias necessários para dar o parecer, se o pedido pode ser encaminhado, situação da área, dados do servidor responsável pelo parecer (Matrícula, Nome, E-mail e Situação), Valor Inicial e final.
+O usuário deve informar se é obrigatório, qual o tipo de  documento que deve ser anexado no pedido e a situação (ativo ou cancelado). Outra  importante  informação durante a parametrização do pedido são as ações. Estas ações podem ser para correção de pagamentos, créditos em conta tributária, créditos em conta-corrente ou estorno de pagamentos. O usuário deve informar o tipo de ação, tipo de campo (inteiro, numérico, alfanumérico ou data/hora), a descrição do campo que será disponibilizado durante o pedido, se o campo informado é obrigatório e a situação do campo (ativo ou cancelado). 
 
 [[File:tipos_pedidos_documentos_acoes_1.png|Tipos Pedidos Documentos Acoes 1]]
 
@@ -55,63 +55,63 @@ O usu��rio deve informar se �� obrigat��rio, qual o tipo de  documen
 
 == Incluindo Tipo de Pedido ==
 
-Para incluir um novo Tipo de Pedido, �� necess��rio acessar o menu &apos;&apos;&apos;Par��metros &gt; Tipos de Pedidos de Documento e A����es&apos;&apos;&apos; e clicar no bot��o ���Novo Tipo��� (Passo 1), localizado abaixo da listagem, conforme ilustra����o:
+Para incluir um novo Tipo de Pedido, é necessário acessar o menu &apos;&apos;&apos;Parâmetros &gt; Tipos de Pedidos de Documento e Ações&apos;&apos;&apos; e clicar no botão “Novo Tipo” (Passo 1), localizado abaixo da listagem, conforme ilustração:
 
 [[File:tipos_pedidos_documentos_acoes_2.png|Tipos Pedidos Documentos Acoes 2]]
 
-Os campos abaixo da listagem s��o Limpos e disponibilizados para serem informados pelo Usu��rio, conforme ilustrado abaixo:
+Os campos abaixo da listagem são Limpos e disponibilizados para serem informados pelo Usuário, conforme ilustrado abaixo:
 
 [[File:tipos_pedidos_documentos_acoes_3.png|Tipos Pedidos Documentos Acoes 3]]
 
-Deve-se preencher todos os campos obrigat��rios assinalados com asterisco.
+Deve-se preencher todos os campos obrigatórios assinalados com asterisco.
 
-&apos;&apos;&apos;Os passos a seguir s��o sequenciais �� inclus��o de Tipo de Pedido.&apos;&apos;&apos;
+&apos;&apos;&apos;Os passos a seguir são sequenciais à inclusão de Tipo de Pedido.&apos;&apos;&apos;
 
 ----
 
 === Incluindo Documentos ===
 
-Para Incluir Documentos, seleciona-se as op����es demonstradas no passo 1, ap��s isso, deve ser pressionado o bot��o ���ADICIONAR��� (Passo 2), como demonstrado na figura abaixo:
+Para Incluir Documentos, seleciona-se as opções demonstradas no passo 1, após isso, deve ser pressionado o botão “ADICIONAR” (Passo 2), como demonstrado na figura abaixo:
 
 [[File:tipos_pedidos_documentos_acoes_4.png|Tipos Pedidos Documentos Acoes 4]]
 
 ----
 
-=== Incluindo A����es ===
+=== Incluindo Ações ===
 
-Para Incluir A����es, seleciona-se as op����es demonstradas no passo 1, ap��s isso, deve ser pressionado o bot��o ���ADICIONAR��� (Passo 2), como demonstrado na figura abaixo:
+Para Incluir Ações, seleciona-se as opções demonstradas no passo 1, após isso, deve ser pressionado o botão “ADICIONAR” (Passo 2), como demonstrado na figura abaixo:
 
 [[File:tipos_pedidos_documentos_acoes_5.png|Tipos Pedidos Documentos Acoes 5]]
 
 ----
 
-=== Incluindo Receita N��o Permitida ===
+=== Incluindo Receita Não Permitida ===
 
-Para Incluir Receitas n��o Permitidas, seleciona-se as op����es demonstradas no passo 1, ap��s isso, deve ser pressionado o bot��o ���ADICIONAR��� (Passo 2), como demonstrado na figura abaixo:
+Para Incluir Receitas não Permitidas, seleciona-se as opções demonstradas no passo 1, após isso, deve ser pressionado o botão “ADICIONAR” (Passo 2), como demonstrado na figura abaixo:
 
 [[File:tipos_pedidos_documentos_acoes_6.png|Tipos Pedidos Documentos Acoes 6]]
 
 ----
 
-== Incluindo Tipo de Pedido de Documentos e A����es ==
+== Incluindo Tipo de Pedido de Documentos e Ações ==
 
-Para alterar as informa����es de um registro de Tipo de Pedido de Documentos e A����es, �� necess��rio acessar o menu &apos;&apos;&apos;Par��metros &gt; Tipo de Pedido de Documentos e A����es&apos;&apos;&apos; e selecionar um registro na listagem por meio de marca����o do controle localizado ao final da linha (Passo 1), conforme ilustrado na imagem abaixo:
+Para alterar as informações de um registro de Tipo de Pedido de Documentos e Ações, é necessário acessar o menu &apos;&apos;&apos;Parâmetros &gt; Tipo de Pedido de Documentos e Ações&apos;&apos;&apos; e selecionar um registro na listagem por meio de marcação do controle localizado ao final da linha (Passo 1), conforme ilustrado na imagem abaixo:
 
 [[File:tipos_pedidos_documentos_acoes_7.png|Tipos Pedidos Documentos Acoes 7]]
 
-As informa����es espec��ficas do registro selecionado s��o apresentadas abaixo da listagem e est��o dispon��veis para altera����o com exce����o do campo ���C��digo���, como mostrado no Passo 1 da figura a seguir.
-Para alterar a Lista de Documentos, Lista de A����es e Lista de Receitas N��o Permitidas, deve-se seguir os itens [[#Incluindo Documentos|Incluindo Documentos]], [[#Incluindo A����es|Incluindo A����es]] e [[#Incluindo Receita N��o Permitida|Incluindo Receita N��o Permitida]].
+As informações específicas do registro selecionado são apresentadas abaixo da listagem e estão disponíveis para alteração com exceção do campo “Código”, como mostrado no Passo 1 da figura a seguir.
+Para alterar a Lista de Documentos, Lista de Ações e Lista de Receitas Não Permitidas, deve-se seguir os itens [[#Incluindo Documentos|Incluindo Documentos]], [[#Incluindo Ações|Incluindo Ações]] e [[#Incluindo Receita Não Permitida|Incluindo Receita Não Permitida]].
 
 [[File:tipos_pedidos_documentos_acoes_8.png|Tipos Pedidos Documentos Acoes 8]]
 
-Ap��s todas as altera����es serem feitas, deve-se apertar o bot��o ���SALVAR��� (Passo 2 da figura), no final da p��gina para efetivar as mudan��as.
+Após todas as alterações serem feitas, deve-se apertar o botão “SALVAR” (Passo 2 da figura), no final da página para efetivar as mudanças.
 
 
 [[#top|Topo]]
 
 &lt;/br&gt;
 ----
-[[Par��metros | Voltar]]
+[[Parâmetros | Voltar]]
 </text>
 </revision>
 </page>

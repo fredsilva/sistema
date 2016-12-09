@@ -1,7 +1,7 @@
 <mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
 <siteinfo>
 <sitename>SEFAZ-TO Wiki</sitename>
-<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<base>http://192.168.0.42:8080/jamwiki-1.3.2/en/StartingPoints</base>
 <generator>JAMWiki 1.3.2</generator>
 <case>case-sensitive</case>
 <namespaces>
@@ -37,12 +37,12 @@
 <id>1</id>
 </contributor>
 <comment />
-<text xml:space="preserve" bytes="220">* [[Consulta_de_Comunica����es_com_os_Contribuintes|Consulta de Comunica����es com os Contribuintes]]
-* [[Consultar_Hist��rico_de_Acesso_(log)|Consultar Hist��rico de Acesso (log)]]
+<text xml:space="preserve" bytes="228">* [[Consulta_de_Comunicações_com_os_Contribuintes|Consulta de Comunicações com os Contribuintes]]
+* [[Consultar_Histórico_de_Acesso_(log)|Consultar Histórico de Acesso (log)]]
 
 &lt;/br&gt;
 ----
-[[M��dulo de Seguran��a | Voltar]]</text>
+[[Módulo de Segurança | Voltar]]</text>
 </revision>
 </page>
 </mediawiki>

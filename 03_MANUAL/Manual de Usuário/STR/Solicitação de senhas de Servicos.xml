@@ -1,7 +1,7 @@
 <mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
 <siteinfo>
 <sitename>SEFAZ-TO Wiki</sitename>
-<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<base>http://192.168.0.42:8080/jamwiki-1.3.2/en/StartingPoints</base>
 <generator>JAMWiki 1.3.2</generator>
 <case>case-sensitive</case>
 <namespaces>
@@ -26,7 +26,7 @@
 </namespaces>
 </siteinfo>
 <page>
-<title>Solicita����o de senhas de Servicos</title>
+<title>Solicitação de senhas de Servicos</title>
 <ns>0</ns>
 <id>343</id>
 <revision>
@@ -37,50 +37,50 @@
 <id>1</id>
 </contributor>
 <comment />
-<text xml:space="preserve" bytes="2384">Acessar a op����o &apos;&apos;&apos;Solicita����o para Autoriza����o de Senhas de Servi��os via Internet&apos;&apos;&apos;, no Portal do SEFAZ-TO.
+<text xml:space="preserve" bytes="2450">Acessar a opção &apos;&apos;&apos;Solicitação para Autorização de Senhas de Serviços via Internet&apos;&apos;&apos;, no Portal do SEFAZ-TO.
 
-Abrir�� a tela de Identifica����o do Certificado Digital ou CPF.	
+Abrirá a tela de Identificação do Certificado Digital ou CPF.	
 
-== Cadastrando Senha de Servi��os via Certificado Digital ==
+== Cadastrando Senha de Serviços via Certificado Digital ==
 
-Para cadastrar o usu��rio para acesso ao Novo Sistema Tribut��rio da SEFAZ-TO atrav��s do Certificado Digital, deve-se clicar no bot��o Certificado Digital, conforme o passo 1 ilustrado abaixo.
+Para cadastrar o usuário para acesso ao Novo Sistema Tributário da SEFAZ-TO através do Certificado Digital, deve-se clicar no botão Certificado Digital, conforme o passo 1 ilustrado abaixo.
 
-**** COLOCAR IMAGEM DA TELA SEGUC0040PG01, COM DESTAQUE PARA O BOT��O CERTIFICADO DIGITAL
+**** COLOCAR IMAGEM DA TELA SEGUC0040PG01, COM DESTAQUE PARA O BOTÃO CERTIFICADO DIGITAL
 
-Ser�� exibida a tela para sele����o do CPF a ser cadastrado no sistema. Deve-se selecionar o CPF desejado e clicar em OK (passo 2).
+Será exibida a tela para seleção do CPF a ser cadastrado no sistema. Deve-se selecionar o CPF desejado e clicar em OK (passo 2).
 
-**** COLOCAR IMAGEM DO AUTENTICADOR DO CERTIFICADO DIGITAL, COM DESTAQUE PARA A CONFIRMA����O DO CPF SELECIONADO
+**** COLOCAR IMAGEM DO AUTENTICADOR DO CERTIFICADO DIGITAL, COM DESTAQUE PARA A CONFIRMAÇÃO DO CPF SELECIONADO
 
-Observa����o: O layout da tela pode variar conforme o Navegador de internet utilizado.
+Observação: O layout da tela pode variar conforme o Navegador de internet utilizado.
 
-Ser�� solicitada a senha do Certificado Digital para o usu��rio, que deve digitar a senha e clicar em ok (passo 3)
+Será solicitada a senha do Certificado Digital para o usuário, que deve digitar a senha e clicar em ok (passo 3)
 
-****COLOCAR A IMAGEM DA JANELA PARA DIGITA����O DA SENHA DO CERTIFICADO DIGITAL
+****COLOCAR A IMAGEM DA JANELA PARA DIGITAÇÃO DA SENHA DO CERTIFICADO DIGITAL
 
-Ap��s digitar a senha corretamente e confirmar, o usu��rio �� direcionado para a tela com o formul��rio de cadastro.
+Após digitar a senha corretamente e confirmar, o usuário é direcionado para a tela com o formulário de cadastro.
 
-**** COLOCAR A IMAGEM DA TELA SEGUC0040PG02, COM DESTAQUE PARA O BOT��O CONFIRMAR COM N��MERO 4
+**** COLOCAR A IMAGEM DA TELA SEGUC0040PG02, COM DESTAQUE PARA O BOTÃO CONFIRMAR COM NÚMERO 4
 
-No formul��rio de cadastro, todos os campos sinalizados com aster��sco (*) s��o obrigat��rios e devem ser preenchidos.
-Ao clicar no bot��o Confirmar (passo 4), o sistema exibe a mensagem de confirma����o do cadastro e envia um email com as instru����es dos pr��ximos passos para autorizar o acesso.
+No formulário de cadastro, todos os campos sinalizados com asterísco (*) são obrigatórios e devem ser preenchidos.
+Ao clicar no botão Confirmar (passo 4), o sistema exibe a mensagem de confirmação do cadastro e envia um email com as instruções dos próximos passos para autorizar o acesso.
 
 ----
-== Cadastrando Senha de Servi��os via CPF ==
+== Cadastrando Senha de Serviços via CPF ==
 
-Para cadastrar o usu��rio para acesso ao Novo Sistema Tribut��rio da SEFAZ-TO atrav��s do Certificado Digital, deve-se preencher o campo CPF e clicar no bot��o Continuar, conforme o passo 1 ilustra na imagem abaixo.
+Para cadastrar o usuário para acesso ao Novo Sistema Tributário da SEFAZ-TO através do Certificado Digital, deve-se preencher o campo CPF e clicar no botão Continuar, conforme o passo 1 ilustra na imagem abaixo.
 
-**** COLOCAR IMAGEM DA TELA SEGUC0040PG01, COM DESTAQUE PARA O CAMPO CPF com n��mero 1
+**** COLOCAR IMAGEM DA TELA SEGUC0040PG01, COM DESTAQUE PARA O CAMPO CPF com número 1
 
-O usu��rio �� direcionado para a tela com o formul��rio de cadastro.
+O usuário é direcionado para a tela com o formulário de cadastro.
 
-**** COLOCAR A IMAGEM DA TELA SEGUC0040PG02, COM DESTAQUE PARA O BOT��O CONFIRMAR COM N��MERO 2
+**** COLOCAR A IMAGEM DA TELA SEGUC0040PG02, COM DESTAQUE PARA O BOTÃO CONFIRMAR COM NÚMERO 2
 
-No formul��rio de cadastro, todos os campos sinalizados com aster��sco (*) s��o obrigat��rios e devem ser preenchidos.
-Ao clicar no bot��o Confirmar (passo 2), o sistema exibe a mensagem de confirma����o do cadastro e envia um email com as instru����es dos pr��ximos passos para autorizar o acesso.
+No formulário de cadastro, todos os campos sinalizados com asterísco (*) são obrigatórios e devem ser preenchidos.
+Ao clicar no botão Confirmar (passo 2), o sistema exibe a mensagem de confirmação do cadastro e envia um email com as instruções dos próximos passos para autorizar o acesso.
 
 &lt;/br&gt;
 ----
-[[Gest��o de Seguran��a | Voltar]]
+[[Gestão de Segurança | Voltar]]
 
 </text>
 </revision>

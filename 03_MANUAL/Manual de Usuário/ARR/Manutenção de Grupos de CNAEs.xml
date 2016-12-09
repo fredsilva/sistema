@@ -1,7 +1,7 @@
 <mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
 <siteinfo>
 <sitename>SEFAZ-TO Wiki</sitename>
-<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<base>http://192.168.0.42:8080/jamwiki-1.3.2/en/StartingPoints</base>
 <generator>JAMWiki 1.3.2</generator>
 <case>case-sensitive</case>
 <namespaces>
@@ -26,7 +26,7 @@
 </namespaces>
 </siteinfo>
 <page>
-<title>Manuten����o de Grupos de CNAEs</title>
+<title>Manutenção de Grupos de CNAEs</title>
 <ns>0</ns>
 <id>49</id>
 <revision>
@@ -37,118 +37,118 @@
 <id>1</id>
 </contributor>
 <comment />
-<text xml:space="preserve" bytes="6253">Acessar o menu &apos;&apos;&apos;Par��metros &gt; Grupos de CNAE���s. &apos;&apos;&apos;
+<text xml:space="preserve" bytes="6487">Acessar o menu &apos;&apos;&apos;Parâmetros &gt; Grupos de CNAE’s. &apos;&apos;&apos;
 
-Abrir�� a tela de localiza����o contendo a lista de Grupos de CNAE���s cadastrados.
+Abrirá a tela de localização contendo a lista de Grupos de CNAE’s cadastrados.
 
 ----
 
-== Visualizar todas as Ag��ncias Cadastradas ==
+== Visualizar todas as Agências Cadastradas ==
 
-Grupo de CNAEs refere-se ao processo de parametriza����o do Grupo de CNAEs utilizado pelo setor Financeiro do Estado. Este plano apresenta nome, hierarquia (quando preenchido indica que determinado plano est�� associado a um plano pai. Por exemplo, temos o plano ICMS (1.1.1.1) que �� pai do plano Agricultura (1.1.1.1.1), ent��o o campo C��digo do Plano vai ser preenchido com 1.1.1.1.1 e a Conta Hier��rquica com 1.1.1.1), c��digo cont��bil (c��digo utilizado pelo setor Financeiro do Estado para fazer o mapeamento das receitas), tipo (sint��tica ou anal��tica), associa����o com grupo CNAE e a indica����o de rateio.
+Grupo de CNAEs refere-se ao processo de parametrização do Grupo de CNAEs utilizado pelo setor Financeiro do Estado. Este plano apresenta nome, hierarquia (quando preenchido indica que determinado plano está associado a um plano pai. Por exemplo, temos o plano ICMS (1.1.1.1) que é pai do plano Agricultura (1.1.1.1.1), então o campo Código do Plano vai ser preenchido com 1.1.1.1.1 e a Conta Hierárquica com 1.1.1.1), código contábil (código utilizado pelo setor Financeiro do Estado para fazer o mapeamento das receitas), tipo (sintética ou analítica), associação com grupo CNAE e a indicação de rateio.
 
 [[File:manutencao_grupos_CNAES_1.png|Manutencao Grupos CNAES 1]]
 
 ----
 
-== Pesquisando Grupos de CNAE���s ==
+== Pesquisando Grupos de CNAE’s ==
 
-Para pesquisar grupos cadastrados, �� necess��rio acessar o menu &apos;&apos;&apos;Par��metros &gt; Grupos de CNAE���s&apos;&apos;&apos; e preencher ao menos um dos filtros dispon��veis na busca, conforme ilustra����o:
+Para pesquisar grupos cadastrados, é necessário acessar o menu &apos;&apos;&apos;Parâmetros &gt; Grupos de CNAE’s&apos;&apos;&apos; e preencher ao menos um dos filtros disponíveis na busca, conforme ilustração:
 
 [[File:manutencao_grupos_CNAES_2.png|Manutencao Grupos CNAES 2]]
 
-Ap��s o preenchimento dos campos dispon��veis na pesquisa �� necess��rio clicar no bot��o &quot;PESQUISAR&quot; (Passo 2):
+Após o preenchimento dos campos disponíveis na pesquisa é necessário clicar no botão &quot;PESQUISAR&quot; (Passo 2):
 
 [[File:manutencao_grupos_CNAES_3.png|Manutencao Grupos CNAES 3]]
 
-Ser�� apresentado na listagem todos os registros que atendam aos crit��rios informados na pesquisa:
+Será apresentado na listagem todos os registros que atendam aos critérios informados na pesquisa:
 
 [[File:manutencao_grupos_CNAES_4.png|Manutencao Grupos CNAES 4]]
 
-Caso n��o informado nem um crit��rio de busca, ser�� apresentado todos os registros existentes no cadastro.
+Caso não informado nem um critério de busca, será apresentado todos os registros existentes no cadastro.
 
 ----
 
 == Incluindo Grupo de CNAE ==
 
-Para incluir um novo grupo ao cadastro de Grupos de CNAE���s, �� necess��rio acessar o menu &apos;&apos;&apos;Par��metros &gt; Grupos de CNAE���s&apos;&apos;&apos; e clicar no bot��o ���Novo Grupo��� (Passo 1), localizado abaixo da listagem, conforme ilustra����o:
+Para incluir um novo grupo ao cadastro de Grupos de CNAE’s, é necessário acessar o menu &apos;&apos;&apos;Parâmetros &gt; Grupos de CNAE’s&apos;&apos;&apos; e clicar no botão “Novo Grupo” (Passo 1), localizado abaixo da listagem, conforme ilustração:
 
 [[File:manutencao_grupos_CNAES_5.png|Manutencao Grupos CNAES 5]]
 
-Os campos localizados ap��s a listagem s��o Limpos e disponibilizados para serem preenchidos pelo Usu��rio, conforme ilustrado abaixo:
+Os campos localizados após a listagem são Limpos e disponibilizados para serem preenchidos pelo Usuário, conforme ilustrado abaixo:
 
 [[File:manutencao_grupos_CNAES_6.png|Manutencao Grupos CNAES 6]]
 
-Deve-se preencher todos os campos obrigat��rios assinalados com asterisco (Passo 2) e clicar no bot��o &quot;SALVAR&quot; (Passo 3).
+Deve-se preencher todos os campos obrigatórios assinalados com asterisco (Passo 2) e clicar no botão &quot;SALVAR&quot; (Passo 3).
 
-O campo ���C��digo��� pertencente ao grupo a ser informado pelo usu��rio dever�� ser num��rico e obedecer ao limite m��ximo de 2 posi����o.
+O campo ‘Código’ pertencente ao grupo a ser informado pelo usuário deverá ser numérico e obedecer ao limite máximo de 2 posição.
 
-Ap��s a execu����o do Passo 3, �� apresentado mensagem de dialogo informando o resultado da opera����o em quest��o.
+Após a execução do Passo 3, é apresentado mensagem de dialogo informando o resultado da operação em questão.
 
 ----
 
 == Adicionando CNAE a um Grupo de CNAE&apos;s ==
 
-Para adicionar uma CNAE a um grupo de CNAE���s cadastro, �� necess��rio acessar o menu &apos;&apos;&apos;Par��metros &gt; Grupos de CNAE���s&apos;&apos;&apos; e selecionar um Grupo na listagem por meio de marca����o do controle localizado ao final da linha (Passo 1), conforme ilustrado na imagem abaixo:
+Para adicionar uma CNAE a um grupo de CNAE’s cadastro, é necessário acessar o menu &apos;&apos;&apos;Parâmetros &gt; Grupos de CNAE’s&apos;&apos;&apos; e selecionar um Grupo na listagem por meio de marcação do controle localizado ao final da linha (Passo 1), conforme ilustrado na imagem abaixo:
 
 [[File:manutencao_grupos_CNAES_7.png|Manutencao Grupos CNAES 7]]
 
-As informa����es espec��ficas do Grupo selecionado s��o apresentadas ap��s a listagem.
+As informações específicas do Grupo selecionado são apresentadas após a listagem.
 
-Para adicionar outra CNAE ao grupo selecionado anteriormente no Passo 1, �� necess��rio informar no campo ���CNAE���s��� um novo registro de CNAE (Passo 2) e clicar no bot��o ���ADICIONAR��� (Passo 3).
+Para adicionar outra CNAE ao grupo selecionado anteriormente no Passo 1, é necessário informar no campo ‘CNAE’s’ um novo registro de CNAE (Passo 2) e clicar no botão “ADICIONAR” (Passo 3).
 
 [[File:manutencao_grupos_CNAES_8.png|Manutencao Grupos CNAES 8]]
 
-Ap��s adicionar uma nova CNAE ao grupo, �� exibido na listagem o registro adicionado, conforme ilustrado:
+Após adicionar uma nova CNAE ao grupo, é exibido na listagem o registro adicionado, conforme ilustrado:
 
 [[File:manutencao_grupos_CNAES_9.png|Manutencao Grupos CNAES 9]]
 
-Para adicionar efetivamente as CNAE���s listadas ao Grupo, �� necess��rio clicar no bot��o &quot;SALVAR&quot; (Passo 4).
+Para adicionar efetivamente as CNAE’s listadas ao Grupo, é necessário clicar no botão &quot;SALVAR&quot; (Passo 4).
 
 [[File:manutencao_grupos_CNAES_10.png|Manutencao Grupos CNAES 10]]
 
-&apos;&apos;&apos;*�� importante salientar que uma mesma CNAE somente poder�� estar vinculada a um ��nico Grupo.&apos;&apos;&apos;
+&apos;&apos;&apos;*É importante salientar que uma mesma CNAE somente poderá estar vinculada a um único Grupo.&apos;&apos;&apos;
 
 ----
 
-== Alterando Grupos de CNAE���s ==
+== Alterando Grupos de CNAE’s ==
 
-Para alterar as informa����es de um registro de Grupos de CNAE���s pertencente ao cadastro, �� necess��rio acessar o menu &apos;&apos;&apos;Par��metros &gt; Grupos de CNAE���s&apos;&apos;&apos; e selecionar um registro de grupo na listagem por meio de marca����o do controle localizado ao final da linha (Passo 1), conforme ilustrado na imagem abaixo:
+Para alterar as informações de um registro de Grupos de CNAE’s pertencente ao cadastro, é necessário acessar o menu &apos;&apos;&apos;Parâmetros &gt; Grupos de CNAE’s&apos;&apos;&apos; e selecionar um registro de grupo na listagem por meio de marcação do controle localizado ao final da linha (Passo 1), conforme ilustrado na imagem abaixo:
 
 [[File:manutencao_grupos_CNAES_11.png|Manutencao Grupos CNAES 11]]
 
-As informa����es espec��ficas do registro selecionado s��o apresentadas abaixo da listagem e est��o dispon��veis para altera����o com exce����o do campo ���C��digo���.
+As informações específicas do registro selecionado são apresentadas abaixo da listagem e estão disponíveis para alteração com exceção do campo “Código”.
 
 [[File:manutencao_grupos_CNAES_12.png|Manutencao Grupos CNAES 12]]
 
-O usu��rio poder�� alterar os campos dispon��veis desejados (Passo 2) e ap��s clicar no bot��o &quot;SALVAR&quot; (Passo 3).
+O usuário poderá alterar os campos disponíveis desejados (Passo 2) e após clicar no botão &quot;SALVAR&quot; (Passo 3).
 
-&apos;&apos;&apos;*�� importante salientar que registros em situa����o &quot;Cancelado&quot;, n��o podem ser utilizados em outras partes do sistema que fazem uso deste cadastro de Grupos de CNAE���s.&apos;&apos;&apos;
+&apos;&apos;&apos;*É importante salientar que registros em situação &quot;Cancelado&quot;, não podem ser utilizados em outras partes do sistema que fazem uso deste cadastro de Grupos de CNAE’s.&apos;&apos;&apos;
 
 ----
 
-== Excluindo Grupos de CNAE���s ==
+== Excluindo Grupos de CNAE’s ==
 
-Para excluir um grupo do cadastro de Grupos de CNAE���s, �� necess��rio acessar o menu &apos;&apos;&apos;Par��metros &gt; Grupos de CNAE���s&apos;&apos;&apos; e clicar no bot��o representado pelo ��cone de uma ���lixeira���, localizado na mesma linha do registro desejado (passo 1), conforme ilustra����o:
+Para excluir um grupo do cadastro de Grupos de CNAE’s, é necessário acessar o menu &apos;&apos;&apos;Parâmetros &gt; Grupos de CNAE’s&apos;&apos;&apos; e clicar no botão representado pelo ícone de uma “lixeira”, localizado na mesma linha do registro desejado (passo 1), conforme ilustração:
 
 [[File:manutencao_grupos_CNAES_13.png|Manutencao Grupos CNAES 13]]
 
-Ap��s a execu����o do Passo 1, �� apresentado mensagem de dialogo informando o resultado da opera����o em quest��o.
+Após a execução do Passo 1, é apresentado mensagem de dialogo informando o resultado da operação em questão.
 
-*�� importante salientar que n��o ser�� poss��vel a realiza����o de uma exclus��o f��sica quando o Grupo de CNAE selecionado para ser exclu��do possuir refer��ncias com um ou mais Plano de Contas. Entretanto, nestes casos, ser�� realizado uma exclus��o l��gica, alterando a situa����o do grupo para &quot;Cancelado&quot;.
-Somente ocorrer�� exclus��o f��sica caso o registro de grupo em quest��o, n��o possua nem um v��nculo com outras partes do sistema.
+*É importante salientar que não será possível a realização de uma exclusão física quando o Grupo de CNAE selecionado para ser excluído possuir referências com um ou mais Plano de Contas. Entretanto, nestes casos, será realizado uma exclusão lógica, alterando a situação do grupo para &quot;Cancelado&quot;.
+Somente ocorrerá exclusão física caso o registro de grupo em questão, não possua nem um vínculo com outras partes do sistema.
 
 ----
 
-== Excluindo CNAE de um Grupo de CNAE���s ==
+== Excluindo CNAE de um Grupo de CNAE’s ==
 
-Para excluir uma CNAE pertencente a um Grupos de CNAE���s, �� necess��rio acessar o menu &apos;&apos;&apos;Par��metros &gt; Grupos de CNAE���s&apos;&apos;&apos; e selecionar um registro de grupo na listagem por meio de marca����o do controle localizado ao final da linha (Passo 1), conforme ilustra����o:
+Para excluir uma CNAE pertencente a um Grupos de CNAE’s, é necessário acessar o menu &apos;&apos;&apos;Parâmetros &gt; Grupos de CNAE’s&apos;&apos;&apos; e selecionar um registro de grupo na listagem por meio de marcação do controle localizado ao final da linha (Passo 1), conforme ilustração:
 
 [[File:manutencao_grupos_CNAES_14.png|Manutencao Grupos CNAES 14]]
 
-As CNAE���s pertencentes ao Grupo selecionado s��o relacionadas na listagem ���Lista de CNAE���s do Grupo Selecionado���.
+As CNAE’s pertencentes ao Grupo selecionado são relacionadas na listagem ‘Lista de CNAE’s do Grupo Selecionado’.
 
-Para excluir uma CNAE pertencente a um grupo, �� necess��rio clicar no bot��o representado pelo ��cone de uma ���lixeira���, localizado na mesma linha do registro desejado (passo 2).
+Para excluir uma CNAE pertencente a um grupo, é necessário clicar no botão representado pelo ícone de uma “lixeira”, localizado na mesma linha do registro desejado (passo 2).
 
 [[File:manutencao_grupos_CNAES_15.png|Manutencao Grupos CNAES 15]]
 
@@ -156,7 +156,7 @@ Para excluir uma CNAE pertencente a um grupo, �� necess��rio clicar no b
 
 &lt;/br&gt;
 ----
-[[Par��metros | Voltar]]
+[[Parâmetros | Voltar]]
 </text>
 </revision>
 </page>

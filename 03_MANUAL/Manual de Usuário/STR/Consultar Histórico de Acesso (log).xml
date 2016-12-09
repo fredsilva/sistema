@@ -1,7 +1,7 @@
 <mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
 <siteinfo>
 <sitename>SEFAZ-TO Wiki</sitename>
-<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<base>http://192.168.0.42:8080/jamwiki-1.3.2/en/StartingPoints</base>
 <generator>JAMWiki 1.3.2</generator>
 <case>case-sensitive</case>
 <namespaces>
@@ -26,7 +26,7 @@
 </namespaces>
 </siteinfo>
 <page>
-<title>Consultar Hist��rico de Acesso (log)</title>
+<title>Consultar Histórico de Acesso (log)</title>
 <ns>0</ns>
 <id>474</id>
 <revision>
@@ -37,53 +37,53 @@
 <id>1</id>
 </contributor>
 <comment />
-<text xml:space="preserve" bytes="2041">Est�� funcionalidade tem por objetivo a consulta do hist��rico de acesso ao sistema (log) usando diversos filtros, como: usu��rio, procurado, tipo de opera����o, data ou URL.
+<text xml:space="preserve" bytes="2096">Está funcionalidade tem por objetivo a consulta do histórico de acesso ao sistema (log) usando diversos filtros, como: usuário, procurado, tipo de operação, data ou URL.
 
-Para consultar o Hist��rico de Acesso (log) cadastrados, �� necess��rio acessar o menu &apos;&apos;&apos;Seguran��a do Sistema &gt; Consulta &gt; Consultar Hist��rico de Acesso (log)&apos;&apos;&apos;.
+Para consultar o Histórico de Acesso (log) cadastrados, é necessário acessar o menu &apos;&apos;&apos;Segurança do Sistema &gt; Consulta &gt; Consultar Histórico de Acesso (log)&apos;&apos;&apos;.
 
 ----
-== Consultando o Hist��rico de Acesso (log) ==
+== Consultando o Histórico de Acesso (log) ==
 
- Com a funcionalidade de consulta aberta, informar algum dos filtros dispon��veis (passos 1) e clicar no bot��o Consultar (passo 2).
+ Com a funcionalidade de consulta aberta, informar algum dos filtros disponíveis (passos 1) e clicar no botão Consultar (passo 2).
 
 
 [[File:1-SEGUC0630.jpg|1-SEGUC0630]]
 
 
-&apos;&apos;&apos;Considera����es a respeito dos campos a serem preenchidos pelo usu��rio:&apos;&apos;&apos;
+&apos;&apos;&apos;Considerações a respeito dos campos a serem preenchidos pelo usuário:&apos;&apos;&apos;
 
-:*Usu��rio deve informar obrigatoriamente os filtros CPF Usu��rio, Tipo de Opera����o e Data de In��cio e Fim da consulta.
-:*O per��odo informado deve conter um intervalo m��ximo de 60 dias.
-:*Os filtros Nome de Usu��rio, Nome de Procurado e url podem ser preenchidos somente com alguns caracteres n��o precisando ser exato. Para estes filtros n��o h�� diferen��a entre mai��sculas e min��sculas.
+:*Usuário deve informar obrigatoriamente os filtros CPF Usuário, Tipo de Operação e Data de Início e Fim da consulta.
+:*O período informado deve conter um intervalo máximo de 60 dias.
+:*Os filtros Nome de Usuário, Nome de Procurado e url podem ser preenchidos somente com alguns caracteres não precisando ser exato. Para estes filtros não há diferença entre maiúsculas e minúsculas.
 
 
 ----
- Ap��s ser confirmada a consulta no passo 2, �� exibido os dados de hist��rico de acesso (passo 3) conforme filtros informados no passo 1.
+ Após ser confirmada a consulta no passo 2, é exibido os dados de histórico de acesso (passo 3) conforme filtros informados no passo 1.
 
 
 [[File:2-SEGUC0630.jpg|2-SEGUC0630]]
 
-&apos;&apos;&apos;Considera����es a respeito dos registros retornados pela consulta:&apos;&apos;&apos;
+&apos;&apos;&apos;Considerações a respeito dos registros retornados pela consulta:&apos;&apos;&apos;
 
-:*O resultado da consulta �� ordenada pelo Nome de Usu��rio e Data de Acesso ascendentemente.
+:*O resultado da consulta é ordenada pelo Nome de Usuário e Data de Acesso ascendentemente.
 
 ----
-== Visualizando Detalhes do Hist��rico de Acesso ==
+== Visualizando Detalhes do Histórico de Acesso ==
 
- Se desejar visualizar mais detalhes do hist��rico de acesso, pode-se acessar a tela Detalhe do Log atrav��s do ��cone de mesmo nome, conforme passo 4 abaixo.
+ Se desejar visualizar mais detalhes do histórico de acesso, pode-se acessar a tela Detalhe do Log através do ícone de mesmo nome, conforme passo 4 abaixo.
 
 [[File:3-SEGUC0630.jpg|3-SEGUC0630]]
 
 
 ----
- Ao clicar no ��cone Detalhe do Log, no passo 4, �� exibida a janela Detalhe do Log, com as informa����es de log.
+ Ao clicar no ícone Detalhe do Log, no passo 4, é exibida a janela Detalhe do Log, com as informações de log.
 
 [[File:4-SEGUC0630.jpg|4-SEGUC0630]]
 
 
- Essa �� uma tela de visualiza����o somente, na qual as informa����es ficam desabilitados para edi����o.
+ Essa é uma tela de visualização somente, na qual as informações ficam desabilitados para edição.
 
- Para voltar �� tela de consulta de hist��ricos de acesso, deve-se clicar no bot��o Fechar (passo 5), ou fora da janela de Detalhe do Log.
+ Para voltar à tela de consulta de históricos de acesso, deve-se clicar no botão Fechar (passo 5), ou fora da janela de Detalhe do Log.
 
 &lt;/br&gt;
 ----

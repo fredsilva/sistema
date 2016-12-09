@@ -1,7 +1,7 @@
 <mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
 <siteinfo>
 <sitename>SEFAZ-TO Wiki</sitename>
-<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<base>http://192.168.0.42:8080/jamwiki-1.3.2/en/StartingPoints</base>
 <generator>JAMWiki 1.3.2</generator>
 <case>case-sensitive</case>
 <namespaces>
@@ -26,7 +26,7 @@
 </namespaces>
 </siteinfo>
 <page>
-<title>Manual para Manuten����o do Sistema</title>
+<title>Manual para Manutenção do Sistema</title>
 <ns>0</ns>
 <id>307</id>
 <revision>
@@ -36,14 +36,14 @@
 <username>admin</username>
 <id>1</id>
 </contributor>
-<comment>/* Ordens de Servi��o */ </comment>
-<text xml:space="preserve" bytes="311">=Ordens de Servi��o=
+<comment>/* Ordens de Serviço */ </comment>
+<text xml:space="preserve" bytes="323">=Ordens de Serviço=
 
-*[[OS4721 - Par��metros Arrecada����o]]
-*[[OS4757 - Seguran��a B��sico]]
-*[[OS4776 - Processamento Arrecada����o]]
-*[[OS4777 - Gest��o de Seguran��a 01]]
-*[[OS4782 - Gest��o de Seguran��a 02]]
+*[[OS4721 - Parâmetros Arrecadação]]
+*[[OS4757 - Segurança Básico]]
+*[[OS4776 - Processamento Arrecadação]]
+*[[OS4777 - Gestão de Segurança 01]]
+*[[OS4782 - Gestão de Segurança 02]]
 *[[OS4810 - Consultas tranversais]]
 *[[OS4797 - DARE]]
 

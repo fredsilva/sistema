@@ -1,7 +1,7 @@
 <mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
 <siteinfo>
 <sitename>SEFAZ-TO Wiki</sitename>
-<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<base>http://192.168.0.42:8080/jamwiki-1.3.2/en/StartingPoints</base>
 <generator>JAMWiki 1.3.2</generator>
 <case>case-sensitive</case>
 <namespaces>
@@ -26,7 +26,7 @@
 </namespaces>
 </siteinfo>
 <page>
-<title>Manuten����o de Postos de Trabalho</title>
+<title>Manutenção de Postos de Trabalho</title>
 <ns>0</ns>
 <id>323</id>
 <revision>
@@ -37,82 +37,82 @@
 <id>1</id>
 </contributor>
 <comment />
-<text xml:space="preserve" bytes="3679">Acessar o menu &apos;&apos;&apos;Seguran��a do Sistema &gt; Ger��ncia &gt; Postos de Trabalho.&apos;&apos;&apos;
+<text xml:space="preserve" bytes="3774">Acessar o menu &apos;&apos;&apos;Segurança do Sistema &gt; Gerência &gt; Postos de Trabalho.&apos;&apos;&apos;
 
-Abrir�� a tela de localiza����o contendo a lista de Postos de Trabalho cadastrados.
+Abrirá a tela de localização contendo a lista de Postos de Trabalho cadastrados.
 
 == Visualizando todos os Postos de Trabalho cadastrados ==
 
-Para visualizar todos os Postos de Trabalho cadastrados, �� necess��rio clicar em &quot;Consultar&quot; (passo 1).
+Para visualizar todos os Postos de Trabalho cadastrados, é necessário clicar em &quot;Consultar&quot; (passo 1).
 
 [[File:manutencao_postos_trabalho_01.png|Manutencao Postos Trabalho 01]]
 
 ----
 == Pesquisando Postos de Trabalho ==
 
-Para pesquisar os Postos de Trabalho cadastrados, �� necess��rio acessar o menu Seguran��a do Sistema &gt; Ger��ncia &gt; Manter Postos de Trabalho e clicar no bot��o Consultar (passo 2). 
+Para pesquisar os Postos de Trabalho cadastrados, é necessário acessar o menu Segurança do Sistema &gt; Gerência &gt; Manter Postos de Trabalho e clicar no botão Consultar (passo 2). 
 
-Opcionalmente, pode-se preencher os filtros da tela (passo 1) e, ao clicar no bot��o Consultar (passo 2), a tela apresenta somente a lista dos Postos de Trabalho filtrados.
+Opcionalmente, pode-se preencher os filtros da tela (passo 1) e, ao clicar no botão Consultar (passo 2), a tela apresenta somente a lista dos Postos de Trabalho filtrados.
 
 [[File:manutencao_postos_trabalho_02.png|Manutencao Postos Trabalho 02]]
 
 ----
 == Incluindo Postos de Trabalho ==
 
-Para incluir Postos de Trabalho, �� necess��rio acessar o menu Seguran��a do Sistema &gt; Ger��ncia &gt; Manter Postos de Trabalho e clicar no bot��o Inserir Posto, conforme o passo 1 ilustrado abaixo.
+Para incluir Postos de Trabalho, é necessário acessar o menu Segurança do Sistema &gt; Gerência &gt; Manter Postos de Trabalho e clicar no botão Inserir Posto, conforme o passo 1 ilustrado abaixo.
 
-[[File:manutencao_postos_trabalho_03.png|Manuten����o Postos Trabalho 03]]
+[[File:manutencao_postos_trabalho_03.png|Manutenção Postos Trabalho 03]]
 
-Ao clicar no bot��o Inserir Posto, o sistema exibe a janela Inserir Posto de Trabalho. 
-Os campos referentes ao novo registro de Posto de Trabalho a ser incluso s��o Limpos e disponibilizados para serem preenchidos pelo Usu��rio.
+Ao clicar no botão Inserir Posto, o sistema exibe a janela Inserir Posto de Trabalho. 
+Os campos referentes ao novo registro de Posto de Trabalho a ser incluso são Limpos e disponibilizados para serem preenchidos pelo Usuário.
 
-[[File:manutencao_postos_trabalho_04.png|Manuten����o Postos Trabalho 04]]
+[[File:manutencao_postos_trabalho_04.png|Manutenção Postos Trabalho 04]]
 
-Ap��s a execu����o do Passo 2, �� apresentado mensagem de dialogo informando o resultado da opera����o em quest��o.
+Após a execução do Passo 2, é apresentado mensagem de dialogo informando o resultado da operação em questão.
 
-&apos;&apos;&apos;Considera����es a respeito dos campos a serem preenchidos pelo usu��rio:&apos;&apos;&apos;
+&apos;&apos;&apos;Considerações a respeito dos campos a serem preenchidos pelo usuário:&apos;&apos;&apos;
 
-:*Todos os campos da tela s��o de preenchimento obrigat��rio.
+:*Todos os campos da tela são de preenchimento obrigatório.
 
-Para cancelar a inclus��o, deve-se clicar no bot��o Fechar (Passo 3), ou clicar fora da janela de inclus��o. Os dados digitados s��o descartados quando a inclus��o �� cancelada.
+Para cancelar a inclusão, deve-se clicar no botão Fechar (Passo 3), ou clicar fora da janela de inclusão. Os dados digitados são descartados quando a inclusão é cancelada.
 
-[[File:manutencao_postos_trabalho_05.png|Manuten����o Postos Trabalho 05]]
+[[File:manutencao_postos_trabalho_05.png|Manutenção Postos Trabalho 05]]
 
 ----
 == Alterando Postos de Trabalho ==
 
 
-Para alterar Postos de Trabalho, �� necess��rio acessar o menu Seguran��a do Sistema &gt; Ger��ncia &gt; Manter Postos de Trabalho e clicar no ��cone Alterar, na lista de Postos de Trabalho cadastrados, conforme o passo 1 ilustrado abaixo.
+Para alterar Postos de Trabalho, é necessário acessar o menu Segurança do Sistema &gt; Gerência &gt; Manter Postos de Trabalho e clicar no ícone Alterar, na lista de Postos de Trabalho cadastrados, conforme o passo 1 ilustrado abaixo.
 
-[[File:manutencao_postos_trabalho_06.png|Manuten����o Postos Trabalho 06]]
+[[File:manutencao_postos_trabalho_06.png|Manutenção Postos Trabalho 06]]
 
-Ao clicar no ��cone Alterar, o sistema exibe a janela Inserir Posto de Trabalho, conforme ilustrado no passo 2 abaixo. 
-Os campos referentes ao registro de Posto de Trabalho a ser alterado s��o preenchidos automaticamente pelo sistema.
+Ao clicar no ícone Alterar, o sistema exibe a janela Inserir Posto de Trabalho, conforme ilustrado no passo 2 abaixo. 
+Os campos referentes ao registro de Posto de Trabalho a ser alterado são preenchidos automaticamente pelo sistema.
 
-[[File:manutencao_postos_trabalho_04.png|Manuten����o Postos Trabalho 04]]
+[[File:manutencao_postos_trabalho_04.png|Manutenção Postos Trabalho 04]]
 
-Ap��s a execu����o do Passo 2, �� apresentado mensagem de dialogo informando o resultado da opera����o em quest��o.
+Após a execução do Passo 2, é apresentado mensagem de dialogo informando o resultado da operação em questão.
 
-Para cancelar a altera����o, deve-se clicar no bot��o Fechar, ou clicar fora da janela. Os dados digitados s��o descartados quando a altera����o �� cancelada.
+Para cancelar a alteração, deve-se clicar no botão Fechar, ou clicar fora da janela. Os dados digitados são descartados quando a alteração é cancelada.
 
 ----
 == Excluindo Postos de Trabalho ==
 
-Para excluir Postos de Trabalho, �� necess��rio acessar o menu Seguran��a do Sistema &gt; Ger��ncia &gt; Manter Postos de Trabalho e clicar no ��cone Excluir, na lista de Postos de Trabalho cadastrados, conforme o passo 1 ilustrado abaixo.
+Para excluir Postos de Trabalho, é necessário acessar o menu Segurança do Sistema &gt; Gerência &gt; Manter Postos de Trabalho e clicar no ícone Excluir, na lista de Postos de Trabalho cadastrados, conforme o passo 1 ilustrado abaixo.
 
-[[File:manutencao_postos_trabalho_07.png|Manuten����o Postos Trabalho 07]]
+[[File:manutencao_postos_trabalho_07.png|Manutenção Postos Trabalho 07]]
 
-Ao clicar no ��cone Excluir, o sistema exibe a mensagem para confirmar a exclus��o, conforme ilustrado no passo 2 abaixo. 
+Ao clicar no ícone Excluir, o sistema exibe a mensagem para confirmar a exclusão, conforme ilustrado no passo 2 abaixo. 
 
-[[File:manutencao_postos_trabalho_08.png|Manuten����o Postos Trabalho 08]]
+[[File:manutencao_postos_trabalho_08.png|Manutenção Postos Trabalho 08]]
 
-Ap��s a execu����o do Passo 2, �� apresentado mensagem de dialogo informando o resultado da opera����o em quest��o.
+Após a execução do Passo 2, é apresentado mensagem de dialogo informando o resultado da operação em questão.
 
-Para cancelar a exclus��o, deve-se clicar no bot��o N��o, ou clicar fora da janela de confirma����o.
+Para cancelar a exclusão, deve-se clicar no botão Não, ou clicar fora da janela de confirmação.
 
 &lt;/br&gt;
 ----
-[[Gest��o de Seguran��a | Voltar]]
+[[Gestão de Segurança | Voltar]]
 </text>
 </revision>
 </page>

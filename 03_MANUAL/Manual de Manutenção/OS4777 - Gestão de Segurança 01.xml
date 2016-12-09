@@ -1,7 +1,7 @@
 <mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
 <siteinfo>
 <sitename>SEFAZ-TO Wiki</sitename>
-<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<base>http://192.168.0.42:8080/jamwiki-1.3.2/en/StartingPoints</base>
 <generator>JAMWiki 1.3.2</generator>
 <case>case-sensitive</case>
 <namespaces>
@@ -26,7 +26,7 @@
 </namespaces>
 </siteinfo>
 <page>
-<title>OS4777 - Gest��o de Seguran��a 01</title>
+<title>OS4777 - Gestão de Segurança 01</title>
 <ns>0</ns>
 <id>494</id>
 <revision>
@@ -37,27 +37,27 @@
 <id>1</id>
 </contributor>
 <comment />
-<text xml:space="preserve" bytes="2318">=Aplica����o dos Scripts no Banco de dados=
+<text xml:space="preserve" bytes="2358">=Aplicação dos Scripts no Banco de dados=
 
-&apos;&apos;&apos;Para atender as necessidades dos Casos de Uso desenvolvidos na OS4777 �� necess��rio a aplica����o dos scripts de banco de dados:&apos;&apos;&apos;
+&apos;&apos;&apos;Para atender as necessidades dos Casos de Uso desenvolvidos na OS4777 é necessário a aplicação dos scripts de banco de dados:&apos;&apos;&apos;
 
 === Scripts das OSs anteriores ===
-�� necess��rio que os scripts das OSs anteriores, caso ainda n��o foram, sejam aplicados na base de dados:
-:*OS4721 no reposit��rio git -&gt; 01_DOCUMENTACAO_TECNICA/00_DICIONARIO_DADOS/OS4721/
-:*OS4757 no reposit��rio git -&gt; 01_DOCUMENTACAO_TECNICA/00_DICIONARIO_DADOS/OS4757/
-:*OS4776 no reposit��rio git -&gt; 01_DOCUMENTACAO_TECNICA/00_DICIONARIO_DADOS/OS4776/
+É necessário que os scripts das OSs anteriores, caso ainda não foram, sejam aplicados na base de dados:
+:*OS4721 no repositório git -&gt; 01_DOCUMENTACAO_TECNICA/00_DICIONARIO_DADOS/OS4721/
+:*OS4757 no repositório git -&gt; 01_DOCUMENTACAO_TECNICA/00_DICIONARIO_DADOS/OS4757/
+:*OS4776 no repositório git -&gt; 01_DOCUMENTACAO_TECNICA/00_DICIONARIO_DADOS/OS4776/
 
 === Scripts das OS 4777 ===
-:*OS4777 no reposit��rio git -&gt; 01_DOCUMENTACAO_TECNICA/00_DICIONARIO_DADOS/OS4777/
+:*OS4777 no repositório git -&gt; 01_DOCUMENTACAO_TECNICA/00_DICIONARIO_DADOS/OS4777/
 
 
-= Modifica����es Realizadas na Instala����o do Ambiente =
+= Modificações Realizadas na Instalação do Ambiente =
 
-N��o foram realizadas modifica����es no [[Instala����o do Ambiente do Sistema|Manual de Instala����o do Sistema Windows]] ou [[Instala����o do Ambiente do Sistema Linux|Manual de Instala����o do Sistema Linux]]
+Não foram realizadas modificações no [[Instalação do Ambiente do Sistema|Manual de Instalação do Sistema Windows]] ou [[Instalação do Ambiente do Sistema Linux|Manual de Instalação do Sistema Linux]]
 
 = Casos de uso =
 
-Os detalhes de cada Classe e M��todo utilizado se encontram no JavaDoc do Sistema e no Diagrama de Classes.
+Os detalhes de cada Classe e Método utilizado se encontram no JavaDoc do Sistema e no Diagrama de Classes.
 
 {|cellpadding=&quot;5&quot; cellspacing=&quot;0&quot; border=&quot;1&quot;
 ! Caso de Uso
@@ -68,29 +68,29 @@ Os detalhes de cada Classe e M��todo utilizado se encontram no JavaDoc do Si
 |-
 | SEGUC0020 || Manter Postos de Trabalho || /protected/views/seg/gestao/posto-trabalho.xhtml
 |-
-| SEGUC0030 || Consultar Tipo de Usu��rio || /protected/views/seg/gestao/tipo-usuario.xhtml
+| SEGUC0030 || Consultar Tipo de Usuário || /protected/views/seg/gestao/tipo-usuario.xhtml
 |-
-| SEGUC0040 || Solicitar Autoriza����o de Senhas de Servi��os || /public/solicitacao-autorizacao-senha.xhtml
+| SEGUC0040 || Solicitar Autorização de Senhas de Serviços || /public/solicitacao-autorizacao-senha.xhtml
 |-
-| SEGUC0050 || Criar Usu��rio e Senha no Sistema || /protected/views/seg/gestao/cria-usuario-senha.xhtml
+| SEGUC0050 || Criar Usuário e Senha no Sistema || /protected/views/seg/gestao/cria-usuario-senha.xhtml
 |-
-| SEGUC0060 || Manter Usu��rio || /protected/views/seg/gestao/manter-usuario-sistema.xhtml
+| SEGUC0060 || Manter Usuário || /protected/views/seg/gestao/manter-usuario-sistema.xhtml
 |-
 | SEGUC0070 || Integrar com o Sistema de Recursos Humanos || /protected/views/seg/gestao/ativar-inativar-perfil.xhtml
 |-
 | SEGUC0120 || Alterar Senha || /protected/views/change-password.xhtml
 |-
-| SEGUC0130 || Consulta de Usu��rio || /protected/views/seg/gestao/consulta-usuario-sistema.xhtml
+| SEGUC0130 || Consulta de Usuário || /protected/views/seg/gestao/consulta-usuario-sistema.xhtml
 |-
-| PARUC0010 || Manter Par��metros Gerais || /protected/views/par/gestao/manutencao-parametros.xhtml
+| PARUC0010 || Manter Parâmetros Gerais || /protected/views/par/gestao/manutencao-parametros.xhtml
 |-
-| PARUC0020 || Consultar Par��metro Geral || /protected/views/par/gestao/consulta-parametros.xhtml
+| PARUC0020 || Consultar Parâmetro Geral || /protected/views/par/gestao/consulta-parametros.xhtml
 |}
 
 
 &lt;/br&gt;
 ----
-[[Manual para Manuten����o do Sistema | Voltar]]</text>
+[[Manual para Manutenção do Sistema | Voltar]]</text>
 </revision>
 </page>
 </mediawiki>

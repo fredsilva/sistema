@@ -1,7 +1,7 @@
 <mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
 <siteinfo>
 <sitename>SEFAZ-TO Wiki</sitename>
-<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<base>http://192.168.0.42:8080/jamwiki-1.3.2/en/StartingPoints</base>
 <generator>JAMWiki 1.3.2</generator>
 <case>case-sensitive</case>
 <namespaces>
@@ -26,7 +26,7 @@
 </namespaces>
 </siteinfo>
 <page>
-<title>Altera����o de Senha</title>
+<title>Alteração de Senha</title>
 <ns>0</ns>
 <id>347</id>
 <revision>
@@ -37,24 +37,24 @@
 <id>1</id>
 </contributor>
 <comment />
-<text xml:space="preserve" bytes="818">Acessar a tela atrav��s do &apos;&apos;&apos;Menu de Usu��rio &gt; Alterar senha. &apos;&apos;&apos;
+<text xml:space="preserve" bytes="840">Acessar a tela através do &apos;&apos;&apos;Menu de Usuário &gt; Alterar senha. &apos;&apos;&apos;
 
-A tela tamb��m �� acessada quando o usu��rio acessa o sistema pela primeira vez.
+A tela também é acessada quando o usuário acessa o sistema pela primeira vez.
 
-S�� podem alterar senha aqueles usu��rios que n��o acessaram com certificado digital. 
+Só podem alterar senha aqueles usuários que não acessaram com certificado digital. 
 
 == Alterando a Senha de Acesso ==
-O sistema permite a altera����o da senha de acesso atrav��s do Menu de Usu��rio &gt; Alterar senha, ou quando o usu��rio acessa pela primeira vez o sistema, ele �� direcionado automaticamente para a tela, conforme ilustrado no passo 1 abaixo.
+O sistema permite a alteração da senha de acesso através do Menu de Usuário &gt; Alterar senha, ou quando o usuário acessa pela primeira vez o sistema, ele é direcionado automaticamente para a tela, conforme ilustrado no passo 1 abaixo.
 
 [[File:alterarSenha.jpg|Alterar Senha]]
 
-Para gravar a nova senha o usu��rio deve preencher todos os campos da tela e clicar em Salvar (passo 1).
+Para gravar a nova senha o usuário deve preencher todos os campos da tela e clicar em Salvar (passo 1).
 
-Para cancelar a altera����o da senha de acesso, deve-se clicar no bot��o Fechar (Passo 2), ou clicar fora da janela de altera����o.
+Para cancelar a alteração da senha de acesso, deve-se clicar no botão Fechar (Passo 2), ou clicar fora da janela de alteração.
 
 &lt;/br&gt;
 ----
-[[Gest��o de Seguran��a | Voltar]]
+[[Gestão de Segurança | Voltar]]
 </text>
 </revision>
 </page>

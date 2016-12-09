@@ -1,7 +1,7 @@
 <mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
 <siteinfo>
 <sitename>SEFAZ-TO Wiki</sitename>
-<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<base>http://192.168.0.42:8080/jamwiki-1.3.2/en/StartingPoints</base>
 <generator>JAMWiki 1.3.2</generator>
 <case>case-sensitive</case>
 <namespaces>
@@ -37,15 +37,15 @@
 <id>1</id>
 </contributor>
 <comment />
-<text xml:space="preserve" bytes="823">Para efetuar o login �� necess��rio abrir o navegador Chrome, Internet Explorer, Firefox, Opera ou Safari, digitar o endere��o Web do sistema e pressionar a tecla ENTER. 
-Abrir�� a tela de acesso, conforme Figura abaixo:
+<text xml:space="preserve" bytes="851">Para efetuar o login é necessário abrir o navegador Chrome, Internet Explorer, Firefox, Opera ou Safari, digitar o endereço Web do sistema e pressionar a tecla ENTER. 
+Abrirá a tela de acesso, conforme Figura abaixo:
 
 [[File:Login_tela.jpg|caption]]
 
-O usu��rio dever�� informar o CPF e a senha de acesso e clicar no bot��o ���ENTRAR���.
-O sistema efetuar�� a autentica����o no Sistema Tribut��rio da SEFAZ-TO e exibir�� a estrutura de menus conforme as permiss��es do usu��rio autenticado. Portanto, primeiramente o usu��rio dever�� ter seu cadastro no Sistema para que seja poss��vel sua autentica����o.
+O usuário deverá informar o CPF e a senha de acesso e clicar no botão “ENTRAR”.
+O sistema efetuará a autenticação no Sistema Tributário da SEFAZ-TO e exibirá a estrutura de menus conforme as permissões do usuário autenticado. Portanto, primeiramente o usuário deverá ter seu cadastro no Sistema para que seja possível sua autenticação.
 
-&apos;&apos;�� importante salientar que ap��s cinco (5) tentativas sem exito para obter acesso no sistema, a conta do usu��rio em quest��o, ficar�� bloqueada durante duas (2) horas.&apos;&apos;
+&apos;&apos;É importante salientar que após cinco (5) tentativas sem exito para obter acesso no sistema, a conta do usuário em questão, ficará bloqueada durante duas (2) horas.&apos;&apos;
 &lt;br&gt;
 &lt;br&gt;
 

@@ -1,7 +1,7 @@
 <mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
 <siteinfo>
 <sitename>SEFAZ-TO Wiki</sitename>
-<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<base>http://192.168.0.42:8080/jamwiki-1.3.2/en/StartingPoints</base>
 <generator>JAMWiki 1.3.2</generator>
 <case>case-sensitive</case>
 <namespaces>
@@ -37,56 +37,56 @@
 <id>1</id>
 </contributor>
 <comment />
-<text xml:space="preserve" bytes="1756">Acessar o menu &apos;&apos;&apos;Seguran��a do Sistema &gt; Ger��ncia &gt; Manuten����o do cadastro de sistemas&apos;&apos;&apos;
+<text xml:space="preserve" bytes="1814">Acessar o menu &apos;&apos;&apos;Segurança do Sistema &gt; Gerência &gt; Manutenção do cadastro de sistemas&apos;&apos;&apos;
 
-O sistema apresenta uma tela que mostra a listagem de todos os m��dulos que existem no sistema. Nesta tela pode-se realizar a inclus��o, altera����o e exclus��o de um m��dulo.
+O sistema apresenta uma tela que mostra a listagem de todos os módulos que existem no sistema. Nesta tela pode-se realizar a inclusão, alteração e exclusão de um módulo.
 
 [[File:1 - SEGUC0410.jpg|1 - SEGUC0410]]
 
 ----
-== Inserindo M��dulo do Sistema ==
+== Inserindo Módulo do Sistema ==
 
-Para inserir um m��dulo deve-se clicar no bot��o &apos;&apos;&apos;Inserir M��dulo&apos;&apos;&apos; como mostrado no &apos;&apos;&apos;passo 1&apos;&apos;&apos; da imagem a seguir:
+Para inserir um módulo deve-se clicar no botão &apos;&apos;&apos;Inserir Módulo&apos;&apos;&apos; como mostrado no &apos;&apos;&apos;passo 1&apos;&apos;&apos; da imagem a seguir:
 
 [[File:2 - SEGUC0410.jpg|2 - SEGUC0410]]
 
-Ap��s, deve-se preencher a &apos;&apos;&apos;Abrevia����o&apos;&apos;&apos; e a &apos;&apos;&apos;Descri����o&apos;&apos;&apos; do m��dulo, de acordo com o &apos;&apos;&apos;passo 1&apos;&apos;&apos; da imagem:
+Após, deve-se preencher a &apos;&apos;&apos;Abreviação&apos;&apos;&apos; e a &apos;&apos;&apos;Descrição&apos;&apos;&apos; do módulo, de acordo com o &apos;&apos;&apos;passo 1&apos;&apos;&apos; da imagem:
 
 [[File:3 - SEGUC0410.jpg|3 - SEGUC0410]]
 
-Ap��s preencher, clica-se no bot��o &apos;&apos;&apos;Salvar (passo 2)&apos;&apos;&apos;.
+Após preencher, clica-se no botão &apos;&apos;&apos;Salvar (passo 2)&apos;&apos;&apos;.
 
-Para cancelar a inser����o do m��dulo, pode-se clicar no bot��o &apos;&apos;&apos;Fechar (passo 3)&apos;&apos;&apos;.
+Para cancelar a inserção do módulo, pode-se clicar no botão &apos;&apos;&apos;Fechar (passo 3)&apos;&apos;&apos;.
 
 ----
-== Alterando M��dulo do Sistema ==
+== Alterando Módulo do Sistema ==
 
-Ap��s carregar a lista de M��dulos do Sistema, �� poss��vel alterar as informa����es do m��dulo, clicando no bot��o &apos;&apos;&apos;Alterar (passo 1)&apos;&apos;&apos; de acordo com  a imagem:
+Após carregar a lista de Módulos do Sistema, é possível alterar as informações do módulo, clicando no botão &apos;&apos;&apos;Alterar (passo 1)&apos;&apos;&apos; de acordo com  a imagem:
 
 [[File:4 - SEGUC0410.jpg|4 - SEGUC0410]]
 
-Ap��s clicar, aparecer�� uma tela para alterar o registro.
+Após clicar, aparecerá uma tela para alterar o registro.
 
-Opcionalmente, pode-se alterar os campos &apos;&apos;&apos;Abrevia����o&apos;&apos;&apos; e &apos;&apos;&apos;Descri����o&apos;&apos;&apos; do m��dulo, de acordo com o &apos;&apos;&apos;passo 1&apos;&apos;&apos; da imagem:
+Opcionalmente, pode-se alterar os campos &apos;&apos;&apos;Abreviação&apos;&apos;&apos; e &apos;&apos;&apos;Descrição&apos;&apos;&apos; do módulo, de acordo com o &apos;&apos;&apos;passo 1&apos;&apos;&apos; da imagem:
 
 [[File:5 - SEGUC0410.jpg|5 - SEGUC0410]]
 
-Ap��s preencher, clica-se no bot��o &apos;&apos;&apos;Salvar (passo 2)&apos;&apos;&apos;.
+Após preencher, clica-se no botão &apos;&apos;&apos;Salvar (passo 2)&apos;&apos;&apos;.
 
-Para cancelar a inser����o do m��dulo, pode-se clicar no bot��o &apos;&apos;&apos;Fechar (passo 3)&apos;&apos;&apos;.
+Para cancelar a inserção do módulo, pode-se clicar no botão &apos;&apos;&apos;Fechar (passo 3)&apos;&apos;&apos;.
 
 ----
-== Excluindo M��dulo do Sistema ==
+== Excluindo Módulo do Sistema ==
 
-Para excluir um m��dulo, basta clicar no bot��o &apos;&apos;&apos;Excluir&apos;&apos;&apos; da lista de M��dulos como mostrado na imagem a seguir no &apos;&apos;&apos;Passo 1&apos;&apos;&apos;.
+Para excluir um módulo, basta clicar no botão &apos;&apos;&apos;Excluir&apos;&apos;&apos; da lista de Módulos como mostrado na imagem a seguir no &apos;&apos;&apos;Passo 1&apos;&apos;&apos;.
 
 [[File:6 - SEGUC0410.jpg|6 - SEGUC0410]]
 
-Ao clicar, aparecer�� uma mensagem de confirma����o, para efetivar a exclus��o.
+Ao clicar, aparecerá uma mensagem de confirmação, para efetivar a exclusão.
 
 &lt;/br&gt;
 ----
-[[Gest��o de Seguran��a | Voltar]]
+[[Gestão de Segurança | Voltar]]
 </text>
 </revision>
 </page>

@@ -1,7 +1,7 @@
 <mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
 <siteinfo>
 <sitename>SEFAZ-TO Wiki</sitename>
-<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<base>http://192.168.0.42:8080/jamwiki-1.3.2/en/StartingPoints</base>
 <generator>JAMWiki 1.3.2</generator>
 <case>case-sensitive</case>
 <namespaces>
@@ -26,7 +26,7 @@
 </namespaces>
 </siteinfo>
 <page>
-<title>Consulta de Comunica����es com os Contribuintes</title>
+<title>Consulta de Comunicações com os Contribuintes</title>
 <ns>0</ns>
 <id>471</id>
 <revision>
@@ -37,35 +37,35 @@
 <id>1</id>
 </contributor>
 <comment />
-<text xml:space="preserve" bytes="1083">Esta funcionalidade tem por objetivo consultar todas as comunica����es feitas (enviadas) para os contribuintes usando e-mail e SMS.
+<text xml:space="preserve" bytes="1110">Esta funcionalidade tem por objetivo consultar todas as comunicações feitas (enviadas) para os contribuintes usando e-mail e SMS.
 
-Para consultar as Comunica����es com os Contribuintes cadastrados, �� necess��rio acessar o menu &apos;&apos;&apos;Seguran��a do Sistema &gt; Consulta &gt; Consulta de Comunica����es com os Contribuintes&apos;&apos;&apos;.
+Para consultar as Comunicações com os Contribuintes cadastrados, é necessário acessar o menu &apos;&apos;&apos;Segurança do Sistema &gt; Consulta &gt; Consulta de Comunicações com os Contribuintes&apos;&apos;&apos;.
 
 
 ----
-== Consultando Comunica����es com os Contribuintes ==
+== Consultando Comunicações com os Contribuintes ==
 
- Com a funcionalidade de consulta aberta, informar algum dos filtros dispon��veis (passos 1) e clicar no bot��o Consultar (passo 2).
+ Com a funcionalidade de consulta aberta, informar algum dos filtros disponíveis (passos 1) e clicar no botão Consultar (passo 2).
 
 
 [[File:1-SCEUC0003.jpg|1-SCEUC0003]]
 
 
-&apos;&apos;&apos;Considera����es a respeito dos campos a serem preenchidos pelo usu��rio:&apos;&apos;&apos;
+&apos;&apos;&apos;Considerações a respeito dos campos a serem preenchidos pelo usuário:&apos;&apos;&apos;
 
-:*Usu��rio n��o �� obrigado a informar um filtro para que a consulta retorne registros.
+:*Usuário não é obrigado a informar um filtro para que a consulta retorne registros.
 
 
 ----
- Ap��s ser confirmada a consulta no passo 2, �� exibido os dados de comunica����o com os contribuintes (passo 3) conforme filtros informados no passo 1.
+ Após ser confirmada a consulta no passo 2, é exibido os dados de comunicação com os contribuintes (passo 3) conforme filtros informados no passo 1.
 
 
 [[File:2-SCEUC0003.jpg|2-SCEUC0003]]
 
 
-&apos;&apos;&apos;Considera����es a respeito dos registros retornados pela consulta:&apos;&apos;&apos;
+&apos;&apos;&apos;Considerações a respeito dos registros retornados pela consulta:&apos;&apos;&apos;
 
-:*O resultado da consulta �� ordenada pelo Nome de Usu��rio ascendentemente.
+:*O resultado da consulta é ordenada pelo Nome de Usuário ascendentemente.
 
 
 &lt;/br&gt;

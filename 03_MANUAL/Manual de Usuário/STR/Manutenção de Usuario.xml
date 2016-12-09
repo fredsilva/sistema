@@ -1,7 +1,7 @@
 <mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
 <siteinfo>
 <sitename>SEFAZ-TO Wiki</sitename>
-<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<base>http://192.168.0.42:8080/jamwiki-1.3.2/en/StartingPoints</base>
 <generator>JAMWiki 1.3.2</generator>
 <case>case-sensitive</case>
 <namespaces>
@@ -26,7 +26,7 @@
 </namespaces>
 </siteinfo>
 <page>
-<title>Manuten����o de Usuario</title>
+<title>Manutenção de Usuario</title>
 <ns>0</ns>
 <id>345</id>
 <revision>
@@ -36,88 +36,88 @@
 <username>admin</username>
 <id>1</id>
 </contributor>
-<comment>/* Ativando Usu��rio */ </comment>
-<text xml:space="preserve" bytes="3667">Acessar o menu &apos;&apos;&apos;Seguran��a do Sistema &gt; Ger��ncia &gt; Manter Usu��rio.&apos;&apos;&apos;
+<comment>/* Ativando Usuário */ </comment>
+<text xml:space="preserve" bytes="3802">Acessar o menu &apos;&apos;&apos;Segurança do Sistema &gt; Gerência &gt; Manter Usuário.&apos;&apos;&apos;
 
-Abrir�� a tela de manuten����o de usu��rios contendo a pesquisa de Usu��rios cadastrados.
+Abrirá a tela de manutenção de usuários contendo a pesquisa de Usuários cadastrados.
 
 
-== Pesquisando Usu��rios ==
+== Pesquisando Usuários ==
 
-Para pesquisar Usu��rios cadastrados, �� necess��rio acessar o menu Seguran��a do Sistema &gt; Ger��ncia &gt; Manter Usu��rio no sistema, informar algum dos filtros dispon��veis (passos 1) e clicar no bot��o Consultar (passo 2).
+Para pesquisar Usuários cadastrados, é necessário acessar o menu Segurança do Sistema &gt; Gerência &gt; Manter Usuário no sistema, informar algum dos filtros disponíveis (passos 1) e clicar no botão Consultar (passo 2).
 
 [[File:1-SEGUC0060.jpg|1-SEGUC0060.jpg]]
 
-&apos;&apos;&apos;Considera����es a respeito dos campos a serem preenchidos pelo usu��rio:&apos;&apos;&apos;
+&apos;&apos;&apos;Considerações a respeito dos campos a serem preenchidos pelo usuário:&apos;&apos;&apos;
 
 :*Ao menos um Filtro deve ser informado para que a consulta retorne registros.
-:*O filtro Nome de usu��rio somente �� v��lido a partir de cinco caracteres digitados.
-:*A consulta �� ordenada pelo Nome de Usu��rio ascendentemente.
+:*O filtro Nome de usuário somente é válido a partir de cinco caracteres digitados.
+:*A consulta é ordenada pelo Nome de Usuário ascendentemente.
 
 ----
-== Criando Usu��rio ==
+== Criando Usuário ==
 
-A tela permite a inclus��o de um novo usu��rio no sistema a partir do bot��o Criar Usu��rio, conforme ilustrado no passo 1 abaixo.
+A tela permite a inclusão de um novo usuário no sistema a partir do botão Criar Usuário, conforme ilustrado no passo 1 abaixo.
 
 [[File:2-SEGUC0060.jpg|2-SEGUC0060.jpg]]
 
-Ao clicar no bot��o Criar Usu��rio, o sistema exibe a janela Cria����o de Usu��rio, com o formul��rio de cadastro a ser preenchido.
+Ao clicar no botão Criar Usuário, o sistema exibe a janela Criação de Usuário, com o formulário de cadastro a ser preenchido.
 
 [[File:3-SEGUC0060.jpg|3-SEGUC0060.jpg]]
 
-A inclus��o �� confirmada ao clicar no bot��o Salvar (Passo 2).
+A inclusão é confirmada ao clicar no botão Salvar (Passo 2).
 
-&apos;&apos;&apos;Considera����es a respeito dos campos a serem preenchidos pelo usu��rio:&apos;&apos;&apos;
+&apos;&apos;&apos;Considerações a respeito dos campos a serem preenchidos pelo usuário:&apos;&apos;&apos;
 
-:*Todos os campos da tela com aster��sco (*) s��o de preenchimento obrigat��rio.
-:*As informa����es referentes a Unidade Organizacional e Posto de trabalho somente est��o dispon��veis quando o tipo de usu��rio �� Funcion��rio.
+:*Todos os campos da tela com asterísco (*) são de preenchimento obrigatório.
+:*As informações referentes a Unidade Organizacional e Posto de trabalho somente estão disponíveis quando o tipo de usuário é Funcionário.
 
-Para cancelar a inclus��o, deve-se clicar no bot��o Fechar (Passo 3), ou clicar fora da janela de inclus��o. Os dados digitados s��o descartados quando a inclus��o �� cancelada.
+Para cancelar a inclusão, deve-se clicar no botão Fechar (Passo 3), ou clicar fora da janela de inclusão. Os dados digitados são descartados quando a inclusão é cancelada.
 
 ----
-== Alterando Usu��rio ==
+== Alterando Usuário ==
 
-Para alterar o cadastro de um Usu��rio �� necess��rio acessar o menu Seguran��a do Sistema &gt; Ger��ncia &gt; Manter Usu��rio e clicar no ��cone Alterar, na lista de Usu��rios cadastrados, conforme o passo 1 ilustrado abaixo.
+Para alterar o cadastro de um Usuário é necessário acessar o menu Segurança do Sistema &gt; Gerência &gt; Manter Usuário e clicar no ícone Alterar, na lista de Usuários cadastrados, conforme o passo 1 ilustrado abaixo.
 
 [[File:4-SEGUC0060.jpg|4-SEGUC0060.jpg]]
 
-Ao clicar no ��cone Alterar, o sistema exibe a janela de Cria����o de Usu��rio, conforme ilustrado no passo 2 abaixo.
-Os campos referentes ao registro de Usu��rio a ser alterado s��o preenchidos automaticamente pelo sistema.
+Ao clicar no ícone Alterar, o sistema exibe a janela de Criação de Usuário, conforme ilustrado no passo 2 abaixo.
+Os campos referentes ao registro de Usuário a ser alterado são preenchidos automaticamente pelo sistema.
 
 [[File:5-SEGUC0060.jpg|5-SEGUC0060.jpg]]
 
-Ap��s a execu����o do Passo 2, �� apresentado mensagem de dialogo informando o resultado da opera����o em quest��o.
+Após a execução do Passo 2, é apresentado mensagem de dialogo informando o resultado da operação em questão.
 
-Para cancelar a altera����o, deve-se clicar no bot��o Fechar, ou clicar fora da janela. Os dados digitados s��o descartados quando a altera����o �� cancelada.
+Para cancelar a alteração, deve-se clicar no botão Fechar, ou clicar fora da janela. Os dados digitados são descartados quando a alteração é cancelada.
 
 ----
 == Criando Senha ==
 
-O sistema permite a cria����o de uma nova senha para um Usu��rio cadastrado. Atrav��s do menu Seguran��a do Sistema &gt; Ger��ncia &gt; Manter Usu��rio, deve-se acessar o ��cone Criar Senha, conforme ilustrado no Passo 1 abaixo.
+O sistema permite a criação de uma nova senha para um Usuário cadastrado. Através do menu Segurança do Sistema &gt; Gerência &gt; Manter Usuário, deve-se acessar o ícone Criar Senha, conforme ilustrado no Passo 1 abaixo.
 
 [[File:6-SEGUC0060.jpg|6-SEGUC0060.jpg]]
 
-Ao clicar no bot��o Criar Senha (passo 1), uma nova senha �� gerada e enviada para o usu��rio. 
+Ao clicar no botão Criar Senha (passo 1), uma nova senha é gerada e enviada para o usuário. 
 
-A senha enviada �� gerada automaticamente pelo sistema. Quando o usu��rio fizer a sua primeira autentica����o no sistema com a nova senha, o sistema solicitar�� a redefini����o desta para uma senha da prefer��ncia do usu��rio.
+A senha enviada é gerada automaticamente pelo sistema. Quando o usuário fizer a sua primeira autenticação no sistema com a nova senha, o sistema solicitará a redefinição desta para uma senha da preferência do usuário.
 
 ----
-== Inativando Usu��rio ==
+== Inativando Usuário ==
 
-O sistema permite a Inativa����o de um usu��rio ativo, atrav��s do ��cone Inativar Usu��rio, conforme destacado no Passo 1 abaixo.
+O sistema permite a Inativação de um usuário ativo, através do ícone Inativar Usuário, conforme destacado no Passo 1 abaixo.
 
 [[File:7-SEGUC0060.jpg|7-SEGUC0060.jpg]]
 
-Ap��s a execu����o do Passo 1, �� apresentado mensagem de dialogo informando o resultado da opera����o em quest��o.
+Após a execução do Passo 1, é apresentado mensagem de dialogo informando o resultado da operação em questão.
 
 ----
-== Ativando Usu��rio ==
+== Ativando Usuário ==
 
-O sistema permite a Ativa����o de um usu��rio inativo, atrav��s do ��cone Ativar Usu��rio, conforme destacado no Passo 1 abaixo.
+O sistema permite a Ativação de um usuário inativo, através do ícone Ativar Usuário, conforme destacado no Passo 1 abaixo.
 
 [[File:8-SEGUC0060.jpg|8-SEGUC0060.jpg]]
 
-Ap��s a execu����o do Passo 1, �� apresentado mensagem de dialogo informando o resultado da opera����o em quest��o.
+Após a execução do Passo 1, é apresentado mensagem de dialogo informando o resultado da operação em questão.
 
 </text>
 </revision>

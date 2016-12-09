@@ -1,7 +1,7 @@
 <mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
 <siteinfo>
 <sitename>SEFAZ-TO Wiki</sitename>
-<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<base>http://192.168.0.42:8080/jamwiki-1.3.2/en/StartingPoints</base>
 <generator>JAMWiki 1.3.2</generator>
 <case>case-sensitive</case>
 <namespaces>
@@ -26,7 +26,7 @@
 </namespaces>
 </siteinfo>
 <page>
-<title>Solicitar para atuar como usu��rio principal de uma empresa</title>
+<title>Solicitar para atuar como usuário principal de uma empresa</title>
 <ns>0</ns>
 <id>467</id>
 <revision>
@@ -37,24 +37,24 @@
 <id>1</id>
 </contributor>
 <comment />
-<text xml:space="preserve" bytes="879">Acessar o menu &apos;&apos;&apos;Seguran��a do Sistema &gt; Ger��ncia &gt; Solicitar para atuar como usu��rio principal de uma empresa&apos;&apos;&apos;
+<text xml:space="preserve" bytes="899">Acessar o menu &apos;&apos;&apos;Segurança do Sistema &gt; Gerência &gt; Solicitar para atuar como usuário principal de uma empresa&apos;&apos;&apos;
 
 [[File:1 - SEGUC0480.jpg|1 - SEGUC0480]]
 
-Nesta tela pode-se selecionar o usu��rio principal da empresa. O usu��rio principal da empresa no sistema sempre ser�� o Representante Legal de uma empresa (Informa����o do Cadastro de Contribuinte), mas muitas vezes procuram-se as fun����es para outras pessoas.
+Nesta tela pode-se selecionar o usuário principal da empresa. O usuário principal da empresa no sistema sempre será o Representante Legal de uma empresa (Informação do Cadastro de Contribuinte), mas muitas vezes procuram-se as funções para outras pessoas.
 
 ----
-== Solicitar para atuar como usu��rio principal ==
+== Solicitar para atuar como usuário principal ==
 
-Para solicitar que um usu��rio atue como usu��rio principal de uma empresa, basta preencher os campos da tela &apos;&apos;&apos;(Passo 1)&apos;&apos;&apos; como a imagem a seguir e, em seguida, clicar no bot��o &apos;&apos;&apos;Conferir com e-CNPJ (Passo 2)&apos;&apos;&apos;.
+Para solicitar que um usuário atue como usuário principal de uma empresa, basta preencher os campos da tela &apos;&apos;&apos;(Passo 1)&apos;&apos;&apos; como a imagem a seguir e, em seguida, clicar no botão &apos;&apos;&apos;Conferir com e-CNPJ (Passo 2)&apos;&apos;&apos;.
 
 [[File:2 - SEGUC0480.jpg|2 - SEGUC0480]]
 
-&apos;&apos;&apos;Observa����o: &apos;&apos;&apos; deve-se utilizar o Certificado Digital de Pessoa Jur��dica para fazer esta confer��ncia.
+&apos;&apos;&apos;Observação: &apos;&apos;&apos; deve-se utilizar o Certificado Digital de Pessoa Jurídica para fazer esta conferência.
 
 &lt;/br&gt;
 ----
-[[Gest��o de Seguran��a | Voltar]]
+[[Gestão de Segurança | Voltar]]
 </text>
 </revision>
 </page>

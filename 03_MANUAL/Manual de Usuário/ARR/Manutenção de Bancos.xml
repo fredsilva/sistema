@@ -1,7 +1,7 @@
 <mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
 <siteinfo>
 <sitename>SEFAZ-TO Wiki</sitename>
-<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<base>http://192.168.0.42:8080/jamwiki-1.3.2/en/StartingPoints</base>
 <generator>JAMWiki 1.3.2</generator>
 <case>case-sensitive</case>
 <namespaces>
@@ -26,7 +26,7 @@
 </namespaces>
 </siteinfo>
 <page>
-<title>Manuten����o de Bancos</title>
+<title>Manutenção de Bancos</title>
 <ns>0</ns>
 <id>13</id>
 <revision>
@@ -37,12 +37,12 @@
 <id>1</id>
 </contributor>
 <comment />
-<text xml:space="preserve" bytes="2979">�� necess��rio acessar &apos;&apos;&apos;Par��metros &gt; Agentes Banc��rios&apos;&apos;&apos;.
-Abrir�� a tela de localiza����o contendo a lista de bancos cadastrados conforme figura abaixo, na qual �� poss��vel:
+<text xml:space="preserve" bytes="3100">É necessário acessar &apos;&apos;&apos;Parâmetros &gt; Agentes Bancários&apos;&apos;&apos;.
+Abrirá a tela de localização contendo a lista de bancos cadastrados conforme figura abaixo, na qual é possível:
 
 = Visualizar todos os Bancos Cadastrados =
 
-A manuten����o de Bancos possibilita a inclus��o, consulta, altera����o e exclus��o de registros  pertencentes ao cadastro de Agentes Banc��rios.
+A manutenção de Bancos possibilita a inclusão, consulta, alteração e exclusão de registros  pertencentes ao cadastro de Agentes Bancários.
 
 [[File:manutencao_bancos_1.png|Manutencao Bancos 1]]
 
@@ -50,53 +50,53 @@ A manuten����o de Bancos possibilita a inclus��o, consulta, altera�
 
 == Incluir um novo Banco ==
 
-Para incluir um novo compromisso �� necess��rio acessar o menu &apos;&apos;&apos;Par��metros &gt; Agentes Banc��rios&apos;&apos;&apos; e clicar no bot��o ���NOVO BANCO��� (passo 1), na tela de localiza����o.
+Para incluir um novo compromisso é necessário acessar o menu &apos;&apos;&apos;Parâmetros &gt; Agentes Bancários&apos;&apos;&apos; e clicar no botão “NOVO BANCO” (passo 1), na tela de localização.
 
 [[File:manutencao_bancos_2.png|Manutencao Bancos 2]]
 
-Os campos abaixo da listagem s��o Limpos e disponibilizados para serem informados pelo Usu��rio, conforme ilustrado abaixo:
+Os campos abaixo da listagem são Limpos e disponibilizados para serem informados pelo Usuário, conforme ilustrado abaixo:
 
 [[File:manutencao_bancos_3.png|Manutencao Bancos 3]]
 
-Deve-se preencher todos os campos obrigat��rios assinalados com asterisco (Passo 2) e clicar no bot��o ���SALVAR��� (Passo 3).
+Deve-se preencher todos os campos obrigatórios assinalados com asterisco (Passo 2) e clicar no botão “SALVAR” (Passo 3).
 
-&apos;&apos;&apos;*�� importante salientar que n��o ser�� poss��vel cadastrar bancos contendo o mesmo valor para &quot;N��mero de Banco&quot; e que este possui o limite m��ximo de quatro (4) d��gitos.&apos;&apos;&apos;
+&apos;&apos;&apos;*É importante salientar que não será possível cadastrar bancos contendo o mesmo valor para &quot;Número de Banco&quot; e que este possui o limite máximo de quatro (4) dígitos.&apos;&apos;&apos;
 
 ----
 
 == Alterando um Banco ==
 
-Para alterar as informa����es de um registro de Banco pertencente ao cadastro de agentes banc��rios, �� necess��rio acessar o menu &apos;&apos;&apos;Par��metros &gt; Agentes Banc��rios&apos;&apos;&apos; e selecionar um registro na listagem por meio de marca����o do controle localizado ao final da linha (Passo 1), conforme ilustrado na imagem abaixo:
+Para alterar as informações de um registro de Banco pertencente ao cadastro de agentes bancários, é necessário acessar o menu &apos;&apos;&apos;Parâmetros &gt; Agentes Bancários&apos;&apos;&apos; e selecionar um registro na listagem por meio de marcação do controle localizado ao final da linha (Passo 1), conforme ilustrado na imagem abaixo:
 
 [[File:manutencao_bancos_4.png|Manutencao Bancos 4]]
 
-As informa����es espec��ficas do registro selecionado s��o apresentadas abaixo da listagem e est��o dispon��veis para altera����o com exce����o do campo ���N��mero���.
+As informações específicas do registro selecionado são apresentadas abaixo da listagem e estão disponíveis para alteração com exceção do campo “Número”.
 
 [[File:manutencao_bancos_5.png|Manutencao Bancos 5]]
 
-O usu��rio poder�� alterar os campos dispon��veis desejados (Passo 2) e ap��s clicar no bot��o &quot;SALVAR&quot; (Passo 3).
+O usuário poderá alterar os campos disponíveis desejados (Passo 2) e após clicar no botão &quot;SALVAR&quot; (Passo 3).
 
-&apos;&apos;&apos;*�� importante salientar que registros em situa����o &quot;Cancelado&quot;, n��o podem ser utilizados em outras partes do sistema que fazem uso deste cadastro de Agentes Banc��rios em quest��o.&apos;&apos;&apos;
+&apos;&apos;&apos;*É importante salientar que registros em situação &quot;Cancelado&quot;, não podem ser utilizados em outras partes do sistema que fazem uso deste cadastro de Agentes Bancários em questão.&apos;&apos;&apos;
 
 ----
 
 == Excluindo um Banco ==
 
-Para excluir um banco do cadastro de agentes banc��rios, �� necess��rio clicar no bot��o representado por uma ���lixeira���, localizado na mesma linha do registro desejado (passo 1), conforme ilustra����o:
+Para excluir um banco do cadastro de agentes bancários, é necessário clicar no botão representado por uma “lixeira”, localizado na mesma linha do registro desejado (passo 1), conforme ilustração:
 
 [[File:manutencao_bancos_6.png|Manutencao Bancos 6]]
 
-Ap��s a execu����o do Passo 1, �� apresentado mensagem de dialogo informando o resultado da opera����o em quest��o.
+Após a execução do Passo 1, é apresentado mensagem de dialogo informando o resultado da operação em questão.
 
-&apos;&apos;&apos;*�� importante salientar que n��o ser�� poss��vel a realiza����o de uma exclus��o f��sica quando o Banco selecionado para ser exclu��do possuir refer��ncias com pagamentos e recep����o de pagamentos, bem como com ag��ncias banc��rias vinculadas. Entretanto, nestes casos, ser�� realizado uma exclus��o l��gica, alterando a situa����o do Banco e das suas ag��ncias para &quot;Cancelado&quot;.
-Somente ocorrer�� exclus��o f��sica caso o registro de banco em quest��o, n��o possua nem um v��nculo com outros cadastros do sistema.&apos;&apos;&apos;
+&apos;&apos;&apos;*É importante salientar que não será possível a realização de uma exclusão física quando o Banco selecionado para ser excluído possuir referências com pagamentos e recepção de pagamentos, bem como com agências bancárias vinculadas. Entretanto, nestes casos, será realizado uma exclusão lógica, alterando a situação do Banco e das suas agências para &quot;Cancelado&quot;.
+Somente ocorrerá exclusão física caso o registro de banco em questão, não possua nem um vínculo com outros cadastros do sistema.&apos;&apos;&apos;
 
 
 [[#Top|Topo]]
 
 &lt;/br&gt;
 ----
-[[Par��metros | Voltar]]
+[[Parâmetros | Voltar]]
 </text>
 </revision>
 </page>

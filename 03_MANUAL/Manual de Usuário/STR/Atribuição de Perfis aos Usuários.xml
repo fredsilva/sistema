@@ -1,7 +1,7 @@
 <mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
 <siteinfo>
 <sitename>SEFAZ-TO Wiki</sitename>
-<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<base>http://192.168.0.42:8080/jamwiki-1.3.2/en/StartingPoints</base>
 <generator>JAMWiki 1.3.2</generator>
 <case>case-sensitive</case>
 <namespaces>
@@ -26,7 +26,7 @@
 </namespaces>
 </siteinfo>
 <page>
-<title>Atribui����o de Perfis aos Usu��rios</title>
+<title>Atribuição de Perfis aos Usuários</title>
 <ns>0</ns>
 <id>414</id>
 <revision>
@@ -37,39 +37,39 @@
 <id>1</id>
 </contributor>
 <comment />
-<text xml:space="preserve" bytes="1334">Acessar o menu &apos;&apos;&apos;Seguran��a do Sistema &gt; Gest��o &gt; Atribui����o de perfis aos usu��rios.&apos;&apos;&apos;
+<text xml:space="preserve" bytes="1370">Acessar o menu &apos;&apos;&apos;Segurança do Sistema &gt; Gestão &gt; Atribuição de perfis aos usuários.&apos;&apos;&apos;
 
-A op����o Atribui����o de perfis aos usu��rios tem como objetivo a consulta de usu��rios e conceder um perfil ou perfis a um usu��rio espec��fico.
+A opção Atribuição de perfis aos usuários tem como objetivo a consulta de usuários e conceder um perfil ou perfis a um usuário específico.
 
-Essa op����o permite outorgar perfis aos usu��rios. Um perfil est�� associado com um ou mais pap��is do sistema.
+Essa opção permite outorgar perfis aos usuários. Um perfil está associado com um ou mais papéis do sistema.
 
-== Filtrando Usu��rios do Sistema cadastrados ==
+== Filtrando Usuários do Sistema cadastrados ==
 
-Para visualizar um Usu��rio do Sistema cadastrado, deve-se preencher - ao menos - um campo do filtro, de acordo com o &apos;&apos;&apos;Passo 1&apos;&apos;&apos; da imagem.
+Para visualizar um Usuário do Sistema cadastrado, deve-se preencher - ao menos - um campo do filtro, de acordo com o &apos;&apos;&apos;Passo 1&apos;&apos;&apos; da imagem.
 
-Ap��s preencher o filtro, pressiona-se o bot��o &quot;Consultar&quot; como demonstrado no &apos;&apos;&apos;Passo 2&apos;&apos;&apos; da imagem.
+Após preencher o filtro, pressiona-se o botão &quot;Consultar&quot; como demonstrado no &apos;&apos;&apos;Passo 2&apos;&apos;&apos; da imagem.
 
 [[File:1 - SEGUC0450.jpg|1 - SEGUC0450.jpg]]
 
 ----
 
-== Alterando Perfis de um Usu��rio ==
+== Alterando Perfis de um Usuário ==
 
-Para alterar os perfis de um Usu��rio, deve-se clicar no bot��o &apos;&apos;&apos;&quot;Outorgar Perfil&quot;&apos;&apos;&apos; como demonstrado na imagem abaixo &apos;&apos;&apos;(Passo 1)&apos;&apos;&apos;:
+Para alterar os perfis de um Usuário, deve-se clicar no botão &apos;&apos;&apos;&quot;Outorgar Perfil&quot;&apos;&apos;&apos; como demonstrado na imagem abaixo &apos;&apos;&apos;(Passo 1)&apos;&apos;&apos;:
 
 [[File:2 - SEGUC0450.jpg|2 - SEGUC0450.jpg]]
 
-Ap��s, abrir�� a tela de sele����o de perfil. Para alterar os perfis, deve-se marcar ou desmarcar o perfil da lista, que est�� em destaque no &apos;&apos;&apos;Passo 1&apos;&apos;&apos; na imagem abaixo.
+Após, abrirá a tela de seleção de perfil. Para alterar os perfis, deve-se marcar ou desmarcar o perfil da lista, que está em destaque no &apos;&apos;&apos;Passo 1&apos;&apos;&apos; na imagem abaixo.
 
 [[File:3 - SEGUC0450.jpg|3 - SEGUC0450.jpg]]
 
-Ao escolher os perfis, clica-se no bot��o &apos;&apos;&apos;Salvar (Passo 2)&apos;&apos;&apos;.
+Ao escolher os perfis, clica-se no botão &apos;&apos;&apos;Salvar (Passo 2)&apos;&apos;&apos;.
 
-Pode-se cancelar a qualquer momento a edi����o dos perfis, clicando no bot��o &apos;&apos;&apos;Fechar (Passo 3)&apos;&apos;&apos;.
+Pode-se cancelar a qualquer momento a edição dos perfis, clicando no botão &apos;&apos;&apos;Fechar (Passo 3)&apos;&apos;&apos;.
 
 &lt;/br&gt;
 ----
-[[Gest��o de Seguran��a | Voltar]]
+[[Gestão de Segurança | Voltar]]
 </text>
 </revision>
 </page>

@@ -1,7 +1,7 @@
 <mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
 <siteinfo>
 <sitename>SEFAZ-TO Wiki</sitename>
-<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<base>http://192.168.0.42:8080/jamwiki-1.3.2/en/StartingPoints</base>
 <generator>JAMWiki 1.3.2</generator>
 <case>case-sensitive</case>
 <namespaces>
@@ -37,37 +37,37 @@
 <id>1</id>
 </contributor>
 <comment />
-<text xml:space="preserve" bytes="1636">Para efetuar o login �� necess��rio abrir o navegador Chrome, Internet Explorer, Firefox, Opera ou Safari, digitar o endere��o Web do sistema e pressionar a tecla ENTER. 
-Abrir�� a tela de acesso, conforme Figura abaixo:
+<text xml:space="preserve" bytes="1690">Para efetuar o login é necessário abrir o navegador Chrome, Internet Explorer, Firefox, Opera ou Safari, digitar o endereço Web do sistema e pressionar a tecla ENTER. 
+Abrirá a tela de acesso, conforme Figura abaixo:
 
 [[File:Login_tela.jpg|caption]]
 
-O usu��rio dever�� clicar no bot��o ���ENTRAR COM CERTIFICADO DIGITAL���.
+O usuário deverá clicar no botão “ENTRAR COM CERTIFICADO DIGITAL”.
 
-Por meio do navegador de internet (browser), ser�� exibido pop-up para que o usu��rio selecione qual certificado deseja utilizar para se autenticar no Sistema Tribut��rio da SEFAZ-TO, conforme Figura abaixo:
+Por meio do navegador de internet (browser), será exibido pop-up para que o usuário selecione qual certificado deseja utilizar para se autenticar no Sistema Tributário da SEFAZ-TO, conforme Figura abaixo:
 
 
 [[File:selecao_certificado.png|caption]]
 
-O usu��rio dever�� selecionar na listagem dentre os certificados dispon��veis, que j�� est��o pr��-configurados (importados) e clicar no Bot��o &quot;OK&quot;.
+O usuário deverá selecionar na listagem dentre os certificados disponíveis, que já estão pré-configurados (importados) e clicar no Botão &quot;OK&quot;.
 
  
-Ap��s ser�� exibido pop-up para que o usu��rio informe o PIN (senha) de autentica����o de seu Certificado Digital.
+Após será exibido pop-up para que o usuário informe o PIN (senha) de autenticação de seu Certificado Digital.
 
 [[File:senha_certificado.png|caption]]
 
 
-O usu��rio informa o PIN para acesso e clica no bot��o &quot;OK&quot;.
+O usuário informa o PIN para acesso e clica no botão &quot;OK&quot;.
 
 [[File:senha_certificado_ok.PNG|caption]]
 
 
-Ap��s o sistema efetuar�� a autentica����o no Sistema Tribut��rio da SEFAZ-TO e exibir�� a estrutura de menus conforme as permiss��es do usu��rio autenticado. Portanto, primeiramente o usu��rio dever�� ter seu cadastro no Sistema para que seja poss��vel sua autentica����o.
+Após o sistema efetuará a autenticação no Sistema Tributário da SEFAZ-TO e exibirá a estrutura de menus conforme as permissões do usuário autenticado. Portanto, primeiramente o usuário deverá ter seu cadastro no Sistema para que seja possível sua autenticação.
 
 
-&apos;&apos;&apos;�� importante salientar que o usu��rio dever�� possuir um certificado v��lido para autentica����o no Sistema Tribut��rio da SEFAZ-TO, caso opte por esta op����o de acesso ao sistema.&apos;&apos;&apos;
+&apos;&apos;&apos;É importante salientar que o usuário deverá possuir um certificado válido para autenticação no Sistema Tributário da SEFAZ-TO, caso opte por esta opção de acesso ao sistema.&apos;&apos;&apos;
 
-Para maiores detalhes de como proceder com a importa����o para uso do certificado digital, �� necess��rio acessar:
+Para maiores detalhes de como proceder com a importação para uso do certificado digital, é necessário acessar:
 http://loja.certificadodigital.com.br/Serasa/UPLOAD/Downloads/490.pdf
 
 &lt;/br&gt;

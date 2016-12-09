@@ -1,7 +1,7 @@
 <mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
 <siteinfo>
 <sitename>SEFAZ-TO Wiki</sitename>
-<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<base>http://192.168.0.42:8080/jamwiki-1.3.2/en/StartingPoints</base>
 <generator>JAMWiki 1.3.2</generator>
 <case>case-sensitive</case>
 <namespaces>
@@ -26,7 +26,7 @@
 </namespaces>
 </siteinfo>
 <page>
-<title>OS4757 - Seguran��a B��sico</title>
+<title>OS4757 - Segurança Básico</title>
 <ns>0</ns>
 <id>308</id>
 <revision>
@@ -37,43 +37,43 @@
 <id>1</id>
 </contributor>
 <comment />
-<text xml:space="preserve" bytes="9746">=Aplica����o dos Scripts no Banco de dados=
+<text xml:space="preserve" bytes="9871">=Aplicação dos Scripts no Banco de dados=
 
-&apos;&apos;&apos;Para atender as necessidades dos Casos de Uso desenvolvidos na OS4757 �� necess��rio a aplica����o dos scripts de banco de dados:&apos;&apos;&apos;
+&apos;&apos;&apos;Para atender as necessidades dos Casos de Uso desenvolvidos na OS4757 é necessário a aplicação dos scripts de banco de dados:&apos;&apos;&apos;
 
 === Scripts das OSs anteriores ===
-�� necess��rio que os scripts das OSs anteriores, caso ainda n��o foram, sejam aplicados na base de dados:
+É necessário que os scripts das OSs anteriores, caso ainda não foram, sejam aplicados na base de dados:
 
-:*OS4721 no reposit��rio git -&gt; 01_DOCUMENTACAO_TECNICA/00_DICIONARIO_DADOS/OS4721/
+:*OS4721 no repositório git -&gt; 01_DOCUMENTACAO_TECNICA/00_DICIONARIO_DADOS/OS4721/
 
 === Scripts das OS 4757 ===
 
-:*OS4757 no reposit��rio git -&gt; 01_DOCUMENTACAO_TECNICA/00_DICIONARIO_DADOS/OS4757/
+:*OS4757 no repositório git -&gt; 01_DOCUMENTACAO_TECNICA/00_DICIONARIO_DADOS/OS4757/
 
 
-=Modifica����es Realizadas na Instala����o do Ambiente=
+=Modificações Realizadas na Instalação do Ambiente=
 
-Para atender as necessidades dos Casos de Uso foram realizadas as seguintes altera����es no [[Instala����o do Ambiente do Sistema|Manual de Instala����o do Sistema Windows]] ou [[Instala����o do Ambiente do Sistema Linux|Manual de Instala����o do Sistema Linux]]
+Para atender as necessidades dos Casos de Uso foram realizadas as seguintes alterações no [[Instalação do Ambiente do Sistema|Manual de Instalação do Sistema Windows]] ou [[Instalação do Ambiente do Sistema Linux|Manual de Instalação do Sistema Linux]]
 
 == JBoss Wildfly ==
 
-&apos;&apos;&apos;Nesta se����o do manual foram adicionados as seguintes configura����es:&apos;&apos;&apos;
+&apos;&apos;&apos;Nesta seção do manual foram adicionados as seguintes configurações:&apos;&apos;&apos;
 
-=== Configura����o SSL com Certificado Digital ===
+=== Configuração SSL com Certificado Digital ===
 
-:*�� necess��rio possuir a ferramenta Keytool, que se encontra no JRE do Java instalado.
-:*Com esta ferramenta ser�� gerado a chave do servidor de aplica����o, assim como as chaves confi��veis de acesso a este servidor.
-:*Para gerar a chave do servidor �� necess��rio acessar a pasta que se encontra o JRE do Java instalado. Geralmente se encontra em JAVA_HOME/jre/bin/ onde est�� o execut��vel da ferramenta Keytool, e realizar o seguinte comando:
+:*É necessário possuir a ferramenta Keytool, que se encontra no JRE do Java instalado.
+:*Com esta ferramenta será gerado a chave do servidor de aplicação, assim como as chaves confiáveis de acesso a este servidor.
+:*Para gerar a chave do servidor é necessário acessar a pasta que se encontra o JRE do Java instalado. Geralmente se encontra em JAVA_HOME/jre/bin/ onde está o executável da ferramenta Keytool, e realizar o seguinte comando:
 
 &apos;&apos;&apos;keytool.exe -genkey -keyalg RSA -keystore [NOME-DO-KEYSTORE].keystore -storepass [SENHA]&apos;&apos;&apos;
 
-:*Lembre-se de alterar os par��metros acima demonstrados em colchetes pelo nome e senha desejados.
-:*Para importar as chaves de permiss��o para acesso ao servidor, atrav��s do truststore, deve-se realizar o comando:
+:*Lembre-se de alterar os parâmetros acima demonstrados em colchetes pelo nome e senha desejados.
+:*Para importar as chaves de permissão para acesso ao servidor, através do truststore, deve-se realizar o comando:
 
 &apos;&apos;&apos;keytool -import -alias [ALIAS] -file [ARQUIVO COM AS CREDENCIAIS] -keystore [NOME-DO-TRUSTSTORE].jks&apos;&apos;&apos;
 
-:*Ser�� solicitada uma senha, basta informar a senha desejada.
-:*Lembre-se de alterar os par��metros acima demonstrados em colchetes.
+:*Será solicitada uma senha, basta informar a senha desejada.
+:*Lembre-se de alterar os parâmetros acima demonstrados em colchetes.
 
 :*Na pasta em que foram executados os comandos foram criados dois arquivos [NOME-DO-KEYSTORE].keystore e o [NOME-DO-TRUSTSTORE].jks. Copiar os dois arquivos para WILDFLY_HOME/standalone/configuration.
 :*Acesse o arquivo standalone.xml e adicione os seguintes elementos:
@@ -140,55 +140,55 @@ Para atender as necessidades dos Casos de Uso foram realizadas as seguintes alte
 
 === Adicionar Certificado da ICP Brasil no Wildfly===
 
-:*Para que seja poss��vel se logar no sistema atrav��s do uso do certificado digital, �� necess��rio importar o arquivo .crt ra��z da ICP Brasil. Este e outros arquivos das demais Ag��ncias Certificadoras (ACs) se encontram no site [http://www.iti.gov.br/], o link utilizado para obter todos os certificados foi [http://www.iti.gov.br/noticias/188-atualizacao/4530-ac-raiz]. Como exemplo para configura����o ser�� utilizado a vers��o ICP-Brasilv2.crt. 
+:*Para que seja possível se logar no sistema através do uso do certificado digital, é necessário importar o arquivo .crt raíz da ICP Brasil. Este e outros arquivos das demais Agências Certificadoras (ACs) se encontram no site [http://www.iti.gov.br/], o link utilizado para obter todos os certificados foi [http://www.iti.gov.br/noticias/188-atualizacao/4530-ac-raiz]. Como exemplo para configuração será utilizado a versão ICP-Brasilv2.crt. 
 
-:*Para importar o certificado basta realizar o comando de importa����o do Keytool previamente apresentado e colocar no local do [ARQUIVO COM AS CREDENCIAIS] o arquivo ICP-Brasilv2.crt conforme exemplo a seguir:
+:*Para importar o certificado basta realizar o comando de importação do Keytool previamente apresentado e colocar no local do [ARQUIVO COM AS CREDENCIAIS] o arquivo ICP-Brasilv2.crt conforme exemplo a seguir:
 
 &apos;&apos;&apos;keytool -import -alias [ALIAS] -file [CAMINHO ATE O ARQUIVO]/ICP-Brasilv2.crt -keystore [NOME-DO-TRUSTSTORE].jks&apos;&apos;&apos;
 
-:*Lembre-se de alterar os par��metros acima demonstrados em colchetes.
-:*O certificado digital testado foi da AC Valid, sendo que para uso de outros certificados de outras ACs deve-se verificar a vers��o ra��z destes certificados e adicion��-los no Truststore da mesma forma apresentada.
+:*Lembre-se de alterar os parâmetros acima demonstrados em colchetes.
+:*O certificado digital testado foi da AC Valid, sendo que para uso de outros certificados de outras ACs deve-se verificar a versão raíz destes certificados e adicioná-los no Truststore da mesma forma apresentada.
 
-=== Configura����o do LDAP no Wildfly ===
+=== Configuração do LDAP no Wildfly ===
 
-:*Para que seja poss��vel se logar no sistema ou alterar a senha no Active Directory via protocolo LDAP �� necess��rio importar o certificado do AD no Java.
-:*Providencie o certificado do AD junto �� equipe de configura����o e manuten����o do Active Directory, o arquivo deve possuir a exten����o &apos;.crt&apos; ou &apos;.cer&apos;.
-:*Copie o certificado no servidor ou computador que est�� instalado o Wildfly.
-:*Entre na pasta de instala����o do Java JDK JAVA_HOME/jre/bin onde se encontra a instala����o do keytool.
-:*Para importar o certificado no Java JDK basta realizar o comando de importa����o do Keytool previamente apresentado conforme exemplo a seguir:
+:*Para que seja possível se logar no sistema ou alterar a senha no Active Directory via protocolo LDAP é necessário importar o certificado do AD no Java.
+:*Providencie o certificado do AD junto à equipe de configuração e manutenção do Active Directory, o arquivo deve possuir a extenção &apos;.crt&apos; ou &apos;.cer&apos;.
+:*Copie o certificado no servidor ou computador que está instalado o Wildfly.
+:*Entre na pasta de instalação do Java JDK JAVA_HOME/jre/bin onde se encontra a instalação do keytool.
+:*Para importar o certificado no Java JDK basta realizar o comando de importação do Keytool previamente apresentado conforme exemplo a seguir:
 
 &apos;&apos;&apos;keytool -import -alias [ALIAS] -file [CAMINHO ATE O ARQUIVO]/[NOME_CERTIFICADO_AD] -keystore JAVA_HOME/jre/lib/security/cacerts&apos;&apos;&apos;
 
-:*Altere os par��metros de configura����o no sistema conforme defini����es abaixo. Os par��metros espec��ficos do LDAP s��o os prefixados por &apos;ldap&apos;.
+:*Altere os parâmetros de configuração no sistema conforme definições abaixo. Os parâmetros específicos do LDAP são os prefixados por &apos;ldap&apos;.
 
-=Configura����o de Propriedades do Sistema=
+=Configuração de Propriedades do Sistema=
 
-Para alterar a configura����o das propriedades do sistema, deve-se editar o arquivo &apos;&apos;&apos;&apos;&apos;application.properties&apos;&apos;&apos;&apos;&apos; dispon��vel no caminho
+Para alterar a configuração das propriedades do sistema, deve-se editar o arquivo &apos;&apos;&apos;&apos;&apos;application.properties&apos;&apos;&apos;&apos;&apos; disponível no caminho
 
 &apos;&apos;&apos;sat/framework/util-framework/src/main/resources/application.properties&apos;&apos;&apos;
 
-o arquivo cont��m os seguintes par��metros:
+o arquivo contém os seguintes parâmetros:
 
-*&apos;&apos;&apos;exception.log.directory&apos;&apos;&apos; - Caminho para o diret��rio onde ser��o armazenados os Logs das exce����es do sistema. Em caso desta propriedade estar sem informa����o, o sistema armazenar�� os logs na pasta de logs do Wildfly - WILDFLY_HOME/standalone/log.
+*&apos;&apos;&apos;exception.log.directory&apos;&apos;&apos; - Caminho para o diretório onde serão armazenados os Logs das exceções do sistema. Em caso desta propriedade estar sem informação, o sistema armazenará os logs na pasta de logs do Wildfly - WILDFLY_HOME/standalone/log.
 
 *&apos;&apos;&apos;email.host&apos;&apos;&apos; - Host do servidor de email.
 *&apos;&apos;&apos;email.port&apos;&apos;&apos; - Porta do servidor de email.
-*&apos;&apos;&apos;email.username&apos;&apos;&apos; - Usu��rio do servidor de email, o qual ser�� respons��vel por enviar as mensagens do sistema.
-*&apos;&apos;&apos;email.password&apos;&apos;&apos; - Senha do usu��rio do servidor de email.
+*&apos;&apos;&apos;email.username&apos;&apos;&apos; - Usuário do servidor de email, o qual será responsável por enviar as mensagens do sistema.
+*&apos;&apos;&apos;email.password&apos;&apos;&apos; - Senha do usuário do servidor de email.
 
 *&apos;&apos;&apos;host.port&apos;&apos;&apos; - Porta do sistema.
-*&apos;&apos;&apos;certificado.port&apos;&apos;&apos; - Porta para autentica����o do certificado digital.
+*&apos;&apos;&apos;certificado.port&apos;&apos;&apos; - Porta para autenticação do certificado digital.
 
 *&apos;&apos;&apos;ldap.provider.url&apos;&apos;&apos; - URL do LDAP.
 *&apos;&apos;&apos;ldap.provider.url.ssl&apos;&apos;&apos; - URL segura do LDAP.
-*&apos;&apos;&apos;ldap.provider.domain&apos;&apos;&apos; - Dom��nio do LDAP.
-*&apos;&apos;&apos;ldap.provider.baseDomain&apos;&apos;&apos; - Dom��nio de pesquisa de usu��rio do LDAP.
+*&apos;&apos;&apos;ldap.provider.domain&apos;&apos;&apos; - Domínio do LDAP.
+*&apos;&apos;&apos;ldap.provider.baseDomain&apos;&apos;&apos; - Domínio de pesquisa de usuário do LDAP.
 *&apos;&apos;&apos;ldap.provider.userManager&apos;&apos;&apos; - Administrador do LDAP.
 *&apos;&apos;&apos;ldap.provider.passwdManager&apos;&apos;&apos; - Senha do Administrador do LDAP.
-*&apos;&apos;&apos;ldap.connect.timeout&apos;&apos;&apos; - Tempo m��ximo de espera para realizar a conex��o com o LDAP.
+*&apos;&apos;&apos;ldap.connect.timeout&apos;&apos;&apos; - Tempo máximo de espera para realizar a conexão com o LDAP.
 =Casos de Uso=
 
-Os detalhes de cada Classe e M��todo utilizado se encontram no JavaDoc do Sistema e no Diagrama de Classes.
+Os detalhes de cada Classe e Método utilizado se encontram no JavaDoc do Sistema e no Diagrama de Classes.
 
 {|cellpadding=&quot;5&quot; cellspacing=&quot;0&quot; border=&quot;1&quot;
 ! Caso de Uso
@@ -197,17 +197,17 @@ Os detalhes de cada Classe e M��todo utilizado se encontram no JavaDoc do Si
 |-
 | SCEUC0001 || Enviar e-mails aos Contribuintes || N/A
 |-
-| MONUC0001 || Interceptar Padr��o de Erros com Mensagem Amig��vel ao Usu��rio || N/A
+| MONUC0001 || Interceptar Padrão de Erros com Mensagem Amigável ao Usuário || N/A
 |-
 | SEGUC0080 || Login do Sistema                 || /public/login.xhtml &lt;/br&gt; /public/reset-password.xhtml
 |-
-| SEGUC0090 || Selecionar Perfil de Usu��rio     ||  /protected/views/home.xhtml
+| SEGUC0090 || Selecionar Perfil de Usuário     ||  /protected/views/home.xhtml
 |-
-| SEGUC0100 || Visualizar Op����es do Sistema     ||  /protected/views/home.xhtml
+| SEGUC0100 || Visualizar Opções do Sistema     ||  /protected/views/home.xhtml
 |-
 | SEGUC0110 || Logout do Sistema                || N/A
 |-
-| SEGUC0610 || Manter Hist��rico de Acesso das Funcionalidades Acessadas pelos Usu��rios || N/A
+| SEGUC0610 || Manter Histórico de Acesso das Funcionalidades Acessadas pelos Usuários || N/A
 |-
 | SEGUC0620 || Registrar Tentativas Negadas ao Acesso de uma Funcionalidade            || N/A
 |-
@@ -216,7 +216,7 @@ Os detalhes de cada Classe e M��todo utilizado se encontram no JavaDoc do Si
 
 &lt;/br&gt;
 ----
-[[Manual para Manuten����o do Sistema | Voltar]]</text>
+[[Manual para Manutenção do Sistema | Voltar]]</text>
 </revision>
 </page>
 </mediawiki>

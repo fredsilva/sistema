@@ -1,7 +1,7 @@
 <mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
 <siteinfo>
 <sitename>SEFAZ-TO Wiki</sitename>
-<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<base>http://192.168.0.42:8080/jamwiki-1.3.2/en/StartingPoints</base>
 <generator>JAMWiki 1.3.2</generator>
 <case>case-sensitive</case>
 <namespaces>
@@ -26,7 +26,7 @@
 </namespaces>
 </siteinfo>
 <page>
-<title>Par��metros</title>
+<title>Parâmetros</title>
 <ns>0</ns>
 <id>235</id>
 <revision>
@@ -37,19 +37,19 @@
 <id>1</id>
 </contributor>
 <comment />
-<text xml:space="preserve" bytes="736">* [[Manuten����o_de_Bancos|Manuten����o de Bancos]] 
-** [[Manuten����o_de_Ag��ncias_Banc��rias|Manuten����o de Ag��ncias Banc��rias]]
-* [[Manuten����o_de_Conv��nios_da_Arrecada����o|Manuten����o de Conv��nios da Arrecada����o]]
-* [[Manuten����o_de_Grupos_de_CNAEs|Manuten����o de Grupos de CNAE&apos;s]]
-* [[Manuten����o_de_Plano_de_Contas|Manuten����o de Plano de Contas]]
-* [[Manuten����o_de_Receitas_e_Transfer��ncias|Manuten����o de Receitas e Transfer��ncias]]
-* [[Manuten����o_de_Tipos_de_Rejei����o_dos_Arquivos|Manuten����o de Tipos de Rejei����es dos Arquivos]]
-* [[Manuten����o_de_Tipos_de_Pedidos_de_��reas|Manuten����o de Tipos de Pedidos de ��reas]]
-* [[Tipo_de_Pedidos_de_Documentos_e_A����es|Tipo de Pedidos de Documentos e A����es]]
+<text xml:space="preserve" bytes="793">* [[Manutenção_de_Bancos|Manutenção de Bancos]] 
+** [[Manutenção_de_Agências_Bancárias|Manutenção de Agências Bancárias]]
+* [[Manutenção_de_Convênios_da_Arrecadação|Manutenção de Convênios da Arrecadação]]
+* [[Manutenção_de_Grupos_de_CNAEs|Manutenção de Grupos de CNAE&apos;s]]
+* [[Manutenção_de_Plano_de_Contas|Manutenção de Plano de Contas]]
+* [[Manutenção_de_Receitas_e_Transferências|Manutenção de Receitas e Transferências]]
+* [[Manutenção_de_Tipos_de_Rejeição_dos_Arquivos|Manutenção de Tipos de Rejeições dos Arquivos]]
+* [[Manutenção_de_Tipos_de_Pedidos_de_Áreas|Manutenção de Tipos de Pedidos de Áreas]]
+* [[Tipo_de_Pedidos_de_Documentos_e_Ações|Tipo de Pedidos de Documentos e Ações]]
 
 &lt;/br&gt;
 ----
-[[M��dulo de Arrecada����o | Voltar]]</text>
+[[Módulo de Arrecadação | Voltar]]</text>
 </revision>
 </page>
 </mediawiki>

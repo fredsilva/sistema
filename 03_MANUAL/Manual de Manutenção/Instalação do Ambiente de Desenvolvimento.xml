@@ -1,7 +1,7 @@
 <mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
 <siteinfo>
 <sitename>SEFAZ-TO Wiki</sitename>
-<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<base>http://192.168.0.42:8080/jamwiki-1.3.2/en/StartingPoints</base>
 <generator>JAMWiki 1.3.2</generator>
 <case>case-sensitive</case>
 <namespaces>
@@ -26,31 +26,31 @@
 </namespaces>
 </siteinfo>
 <page>
-<title>Instala����o do Ambiente de Desenvolvimento</title>
+<title>Instalação do Ambiente de Desenvolvimento</title>
 <ns>0</ns>
 <id>145</id>
 <revision>
-<id>1289</id>
-<timestamp>2016-10-14T09:17:23Z</timestamp>
+<id>1270</id>
+<timestamp>2016-10-13T16:31:47Z</timestamp>
 <contributor>
 <username>admin</username>
 <id>1</id>
 </contributor>
 <comment />
-<text xml:space="preserve" bytes="12454">&apos;&apos;&apos;Configura����o do ambiente de desenvolvimento&apos;&apos;&apos;
+<text xml:space="preserve" bytes="12853">&apos;&apos;&apos;Configuração do ambiente de desenvolvimento&apos;&apos;&apos;
 
-=&apos;&apos;&apos;Pr�� requisitos:&apos;&apos;&apos; =
+=&apos;&apos;&apos;Pré requisitos:&apos;&apos;&apos; =
 
-* [[Instala����o do Ambiente do Sistema]]
+* [[Instalação do Ambiente do Sistema]]
 
-&apos;&apos;&apos; Caso esteja utilizando uma vers��o anterior e n��o deseja configurar conforme a ��ltima vers��o, ent��o deve-se seguir os passos descritos em cada OS do [[Manual para Manuten����o do Sistema]].&apos;&apos;&apos;
+&apos;&apos;&apos; Caso esteja utilizando uma versão anterior e não deseja configurar conforme a última versão, então deve-se seguir os passos descritos em cada OS do [[Manual para Manutenção do Sistema]].&apos;&apos;&apos;
 =Eclipse MARS 2 =
 
-== Instala����o ==
+== Instalação ==
 
 :*Acessar https://eclipse.org/downloads/ e baixar o instalador do Eclipse Mars 2
 :*Executar o instalador
-:*Selecionar a op����o ���Eclipse IDE for Java Developers���
+:*Selecionar a opção “Eclipse IDE for Java Developers”
 
 [[File:eclipse_1.png|Eclipse 1]]
 
@@ -62,7 +62,7 @@
 
 [[File:eclipse_3.png|Eclipse 3]]
 
-:*Ap��s finaliza����o da instala����o, clicar Launch
+:*Após finalização da instalação, clicar Launch
 
 [[File:eclipse_4.png|Eclipse 4]]
 
@@ -70,30 +70,30 @@
 
 [[File:eclipse_5.png|Eclipse 5]]
 
-== Configura����o Maven ==
+== Configuração Maven ==
 
 :*Clicar em Window-&gt;Preferences
-:*Acessar a op����o Maven-&gt;Installations
+:*Acessar a opção Maven-&gt;Installations
 
 [[File:eclipse_6.png|Eclipse 6]]
 
 :*Clicar Add...
-:*Clicar em ���Directory...���
+:*Clicar em “Directory...”
 
 [[File:eclipse_7.png|Eclipse 7]]
 
-Escolher o local da pasta de instala����o do maven (conforme passo 3) e clicar Finish
-Marcar a instala����o do maven escolhida eclicar OK
+Escolher o local da pasta de instalação do maven (conforme passo 3) e clicar Finish
+Marcar a instalação do maven escolhida eclicar OK
 
 [[File:eclipse_8.png|Eclipse 8]]
 
-== Configura����o Wildfly ==
+== Configuração Wildfly ==
 
 :*Selecionar a aba Servers
 
 [[File:eclipse_9.png|Eclipse 9]]
 
-:*Clicar em ���No servers are available. Click this link to create a new server...���
+:*Clicar em “No servers are available. Click this link to create a new server...”
 :*Selecionar o servidor Wildfly conforme imagem e clicar Next
 
 [[File:eclipse_10.png|Eclipse 10]]
@@ -106,7 +106,7 @@ Marcar a instala����o do maven escolhida eclicar OK
 
 [[File:eclipse_12.png|Eclipse 12]]
 
-:*Refa��a a configura����o, por��m agora ir�� aparecer para selecionar o servidor Wildfly 10.0 quando clicar em ���No servers are available. Click this link to create a new server...���
+:*Refaça a configuração, porém agora irá aparecer para selecionar o servidor Wildfly 10.0 quando clicar em “No servers are available. Click this link to create a new server...”
 :*Selecione o servidor Wildfly 10.0 e clique Next
 
 [[File:eclipse_13.png|Eclipse 13]]
@@ -115,7 +115,7 @@ Marcar a instala����o do maven escolhida eclicar OK
 
 [[File:eclipse_14.png|Eclipse 14]]
 
-:*Na op����o Home Directory selecionar ���Browse...��� e escolher a pasta de instala����o do servidor Wildfly (conforme passo 2.1.b). 
+:*Na opção Home Directory selecionar “Browse...” e escolher a pasta de instalação do servidor Wildfly (conforme passo 2.1.b). 
 :*Clicar Finish
 
 [[File:eclipse_15.png|Eclipse 15]]
@@ -138,35 +138,35 @@ Marcar a instala����o do maven escolhida eclicar OK
 
 [[File:eclipse_19.png|Eclipse 19]]
 
-== Instala����o Checkstyle ==
+== Instalação Checkstyle ==
 
 :*Selecionar Help -&gt; Install New Software...
 
 [[File:eclipse_20.png|Eclipse 20]]
 
-:*Preencher o campo &quot;Work with&quot; com ���http://eclipse-cs.sf.net/update/��� e pressionar enter. Marcar ambas op����es e Instal��-las.
+:*Preencher o campo &quot;Work with&quot; com “http://eclipse-cs.sf.net/update/” e pressionar enter. Marcar ambas opções e Instalá-las.
 
 [[File:eclipse_21.png|Eclipse 21]]
 
-== Instala����o PMD ==
+== Instalação PMD ==
 
 :*Acessar Help-&gt;Install New Software...
-:*Preencher o campo Work with com ���http://sourceforge.net/projects/pmd/files/pmd-eclipse/update-site/��� e pressionar enter. 
-:*Marcar a op����o ���PMD for Eclipse 4��� e instal��-la.
+:*Preencher o campo Work with com “http://sourceforge.net/projects/pmd/files/pmd-eclipse/update-site/” e pressionar enter. 
+:*Marcar a opção “PMD for Eclipse 4” e instalá-la.
 
 [[File:eclipse_22.png|Eclipse 22]]
 
-== Instala����o FindBugs ==
+== Instalação FindBugs ==
 
 :*Acessar Help-&gt;Install New Software... conforme passo 5.5.a
-:*Preencher o campo Work With com ���http://findbugs.cs.umd.edu/eclipse��� e pressionar enter. 
-:*Marcar a op����o FireBugs e instal��-la.
+:*Preencher o campo Work With com “http://findbugs.cs.umd.edu/eclipse” e pressionar enter. 
+:*Marcar a opção FireBugs e instalá-la.
 
 [[File:eclipse_23.png|Eclipse 23]]
 
 == Clonar projeto do Git ==
 
-:*Clicar com o bot��o direito no Project Explorer e selecionar Import-&gt;Import...
+:*Clicar com o botão direito no Project Explorer e selecionar Import-&gt;Import...
 
 [[File:eclipse_24.png|Eclipse 24]]
 
@@ -187,7 +187,7 @@ Marcar a instala����o do maven escolhida eclicar OK
 
 [[File:eclipse_28.png|Eclipse 28]]
 
-:*Selecionar diret��rio destino para o projeto, marcar Clone submodules e clicar Next
+:*Selecionar diretório destino para o projeto, marcar Clone submodules e clicar Next
 
 [[File:eclipse_29.png|Eclipse 29]]
 
@@ -199,7 +199,7 @@ Marcar a instala����o do maven escolhida eclicar OK
 
 [[File:eclipse_31.png|Eclipse 31]]
 
-:*Clicar com o bot��o direito no m��dulo sat e selecionar &apos;&apos;&apos;Run as-&gt;Maven clean&apos;&apos;&apos;, e depois clicar com o bot��o direito no m��dulo sat e selecionar &apos;&apos;&apos;Run as-&gt;Maven install&apos;&apos;&apos;
+:*Clicar com o botão direito no módulo sat e selecionar &apos;&apos;&apos;Run as-&gt;Maven clean&apos;&apos;&apos;, e depois clicar com o botão direito no módulo sat e selecionar &apos;&apos;&apos;Run as-&gt;Maven install&apos;&apos;&apos;
 
 [[File:eclipse_32.png|Eclipse 32]]
 
@@ -209,112 +209,112 @@ Marcar a instala����o do maven escolhida eclicar OK
 
 :*Clique em Deployments-&gt;Add
 
-:*Selecione ���Upload a new Deployment��� e clique Next
+:*Selecione “Upload a new Deployment” e clique Next
 
-:*Em Escolher Arquivo selecione o artefato sat-ear.ear que est�� na pasta sat-ear\target\
+:*Em Escolher Arquivo selecione o artefato sat-ear.ear que está na pasta sat-ear\target\
 
 :*Clique Next
 
 :*Clique Finish
 
-== Importar Configura����es Code Style ==
+== Importar Configurações Code Style ==
 
 :*Acessar Windows-&gt;Preferences.
-:*Em Java-&gt;Code Style-&gt;CodeTemplates, clicar ���Import...��� e selecionar o arquivo ���eclipse_codetemplates.xml��� na raiz do projeto.
+:*Em Java-&gt;Code Style-&gt;CodeTemplates, clicar “Import...” e selecionar o arquivo “eclipse_codetemplates.xml” na raiz do projeto.
 
 [[File:eclipse_33.png|Eclipse 33]]
 
-:*Em Java-&gt;Code Style-&gt;Formatter, clicar ���Import...��� e selecionar o arquivo ���eclipse_formatter.xml��� na raiz do projeto.
-:*Em ���Active profile��� selecionar ���formatter_sefazTO���
+:*Em Java-&gt;Code Style-&gt;Formatter, clicar “Import...” e selecionar o arquivo “eclipse_formatter.xml” na raiz do projeto.
+:*Em “Active profile” selecionar “formatter_sefazTO”
 
 [[File:eclipse_34.png|Eclipse 34]]
 
-:*Em Java-&gt;Code Style-&gt;Organize Imports, clicar em ���Import...���
-:*Selecionar o arquivo ���eclipse.importorder��� na raiz do projeto
+:*Em Java-&gt;Code Style-&gt;Organize Imports, clicar em “Import...”
+:*Selecionar o arquivo “eclipse.importorder” na raiz do projeto
 
 [[File:eclipse_35.png|Eclipse 35]]
 
 :*Clicar OK
 
-== Configura����o arquivos XHTML ==
+== Configuração arquivos XHTML ==
 
 :*Acessar Windows-&gt;Preferences.
 :*Acessar Web-&gt;HTML Files-&gt;Editor.
-:*Alterar ���Line Width��� para 120.
-:*Marcar ���Indent using spaces���.
-:*Alterar ���Indentation Size��� para 4.
+:*Alterar “Line Width” para 120.
+:*Marcar “Indent using spaces”.
+:*Alterar “Indentation Size” para 4.
 :*Clicar OK.
 
 [[File:eclipse_36.png|Eclipse 36]]
 
-== Importar as Configura����es do Checkstyle ==
+== Importar as Configurações do Checkstyle ==
 
 :*Acessar Windows-&gt;Preferences
-:*Em Checkstyle clicar ���New���
+:*Em Checkstyle clicar “New”
 
 [[File:eclipse_37.png|Eclipse 37]]
 
-:*Em ���Type��� escolher ���External Configuration File���
-:*Preencher em name com ���sefaz-to-checkstyle���
+:*Em “Type” escolher “External Configuration File”
+:*Preencher em name com “sefaz-to-checkstyle”
 :*Clicar em browse e encontrar o arquivo checkstyle.xml na raiz do projeto
 :*Clicar OK
 
 [[File:eclipse_38.png|Eclipse 38]]
 
-:*Selecione o arquivo importado e clique ���Set as default���
+:*Selecione o arquivo importado e clique “Set as default”
 
 [[File:eclipse_39.png|Eclipse 39]]
 
-== Importar Configura����es do PMD ==
+== Importar Configurações do PMD ==
 
 [[File:eclipse_40.png|Eclipse 40]]
 
-:*Clicar em ���Import rule set...��� (bot��o abaixo do X vermelho)
-:*Clicar em Browse, selecionar o arquivo ���ruleset.xml��� na raiz do projeto e clicar ok
+:*Clicar em “Import rule set...” (botão abaixo do X vermelho)
+:*Clicar em Browse, selecionar o arquivo “ruleset.xml” na raiz do projeto e clicar ok
 
 [[File:eclipse_41.png|Eclipse 41]]
 
-:*Clicar ���Check all rules��� e depois ok
+:*Clicar “Check all rules” e depois ok
 
 [[File:eclipse_42.png|Eclipse 42]]
 
 == Ativar PMD e Checkstyle ==
 
-:*&apos;&apos;&apos;Para cada um dos m��dulos do projeto&apos;&apos;&apos;, clicar com o bot��o direito e selecionar propriedades
+:*&apos;&apos;&apos;Para cada um dos módulos do projeto&apos;&apos;&apos;, clicar com o botão direito e selecionar propriedades
 
 [[File:eclipse_43.png|Eclipse 43]]
 
-:*Em Checkstyle, marcar ���Checkstyle active for this Project���.
-:*Selecionar ���sefaz-to-checkstyle��� como arquivo de configura����o do Checkstyle.
+:*Em Checkstyle, marcar “Checkstyle active for this Project”.
+:*Selecionar “sefaz-to-checkstyle” como arquivo de configuração do Checkstyle.
 
 [[File:eclipse_44.png|Eclipse 44]]
 
-:*Em PMD, marcar ���Enable PMD��� e clicar OK.
+:*Em PMD, marcar “Enable PMD” e clicar OK.
 
 [[File:eclipse_45.png|Eclipse 45]]
 
 == Alterar Encoding para ISO 8859-1 ==
 
-:*Clicar com o bot��o direito no m��dulo sefaz-to e selecionar Properties
-:*Em Resource, alterar ���Text file encoding��� para ���Other: ISO 8859-1���
+:*Clicar com o botão direito no módulo sefaz-to e selecionar Properties
+:*Em Resource, alterar “Text file encoding” para “Other: ISO 8859-1”
 
 [[File:eclipse_46.png|Eclipse 46]]
 
-:*Repetir para &apos;&apos;&apos;todos os m��dulos&apos;&apos;&apos;
+:*Repetir para &apos;&apos;&apos;todos os módulos&apos;&apos;&apos;
 
 = IntelliJ IDEA =
 
-== Instala����o IntelliJ IDEA ==
-:*Acesse a p��gina de Downloads do website da JetBrains atrav��s do link: https://www.jetbrains.com/idea/download/#section=windows e realize o download do IntelliJ IDEA Community Edition.
+== Instalação IntelliJ IDEA ==
+:*Acesse a página de Downloads do website da JetBrains através do link: https://www.jetbrains.com/idea/download/#section=windows e realize o download do IntelliJ IDEA Community Edition.
 :*Execute o arquivo baixado e selecione Next.
 
 [[File:intellij_1.png|IntelliJ 1]]
 
-:*Pressione Next para seguir com o caminho padr��o de instala����o.
+:*Pressione Next para seguir com o caminho padrão de instalação.
 
 [[File:intellij_2.png|IntelliJ 2]]
 
-:*Selecione a op����o 64-bit laucher e .java e pressione Next.
+:*Selecione a opção 64-bit laucher e .java e pressione Next.
 
 [[File:intellij_3.png|IntelliJ 3]]
 
@@ -326,14 +326,14 @@ Marcar a instala����o do maven escolhida eclicar OK
 
 [[File:intellij_5.png|IntelliJ 5]]
 
-:*Abrir o arquivo vmoptions do IntelliJ, dispon��vel atrav��s do caminho padr��o:
-���C:\Program Files (x86)\JetBrains\IntelliJ IDEA\bin\idea64.exe.vmoptions��� ou ���C:\Program Files (x86)\JetBrains\IntelliJ IDEA\bin\idea.exe.vmoptions��� dependendo do .exe utilizado.
-:*Adicionar na ��ltima linha &quot;-Duser.name=nome.usuario@ntconsult.com.br&quot;, &apos;&apos;&apos;n��o esque��a de adicionar seu nome de usu��rio.&apos;&apos;&apos;
+:*Abrir o arquivo vmoptions do IntelliJ, disponível através do caminho padrão:
+“C:\Program Files (x86)\JetBrains\IntelliJ IDEA\bin\idea64.exe.vmoptions” ou “C:\Program Files (x86)\JetBrains\IntelliJ IDEA\bin\idea.exe.vmoptions” dependendo do .exe utilizado.
+:*Adicionar na última linha &quot;-Duser.name=nome.usuario@ntconsult.com.br&quot;, &apos;&apos;&apos;não esqueça de adicionar seu nome de usuário.&apos;&apos;&apos;
 :*Abra o IntelliJ IDEA.
 
-== Configura����o do Projeto no IntelliJ ==
+== Configuração do Projeto no IntelliJ ==
 
-:*Ao abrir o Intellij selecione a op����o Import Project.
+:*Ao abrir o Intellij selecione a opção Import Project.
 
 [[File:intellij_6.png|IntelliJ 6]]
 
@@ -341,15 +341,15 @@ Marcar a instala����o do maven escolhida eclicar OK
 
 [[File:intellij_7.png|IntelliJ 7]]
 
-:*Selecione a op����o ���Import project from external model��� e selecione Maven e pressione Next.
+:*Selecione a opção “Import project from external model” e selecione Maven e pressione Next.
 
 [[File:intellij_8.png|IntelliJ 8]]
 
-:*Preencha conforme as informa����es da imagem abaixo.
+:*Preencha conforme as informações da imagem abaixo.
 
 [[File:intellij_9.png|IntelliJ 9]]
 
-:*Selecione a op����o ���Environment settings���. Escolha o diret��rio onde est�� o maven (MAVEN_HOME).
+:*Selecione a opção “Environment settings”. Escolha o diretório onde está o maven (MAVEN_HOME).
 
 [[File:intellij_10.png|IntelliJ 10]]
 
@@ -365,79 +365,79 @@ Marcar a instala����o do maven escolhida eclicar OK
 
 [[File:intellij_13.png|IntelliJ 13]]
 
-=== Importa����o da configura����o e formata����o do IntelliJ ===
+=== Importação da configuração e formatação do IntelliJ ===
 
 :*Pressione File &gt; Import Settings.
 
 [[File:intellij_14.png|IntelliJ 14]]
 
 
-:*Importe o arquivo ���settings-intellij.jar��� que se encontra dentro do projeto ���config &gt; config-intellij���.
+:*Importe o arquivo “settings-intellij.jar” que se encontra dentro do projeto “config &gt; config-intellij”.
 
 [[File:intellij_15.png|IntelliJ 15]]
 
 
 &apos;&apos;&apos;OBS:&apos;&apos;&apos;
-&apos;&apos;&apos;Os atalhos do teclado s��o, em grande maioria, os mesmos do Eclipse.&apos;&apos;&apos;
+&apos;&apos;&apos;Os atalhos do teclado são, em grande maioria, os mesmos do Eclipse.&apos;&apos;&apos;
 
-&apos;&apos;&apos;O code style j�� esta configurado de acordo com o checkstyle do projeto.&apos;&apos;&apos;
+&apos;&apos;&apos;O code style já esta configurado de acordo com o checkstyle do projeto.&apos;&apos;&apos;
 
-=== Instala����o dos Plugins de Checkstyle e PMD ===
+=== Instalação dos Plugins de Checkstyle e PMD ===
 
-:*Selecione a op����o File &gt; Settings.
+:*Selecione a opção File &gt; Settings.
 
 [[File:intellij_16.png|IntelliJ 16]]
 
-:*Selecione a op����o Plugins e selecione a op����o ���Browse repositories���.
+:*Selecione a opção Plugins e selecione a opção “Browse repositories”.
 
 [[File:intellij_17.png|IntelliJ 17]]
 
-:*Pesquise por ���checkstyle-idea��� e pressione o bot��o verde ���Install���.
+:*Pesquise por “checkstyle-idea” e pressione o botão verde “Install”.
 
 [[File:intellij_18.png|IntelliJ 18]]
 
-:*Pesquise por ���pmdPlugin��� e pressione o bot��o verde ���Install���.
+:*Pesquise por “pmdPlugin” e pressione o botão verde “Install”.
 
 [[File:intellij_19.png|IntelliJ 19]]
 
-:*D�� um ���restart��� no IntelliJ.
-=== Configura����o do Checkstyle e PMD ===
+:*Dê um “restart” no IntelliJ.
+=== Configuração do Checkstyle e PMD ===
 
-:*Abra a configura����o de checkstyle atrav��s do File &gt; Settings &gt; Other Settings &gt; Checkstyle.
+:*Abra a configuração de checkstyle através do File &gt; Settings &gt; Other Settings &gt; Checkstyle.
 
 [[File:intellij_20.png|IntelliJ 20]]
 
-:*Pressione o s��mbolo ���+��� verde para adicionar o checkstyle. Nas configura����es coloque um nome para o checkstyle e procure pelo arquivo ���checkstyle.xml��� dentro do projeto ���config &gt; config-checkstyle���. Pressione Next.
+:*Pressione o símbolo “+” verde para adicionar o checkstyle. Nas configurações coloque um nome para o checkstyle e procure pelo arquivo “checkstyle.xml” dentro do projeto “config &gt; config-checkstyle”. Pressione Next.
 
 [[File:intellij_21.png|IntelliJ 21]]
 
-:*Selecione o checkstyle rec��m criado e as op����es ���Scan test classes��� e ���Treat Checkstyle errors as warnings���.
+:*Selecione o checkstyle recém criado e as opções “Scan test classes” e “Treat Checkstyle errors as warnings”.
 
 [[File:intellij_22.png|IntelliJ 22]]
 
-:*Para configurar o PMD permane��a Na janela Settings e selecione a op����o PMD dentro de Other Settings.
+:*Para configurar o PMD permaneça Na janela Settings e selecione a opção PMD dentro de Other Settings.
 
 [[File:intellij_23.png|IntelliJ 23]]
 
-:*Pressione o ���+��� verde para adicionar o arquivo PMD ���ruleset.xml���. Este arquivo se encontra dentor do projeto ���config &gt; config-pmd���. Modifique o Target JDK na aba Options para a sua vers��o do Java (1.8).
+:*Pressione o “+” verde para adicionar o arquivo PMD “ruleset.xml”. Este arquivo se encontra dentor do projeto “config &gt; config-pmd”. Modifique o Target JDK na aba Options para a sua versão do Java (1.8).
 
 [[File:intellij_24.png|IntelliJ 24]]
 
-:*Selecione a op����o Apply e seguido Ok. Reinicie o IntelliJ.
+:*Selecione a opção Apply e seguido Ok. Reinicie o IntelliJ.
 
-= HotDeploy da  Aplica����o no Wildfly=
+= HotDeploy da  Aplicação no Wildfly=
 
 :*Inicie o Wildfly Standalone.
-:*Acesse a p��gina do Wildfly atrav��s da URL: http://localhost:9990. Selecione a aba Deployments e pressione o bot��o Add. Selecione a op����o ���Create unmanaged deployment��� e pressione Next.
+:*Acesse a página do Wildfly através da URL: http://localhost:9990. Selecione a aba Deployments e pressione o botão Add. Selecione a opção “Create unmanaged deployment” e pressione Next.
 
 [[File:hotdeploy_1.png|Hot Deploy 1]]
 
-:*Ser�� necess��rio ter executado ao menos um maven deploy do projeto para que se tenha o caminho necess��rio para o ���hot deploy���. Para isto basta disparar um deploy ou utilizar o ���mvn clean deploy��� atrav��s da linha de comando dentro do projeto.
-:*No campo Path cole o caminho da pasta que se encontra dentro de ���web &gt; target��� que contem o .war descompactado. No campo name ser�� o nome desta pasta e no campo Runtime Name ser�� o nome da pasta adicionando o .war, conforme imagem abaixo. Pressione Finish e aguarde a finaliza����o.
+:*Será necessário ter executado ao menos um maven deploy do projeto para que se tenha o caminho necessário para o “hot deploy”. Para isto basta disparar um deploy ou utilizar o “mvn clean deploy” através da linha de comando dentro do projeto.
+:*No campo Path cole o caminho da pasta que se encontra dentro de “web &gt; target” que contem o .war descompactado. No campo name será o nome desta pasta e no campo Runtime Name será o nome da pasta adicionando o .war, conforme imagem abaixo. Pressione Finish e aguarde a finalização.
 
 [[File:hotdeploy_2.png|Hot Deploy 2]]
 
-:*Acesse a aplica����o atrav��s da URL: &quot;localhost:8080/[nome do deploy]&quot;. &apos;&apos;&apos;Atribuindo o nome dado ao deploy na URL.&apos;&apos;&apos;
+:*Acesse a aplicação através da URL: &quot;localhost:8080/[nome do deploy]&quot;. &apos;&apos;&apos;Atribuindo o nome dado ao deploy na URL.&apos;&apos;&apos;
 
 =LINKS=
 
@@ -468,7 +468,7 @@ Marcar a instala����o do maven escolhida eclicar OK
 
 &lt;/br&gt;
 ----
-[[Manual de Manuten����o | Voltar]]
+[[Ambiente de Desenvolvimento | Voltar]]
 </text>
 </revision>
 </page>

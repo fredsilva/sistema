@@ -1,7 +1,7 @@
 <mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
 <siteinfo>
 <sitename>SEFAZ-TO Wiki</sitename>
-<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<base>http://192.168.0.42:8080/jamwiki-1.3.2/en/StartingPoints</base>
 <generator>JAMWiki 1.3.2</generator>
 <case>case-sensitive</case>
 <namespaces>
@@ -26,7 +26,7 @@
 </namespaces>
 </siteinfo>
 <page>
-<title>Manuten����o dos Par��metros Gerais do Sistema</title>
+<title>Manutenção dos Parâmetros Gerais do Sistema</title>
 <ns>0</ns>
 <id>499</id>
 <revision>
@@ -37,97 +37,97 @@
 <id>1</id>
 </contributor>
 <comment />
-<text xml:space="preserve" bytes="4482">Esta funcionalidade tem por objetivo realizar a manuten����o dos registros de Par��metros Gerais do Sistema tendo como op����es a Consulta, Cria����o, Altera����o e Exclus��o. 
+<text xml:space="preserve" bytes="4637">Esta funcionalidade tem por objetivo realizar a manutenção dos registros de Parâmetros Gerais do Sistema tendo como opções a Consulta, Criação, Alteração e Exclusão. 
 
-O objetivo �� simplificar o uso de uma tabela de c��digos com valores que podem ser uma listagem de valores est��ticos ou din��micos para o dom��nio do sistema. No caso de conte��do din��mico que �� um script SQL pode suportar o uso de vari��veis bind de Oracle.
+O objetivo é simplificar o uso de uma tabela de códigos com valores que podem ser uma listagem de valores estáticos ou dinâmicos para o domínio do sistema. No caso de conteúdo dinâmico que é um script SQL pode suportar o uso de variáveis bind de Oracle.
 
-Para acessar a Manuten����o dos Par��metros Gerais do Sistema, �� necess��rio acessar o menu &apos;&apos;&apos;Par��metros Gerais &gt; Gest��o &gt; Manuten����o dos Par��metros Gerais do Sistema&apos;&apos;&apos;.
+Para acessar a Manutenção dos Parâmetros Gerais do Sistema, é necessário acessar o menu &apos;&apos;&apos;Parâmetros Gerais &gt; Gestão &gt; Manutenção dos Parâmetros Gerais do Sistema&apos;&apos;&apos;.
 
 ----
-== Consultando Par��metros Gerais do Sistema Cadastrados ==
+== Consultando Parâmetros Gerais do Sistema Cadastrados ==
 
- Com a funcionalidade de consulta aberta, pode ser consultados as informa����o dos par��metros gerais utilizando o filtro &apos;&apos;&apos;Nome do Par��metro Geral&apos;&apos;&apos; (passos 1) e clicar no bot��o Consultar (passo 2).
+ Com a funcionalidade de consulta aberta, pode ser consultados as informação dos parâmetros gerais utilizando o filtro &apos;&apos;&apos;Nome do Parâmetro Geral&apos;&apos;&apos; (passos 1) e clicar no botão Consultar (passo 2).
 
 
 [[File:1-PARUC0010.jpg|1-PARUC0010]]
 
 
-&apos;&apos;&apos;Considera����es a respeito dos campos a serem preenchidos pelo usu��rio:&apos;&apos;&apos;
+&apos;&apos;&apos;Considerações a respeito dos campos a serem preenchidos pelo usuário:&apos;&apos;&apos;
 
-:*N��o �� obrigat��rio informa o filtro &apos;&apos;&apos;Nome do Par��metro Geral&apos;&apos;&apos;.
-:*N��o h�� diferen��a entre mai��sculas e min��sculas para o filtro da consulta.
-:*Pode der informado parte do nome do par��metro geral. Neste caso o sistema deve encontrar coincid��ncias.
+:*Não é obrigatório informa o filtro &apos;&apos;&apos;Nome do Parâmetro Geral&apos;&apos;&apos;.
+:*Não há diferença entre maiúsculas e minúsculas para o filtro da consulta.
+:*Pode der informado parte do nome do parâmetro geral. Neste caso o sistema deve encontrar coincidências.
 
 
 ----
- Ap��s ser confirmada a consulta no passo 2, �� exibido os dados de hist��rico de acesso (passo 3) conforme filtros informados no passo 1.
+ Após ser confirmada a consulta no passo 2, é exibido os dados de histórico de acesso (passo 3) conforme filtros informados no passo 1.
 
 
 [[File:2-PARUC0010.jpg|2-PARUC0010]]
 
-&apos;&apos;&apos;Considera����es a respeito dos registros retornados pela consulta:&apos;&apos;&apos;
+&apos;&apos;&apos;Considerações a respeito dos registros retornados pela consulta:&apos;&apos;&apos;
 
-:*O resultado da consulta �� ordenada pelo Nome do Par��metro Geral ascendentemente.
-:*O resultado da consulta poder�� ser ordenado por qualquer uma das colunas de retorno, basta clicar no nome da coluna correspondente.
+:*O resultado da consulta é ordenada pelo Nome do Parâmetro Geral ascendentemente.
+:*O resultado da consulta poderá ser ordenado por qualquer uma das colunas de retorno, basta clicar no nome da coluna correspondente.
 
 ----
-== Inserindo novo Par��metro Geral do Sistema ==
+== Inserindo novo Parâmetro Geral do Sistema ==
 
- Para incluir um novo par��metro geral do sistema ao cadastro, acessar a funcionalidade &apos;&apos;&apos;Par��metros Gerais do Sistema&apos;&apos;&apos; e clicar no bot��o &apos;&apos;&apos;Inserir Par��metro Geral&apos;&apos;&apos; (Passo 1).
+ Para incluir um novo parâmetro geral do sistema ao cadastro, acessar a funcionalidade &apos;&apos;&apos;Parâmetros Gerais do Sistema&apos;&apos;&apos; e clicar no botão &apos;&apos;&apos;Inserir Parâmetro Geral&apos;&apos;&apos; (Passo 1).
 
 
 [[File:3-PARUC0010.jpg|3-PARUC0010]]
 
 
 ----
- Ap��s clicar no bot��o &apos;&apos;&apos;Inserir Par��metro Geral&apos;&apos;&apos; (Passo 1), abrir�� uma nova tela para que sejam informados os dados do novo &apos;&apos;&apos;Par��metro Geral do Sistema&apos;&apos;&apos; (Passo 2).
+ Após clicar no botão &apos;&apos;&apos;Inserir Parâmetro Geral&apos;&apos;&apos; (Passo 1), abrirá uma nova tela para que sejam informados os dados do novo &apos;&apos;&apos;Parâmetro Geral do Sistema&apos;&apos;&apos; (Passo 2).
 
 
 [[File:4-PARUC0010.jpg|4-PARUC0010]]
 
 
- Ap��s informar os dados do novo par��metro, basta clicar no bot��o &apos;&apos;&apos;Salvar&apos;&apos;&apos; (Passo 3) para que o novo par��metro seja inserido ao cadastro.
+ Após informar os dados do novo parâmetro, basta clicar no botão &apos;&apos;&apos;Salvar&apos;&apos;&apos; (Passo 3) para que o novo parâmetro seja inserido ao cadastro.
 
-&apos;&apos;&apos;Considera����es a respeito do preenchimento de um novo par��metro geral:&apos;&apos;&apos;
+&apos;&apos;&apos;Considerações a respeito do preenchimento de um novo parâmetro geral:&apos;&apos;&apos;
 
-:*Para a inclus��o de um novo par��metro, deve ser informado os campos: Nome do Par��metro Geral, Objetivo do Par��metro, Tipo Par��metro [Est��tico ou Din��mico] e Conte��do Valores.
-:*�� obrigat��rio que sejam informados todos os campos do cadastro para inclus��o do novo par��metro.
+:*Para a inclusão de um novo parâmetro, deve ser informado os campos: Nome do Parâmetro Geral, Objetivo do Parâmetro, Tipo Parâmetro [Estático ou Dinâmico] e Conteúdo Valores.
+:*É obrigatório que sejam informados todos os campos do cadastro para inclusão do novo parâmetro.
 
 ----
-== Editando um Par��metro Geral do Sistema j�� cadastrado ==
+== Editando um Parâmetro Geral do Sistema já cadastrado ==
 
- Para editar um par��metro geral j�� cadastrado no sistema, acessar a funcionalidade &apos;&apos;&apos;Par��metros Gerais do Sistema&apos;&apos;&apos;, consultar o par��metro desejado e clicar no ��cone de a����es &apos;&apos;&apos;Editar&apos;&apos;&apos; (Passo 1).
+ Para editar um parâmetro geral já cadastrado no sistema, acessar a funcionalidade &apos;&apos;&apos;Parâmetros Gerais do Sistema&apos;&apos;&apos;, consultar o parâmetro desejado e clicar no ícone de ações &apos;&apos;&apos;Editar&apos;&apos;&apos; (Passo 1).
 
 [[File:5-PARUC0010.jpg|5-PARUC0010]]
 
 ----
 
- Ap��s clicar no ��cone &apos;&apos;&apos;Editar&apos;&apos;&apos; (Passo 1), abrir�� uma nova tela para que sejam editadas as informa����es do &apos;&apos;&apos;Par��metro Geral do Sistema&apos;&apos;&apos; (Passo 2).
+ Após clicar no ícone &apos;&apos;&apos;Editar&apos;&apos;&apos; (Passo 1), abrirá uma nova tela para que sejam editadas as informações do &apos;&apos;&apos;Parâmetro Geral do Sistema&apos;&apos;&apos; (Passo 2).
 
 [[File:6-PARUC0010.jpg|6-PARUC0010]]
 
- Ap��s editar as informa����es desejadas do par��metro, basta clicar no bot��o &apos;&apos;&apos;Salvar&apos;&apos;&apos; (Passo 3) para que o par��metro seja atualizado no cadastro.
+ Após editar as informações desejadas do parâmetro, basta clicar no botão &apos;&apos;&apos;Salvar&apos;&apos;&apos; (Passo 3) para que o parâmetro seja atualizado no cadastro.
 
-&apos;&apos;&apos;Considera����es a respeito da edi����o de um par��metro geral j�� cadastrado:&apos;&apos;&apos;
+&apos;&apos;&apos;Considerações a respeito da edição de um parâmetro geral já cadastrado:&apos;&apos;&apos;
 
-:*Para a edi����o de um par��metro, pode ser editado os campos: Nome do Par��metro Geral, Objetivo do Par��metro, Tipo Par��metro [Est��tico ou Din��mico] e Conte��do Valores.
-:*�� obrigat��rio que sejam informados todos os campos do cadastro para edi����o do par��metro.
+:*Para a edição de um parâmetro, pode ser editado os campos: Nome do Parâmetro Geral, Objetivo do Parâmetro, Tipo Parâmetro [Estático ou Dinâmico] e Conteúdo Valores.
+:*É obrigatório que sejam informados todos os campos do cadastro para edição do parâmetro.
 
 ----
-== Excluindo um Par��metro Geral do Sistema j�� cadastrado ==
+== Excluindo um Parâmetro Geral do Sistema já cadastrado ==
 
- Para excluir um par��metro geral do sistema j�� cadastro, acessar a funcionalidade &apos;&apos;&apos;Par��metros Gerais do Sistema&apos;&apos;&apos;, consultar o par��metro desejado e clicar no ��cone de a����es &apos;&apos;&apos;Excluir&apos;&apos;&apos; (Passo 1).
+ Para excluir um parâmetro geral do sistema já cadastro, acessar a funcionalidade &apos;&apos;&apos;Parâmetros Gerais do Sistema&apos;&apos;&apos;, consultar o parâmetro desejado e clicar no ícone de ações &apos;&apos;&apos;Excluir&apos;&apos;&apos; (Passo 1).
 
 [[File:7-PARUC0010.jpg|7-PARUC0010]]
 
 ----
- Ap��s clicar no ��cone &apos;&apos;&apos;Excluir&apos;&apos;&apos; (Passo 1), sistema emite mensagem de confirma����o &apos;&apos;&apos;Excluir o Par��metro Geral?&apos;&apos;&apos;.
+ Após clicar no ícone &apos;&apos;&apos;Excluir&apos;&apos;&apos; (Passo 1), sistema emite mensagem de confirmação &apos;&apos;&apos;Excluir o Parâmetro Geral?&apos;&apos;&apos;.
 
 [[File:8-PARUC0010.jpg|8-PARUC0010]]
 
- Para confirmar a exclus��o do par��metro, clicar no bot��o &apos;&apos;&apos;Sim&apos;&apos;&apos; (Passo 2) e o sistema ir�� excluir o par��metro e emitir a mensagem &apos;&apos;&apos;O par��metro geral foi exclu��do!&apos;&apos;&apos;.
+ Para confirmar a exclusão do parâmetro, clicar no botão &apos;&apos;&apos;Sim&apos;&apos;&apos; (Passo 2) e o sistema irá excluir o parâmetro e emitir a mensagem &apos;&apos;&apos;O parâmetro geral foi excluído!&apos;&apos;&apos;.
 
- Caso deseje cancelar a opera����o de exclus��o, clicar no bot��o &apos;&apos;&apos;N��o&apos;&apos;&apos; (Passo 2) e o sistema volta para a tela de consulta de par��metros gerais e cancela a exclus��o.
+ Caso deseje cancelar a operação de exclusão, clicar no botão &apos;&apos;&apos;Não&apos;&apos;&apos; (Passo 2) e o sistema volta para a tela de consulta de parâmetros gerais e cancela a exclusão.
 </text>
 </revision>
 </page>

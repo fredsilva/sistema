@@ -1,7 +1,7 @@
 <mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
 <siteinfo>
 <sitename>SEFAZ-TO Wiki</sitename>
-<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<base>http://192.168.0.42:8080/jamwiki-1.3.2/en/StartingPoints</base>
 <generator>JAMWiki 1.3.2</generator>
 <case>case-sensitive</case>
 <namespaces>
@@ -26,7 +26,7 @@
 </namespaces>
 </siteinfo>
 <page>
-<title>OS4721 - Par��metros Arrecada����o</title>
+<title>OS4721 - Parâmetros Arrecadação</title>
 <ns>0</ns>
 <id>309</id>
 <revision>
@@ -37,21 +37,21 @@
 <id>1</id>
 </contributor>
 <comment>/* Casos de Uso */ </comment>
-<text xml:space="preserve" bytes="1936">=Instala����o do Ambiente=
+<text xml:space="preserve" bytes="1971">=Instalação do Ambiente=
 
-Para realizar a instal����o do sistema acesse um dos links conforme o sistema operacional utilizado. [[Instala����o do Ambiente do Sistema|Manual de Instala����o do Sistema Windows]] ou [[Instala����o do Ambiente do Sistema Linux|Manual de Instala����o do Sistema Linux]]
+Para realizar a instalção do sistema acesse um dos links conforme o sistema operacional utilizado. [[Instalação do Ambiente do Sistema|Manual de Instalação do Sistema Windows]] ou [[Instalação do Ambiente do Sistema Linux|Manual de Instalação do Sistema Linux]]
 
-=Aplica����o dos Scripts no Banco de dados=
+=Aplicação dos Scripts no Banco de dados=
 
-&apos;&apos;&apos;Para atender as necessidades dos Casos de Uso desenvolvidos na OS4721 �� necess��rio a aplica����o dos scripts de banco de dados:&apos;&apos;&apos;
+&apos;&apos;&apos;Para atender as necessidades dos Casos de Uso desenvolvidos na OS4721 é necessário a aplicação dos scripts de banco de dados:&apos;&apos;&apos;
 
 === Scripts das OS 4721===
 
-:*OS4721 no reposit��rio git -&gt; 01_DOCUMENTACAO_TECNICA/00_DICIONARIO_DADOS/OS4721/
+:*OS4721 no repositório git -&gt; 01_DOCUMENTACAO_TECNICA/00_DICIONARIO_DADOS/OS4721/
 
 =Casos de Uso=
 
-Os detalhes de cada Classe e M��todo utilizado se encontram no JavaDoc do Sistema e no Diagrama de Classes.
+Os detalhes de cada Classe e Método utilizado se encontram no JavaDoc do Sistema e no Diagrama de Classes.
 
 
 {|cellpadding=&quot;5&quot; cellspacing=&quot;0&quot; border=&quot;1&quot;
@@ -59,28 +59,28 @@ Os detalhes de cada Classe e M��todo utilizado se encontram no JavaDoc do Si
 ! Nome do caso de uso
 ! URL
 |-
-| ARRUC0911  || Parametrizar Ag��ncias Banc��rias       || /protected/views/arr/parametros/banco-agencias.xhtml
+| ARRUC0911  || Parametrizar Agências Bancárias       || /protected/views/arr/parametros/banco-agencias.xhtml
 |-
 | ARRUC0910  || Parametrizar Bancos                   || /protected/views/arr/parametros/bancos.xhtml
 |-
-| ARRUC0920  || Parametrizar Conv��nios da Arrecada����o || /protected/views/arr/parametros/convenios-arrec.xhtml
+| ARRUC0920  || Parametrizar Convênios da Arrecadação || /protected/views/arr/parametros/convenios-arrec.xhtml
 |-
-| ARRUC0930  || Parametrizar Grupos de CNAE���s         || /protected/views/arr/parametros/tipo-grupos-cnaes.xhtml
+| ARRUC0930  || Parametrizar Grupos de CNAE’s         || /protected/views/arr/parametros/tipo-grupos-cnaes.xhtml
 |-
 | ARRUC0940  || Parametrizar Plano de Contas          || /protected/views/arr/parametros/plano-contas.xhtml
 |-
-| ARRUC0950  || Parametrizar Receitas e Transfer��ncias Constitucionais || /protected/views/arr/parametros/receitas.xhtml
+| ARRUC0950  || Parametrizar Receitas e Transferências Constitucionais || /protected/views/arr/parametros/receitas.xhtml
 |-
-| ARRUC0960  || Parametrizar Tipos de Pedidos de ��reas                 || /protected/views/arr/parametros/plano-contas.xhtml
+| ARRUC0960  || Parametrizar Tipos de Pedidos de Áreas                 || /protected/views/arr/parametros/plano-contas.xhtml
 |-
-| ARRUC0970  || Parametrizar Tipos de Pedidos de Documento e A����es     || /protected/views/arr/parametros/tipo-pedido-documento.xhtml
+| ARRUC0970  || Parametrizar Tipos de Pedidos de Documento e Ações     || /protected/views/arr/parametros/tipo-pedido-documento.xhtml
 |-
-| ARRUC0980  || Parametrizar Tipos de Rejei����es dos Arquivos           || /protected/views/arr/parametros/tipo-rejeicao-arquivo.xhtml
+| ARRUC0980  || Parametrizar Tipos de Rejeições dos Arquivos           || /protected/views/arr/parametros/tipo-rejeicao-arquivo.xhtml
 |}
 
 &lt;/br&gt;
 ----
-[[Manual para Manuten����o do Sistema | Voltar]]
+[[Manual para Manutenção do Sistema | Voltar]]
 </text>
 </revision>
 </page>

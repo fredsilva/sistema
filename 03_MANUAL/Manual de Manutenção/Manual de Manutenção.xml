@@ -1,7 +1,7 @@
 <mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
 <siteinfo>
 <sitename>SEFAZ-TO Wiki</sitename>
-<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<base>http://192.168.0.42:8080/jamwiki-1.3.2/en/StartingPoints</base>
 <generator>JAMWiki 1.3.2</generator>
 <case>case-sensitive</case>
 <namespaces>
@@ -26,27 +26,27 @@
 </namespaces>
 </siteinfo>
 <page>
-<title>Manual de Manuten����o</title>
+<title>Ambiente de Desenvolvimento</title>
 <ns>0</ns>
 <id>144</id>
 <revision>
-<id>1292</id>
-<timestamp>2016-10-14T10:04:11Z</timestamp>
+<id>1265</id>
+<timestamp>2016-10-13T16:28:40Z</timestamp>
 <contributor>
 <username>admin</username>
 <id>1</id>
 </contributor>
 <comment />
-<text xml:space="preserve" bytes="285">*Manual de Manuten����o
-** [[Instala����o do Ambiente do Sistema|Instala����o do Ambiente do Sistema Windows]]
-** [[Instala����o do Ambiente do Sistema Linux]]
+<text xml:space="preserve" bytes="320">*Configuração do Ambiente de Desenvolvimento
+** [[Instalação do Ambiente do Sistema|Instalação do Ambiente do Sistema Windows]]
+** [[Instalação do Ambiente do Sistema Linux]]
 
-** [[Instala����o do Ambiente de Desenvolvimento]]
-** [[Manual para Manuten����o do Sistema]]
+** [[Instalação do Ambiente de Desenvolvimento]]
+** [[Manual para Manutenção do Sistema]]
 
 &lt;/br&gt;
 ----
-[[P��gina Inicial | Voltar]]
+[[StartingPoints | Voltar]]
 
 
 </text>

@@ -1,7 +1,7 @@
 <mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
 <siteinfo>
 <sitename>SEFAZ-TO Wiki</sitename>
-<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<base>http://192.168.0.42:8080/jamwiki-1.3.2/en/StartingPoints</base>
 <generator>JAMWiki 1.3.2</generator>
 <case>case-sensitive</case>
 <namespaces>
@@ -37,30 +37,30 @@
 <id>1</id>
 </contributor>
 <comment />
-<text xml:space="preserve" bytes="992">Acessar no menu a op����o &apos;&apos;&apos;Selecionar Procurado&apos;&apos;&apos;
+<text xml:space="preserve" bytes="1031">Acessar no menu a opção &apos;&apos;&apos;Selecionar Procurado&apos;&apos;&apos;
 
 [[File:1 - SEGUC0470.jpg|1 - SEGUC0470]]
 
-Nesta tela pode-se escolher o contribuinte com o qual quer trabalhar no sistema. Isto ��, atuar ���em nome de��� um contribuinte que procurou usando o menu &apos;&apos;&apos;Seguran��a do Sistema &gt; Ger��ncia &gt; Procura����o/Retirada das op����es do sistema&apos;&apos;&apos;.
+Nesta tela pode-se escolher o contribuinte com o qual quer trabalhar no sistema. Isto é, atuar “em nome de” um contribuinte que procurou usando o menu &apos;&apos;&apos;Segurança do Sistema &gt; Gerência &gt; Procuração/Retirada das opções do sistema&apos;&apos;&apos;.
 
 [[File:2 - SEGUC0470.jpg|2 - SEGUC0470]]
 
 ----
 == Selecionar Procurado ==
 
-Ap��s selecionar a op����o do menu, ir�� aparecer a lista de procurados que est��o vinculados ao usu��rio logado, como mostrado na figura a seguir:
+Após selecionar a opção do menu, irá aparecer a lista de procurados que estão vinculados ao usuário logado, como mostrado na figura a seguir:
 
 [[File:3 - SEGUC0470.jpg|3 - SEGUC0470]]
 
-Ap��s escolher o usu��rio, aparecer�� no menu a informa����o de que o usu��rio est�� utilizando as procura����es definidas para aquele Procurado. De acordo com a imagem a seguir:
+Após escolher o usuário, aparecerá no menu a informação de que o usuário está utilizando as procurações definidas para aquele Procurado. De acordo com a imagem a seguir:
 
 [[File:4 - SEGUC0470.jpg|4 - SEGUC0470]]
 
-As op����es de menu ser��o recarregadas com as definidas no menu &apos;&apos;&apos;Seguran��a do Sistema &gt; Ger��ncia &gt; Procura����o/Retirada das op����es do sistema&apos;&apos;&apos;.
+As opções de menu serão recarregadas com as definidas no menu &apos;&apos;&apos;Segurança do Sistema &gt; Gerência &gt; Procuração/Retirada das opções do sistema&apos;&apos;&apos;.
 
 &lt;/br&gt;
 ----
-[[Gest��o de Seguran��a | Voltar]]
+[[Gestão de Segurança | Voltar]]
 </text>
 </revision>
 </page>

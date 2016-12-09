@@ -1,7 +1,7 @@
 <mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
 <siteinfo>
 <sitename>SEFAZ-TO Wiki</sitename>
-<base>http://192.168.1.250:28080/jamwiki/en/StartingPoints</base>
+<base>http://192.168.0.42:8080/jamwiki-1.3.2/en/StartingPoints</base>
 <generator>JAMWiki 1.3.2</generator>
 <case>case-sensitive</case>
 <namespaces>
@@ -26,7 +26,7 @@
 </namespaces>
 </siteinfo>
 <page>
-<title>Consulta de comunica����es do sistema via SMS</title>
+<title>Consulta de comunicações do sistema via SMS</title>
 <ns>0</ns>
 <id>480</id>
 <revision>
@@ -37,61 +37,61 @@
 <id>1</id>
 </contributor>
 <comment />
-<text xml:space="preserve" bytes="1979">Est�� funcionalidade tem por objetivo a consulta d das ��ltimas comunica����es enviadas para o usu��rio via SMS.
+<text xml:space="preserve" bytes="2044">Está funcionalidade tem por objetivo a consulta d das últimas comunicações enviadas para o usuário via SMS.
 
-Para consultar as comunica����es eletr��nicas enviadas via SMS, �� necess��rio acessar o menu &apos;&apos;&apos;Principal&apos;&apos;&apos; atrav��s do ��cone [[File:7-SCEUC0004.jpg|7-SCEUC0004]].
+Para consultar as comunicações eletrônicas enviadas via SMS, é necessário acessar o menu &apos;&apos;&apos;Principal&apos;&apos;&apos; através do ícone [[File:7-SCEUC0004.jpg|7-SCEUC0004]].
 
 
 ----
-== Visualiza����o pr��via das Comunica����es do sistema via SMS ==
+== Visualização prévia das Comunicações do sistema via SMS ==
 
- Ao clicar no ��cone de consulta de comunica����es de SMS, sistema exibe os 5 ��ltimos SMS recebidos (passo 1) mais a op����o de &apos;&apos;&apos;Ler tudo&apos;&apos;&apos; (passo 2).
+ Ao clicar no ícone de consulta de comunicações de SMS, sistema exibe os 5 últimos SMS recebidos (passo 1) mais a opção de &apos;&apos;&apos;Ler tudo&apos;&apos;&apos; (passo 2).
 
 
 [[File:8-SCEUC0004.jpg|8-SCEUC0004]]
 
 
-&apos;&apos;&apos;Considera����es a respeito dos registros retornados pela consulta:&apos;&apos;&apos;
+&apos;&apos;&apos;Considerações a respeito dos registros retornados pela consulta:&apos;&apos;&apos;
 
-:*O resultado da consulta �� ordenado descendente pela Data de Recebido.
+:*O resultado da consulta é ordenado descendente pela Data de Recebido.
 
 
 ----
-== Consultando as Comunica����es do sistema via SMS ==
- Ao clicar na op����o &apos;&apos;&apos;Ler tudo&apos;&apos;&apos; no passo 2, �� exibido todas as comunica����es do sistema via SMS enviados nos ��ltimos 30 dias ao usu��rio (passo 3).
+== Consultando as Comunicações do sistema via SMS ==
+ Ao clicar na opção &apos;&apos;&apos;Ler tudo&apos;&apos;&apos; no passo 2, é exibido todas as comunicações do sistema via SMS enviados nos últimos 30 dias ao usuário (passo 3).
 
 
 [[File:9-SCEUC0004.jpg|9-SCEUC0004]]
 
 
-&apos;&apos;&apos;Considera����es a respeito dos registros retornados pela consulta:&apos;&apos;&apos;
+&apos;&apos;&apos;Considerações a respeito dos registros retornados pela consulta:&apos;&apos;&apos;
 
-:*O resultado da consulta �� ordenado descendente pela Data de Recebido.
+:*O resultado da consulta é ordenado descendente pela Data de Recebido.
 
 ----
- Com a consulta aberta, usu��rio pode informar/alterar os filtros para a realiza����o de nova consulta (passo 4) e clicar no bot��o Consultar (passo 5)
+ Com a consulta aberta, usuário pode informar/alterar os filtros para a realização de nova consulta (passo 4) e clicar no botão Consultar (passo 5)
 
 
 [[File:10-SCEUC0004.jpg|10-SCEUC0004]]
 
 
 ----
-== Visualizando Detalhes do SMS de comunica����o ==
+== Visualizando Detalhes do SMS de comunicação ==
 
- Se desejar visualizar mais detalhes do SMS de comunica����o, pode-se acessar a tela Detalhe do SMS atrav��s do ��cone de mesmo nome, conforme passo 6 abaixo.
+ Se desejar visualizar mais detalhes do SMS de comunicação, pode-se acessar a tela Detalhe do SMS através do ícone de mesmo nome, conforme passo 6 abaixo.
 
 [[File:11-SCEUC0004.jpg|11-SCEUC0004]]
 
 
 ----
- Ao clicar no ��cone Detalhe do SMS, no passo 6, �� exibida a janela Detalhe do SMS, com as informa����es do SMS de comunica����o.
+ Ao clicar no ícone Detalhe do SMS, no passo 6, é exibida a janela Detalhe do SMS, com as informações do SMS de comunicação.
 
 [[File:12-SCEUC0004.jpg|12-SCEUC0004]]
 
 
- Essa �� uma tela de visualiza����o somente, na qual as informa����es ficam desabilitados para edi����o.
+ Essa é uma tela de visualização somente, na qual as informações ficam desabilitados para edição.
 
- Para voltar �� tela de consulta de Comunica����es do sistema via SMS, deve-se clicar no bot��o Fechar (passo 7), ou fora da janela de Detalhe do SMS.
+ Para voltar à tela de consulta de Comunicações do sistema via SMS, deve-se clicar no botão Fechar (passo 7), ou fora da janela de Detalhe do SMS.
 
 &lt;/br&gt;
 ----
