@@ -1,7 +1,7 @@
 <mediawiki xmlns="http://www.mediawiki.org/xml/export-0.7/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mediawiki.org/xml/export-0.7/ http://www.mediawiki.org/xml/export-0.7.xsd" version="0.7" xml:lang="en">
 <siteinfo>
 <sitename>SEFAZ-TO Wiki</sitename>
-<base>http://192.168.0.42:8080/jamwiki-1.3.2/en/StartingPoints</base>
+<base>https://satteste.sefaz.to.gov.br/jamwiki/jamwiki/en/StartingPoints</base>
 <generator>JAMWiki 1.3.2</generator>
 <case>case-sensitive</case>
 <namespaces>
@@ -91,14 +91,14 @@ Para cancelar a alteração da senha de acesso, deve-se clicar no botão Fechar 
 <ns>0</ns>
 <id>144</id>
 <revision>
-<id>1265</id>
-<timestamp>2016-10-13T16:28:40Z</timestamp>
+<id>1637</id>
+<timestamp>2016-11-16T14:12:17Z</timestamp>
 <contributor>
 <username>admin</username>
 <id>1</id>
 </contributor>
 <comment />
-<text xml:space="preserve" bytes="320">*Configuração do Ambiente de Desenvolvimento
+<text xml:space="preserve" bytes="321">*Configuração do Ambiente de Desenvolvimento
 ** [[Instalação do Ambiente do Sistema|Instalação do Ambiente do Sistema Windows]]
 ** [[Instalação do Ambiente do Sistema Linux]]
 
@@ -107,7 +107,7 @@ Para cancelar a alteração da senha de acesso, deve-se clicar no botão Fechar 
 
 &lt;/br&gt;
 ----
-[[StartingPoints | Voltar]]
+[[Página Inicial | Voltar]]
 
 
 </text>
@@ -352,21 +352,6 @@ Para consultar as comunicações eletrônicas enviadas via e-mail, é necessári
 &lt;/br&gt;
 ----
 [[Acessando o Sistema | Voltar]]</text>
-</revision>
-</page>
-<page>
-<title>Consulta de comunicações do sistema via Email</title>
-<ns>0</ns>
-<id>479</id>
-<revision>
-<id>1058</id>
-<timestamp>2016-09-09T10:22:55Z</timestamp>
-<contributor>
-<username>admin</username>
-<id>1</id>
-</contributor>
-<comment />
-<text xml:space="preserve" bytes="0" />
 </revision>
 </page>
 <page>
@@ -722,6 +707,114 @@ http://loja.certificadodigital.com.br/Serasa/UPLOAD/Downloads/490.pdf
 &lt;/br&gt;
 ----
 [[Login do Sistema | Voltar]]</text>
+</revision>
+</page>
+<page>
+<title>Executar Testes TI</title>
+<ns>0</ns>
+<id>529</id>
+<revision>
+<id>1659</id>
+<timestamp>2016-12-08T18:25:25Z</timestamp>
+<contributor>
+<username>34786546100</username>
+<id>3</id>
+</contributor>
+<comment />
+<text xml:space="preserve" bytes="5043">[[File:ExecutarTesteTI.png|Executar Testes TI]]
+= Análise de Cobertura de Código =
+== Processo ==
+Emitir o relatório dos dados coletados pelo JaCoCo e analisar seu resultado verificando quais partes do código não foi executados.&lt;br/&gt;
+Dentro dos códigos não executados devem observar se esta parte não foi alcançada por falta de teste ou não.&lt;br/&gt;
+&lt;br/&gt;
+&lt;font color=red&gt;&apos;&apos;&apos;O relatório do JaCoCo é criado somente quando paramos o servidor de aplicação.&apos;&apos;&apos;&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;
+Copiar o arquivo jacoco.exec (coleta de dados) do servidor para a estação de trabalho.&lt;br/&gt;
+Importar o jacoco.exec para o eclipse:
+  Botão direito na View Coverage
+  Clicar em Import Session
+  Selecionar a opção: Coverage Session
+  Selecionar o arquivo jacoco.exec
+  Clicar no botão Neste
+  Selecionar os projetos que estão sendo analisados
+  Clicar no botão Finish
+[[File:ImportarJacoco.png|none|700px|Selecionar Opção de Importar]]
+[[File:SelecionarCoverageSession.png|none|700px|Selecionar Opção Coverage Session]]
+[[File:RelatorioJacoco.png|none|700px|Relatório JaCoCo]]
+&lt;br/&gt;
+&apos;&apos;&apos;Verificar no relatório quais foram as classes e qual foi o motivo da não coberta.&apos;&apos;&apos;
+== Ferramenta ==
+No lado do servidor deve incluir uma opção na variável JAVA_OPTS para que seja feito a conta de dados das classes instrumentais.
+Para isto deve ir ao diretório: 
+  $JBOSS_HOME/bin
+Incluir no final do arquivo standalone.conf a seguite linha:
+  JAVA_OPTS=&quot;$JAVA_OPTS -javaagent:{onde o JaCoCo foi instalado}/lib/jacocoagent.jar=destfile={onde deseja salvar a coleta de dados}/jacoco.exec,append=true&quot;
+Reinicar o servidor de aplicação&lt;br/&gt;
+  A opção &apos;&apos;&apos;append=true&apos;&apos;&apos; sempre adiciona as novas coletas ao arquivo já existente. Sugiro que sempre que acabar um ciclo de testes, este arquivo deve ser movido desta pasta para uma coleta limpa no novo ciclo
+Para baixar o [http://www.eclemma.org/jacoco/ JaCoCo]
+= Análise de Performance =
+== Processo ==
+VisualVM é uma ferramenta que integra várias outras ferramentas de linha de comando da JDK(jconsole, jinfo, jstack…) já existentes. Com ele é possível monitorar e analisar suas aplicações Java através de relatórios e gráficos em tempo real.&lt;br/&gt;
+Executar no cliente (estação onde será realizada a analise) o seguinte comando:
+  jvisualvm -cp:a {path onde encontra o pacote}/jboss-client.jar
+&lt;br/&gt;&lt;font color=red&gt;&apos;&apos;&apos;Copiar o pacote jboss-client,jar do servidor de aplicação para a estação de trabalho.&apos;&apos;&apos;&lt;/font&gt;&lt;br/&gt;&lt;br/&gt;
+[[File:visualvm monitor.png|none|700px|Java VisualVM Monitor]]
+[[File:visualvm sampler.png|none|700px|Java VisualVM Sample]]
+&lt;br/&gt;
+&apos;&apos;&apos;Verificar na aba Sampler quais são as classes que estão gerando impacto no tempo de resposta da aplicação.&apos;&apos;&apos;
+== Ferramenta ==
+No lado do servidor deve criar (sugestão: criar em $JBOSS_HOME) um arquivo com o nome security.policy e o seguinte conteúdo:
+  grant codebase &quot;file:$JAVA_HOME/lib/tools.jar&quot; {    
+    permission java.security.AllPermission;
+  };
+e executar o seguinte comando:
+  $JAVA_HOME/bin/jstatd -J-Djava.security.policy=$JBOSS_HOME/security.policy
+No lado do cliente devemos executar o Java VisualVM com o seguinte comando:
+   jvisualvm -cp:a {path onde encontra o pacote}/jboss-client.jar
+Adicionar a conexão remota
+  Clicar no botão Add JMX Connections
+  Informar a Connection
+    service:jmx:http-remoting-jmx://{URL do Sistema}:9990
+  Informar o username e Password do administrador
+  Para salvar a conexão: clicar no botão Ok
+[[File:visualvm jmx.png|none|700px|Java VisualVM Conexão JMX]]
+  Para apresentar apenas os dados das classes do projeto: na aba Sampler selecionar a opção Settings &gt;&gt; selecionar a opção Profile only packages &gt;&gt; informar o seguinte valor: br.gov.to.sefaz.*
+  Para salvar as alterações: clicar no botão Salvar e escolher um nome para o Preset e desmarcar a opção Settings
+  Para iniciar a coleta de dados: na aba Sampler clicar no botão [CPU]
+[[File:visualvm settings.png|none|700px|Java VisualVM Sampler Settings]]
+= Verificação de Documentação Técnica =
+== Processo ==
+Verificar se a documentação técnica entregue pela fábrica e estão de acordo com o esperado.
+A documentação técnica encontra-se em:
+  ./sistema/01_DOCUMENTACAO_TECNICA
+Os documentos que devem ser verificados são
+  Diagramas
+  Java Doc
+= Abrir Mantis =
+== Processo ==
+Para cada inconsistência aberta deve abrir um caso no mantis.&lt;br/&gt;
+&lt;br/&gt;
+Para abrir o caso no mantis deve acessar a seguinte URL
+  http://wpbastos.com/mantis
+Selecionar o projeto.&lt;br/&gt;
+Clica em relatar caso.
+[[File:MantisRelatarCaso.png|none|700px|Relatar caso no mantis]]
+informar os dados da inconformidade encontrada.&lt;br/&gt;
+* &apos;&apos;&apos;Categoria&apos;&apos;&apos;: 
+* &apos;&apos;&apos;Versão do produto&apos;&apos;&apos;:
+* &apos;&apos;&apos;Atribuir a&apos;&apos;&apos;:
+* &apos;&apos;&apos;Resumo&apos;&apos;&apos;:
+* &apos;&apos;&apos;Descrição&apos;&apos;&apos;:
+* &apos;&apos;&apos;Passos para Reprodução&apos;&apos;&apos;:
+* &apos;&apos;&apos;Informações Adicionais&apos;&apos;&apos;:
+* &apos;&apos;&apos;Caso de Uso&apos;&apos;&apos;:
+* &apos;&apos;&apos;Tipo de Inconformidade&apos;&apos;&apos;:
+* &apos;&apos;&apos;Enviar Arquivo&apos;&apos;&apos;:
+Clicar no botão Enviar Relatório
+[[File:MantisCaso.png|none|700px|Novo caso no mantis]]
+
+&lt;/br&gt;
+----
+[[Processos de Testes | Voltar]]</text>
 </revision>
 </page>
 <page>
@@ -1378,6 +1471,170 @@ Após selecionado uma das combinações de &apos;&apos;&apos;&apos;&apos;Tipo de
 ----
 [[Módulo de Segurança | Voltar]]
 </text>
+</revision>
+</page>
+<page>
+<title>Instalar os Componentes Recebidos da FSW</title>
+<ns>0</ns>
+<id>530</id>
+<revision>
+<id>1660</id>
+<timestamp>2016-12-08T18:26:33Z</timestamp>
+<contributor>
+<username>34786546100</username>
+<id>3</id>
+</contributor>
+<comment />
+<text xml:space="preserve" bytes="8731">[[File:InstalarComponentesRecebidosFSW.png|Instalar os Componentes Recebido da FSW]]
+= Compilação =
+== Processo ==
+Sempre que a FSW entregar uma nova OS, deve-se compilar e empacotar os códigos fontes em um novo arquivo EAR. Neste momento da compilação realizamos os testes de analise estática do código e a instrumentação para a cobertura de código.&lt;br/&gt;
+&lt;br/&gt;&lt;font color=red&gt;&apos;&apos;&apos;Para a compilação deve ter o ambiente de desenvolvimento instalado e configurado. Vide [[Instalação do Ambiente de Desenvolvimento]].&apos;&apos;&apos;&lt;/font&gt;&lt;br/&gt;&lt;/br&gt;
+Para a compilação devemos ir ao diretório onde está os códigos fontes:&lt;br/&gt;
+  ./sistema/02_FONTES
+&lt;br/&gt;&lt;font color=red&gt;&apos;&apos;&apos;Para configuração dos parâmetros do sistema vide [[Instalação do Ambiente do Sistema]] ou [[Instalação do Ambiente do Sistema Linux]] o item 3 - Configuração do Sistema.&apos;&apos;&apos;&lt;/font&gt;&lt;br/&gt;&lt;/br&gt;
+Digitar o seguinte comando:
+  mvn clean pmd:check checkstyle:check org.jacoco:jacoco-maven-plugin:prepare-agent package
+Verificar o log de execução do Maven, se não ocorrer nenhum erro na execução o processo foi executado com sucesso.
+== Ferramenta ==
+As ferramentas abaixo devem estar configuradas antes da compilação.
+=== PMD ===
+Aplica uma gama de regras para verificar se práticas corretas estão sendo realizadas, como evitar duplicação de código, garantir o correto uso de encoding, implementação do método clone(), tamanho de métodos e classes, tamanho de parâmetros, uso do padrão Singleton, criação desnecessária de variáveis locais e muitas outras. O conjunto de regras é extenso e visa garantir que o código apresente as melhores práticas possíveis. A ferramenta a ser utilizada para aplicar boas práticas é o [https://pmd.github.io PMD].&lt;br/&gt;
+&lt;br/&gt;
+Para configurar o PMD é necessário incluir o seguinte plugin em build no Maven (./sistema/02_FONTES/pom.xm)
+  &lt;plugin&gt;
+    &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+    &lt;artifactId&gt;maven-pmd-plugin&lt;/artifactId&gt;
+    &lt;version&gt;3.6&lt;/version&gt;
+    &lt;configuration&gt;
+      &lt;printFailingErrors&gt;true&lt;/printFailingErrors&gt;
+      &lt;includeTests&gt;true&lt;/includeTests&gt;
+      &lt;rulesets&gt;
+        &lt;ruleset&gt;${user.dir}/config/config-pmd/ruleset.xml&lt;/ruleset&gt;
+      &lt;/rulesets&gt;
+    &lt;/configuration&gt;
+  &lt;/plugin&gt;
+e o seguinte plugin em reporting no Maven (./sistema/02_FONTES/pom.xm)
+  &lt;plugin&gt;
+    &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+    &lt;artifactId&gt;maven-jxr-plugin&lt;/artifactId&gt;
+    &lt;version&gt;2.5&lt;/version&gt;
+  &lt;/plugin&gt;
+Para executar a validação estática do código com o PMD deve ir para o diretório:
+  ./sistema/02_FONTES
+e digitar o seguinte comando:
+  mvn clean pmd:check
+Verificar o log de execução do Maven, se não ocorrer nenhum erro na execução (caso ocorra um erro analisar se o erro foi ocasionado pela configuração ou alguma regra não atendida) a configuração foi executada com sucesso.
+=== Checkstyle ===
+Considera elementos como identação, espaços e tabs, convenção de nomes, número de parâmetros, alinhamento na vertical, formato e presença de comentários, dentre outros. São todos os aspectos que contribuem para tornar o código mais padronizado, organizado e legível. A ferramenta a ser utilizada para verificação por estilo é o [http://checkstyle.sourceforge.net Checkstyle].&lt;br/&gt;
+&lt;br/&gt;
+Para configurar o Checkstyle é necessário incluir o seguinte plugin em build no Maven (./sistema/02_FONTES/pom.xm)
+  &lt;plugin&gt;
+    &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+    &lt;artifactId&gt;maven-checkstyle-plugin&lt;/artifactId&gt;
+    &lt;version&gt;${maven-checkstyle-plugin.version}&lt;/version&gt;
+    &lt;configuration&gt;
+      &lt;configLocation&gt;${user.dir}/config/config-checkstyle/checkstyle.xml&lt;/configLocation&gt;
+      &lt;consoleOutput&gt;true&lt;/consoleOutput&gt;
+      &lt;violationSeverity&gt;warning&lt;/violationSeverity&gt;
+      &lt;includeTestResources&gt;true&lt;/includeTestResources&gt;
+    &lt;/configuration&gt;
+  &lt;/plugin&gt;
+Para executar a validação estática do código com o Checkstyle deve ir para o diretório
+  ./sistema/02_FONTES
+e digitar o seguinte comando:
+  mvn clean checkstyle:check
+Verificar o log de execução do Maven, se não ocorrer nenhum erro na execução (caso ocorra um erro analisar se o erro foi ocasionado pela configuração ou alguma regra não atendida) a configuração foi executada com sucesso.
+=== Jacoco ===
+Instrumenta as classes para coletar os dados para o relatório de cobertura de código. A ferramenta a ser utilizada para cobertura de código é [http://www.eclemma.org/jacoco/ JaCoCo].&lt;br/&gt;
+&lt;br/&gt;
+Para configurar o JaCoCo é necessário incluir o seguinte plugin em build no Maven (./sistema/02_FONTES/pom.xm)
+  &lt;plugin&gt;
+    &lt;groupId&gt;org.jacoco&lt;/groupId&gt;
+    &lt;artifactId&gt;jacoco-maven-plugin&lt;/artifactId&gt;
+    &lt;version&gt;0.7.7.201606060606&lt;/version&gt;
+    &lt;executions&gt;
+      &lt;execution&gt;
+        &lt;id&gt;agent&lt;/id&gt;
+         &lt;goals&gt;
+           &lt;goal&gt;prepare-agent&lt;/goal&gt;
+         &lt;/goals&gt;
+       &lt;/execution&gt;
+     &lt;/executions&gt;
+   &lt;/plugin&gt;
+Editar o arquivo:
+  ./sistema/02_FONTES/web/view-web/src/main/webapp/WEB-INF/spring/spring.xml
+incluir antes da tag &lt;/beans&gt; a seguinte linha:
+  &lt;aop:aspectj-autoproxy proxy-target-class=&quot;true&quot;/&gt;
+Adicionar dentro da tag beans a seguinte linha:
+  xmlns:aop=&quot;http://www.springframework.org/schema/aop&quot;
+Adicionar dentro de xsi:schemaLocation da tag beans a seguinte linha:
+  http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd&quot;
+O arquivo spring.xml completo deve ficar algo assim:
+  &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+  &lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot; 
+         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xmlns:mvc=&quot;http://www.springframework.org/schema/mvc&quot;
+         xmlns:context=&quot;http://www.springframework.org/schema/context&quot;
+         &lt;font color=red&gt;xmlns:aop=&quot;http://www.springframework.org/schema/aop&quot;&lt;/font&gt;
+         xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+                             http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+                             http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+                             &lt;font color=red&gt;http://www.springframework.org/schema/context http://www.springframework.org/schema/task/spring-context-3.0.xsd&lt;/font&gt;
+                             http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd&quot;&gt;
+      &lt;mvc:annotation-driven/&gt;
+      &lt;mvc:default-servlet-handler/&gt;
+      &lt;context:annotation-config/&gt;
+      &lt;context:component-scan base-package=&quot;br.gov.to.sefaz.*.configuration&quot;/&gt;
+      &lt;font color=red&gt;&lt;aop:aspectj-autoproxy proxy-target-class=&quot;true&quot;/&gt;&lt;/font&gt;
+  &lt;/beans&gt;
+Para instrumentar as classes para a cobertura de código deve ir para o diretório
+  ./sistema/02_FONTES
+e digitar o seguinte comando:
+  mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent
+Verificar o log de execução do Maven, se não ocorrer nenhum erro na execução a configuração foi executada com sucesso.
+= Atualizar Banco de Dados =
+== Processo ==
+Verificar se precisa atualizar o Banco de Dados com os scripts da OS.&lt;br/&gt;
+&lt;br/&gt;&lt;font color=red&gt;&apos;&apos;&apos;Para o ver os scripts de banco de dados vide [[Manual para Manutenção do Sistema]]&apos;&apos;&apos;&lt;/font&gt;
+= Deploy =
+== Processo ==
+Deve ser disponibilizado o arquivo EAR no servidor de aplicação para liberar o aplicativo para testes funcionais.&lt;br/&gt;
+&lt;br/&gt;&lt;font color=red&gt;&apos;&apos;&apos;Para o deploy do sistema vide [[Instalação do Ambiente do Sistema]] ou [[Instalação do Ambiente do Sistema Linux]] o item 4 - Deploy do Sistema.&apos;&apos;&apos;&lt;/font&gt;
+= Teste Fumaça =
+== Processo ==
+Executar um conjunto de casos de testes para garantir que o mínimo necessário do sistema esteja funcionando para dar inicio os testes funcionais.
+== Ferramenta ==
+=== Plano de teste fumaça ===
+Este plano encontra-se em:
+  ./pmat/planoTesteFumaça.docx
+= Abrir Mantis =
+== Processo ==
+Para cada inconsistência aberta deve abrir um caso no mantis.&lt;br/&gt;
+&lt;br/&gt;
+Para abrir o caso no mantis deve acessar a seguinte URL
+  http://wpbastos.com/mantis
+Selecionar o projeto.&lt;br/&gt;
+Clica em relatar caso.
+[[File:MantisRelatarCaso.png|none|700px|Relatar caso no mantis]]
+informar os dados da inconformidade encontrada.&lt;br/&gt;
+* &apos;&apos;&apos;Categoria&apos;&apos;&apos;: 
+* &apos;&apos;&apos;Versão do produto&apos;&apos;&apos;:
+* &apos;&apos;&apos;Atribuir a&apos;&apos;&apos;:
+* &apos;&apos;&apos;Resumo&apos;&apos;&apos;:
+* &apos;&apos;&apos;Descrição&apos;&apos;&apos;:
+* &apos;&apos;&apos;Passos para Reprodução&apos;&apos;&apos;:
+* &apos;&apos;&apos;Informações Adicionais&apos;&apos;&apos;:
+* &apos;&apos;&apos;Caso de Uso&apos;&apos;&apos;:
+* &apos;&apos;&apos;Tipo de Inconformidade&apos;&apos;&apos;:
+* &apos;&apos;&apos;Enviar Arquivo&apos;&apos;&apos;:
+Clicar no botão Enviar Relatório
+[[File:MantisCaso.png|none|700px|Novo caso no mantis]]
+
+
+&lt;/br&gt;
+----
+[[Processos de Testes | Voltar]]</text>
 </revision>
 </page>
 <page>
@@ -2850,38 +3107,6 @@ http://loja.certificadodigital.com.br/Serasa/UPLOAD/Downloads/490.pdf
 </revision>
 </page>
 <page>
-<title>Logout Sistema</title>
-<ns>0</ns>
-<id>297</id>
-<revision>
-<id>540</id>
-<timestamp>2016-06-13T16:46:31Z</timestamp>
-<contributor>
-<username>admin</username>
-<id>1</id>
-</contributor>
-<comment />
-<text xml:space="preserve" bytes="634">Para efetuar o Logout no sistema, é necessário clicar na opção &quot;SAIR DO SISTEMA&quot;, disponível no menu principal, conforme imagem abaixo:
-
-[[File:Logout_sistema.jpg|caption]]
-
-Após é exibido mensagem para confirmação do usuário: &quot;Você deseja realmente sair?&quot;
-
-
-O usuário confirma a operação de Logout, então o sistema encerra a sessão do usuário e exibe a tela de Login do Sistema Tributário.
-
-
-[[File:Login_tela.jpg|caption]]
-
-
-
-&apos;&apos;É importante ressaltar que ao exceder o tempo limite de inatividade de cinco minutos (configuração de controle de sessão), será realizado o Logout automaticamente pelo sistema.&apos;&apos;
-
-
-</text>
-</revision>
-</page>
-<page>
 <title>Logout do Sistema</title>
 <ns>0</ns>
 <id>301</id>
@@ -2984,14 +3209,14 @@ Ao clicar, aparecerá uma mensagem de confirmação, para efetivar a exclusão.
 <ns>0</ns>
 <id>233</id>
 <revision>
-<id>1625</id>
-<timestamp>2016-10-26T16:08:35Z</timestamp>
+<id>1636</id>
+<timestamp>2016-11-16T14:12:00Z</timestamp>
 <contributor>
 <username>admin</username>
 <id>1</id>
 </contributor>
 <comment />
-<text xml:space="preserve" bytes="3189">* [[Acessando_o_Sistema|Acessando o Sistema]]
+<text xml:space="preserve" bytes="3190">* [[Acessando_o_Sistema|Acessando o Sistema]]
 ** [[Login_do_Sistema|Login do Sistema]]
 *** [[Efetuar_Login_no_Sistema_com_CPF|Efetuar Login no Sistema com CPF]]
 *** [[Efetuar_Login_no_Sistema_com_Certificado_Digital|Efetuar Login no Sistema com Certificado Digital]]
@@ -3042,7 +3267,7 @@ Ao clicar, aparecerá uma mensagem de confirmação, para efetivar a exclusão.
 
 &lt;/br&gt;
 ----
-[[StartingPoints | Voltar]]</text>
+[[Página Inicial | Voltar]]</text>
 </revision>
 </page>
 <page>
@@ -3071,21 +3296,6 @@ Ao clicar, aparecerá uma mensagem de confirmação, para efetivar a exclusão.
 ----
 [[Ambiente de Desenvolvimento | Voltar]]
 </text>
-</revision>
-</page>
-<page>
-<title>Manutencao convenios arrecadacao</title>
-<ns>0</ns>
-<id>28</id>
-<revision>
-<id>110</id>
-<timestamp>2016-05-27T14:42:18Z</timestamp>
-<contributor>
-<username>admin</username>
-<id>1</id>
-</contributor>
-<comment />
-<text xml:space="preserve" bytes="0" />
 </revision>
 </page>
 <page>
@@ -3795,27 +4005,6 @@ Para cancelar a exclusão, deve-se clicar no botão Não, ou clicar fora da jane
 ----
 [[Gestão de Segurança | Voltar]]
 </text>
-</revision>
-</page>
-<page>
-<title>Manutenção de Postos do Trabalho</title>
-<ns>0</ns>
-<id>322</id>
-<revision>
-<id>655</id>
-<timestamp>2016-06-22T16:32:12Z</timestamp>
-<contributor>
-<username>admin</username>
-<id>1</id>
-</contributor>
-<comment />
-<text xml:space="preserve" bytes="243">Acessar o menu &apos;&apos;&apos;Segurança do Sistema &gt; Gerência &gt; Manutenção de Postos de Trabalho.&apos;&apos;&apos;
-
-Abrirá a tela de localização contendo a lista de Postos de Trabalho cadastrados.
-
-== Visualizando todos os Postos de Trabalho cadastrados ==
-
-----</text>
 </revision>
 </page>
 <page>
@@ -4923,21 +5112,6 @@ Para acessar a Manutenção dos Parâmetros Gerais do Sistema, é necessário ac
 </revision>
 </page>
 <page>
-<title>Modulo arrecadacao</title>
-<ns>0</ns>
-<id>9</id>
-<revision>
-<id>50</id>
-<timestamp>2016-05-27T09:13:01Z</timestamp>
-<contributor>
-<username>admin</username>
-<id>1</id>
-</contributor>
-<comment />
-<text xml:space="preserve" bytes="5">xxxxx</text>
-</revision>
-</page>
-<page>
 <title>Módulo de Arrecadação</title>
 <ns>0</ns>
 <id>234</id>
@@ -5022,21 +5196,6 @@ Para acessar a Manutenção dos Parâmetros Gerais do Sistema, é necessário ac
 &lt;/br&gt;
 ----
 [[Manual de Usuário | Voltar]]</text>
-</revision>
-</page>
-<page>
-<title>Ntconsult</title>
-<ns>0</ns>
-<id>236</id>
-<revision>
-<id>405</id>
-<timestamp>2016-05-30T11:43:49Z</timestamp>
-<contributor>
-<username>admin</username>
-<id>1</id>
-</contributor>
-
-<text xml:space="preserve" bytes="3">ola</text>
 </revision>
 </page>
 <page>
@@ -5497,14 +5656,14 @@ Os detalhes de cada Classe e Método utilizado se encontram no JavaDoc do Sistem
 <ns>0</ns>
 <id>527</id>
 <revision>
-<id>1636</id>
-<timestamp>2016-10-31T10:17:56Z</timestamp>
+<id>1633</id>
+<timestamp>2016-10-31T10:04:01Z</timestamp>
 <contributor>
 <username>admin</username>
 <id>1</id>
 </contributor>
 <comment>/* Modificações Realizadas na Instalação do Ambiente */ </comment>
-<text xml:space="preserve" bytes="2502">=Aplicação dos Scripts no Banco de dados=
+<text xml:space="preserve" bytes="2371">=Aplicação dos Scripts no Banco de dados=
 
 &apos;&apos;&apos;Para atender as necessidades dos Casos de Uso desenvolvidos na OS4797 é necessário a aplicação dos scripts de banco de dados:&apos;&apos;&apos;
 
@@ -5524,7 +5683,7 @@ Os detalhes de cada Classe e Método utilizado se encontram no JavaDoc do Sistem
 
 Foram realizadas modificações no [[Instalação do Ambiente do Sistema|Manual de Instalação do Sistema Windows]] ou [[Instalação do Ambiente do Sistema Linux|Manual de Instalação do Sistema Linux]].
 
-Foi adicionado um arquivo de configurações customizadas do sistema. Para alterar a configuração das propriedades customizadas do sistema, deve-se editar o arquivo &apos;&apos;&apos;&apos;&apos;custom.properties&apos;&apos;&apos;&apos;&apos; disponível no caminho &apos;&apos;&apos;&apos;&apos;(WILDFLY_HOME/standalone/configuration/custom.properties)&apos;&apos;&apos;&apos;&apos;, onde WILDFLY_HOME compreende à pasta onde o servidor de aplicação está instalado. Ao alterar o arquivo, automaticamente o sistema começa a ler o novo valor da propriedade, sem necessitar reiniciar a aplicação. Por isso a propriedade *&apos;&apos;&apos;arrec.directory&apos;&apos;&apos; que contém o diretório que realiza a recepção dos arquivos de arrecadação foi retirada do arquivo &apos;&apos;&apos;&apos;&apos;application.properties&apos;&apos;&apos;&apos;&apos; e adicionada em &apos;&apos;&apos;&apos;&apos;custom.properties&apos;&apos;&apos;&apos;&apos;
+Foi adicionado um arquivo de configurações customizadas do sistema. Para alterar a configuração das propriedades customizadas do sistema, deve-se editar o arquivo &apos;&apos;&apos;&apos;&apos;custom.properties&apos;&apos;&apos;&apos;&apos; disponível no caminho &apos;&apos;&apos;&apos;&apos;(WILDFLY_HOME/standalone/configuration/custom.properties)&apos;&apos;&apos;&apos;&apos;, onde WILDFLY_HOME compreende à pasta onde o servidor de aplicação está instalado. Por isso a propriedade *&apos;&apos;&apos;arrec.directory&apos;&apos;&apos; que contém o diretório que realiza a recepção dos arquivos de arrecadação foi retirada do arquivo &apos;&apos;&apos;&apos;&apos;application.properties&apos;&apos;&apos;&apos;&apos; e adicionada em &apos;&apos;&apos;&apos;&apos;custom.properties&apos;&apos;&apos;&apos;&apos;
 
 = Casos de uso =
 
@@ -5633,6 +5792,29 @@ Os detalhes de cada Classe e Método utilizado se encontram no JavaDoc do Sistem
 </revision>
 </page>
 <page>
+<title>Processos de Testes</title>
+<ns>0</ns>
+<id>528</id>
+<revision>
+<id>1674</id>
+<timestamp>2016-12-08T19:06:57Z</timestamp>
+<contributor>
+<username>34786546100</username>
+<id>3</id>
+</contributor>
+<comment />
+<text xml:space="preserve" bytes="286">* Procedimentos de testes de responsabilidade de execução da STI durante o Processo de Recebimento e Aceite da Ordens de Serviços entregues pela Fábrica de Software.
+
+** [[Instalar os Componentes Recebidos da FSW]]
+** [[Executar Testes TI]]
+
+
+&lt;/br&gt;
+----
+[[Página Inicial | Voltar]]</text>
+</revision>
+</page>
+<page>
 <title>Procuração/Retirada das Opções do Sistema</title>
 <ns>0</ns>
 <id>458</id>
@@ -5678,14 +5860,14 @@ Após, deve-se clicar no botão &apos;&apos;&apos;&quot;Salvar Procuração/Reti
 <ns>0</ns>
 <id>1</id>
 <revision>
-<id>1283</id>
-<timestamp>2016-10-14T17:57:28Z</timestamp>
+<id>1657</id>
+<timestamp>2016-12-08T18:18:36Z</timestamp>
 <contributor>
-<username>admin</username>
-<id>1</id>
+<username>34786546100</username>
+<id>3</id>
 </contributor>
 <comment />
-<text xml:space="preserve" bytes="3653">* [[Manual de Usuário]]
+<text xml:space="preserve" bytes="3775">* [[Manual de Usuário]]
 ** [[Acessando_o_Sistema|Acessando o Sistema]] 
 ***[[Login_do_Sistema|Login do Sistema]]
 **** [[Efetuar_Login_no_Sistema_com_CPF|Efetuar Login no Sistema com CPF]]
@@ -5740,7 +5922,10 @@ Após, deve-se clicar no botão &apos;&apos;&apos;&quot;Salvar Procuração/Reti
 **[[Instalação do Ambiente do Sistema Linux]]
 ** [[Instalação do Ambiente de Desenvolvimento]]
 ** [[Manual para Manutenção do Sistema]]
-</text>
+
+*[[Processos de Testes|Processos de Testes]]
+**[[Instalar os Componentes Recebidos da FSW]]&lt;br/&gt;
+**[[Executar Testes TI]]</text>
 </revision>
 </page>
 <page>
@@ -5783,46 +5968,6 @@ As opções de menu serão recarregadas com as definidas no menu &apos;&apos;&ap
 </revision>
 </page>
 <page>
-<title>Selecionar Perfil Usuario</title>
-<ns>0</ns>
-<id>293</id>
-<revision>
-<id>534</id>
-<timestamp>2016-06-13T16:22:20Z</timestamp>
-<contributor>
-<username>admin</username>
-<id>1</id>
-</contributor>
-<comment />
-<text xml:space="preserve" bytes="1135">Ao efetuar o login no Sistema Tributário da SEFAZ-TO, é disponibilizado para que o usuário selecione dentre seus perfis cadastrados, qual deseja trabalhar efetivamente no sistema.
-
-&apos;&apos;&apos;&lt;u&gt;COLOCAR IMAGEM PERFIL AO SE LOGAR NO SISTEMA&lt;/u&gt;&apos;&apos;&apos;
-
-O usuário clica no perfil desejado exibido na listagem.
-
-
-Após o sistema exibirá a estrutura de menus conforme as permissões do perfil selecionado.
-
-
-Caso o usuário opte por alterar o seu perfil após estar logado e operando o sistema, é necessário clicar na opção &quot;MUDAR PERFIL&quot; disponível no menu principal, conforme imagem abaixo:
-
-
-[[File:mudar_perfil.jpg|caption]]
-
-Após o sistema exibirá tela para que o usuário selecione o perfil que seja trabalhar, dentre os perfis cadastrados para o mesmo. 
-
-&apos;&apos;&apos;&lt;u&gt;COLOCAR IMAGEM PERFIL AO SE LOGAR NO SISTEMA&lt;/u&gt;&apos;&apos;&apos;
-
-O usuário clica no perfil desejado exibido na listagem.
-
-
-Após o sistema exibirá a estrutura de menus conforme as permissões do perfil selecionado.
-
-
-&apos;&apos;É importante salientar que a opção de seleção de perfis apenas estará disponível caso o usuário possua mais de um perfil cadastrado para o seu usuário.&apos;&apos;</text>
-</revision>
-</page>
-<page>
 <title>Selecionar Perfil de Usuário</title>
 <ns>0</ns>
 <id>303</id>
@@ -5861,61 +6006,6 @@ Após o sistema exibirá a estrutura de menus conforme as permissões do perfil 
 &lt;/br&gt;
 ----
 [[Acessando o Sistema | Voltar]]</text>
-</revision>
-</page>
-<page>
-<title>Solicitacao de senhas de Servicos</title>
-<ns>0</ns>
-<id>342</id>
-<revision>
-<id>692</id>
-<timestamp>2016-06-23T16:59:43Z</timestamp>
-<contributor>
-<username>admin</username>
-<id>1</id>
-</contributor>
-<comment />
-<text xml:space="preserve" bytes="2418">Acessar a opção &apos;&apos;&apos;Solicitação para Autorização de Senhas de Serviços via Internet&apos;&apos;&apos;, no Portal do SEFAZ-TO.
-
-Abrirá a tela de Identificação do Certificado Digital ou CPF.	
-
-== Cadastrando Senha de Serviços via Certificado Digital ==
-
-Para cadastrar o usuário para acesso ao Novo Sistema Tributário da SEFAZ-TO através do Certificado Digital, deve-se clicar no botão Certificado Digital, conforme o passo 1 ilustrado abaixo.
-
-**** COLOCAR IMAGEM DA TELA SEGUC0040PG01, COM DESTAQUE PARA O BOTÃO CERTIFICADO DIGITAL
-
-Será exibida a tela para seleção do CPF a ser cadastrado no sistema. Deve-se selecionar o CPF desejado e clicar em OK (passo 2).
-
-**** COLOCAR IMAGEM DO AUTENTICADOR DO CERTIFICADO DIGITAL, COM DESTAQUE PARA A CONFIRMAÇÃO DO CPF SELECIONADO
-
-Observação: O layout da tela pode variar conforme o Navegador de internet utilizado.
-
-Será solicitada a senha do Certificado Digital para o usuário, que deve digitar a senha e clicar em ok (passo 3)
-
-****COLOCAR A IMAGEM DA JANELA PARA DIGITAÇÃO DA SENHA DO CERTIFICADO DIGITAL
-
-Após digitar a senha corretamente e confirmar, o usuário é direcionado para a tela com o formulário de cadastro.
-
-**** COLOCAR A IMAGEM DA TELA SEGUC0040PG02, COM DESTAQUE PARA O BOTÃO CONFIRMAR COM NÚMERO 4
-
-No formulário de cadastro, todos os campos sinalizados com asterísco (*) são obrigatórios e devem ser preenchidos.
-Ao clicar no botão Confirmar (passo 4), o sistema exibe a mensagem de confirmação do cadastro e envia um email com as instruções dos próximos passos para confirmação do cadastro. 
-
-----
-== Cadastrando Senha de Serviços via CPF ==
-
-Para cadastrar o usuário para acesso ao Novo Sistema Tributário da SEFAZ-TO através do Certificado Digital, deve-se preencher o campo CPF e clicar no botão Continuar, conforme o passo 1 ilustra na imagem abaixo.
-
-**** COLOCAR IMAGEM DA TELA SEGUC0040PG01, COM DESTAQUE PARA O CAMPO CPF com número 1
-
-O usuário é direcionado para a tela com o formulário de cadastro.
-
-**** COLOCAR A IMAGEM DA TELA SEGUC0040PG02, COM DESTAQUE PARA O BOTÃO CONFIRMAR COM NÚMERO 2
-
-No formulário de cadastro, todos os campos sinalizados com asterísco (*) são obrigatórios e devem ser preenchidos.
-Ao clicar no botão Confirmar (passo 2), o sistema exibe a mensagem de confirmação do cadastro e envia um email com as instruções dos próximos passos para confirmação do cadastro. 
-</text>
 </revision>
 </page>
 <page>
@@ -6099,46 +6189,6 @@ Após todas as alterações serem feitas, deve-se apertar o botão “SALVAR” 
 ----
 [[Parâmetros | Voltar]]
 </text>
-</revision>
-</page>
-<page>
-<title>Visao geral</title>
-<ns>0</ns>
-<id>7</id>
-<revision>
-<id>53</id>
-<timestamp>2016-05-27T09:16:47Z</timestamp>
-<contributor>
-<username>admin</username>
-<id>1</id>
-</contributor>
-<comment />
-<text xml:space="preserve" bytes="0" />
-</revision>
-</page>
-<page>
-<title>Visualizar Opcoes Sistema</title>
-<ns>0</ns>
-<id>296</id>
-<revision>
-<id>535</id>
-<timestamp>2016-06-13T16:35:01Z</timestamp>
-<contributor>
-<username>admin</username>
-<id>1</id>
-</contributor>
-<comment />
-<text xml:space="preserve" bytes="505">Após a autenticação do usuário e seleção de seu perfil de acesso, abrirá a Tela Principal do Sistema Tributário da SEFAZ-TO, conforme imagem abaixo:
-
-
-&apos;&apos;&apos;&lt;u&gt;COLOCAR IMAGEM ATUALIZADA COM OS PERFIS DISPONÍVEIS PARA O USUÁRIO.&lt;/u&gt;&apos;&apos;&apos;
-
-
-O usuário poderá selecionar diferentes módulos de sistema e navegar pelas opções disponibilizadas.
-
-
-
-&apos;&apos;É importante salientar que as opções disponibilizadas no sistema podem variar de acordo com o perfil e acessos disponíveis para o usuário logado.&apos;&apos;</text>
 </revision>
 </page>
 <page>
